@@ -1,0 +1,4190 @@
+# Translation file for Seitech E-Learning
+# Converted from legacy PHP application
+# Copyright (C) 2025 Seitech International
+# This file is distributed under the LGPL-3 license.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Seitech E-Learning 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-22 21:34+0000\n"
+"PO-Revision-Date: 2025-12-22 21:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Legacy key: manage_profile
+msgid "Manage profile"
+msgstr "Profili yönet"
+
+#. Legacy key: write_a_public_review
+msgid "Write a public review"
+msgstr "Herkese açık bir inceleme yazın"
+
+#. Legacy key: heads_up
+msgid "Heads up"
+msgstr "Dikkat et"
+
+#. Legacy key: describe_your_experience_what_you_got_out_of_the_course_and_other_helpful_highlights
+msgid "Describe your experience what you got out of the course and other helpful highlights"
+msgstr "Deneyiminizi, kurstan ne elde ettiğinizi ve diğer faydalı noktaları açıklayın"
+
+#. Legacy key: are_you_sure
+msgid "Are you sure"
+msgstr "Emin misin"
+
+#. Legacy key: what_did_the_instructor_do_well_and_what_could_use_some_improvement
+msgid "What did the instructor do well and what could use some improvement"
+msgstr "Eğitmen neleri iyi yaptı ve nelerin biraz iyileştirilmesi yararlı olabilir?"
+
+#. Legacy key: cancel
+msgid "Cancel"
+msgstr "İptal etmek"
+
+#. Legacy key: continue
+msgid "Continue"
+msgstr "Devam etmek"
+
+#. Legacy key: next
+msgid "Next"
+msgstr "Sonraki"
+
+#. Legacy key: previous
+msgid "Previous"
+msgstr "Öncesi"
+
+#. Legacy key: publish
+msgid "Publish"
+msgstr "Yayınla"
+
+#. Legacy key: delete
+msgid "Delete"
+msgstr "Silmek"
+
+#. Legacy key: 404_page_not_found
+msgid "404 page not found"
+msgstr "404 Sayfa Bulunamadı"
+
+#. Legacy key: courses
+msgid "Courses"
+msgstr "Dersler"
+
+#. Legacy key: all_courses
+msgid "All courses"
+msgstr "Tüm kurslar"
+
+#. Legacy key: search_for_courses
+msgid "Search for courses"
+msgstr "Kurs ara"
+
+#. Legacy key: total
+msgid "Total"
+msgstr "Toplam"
+
+#. Legacy key: go_to_cart
+msgid "Go to cart"
+msgstr "Sepete git"
+
+#. Legacy key: your_cart_is_empty
+msgid "Your cart is empty"
+msgstr "Sepetiniz boş"
+
+#. Legacy key: log_in
+msgid "Log in"
+msgstr "Giriş yapmak"
+
+#. Legacy key: sign_up
+msgid "Sign up"
+msgstr "Üye olmak"
+
+#. Legacy key: cookie_policy
+msgid "Cookie policy"
+msgstr "Çerez politikası"
+
+#. Legacy key: accept
+msgid "Accept"
+msgstr "Kabul etmek"
+
+#. Legacy key: oh_snap
+msgid "Oh snap"
+msgstr "Oh çırpıda"
+
+#. Legacy key: this_is_not_the_web_page_you_are_looking_for
+msgid "This is not the web page you are looking for"
+msgstr "Bu aradığınız web sayfası değil"
+
+#. Legacy key: back_to_home
+msgid "Back to home"
+msgstr "Eve geri dön"
+
+#. Legacy key: about
+msgid "About"
+msgstr "Hakkında"
+
+#. Legacy key: privacy_policy
+msgid "Privacy policy"
+msgstr "Gizlilik Politikası"
+
+#. Legacy key: terms_and_condition
+msgid "Terms and condition"
+msgstr "Şartlar ve koşullar"
+
+#. Legacy key: login
+msgid "Login"
+msgstr "Giriş yapmak"
+
+#. Legacy key: step
+msgid "Step"
+msgstr "Adım"
+
+#. Legacy key: how_would_you_rate_this_course_overall
+msgid "How would you rate this course overall"
+msgstr "Bu kursu genel olarak nasıl değerlendirirsiniz?"
+
+#. Legacy key: all_category
+msgid "All category"
+msgstr "Tüm kategori"
+
+#. Legacy key: showing_on_this_page
+msgid "Showing on this page"
+msgstr "Bu sayfada gösteriliyor"
+
+#. Legacy key: filter
+msgid "Filter"
+msgstr "filtre"
+
+#. Legacy key: categories
+msgid "Categories"
+msgstr "Kategoriler"
+
+#. Legacy key: show_more
+msgid "Show more"
+msgstr "Daha fazla göster"
+
+#. Legacy key: price
+msgid "Price"
+msgstr "Fiyat"
+
+#. Legacy key: all
+msgid "All"
+msgstr "Tüm"
+
+#. Legacy key: free
+msgid "Free"
+msgstr "Özgür"
+
+#. Legacy key: paid
+msgid "Paid"
+msgstr "Paralı"
+
+#. Legacy key: level
+msgid "Level"
+msgstr "Seviye"
+
+#. Legacy key: beginner
+msgid "Beginner"
+msgstr "Acemi"
+
+#. Legacy key: advanced
+msgid "Advanced"
+msgstr "Gelişmiş"
+
+#. Legacy key: intermediate
+msgid "Intermediate"
+msgstr "Orta seviye"
+
+#. Legacy key: language
+msgid "Language"
+msgstr "Dil"
+
+#. Legacy key: ratings
+msgid "Ratings"
+msgstr "Derecelendirmeler"
+
+#. Legacy key: lessons
+msgid "Lessons"
+msgstr "Dersler"
+
+#. Legacy key: hours
+msgid "Hours"
+msgstr "Saat"
+
+#. Legacy key: show_less
+msgid "Show less"
+msgstr "Daha az göster"
+
+#. Legacy key: course
+msgid "Course"
+msgstr "Kurs"
+
+#. Legacy key: students_enrolled
+msgid "Students enrolled"
+msgstr "Kayıtlı öğrenciler"
+
+#. Legacy key: created_by
+msgid "Created by"
+msgstr "Tarafından yaratıldı"
+
+#. Legacy key: last_updated
+msgid "Last updated"
+msgstr "Son güncelleme"
+
+#. Legacy key: what_will_i_learn
+msgid "What will i learn"
+msgstr "ne öğreneceğim"
+
+#. Legacy key: curriculum_for_this_course
+msgid "Curriculum for this course"
+msgstr "Bu ders için müfredat"
+
+#. Legacy key: requirements
+msgid "Requirements"
+msgstr "Gereksinimler"
+
+#. Legacy key: view_more
+msgid "View more"
+msgstr "Daha fazla göster"
+
+#. Legacy key: description
+msgid "Description"
+msgstr "Tanım"
+
+#. Legacy key: other_related_courses
+msgid "Other related courses"
+msgstr "Diğer ilgili kurslar"
+
+#. Legacy key: updated
+msgid "Updated"
+msgstr "Güncellenmiş"
+
+#. Legacy key: about_the_instructor
+msgid "About the instructor"
+msgstr "Eğitmen hakkında"
+
+#. Legacy key: reviews
+msgid "Reviews"
+msgstr "Yorumlar"
+
+#. Legacy key: students
+msgid "Students"
+msgstr "öğrenciler"
+
+#. Legacy key: student_feedback
+msgid "Student feedback"
+msgstr "Öğrenci geri bildirimi"
+
+#. Legacy key: average_rating
+msgid "Average rating"
+msgstr "Ortalama puanı"
+
+#. Legacy key: buy_now
+msgid "Buy now"
+msgstr "Şimdi al"
+
+#. Legacy key: added_to_cart
+msgid "Added to cart"
+msgstr "sepete eklendi"
+
+#. Legacy key: includes
+msgid "Includes"
+msgstr "İçerir"
+
+#. Legacy key: on_demand_videos
+msgid "On demand videos"
+msgstr "İsteğe bağlı videolar"
+
+#. Legacy key: full_lifetime_access
+msgid "Full lifetime access"
+msgstr "Tam ömür boyu erişim"
+
+#. Legacy key: access_on_mobile_and_tv
+msgid "Access on mobile and tv"
+msgstr "Mobil ve TV üzerinden erişim"
+
+#. Legacy key: add_to_cart
+msgid "Add to cart"
+msgstr "Sepete ekle"
+
+#. Legacy key: please_wait
+msgid "Please wait"
+msgstr "Lütfen bekleyin"
+
+#. Legacy key: preview_this_course
+msgid "Preview this course"
+msgstr "Bu kursu önizle"
+
+#. Legacy key: course_preview
+msgid "Course preview"
+msgstr "Kurs önizlemesi"
+
+#. Legacy key: admin_revenue
+msgid "Admin revenue"
+msgstr "yönetici geliri"
+
+#. Legacy key: admin
+msgid "Admin"
+msgstr "yönetici"
+
+#. Legacy key: welcome
+msgid "Welcome"
+msgstr "Hoş geldin"
+
+#. Legacy key: my_account
+msgid "My account"
+msgstr "Hesabım"
+
+#. Legacy key: settings
+msgid "Settings"
+msgstr "Ayarlar"
+
+#. Legacy key: logout
+msgid "Logout"
+msgstr "Çıkış Yap"
+
+#. Legacy key: visit_website
+msgid "Visit website"
+msgstr "Siteyi ziyaret et"
+
+#. Legacy key: navigation
+msgid "Navigation"
+msgstr "Navigasyon"
+
+#. Legacy key: dashboard
+msgid "Dashboard"
+msgstr "Gösterge Paneli"
+
+#. Legacy key: add_new_category
+msgid "Add new category"
+msgstr "Yeni Kategori Ekle"
+
+#. Legacy key: instructors
+msgid "Instructors"
+msgstr "Eğitmenler"
+
+#. Legacy key: enrolment
+msgid "Enrolment"
+msgstr "kayıt"
+
+#. Legacy key: enrol_history
+msgid "Enrol history"
+msgstr "kayıt geçmişi"
+
+#. Legacy key: enrol_a_student
+msgid "Enrol a student"
+msgstr "öğrenci kaydı"
+
+#. Legacy key: report
+msgid "Report"
+msgstr "Rapor"
+
+#. Legacy key: instructor_revenue
+msgid "Instructor revenue"
+msgstr "Eğitmen geliri"
+
+#. Legacy key: message
+msgid "Message"
+msgstr "İleti"
+
+#. Legacy key: addons
+msgid "Addons"
+msgstr "Eklentiler"
+
+#. Legacy key: addon_manager
+msgid "Addon manager"
+msgstr "eklenti yöneticisi"
+
+#. Legacy key: available_addons
+msgid "Available addons"
+msgstr "Mevcut eklentiler"
+
+#. Legacy key: system_settings
+msgid "System settings"
+msgstr "Sistem ayarları"
+
+#. Legacy key: website_settings
+msgid "Website settings"
+msgstr "Web sitesi ayarları"
+
+#. Legacy key: payment_settings
+msgid "Payment settings"
+msgstr "ödeme ayarları"
+
+#. Legacy key: instructor_settings
+msgid "Instructor settings"
+msgstr "eğitmen ayarları"
+
+#. Legacy key: language_settings
+msgid "Language settings"
+msgstr "Dil ayarları"
+
+#. Legacy key: smtp_settings
+msgid "Smtp settings"
+msgstr "smtp ayarları"
+
+#. Legacy key: theme_settings
+msgid "Theme settings"
+msgstr "Tema ayarları"
+
+#. Legacy key: enrolled_course
+msgid "Enrolled course"
+msgstr "Kayıtlı kurs"
+
+#. Legacy key: total_amount
+msgid "Total amount"
+msgstr "Toplam tutar"
+
+#. Legacy key: enrolment_date
+msgid "Enrolment date"
+msgstr "kayıt tarihi"
+
+#. Legacy key: actions
+msgid "Actions"
+msgstr "Hareketler"
+
+#. Legacy key: this_year
+msgid "This year"
+msgstr "Bu yıl"
+
+#. Legacy key: active_course
+msgid "Active course"
+msgstr "Aktif kurs"
+
+#. Legacy key: pending_course
+msgid "Pending course"
+msgstr "Bekleyen kurs"
+
+#. Legacy key: congratulations
+msgid "Congratulations"
+msgstr "Tebrikler"
+
+#. Legacy key: please_fill_all_the_required_fields
+msgid "Please fill all the required fields"
+msgstr "Lütfen gerekli tüm alanları doldurun"
+
+#. Legacy key: close
+msgid "Close"
+msgstr "Kapalı"
+
+#. Legacy key: private_messaging
+msgid "Private messaging"
+msgstr "özel mesajlaşma"
+
+#. Legacy key: private_message
+msgid "Private message"
+msgstr "Özel mesaj"
+
+#. Legacy key: new_message
+msgid "New message"
+msgstr "Yeni Mesaj"
+
+#. Legacy key: home
+msgid "Home"
+msgstr "Ev"
+
+#. Legacy key: menu
+msgid "Menu"
+msgstr "Menü"
+
+#. Legacy key: all_tutions
+msgid "All tutions"
+msgstr "Tüm dersler"
+
+#. Legacy key: ebooks
+msgid "Ebooks"
+msgstr "e-kitaplar"
+
+#. Legacy key: course_bundles
+msgid "Course bundles"
+msgstr "Kurs paketleri"
+
+#. Legacy key: administrator
+msgid "Administrator"
+msgstr "yönetici"
+
+#. Legacy key: learn_on_your_schedule
+msgid "Learn on your schedule"
+msgstr "Programınıza göre öğrenin"
+
+#. Legacy key: what_do_you_want_to_learn
+msgid "What do you want to learn"
+msgstr "Ne öğrenmek istiyorsun"
+
+#. Legacy key: search
+msgid "Search"
+msgstr "Aramak"
+
+#. Legacy key: online_courses
+msgid "Online courses"
+msgstr "Çevrimiçi kurslar"
+
+#. Legacy key: explore_a_variety_of_fresh_topics
+msgid "Explore a variety of fresh topics"
+msgstr "Çeşitli yeni konuları keşfedin"
+
+#. Legacy key: expert_instruction
+msgid "Expert instruction"
+msgstr "Uzman eğitimi"
+
+#. Legacy key: find_the_right_course_for_you
+msgid "Find the right course for you"
+msgstr "Sizin için doğru kursu bulun"
+
+#. Legacy key: lifetime_access
+msgid "Lifetime access"
+msgstr "Ömür boyu erişim"
+
+#. Legacy key: top_categories
+msgid "Top categories"
+msgstr "En iyi kategoriler"
+
+#. Legacy key: top_courses
+msgid "Top courses"
+msgstr "En iyi kurslar"
+
+#. Legacy key: compare
+msgid "Compare"
+msgstr "Karşılaştırmak"
+
+#. Legacy key: lectures
+msgid "Lectures"
+msgstr "dersler"
+
+#. Legacy key: get_enrolled
+msgid "Get enrolled"
+msgstr "Kaydolun"
+
+#. Legacy key: top
+msgid "Top"
+msgstr "Tepe"
+
+#. Legacy key: latest_courses
+msgid "Latest courses"
+msgstr "Son kurslar"
+
+#. Legacy key: h5p_course
+msgid "H5p course"
+msgstr "H5p kursu"
+
+#. Legacy key: scorm_course
+msgid "Scorm course"
+msgstr "Skor kursu"
+
+#. Legacy key: featured_instructor
+msgid "Featured instructor"
+msgstr "Öne çıkan eğitmen"
+
+#. Legacy key: join_now_to_start_learning
+msgid "Join now to start learning"
+msgstr "Öğrenmeye başlamak için şimdi katılın"
+
+#. Legacy key: get_started
+msgid "Get started"
+msgstr "Başlamak"
+
+#. Legacy key: become_a_new_instructor
+msgid "Become a new instructor"
+msgstr "Yeni bir eğitmen ol"
+
+#. Legacy key: join_now
+msgid "Join now"
+msgstr "Şimdi Katıl"
+
+#. Legacy key: useful_links
+msgid "Useful links"
+msgstr "Kullanışlı bağlantılar"
+
+#. Legacy key: blog
+msgid "Blog"
+msgstr "Blog"
+
+#. Legacy key: help
+msgid "Help"
+msgstr "Yardım"
+
+#. Legacy key: about_us
+msgid "About us"
+msgstr "Hakkımızda"
+
+#. Legacy key: refund_policy
+msgid "Refund policy"
+msgstr "Geri ödeme politikası"
+
+#. Legacy key: all_rights_reserved
+msgid "All rights reserved"
+msgstr "Her hakkı saklıdır"
+
+#. Legacy key: yes
+msgid "Yes"
+msgstr "Evet"
+
+#. Legacy key: no
+msgid "No"
+msgstr "HAYIR"
+
+#. Legacy key: view_less
+msgid "View less"
+msgstr "Daha az görüntüle"
+
+#. Legacy key: ai_writer
+msgid "Ai writer"
+msgstr "ai yazar"
+
+#. Legacy key: quick_actions
+msgid "Quick actions"
+msgstr "Hızlı işlemler"
+
+#. Legacy key: create_course
+msgid "Create course"
+msgstr "Kurs oluştur"
+
+#. Legacy key: add_course
+msgid "Add course"
+msgstr "ders ekle"
+
+#. Legacy key: add_new_lesson
+msgid "Add new lesson"
+msgstr "yeni ders ekle"
+
+#. Legacy key: add_lesson
+msgid "Add lesson"
+msgstr "ders ekle"
+
+#. Legacy key: add_student
+msgid "Add student"
+msgstr "öğrenci ekle"
+
+#. Legacy key: enrol_student
+msgid "Enrol student"
+msgstr "öğrenci kaydı"
+
+#. Legacy key: help_center
+msgid "Help center"
+msgstr "Yardım Merkezi"
+
+#. Legacy key: read_documentation
+msgid "Read documentation"
+msgstr "Belgeleri okuyun"
+
+#. Legacy key: watch_video_tutorial
+msgid "Watch video tutorial"
+msgstr "Eğitim videosunu izleyin"
+
+#. Legacy key: get_customer_support
+msgid "Get customer support"
+msgstr "Müşteri desteği alın"
+
+#. Legacy key: order_customization
+msgid "Order customization"
+msgstr "Sipariş özelleştirme"
+
+#. Legacy key: request_a_new_feature
+msgid "Request a new feature"
+msgstr "Yeni bir özellik talep edin"
+
+#. Legacy key: browse_addons
+msgid "Browse addons"
+msgstr "Eklentilere göz atın"
+
+#. Legacy key: manage_courses
+msgid "Manage courses"
+msgstr "Kursları yönet"
+
+#. Legacy key: add_new_course
+msgid "Add new course"
+msgstr "yeni ders ekle"
+
+#. Legacy key: course_category
+msgid "Course category"
+msgstr "Kurs kategorisi"
+
+#. Legacy key: coupons
+msgid "Coupons"
+msgstr "Kuponlar"
+
+#. Legacy key: course_bundle
+msgid "Course bundle"
+msgstr "Kurs paketi"
+
+#. Legacy key: add_new_bundle
+msgid "Add new bundle"
+msgstr "Yeni paket ekle"
+
+#. Legacy key: manage_bundle
+msgid "Manage bundle"
+msgstr "Paketi yönet"
+
+#. Legacy key: subscription_report
+msgid "Subscription report"
+msgstr "Abonelik raporu"
+
+#. Legacy key: tutor_booking
+msgid "Tutor booking"
+msgstr "öğretmen rezervasyonu"
+
+#. Legacy key: subject_category
+msgid "Subject category"
+msgstr "konu kategorisi"
+
+#. Legacy key: add_booking
+msgid "Add booking"
+msgstr "Rezervasyon ekle"
+
+#. Legacy key: all_bookings
+msgid "All bookings"
+msgstr "Tüm rezervasyonlar"
+
+#. Legacy key: booked_schedules
+msgid "Booked schedules"
+msgstr "ayrılmış programlar"
+
+#. Legacy key: live_class_settings
+msgid "Live class settings"
+msgstr "Canlı sınıf ayarları"
+
+#. Legacy key: ebook
+msgid "Ebook"
+msgstr "e-kitap"
+
+#. Legacy key: all_ebooks
+msgid "All ebooks"
+msgstr "Tüm e-kitaplar"
+
+#. Legacy key: add_ebook
+msgid "Add ebook"
+msgstr "e-kitap ekle"
+
+#. Legacy key: payment_history
+msgid "Payment history"
+msgstr "Ödeme geçmişi"
+
+#. Legacy key: category
+msgid "Category"
+msgstr "Kategori"
+
+#. Legacy key: course_enrollment
+msgid "Course enrollment"
+msgstr "ders kaydı"
+
+#. Legacy key: purchase_history
+msgid "Purchase history"
+msgstr "Satın alım geçmişi"
+
+#. Legacy key: affiliate
+msgid "Affiliate"
+msgstr "ortak"
+
+#. Legacy key: affliliator_list
+msgid "Affliliator list"
+msgstr "Üye listesi"
+
+#. Legacy key: affiliation_history
+msgid "Affiliation history"
+msgstr "üyelik geçmişi"
+
+#. Legacy key: payouts
+msgid "Payouts"
+msgstr "ödemeler"
+
+#. Legacy key: create_affiliator
+msgid "Create affiliator"
+msgstr "Satış ortağı oluştur"
+
+#. Legacy key: affiliation_settings
+msgid "Affiliation settings"
+msgstr "ilişki ayarları"
+
+#. Legacy key: users
+msgid "Users"
+msgstr "Kullanıcılar"
+
+#. Legacy key: admins
+msgid "Admins"
+msgstr "Yöneticiler"
+
+#. Legacy key: manage_admins
+msgid "Manage admins"
+msgstr "Yöneticileri yönet"
+
+#. Legacy key: add_new_admin
+msgid "Add new admin"
+msgstr "yeni yönetici ekle"
+
+#. Legacy key: manage_instructors
+msgid "Manage instructors"
+msgstr "Eğitmenleri yönet"
+
+#. Legacy key: add_new_instructor
+msgid "Add new instructor"
+msgstr "Yeni eğitmen ekle"
+
+#. Legacy key: instructor_payout
+msgid "Instructor payout"
+msgstr "eğitmen ödemesi"
+
+#. Legacy key: applications
+msgid "Applications"
+msgstr "Uygulamalar"
+
+#. Legacy key: manage_students
+msgid "Manage students"
+msgstr "Öğrencileri yönet"
+
+#. Legacy key: add_new_student
+msgid "Add new student"
+msgstr "yeni öğrenci ekle"
+
+#. Legacy key: offline_payment
+msgid "Offline payment"
+msgstr "çevrimdışı ödeme"
+
+#. Legacy key: pending_request
+msgid "Pending request"
+msgstr "Bekleyen istek"
+
+#. Legacy key: accepted_request
+msgid "Accepted request"
+msgstr "Kabul edilen istek"
+
+#. Legacy key: suspended_request
+msgid "Suspended request"
+msgstr "Askıya alınan istek"
+
+#. Legacy key: offline_payment_settings
+msgid "Offline payment settings"
+msgstr "Çevrimdışı ödeme ayarları"
+
+#. Legacy key: all_blogs
+msgid "All blogs"
+msgstr "tüm bloglar"
+
+#. Legacy key: pending_blog
+msgid "Pending blog"
+msgstr "Bekleyen blog"
+
+#. Legacy key: blog_category
+msgid "Blog category"
+msgstr "Blog kategorisi"
+
+#. Legacy key: blog_settings
+msgid "Blog settings"
+msgstr "Blog ayarları"
+
+#. Legacy key: customer_support
+msgid "Customer support"
+msgstr "Müşteri desteği"
+
+#. Legacy key: ticket_list
+msgid "Ticket list"
+msgstr "Bilet listesi"
+
+#. Legacy key: support_category
+msgid "Support category"
+msgstr "Destek kategorisi"
+
+#. Legacy key: macro
+msgid "Macro"
+msgstr "Makro"
+
+#. Legacy key: create_ticket
+msgid "Create ticket"
+msgstr "Bilet oluştur"
+
+#. Legacy key: themes
+msgid "Themes"
+msgstr "Temalar"
+
+#. Legacy key: academy_cloud
+msgid "Academy cloud"
+msgstr "Akademi bulutu"
+
+#. Legacy key: drip_content_settings
+msgid "Drip content settings"
+msgstr "Damla içeriği ayarları"
+
+#. Legacy key: certificate_settings
+msgid "Certificate settings"
+msgstr "Sertifika ayarları"
+
+#. Legacy key: s3_settings
+msgid "S3 settings"
+msgstr "S3 ayarları"
+
+#. Legacy key: open_ai_settings
+msgid "Open ai settings"
+msgstr "AI ayarlarını aç"
+
+#. Legacy key: social_login
+msgid "Social login"
+msgstr "Sosyal giriş"
+
+#. Legacy key: custom_page
+msgid "Custom page"
+msgstr "Özel sayfa"
+
+#. Legacy key: data_center
+msgid "Data center"
+msgstr "Veri merkezi"
+
+#. Legacy key: admin_revenue_this_year
+msgid "Admin revenue this year"
+msgstr "Bu yıl yönetici geliri"
+
+#. Legacy key: number_courses
+msgid "Number courses"
+msgstr "Sayı kursları"
+
+#. Legacy key: number_of_lessons
+msgid "Number of lessons"
+msgstr "ders sayısı"
+
+#. Legacy key: number_of_enrolment
+msgid "Number of enrolment"
+msgstr "kayıt sayısı"
+
+#. Legacy key: number_of_student
+msgid "Number of student"
+msgstr "öğrenci sayısı"
+
+#. Legacy key: course_overview
+msgid "Course overview"
+msgstr "Kursa genel bakış"
+
+#. Legacy key: active_courses
+msgid "Active courses"
+msgstr "Aktif kurslar"
+
+#. Legacy key: pending_courses
+msgid "Pending courses"
+msgstr "Bekleyen kurslar"
+
+#. Legacy key: requested_withdrawal
+msgid "Requested withdrawal"
+msgstr "İstenen para çekme"
+
+#. Legacy key: email
+msgid "Email"
+msgstr "E-posta"
+
+#. Legacy key: requested_withdrawal_amount
+msgid "Requested withdrawal amount"
+msgstr "Talep edilen para çekme tutarı"
+
+#. Legacy key: january
+msgid "January"
+msgstr "Ocak"
+
+#. Legacy key: february
+msgid "February"
+msgstr "Şubat"
+
+#. Legacy key: march
+msgid "March"
+msgstr "Mart"
+
+#. Legacy key: april
+msgid "April"
+msgstr "Nisan"
+
+#. Legacy key: may
+msgid "May"
+msgstr "Mayıs"
+
+#. Legacy key: june
+msgid "June"
+msgstr "Haziran"
+
+#. Legacy key: july
+msgid "July"
+msgstr "Temmuz"
+
+#. Legacy key: august
+msgid "August"
+msgstr "Ağustos"
+
+#. Legacy key: september
+msgid "September"
+msgstr "Eylül"
+
+#. Legacy key: october
+msgid "October"
+msgstr "Ekim"
+
+#. Legacy key: november
+msgid "November"
+msgstr "Kasım"
+
+#. Legacy key: december
+msgid "December"
+msgstr "Aralık"
+
+#. Legacy key: ok
+msgid "Ok"
+msgstr "Tamam"
+
+#. Legacy key: success
+msgid "Success"
+msgstr "Başarı"
+
+#. Legacy key: successfully
+msgid "Successfully"
+msgstr "başarıyla"
+
+#. Legacy key: div_added_to_bottom_
+msgid "Div added to bottom "
+msgstr "En alta div eklendi"
+
+#. Legacy key: div_has_been_deleted_
+msgid "Div has been deleted "
+msgstr "Div silindi"
+
+#. Legacy key: provide_your_valid_login_credentials
+msgid "Provide your valid login credentials"
+msgstr "Geçerli oturum açma kimlik bilgilerinizi sağlayın"
+
+#. Legacy key: continue_with_email
+msgid "Continue with email"
+msgstr "e-posta ile devam et"
+
+#. Legacy key: password
+msgid "Password"
+msgstr "Şifre"
+
+#. Legacy key: forgot_password
+msgid "Forgot password"
+msgstr "Parolanızı mı unuttunuz"
+
+#. Legacy key: do_not_have_an_account
+msgid "Do not have an account"
+msgstr "Bir hesabınız yok mu"
+
+#. Legacy key: website_name
+msgid "Website name"
+msgstr "Web sitesi adı"
+
+#. Legacy key: website_title
+msgid "Website title"
+msgstr "Web Sitesi Başlığı"
+
+#. Legacy key: website_keywords
+msgid "Website keywords"
+msgstr "Web sitesi anahtar kelimeleri"
+
+#. Legacy key: website_description
+msgid "Website description"
+msgstr "Web sitesi açıklaması"
+
+#. Legacy key: author
+msgid "Author"
+msgstr "Yazar"
+
+#. Legacy key: slogan
+msgid "Slogan"
+msgstr "Slogan"
+
+#. Legacy key: system_email
+msgid "System email"
+msgstr "Sistem e-postası"
+
+#. Legacy key: address
+msgid "Address"
+msgstr "Adres"
+
+#. Legacy key: phone
+msgid "Phone"
+msgstr "Telefon"
+
+#. Legacy key: youtube_api_key
+msgid "Youtube api key"
+msgstr "youtube api anahtarı"
+
+#. Legacy key: get_youtube_api_key
+msgid "Get youtube api key"
+msgstr "youtube api anahtarını al"
+
+#. Legacy key: vimeo_api_key
+msgid "Vimeo api key"
+msgstr "vimeo api anahtarı"
+
+#. Legacy key: get_vimeo_api_key
+msgid "Get vimeo api key"
+msgstr "vimeo api anahtarını al"
+
+#. Legacy key: purchase_code
+msgid "Purchase code"
+msgstr "Satın alma kodu"
+
+#. Legacy key: system_language
+msgid "System language"
+msgstr "Sistem dili"
+
+#. Legacy key: student_email_verification
+msgid "Student email verification"
+msgstr "Öğrenci e-posta doğrulaması"
+
+#. Legacy key: enable
+msgid "Enable"
+msgstr "Olanak vermek"
+
+#. Legacy key: disable
+msgid "Disable"
+msgstr "Devre dışı bırakmak"
+
+#. Legacy key: course_accessibility
+msgid "Course accessibility"
+msgstr "Kurs erişilebilirliği"
+
+#. Legacy key: publicly
+msgid "Publicly"
+msgstr "halka açık"
+
+#. Legacy key: only_logged_in_users
+msgid "Only logged in users"
+msgstr "Sadece giriş yapan kullanıcılar"
+
+#. Legacy key: number_of_authorized_devices
+msgid "Number of authorized devices"
+msgstr "Yetkili cihaz sayısı"
+
+#. Legacy key: how_many_devices_do_you_want_to_allow_for_logging_in_using_a_single_account
+msgid "How many devices do you want to allow for logging in using a single account"
+msgstr "Tek bir hesap kullanarak oturum açmak için kaç cihaza izin vermek istiyorsunuz?"
+
+#. Legacy key: course_selling_tax
+msgid "Course selling tax"
+msgstr "Kurs satış vergisi"
+
+#. Legacy key: enter_0_if_you_want_to_disable_the_tax_option
+msgid "Enter 0 if you want to disable the tax option"
+msgstr "Vergi seçeneğini devre dışı bırakmak istiyorsanız 0 girin"
+
+#. Legacy key: google_analytics_id
+msgid "Google analytics id"
+msgstr "Google Analytics Kimliği"
+
+#. Legacy key: keep_it_blank_if_you_want_to_disable_it
+msgid "Keep it blank if you want to disable it"
+msgstr "Devre dışı bırakmak istiyorsanız boş bırakın"
+
+#. Legacy key: meta_pixel_id
+msgid "Meta pixel id"
+msgstr "Meta piksel kimliği"
+
+#. Legacy key: footer_text
+msgid "Footer text"
+msgstr "Altbilgi metni"
+
+#. Legacy key: footer_link
+msgid "Footer link"
+msgstr "Altbilgi bağlantısı"
+
+#. Legacy key: save
+msgid "Save"
+msgstr "Kaydetmek"
+
+#. Legacy key: update_product
+msgid "Update product"
+msgstr "Ürünü güncelle"
+
+#. Legacy key: file
+msgid "File"
+msgstr "Dosya"
+
+#. Legacy key: update
+msgid "Update"
+msgstr "Güncelleme"
+
+#. Legacy key: not_found
+msgid "Not found"
+msgstr "Bulunamadı"
+
+#. Legacy key: about_this_application
+msgid "About this application"
+msgstr "Bu uygulama hakkında"
+
+#. Legacy key: software_version
+msgid "Software version"
+msgstr "Yazılım versiyonu"
+
+#. Legacy key: check_update
+msgid "Check update"
+msgstr "Güncellemeyi kontrol et"
+
+#. Legacy key: php_version
+msgid "Php version"
+msgstr "php versiyonu"
+
+#. Legacy key: curl_enable
+msgid "Curl enable"
+msgstr "Kıvrılmayı etkinleştir"
+
+#. Legacy key: enabled
+msgid "Enabled"
+msgstr "Etkinleştirilmiş"
+
+#. Legacy key: product_license
+msgid "Product license"
+msgstr "Ürün lisansı"
+
+#. Legacy key: invalid
+msgid "Invalid"
+msgstr "Geçersiz"
+
+#. Legacy key: enter_valid_purchase_code
+msgid "Enter valid purchase code"
+msgstr "Geçerli satın alma kodunu girin"
+
+#. Legacy key: customer_support_status
+msgid "Customer support status"
+msgstr "Müşteri destek durumu"
+
+#. Legacy key: support_expiry_date
+msgid "Support expiry date"
+msgstr "Destek sona erme tarihi"
+
+#. Legacy key: customer_name
+msgid "Customer name"
+msgstr "Müşteri adı"
+
+#. Legacy key: product_updated_successfully
+msgid "Product updated successfully"
+msgstr "Ürün başarıyla güncellendi"
+
+#. Legacy key: remove_all
+msgid "Remove all"
+msgstr "Hepsini kaldır"
+
+#. Legacy key: notification
+msgid "Notification"
+msgstr "Bildiri"
+
+#. Legacy key: no_notification
+msgid "No notification"
+msgstr "Bildirim yok"
+
+#. Legacy key: notification_settings
+msgid "Notification settings"
+msgstr "Bildirim ayarları"
+
+#. Legacy key: mark_all_as_read
+msgid "Mark all as read"
+msgstr "Tümünü okundu olarak işaretle"
+
+#. Legacy key: enrollments
+msgid "Enrollments"
+msgstr "Kayıtlar"
+
+#. Legacy key: newsletter
+msgid "Newsletter"
+msgstr "Bülten"
+
+#. Legacy key: all_newsletter
+msgid "All newsletter"
+msgstr "Tüm bülten"
+
+#. Legacy key: subscribed_user
+msgid "Subscribed user"
+msgstr "abone olunan kullanıcı"
+
+#. Legacy key: custom_page_builder
+msgid "Custom page builder"
+msgstr "Özel sayfa oluşturucu"
+
+#. Legacy key: your_servers_file_upload_limit_is_900mb
+msgid "Your servers file upload limit is 900mb"
+msgstr "Sunucularınızın dosya yükleme limiti 900mb'dir."
+
+#. Legacy key: 404_not_found
+msgid "404 not found"
+msgstr "404 Bulunamadı"
+
+#. Legacy key: administration
+msgid "Administration"
+msgstr "Yönetim"
+
+#. Legacy key: checkout
+msgid "Checkout"
+msgstr "Çıkış yapmak"
+
+#. Legacy key: log_out
+msgid "Log out"
+msgstr "Çıkış Yap"
+
+#. Legacy key: the_page_you_requested_could_not_be_found
+msgid "The page you requested could not be found"
+msgstr "Aradığınız sayfa bulunamadı"
+
+#. Legacy key: check_the_spelling_of_the_url
+msgid "Check the spelling of the url"
+msgstr "URL'nin yazımını kontrol edin"
+
+#. Legacy key: contact_us
+msgid "Contact us"
+msgstr "Bize Ulaşın"
+
+#. Legacy key: faq
+msgid "Faq"
+msgstr "SSS"
+
+#. Legacy key: subscribe_to_our_newsletter
+msgid "Subscribe to our newsletter"
+msgstr "Haber bültenimize abone ol"
+
+#. Legacy key: enter_your_email_address
+msgid "Enter your email address"
+msgstr "E-posta adresinizi giriniz"
+
+#. Legacy key: happy
+msgid "Happy"
+msgstr "Mutlu"
+
+#. Legacy key: experienced
+msgid "Experienced"
+msgstr "Tecrübeli"
+
+#. Legacy key: smart_solution
+msgid "Smart solution"
+msgstr "akıllı çözüm"
+
+#. Legacy key: upcoming
+msgid "Upcoming"
+msgstr "Yaklaşan"
+
+#. Legacy key: upcoming_courses
+msgid "Upcoming courses"
+msgstr "Yaklaşan kurslar"
+
+#. Legacy key: these_are_the_most_popular_courses_among_listen_courses_learners_worldwide
+msgid "These are the most popular courses among listen courses learners worldwide"
+msgstr "Bunlar, dünya çapında dinleme kursları öğrencileri arasında en popüler kurslardır."
+
+#. Legacy key: outcomes
+msgid "Outcomes"
+msgstr "Sonuçlar"
+
+#. Legacy key: remove_from_cart
+msgid "Remove from cart"
+msgstr "Sepetten kaldır"
+
+#. Legacy key: enroll_now
+msgid "Enroll now"
+msgstr "Şimdi kayıt"
+
+#. Legacy key: these_are_the_most_latest_courses_among_listen_courses_learners_worldwide
+msgid "These are the most latest courses among listen courses learners worldwide"
+msgstr "Bunlar, dünya çapında dinleme kursları öğrencileri arasında en son kurslardır"
+
+#. Legacy key: top_instructors
+msgid "Top instructors"
+msgstr "En iyi eğitmenler"
+
+#. Legacy key: they_efficiently_serve_large_number_of_students_on_our_platform
+msgid "They efficiently serve large number of students on our platform"
+msgstr "Platformumuzda çok sayıda öğrenciye verimli bir şekilde hizmet veriyorlar"
+
+#. Legacy key: thanks_for_subscribing_to_our_newsletter
+msgid "Thanks for subscribing to our newsletter"
+msgstr "Bültenimize abone olduğunuz için teşekkür ederiz"
+
+#. Legacy key: such_script_searches_are_not_allowed
+msgid "Such script searches are not allowed"
+msgstr "Bu tür komut dosyası aramalarına izin verilmez"
+
+#. Legacy key: list_view
+msgid "List view"
+msgstr "Liste görünümü"
+
+#. Legacy key: grid_view
+msgid "Grid view"
+msgstr "Izgara görünümü"
+
+#. Legacy key: reset
+msgid "Reset"
+msgstr "Sıfırla"
+
+#. Legacy key: showing
+msgid "Showing"
+msgstr "gösteriliyor"
+
+#. Legacy key: of
+msgid "Of"
+msgstr "İle ilgili"
+
+#. Legacy key: results
+msgid "Results"
+msgstr "Sonuçlar"
+
+#. Legacy key: newly_published
+msgid "Newly published"
+msgstr "Yeni yayınlanan"
+
+#. Legacy key: highest_rating
+msgid "Highest rating"
+msgstr "En yüksek derece"
+
+#. Legacy key: lowest_price
+msgid "Lowest price"
+msgstr "En düşük fiyat"
+
+#. Legacy key: highest_price
+msgid "Highest price"
+msgstr "En yüksek fiyat"
+
+#. Legacy key: discounted
+msgid "Discounted"
+msgstr "indirimli"
+
+#. Legacy key: english
+msgid "English"
+msgstr "İngilizce"
+
+#. Legacy key: bundles
+msgid "Bundles"
+msgstr "Paketler"
+
+#. Legacy key: search_for_bundle
+msgid "Search for bundle"
+msgstr "paket ara"
+
+#. Legacy key: rating_updated_successfully
+msgid "Rating updated successfully"
+msgstr "Derecelendirme başarıyla güncellendi"
+
+#. Legacy key: please_select_a_rating_greater_than_0
+msgid "Please select a rating greater than 0"
+msgstr "Lütfen 0'dan büyük bir derecelendirme seçin"
+
+#. Legacy key: your_subscription_date_is_over_please_renew_your_bundle
+msgid "Your subscription date is over please renew your bundle"
+msgstr "Abonelik tarihiniz bitti lütfen paketinizi yenileyin"
+
+#. Legacy key: bundle_details
+msgid "Bundle details"
+msgstr "paket ayrıntıları"
+
+#. Legacy key: buy
+msgid "Buy"
+msgstr "Satın almak"
+
+#. Legacy key: all_categories
+msgid "All categories"
+msgstr "Tüm Kategoriler"
+
+#. Legacy key: view_details
+msgid "View details"
+msgstr "Detayları göster"
+
+#. Legacy key: your_email
+msgid "Your email"
+msgstr "E-posta adresiniz"
+
+#. Legacy key: enter_your_email
+msgid "Enter your email"
+msgstr "E-postanızı giriniz"
+
+#. Legacy key: enter_your_valid_password
+msgid "Enter your valid password"
+msgstr "geçerli şifrenizi girin"
+
+#. Legacy key: or
+msgid "Or"
+msgstr "Veya"
+
+#. Legacy key: send_request
+msgid "Send request"
+msgstr "İstek gönder"
+
+#. Legacy key: back_to_login
+msgid "Back to login"
+msgstr "Girişe geri dön"
+
+#. Legacy key: my_course
+msgid "My course"
+msgstr "kursum"
+
+#. Legacy key: by
+msgid "By"
+msgstr "İle"
+
+#. Legacy key: go_to_wishlist
+msgid "Go to wishlist"
+msgstr "dilek listesine git"
+
+#. Legacy key: become_a_instructor
+msgid "Become a instructor"
+msgstr "eğitmen ol"
+
+#. Legacy key: my_courses
+msgid "My courses"
+msgstr "Kurslarım"
+
+#. Legacy key: my_wishlist
+msgid "My wishlist"
+msgstr "Benim dilek listem"
+
+#. Legacy key: my_messages
+msgid "My messages"
+msgstr "Mesajlarım"
+
+#. Legacy key: user_profile
+msgid "User profile"
+msgstr "Kullanıcı profili"
+
+#. Legacy key: support
+msgid "Support"
+msgstr "Destek"
+
+#. Legacy key: start_now
+msgid "Start now"
+msgstr "Şimdi başla"
+
+#. Legacy key: gift_someone_else
+msgid "Gift someone else"
+msgstr "başka birine hediye et"
+
+#. Legacy key: wishlist
+msgid "Wishlist"
+msgstr "dilek listesi"
+
+#. Legacy key: messages
+msgid "Messages"
+msgstr "Mesajlar"
+
+#. Legacy key: profile
+msgid "Profile"
+msgstr "Profil"
+
+#. Legacy key: account_credentials
+msgid "Account credentials"
+msgstr "Hesap kimlik bilgileri"
+
+#. Legacy key: go_to_course_page
+msgid "Go to course page"
+msgstr "kurs sayfasına git"
+
+#. Legacy key: author_profile
+msgid "Author profile"
+msgstr "Yazar profili"
+
+#. Legacy key: quizzes
+msgid "Quizzes"
+msgstr "Sınavlar"
+
+#. Legacy key: expiry_period
+msgid "Expiry period"
+msgstr "son kullanma tarihi"
+
+#. Legacy key: upcoming_live_class
+msgid "Upcoming live class"
+msgstr "Yaklaşan canlı sınıf"
+
+#. Legacy key: enrolled
+msgid "Enrolled"
+msgstr "kayıtlı"
+
+#. Legacy key: overview
+msgid "Overview"
+msgstr "genel bakış"
+
+#. Legacy key: curriculum
+msgid "Curriculum"
+msgstr "Müfredat"
+
+#. Legacy key: instructor
+msgid "Instructor"
+msgstr "Eğitmen"
+
+#. Legacy key: course_description
+msgid "Course description"
+msgstr "Ders Tanımı"
+
+#. Legacy key: instructor_profile
+msgid "Instructor profile"
+msgstr "Eğitmen profili"
+
+#. Legacy key: facebook
+msgid "Facebook"
+msgstr "Facebook"
+
+#. Legacy key: twitter
+msgid "Twitter"
+msgstr "twitter"
+
+#. Legacy key: linkedin
+msgid "Linkedin"
+msgstr "Linkedin"
+
+#. Legacy key: how_to_shoot_cinematic_tech_videos_like_apple
+msgid "How to shoot cinematic tech videos like apple"
+msgstr "apple gibi sinematik teknoloji videoları nasıl çekilir"
+
+#. Legacy key: compare_this_course
+msgid "Compare this course"
+msgstr "Bu kursu karşılaştırın"
+
+#. Legacy key: skill_level
+msgid "Skill level"
+msgstr "Yetenek seviyesi"
+
+#. Legacy key: lifetime
+msgid "Lifetime"
+msgstr "Ömür"
+
+#. Legacy key: certificate
+msgid "Certificate"
+msgstr "sertifika"
+
+#. Legacy key: related_courses
+msgid "Related courses"
+msgstr "İlgili kurslar"
+
+#. Legacy key: first_name
+msgid "First name"
+msgstr "İlk adı"
+
+#. Legacy key: enter_your_first_name
+msgid "Enter your first name"
+msgstr "İlk adınızı girin"
+
+#. Legacy key: last_name
+msgid "Last name"
+msgstr "Soy isim"
+
+#. Legacy key: enter_your_last_name
+msgid "Enter your last name"
+msgstr "Soyadınızı giriniz"
+
+#. Legacy key: apply_to_become_a_instructor
+msgid "Apply to become a instructor"
+msgstr "Eğitmen olmak için başvurun"
+
+#. Legacy key: enter_your_phone_number
+msgid "Enter your phone number"
+msgstr "Telefon numaranızı girin"
+
+#. Legacy key: document
+msgid "Document"
+msgstr "belge"
+
+#. Legacy key: provide_some_documents_about_your_qualifications
+msgid "Provide some documents about your qualifications"
+msgstr "Niteliklerinizle ilgili bazı belgeler sağlayın"
+
+#. Legacy key: invalid_login_credentials
+msgid "Invalid login credentials"
+msgstr "Geçersiz giriş bilgileri"
+
+#. Legacy key: publication_name
+msgid "Publication name"
+msgstr "yayın adı"
+
+#. Legacy key: published_date
+msgid "Published date"
+msgstr "Yayınlanma tarihi"
+
+#. Legacy key: category_name
+msgid "Category name"
+msgstr "Kategori adı"
+
+#. Legacy key: read_preview
+msgid "Read preview"
+msgstr "Önizlemeyi oku"
+
+#. Legacy key: free_download
+msgid "Free download"
+msgstr "Ücretsiz indirin"
+
+#. Legacy key: book_specification_and_summary
+msgid "Book specification and summary"
+msgstr "Kitap özellikleri ve özeti"
+
+#. Legacy key: summary
+msgid "Summary"
+msgstr "Özet"
+
+#. Legacy key: specification
+msgid "Specification"
+msgstr "Şartname"
+
+#. Legacy key: other_related_ebooks
+msgid "Other related ebooks"
+msgstr "Diğer ilgili e-kitaplar"
+
+#. Legacy key: about_instructor
+msgid "About instructor"
+msgstr "Eğitmen hakkında"
+
+#. Legacy key: ebook_review
+msgid "Ebook review"
+msgstr "e-kitap incelemesi"
+
+#. Legacy key: add_to_wishlist
+msgid "Add to wishlist"
+msgstr "İstek listesine ekle"
+
+#. Legacy key: added_to_wishlist
+msgid "Added to wishlist"
+msgstr "İstek listesine eklendi"
+
+#. Legacy key: wordpress_theme_development_with_bootstrap
+msgid "Wordpress theme development with bootstrap"
+msgstr "Önyükleme ile wordpress tema geliştirme"
+
+#. Legacy key: frontend_settings
+msgid "Frontend settings"
+msgstr "ön uç ayarları"
+
+#. Legacy key: home_page_layout
+msgid "Home page layout"
+msgstr "Ana sayfa düzeni"
+
+#. Legacy key: motivational_speech
+msgid "Motivational speech"
+msgstr "Motive edici konuşma"
+
+#. Legacy key: website_faqs
+msgid "Website faqs"
+msgstr "Web sitesi sss"
+
+#. Legacy key: recaptcha
+msgid "Recaptcha"
+msgstr "Recaptcha"
+
+#. Legacy key: frontend_website_settings
+msgid "Frontend website settings"
+msgstr "Ön uç web sitesi ayarları"
+
+#. Legacy key: banner_title
+msgid "Banner title"
+msgstr "Afiş başlığı"
+
+#. Legacy key: banner_sub_title
+msgid "Banner sub title"
+msgstr "Banner alt başlığı"
+
+#. Legacy key: cookie_status
+msgid "Cookie status"
+msgstr "Çerez durumu"
+
+#. Legacy key: active
+msgid "Active"
+msgstr "Aktif"
+
+#. Legacy key: inactive
+msgid "Inactive"
+msgstr "etkin değil"
+
+#. Legacy key: cookie_note
+msgid "Cookie note"
+msgstr "Çerez notu"
+
+#. Legacy key: update_settings
+msgid "Update settings"
+msgstr "Ayarları güncelle"
+
+#. Legacy key: activated
+msgid "Activated"
+msgstr "Aktif"
+
+#. Legacy key: title
+msgid "Title"
+msgstr "Başlık"
+
+#. Legacy key: faq_question
+msgid "Faq question"
+msgstr "Sss soru"
+
+#. Legacy key: image
+msgid "Image"
+msgstr "resim"
+
+#. Legacy key: upload_image
+msgid "Upload image"
+msgstr "Fotoğraf yükleniyor"
+
+#. Legacy key: save_changes
+msgid "Save changes"
+msgstr "Değişiklikleri Kaydet"
+
+#. Legacy key: question
+msgid "Question"
+msgstr "Soru"
+
+#. Legacy key: answer
+msgid "Answer"
+msgstr "Cevap"
+
+#. Legacy key: recaptcha_settings
+msgid "Recaptcha settings"
+msgstr "Recaptcha ayarları"
+
+#. Legacy key: recaptcha_status
+msgid "Recaptcha status"
+msgstr "Recaptcha durumu"
+
+#. Legacy key: recaptcha_sitekey
+msgid "Recaptcha sitekey"
+msgstr "Recaptcha site anahtarı"
+
+#. Legacy key: recaptcha_secretkey
+msgid "Recaptcha secretkey"
+msgstr "Recaptcha gizli anahtarı"
+
+#. Legacy key: update_recaptcha_settings
+msgid "Update recaptcha settings"
+msgstr "Recaptcha ayarlarını güncelle"
+
+#. Legacy key: update_banner_image
+msgid "Update banner image"
+msgstr "Başlık resmini güncelle"
+
+#. Legacy key: upload_banner_image
+msgid "Upload banner image"
+msgstr "Başlık resmi yükle"
+
+#. Legacy key: update_light_logo
+msgid "Update light logo"
+msgstr "Işık logosunu güncelle"
+
+#. Legacy key: upload_light_logo
+msgid "Upload light logo"
+msgstr "Hafif logo yükle"
+
+#. Legacy key: update_dark_logo
+msgid "Update dark logo"
+msgstr "Koyu logoyu güncelle"
+
+#. Legacy key: upload_dark_logo
+msgid "Upload dark logo"
+msgstr "koyu renkli logo yükle"
+
+#. Legacy key: update_small_logo
+msgid "Update small logo"
+msgstr "Küçük logoyu güncelle"
+
+#. Legacy key: upload_small_logo
+msgid "Upload small logo"
+msgstr "Küçük logo yükle"
+
+#. Legacy key: update_favicon
+msgid "Update favicon"
+msgstr "Favicon'u güncelle"
+
+#. Legacy key: upload_favicon
+msgid "Upload favicon"
+msgstr "Favicon yükle"
+
+#. Legacy key: banner_image_update
+msgid "Banner image update"
+msgstr "Başlık resmi güncellemesi"
+
+#. Legacy key: frontend_settings_updated
+msgid "Frontend settings updated"
+msgstr "Ön uç ayarları güncellendi"
+
+#. Legacy key: start_learning_from_best_platform
+msgid "Start learning from best platform"
+msgstr "En iyi platformdan öğrenmeye başlayın"
+
+#. Legacy key: your_servers_file_upload_limit_is_512mb
+msgid "Your servers file upload limit is 512mb"
+msgstr "Sunucularınızın dosya yükleme limiti 512mb'dir."
+
+#. Legacy key: blog_page_title
+msgid "Blog page title"
+msgstr "Blog sayfası başlığı"
+
+#. Legacy key: blog_page_subtitle
+msgid "Blog page subtitle"
+msgstr "Blog sayfası alt başlığı"
+
+#. Legacy key: instructors_blog_permission
+msgid "Instructors blog permission"
+msgstr "Eğitmenler blog izni"
+
+#. Legacy key: blog_visibility_on_the_home_page
+msgid "Blog visibility on the home page"
+msgstr "Ana sayfada blog görünürlüğü"
+
+#. Legacy key: visible
+msgid "Visible"
+msgstr "Görünür"
+
+#. Legacy key: invisible
+msgid "Invisible"
+msgstr "Görünmez"
+
+#. Legacy key: blog_page_banner
+msgid "Blog page banner"
+msgstr "Blog sayfası başlığı"
+
+#. Legacy key: blog_settings_updated_successfully
+msgid "Blog settings updated successfully"
+msgstr "Blog ayarları başarıyla güncellendi"
+
+#. Legacy key: visit_our_latest_blogs
+msgid "Visit our latest blogs"
+msgstr "En son bloglarımızı ziyaret edin"
+
+#. Legacy key: thu
+msgid "Thu"
+msgstr "Perşembe"
+
+#. Legacy key: dec
+msgid "Dec"
+msgstr "Aralık"
+
+#. Legacy key: free_courses
+msgid "Free courses"
+msgstr "ücretsiz kurslar"
+
+#. Legacy key: paid_courses
+msgid "Paid courses"
+msgstr "ücretli kurslar"
+
+#. Legacy key: course_list
+msgid "Course list"
+msgstr "Kurs listesi"
+
+#. Legacy key: status
+msgid "Status"
+msgstr "Durum"
+
+#. Legacy key: pending
+msgid "Pending"
+msgstr "Askıda olması"
+
+#. Legacy key: private
+msgid "Private"
+msgstr "Özel"
+
+#. Legacy key: lesson_and_section
+msgid "Lesson and section"
+msgstr "Ders ve bölüm"
+
+#. Legacy key: enrolled_student
+msgid "Enrolled student"
+msgstr "kayıtlı öğrenci"
+
+#. Legacy key: mark_as_pending
+msgid "Mark as pending"
+msgstr "beklemede olarak işaretle"
+
+#. Legacy key: section_and_lesson
+msgid "Section and lesson"
+msgstr "Bölüm ve ders"
+
+#. Legacy key: academic_progress
+msgid "Academic progress"
+msgstr "Akademik gelişme"
+
+#. Legacy key: edit_this_course
+msgid "Edit this course"
+msgstr "Bu kursu düzenle"
+
+#. Legacy key: view_course_on_frontend
+msgid "View course on frontend"
+msgstr "Kursu ön uçta görüntüle"
+
+#. Legacy key: go_to_course_playing_page
+msgid "Go to course playing page"
+msgstr "Kurs oynatma sayfasına git"
+
+#. Legacy key: section
+msgid "Section"
+msgstr "Bölüm"
+
+#. Legacy key: lesson
+msgid "Lesson"
+msgstr "Ders"
+
+#. Legacy key: mark_as_active
+msgid "Mark as active"
+msgstr "etkin olarak işaretle"
+
+#. Legacy key: edit_course
+msgid "Edit course"
+msgstr "Kursu düzenle"
+
+#. Legacy key: course_manager
+msgid "Course manager"
+msgstr "Kurs yöneticisi"
+
+#. Legacy key: view_on_frontend
+msgid "View on frontend"
+msgstr "Ön uçta görüntüle"
+
+#. Legacy key: back_to_course_list
+msgid "Back to course list"
+msgstr "Kurs listesine geri dön"
+
+#. Legacy key: zoom_live_class
+msgid "Zoom live class"
+msgstr "Canlı sınıfı yakınlaştır"
+
+#. Legacy key: jitsi_live_class
+msgid "Jitsi live class"
+msgstr "Jitsi canlı sınıf"
+
+#. Legacy key: assignment
+msgid "Assignment"
+msgstr "Atama"
+
+#. Legacy key: noticeboard
+msgid "Noticeboard"
+msgstr "duyuru panosu"
+
+#. Legacy key: analytics
+msgid "Analytics"
+msgstr "Analitik"
+
+#. Legacy key: basic
+msgid "Basic"
+msgstr "Temel"
+
+#. Legacy key: info
+msgid "Info"
+msgstr "Bilgi"
+
+#. Legacy key: pricing
+msgid "Pricing"
+msgstr "Fiyatlandırma"
+
+#. Legacy key: media
+msgid "Media"
+msgstr "medya"
+
+#. Legacy key: seo
+msgid "Seo"
+msgstr "seo"
+
+#. Legacy key: finish
+msgid "Finish"
+msgstr "Sona ermek"
+
+#. Legacy key: add_new_section
+msgid "Add new section"
+msgstr "yeni bölüm ekle"
+
+#. Legacy key: add_section
+msgid "Add section"
+msgstr "bölüm ekle"
+
+#. Legacy key: add_new_quiz
+msgid "Add new quiz"
+msgstr "Yeni test ekle"
+
+#. Legacy key: add_quiz
+msgid "Add quiz"
+msgstr "Sınav ekle"
+
+#. Legacy key: sort_sections
+msgid "Sort sections"
+msgstr "Bölümleri sırala"
+
+#. Legacy key: sort_lessons
+msgid "Sort lessons"
+msgstr "Dersleri sırala"
+
+#. Legacy key: sort_lesson
+msgid "Sort lesson"
+msgstr "Dersi sırala"
+
+#. Legacy key: update_section
+msgid "Update section"
+msgstr "Güncelleme bölümü"
+
+#. Legacy key: edit_section
+msgid "Edit section"
+msgstr "Bölümü düzenle"
+
+#. Legacy key: delete_section
+msgid "Delete section"
+msgstr "Bölümü sil"
+
+#. Legacy key: update_lesson
+msgid "Update lesson"
+msgstr "Dersi güncelle"
+
+#. Legacy key: edit
+msgid "Edit"
+msgstr "Düzenlemek"
+
+#. Legacy key: quiz_results
+msgid "Quiz results"
+msgstr "sınav sonuçları"
+
+#. Legacy key: manage_quiz_questions
+msgid "Manage quiz questions"
+msgstr "Sınav sorularını yönet"
+
+#. Legacy key: quiz_questions
+msgid "Quiz questions"
+msgstr "sınav soruları"
+
+#. Legacy key: update_quiz_information
+msgid "Update quiz information"
+msgstr "Test bilgilerini güncelle"
+
+#. Legacy key: quiz
+msgid "Quiz"
+msgstr "bilgi yarışması"
+
+#. Legacy key: live_class_schedule
+msgid "Live class schedule"
+msgstr "Canlı ders programı"
+
+#. Legacy key: date
+msgid "Date"
+msgstr "Tarih"
+
+#. Legacy key: time
+msgid "Time"
+msgstr "Zaman"
+
+#. Legacy key: note_to_students
+msgid "Note to students"
+msgstr "öğrencilere not"
+
+#. Legacy key: zoom_meeting_id
+msgid "Zoom meeting id"
+msgstr "Toplantı kimliğini yakınlaştır"
+
+#. Legacy key: enter_meeting_id
+msgid "Enter meeting id"
+msgstr "Toplantı kimliğini girin"
+
+#. Legacy key: zoom_meeting_password
+msgid "Zoom meeting password"
+msgstr "yakınlaştırma toplantı şifresi"
+
+#. Legacy key: enter_meeting_password
+msgid "Enter meeting password"
+msgstr "Toplantı parolasını girin"
+
+#. Legacy key: course_enrolment_details
+msgid "Course enrolment details"
+msgstr "Ders kayıt detayları"
+
+#. Legacy key: get
+msgid "Get"
+msgstr "Elde etmek"
+
+#. Legacy key: meeting_plans_that_fit_your_business_perfectly
+msgid "Meeting plans that fit your business perfectly"
+msgstr "İşinize mükemmel şekilde uyan toplantı planları"
+
+#. Legacy key: zoom_meeting_plans
+msgid "Zoom meeting plans"
+msgstr "Yakınlaştırma toplantı planları"
+
+#. Legacy key: jitsi_meeting_password
+msgid "Jitsi meeting password"
+msgstr "Jitsi toplantı şifresi"
+
+#. Legacy key: make_sure_you_save_the_live_class_password_before_starting_the_class
+msgid "Make sure you save the live class password before starting the class"
+msgstr "Derse başlamadan önce canlı ders şifresini kaydettiğinizden emin olun."
+
+#. Legacy key: enter_your_class_topic
+msgid "Enter your class topic"
+msgstr "Sınıf konunuzu girin"
+
+#. Legacy key: enter_your_message
+msgid "Enter your message"
+msgstr "mesajınızı girin"
+
+#. Legacy key: send_a_mail_to_students_to_join_this_live_class
+msgid "Send a mail to students to join this live class"
+msgstr "Bu canlı derse katılmak için öğrencilere bir e-posta gönderin"
+
+#. Legacy key: start_live_video_class
+msgid "Start live video class"
+msgstr "Canlı video dersi başlat"
+
+#. Legacy key: sending_mail
+msgid "Sending mail"
+msgstr "Mail gönderiliyor"
+
+#. Legacy key: the_message_field_is_empty
+msgid "The message field is empty"
+msgstr "mesaj alanı boş"
+
+#. Legacy key: create_new_assignment
+msgid "Create new assignment"
+msgstr "Yeni ödev oluştur"
+
+#. Legacy key: assignment_title
+msgid "Assignment title"
+msgstr "Ödev başlığı"
+
+#. Legacy key: enter_assignment_title
+msgid "Enter assignment title"
+msgstr "Ödev başlığını girin"
+
+#. Legacy key: questions
+msgid "Questions"
+msgstr "Sorular"
+
+#. Legacy key: enter_your_assignment_questions
+msgid "Enter your assignment questions"
+msgstr "Ödev sorularınızı girin"
+
+#. Legacy key: question_file
+msgid "Question file"
+msgstr "Soru dosyası"
+
+#. Legacy key: choose_file
+msgid "Choose file"
+msgstr "Dosya seçin"
+
+#. Legacy key: total_marks
+msgid "Total marks"
+msgstr "Toplam puan"
+
+#. Legacy key: deadline
+msgid "Deadline"
+msgstr "Son teslim tarihi"
+
+#. Legacy key: note
+msgid "Note"
+msgstr "Not"
+
+#. Legacy key: submission_status
+msgid "Submission status"
+msgstr "Gönderim durumu"
+
+#. Legacy key: draft
+msgid "Draft"
+msgstr "Taslak"
+
+#. Legacy key: add_new_assignment
+msgid "Add new assignment"
+msgstr "Yeni ödev ekle"
+
+#. Legacy key: uploading
+msgid "Uploading"
+msgstr "yükleniyor"
+
+#. Legacy key: fill_up_the_required_feilds
+msgid "Fill up the required feilds"
+msgstr "Gerekli alanları doldurun"
+
+#. Legacy key: course_title
+msgid "Course title"
+msgstr "Kurs başlığı"
+
+#. Legacy key: enter_your_notice_title
+msgid "Enter your notice title"
+msgstr "Bildirim başlığınızı girin"
+
+#. Legacy key: enter_your_notice_description
+msgid "Enter your notice description"
+msgstr "Bildirim açıklamanızı girin"
+
+#. Legacy key: send_mail_to_students_if_urgent
+msgid "Send mail to students if urgent"
+msgstr "Acil ise öğrencilere posta gönderin"
+
+#. Legacy key: add_new_notice
+msgid "Add new notice"
+msgstr "Yeni bildirim ekle"
+
+#. Legacy key: updating
+msgid "Updating"
+msgstr "güncelleniyor"
+
+#. Legacy key: course_type
+msgid "Course type"
+msgstr "Kurs türü"
+
+#. Legacy key: general
+msgid "General"
+msgstr "Genel"
+
+#. Legacy key: the_course_type_can_not_be_editable
+msgid "The course type can not be editable"
+msgstr "Kurs türü düzenlenemez"
+
+#. Legacy key: instructor_of_this_course
+msgid "Instructor of this course"
+msgstr "Bu kursun hocası"
+
+#. Legacy key: enter_course_title
+msgid "Enter course title"
+msgstr "Kurs başlığını girin"
+
+#. Legacy key: short_description
+msgid "Short description"
+msgstr "Kısa Açıklama"
+
+#. Legacy key: select_a_category
+msgid "Select a category"
+msgstr "bir kategori seç"
+
+#. Legacy key: select_sub_category
+msgid "Select sub category"
+msgstr "Alt kategori seçin"
+
+#. Legacy key: language_made_in
+msgid "Language made in"
+msgstr "yapılan dil"
+
+#. Legacy key: enable_drip_content
+msgid "Enable drip content"
+msgstr "Damla içeriğini etkinleştir"
+
+#. Legacy key: updated_as_a
+msgid "Updated as a"
+msgstr "olarak güncellendi"
+
+#. Legacy key: private_course
+msgid "Private course"
+msgstr "özel kurs"
+
+#. Legacy key: upcoming_course
+msgid "Upcoming course"
+msgstr "Yaklaşan kurs"
+
+#. Legacy key: check_if_this_course_is_top_course
+msgid "Check if this course is top course"
+msgstr "Bu kursun en iyi kurs olup olmadığını kontrol edin"
+
+#. Legacy key: course_faq
+msgid "Course faq"
+msgstr "Kurs SSS"
+
+#. Legacy key: provide_requirements
+msgid "Provide requirements"
+msgstr "Gereksinimleri sağlayın"
+
+#. Legacy key: provide_outcomes
+msgid "Provide outcomes"
+msgstr "Sonuçlar sağlayın"
+
+#. Legacy key: check_if_this_is_a_free_course
+msgid "Check if this is a free course"
+msgstr "Bunun ücretsiz bir kurs olup olmadığını kontrol edin"
+
+#. Legacy key: course_price
+msgid "Course price"
+msgstr "kurs fiyatı"
+
+#. Legacy key: enter_course_course_price
+msgid "Enter course course price"
+msgstr "Kurs kurs fiyatını girin"
+
+#. Legacy key: check_if_this_course_has_discount
+msgid "Check if this course has discount"
+msgstr "Bu kursta indirim olup olmadığını kontrol edin"
+
+#. Legacy key: discounted_price
+msgid "Discounted price"
+msgstr "İndirimli fiyat"
+
+#. Legacy key: this_course_has
+msgid "This course has"
+msgstr "Bu kurs var"
+
+#. Legacy key: discount
+msgid "Discount"
+msgstr "İndirim"
+
+#. Legacy key: limited_time
+msgid "Limited time"
+msgstr "Sınırlı zaman"
+
+#. Legacy key: number_of_month
+msgid "Number of month"
+msgstr "ay sayısı"
+
+#. Legacy key: course_overview_provider
+msgid "Course overview provider"
+msgstr "Kursa genel bakış sağlayıcısı"
+
+#. Legacy key: youtube
+msgid "Youtube"
+msgstr "Youtube"
+
+#. Legacy key: vimeo
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#. Legacy key: html5
+msgid "Html5"
+msgstr "HTML5"
+
+#. Legacy key: course_overview_url
+msgid "Course overview url"
+msgstr "Kursa genel bakış URL'si"
+
+#. Legacy key: course_thumbnail
+msgid "Course thumbnail"
+msgstr "Kurs küçük resmi"
+
+#. Legacy key: meta_keywords
+msgid "Meta keywords"
+msgstr "Anahtar Kelimeler"
+
+#. Legacy key: write_a_keyword_and_then_press_enter_button
+msgid "Write a keyword and then press enter button"
+msgstr "Bir anahtar kelime yazın ve ardından enter düğmesine basın"
+
+#. Legacy key: meta_description
+msgid "Meta description"
+msgstr "Meta Açıklaması"
+
+#. Legacy key: thank_you
+msgid "Thank you"
+msgstr "Teşekkür ederim"
+
+#. Legacy key: you_are_just_one_click_away
+msgid "You are just one click away"
+msgstr "Sadece bir tık uzaktasın"
+
+#. Legacy key: submit
+msgid "Submit"
+msgstr "Göndermek"
+
+#. Legacy key: course_updated_successfully
+msgid "Course updated successfully"
+msgstr "Kurs başarıyla güncellendi"
+
+#. Legacy key: course_progress_analytics
+msgid "Course progress analytics"
+msgstr "Kurs ilerleme analitiği"
+
+#. Legacy key: completion_percentage
+msgid "Completion percentage"
+msgstr "Tamamlanma yüzdesi"
+
+#. Legacy key: enrolled_students
+msgid "Enrolled students"
+msgstr "Kayıtlı öğrenciler"
+
+#. Legacy key: number_of_students
+msgid "Number of students"
+msgstr "Öğrenci sayısı"
+
+#. Legacy key: course_enrolments
+msgid "Course enrolments"
+msgstr "ders kayıtları"
+
+#. Legacy key: jan
+msgid "Jan"
+msgstr "Ocak"
+
+#. Legacy key: feb
+msgid "Feb"
+msgstr "Şubat"
+
+#. Legacy key: mar
+msgid "Mar"
+msgstr "Mar"
+
+#. Legacy key: apr
+msgid "Apr"
+msgstr "Nisan"
+
+#. Legacy key: jun
+msgid "Jun"
+msgstr "haziran"
+
+#. Legacy key: jul
+msgid "Jul"
+msgstr "Temmuz"
+
+#. Legacy key: aug
+msgid "Aug"
+msgstr "ağustos"
+
+#. Legacy key: sep
+msgid "Sep"
+msgstr "eylül"
+
+#. Legacy key: oct
+msgid "Oct"
+msgstr "Ekim"
+
+#. Legacy key: nov
+msgid "Nov"
+msgstr "Kasım"
+
+#. Legacy key: go
+msgid "Go"
+msgstr "Gitmek"
+
+#. Legacy key: the_dates_of_month
+msgid "The dates of month"
+msgstr "ayın tarihleri"
+
+#. Legacy key: upload_scorm_course
+msgid "Upload scorm course"
+msgstr "scorm kursu yükle"
+
+#. Legacy key: upload_course
+msgid "Upload course"
+msgstr "kursu yükle"
+
+#. Legacy key: instruction
+msgid "Instruction"
+msgstr "Talimat"
+
+#. Legacy key: click_the_upload_course_button
+msgid "Click the upload course button"
+msgstr "Kursu yükle düğmesine tıklayın"
+
+#. Legacy key: you_will_get_a_floating_form_after_clicking_the_button
+msgid "You will get a floating form after clicking the button"
+msgstr "Düğmeye tıkladıktan sonra kayan bir form alacaksınız"
+
+#. Legacy key: select_a_scorm_provider_first
+msgid "Select a scorm provider first"
+msgstr "Önce bir scorm sağlayıcı seçin"
+
+#. Legacy key: choose_your_scorm_zip_file
+msgid "Choose your scorm zip file"
+msgstr "scorm zip dosyanızı seçin"
+
+#. Legacy key: click_the_upload_button_to_save_the_course_file
+msgid "Click the upload button to save the course file"
+msgstr "Kurs dosyasını kaydetmek için yükle düğmesine tıklayın"
+
+#. Legacy key: scorm
+msgid "Scorm"
+msgstr "küfür"
+
+#. Legacy key: upload_h5p_file
+msgid "Upload h5p file"
+msgstr "h5p dosyasını yükle"
+
+#. Legacy key: remove
+msgid "Remove"
+msgstr "Kaldırmak"
+
+#. Legacy key: h5p
+msgid "H5p"
+msgstr "H5p"
+
+#. Legacy key: blogs
+msgid "Blogs"
+msgstr "Bloglar"
+
+#. Legacy key: add_new_blog
+msgid "Add new blog"
+msgstr "Yeni blog ekle"
+
+#. Legacy key: creator
+msgid "Creator"
+msgstr "Yaratıcı"
+
+#. Legacy key: deactivate
+msgid "Deactivate"
+msgstr "Devre dışı bırakmak"
+
+#. Legacy key: blog_details
+msgid "Blog details"
+msgstr "Blog ayrıntıları"
+
+#. Legacy key: inspirational_journeys
+msgid "Inspirational journeys"
+msgstr "ilham verici yolculuklar"
+
+#. Legacy key: follow_the_stories_of_academics_and_their_research_expeditions
+msgid "Follow the stories of academics and their research expeditions"
+msgstr "Akademisyenlerin hikayelerini ve araştırma gezilerini takip edin"
+
+#. Legacy key: comments
+msgid "Comments"
+msgstr "Yorumlar"
+
+#. Legacy key: leave_a_comment
+msgid "Leave a comment"
+msgstr "yorum Yap"
+
+#. Legacy key: enter_your_comments_here
+msgid "Enter your comments here"
+msgstr "Yorumlarınızı buraya girin"
+
+#. Legacy key: type_your_keywords
+msgid "Type your keywords"
+msgstr "Anahtar kelimelerinizi yazın"
+
+#. Legacy key: recent_posts
+msgid "Recent posts"
+msgstr "Yakın zamanda Gönderilenler"
+
+#. Legacy key: edit_blog
+msgid "Edit blog"
+msgstr "blogu düzenle"
+
+#. Legacy key: edit_your_blog
+msgid "Edit your blog"
+msgstr "Blogunuzu düzenleyin"
+
+#. Legacy key: enter_blog_title
+msgid "Enter blog title"
+msgstr "Blog başlığını girin"
+
+#. Legacy key: keywords
+msgid "Keywords"
+msgstr "anahtar kelimeler"
+
+#. Legacy key: click_the_enter_button_after_writing_your_keyword
+msgid "Click the enter button after writing your keyword"
+msgstr "Anahtar kelimenizi yazdıktan sonra enter butonuna tıklayın"
+
+#. Legacy key: blog_banner
+msgid "Blog banner"
+msgstr "Blog başlığı"
+
+#. Legacy key: choose_a_banner
+msgid "Choose a banner"
+msgstr "Bir afiş seçin"
+
+#. Legacy key: blog_thumbnail
+msgid "Blog thumbnail"
+msgstr "Blog küçük resmi"
+
+#. Legacy key: choose_a_thumbnail
+msgid "Choose a thumbnail"
+msgstr "Bir küçük resim seçin"
+
+#. Legacy key: do_you_want_to_mark_it_as_popular
+msgid "Do you want to mark it as popular"
+msgstr "Popüler olarak işaretlemek istiyor musunuz?"
+
+#. Legacy key: mark_as_popular
+msgid "Mark as popular"
+msgstr "Popüler olarak işaretle"
+
+#. Legacy key: update_blog
+msgid "Update blog"
+msgstr "Blogu güncelle"
+
+#. Legacy key: blog_updated_successfully
+msgid "Blog updated successfully"
+msgstr "Blog başarıyla güncellendi"
+
+#. Legacy key: add_instructor
+msgid "Add instructor"
+msgstr "eğitmen ekle"
+
+#. Legacy key: photo
+msgid "Photo"
+msgstr "Fotoğraf"
+
+#. Legacy key: name
+msgid "Name"
+msgstr "İsim"
+
+#. Legacy key: enrolled_courses
+msgid "Enrolled courses"
+msgstr "Kayıtlı kurslar"
+
+#. Legacy key: view_courses
+msgid "View courses"
+msgstr "Kursları görüntüle"
+
+#. Legacy key: instructor_edit
+msgid "Instructor edit"
+msgstr "eğitmen düzenleme"
+
+#. Legacy key: instructor_edit_form
+msgid "Instructor edit form"
+msgstr "Eğitmen düzenleme formu"
+
+#. Legacy key: basic_info
+msgid "Basic info"
+msgstr "Temel bilgi"
+
+#. Legacy key: login_credentials
+msgid "Login credentials"
+msgstr "Giriş kimlik"
+
+#. Legacy key: social_information
+msgid "Social information"
+msgstr "Sosyal bilgiler"
+
+#. Legacy key: payment_info
+msgid "Payment info"
+msgstr "Ödeme bilgisi"
+
+#. Legacy key: a_short_title_about_yourself
+msgid "A short title about yourself"
+msgstr "Kendiniz hakkında kısa bir başlık"
+
+#. Legacy key: short_title
+msgid "Short title"
+msgstr "Kısa başlık"
+
+#. Legacy key: skills
+msgid "Skills"
+msgstr "Yetenekler"
+
+#. Legacy key: write_your_skill_and_click_the_enter_button
+msgid "Write your skill and click the enter button"
+msgstr "Becerinizi yazın ve enter düğmesine tıklayın"
+
+#. Legacy key: biography
+msgid "Biography"
+msgstr "Biyografi"
+
+#. Legacy key: user_image
+msgid "User image"
+msgstr "kullanıcı resmi"
+
+#. Legacy key: choose_user_image
+msgid "Choose user image"
+msgstr "Kullanıcı resmi seçin"
+
+#. Legacy key: razorpay
+msgid "Razorpay"
+msgstr "Razorpay"
+
+#. Legacy key: key_id
+msgid "Key id"
+msgstr "anahtar kimliği"
+
+#. Legacy key: required_for_instructor
+msgid "Required for instructor"
+msgstr "Eğitmen için gerekli"
+
+#. Legacy key: secret_key
+msgid "Secret key"
+msgstr "Gizli anahtar"
+
+#. Legacy key: theme_color
+msgid "Theme color"
+msgstr "Tema rengi"
+
+#. Legacy key: stripe
+msgid "Stripe"
+msgstr "Şerit"
+
+#. Legacy key: public_key
+msgid "Public key"
+msgstr "Genel anahtar"
+
+#. Legacy key: public_live_key
+msgid "Public live key"
+msgstr "Genel canlı anahtar"
+
+#. Legacy key: secret_live_key
+msgid "Secret live key"
+msgstr "Gizli canlı anahtar"
+
+#. Legacy key: paypal
+msgid "Paypal"
+msgstr "paypal"
+
+#. Legacy key: sandbox_client_id
+msgid "Sandbox client id"
+msgstr "Korumalı alan istemci kimliği"
+
+#. Legacy key: sandbox_secret_key
+msgid "Sandbox secret key"
+msgstr "Korumalı alan gizli anahtarı"
+
+#. Legacy key: production_client_id
+msgid "Production client id"
+msgstr "Üretim müşteri kimliği"
+
+#. Legacy key: production_secret_key
+msgid "Production secret key"
+msgstr "Üretim gizli anahtarı"
+
+#. Legacy key: ccavenue
+msgid "Ccavenue"
+msgstr "Cağavenue"
+
+#. Legacy key: ccavenue_merchant_id
+msgid "Ccavenue merchant id"
+msgstr "Ccavenue satıcı kimliği"
+
+#. Legacy key: ccavenue_working_key
+msgid "Ccavenue working key"
+msgstr "Ccavenue çalışma anahtarı"
+
+#. Legacy key: ccavenue_access_code
+msgid "Ccavenue access code"
+msgstr "Ccavenue erişim kodu"
+
+#. Legacy key: iyzico
+msgid "Iyzico"
+msgstr "Iyzico"
+
+#. Legacy key: api_test_key
+msgid "Api test key"
+msgstr "API test anahtarı"
+
+#. Legacy key: secret_test_key
+msgid "Secret test key"
+msgstr "Gizli test anahtarı"
+
+#. Legacy key: api_live_key
+msgid "Api live key"
+msgstr "API canlı anahtarı"
+
+#. Legacy key: paystack
+msgid "Paystack"
+msgstr "maaş yığını"
+
+#. Legacy key: public_test_key
+msgid "Public test key"
+msgstr "Genel test anahtarı"
+
+#. Legacy key: paytm
+msgid "Paytm"
+msgstr "Paytm"
+
+#. Legacy key: paytm_merchant_key
+msgid "Paytm merchant key"
+msgstr "Paytm satıcı anahtarı"
+
+#. Legacy key: paytm_merchant_mid
+msgid "Paytm merchant mid"
+msgstr "Paytm tüccar orta"
+
+#. Legacy key: paytm_merchant_website
+msgid "Paytm merchant website"
+msgstr "Paytm satıcı web sitesi"
+
+#. Legacy key: industry_type_id
+msgid "Industry type id"
+msgstr "Sektör türü kimliği"
+
+#. Legacy key: channel_id
+msgid "Channel id"
+msgstr "kanal kimliği"
+
+#. Legacy key: user_update_successfully
+msgid "User update successfully"
+msgstr "Kullanıcı güncellemesi başarıyla"
+
+#. Legacy key: current_course_provider
+msgid "Current course provider"
+msgstr "Mevcut kurs sağlayıcı"
+
+#. Legacy key: ispring
+msgid "Ispring"
+msgstr "bahar"
+
+#. Legacy key: preview
+msgid "Preview"
+msgstr "Ön izleme"
+
+#. Legacy key: update_scorm_course
+msgid "Update scorm course"
+msgstr "scorm kursunu güncelle"
+
+#. Legacy key: update_course
+msgid "Update course"
+msgstr "Kursu güncelle"
+
+#. Legacy key: system_settings_updated
+msgid "System settings updated"
+msgstr "Sistem ayarları güncellendi"
+
+#. Legacy key: student
+msgid "Student"
+msgstr "Öğrenci"
+
+#. Legacy key: progress
+msgid "Progress"
+msgstr "İlerlemek"
+
+#. Legacy key: not_started_yet
+msgid "Not started yet"
+msgstr "Henüz başlamadı"
+
+#. Legacy key: not_completed_yet
+msgid "Not completed yet"
+msgstr "Henüz tamamlanmadı"
+
+#. Legacy key: enrolled_from
+msgid "Enrolled from"
+msgstr "Kayıtlı"
+
+#. Legacy key: last_seen_on
+msgid "Last seen on"
+msgstr "Son görülme tarihi"
+
+#. Legacy key: completed_on
+msgid "Completed on"
+msgstr "Tamamlandı"
+
+#. Legacy key: completed_lesson
+msgid "Completed lesson"
+msgstr "tamamlanan ders"
+
+#. Legacy key: out_of
+msgid "Out of"
+msgstr "Dışında"
+
+#. Legacy key: watched_duration
+msgid "Watched duration"
+msgstr "İzlenme süresi"
+
+#. Legacy key: course_adding_form
+msgid "Course adding form"
+msgstr "Ders ekleme formu"
+
+#. Legacy key: create_as_a
+msgid "Create as a"
+msgstr "olarak oluştur"
+
+#. Legacy key: course_has_been_added_successfully
+msgid "Course has been added successfully"
+msgstr "Kurs başarıyla eklendi"
+
+#. Legacy key: instructor_add
+msgid "Instructor add"
+msgstr "Eğitmen ekle"
+
+#. Legacy key: instructor_add_form
+msgid "Instructor add form"
+msgstr "Eğitmen ekleme formu"
+
+#. Legacy key: sub_categories
+msgid "Sub categories"
+msgstr "Alt kategoriler"
+
+#. Legacy key: edit_category
+msgid "Edit category"
+msgstr "Kategoriyi düzenle"
+
+#. Legacy key: update_category
+msgid "Update category"
+msgstr "Kategoriyi güncelle"
+
+#. Legacy key: update_category_form
+msgid "Update category form"
+msgstr "Kategori formunu güncelle"
+
+#. Legacy key: category_title
+msgid "Category title"
+msgstr "Kategori başlığı"
+
+#. Legacy key: parent
+msgid "Parent"
+msgstr "ebeveyn"
+
+#. Legacy key: none
+msgid "None"
+msgstr "Hiçbiri"
+
+#. Legacy key: select_none_to_create_a_parent_category
+msgid "Select none to create a parent category"
+msgstr "Bir üst kategori oluşturmak için hiçbirini seçin"
+
+#. Legacy key: icon_picker
+msgid "Icon picker"
+msgstr "Simge seçici"
+
+#. Legacy key: category_thumbnail
+msgid "Category thumbnail"
+msgstr "Kategori küçük resmi"
+
+#. Legacy key: the_image_size_should_be
+msgid "The image size should be"
+msgstr "resim boyutu olmalıdır"
+
+#. Legacy key: choose_thumbnail
+msgid "Choose thumbnail"
+msgstr "Küçük resim seçin"
+
+#. Legacy key: data_added_successfully
+msgid "Data added successfully"
+msgstr "Veriler başarıyla eklendi"
+
+#. Legacy key: logo_updated
+msgid "Logo updated"
+msgstr "Logo güncellendi"
+
+#. Legacy key: favicon_updated
+msgid "Favicon updated"
+msgstr "Favicon güncellendi"
+
+#. Legacy key: motivational_speech_updated_successfully
+msgid "Motivational speech updated successfully"
+msgstr "Motivasyon konuşması başarıyla güncellendi"
+
+#. Legacy key: new_home_page_layout_has_been_activated
+msgid "New home page layout has been activated"
+msgstr "Yeni ana sayfa düzeni etkinleştirildi"
+
+#. Legacy key: welcome_to
+msgid "Welcome to"
+msgstr "Hoşgeldiniz"
+
+#. Legacy key: join_for_free
+msgid "Join for free"
+msgstr "Ücretsiz katılın"
+
+#. Legacy key: happy_student
+msgid "Happy student"
+msgstr "mutlu öğrenci"
+
+#. Legacy key: experienced_instructor
+msgid "Experienced instructor"
+msgstr "deneyimli eğitmen"
+
+#. Legacy key: quality_courses
+msgid "Quality courses"
+msgstr "Kaliteli kurslar"
+
+#. Legacy key: latest_top_skills
+msgid "Latest top skills"
+msgstr "En yeni en iyi beceriler"
+
+#. Legacy key: globalization
+msgid "Globalization"
+msgstr "Küreselleşme"
+
+#. Legacy key: cost-effectiveness
+msgid "Cost-effectiveness"
+msgstr "Maliyet etkinliği"
+
+#. Legacy key: popular_categories
+msgid "Popular categories"
+msgstr "Popüler kategoriler"
+
+#. Legacy key: duration
+msgid "Duration"
+msgstr "Süre"
+
+#. Legacy key: quality_educators
+msgid "Quality educators"
+msgstr "Kaliteli eğitimciler"
+
+#. Legacy key: premium_courses
+msgid "Premium courses"
+msgstr "Premium kurslar"
+
+#. Legacy key: cost-free_course
+msgid "Cost-free course"
+msgstr "Ücretsiz kurs"
+
+#. Legacy key: popular_instructor
+msgid "Popular instructor"
+msgstr "Popüler eğitmen"
+
+#. Legacy key: follow_the_latest_news
+msgid "Follow the latest news"
+msgstr "En son haberleri takip edin"
+
+#. Legacy key: website_notification
+msgid "Website notification"
+msgstr "Web sitesi bildirimi"
+
+#. Legacy key: email_template
+msgid "Email template"
+msgstr "E-posta şablonu"
+
+#. Legacy key: protocol
+msgid "Protocol"
+msgstr "Protokol"
+
+#. Legacy key: smtp_crypto
+msgid "Smtp crypto"
+msgstr "smtp kripto"
+
+#. Legacy key: smtp_host
+msgid "Smtp host"
+msgstr "smtp sunucusu"
+
+#. Legacy key: smtp_port
+msgid "Smtp port"
+msgstr "Smtp bağlantı noktası"
+
+#. Legacy key: smtp_from_email
+msgid "Smtp from email"
+msgstr "E-postadan smtp"
+
+#. Legacy key: smtp_username
+msgid "Smtp username"
+msgstr "smtp kullanıcı adı"
+
+#. Legacy key: smtp_password
+msgid "Smtp password"
+msgstr "smtp şifresi"
+
+#. Legacy key: email_type
+msgid "Email type"
+msgstr "E-posta türü"
+
+#. Legacy key: email_subject
+msgid "Email subject"
+msgstr "E-posta konu"
+
+#. Legacy key: action
+msgid "Action"
+msgstr "Aksiyon"
+
+#. Legacy key: to_admin
+msgid "To admin"
+msgstr "yöneticiye"
+
+#. Legacy key: to_user
+msgid "To user"
+msgstr "Kullanıcıya"
+
+#. Legacy key: edit_email_template
+msgid "Edit email template"
+msgstr "E-posta şablonunu düzenle"
+
+#. Legacy key: to_instructor
+msgid "To instructor"
+msgstr "eğitmene"
+
+#. Legacy key: to_student
+msgid "To student"
+msgstr "öğrenciye"
+
+#. Legacy key: to_affiliator
+msgid "To affiliator"
+msgstr "üyeye"
+
+#. Legacy key: to_payer
+msgid "To payer"
+msgstr "ödeyene"
+
+#. Legacy key: to_receiver
+msgid "To receiver"
+msgstr "Alıcıya"
+
+#. Legacy key: configure_your_notification_settings
+msgid "Configure your notification settings"
+msgstr "Bildirim ayarlarınızı yapılandırın"
+
+#. Legacy key: new_user_registration
+msgid "New user registration"
+msgstr "Yeni kullanıcı kaydı"
+
+#. Legacy key: get_notified_when_a_new_user_signs_up
+msgid "Get notified when a new user signs up"
+msgstr "Yeni bir kullanıcı kaydolduğunda bildirim alın"
+
+#. Legacy key: configure_for_admin
+msgid "Configure for admin"
+msgstr "Yönetici için yapılandır"
+
+#. Legacy key: system_notification
+msgid "System notification"
+msgstr "Sistem bildirimi"
+
+#. Legacy key: email_notification
+msgid "Email notification"
+msgstr "Eposta bildirimi"
+
+#. Legacy key: configure_for_user
+msgid "Configure for user"
+msgstr "Kullanıcı için yapılandır"
+
+#. Legacy key: email_verification
+msgid "Email verification"
+msgstr "Eposta Doğrulama"
+
+#. Legacy key: not_editable
+msgid "Not editable"
+msgstr "düzenlenemez"
+
+#. Legacy key: forgot_password_mail
+msgid "Forgot password mail"
+msgstr "Şifre postasını unuttum"
+
+#. Legacy key: account_security_alert
+msgid "Account security alert"
+msgstr "Hesap güvenlik uyarısı"
+
+#. Legacy key: send_verification_code_for_login_from_a_new_device
+msgid "Send verification code for login from a new device"
+msgstr "Yeni bir cihazdan giriş yapmak için doğrulama kodu gönder"
+
+#. Legacy key: course_purchase_notification
+msgid "Course purchase notification"
+msgstr "Ders satın alma bildirimi"
+
+#. Legacy key: configure_for_student
+msgid "Configure for student"
+msgstr "Öğrenci için yapılandır"
+
+#. Legacy key: configure_for_instructor
+msgid "Configure for instructor"
+msgstr "Eğitmen için yapılandır"
+
+#. Legacy key: course_completion_mail
+msgid "Course completion mail"
+msgstr "Kurs tamamlama postası"
+
+#. Legacy key: course_eligibility_notification
+msgid "Course eligibility notification"
+msgstr "Kurs uygunluk bildirimi"
+
+#. Legacy key: offline_payment_suspended_mail
+msgid "Offline payment suspended mail"
+msgstr "Çevrimdışı ödeme askıya alınan posta"
+
+#. Legacy key: course_bundle_purchase_notification
+msgid "Course bundle purchase notification"
+msgstr "Kurs paketi satın alma bildirimi"
+
+#. Legacy key: new_user_added_as_affiliator
+msgid "New user added as affiliator"
+msgstr "Satış ortağı olarak yeni kullanıcı eklendi"
+
+#. Legacy key: send_account_information_to_the_new_user
+msgid "Send account information to the new user"
+msgstr "Hesap bilgilerini yeni kullanıcıya gönder"
+
+#. Legacy key: configure_for_affiliator
+msgid "Configure for affiliator"
+msgstr "Satış ortağı için yapılandırın"
+
+#. Legacy key: affiliate_approval_notification
+msgid "Affiliate approval notification"
+msgstr "Ortak onay bildirimi"
+
+#. Legacy key: send_affiliate_approval_mail_to_the_user_account
+msgid "Send affiliate approval mail to the user account"
+msgstr "Kullanıcı hesabına bağlı kuruluş onay postası gönderin"
+
+#. Legacy key: affiliator_request_cancellation
+msgid "Affiliator request cancellation"
+msgstr "Satış ortağı isteği iptali"
+
+#. Legacy key: affiliation_money_withdrawal_request
+msgid "Affiliation money withdrawal request"
+msgstr "Üyelik para çekme talebi"
+
+#. Legacy key: approval_of_withdrawal_request_of_affiliation
+msgid "Approval of withdrawal request of affiliation"
+msgstr "Üyelikten çekilme talebinin onaylanması"
+
+#. Legacy key: course_gift_notification
+msgid "Course gift notification"
+msgstr "Kurs hediye bildirimi"
+
+#. Legacy key: notify_users_after_course_gift
+msgid "Notify users after course gift"
+msgstr "Kurs hediyesinden sonra kullanıcıları bilgilendir"
+
+#. Legacy key: configure_for_payer
+msgid "Configure for payer"
+msgstr "Ödeyen için yapılandır"
+
+#. Legacy key: configure_for_receiver
+msgid "Configure for receiver"
+msgstr "Alıcı için yapılandır"
+
+#. Legacy key: custom_pages
+msgid "Custom pages"
+msgstr "Özel sayfalar"
+
+#. Legacy key: add_a_new_page
+msgid "Add a new page"
+msgstr "yeni bir sayfa ekle"
+
+#. Legacy key: page_title
+msgid "Page title"
+msgstr "Sayfa başlığı"
+
+#. Legacy key: button_title
+msgid "Button title"
+msgstr "Düğme başlığı"
+
+#. Legacy key: button_position
+msgid "Button position"
+msgstr "Düğme konumu"
+
+#. Legacy key: social_login_configuration
+msgid "Social login configuration"
+msgstr "Sosyal oturum açma yapılandırması"
+
+#. Legacy key: facebook_login
+msgid "Facebook login"
+msgstr "facebook girişi"
+
+#. Legacy key: facebook_app_creation_instruction
+msgid "Facebook app creation instruction"
+msgstr "Facebook uygulaması oluşturma talimatı"
+
+#. Legacy key: facebook_app_id
+msgid "Facebook app id"
+msgstr "Facebook uygulama kimliği"
+
+#. Legacy key: facebook_app_secret
+msgid "Facebook app secret"
+msgstr "Facebook uygulama sırrı"
+
+#. Legacy key: completed
+msgid "Completed"
+msgstr "Tamamlanmış"
+
+#. Legacy key: lesson_type
+msgid "Lesson type"
+msgstr "ders türü"
+
+#. Legacy key: video_url
+msgid "Video url"
+msgstr "Video linki"
+
+#. Legacy key: this_video_will_be_shown_on_web_application
+msgid "This video will be shown on web application"
+msgstr "Bu video web uygulamasında gösterilecek"
+
+#. Legacy key: thumbnail
+msgid "Thumbnail"
+msgstr "küçük resim"
+
+#. Legacy key: caption
+msgid "Caption"
+msgstr "Altyazı"
+
+#. Legacy key: choose_your_caption_file
+msgid "Choose your caption file"
+msgstr "Altyazı dosyanızı seçin"
+
+#. Legacy key: lesson_provider
+msgid "Lesson provider"
+msgstr "ders veren"
+
+#. Legacy key: for_mobile_application
+msgid "For mobile application"
+msgstr "Mobil uygulama için"
+
+#. Legacy key: only
+msgid "Only"
+msgstr "Sadece"
+
+#. Legacy key: type_video_is_acceptable_for_mobile_application
+msgid "Type video is acceptable for mobile application"
+msgstr "Tip video mobil uygulama için kabul edilebilir"
+
+#. Legacy key: do_you_want_to_keep_it_free_as_a_preview_lesson
+msgid "Do you want to keep it free as a preview lesson"
+msgstr "Önizleme dersi olarak ücretsiz tutmak ister misiniz?"
+
+#. Legacy key: mark_as_free_lesson
+msgid "Mark as free lesson"
+msgstr "Ücretsiz ders olarak işaretle"
+
+#. Legacy key: course_content
+msgid "Course content"
+msgstr "Kurs içeriği"
+
+#. Legacy key: mark_as_complete
+msgid "Mark as complete"
+msgstr "tamamlandı olarak işaretle"
+
+#. Legacy key: video
+msgid "Video"
+msgstr "Video"
+
+#. Legacy key: iframe
+msgid "Iframe"
+msgstr "iç çerçeve"
+
+#. Legacy key: pdf
+msgid "Pdf"
+msgstr "Pdf"
+
+#. Legacy key: forum
+msgid "Forum"
+msgstr "Forum"
+
+#. Legacy key: live_class
+msgid "Live class"
+msgstr "canlı sınıf"
+
+#. Legacy key: website_faqs_updated_successfully
+msgid "Website faqs updated successfully"
+msgstr "Web sitesi sss'leri başarıyla güncellendi"
+
+#. Legacy key: frequently_asked_questions
+msgid "Frequently asked questions"
+msgstr "Sıkça Sorulan Sorular"
+
+#. Legacy key: see_more
+msgid "See more"
+msgstr "Daha fazla gör"
+
+#. Legacy key: course_content_not_found
+msgid "Course content not found"
+msgstr "Kurs içeriği bulunamadı"
+
+#. Legacy key: total_questions
+msgid "Total questions"
+msgstr "Toplam sorular"
+
+#. Legacy key: total_participant_students
+msgid "Total participant students"
+msgstr "Toplam katılımcı öğrenci"
+
+#. Legacy key: participant_students
+msgid "Participant students"
+msgstr "katılımcı öğrenciler"
+
+#. Legacy key: select_student
+msgid "Select student"
+msgstr "öğrenci seç"
+
+#. Legacy key: select_a_student_to_view_the_answer_sheet
+msgid "Select a student to view the answer sheet"
+msgstr "Cevap kağıdını görüntülemek için bir öğrenci seçin"
+
+#. Legacy key: courses_included
+msgid "Courses included"
+msgstr "Kurslar dahil"
+
+#. Legacy key: subscription
+msgid "Subscription"
+msgstr "abonelik"
+
+#. Legacy key: days
+msgid "Days"
+msgstr "gün"
+
+#. Legacy key: included_courses
+msgid "Included courses"
+msgstr "Dahil edilen kurslar"
+
+#. Legacy key: think_more_clearly
+msgid "Think more clearly"
+msgstr "Daha net düşün"
+
+#. Legacy key: select_your_service
+msgid "Select your service"
+msgstr "hizmetini seç"
+
+#. Legacy key: course_short_description
+msgid "Course short description"
+msgstr "Kurs kısa açıklaması"
+
+#. Legacy key: course_long_description
+msgid "Course long description"
+msgstr "Kurs uzun açıklaması"
+
+#. Legacy key: course_requirements
+msgid "Course requirements"
+msgstr "Kurs gereksinimleri"
+
+#. Legacy key: course_outcomes
+msgid "Course outcomes"
+msgstr "Kurs çıktıları"
+
+#. Legacy key: course_seo_tags
+msgid "Course seo tags"
+msgstr "Kurs seo etiketleri"
+
+#. Legacy key: course_lesson_text
+msgid "Course lesson text"
+msgstr "Kurs dersi metni"
+
+#. Legacy key: course_certificate_text
+msgid "Course certificate text"
+msgstr "Kurs sertifikası metni"
+
+#. Legacy key: course_quiz_text
+msgid "Course quiz text"
+msgstr "Kurs sınav metni"
+
+#. Legacy key: course_blog_title
+msgid "Course blog title"
+msgstr "Kurs blog başlığı"
+
+#. Legacy key: course_blog_post
+msgid "Course blog post"
+msgstr "Kurs blog gönderisi"
+
+#. Legacy key: enter_your_keyword
+msgid "Enter your keyword"
+msgstr "Anahtar kelimenizi girin"
+
+#. Legacy key: generate
+msgid "Generate"
+msgstr "oluştur"
+
+#. Legacy key: generating
+msgid "Generating"
+msgstr "oluşturma"
+
+#. Legacy key: generated_text
+msgid "Generated text"
+msgstr "Oluşturulan metin"
+
+#. Legacy key: copy
+msgid "Copy"
+msgstr "kopyala"
+
+#. Legacy key: copyed
+msgid "Copyed"
+msgstr "kopyalandı"
+
+#. Legacy key: _learning_animal_name_
+msgid " learning animal name "
+msgstr "hayvan adını öğrenme"
+
+#. Legacy key: share_and_earn
+msgid "Share and earn"
+msgstr "Paylaş ve kazan"
+
+#. Legacy key: write_a_review
+msgid "Write a review"
+msgstr "Bir değerlendirme yazın"
+
+#. Legacy key: 1_start_rating
+msgid "1 start rating"
+msgstr "1 başlangıç ​​değerlendirmesi"
+
+#. Legacy key: 2_start_rating
+msgid "2 start rating"
+msgstr "2 derecelendirmeyi başlat"
+
+#. Legacy key: 3_start_rating
+msgid "3 start rating"
+msgstr "3 derecelendirmeyi başlat"
+
+#. Legacy key: 4_start_rating
+msgid "4 start rating"
+msgstr "4 derecelendirmeyi başlat"
+
+#. Legacy key: 5_start_rating
+msgid "5 start rating"
+msgstr "5 derecelendirmeyi başlat"
+
+#. Legacy key: write_your_comment
+msgid "Write your comment"
+msgstr "yorumunu yaz"
+
+#. Legacy key: adobe_illustrator_cc_-_essentials_training_course
+msgid "Adobe illustrator cc - essentials training course"
+msgstr "Adobe illustrator cc - temel eğitim kursu"
+
+#. Legacy key: mon
+msgid "Mon"
+msgstr "Pzt"
+
+#. Legacy key: select_a_user
+msgid "Select a user"
+msgstr "bir kullanıcı seçin"
+
+#. Legacy key: write_your_message
+msgid "Write your message"
+msgstr "mesajınızı yazın"
+
+#. Legacy key: send
+msgid "Send"
+msgstr "Göndermek"
+
+#. Legacy key: purchased_courses
+msgid "Purchased courses"
+msgstr "Satın alınan kurslar"
+
+#. Legacy key: payment_method
+msgid "Payment method"
+msgstr "Ödeme yöntemi"
+
+#. Legacy key: purchased_date
+msgid "Purchased date"
+msgstr "Satın alınan tarih"
+
+#. Legacy key: invoice
+msgid "Invoice"
+msgstr "Fatura"
+
+#. Legacy key: assignment_list
+msgid "Assignment list"
+msgstr "ödev listesi"
+
+#. Legacy key: no_data_found
+msgid "No data found"
+msgstr "Veri bulunamadı"
+
+#. Legacy key: uncheck
+msgid "Uncheck"
+msgstr "İşareti kaldır"
+
+#. Legacy key: faqs
+msgid "Faqs"
+msgstr "SSS"
+
+#. Legacy key: latest_from_our_blog
+msgid "Latest from our blog"
+msgstr "Blogumuzdan en son"
+
+#. Legacy key: exploring_the_cutting-edge_insights_and_updates_on_our_blog
+msgid "Exploring the cutting-edge insights and updates on our blog"
+msgstr "Blogumuzdaki en son bilgileri ve güncellemeleri keşfetme"
+
+#. Legacy key: see_all
+msgid "See all"
+msgstr "Hepsini gör"
+
+#. Legacy key: popular_blogs
+msgid "Popular blogs"
+msgstr "Popüler bloglar"
+
+#. Legacy key: learn_from_expert_bloggers_and_expand_your_knowledge
+msgid "Learn from expert bloggers and expand your knowledge"
+msgstr "Uzman blog yazarlarından öğrenin ve bilginizi genişletin"
+
+#. Legacy key: shopping_cart
+msgid "Shopping cart"
+msgstr "Alışveriş Sepeti"
+
+#. Legacy key: your_cart_items
+msgid "Your cart items"
+msgstr "Sepetinizdeki ürünler"
+
+#. Legacy key: items
+msgid "Items"
+msgstr "Öğeler"
+
+#. Legacy key: subtotal
+msgid "Subtotal"
+msgstr "ara toplam"
+
+#. Legacy key: apply_coupon
+msgid "Apply coupon"
+msgstr "Kuponu onayla"
+
+#. Legacy key: apply
+msgid "Apply"
+msgstr "Uygula"
+
+#. Legacy key: send_as_a_gift
+msgid "Send as a gift"
+msgstr "hediye olarak gönder"
+
+#. Legacy key: email_address
+msgid "Email address"
+msgstr "E-posta adresi"
+
+#. Legacy key: continue_to_payment
+msgid "Continue to payment"
+msgstr "Ödeme devam"
+
+#. Legacy key: searching
+msgid "Searching"
+msgstr "Aranıyor"
+
+#. Legacy key: quiz_submission_successfully
+msgid "Quiz submission successfully"
+msgstr "Test gönderimi başarıyla"
+
+#. Legacy key: obtained_marks
+msgid "Obtained marks"
+msgstr "Alınan notlar"
+
+#. Legacy key: correct
+msgid "Correct"
+msgstr "Doğru"
+
+#. Legacy key: wrong
+msgid "Wrong"
+msgstr "Yanlış"
+
+#. Legacy key: correct_answer
+msgid "Correct answer"
+msgstr "Doğru cevap"
+
+#. Legacy key: user_added_successfully
+msgid "User added successfully"
+msgstr "Kullanıcı başarıyla eklendi"
+
+#. Legacy key: instructor_payouts
+msgid "Instructor payouts"
+msgstr "eğitmen ödemeleri"
+
+#. Legacy key: list_of_payouts
+msgid "List of payouts"
+msgstr "ödeme listesi"
+
+#. Legacy key: completed_payouts
+msgid "Completed payouts"
+msgstr "Tamamlanan ödemeler"
+
+#. Legacy key: pending_payouts
+msgid "Pending payouts"
+msgstr "bekleyen ödemeler"
+
+#. Legacy key: payout_amount
+msgid "Payout amount"
+msgstr "ödeme tutarı"
+
+#. Legacy key: payment_type
+msgid "Payment type"
+msgstr "Ödeme türü"
+
+#. Legacy key: payout_date
+msgid "Payout date"
+msgstr "ödeme tarihi"
+
+#. Legacy key: option
+msgid "Option"
+msgstr "Seçenek"
+
+#. Legacy key: pay
+msgid "Pay"
+msgstr "Ödemek"
+
+#. Legacy key: public_instructor_settings
+msgid "Public instructor settings"
+msgstr "Herkese açık eğitmen ayarları"
+
+#. Legacy key: allow_public_instructor
+msgid "Allow public instructor"
+msgstr "Genel eğitmene izin ver"
+
+#. Legacy key: instructor_application_note
+msgid "Instructor application note"
+msgstr "Eğitmen başvuru notu"
+
+#. Legacy key: instructor_commission_ettings
+msgid "Instructor commission ettings"
+msgstr "Eğitmen komisyonları"
+
+#. Legacy key: instructor_revenue_percentage
+msgid "Instructor revenue percentage"
+msgstr "Eğitmen gelir yüzdesi"
+
+#. Legacy key: admin_revenue_percentage
+msgid "Admin revenue percentage"
+msgstr "Yönetici gelir yüzdesi"
+
+#. Legacy key: instructor_application
+msgid "Instructor application"
+msgstr "Eğitmen uygulaması"
+
+#. Legacy key: instructor_applications
+msgid "Instructor applications"
+msgstr "Eğitmen uygulamaları"
+
+#. Legacy key: list_of_applications
+msgid "List of applications"
+msgstr "Uygulama listesi"
+
+#. Legacy key: pending_applications
+msgid "Pending applications"
+msgstr "Bekleyen başvurular"
+
+#. Legacy key: approved_applications
+msgid "Approved applications"
+msgstr "Onaylanmış uygulamalar"
+
+#. Legacy key: details
+msgid "Details"
+msgstr "Detaylar"
+
+#. Legacy key: applicant_details
+msgid "Applicant details"
+msgstr "Başvuru detayları"
+
+#. Legacy key: application_details
+msgid "Application details"
+msgstr "Başvuru detayları"
+
+#. Legacy key: download
+msgid "Download"
+msgstr "İndirmek"
+
+#. Legacy key: approve
+msgid "Approve"
+msgstr "Onaylamak"
+
+#. Legacy key: approved
+msgid "Approved"
+msgstr "Onaylı"
+
+#. Legacy key: add_admin
+msgid "Add admin"
+msgstr "yönetici ekle"
+
+#. Legacy key: root_admin
+msgid "Root admin"
+msgstr "kök yönetici"
+
+#. Legacy key: assign_permission
+msgid "Assign permission"
+msgstr "İzin ata"
+
+#. Legacy key: manage_profil
+msgid "Manage profil"
+msgstr "Profili yönet"
+
+#. Legacy key: facebook_link
+msgid "Facebook link"
+msgstr "facebook bağlantısı"
+
+#. Legacy key: twitter_link
+msgid "Twitter link"
+msgstr "twitter bağlantısı"
+
+#. Legacy key: linkedin_link
+msgid "Linkedin link"
+msgstr "Linkedin bağlantısı"
+
+#. Legacy key: the_image_size_should_be_any_square_image
+msgid "The image size should be any square image"
+msgstr "Resim boyutu herhangi bir kare resim olmalıdır"
+
+#. Legacy key: update_profile
+msgid "Update profile"
+msgstr "Profili Güncelle"
+
+#. Legacy key: current_password
+msgid "Current password"
+msgstr "Mevcut Şifre"
+
+#. Legacy key: new_password
+msgid "New password"
+msgstr "Yeni Şifre"
+
+#. Legacy key: confirm_new_password
+msgid "Confirm new password"
+msgstr "Yeni şifreyi onayla"
+
+#. Legacy key: update_password
+msgid "Update password"
+msgstr "Şifre güncelle"
+
+#. Legacy key: educator_profile
+msgid "Educator profile"
+msgstr "eğitimci profili"
+
+#. Legacy key: statistics
+msgid "Statistics"
+msgstr "İstatistik"
+
+#. Legacy key: total_students
+msgid "Total students"
+msgstr "toplam öğrenci"
+
+#. Legacy key: the_complete_python_bootcamp_from_zero_to_hero
+msgid "The complete python bootcamp from zero to hero"
+msgstr "Sıfırdan kahramana eksiksiz python eğitim kampı"
+
+#. Legacy key: course_added_to_wishlist
+msgid "Course added to wishlist"
+msgstr "Ders istek listesine eklendi"
+
+#. Legacy key: manage_course_bundle
+msgid "Manage course bundle"
+msgstr "Kurs paketini yönet"
+
+#. Legacy key: bundle
+msgid "Bundle"
+msgstr "paket"
+
+#. Legacy key: subscription_limit
+msgid "Subscription limit"
+msgstr "Abonelik sınırı"
+
+#. Legacy key: deactive
+msgid "Deactive"
+msgstr "Aktif"
+
+#. Legacy key: edit_course_bundle
+msgid "Edit course bundle"
+msgstr "Kurs paketini düzenle"
+
+#. Legacy key: bundle_add_form
+msgid "Bundle add form"
+msgstr "Paket ekleme formu"
+
+#. Legacy key: course_bundle_title
+msgid "Course bundle title"
+msgstr "Kurs paketi başlığı"
+
+#. Legacy key: select_courses
+msgid "Select courses"
+msgstr "Kursları seçin"
+
+#. Legacy key: current_price_of_the_courses_is
+msgid "Current price of the courses is"
+msgstr "Kursların güncel fiyatı"
+
+#. Legacy key: bundle_price
+msgid "Bundle price"
+msgstr "paket fiyatı"
+
+#. Legacy key: subscription_renew_days
+msgid "Subscription renew days"
+msgstr "Abonelik yenileme günleri"
+
+#. Legacy key: count_day
+msgid "Count day"
+msgstr "gün sayısı"
+
+#. Legacy key: banner
+msgid "Banner"
+msgstr "Afiş"
+
+#. Legacy key: update_bundle
+msgid "Update bundle"
+msgstr "Paketi güncelle"
+
+#. Legacy key: complete_guitar_lessons_system_
+msgid "Complete guitar lessons system "
+msgstr "Komple gitar dersleri sistemi"
+
+#. Legacy key: item_successfully_added_to_cart
+msgid "Item successfully added to cart"
+msgstr "Ürün başarıyla sepete eklendi"
+
+#. Legacy key: how_to_use_lighting_design_to_transform_your_home
+msgid "How to use lighting design to transform your home"
+msgstr "Evinizi dönüştürmek için aydınlatma tasarımı nasıl kullanılır?"
+
+#. Legacy key: invoice_id
+msgid "Invoice id"
+msgstr "fatura kimliği"
+
+#. Legacy key: billed_to
+msgid "Billed to"
+msgstr "Fatura"
+
+#. Legacy key: date_of_issue
+msgid "Date of issue"
+msgstr "Veriliş tarihi"
+
+#. Legacy key: invoice_total
+msgid "Invoice total"
+msgstr "Fatura toplamı"
+
+#. Legacy key: qty
+msgid "Qty"
+msgstr "adet"
+
+#. Legacy key: paid_by
+msgid "Paid by"
+msgstr "tarafından ödenen"
+
+#. Legacy key: tax
+msgid "Tax"
+msgstr "Vergi"
+
+#. Legacy key: grand_total
+msgid "Grand total"
+msgstr "Genel Toplam"
+
+#. Legacy key: print
+msgid "Print"
+msgstr "Yazdır"
+
+#. Legacy key: back
+msgid "Back"
+msgstr "Geri"
+
+#. Legacy key: newsletters
+msgid "Newsletters"
+msgstr "Bültenler"
+
+#. Legacy key: newsletter_template
+msgid "Newsletter template"
+msgstr "Bülten şablonu"
+
+#. Legacy key: your_phone
+msgid "Your phone"
+msgstr "Telefonunuz"
+
+#. Legacy key: subject
+msgid "Subject"
+msgstr "Ders"
+
+#. Legacy key: subscriber
+msgid "Subscriber"
+msgstr "Abone"
+
+#. Legacy key: user_status
+msgid "User status"
+msgstr "Kullanıcı durumu"
+
+#. Legacy key: newsletter_added_successfully
+msgid "Newsletter added successfully"
+msgstr "Bülten başarıyla eklendi"
+
+#. Legacy key: edit_newsletter_template
+msgid "Edit newsletter template"
+msgstr "Bülten şablonunu düzenle"
+
+#. Legacy key: send_newsletter
+msgid "Send newsletter"
+msgstr "Bülten gönder"
+
+#. Legacy key: send_to
+msgid "Send to"
+msgstr "Gönderildi"
+
+#. Legacy key: selected_user
+msgid "Selected user"
+msgstr "seçilen kullanıcı"
+
+#. Legacy key: all_users
+msgid "All users"
+msgstr "Tüm kullanıcılar"
+
+#. Legacy key: all_student
+msgid "All student"
+msgstr "tüm öğrenci"
+
+#. Legacy key: all_instructor
+msgid "All instructor"
+msgstr "Tüm eğitmen"
+
+#. Legacy key: newsletter_subscriber
+msgid "Newsletter subscriber"
+msgstr "Bülten abonesi"
+
+#. Legacy key: all_subscriber
+msgid "All subscriber"
+msgstr "tüm aboneler"
+
+#. Legacy key: registered_user
+msgid "Registered user"
+msgstr "Kayıtlı kullanıcı"
+
+#. Legacy key: non_registered_user
+msgid "Non registered user"
+msgstr "kayıtlı olmayan kullanıcı"
+
+#. Legacy key: select_your_users
+msgid "Select your users"
+msgstr "kullanıcılarınızı seçin"
+
+#. Legacy key: newsletter_deleted_successfully
+msgid "Newsletter deleted successfully"
+msgstr "Bülten başarıyla silindi"
+
+#. Legacy key: item_successfully_removed_from_cart
+msgid "Item successfully removed from cart"
+msgstr "Öğe başarıyla sepetten kaldırıldı"
+
+#. Legacy key: multi_language_settings
+msgid "Multi language settings"
+msgstr "Çoklu dil ayarları"
+
+#. Legacy key: manage_language
+msgid "Manage language"
+msgstr "Dili yönet"
+
+#. Legacy key: language_list
+msgid "Language list"
+msgstr "Dil listesi"
+
+#. Legacy key: add_language
+msgid "Add language"
+msgstr "dil ekle"
+
+#. Legacy key: import_language
+msgid "Import language"
+msgstr "Dili içe aktar"
+
+#. Legacy key: edit_phrase
+msgid "Edit phrase"
+msgstr "Cümleyi düzenle"
+
+#. Legacy key: export
+msgid "Export"
+msgstr "İhracat"
+
+#. Legacy key: delete_language
+msgid "Delete language"
+msgstr "Dili sil"
+
+#. Legacy key: add_new_phrase
+msgid "Add new phrase"
+msgstr "Yeni kelime öbeği ekle"
+
+#. Legacy key: add_new_language
+msgid "Add new language"
+msgstr "yeni dil ekle"
+
+#. Legacy key: no_special_character_or_space_is_allowed
+msgid "No special character or space is allowed"
+msgstr "Özel karakter veya boşluğa izin verilmez"
+
+#. Legacy key: valid_examples
+msgid "Valid examples"
+msgstr "Geçerli örnekler"
+
+#. Legacy key: choose_your_json_file
+msgid "Choose your json file"
+msgstr "json dosyanızı seçin"
+
+#. Legacy key: import
+msgid "Import"
+msgstr "İçe aktarmak"
+
+#. Legacy key: phrase_updated
+msgid "Phrase updated"
+msgstr "İfade güncellendi"
+
+#. Legacy key: course_compare
+msgid "Course compare"
+msgstr "Kurs karşılaştırması"
+
+#. Legacy key: compare_with_1_courses
+msgid "Compare with 1 courses"
+msgstr "1 dersle karşılaştır"
+
+#. Legacy key: select_a_course
+msgid "Select a course"
+msgstr "Bir kurs seçin"
+
+#. Legacy key: learn_more
+msgid "Learn more"
+msgstr "Daha fazla bilgi edin"
+
+#. Legacy key: has_discount
+msgid "Has discount"
+msgstr "indirim var"
+
+#. Legacy key: made_in
+msgid "Made in"
+msgstr "Üretim yeri"
+
+#. Legacy key: last_updated_at
+msgid "Last updated at"
+msgstr "Son güncelleme:"
+
+#. Legacy key: total_lectures
+msgid "Total lectures"
+msgstr "toplam ders"
+
+#. Legacy key: total_quizzes
+msgid "Total quizzes"
+msgstr "Toplam testler"
+
+#. Legacy key: total_duration
+msgid "Total duration"
+msgstr "Toplam süre"
+
+#. Legacy key: total_enrolment
+msgid "Total enrolment"
+msgstr "Toplam kayıt"
+
+#. Legacy key: number_of_reviews
+msgid "Number of reviews"
+msgstr "inceleme sayısı"
+
+#. Legacy key: avg_rating
+msgid "Avg rating"
+msgstr "Ortalama puan"
+
+#. Legacy key: add_phrase
+msgid "Add phrase"
+msgstr "kelime öbeği ekle"
+
+#. Legacy key: language_deleted_successfully
+msgid "Language deleted successfully"
+msgstr "Dil başarıyla silindi"
+
+#. Legacy key: language_added_successfully
+msgid "Language added successfully"
+msgstr "Dil başarıyla eklendi"
+

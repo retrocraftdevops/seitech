@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ================================================================== -->
+    <!-- Student Dashboard Page (Migrated from PHP my_courses.php) -->
+    <!-- ================================================================== -->
+
+    <template id="student_dashboard" name="Seitech Student Dashboard">
+        <t t-call="website.layout">
+            <t t-set="pageName" t-value="'student-dashboard'"/>
+            <t t-set="additional_title" t-value="'My Dashboard'"/>
+
+            <div id="wrap" class="o_seitech_student_dashboard">
+                <!-- Dashboard Header -->
+                <section class="dashboard-header">
+                    <div class="container-seitech">
+                        <div class="dashboard-header-content">
+                            <div class="user-info">
+                                <img t-att-src="'/web/image/res.users/%s/image_128' % request.env.user.id" 
+                                     class="user-avatar" alt="Profile"/>
+                                <div class="user-details">
+                                    <h1 class="user-name" t-esc="request.env.user.name"/>
+                                    <p class="user-email" t-esc="request.env.user.email"/>
+                                </div>
+                            </div>
+                            <div class="dashboard-stats">
+                                <div class="stat-card">
+                                    <div class="stat-icon enrolled">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="stat-content">
+                                        <span class="stat-value" t-esc="stats.get('enrolled_courses', 0)"/>
+                                        <span class="stat-label">Enrolled Courses</span>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon completed">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                            <polyline points="22 4 12 14.01 9 11.01"/>
+                                        </svg>
+                                    </div>
+                                    <div class="stat-content">
+                                        <span class="stat-value" t-esc="stats.get('completed_courses', 0)"/>
+                                        <span class="stat-label">Completed</span>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon certificates">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="8" r="7"/>
+                                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                                        </svg>
+                                    </div>
+                                    <div class="stat-content">
+                                        <span class="stat-value" t-esc="stats.get('certificates', 0)"/>
+                                        <span class="stat-label">Certificates</span>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon points">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                        </svg>
+                                    </div>
+                                    <div class="stat-content">
+                                        <span class="stat-value" t-esc="stats.get('total_points', 0)"/>
+                                        <span class="stat-label">Points Earned</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Dashboard Main Content -->
+                <section class="dashboard-main">
+                    <div class="container-seitech">
+                        <div class="dashboard-layout">
+                            <!-- Sidebar Navigation -->
+                            <aside class="dashboard-sidebar">
+                                <nav class="dashboard-nav">
+                                    <a href="/my/dashboard" class="nav-item active">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="3" width="7" height="7"/>
+                                            <rect x="14" y="3" width="7" height="7"/>
+                                            <rect x="14" y="14" width="7" height="7"/>
+                                            <rect x="3" y="14" width="7" height="7"/>
+                                        </svg>
+                                        Dashboard
+                                    </a>
+                                    <a href="/my/courses" class="nav-item">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                                        </svg>
+                                        My Courses
+                                    </a>
+                                    <a href="/my/certificates" class="nav-item">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="8" r="7"/>
+                                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                                        </svg>
+                                        Certificates
+                                    </a>
+                                    <a href="/my/wishlist" class="nav-item">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                        </svg>
+                                        Wishlist
+                                    </a>
+                                    <a href="/my/messages" class="nav-item">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                        </svg>
+                                        Messages
+                                    </a>
+                                    <a href="/my/profile" class="nav-item">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                            <circle cx="12" cy="7" r="4"/>
+                                        </svg>
+                                        Profile Settings
+                                    </a>
+                                    <a href="/my/invoices" class="nav-item">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                            <polyline points="14 2 14 8 20 8"/>
+                                            <line x1="16" y1="13" x2="8" y2="13"/>
+                                            <line x1="16" y1="17" x2="8" y2="17"/>
+                                        </svg>
+                                        Purchase History
+                                    </a>
+                                </nav>
+                            </aside>
+
+                            <!-- Main Content Area -->
+                            <div class="dashboard-content">
+                                <!-- Continue Learning Section -->
+                                <div class="dashboard-section">
+                                    <div class="section-header">
+                                        <h2>Continue Learning</h2>
+                                        <a href="/my/courses" class="view-all-link">View All Courses →</a>
+                                    </div>
+                                    
+                                    <t t-if="enrollments">
+                                        <div class="enrolled-courses-list">
+                                            <t t-foreach="enrollments" t-as="enrollment">
+                                                <div class="enrolled-course-card">
+                                                    <div class="course-thumbnail">
+                                                        <img t-att-src="'/web/image/slide.channel/%s/image_256' % enrollment.channel_id.id" 
+                                                             alt="Course thumbnail"/>
+                                                        <div class="course-progress-overlay">
+                                                            <span class="progress-text" t-esc="'%d%%' % enrollment.progress"/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-info">
+                                                        <h3 class="course-title" t-esc="enrollment.channel_id.name"/>
+                                                        <div class="course-meta">
+                                                            <span class="lectures">
+                                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                                                </svg>
+                                                                <t t-esc="enrollment.channel_id.slide_content_count"/> lessons
+                                                            </span>
+                                                            <span class="duration">
+                                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                                    <circle cx="12" cy="12" r="10"/>
+                                                                    <polyline points="12 6 12 12 16 14"/>
+                                                                </svg>
+                                                                <t t-esc="'%.1f' % enrollment.channel_id.total_time"/> hours
+                                                            </span>
+                                                        </div>
+                                                        <div class="progress-bar-container">
+                                                            <div class="progress-bar" t-attf-style="width: #{enrollment.progress}%;"/>
+                                                        </div>
+                                                        <div class="course-actions">
+                                                            <t t-if="enrollment.state == 'completed'">
+                                                                <span class="completed-badge">
+                                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                                        <polyline points="20 6 9 17 4 12"/>
+                                                                    </svg>
+                                                                    Completed
+                                                                </span>
+                                                            </t>
+                                                            <t t-else="">
+                                                                <a t-attf-href="/slides/#{enrollment.channel_id.id}" class="btn-continue">
+                                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                                        <polygon points="5 3 19 12 5 21 5 3"/>
+                                                                    </svg>
+                                                                    Continue
+                                                                </a>
+                                                            </t>
+                                                            <div class="course-dropdown">
+                                                                <button class="dropdown-trigger">
+                                                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                                        <circle cx="12" cy="12" r="1"/>
+                                                                        <circle cx="19" cy="12" r="1"/>
+                                                                        <circle cx="5" cy="12" r="1"/>
+                                                                    </svg>
+                                                                </button>
+                                                                <div class="dropdown-menu">
+                                                                    <a t-attf-href="/course/#{enrollment.channel_id.id}">View Course Page</a>
+                                                                    <a t-attf-href="/instructor/#{enrollment.channel_id.user_id.id}">Instructor Profile</a>
+                                                                    <t t-if="enrollment.state == 'completed' and enrollment.certificate_id">
+                                                                        <a t-attf-href="/my/certificate/#{enrollment.certificate_id.id}">View Certificate</a>
+                                                                    </t>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                        </div>
+                                    </t>
+                                    <t t-else="">
+                                        <div class="empty-state">
+                                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                                            </svg>
+                                            <h3>No courses yet</h3>
+                                            <p>Start learning by browsing our course catalog</p>
+                                            <a href="/courses" class="btn-seitech-primary">Browse Courses</a>
+                                        </div>
+                                    </t>
+                                </div>
+
+                                <!-- Two Column Section -->
+                                <div class="dashboard-two-col">
+                                    <!-- Upcoming Classes -->
+                                    <div class="dashboard-section">
+                                        <div class="section-header">
+                                            <h2>Upcoming Classes</h2>
+                                        </div>
+                                        <t t-if="upcoming_classes">
+                                            <div class="upcoming-classes-list">
+                                                <t t-foreach="upcoming_classes" t-as="schedule">
+                                                    <div class="schedule-card">
+                                                        <div class="schedule-date">
+                                                            <span class="day" t-esc="schedule.start_datetime.strftime('%d')"/>
+                                                            <span class="month" t-esc="schedule.start_datetime.strftime('%b')"/>
+                                                        </div>
+                                                        <div class="schedule-info">
+                                                            <h4 t-esc="schedule.name"/>
+                                                            <p class="schedule-time">
+                                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                                    <circle cx="12" cy="12" r="10"/>
+                                                                    <polyline points="12 6 12 12 16 14"/>
+                                                                </svg>
+                                                                <t t-esc="schedule.start_datetime.strftime('%I:%M %p')"/>
+                                                            </p>
+                                                        </div>
+                                                        <a t-if="schedule.meeting_url" t-att-href="schedule.meeting_url" 
+                                                           class="btn-join" target="_blank">Join</a>
+                                                    </div>
+                                                </t>
+                                            </div>
+                                        </t>
+                                        <t t-else="">
+                                            <div class="empty-state-sm">
+                                                <p>No upcoming classes scheduled</p>
+                                            </div>
+                                        </t>
+                                    </div>
+
+                                    <!-- Recent Certificates -->
+                                    <div class="dashboard-section">
+                                        <div class="section-header">
+                                            <h2>Recent Certificates</h2>
+                                            <a href="/my/certificates" class="view-all-link">View All →</a>
+                                        </div>
+                                        <t t-if="certificates">
+                                            <div class="certificates-list">
+                                                <t t-foreach="certificates[:3]" t-as="cert">
+                                                    <div class="certificate-card">
+                                                        <div class="cert-icon">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                                <circle cx="12" cy="8" r="7"/>
+                                                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="cert-info">
+                                                            <h4 t-esc="cert.channel_id.name"/>
+                                                            <p t-esc="'Issued %s' % cert.issue_date.strftime('%b %d, %Y')"/>
+                                                        </div>
+                                                        <a t-attf-href="/my/certificate/#{cert.id}/download" class="btn-download">
+                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                                                <polyline points="7 10 12 15 17 10"/>
+                                                                <line x1="12" y1="15" x2="12" y2="3"/>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                </t>
+                                            </div>
+                                        </t>
+                                        <t t-else="">
+                                            <div class="empty-state-sm">
+                                                <p>Complete courses to earn certificates</p>
+                                            </div>
+                                        </t>
+                                    </div>
+                                </div>
+
+                                <!-- Achievements Section -->
+                                <div class="dashboard-section" t-if="badges">
+                                    <div class="section-header">
+                                        <h2>Your Achievements</h2>
+                                    </div>
+                                    <div class="badges-grid">
+                                        <t t-foreach="badges" t-as="badge">
+                                            <div class="badge-card">
+                                                <img t-att-src="'/web/image/seitech.badge/%s/image' % badge.badge_id.id" 
+                                                     class="badge-image" alt="Badge"/>
+                                                <span class="badge-name" t-esc="badge.badge_id.name"/>
+                                            </div>
+                                        </t>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+
+    <!-- ================================================================== -->
+    <!-- My Courses Page -->
+    <!-- ================================================================== -->
+
+    <template id="my_courses" name="My Enrolled Courses">
+        <t t-call="website.layout">
+            <t t-set="pageName" t-value="'my-courses'"/>
+            <t t-set="additional_title" t-value="'My Courses'"/>
+
+            <div id="wrap" class="o_seitech_my_courses">
+                <section class="page-header-section">
+                    <div class="container-seitech">
+                        <h1>My Courses</h1>
+                        <p>Track your learning progress and continue where you left off</p>
+                    </div>
+                </section>
+
+                <section class="my-courses-main">
+                    <div class="container-seitech">
+                        <div class="dashboard-layout">
+                            <!-- Include sidebar -->
+                            <aside class="dashboard-sidebar">
+                                <t t-call="seitech_elearning.dashboard_sidebar"/>
+                            </aside>
+
+                            <div class="dashboard-content">
+                                <t t-if="enrollments">
+                                    <div class="enrolled-courses-grid">
+                                        <t t-foreach="enrollments" t-as="enrollment">
+                                            <div class="enrolled-course-card-lg">
+                                                <div class="course-thumbnail">
+                                                    <img t-att-src="'/web/image/slide.channel/%s/image_512' % enrollment.channel_id.id" 
+                                                         alt="Course"/>
+                                                </div>
+                                                <div class="course-content">
+                                                    <h3 class="course-title" t-esc="enrollment.channel_id.name"/>
+                                                    <div class="course-meta">
+                                                        <span>
+                                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                                <polygon points="5 3 19 12 5 21 5 3"/>
+                                                            </svg>
+                                                            <t t-esc="enrollment.channel_id.slide_content_count"/> lessons
+                                                        </span>
+                                                        <span>
+                                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                                <circle cx="12" cy="12" r="10"/>
+                                                                <polyline points="12 6 12 12 16 14"/>
+                                                            </svg>
+                                                            <t t-esc="'%.1f' % enrollment.channel_id.total_time"/> hours
+                                                        </span>
+                                                    </div>
+                                                    
+                                                    <div class="progress-section">
+                                                        <div class="progress-bar-container">
+                                                            <div class="progress-bar" t-attf-style="width: #{enrollment.progress}%;"/>
+                                                        </div>
+                                                        <span class="progress-text" t-esc="'%d%% complete' % enrollment.progress"/>
+                                                    </div>
+
+                                                    <div class="course-footer">
+                                                        <div class="instructor">
+                                                            <img t-att-src="'/web/image/res.users/%s/image_64' % enrollment.channel_id.user_id.id" alt=""/>
+                                                            <span t-esc="enrollment.channel_id.user_id.name"/>
+                                                        </div>
+                                                        <t t-if="enrollment.state == 'completed'">
+                                                            <span class="completed-badge">✓ Completed</span>
+                                                        </t>
+                                                        <t t-else="">
+                                                            <a t-attf-href="/slides/#{enrollment.channel_id.id}" 
+                                                               class="btn-seitech-primary btn-sm">
+                                                                Continue Learning
+                                                            </a>
+                                                        </t>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </t>
+                                    </div>
+                                </t>
+                                <t t-else="">
+                                    <div class="empty-state">
+                                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                                        </svg>
+                                        <h3>You haven't enrolled in any courses yet</h3>
+                                        <p>Browse our catalog and find the perfect course to start your learning journey</p>
+                                        <a href="/courses" class="btn-seitech-primary btn-lg">Explore Courses</a>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+
+    <!-- ================================================================== -->
+    <!-- My Certificates Page -->
+    <!-- ================================================================== -->
+
+    <template id="my_certificates" name="My Certificates">
+        <t t-call="website.layout">
+            <t t-set="pageName" t-value="'my-certificates'"/>
+            <t t-set="additional_title" t-value="'My Certificates'"/>
+
+            <div id="wrap" class="o_seitech_my_certificates">
+                <section class="page-header-section">
+                    <div class="container-seitech">
+                        <h1>My Certificates</h1>
+                        <p>View and download your earned certificates</p>
+                    </div>
+                </section>
+
+                <section class="my-certificates-main">
+                    <div class="container-seitech">
+                        <div class="dashboard-layout">
+                            <aside class="dashboard-sidebar">
+                                <t t-call="seitech_elearning.dashboard_sidebar"/>
+                            </aside>
+
+                            <div class="dashboard-content">
+                                <t t-if="certificates">
+                                    <div class="certificates-grid">
+                                        <t t-foreach="certificates" t-as="cert">
+                                            <div class="certificate-card-lg">
+                                                <div class="cert-preview">
+                                                    <div class="cert-preview-content">
+                                                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                                            <circle cx="12" cy="8" r="7"/>
+                                                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                                                        </svg>
+                                                        <span>Certificate of Completion</span>
+                                                    </div>
+                                                </div>
+                                                <div class="cert-details">
+                                                    <h3 t-esc="cert.channel_id.name"/>
+                                                    <p class="cert-date">
+                                                        Issued on <t t-esc="cert.issue_date.strftime('%B %d, %Y')"/>
+                                                    </p>
+                                                    <p class="cert-id">
+                                                        Certificate ID: <span t-esc="cert.reference"/>
+                                                    </p>
+                                                    <div class="cert-actions">
+                                                        <a t-attf-href="/my/certificate/#{cert.id}/download" 
+                                                           class="btn-seitech-primary btn-sm">
+                                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                                                <polyline points="7 10 12 15 17 10"/>
+                                                                <line x1="12" y1="15" x2="12" y2="3"/>
+                                                            </svg>
+                                                            Download PDF
+                                                        </a>
+                                                        <a t-attf-href="/verify/certificate/#{cert.reference}" 
+                                                           class="btn-seitech-secondary btn-sm">
+                                                            Verify
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </t>
+                                    </div>
+                                </t>
+                                <t t-else="">
+                                    <div class="empty-state">
+                                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                            <circle cx="12" cy="8" r="7"/>
+                                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                                        </svg>
+                                        <h3>No certificates yet</h3>
+                                        <p>Complete your enrolled courses to earn certificates</p>
+                                        <a href="/my/courses" class="btn-seitech-primary btn-lg">View My Courses</a>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+
+    <!-- ================================================================== -->
+    <!-- Reusable Dashboard Sidebar -->
+    <!-- ================================================================== -->
+
+    <template id="dashboard_sidebar" name="Dashboard Sidebar Navigation">
+        <nav class="dashboard-nav">
+            <a t-attf-href="/my/dashboard" t-attf-class="nav-item #{'active' if pageName == 'student-dashboard' else ''}">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7"/>
+                    <rect x="14" y="3" width="7" height="7"/>
+                    <rect x="14" y="14" width="7" height="7"/>
+                    <rect x="3" y="14" width="7" height="7"/>
+                </svg>
+                Dashboard
+            </a>
+            <a t-attf-href="/my/courses" t-attf-class="nav-item #{'active' if pageName == 'my-courses' else ''}">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                </svg>
+                My Courses
+            </a>
+            <a t-attf-href="/my/certificates" t-attf-class="nav-item #{'active' if pageName == 'my-certificates' else ''}">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="8" r="7"/>
+                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                </svg>
+                Certificates
+            </a>
+            <a href="/my/wishlist" class="nav-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+                Wishlist
+            </a>
+            <a href="/my/messages" class="nav-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+                Messages
+            </a>
+            <a href="/my/profile" class="nav-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                </svg>
+                Profile Settings
+            </a>
+            <a href="/my/invoices" class="nav-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+                Purchase History
+            </a>
+        </nav>
+    </template>
+
+</odoo>

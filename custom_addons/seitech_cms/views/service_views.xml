@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Service Category Views -->
+    <record id="view_cms_service_category_tree" model="ir.ui.view">
+        <field name="name">seitech.cms.service.category.tree</field>
+        <field name="model">seitech.cms.service.category</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="slug"/>
+                <field name="service_count"/>
+                <field name="is_published"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_cms_service_category_form" model="ir.ui.view">
+        <field name="name">seitech.cms.service.category.form</field>
+        <field name="model">seitech.cms.service.category</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="is_published" widget="boolean_toggle"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="slug"/>
+                        </group>
+                        <group>
+                            <field name="icon"/>
+                            <field name="sequence"/>
+                        </group>
+                    </group>
+                    <field name="description"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Service Views -->
+    <record id="view_cms_service_tree" model="ir.ui.view">
+        <field name="name">seitech.cms.service.tree</field>
+        <field name="model">seitech.cms.service</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="slug"/>
+                <field name="category_id"/>
+                <field name="pricing_type"/>
+                <field name="price_from"/>
+                <field name="is_featured"/>
+                <field name="show_on_homepage"/>
+                <field name="is_published"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_cms_service_form" model="ir.ui.view">
+        <field name="name">seitech.cms.service.form</field>
+        <field name="model">seitech.cms.service</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="is_published" widget="boolean_toggle"/>
+                </header>
+                <sheet>
+                    <field name="image" widget="image" class="oe_avatar"/>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Service Name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="slug"/>
+                            <field name="category_id"/>
+                            <field name="icon_name"/>
+                        </group>
+                        <group>
+                            <field name="is_featured"/>
+                            <field name="show_on_homepage"/>
+                            <field name="sequence"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description">
+                            <field name="short_description" placeholder="Brief description..."/>
+                            <field name="full_description"/>
+                        </page>
+                        <page string="Features &amp; Benefits">
+                            <group>
+                                <group>
+                                    <field name="features" placeholder="One feature per line..."/>
+                                </group>
+                                <group>
+                                    <field name="benefits" placeholder="One benefit per line..."/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Pricing">
+                            <group>
+                                <group>
+                                    <field name="pricing_type"/>
+                                    <field name="price_from"/>
+                                    <field name="price_to"/>
+                                </group>
+                                <group>
+                                    <field name="price_currency"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="SEO">
+                            <group>
+                                <field name="meta_title"/>
+                                <field name="meta_description"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_cms_service_kanban" model="ir.ui.view">
+        <field name="name">seitech.cms.service.kanban</field>
+        <field name="model">seitech.cms.service</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="name"/>
+                <field name="image"/>
+                <field name="category_id"/>
+                <field name="pricing_type"/>
+                <templates>
+                    <t t-name="card">
+                        <aside>
+                            <field name="image" widget="image" class="o_kanban_image"/>
+                        </aside>
+                        <main>
+                            <field name="name" class="fw-bold fs-5"/>
+                            <field name="category_id"/>
+                            <span class="badge text-bg-info mt-2">
+                                <field name="pricing_type"/>
+                            </span>
+                        </main>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Statistic Views -->
+    <record id="view_cms_statistic_tree" model="ir.ui.view">
+        <field name="name">seitech.cms.statistic.tree</field>
+        <field name="model">seitech.cms.statistic</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="value"/>
+                <field name="description"/>
+                <field name="display_location"/>
+                <field name="is_published"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_cms_statistic_form" model="ir.ui.view">
+        <field name="name">seitech.cms.statistic.form</field>
+        <field name="model">seitech.cms.statistic</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="value"/>
+                            <field name="numeric_value"/>
+                            <field name="suffix"/>
+                        </group>
+                        <group>
+                            <field name="stat_type"/>
+                            <field name="display_location"/>
+                            <field name="icon"/>
+                            <field name="sequence"/>
+                        </group>
+                    </group>
+                    <field name="description"/>
+                    <field name="is_published"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Actions -->
+    <record id="action_cms_service_categories" model="ir.actions.act_window">
+        <field name="name">Service Categories</field>
+        <field name="res_model">seitech.cms.service.category</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="action_cms_services" model="ir.actions.act_window">
+        <field name="name">Consultancy Services</field>
+        <field name="res_model">seitech.cms.service</field>
+        <field name="view_mode">kanban,list,form</field>
+    </record>
+
+    <record id="action_cms_statistics" model="ir.actions.act_window">
+        <field name="name">Site Statistics</field>
+        <field name="res_model">seitech.cms.statistic</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- FAQ Category Views -->
+    <record id="view_cms_faq_category_tree" model="ir.ui.view">
+        <field name="name">seitech.cms.faq.category.tree</field>
+        <field name="model">seitech.cms.faq.category</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="slug"/>
+                <field name="faq_count"/>
+                <field name="is_published"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_cms_faq_category_form" model="ir.ui.view">
+        <field name="name">seitech.cms.faq.category.form</field>
+        <field name="model">seitech.cms.faq.category</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="slug"/>
+                            <field name="icon"/>
+                        </group>
+                        <group>
+                            <field name="sequence"/>
+                            <field name="is_published"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="description"/>
+                    </group>
+                    <field name="faq_ids">
+                        <list>
+                            <field name="sequence" widget="handle"/>
+                            <field name="question"/>
+                            <field name="is_featured"/>
+                            <field name="is_published"/>
+                        </list>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_cms_faq_categories" model="ir.actions.act_window">
+        <field name="name">FAQ Categories</field>
+        <field name="res_model">seitech.cms.faq.category</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- FAQ Views -->
+    <record id="view_cms_faq_tree" model="ir.ui.view">
+        <field name="name">seitech.cms.faq.tree</field>
+        <field name="model">seitech.cms.faq</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence" widget="handle"/>
+                <field name="question"/>
+                <field name="category_id"/>
+                <field name="is_featured"/>
+                <field name="view_count"/>
+                <field name="is_published"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_cms_faq_form" model="ir.ui.view">
+        <field name="name">seitech.cms.faq.form</field>
+        <field name="model">seitech.cms.faq</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="is_published" widget="boolean_toggle"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="question"/>
+                            <field name="category_id"/>
+                        </group>
+                        <group>
+                            <field name="is_featured"/>
+                            <field name="sequence"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="short_answer" placeholder="Brief answer for preview..."/>
+                    </group>
+                    <field name="answer" placeholder="Full answer..."/>
+                    <group>
+                        <group>
+                            <field name="course_name"/>
+                            <field name="page_ids" widget="many2many_tags"/>
+                        </group>
+                        <group>
+                            <field name="view_count" readonly="1"/>
+                            <field name="helpful_count" readonly="1"/>
+                            <field name="not_helpful_count" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_cms_faqs" model="ir.actions.act_window">
+        <field name="name">FAQs</field>
+        <field name="res_model">seitech.cms.faq</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

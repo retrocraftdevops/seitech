@@ -1,0 +1,4882 @@
+# Translation file for Seitech E-Learning
+# Converted from legacy PHP application
+# Copyright (C) 2025 Seitech International
+# This file is distributed under the LGPL-3 license.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Seitech E-Learning 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-22 21:34+0000\n"
+"PO-Revision-Date: 2025-12-22 21:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Legacy key: manage_profile
+msgid "Manage profile"
+msgstr "Kelola profil"
+
+#. Legacy key: write_a_public_review
+msgid "Write a public review"
+msgstr "Tulis ulasan publik"
+
+#. Legacy key: heads_up
+msgid "Heads up"
+msgstr "Hati-hati"
+
+#. Legacy key: describe_your_experience_what_you_got_out_of_the_course_and_other_helpful_highlights
+msgid "Describe your experience what you got out of the course and other helpful highlights"
+msgstr "Jelaskan pengalaman Anda apa yang Anda dapatkan dari kursus dan sorotan bermanfaat lainnya"
+
+#. Legacy key: are_you_sure
+msgid "Are you sure"
+msgstr "Apa kamu yakin"
+
+#. Legacy key: what_did_the_instructor_do_well_and_what_could_use_some_improvement
+msgid "What did the instructor do well and what could use some improvement"
+msgstr "Apa yang dilakukan instruktur dengan baik dan apa yang perlu diperbaiki"
+
+#. Legacy key: cancel
+msgid "Cancel"
+msgstr "Membatalkan"
+
+#. Legacy key: continue
+msgid "Continue"
+msgstr "Melanjutkan"
+
+#. Legacy key: next
+msgid "Next"
+msgstr "Berikutnya"
+
+#. Legacy key: previous
+msgid "Previous"
+msgstr "Sebelumnya"
+
+#. Legacy key: publish
+msgid "Publish"
+msgstr "Menerbitkan"
+
+#. Legacy key: delete
+msgid "Delete"
+msgstr "Menghapus"
+
+#. Legacy key: 404_page_not_found
+msgid "404 page not found"
+msgstr "404 halaman tidak ditemukan"
+
+#. Legacy key: courses
+msgid "Courses"
+msgstr "Kursus"
+
+#. Legacy key: all_courses
+msgid "All courses"
+msgstr "Semua kursus"
+
+#. Legacy key: search_for_courses
+msgid "Search for courses"
+msgstr "Temukan kursus"
+
+#. Legacy key: total
+msgid "Total"
+msgstr "Total"
+
+#. Legacy key: go_to_cart
+msgid "Go to cart"
+msgstr "Pergi ke troli"
+
+#. Legacy key: your_cart_is_empty
+msgid "Your cart is empty"
+msgstr "keranjang Anda kosong"
+
+#. Legacy key: log_in
+msgid "Log in"
+msgstr "bundel"
+
+#. Legacy key: sign_up
+msgid "Sign up"
+msgstr "Daftar"
+
+#. Legacy key: cookie_policy
+msgid "Cookie policy"
+msgstr "Kebijakan Cookie"
+
+#. Legacy key: accept
+msgid "Accept"
+msgstr "Diterima"
+
+#. Legacy key: oh_snap
+msgid "Oh snap"
+msgstr "Oh jepret"
+
+#. Legacy key: this_is_not_the_web_page_you_are_looking_for
+msgid "This is not the web page you are looking for"
+msgstr "Ini bukan halaman web yang Anda cari"
+
+#. Legacy key: back_to_home
+msgid "Back to home"
+msgstr "Kembali ke rumah"
+
+#. Legacy key: about
+msgid "About"
+msgstr "Tentang"
+
+#. Legacy key: privacy_policy
+msgid "Privacy policy"
+msgstr "Kebijakan pribadi"
+
+#. Legacy key: terms_and_condition
+msgid "Terms and condition"
+msgstr "Syarat dan ketentuan"
+
+#. Legacy key: login
+msgid "Login"
+msgstr "bundel"
+
+#. Legacy key: step
+msgid "Step"
+msgstr "Naiklah"
+
+#. Legacy key: how_would_you_rate_this_course_overall
+msgid "How would you rate this course overall"
+msgstr "Bagaimana Anda menilai kursus ini secara keseluruhan?"
+
+#. Legacy key: all_category
+msgid "All category"
+msgstr "Semua kategori"
+
+#. Legacy key: showing_on_this_page
+msgid "Showing on this page"
+msgstr "Menampilkan di halaman ini"
+
+#. Legacy key: filter
+msgid "Filter"
+msgstr "Bermacam-macam"
+
+#. Legacy key: categories
+msgid "Categories"
+msgstr "Kategori"
+
+#. Legacy key: show_more
+msgid "Show more"
+msgstr "Menampilkan lebih banyak"
+
+#. Legacy key: price
+msgid "Price"
+msgstr "Harga"
+
+#. Legacy key: all
+msgid "All"
+msgstr "Semua"
+
+#. Legacy key: free
+msgid "Free"
+msgstr "Bebas"
+
+#. Legacy key: paid
+msgid "Paid"
+msgstr "Dibayar"
+
+#. Legacy key: level
+msgid "Level"
+msgstr "Tingkat"
+
+#. Legacy key: beginner
+msgid "Beginner"
+msgstr "Pemula"
+
+#. Legacy key: advanced
+msgid "Advanced"
+msgstr "Canggih"
+
+#. Legacy key: intermediate
+msgid "Intermediate"
+msgstr "ditengahi"
+
+#. Legacy key: language
+msgid "Language"
+msgstr "Bahasa"
+
+#. Legacy key: ratings
+msgid "Ratings"
+msgstr "Pangkat"
+
+#. Legacy key: lessons
+msgid "Lessons"
+msgstr "Pelajaran"
+
+#. Legacy key: hours
+msgid "Hours"
+msgstr "Selai"
+
+#. Legacy key: show_less
+msgid "Show less"
+msgstr "Tampilkan lebih sedikit"
+
+#. Legacy key: course
+msgid "Course"
+msgstr "Kursus"
+
+#. Legacy key: students_enrolled
+msgid "Students enrolled"
+msgstr "Siswa mendaftar"
+
+#. Legacy key: created_by
+msgid "Created by"
+msgstr "Dibuat oleh"
+
+#. Legacy key: last_updated
+msgid "Last updated"
+msgstr "Terakhir diperbarui"
+
+#. Legacy key: what_will_i_learn
+msgid "What will i learn"
+msgstr "Apa yang akan saya pelajari"
+
+#. Legacy key: curriculum_for_this_course
+msgid "Curriculum for this course"
+msgstr "Kurikulum untuk kursus ini"
+
+#. Legacy key: requirements
+msgid "Requirements"
+msgstr "Persyaratan"
+
+#. Legacy key: view_more
+msgid "View more"
+msgstr "Lihat lebih banyak"
+
+#. Legacy key: description
+msgid "Description"
+msgstr "Keterangan"
+
+#. Legacy key: other_related_courses
+msgid "Other related courses"
+msgstr "Kursus terkait lainnya"
+
+#. Legacy key: updated
+msgid "Updated"
+msgstr "Diperbarui"
+
+#. Legacy key: about_the_instructor
+msgid "About the instructor"
+msgstr "Tentang instruktur"
+
+#. Legacy key: reviews
+msgid "Reviews"
+msgstr "Ulasan"
+
+#. Legacy key: students
+msgid "Students"
+msgstr "Siswa"
+
+#. Legacy key: student_feedback
+msgid "Student feedback"
+msgstr "Umpan balik siswa"
+
+#. Legacy key: average_rating
+msgid "Average rating"
+msgstr "Penilaian rata-rata"
+
+#. Legacy key: buy_now
+msgid "Buy now"
+msgstr "Beli sekarang"
+
+#. Legacy key: added_to_cart
+msgid "Added to cart"
+msgstr "Ditambahkan ke troli"
+
+#. Legacy key: includes
+msgid "Includes"
+msgstr "Termasuk"
+
+#. Legacy key: on_demand_videos
+msgid "On demand videos"
+msgstr "Video sesuai permintaan"
+
+#. Legacy key: full_lifetime_access
+msgid "Full lifetime access"
+msgstr "Akses seumur hidup penuh"
+
+#. Legacy key: access_on_mobile_and_tv
+msgid "Access on mobile and tv"
+msgstr "Akses di ponsel dan tv"
+
+#. Legacy key: add_to_cart
+msgid "Add to cart"
+msgstr "Masukkan ke keranjang"
+
+#. Legacy key: please_wait
+msgid "Please wait"
+msgstr "Harap tunggu"
+
+#. Legacy key: preview_this_course
+msgid "Preview this course"
+msgstr "Pratinjau kursus ini"
+
+#. Legacy key: course_preview
+msgid "Course preview"
+msgstr "Pratinjau kursus"
+
+#. Legacy key: admin_revenue
+msgid "Admin revenue"
+msgstr "Pendapatan Admin"
+
+#. Legacy key: admin
+msgid "Admin"
+msgstr "Admin"
+
+#. Legacy key: welcome
+msgid "Welcome"
+msgstr "Selamat datang"
+
+#. Legacy key: my_account
+msgid "My account"
+msgstr "Akun saya"
+
+#. Legacy key: settings
+msgid "Settings"
+msgstr "Pengaturan"
+
+#. Legacy key: logout
+msgid "Logout"
+msgstr "Keluar"
+
+#. Legacy key: visit_website
+msgid "Visit website"
+msgstr "Kunjungi situs web"
+
+#. Legacy key: navigation
+msgid "Navigation"
+msgstr "Navigasi"
+
+#. Legacy key: dashboard
+msgid "Dashboard"
+msgstr "Dasbor"
+
+#. Legacy key: add_new_category
+msgid "Add new category"
+msgstr "Tambahkan kategori baru"
+
+#. Legacy key: instructors
+msgid "Instructors"
+msgstr "Instruktur"
+
+#. Legacy key: enrolment
+msgid "Enrolment"
+msgstr "Registrasi"
+
+#. Legacy key: enrol_history
+msgid "Enrol history"
+msgstr "Daftar riwayat"
+
+#. Legacy key: enrol_a_student
+msgid "Enrol a student"
+msgstr "Daftarkan siswa"
+
+#. Legacy key: report
+msgid "Report"
+msgstr "Laporan"
+
+#. Legacy key: instructor_revenue
+msgid "Instructor revenue"
+msgstr "Pendapatan instruktur"
+
+#. Legacy key: message
+msgid "Message"
+msgstr "Pesan"
+
+#. Legacy key: addons
+msgid "Addons"
+msgstr "tambahan"
+
+#. Legacy key: addon_manager
+msgid "Addon manager"
+msgstr "Manajer tambahan"
+
+#. Legacy key: available_addons
+msgid "Available addons"
+msgstr "Addon yang tersedia"
+
+#. Legacy key: system_settings
+msgid "System settings"
+msgstr "Pengaturan sistem"
+
+#. Legacy key: website_settings
+msgid "Website settings"
+msgstr "Pengaturan situs web"
+
+#. Legacy key: payment_settings
+msgid "Payment settings"
+msgstr "Pengaturan pembayaran"
+
+#. Legacy key: instructor_settings
+msgid "Instructor settings"
+msgstr "Pengaturan instruktur"
+
+#. Legacy key: language_settings
+msgid "Language settings"
+msgstr "Pengaturan bahasa"
+
+#. Legacy key: smtp_settings
+msgid "Smtp settings"
+msgstr "Pengaturan smtp"
+
+#. Legacy key: theme_settings
+msgid "Theme settings"
+msgstr "Pengaturan tema"
+
+#. Legacy key: enrolled_course
+msgid "Enrolled course"
+msgstr "Kursus terdaftar"
+
+#. Legacy key: total_amount
+msgid "Total amount"
+msgstr "Jumlah total"
+
+#. Legacy key: enrolment_date
+msgid "Enrolment date"
+msgstr "Tanggal pendaftaran"
+
+#. Legacy key: actions
+msgid "Actions"
+msgstr "Tindakan"
+
+#. Legacy key: this_year
+msgid "This year"
+msgstr "tahun ini"
+
+#. Legacy key: active_course
+msgid "Active course"
+msgstr "Kursus aktif"
+
+#. Legacy key: pending_course
+msgid "Pending course"
+msgstr "Kursus tertunda"
+
+#. Legacy key: congratulations
+msgid "Congratulations"
+msgstr "Senang"
+
+#. Legacy key: please_fill_all_the_required_fields
+msgid "Please fill all the required fields"
+msgstr "Harap isi semua bidang yang wajib diisi"
+
+#. Legacy key: close
+msgid "Close"
+msgstr "Menutup"
+
+#. Legacy key: private_messaging
+msgid "Private messaging"
+msgstr "Pesan pribadi"
+
+#. Legacy key: private_message
+msgid "Private message"
+msgstr "Pesan pribadi"
+
+#. Legacy key: new_message
+msgid "New message"
+msgstr "Pesan baru"
+
+#. Legacy key: home
+msgid "Home"
+msgstr "Rumah"
+
+#. Legacy key: menu
+msgid "Menu"
+msgstr "Menu"
+
+#. Legacy key: all_tutions
+msgid "All tutions"
+msgstr "Semua tutorial"
+
+#. Legacy key: ebooks
+msgid "Ebooks"
+msgstr "buku elektronik"
+
+#. Legacy key: course_bundles
+msgid "Course bundles"
+msgstr "Paket kursus"
+
+#. Legacy key: administrator
+msgid "Administrator"
+msgstr "Administrator"
+
+#. Legacy key: learn_on_your_schedule
+msgid "Learn on your schedule"
+msgstr "Pelajari sesuai jadwal Anda"
+
+#. Legacy key: what_do_you_want_to_learn
+msgid "What do you want to learn"
+msgstr "Apa yang ingin Anda pelajari"
+
+#. Legacy key: search
+msgid "Search"
+msgstr "Mencari"
+
+#. Legacy key: online_courses
+msgid "Online courses"
+msgstr "Kursus online"
+
+#. Legacy key: explore_a_variety_of_fresh_topics
+msgid "Explore a variety of fresh topics"
+msgstr "Jelajahi berbagai topik segar"
+
+#. Legacy key: expert_instruction
+msgid "Expert instruction"
+msgstr "Instruksi ahli"
+
+#. Legacy key: find_the_right_course_for_you
+msgid "Find the right course for you"
+msgstr "Temukan kursus yang tepat untuk Anda"
+
+#. Legacy key: lifetime_access
+msgid "Lifetime access"
+msgstr "Akses seumur hidup"
+
+#. Legacy key: top_categories
+msgid "Top categories"
+msgstr "Kategori teratas"
+
+#. Legacy key: top_courses
+msgid "Top courses"
+msgstr "Tentu saja teratas"
+
+#. Legacy key: compare
+msgid "Compare"
+msgstr "Membandingkan"
+
+#. Legacy key: lectures
+msgid "Lectures"
+msgstr "Kuliah"
+
+#. Legacy key: get_enrolled
+msgid "Get enrolled"
+msgstr "Daftarkan diri Anda"
+
+#. Legacy key: top
+msgid "Top"
+msgstr "Di atas"
+
+#. Legacy key: latest_courses
+msgid "Latest courses"
+msgstr "Kursus terbaru"
+
+#. Legacy key: h5p_course
+msgid "H5p course"
+msgstr "tentu saja H5p"
+
+#. Legacy key: scorm_course
+msgid "Scorm course"
+msgstr "Tentu saja Scorm"
+
+#. Legacy key: featured_instructor
+msgid "Featured instructor"
+msgstr "Instruktur unggulan"
+
+#. Legacy key: join_now_to_start_learning
+msgid "Join now to start learning"
+msgstr "Bergabunglah sekarang untuk mulai belajar"
+
+#. Legacy key: get_started
+msgid "Get started"
+msgstr "Memulai"
+
+#. Legacy key: become_a_new_instructor
+msgid "Become a new instructor"
+msgstr "Menjadi instruktur baru"
+
+#. Legacy key: join_now
+msgid "Join now"
+msgstr "Bergabung sekarang"
+
+#. Legacy key: useful_links
+msgid "Useful links"
+msgstr "Tautan yang bermanfaat"
+
+#. Legacy key: blog
+msgid "Blog"
+msgstr "Blog"
+
+#. Legacy key: help
+msgid "Help"
+msgstr "Membantu"
+
+#. Legacy key: about_us
+msgid "About us"
+msgstr "Tentang kami"
+
+#. Legacy key: refund_policy
+msgid "Refund policy"
+msgstr "Kebijakan pengembalian"
+
+#. Legacy key: all_rights_reserved
+msgid "All rights reserved"
+msgstr "Seluruh hak cipta"
+
+#. Legacy key: yes
+msgid "Yes"
+msgstr "Dari"
+
+#. Legacy key: no
+msgid "No"
+msgstr "TIDAK"
+
+#. Legacy key: view_less
+msgid "View less"
+msgstr "Lihat lebih sedikit"
+
+#. Legacy key: ai_writer
+msgid "Ai writer"
+msgstr "Ai penulis"
+
+#. Legacy key: quick_actions
+msgid "Quick actions"
+msgstr "Aksi Cepat"
+
+#. Legacy key: create_course
+msgid "Create course"
+msgstr "Buat kursus"
+
+#. Legacy key: add_course
+msgid "Add course"
+msgstr "Tambahkan kursus"
+
+#. Legacy key: add_new_lesson
+msgid "Add new lesson"
+msgstr "Tambahkan pelajaran baru"
+
+#. Legacy key: add_lesson
+msgid "Add lesson"
+msgstr "Tambahkan pelajaran"
+
+#. Legacy key: add_student
+msgid "Add student"
+msgstr "Tambahkan siswa"
+
+#. Legacy key: enrol_student
+msgid "Enrol student"
+msgstr "Daftarkan siswa"
+
+#. Legacy key: help_center
+msgid "Help center"
+msgstr "Pusat Bantuan"
+
+#. Legacy key: read_documentation
+msgid "Read documentation"
+msgstr "Baca dokumentasi"
+
+#. Legacy key: watch_video_tutorial
+msgid "Watch video tutorial"
+msgstr "Tonton video tutorialnya"
+
+#. Legacy key: get_customer_support
+msgid "Get customer support"
+msgstr "Dapatkan dukungan pelanggan"
+
+#. Legacy key: order_customization
+msgid "Order customization"
+msgstr "Kustomisasi pesanan"
+
+#. Legacy key: request_a_new_feature
+msgid "Request a new feature"
+msgstr "Minta fitur baru"
+
+#. Legacy key: browse_addons
+msgid "Browse addons"
+msgstr "Jelajahi addon"
+
+#. Legacy key: manage_courses
+msgid "Manage courses"
+msgstr "Kelola kursus"
+
+#. Legacy key: add_new_course
+msgid "Add new course"
+msgstr "Tambahkan kursus baru"
+
+#. Legacy key: course_category
+msgid "Course category"
+msgstr "kategori kursus"
+
+#. Legacy key: coupons
+msgid "Coupons"
+msgstr "Kupon"
+
+#. Legacy key: course_bundle
+msgid "Course bundle"
+msgstr "Paket kursus"
+
+#. Legacy key: add_new_bundle
+msgid "Add new bundle"
+msgstr "Tambahkan bundel baru"
+
+#. Legacy key: manage_bundle
+msgid "Manage bundle"
+msgstr "Kelola bundel"
+
+#. Legacy key: subscription_report
+msgid "Subscription report"
+msgstr "Laporan langganan"
+
+#. Legacy key: tutor_booking
+msgid "Tutor booking"
+msgstr "Pemesanan tutor"
+
+#. Legacy key: subject_category
+msgid "Subject category"
+msgstr "kategori mata pelajaran"
+
+#. Legacy key: add_booking
+msgid "Add booking"
+msgstr "Tambahkan pemesanan"
+
+#. Legacy key: all_bookings
+msgid "All bookings"
+msgstr "Semua pemesanan"
+
+#. Legacy key: booked_schedules
+msgid "Booked schedules"
+msgstr "Jadwal yang dipesan"
+
+#. Legacy key: live_class_settings
+msgid "Live class settings"
+msgstr "Pengaturan kelas langsung"
+
+#. Legacy key: ebook
+msgid "Ebook"
+msgstr "buku elektronik"
+
+#. Legacy key: all_ebooks
+msgid "All ebooks"
+msgstr "Semua ebook"
+
+#. Legacy key: add_ebook
+msgid "Add ebook"
+msgstr "Tambahkan ebook"
+
+#. Legacy key: payment_history
+msgid "Payment history"
+msgstr "Riwayat pembayaran"
+
+#. Legacy key: category
+msgid "Category"
+msgstr "Kategori"
+
+#. Legacy key: course_enrollment
+msgid "Course enrollment"
+msgstr "Pendaftaran kursus"
+
+#. Legacy key: purchase_history
+msgid "Purchase history"
+msgstr "Riwayat pembelian"
+
+#. Legacy key: affiliate
+msgid "Affiliate"
+msgstr "Afiliasi"
+
+#. Legacy key: affliliator_list
+msgid "Affliliator list"
+msgstr "Daftar afiliasi"
+
+#. Legacy key: affiliation_history
+msgid "Affiliation history"
+msgstr "Sejarah afiliasi"
+
+#. Legacy key: payouts
+msgid "Payouts"
+msgstr "Pembayaran"
+
+#. Legacy key: create_affiliator
+msgid "Create affiliator"
+msgstr "Buat afiliasi"
+
+#. Legacy key: affiliation_settings
+msgid "Affiliation settings"
+msgstr "Pengaturan afiliasi"
+
+#. Legacy key: users
+msgid "Users"
+msgstr "Pengguna"
+
+#. Legacy key: admins
+msgid "Admins"
+msgstr "Admin"
+
+#. Legacy key: manage_admins
+msgid "Manage admins"
+msgstr "Kelola admin"
+
+#. Legacy key: add_new_admin
+msgid "Add new admin"
+msgstr "Tambahkan admin baru"
+
+#. Legacy key: manage_instructors
+msgid "Manage instructors"
+msgstr "Kelola instruktur"
+
+#. Legacy key: add_new_instructor
+msgid "Add new instructor"
+msgstr "Tambahkan instruktur baru"
+
+#. Legacy key: instructor_payout
+msgid "Instructor payout"
+msgstr "Pembayaran instruktur"
+
+#. Legacy key: applications
+msgid "Applications"
+msgstr "Aplikasi"
+
+#. Legacy key: manage_students
+msgid "Manage students"
+msgstr "Mengelola siswa"
+
+#. Legacy key: add_new_student
+msgid "Add new student"
+msgstr "Tambah siswa baru"
+
+#. Legacy key: offline_payment
+msgid "Offline payment"
+msgstr "Pembayaran luring"
+
+#. Legacy key: pending_request
+msgid "Pending request"
+msgstr "Permintaan tertunda"
+
+#. Legacy key: accepted_request
+msgid "Accepted request"
+msgstr "Permintaan yang diterima"
+
+#. Legacy key: suspended_request
+msgid "Suspended request"
+msgstr "Permintaan sedang menunggu keputusan"
+
+#. Legacy key: offline_payment_settings
+msgid "Offline payment settings"
+msgstr "Pengaturan pembayaran offline"
+
+#. Legacy key: all_blogs
+msgid "All blogs"
+msgstr "Semua blog"
+
+#. Legacy key: pending_blog
+msgid "Pending blog"
+msgstr "Blog tertunda"
+
+#. Legacy key: blog_category
+msgid "Blog category"
+msgstr "kategori blog"
+
+#. Legacy key: blog_settings
+msgid "Blog settings"
+msgstr "Pengaturan blog"
+
+#. Legacy key: customer_support
+msgid "Customer support"
+msgstr "Dukungan pelanggan"
+
+#. Legacy key: ticket_list
+msgid "Ticket list"
+msgstr "Daftar tiket"
+
+#. Legacy key: support_category
+msgid "Support category"
+msgstr "kategori dukungan"
+
+#. Legacy key: macro
+msgid "Macro"
+msgstr "Makro"
+
+#. Legacy key: create_ticket
+msgid "Create ticket"
+msgstr "Buat tiket"
+
+#. Legacy key: themes
+msgid "Themes"
+msgstr "Dia"
+
+#. Legacy key: academy_cloud
+msgid "Academy cloud"
+msgstr "Awan akademi"
+
+#. Legacy key: drip_content_settings
+msgid "Drip content settings"
+msgstr "Pengaturan konten tetes"
+
+#. Legacy key: certificate_settings
+msgid "Certificate settings"
+msgstr "Pengaturan sertifikat"
+
+#. Legacy key: s3_settings
+msgid "S3 settings"
+msgstr "pengaturan S3"
+
+#. Legacy key: open_ai_settings
+msgid "Open ai settings"
+msgstr "Buka pengaturan ai"
+
+#. Legacy key: social_login
+msgid "Social login"
+msgstr "Masuk sosial"
+
+#. Legacy key: custom_page
+msgid "Custom page"
+msgstr "Halaman khusus"
+
+#. Legacy key: data_center
+msgid "Data center"
+msgstr "Pusat Data"
+
+#. Legacy key: admin_revenue_this_year
+msgid "Admin revenue this year"
+msgstr "Penghasilan admin tahun ini"
+
+#. Legacy key: number_courses
+msgid "Number courses"
+msgstr "Kursus nomor"
+
+#. Legacy key: number_of_lessons
+msgid "Number of lessons"
+msgstr "Jumlah pelajaran"
+
+#. Legacy key: number_of_enrolment
+msgid "Number of enrolment"
+msgstr "Jumlah pendaftaran"
+
+#. Legacy key: number_of_student
+msgid "Number of student"
+msgstr "Jumlah siswa"
+
+#. Legacy key: course_overview
+msgid "Course overview"
+msgstr "Ikhtisar kursus"
+
+#. Legacy key: active_courses
+msgid "Active courses"
+msgstr "Kursus aktif"
+
+#. Legacy key: pending_courses
+msgid "Pending courses"
+msgstr "Kursus tertunda"
+
+#. Legacy key: requested_withdrawal
+msgid "Requested withdrawal"
+msgstr "Diminta penarikan"
+
+#. Legacy key: email
+msgid "Email"
+msgstr "Surel"
+
+#. Legacy key: requested_withdrawal_amount
+msgid "Requested withdrawal amount"
+msgstr "Jumlah penarikan yang diminta"
+
+#. Legacy key: january
+msgid "January"
+msgstr "Januari"
+
+#. Legacy key: february
+msgid "February"
+msgstr "Februari"
+
+#. Legacy key: march
+msgid "March"
+msgstr "Berbaris"
+
+#. Legacy key: april
+msgid "April"
+msgstr "April"
+
+#. Legacy key: may
+msgid "May"
+msgstr "Mungkin"
+
+#. Legacy key: june
+msgid "June"
+msgstr "Juni"
+
+#. Legacy key: july
+msgid "July"
+msgstr "Juli"
+
+#. Legacy key: august
+msgid "August"
+msgstr "Agustus"
+
+#. Legacy key: september
+msgid "September"
+msgstr "September"
+
+#. Legacy key: october
+msgid "October"
+msgstr "Oktober"
+
+#. Legacy key: november
+msgid "November"
+msgstr "November"
+
+#. Legacy key: december
+msgid "December"
+msgstr "Desember"
+
+#. Legacy key: ok
+msgid "Ok"
+msgstr "Terlalu banyak"
+
+#. Legacy key: success
+msgid "Success"
+msgstr "Kesuksesan"
+
+#. Legacy key: successfully
+msgid "Successfully"
+msgstr "Berhasil"
+
+#. Legacy key: div_added_to_bottom_
+msgid "Div added to bottom "
+msgstr "Div ditambahkan ke bawah"
+
+#. Legacy key: div_has_been_deleted_
+msgid "Div has been deleted "
+msgstr "Div telah dihapus"
+
+#. Legacy key: provide_your_valid_login_credentials
+msgid "Provide your valid login credentials"
+msgstr "Berikan kredensial login Anda yang valid"
+
+#. Legacy key: continue_with_email
+msgid "Continue with email"
+msgstr "Lanjutkan dengan email"
+
+#. Legacy key: password
+msgid "Password"
+msgstr "Kata sandi"
+
+#. Legacy key: forgot_password
+msgid "Forgot password"
+msgstr "Tidak ingat kata sandi"
+
+#. Legacy key: do_not_have_an_account
+msgid "Do not have an account"
+msgstr "Belum punya akun"
+
+#. Legacy key: website_name
+msgid "Website name"
+msgstr "Nama situs web"
+
+#. Legacy key: website_title
+msgid "Website title"
+msgstr "Judul situs web"
+
+#. Legacy key: website_keywords
+msgid "Website keywords"
+msgstr "Kata kunci situs web"
+
+#. Legacy key: website_description
+msgid "Website description"
+msgstr "Deskripsi situs web"
+
+#. Legacy key: author
+msgid "Author"
+msgstr "Pengarang"
+
+#. Legacy key: slogan
+msgid "Slogan"
+msgstr "Slogan"
+
+#. Legacy key: system_email
+msgid "System email"
+msgstr "Email sistem"
+
+#. Legacy key: address
+msgid "Address"
+msgstr "Alamat"
+
+#. Legacy key: phone
+msgid "Phone"
+msgstr "Telepon"
+
+#. Legacy key: youtube_api_key
+msgid "Youtube api key"
+msgstr "Kunci api Youtube"
+
+#. Legacy key: get_youtube_api_key
+msgid "Get youtube api key"
+msgstr "Dapatkan kunci youtube api"
+
+#. Legacy key: vimeo_api_key
+msgid "Vimeo api key"
+msgstr "Kunci api Vimeo"
+
+#. Legacy key: get_vimeo_api_key
+msgid "Get vimeo api key"
+msgstr "Dapatkan kunci vimeo api"
+
+#. Legacy key: purchase_code
+msgid "Purchase code"
+msgstr "Kode pembelian"
+
+#. Legacy key: system_language
+msgid "System language"
+msgstr "Bahasa sistem"
+
+#. Legacy key: student_email_verification
+msgid "Student email verification"
+msgstr "Verifikasi email siswa"
+
+#. Legacy key: enable
+msgid "Enable"
+msgstr "Memungkinkan"
+
+#. Legacy key: disable
+msgid "Disable"
+msgstr "Cacat"
+
+#. Legacy key: course_accessibility
+msgid "Course accessibility"
+msgstr "Aksesibilitas kursus"
+
+#. Legacy key: publicly
+msgid "Publicly"
+msgstr "Di depan umum"
+
+#. Legacy key: only_logged_in_users
+msgid "Only logged in users"
+msgstr "Hanya pengguna yang masuk"
+
+#. Legacy key: number_of_authorized_devices
+msgid "Number of authorized devices"
+msgstr "Jumlah perangkat resmi"
+
+#. Legacy key: how_many_devices_do_you_want_to_allow_for_logging_in_using_a_single_account
+msgid "How many devices do you want to allow for logging in using a single account"
+msgstr "Berapa banyak perangkat yang ingin Anda izinkan untuk masuk menggunakan satu akun"
+
+#. Legacy key: course_selling_tax
+msgid "Course selling tax"
+msgstr "Pajak penjualan saja"
+
+#. Legacy key: enter_0_if_you_want_to_disable_the_tax_option
+msgid "Enter 0 if you want to disable the tax option"
+msgstr "Masukkan 0 jika Anda ingin menonaktifkan opsi pajak"
+
+#. Legacy key: google_analytics_id
+msgid "Google analytics id"
+msgstr "Analisis ID Google"
+
+#. Legacy key: keep_it_blank_if_you_want_to_disable_it
+msgid "Keep it blank if you want to disable it"
+msgstr "Biarkan kosong jika Anda ingin menonaktifkannya"
+
+#. Legacy key: meta_pixel_id
+msgid "Meta pixel id"
+msgstr "Id piksel meta"
+
+#. Legacy key: footer_text
+msgid "Footer text"
+msgstr "Catatan kaki"
+
+#. Legacy key: footer_link
+msgid "Footer link"
+msgstr "Tautan kaki"
+
+#. Legacy key: save
+msgid "Save"
+msgstr "Toko"
+
+#. Legacy key: update_product
+msgid "Update product"
+msgstr "Perbarui produk"
+
+#. Legacy key: file
+msgid "File"
+msgstr "Mengajukan"
+
+#. Legacy key: update
+msgid "Update"
+msgstr "Memperbarui"
+
+#. Legacy key: not_found
+msgid "Not found"
+msgstr "Tidak ditemukan"
+
+#. Legacy key: about_this_application
+msgid "About this application"
+msgstr "Tentang aplikasi ini"
+
+#. Legacy key: software_version
+msgid "Software version"
+msgstr "Versi perangkat lunak"
+
+#. Legacy key: check_update
+msgid "Check update"
+msgstr "Cek pembaruan"
+
+#. Legacy key: php_version
+msgid "Php version"
+msgstr "versi php"
+
+#. Legacy key: curl_enable
+msgid "Curl enable"
+msgstr "Aktifkan keriting"
+
+#. Legacy key: enabled
+msgid "Enabled"
+msgstr "Diaktifkan"
+
+#. Legacy key: product_license
+msgid "Product license"
+msgstr "Lisensi produk"
+
+#. Legacy key: invalid
+msgid "Invalid"
+msgstr "Tidak sah"
+
+#. Legacy key: enter_valid_purchase_code
+msgid "Enter valid purchase code"
+msgstr "Masukkan kode pembelian yang valid"
+
+#. Legacy key: customer_support_status
+msgid "Customer support status"
+msgstr "Status dukungan pelanggan"
+
+#. Legacy key: support_expiry_date
+msgid "Support expiry date"
+msgstr "Mendukung tanggal kedaluwarsa"
+
+#. Legacy key: customer_name
+msgid "Customer name"
+msgstr "Nama pelanggan"
+
+#. Legacy key: product_updated_successfully
+msgid "Product updated successfully"
+msgstr "Produk berhasil diperbarui"
+
+#. Legacy key: remove_all
+msgid "Remove all"
+msgstr "Hapus semua"
+
+#. Legacy key: notification
+msgid "Notification"
+msgstr "Pemberitahuan"
+
+#. Legacy key: no_notification
+msgid "No notification"
+msgstr "Tidak ada pemberitahuan"
+
+#. Legacy key: notification_settings
+msgid "Notification settings"
+msgstr "Pengaturan pemberitahuan"
+
+#. Legacy key: mark_all_as_read
+msgid "Mark all as read"
+msgstr "tandai semua telah dibaca"
+
+#. Legacy key: enrollments
+msgid "Enrollments"
+msgstr "Registrasi"
+
+#. Legacy key: newsletter
+msgid "Newsletter"
+msgstr "Buletin"
+
+#. Legacy key: all_newsletter
+msgid "All newsletter"
+msgstr "Semua buletin"
+
+#. Legacy key: subscribed_user
+msgid "Subscribed user"
+msgstr "Pengguna berlangganan"
+
+#. Legacy key: custom_page_builder
+msgid "Custom page builder"
+msgstr "Pembuat halaman khusus"
+
+#. Legacy key: your_servers_file_upload_limit_is_900mb
+msgid "Your servers file upload limit is 900mb"
+msgstr "Batas unggah file server Anda adalah 900MB"
+
+#. Legacy key: 404_not_found
+msgid "404 not found"
+msgstr "404 tidak ditemukan"
+
+#. Legacy key: administration
+msgid "Administration"
+msgstr "Administrasi"
+
+#. Legacy key: you_have_no_items_in_your_cart!
+msgid "You have no items in your cart!"
+msgstr "You have no items in your cart!"
+
+#. Legacy key: checkout
+msgid "Checkout"
+msgstr "Periksa"
+
+#. Legacy key: log_out
+msgid "Log out"
+msgstr "Keluar"
+
+#. Legacy key: the_page_you_requested_could_not_be_found
+msgid "The page you requested could not be found"
+msgstr "Halaman yang Anda minta tidak dapat ditemukan"
+
+#. Legacy key: check_the_spelling_of_the_url
+msgid "Check the spelling of the url"
+msgstr "Periksa ejaan url"
+
+#. Legacy key: contact_us
+msgid "Contact us"
+msgstr "Hubungi kami"
+
+#. Legacy key: faq
+msgid "Faq"
+msgstr "Tanya Jawab"
+
+#. Legacy key: subscribe_to_our_newsletter
+msgid "Subscribe to our newsletter"
+msgstr "Berlangganan newsletter kami"
+
+#. Legacy key: enter_your_email_address
+msgid "Enter your email address"
+msgstr "Masukkan alamat email Anda"
+
+#. Legacy key: happy
+msgid "Happy"
+msgstr "Bagus"
+
+#. Legacy key: experienced
+msgid "Experienced"
+msgstr "Berpengalaman"
+
+#. Legacy key: smart_solution
+msgid "Smart solution"
+msgstr "Solusi cerdas"
+
+#. Legacy key: upcoming
+msgid "Upcoming"
+msgstr "Mendatang"
+
+#. Legacy key: upcoming_courses
+msgid "Upcoming courses"
+msgstr "Kursus yang akan datang"
+
+#. Legacy key: these_are_the_most_popular_courses_among_listen_courses_learners_worldwide
+msgid "These are the most popular courses among listen courses learners worldwide"
+msgstr "Ini adalah kursus paling populer di antara pelajar kursus mendengarkan di seluruh dunia"
+
+#. Legacy key: outcomes
+msgid "Outcomes"
+msgstr "Hasil"
+
+#. Legacy key: remove_from_cart
+msgid "Remove from cart"
+msgstr "Hapus dari keranjang"
+
+#. Legacy key: enroll_now
+msgid "Enroll now"
+msgstr "Daftar sekarang"
+
+#. Legacy key: these_are_the_most_latest_courses_among_listen_courses_learners_worldwide
+msgid "These are the most latest courses among listen courses learners worldwide"
+msgstr "Ini adalah kursus terbaru di antara pelajar kursus mendengarkan di seluruh dunia"
+
+#. Legacy key: top_instructors
+msgid "Top instructors"
+msgstr "Instruktur papan atas"
+
+#. Legacy key: they_efficiently_serve_large_number_of_students_on_our_platform
+msgid "They efficiently serve large number of students on our platform"
+msgstr "Mereka secara efisien melayani sejumlah besar siswa di platform kami"
+
+#. Legacy key: thanks_for_subscribing_to_our_newsletter
+msgid "Thanks for subscribing to our newsletter"
+msgstr "Terima kasih telah berlangganan buletin kami"
+
+#. Legacy key: such_script_searches_are_not_allowed
+msgid "Such script searches are not allowed"
+msgstr "Pencarian skrip seperti itu tidak diperbolehkan"
+
+#. Legacy key: list_view
+msgid "List view"
+msgstr "Tampilan daftar"
+
+#. Legacy key: grid_view
+msgid "Grid view"
+msgstr "Tampilan bergaris"
+
+#. Legacy key: reset
+msgid "Reset"
+msgstr "Mengatur ulang"
+
+#. Legacy key: showing
+msgid "Showing"
+msgstr "Menampilkan"
+
+#. Legacy key: of
+msgid "Of"
+msgstr "Dari"
+
+#. Legacy key: results
+msgid "Results"
+msgstr "Hasil"
+
+#. Legacy key: newly_published
+msgid "Newly published"
+msgstr "Baru saja diterbitkan"
+
+#. Legacy key: highest_rating
+msgid "Highest rating"
+msgstr "Peringkat tertinggi"
+
+#. Legacy key: lowest_price
+msgid "Lowest price"
+msgstr "Harga terendah"
+
+#. Legacy key: highest_price
+msgid "Highest price"
+msgstr "Harga tertinggi"
+
+#. Legacy key: discounted
+msgid "Discounted"
+msgstr "Diskon"
+
+#. Legacy key: english
+msgid "English"
+msgstr "Bahasa inggris"
+
+#. Legacy key: bundles
+msgid "Bundles"
+msgstr "bundel"
+
+#. Legacy key: search_for_bundle
+msgid "Search for bundle"
+msgstr "Cari bundel"
+
+#. Legacy key: rating_updated_successfully
+msgid "Rating updated successfully"
+msgstr "Peringkat berhasil diperbarui"
+
+#. Legacy key: please_select_a_rating_greater_than_0
+msgid "Please select a rating greater than 0"
+msgstr "Silakan pilih level yang lebih besar dari 0"
+
+#. Legacy key: your_subscription_date_is_over_please_renew_your_bundle
+msgid "Your subscription date is over please renew your bundle"
+msgstr "Tanggal langganan Anda telah berakhir, harap perbarui bundel Anda"
+
+#. Legacy key: bundle_details
+msgid "Bundle details"
+msgstr "Paket ritel"
+
+#. Legacy key: buy
+msgid "Buy"
+msgstr "Pembelian"
+
+#. Legacy key: all_categories
+msgid "All categories"
+msgstr "Semua Kategori"
+
+#. Legacy key: view_details
+msgid "View details"
+msgstr "Melihat rincian"
+
+#. Legacy key: explore,_learn,_and_grow_with_us._enjoy_a_seamless_and_enriching_educational_journey._lets_begin!
+msgid "Explore, learn, and grow with us. enjoy a seamless and enriching educational journey. lets begin!"
+msgstr "Explore, learn, and grow with us. enjoy a seamless and enriching educational journey. lets begin!"
+
+#. Legacy key: your_email
+msgid "Your email"
+msgstr "Email mu"
+
+#. Legacy key: enter_your_email
+msgid "Enter your email"
+msgstr "Masukkan email Anda"
+
+#. Legacy key: enter_your_valid_password
+msgid "Enter your valid password"
+msgstr "Masukkan kata sandi Anda yang valid"
+
+#. Legacy key: forgot_password?
+msgid "Forgot password?"
+msgstr "Forgot password?"
+
+#. Legacy key: don`t_have_an_account?
+msgid "Don`t have an account?"
+msgstr "Don`t have an account?"
+
+#. Legacy key: or
+msgid "Or"
+msgstr "Atau"
+
+#. Legacy key: send_request
+msgid "Send request"
+msgstr "Kirim permintaan"
+
+#. Legacy key: back_to_login
+msgid "Back to login"
+msgstr "Kembali untuk masuk"
+
+#. Legacy key: my_course
+msgid "My course"
+msgstr "Kursus saya"
+
+#. Legacy key: by
+msgid "By"
+msgstr "Oleh"
+
+#. Legacy key: go_to_wishlist
+msgid "Go to wishlist"
+msgstr "Buka daftar keinginan"
+
+#. Legacy key: become_a_instructor
+msgid "Become a instructor"
+msgstr "Menjadi instruktur"
+
+#. Legacy key: my_courses
+msgid "My courses"
+msgstr "Kursus saya"
+
+#. Legacy key: my_wishlist
+msgid "My wishlist"
+msgstr "Keinginanku"
+
+#. Legacy key: my_messages
+msgid "My messages"
+msgstr "Pesan saya"
+
+#. Legacy key: user_profile
+msgid "User profile"
+msgstr "Profil pengguna"
+
+#. Legacy key: support
+msgid "Support"
+msgstr "Mendukung"
+
+#. Legacy key: start_now
+msgid "Start now"
+msgstr "Mulai sekarang"
+
+#. Legacy key: gift_someone_else
+msgid "Gift someone else"
+msgstr "Hadiahkan yang lain"
+
+#. Legacy key: wishlist
+msgid "Wishlist"
+msgstr "Daftar Keinginan"
+
+#. Legacy key: messages
+msgid "Messages"
+msgstr "Pesan"
+
+#. Legacy key: profile
+msgid "Profile"
+msgstr "Profil"
+
+#. Legacy key: account_credentials
+msgid "Account credentials"
+msgstr "Kredensial akun"
+
+#. Legacy key: go_to_course_page
+msgid "Go to course page"
+msgstr "Buka halaman kursus"
+
+#. Legacy key: author_profile
+msgid "Author profile"
+msgstr "Profil penulis"
+
+#. Legacy key: quizzes
+msgid "Quizzes"
+msgstr "Kuis"
+
+#. Legacy key: expiry_period
+msgid "Expiry period"
+msgstr "Masa kadaluwarsa"
+
+#. Legacy key: upcoming_live_class
+msgid "Upcoming live class"
+msgstr "Kelas langsung yang akan datang"
+
+#. Legacy key: enrolled
+msgid "Enrolled"
+msgstr "Terdaftar"
+
+#. Legacy key: overview
+msgid "Overview"
+msgstr "Ringkasan"
+
+#. Legacy key: curriculum
+msgid "Curriculum"
+msgstr "Kurikulum"
+
+#. Legacy key: instructor
+msgid "Instructor"
+msgstr "Pengajar"
+
+#. Legacy key: course_description
+msgid "Course description"
+msgstr "Deskripsi kursus"
+
+#. Legacy key: instructor_profile
+msgid "Instructor profile"
+msgstr "Profil instruktur"
+
+#. Legacy key: facebook
+msgid "Facebook"
+msgstr "Facebook"
+
+#. Legacy key: twitter
+msgid "Twitter"
+msgstr "Twitter"
+
+#. Legacy key: linkedin
+msgid "Linkedin"
+msgstr "Linkedin"
+
+#. Legacy key: how_to_shoot_cinematic_tech_videos_like_apple
+msgid "How to shoot cinematic tech videos like apple"
+msgstr "Cara merekam video teknologi sinematik seperti apel"
+
+#. Legacy key: compare_this_course
+msgid "Compare this course"
+msgstr "Bandingkan kursus ini"
+
+#. Legacy key: skill_level
+msgid "Skill level"
+msgstr "Tingkat keahlian"
+
+#. Legacy key: lifetime
+msgid "Lifetime"
+msgstr "Seumur hidup"
+
+#. Legacy key: certificate
+msgid "Certificate"
+msgstr "Sertifikat"
+
+#. Legacy key: related_courses
+msgid "Related courses"
+msgstr "Kursus terkait"
+
+#. Legacy key: first_name
+msgid "First name"
+msgstr "Nama depan"
+
+#. Legacy key: enter_your_first_name
+msgid "Enter your first name"
+msgstr "Masukkan nama depan Anda"
+
+#. Legacy key: last_name
+msgid "Last name"
+msgstr "nama keluarga"
+
+#. Legacy key: enter_your_last_name
+msgid "Enter your last name"
+msgstr "Masukkan nama belakang Anda"
+
+#. Legacy key: apply_to_become_a_instructor
+msgid "Apply to become a instructor"
+msgstr "Terapkan untuk menjadi instruktur"
+
+#. Legacy key: enter_your_phone_number
+msgid "Enter your phone number"
+msgstr "Masukkan nomor telepon Anda"
+
+#. Legacy key: document
+msgid "Document"
+msgstr "Dokumen"
+
+#. Legacy key: provide_some_documents_about_your_qualifications
+msgid "Provide some documents about your qualifications"
+msgstr "Berikan beberapa dokumen tentang kualifikasi Anda"
+
+#. Legacy key: invalid_login_credentials
+msgid "Invalid login credentials"
+msgstr "Kredensial login tidak valid"
+
+#. Legacy key: publication_name
+msgid "Publication name"
+msgstr "Nama publikasi"
+
+#. Legacy key: published_date
+msgid "Published date"
+msgstr "Tanggal publikasi"
+
+#. Legacy key: category_name
+msgid "Category name"
+msgstr "Nama Kategori"
+
+#. Legacy key: read_preview
+msgid "Read preview"
+msgstr "Baca pratinjau"
+
+#. Legacy key: free_download
+msgid "Free download"
+msgstr "Download Gratis"
+
+#. Legacy key: book_specification_and_summary
+msgid "Book specification and summary"
+msgstr "Spesifikasi dan ringkasan buku"
+
+#. Legacy key: summary
+msgid "Summary"
+msgstr "Ringkasan"
+
+#. Legacy key: specification
+msgid "Specification"
+msgstr "Spesifikasi"
+
+#. Legacy key: other_related_ebooks
+msgid "Other related ebooks"
+msgstr "ebook terkait lainnya"
+
+#. Legacy key: about_instructor
+msgid "About instructor"
+msgstr "Tentang instruktur"
+
+#. Legacy key: ebook_review
+msgid "Ebook review"
+msgstr "Ulasan ebook"
+
+#. Legacy key: add_to_wishlist
+msgid "Add to wishlist"
+msgstr "Tambahkan ke Daftar Keinginan b Indonesia"
+
+#. Legacy key: added_to_wishlist
+msgid "Added to wishlist"
+msgstr "Ditambahkan ke daftar keinginan"
+
+#. Legacy key: wordpress_theme_development_with_bootstrap
+msgid "Wordpress theme development with bootstrap"
+msgstr "Pengembangan tema Wordpress dengan bootstrap"
+
+#. Legacy key: frontend_settings
+msgid "Frontend settings"
+msgstr "Pengaturan frontend"
+
+#. Legacy key: home_page_layout
+msgid "Home page layout"
+msgstr "Tata letak halaman rumah"
+
+#. Legacy key: motivational_speech
+msgid "Motivational speech"
+msgstr "Pidato motivasi"
+
+#. Legacy key: website_faqs
+msgid "Website faqs"
+msgstr "FAQ situs web"
+
+#. Legacy key: recaptcha
+msgid "Recaptcha"
+msgstr "Captcha"
+
+#. Legacy key: frontend_website_settings
+msgid "Frontend website settings"
+msgstr "Pengaturan situs web frontend"
+
+#. Legacy key: banner_title
+msgid "Banner title"
+msgstr "Judul spanduk"
+
+#. Legacy key: banner_sub_title
+msgid "Banner sub title"
+msgstr "Sub judul spanduk"
+
+#. Legacy key: cookie_status
+msgid "Cookie status"
+msgstr "Status kue"
+
+#. Legacy key: active
+msgid "Active"
+msgstr "Aktif"
+
+#. Legacy key: inactive
+msgid "Inactive"
+msgstr "Tidak aktif"
+
+#. Legacy key: cookie_note
+msgid "Cookie note"
+msgstr "Catatan kue"
+
+#. Legacy key: update_settings
+msgid "Update settings"
+msgstr "Perbarui pengaturan"
+
+#. Legacy key: activated
+msgid "Activated"
+msgstr "Diaktifkan"
+
+#. Legacy key: title
+msgid "Title"
+msgstr "Judul"
+
+#. Legacy key: faq_question
+msgid "Faq question"
+msgstr "Pertanyaan umum"
+
+#. Legacy key: image
+msgid "Image"
+msgstr "Gambar"
+
+#. Legacy key: upload_image
+msgid "Upload image"
+msgstr "Unggah gambar"
+
+#. Legacy key: save_changes
+msgid "Save changes"
+msgstr "Simpan perubahan"
+
+#. Legacy key: question
+msgid "Question"
+msgstr "Pertanyaan"
+
+#. Legacy key: answer
+msgid "Answer"
+msgstr "Menjawab"
+
+#. Legacy key: recaptcha_settings
+msgid "Recaptcha settings"
+msgstr "Pengaturan captcha"
+
+#. Legacy key: recaptcha_status
+msgid "Recaptcha status"
+msgstr "Captcha status"
+
+#. Legacy key: recaptcha_sitekey
+msgid "Recaptcha sitekey"
+msgstr "Kunci situs Recaptcha"
+
+#. Legacy key: recaptcha_secretkey
+msgid "Recaptcha secretkey"
+msgstr "Kunci rahasia recaptcha"
+
+#. Legacy key: update_recaptcha_settings
+msgid "Update recaptcha settings"
+msgstr "Perbarui pengaturan recaptcha"
+
+#. Legacy key: update_banner_image
+msgid "Update banner image"
+msgstr "Perbarui gambar spanduk"
+
+#. Legacy key: upload_banner_image
+msgid "Upload banner image"
+msgstr "Unggah gambar spanduk"
+
+#. Legacy key: update_light_logo
+msgid "Update light logo"
+msgstr "Perbarui logo cahaya"
+
+#. Legacy key: upload_light_logo
+msgid "Upload light logo"
+msgstr "Unggah logo ringan"
+
+#. Legacy key: update_dark_logo
+msgid "Update dark logo"
+msgstr "Perbarui logo gelap"
+
+#. Legacy key: upload_dark_logo
+msgid "Upload dark logo"
+msgstr "Unggah logo gelap"
+
+#. Legacy key: update_small_logo
+msgid "Update small logo"
+msgstr "Perbarui logo kecil"
+
+#. Legacy key: upload_small_logo
+msgid "Upload small logo"
+msgstr "Unggah logo kecil"
+
+#. Legacy key: update_favicon
+msgid "Update favicon"
+msgstr "Perbarui favicon"
+
+#. Legacy key: upload_favicon
+msgid "Upload favicon"
+msgstr "Unggah favicon"
+
+#. Legacy key: banner_image_update
+msgid "Banner image update"
+msgstr "Pembaruan gambar spanduk"
+
+#. Legacy key: frontend_settings_updated
+msgid "Frontend settings updated"
+msgstr "Pengaturan frontend diperbarui"
+
+#. Legacy key: start_learning_from_best_platform
+msgid "Start learning from best platform"
+msgstr "Mulailah belajar dari platform terbaik"
+
+#. Legacy key: your_servers_file_upload_limit_is_512mb
+msgid "Your servers file upload limit is 512mb"
+msgstr "Batas upload file server Anda adalah 512mb"
+
+#. Legacy key: blog_page_title
+msgid "Blog page title"
+msgstr "Judul halaman blog"
+
+#. Legacy key: blog_page_subtitle
+msgid "Blog page subtitle"
+msgstr "Subjudul halaman blog"
+
+#. Legacy key: instructors_blog_permission
+msgid "Instructors blog permission"
+msgstr "Izin blog instruktur"
+
+#. Legacy key: blog_visibility_on_the_home_page
+msgid "Blog visibility on the home page"
+msgstr "Visibilitas blog di halaman beranda"
+
+#. Legacy key: visible
+msgid "Visible"
+msgstr "Bisa dilihat"
+
+#. Legacy key: invisible
+msgid "Invisible"
+msgstr "Tak terlihat"
+
+#. Legacy key: blog_page_banner
+msgid "Blog page banner"
+msgstr "Spanduk halaman blog"
+
+#. Legacy key: blog_settings_updated_successfully
+msgid "Blog settings updated successfully"
+msgstr "Setelan blog berhasil diperbarui"
+
+#. Legacy key: visit_our_latest_blogs
+msgid "Visit our latest blogs"
+msgstr "Kunjungi blog terbaru kami"
+
+#. Legacy key: thu
+msgid "Thu"
+msgstr "Telah datang"
+
+#. Legacy key: dec
+msgid "Dec"
+msgstr "Desember"
+
+#. Legacy key: free_courses
+msgid "Free courses"
+msgstr "Kursus gratis"
+
+#. Legacy key: paid_courses
+msgid "Paid courses"
+msgstr "Kursus berbayar"
+
+#. Legacy key: course_list
+msgid "Course list"
+msgstr "Daftar kursus"
+
+#. Legacy key: status
+msgid "Status"
+msgstr "Status"
+
+#. Legacy key: pending
+msgid "Pending"
+msgstr "Tertunda"
+
+#. Legacy key: private
+msgid "Private"
+msgstr "Pribadi"
+
+#. Legacy key: lesson_and_section
+msgid "Lesson and section"
+msgstr "Pelajaran dan bagian"
+
+#. Legacy key: enrolled_student
+msgid "Enrolled student"
+msgstr "Siswa terdaftar"
+
+#. Legacy key: mark_as_pending
+msgid "Mark as pending"
+msgstr "Tandai sebagai tertunda"
+
+#. Legacy key: section_and_lesson
+msgid "Section and lesson"
+msgstr "Bagian dan pelajaran"
+
+#. Legacy key: academic_progress
+msgid "Academic progress"
+msgstr "Kemajuan akademis"
+
+#. Legacy key: edit_this_course
+msgid "Edit this course"
+msgstr "Edit kursus ini"
+
+#. Legacy key: view_course_on_frontend
+msgid "View course on frontend"
+msgstr "Lihat kursus di frontend"
+
+#. Legacy key: go_to_course_playing_page
+msgid "Go to course playing page"
+msgstr "Buka halaman bermain kursus"
+
+#. Legacy key: section
+msgid "Section"
+msgstr "Bagian"
+
+#. Legacy key: lesson
+msgid "Lesson"
+msgstr "Pelajaran"
+
+#. Legacy key: mark_as_active
+msgid "Mark as active"
+msgstr "Tandai sebagai aktif"
+
+#. Legacy key: edit_course
+msgid "Edit course"
+msgstr "Sunting kursus"
+
+#. Legacy key: course_manager
+msgid "Course manager"
+msgstr "Manajer kursus"
+
+#. Legacy key: view_on_frontend
+msgid "View on frontend"
+msgstr "Lihat di bagian depan"
+
+#. Legacy key: back_to_course_list
+msgid "Back to course list"
+msgstr "Kembali ke daftar kursus"
+
+#. Legacy key: zoom_live_class
+msgid "Zoom live class"
+msgstr "Zoom kelas langsung"
+
+#. Legacy key: jitsi_live_class
+msgid "Jitsi live class"
+msgstr "Kelas langsung Jitsi"
+
+#. Legacy key: assignment
+msgid "Assignment"
+msgstr "Penugasan"
+
+#. Legacy key: noticeboard
+msgid "Noticeboard"
+msgstr "Papan peringatan"
+
+#. Legacy key: analytics
+msgid "Analytics"
+msgstr "Analis"
+
+#. Legacy key: basic
+msgid "Basic"
+msgstr "Dasar"
+
+#. Legacy key: info
+msgid "Info"
+msgstr "Informasi"
+
+#. Legacy key: pricing
+msgid "Pricing"
+msgstr "Harga"
+
+#. Legacy key: media
+msgid "Media"
+msgstr "Media"
+
+#. Legacy key: seo
+msgid "Seo"
+msgstr "seo"
+
+#. Legacy key: finish
+msgid "Finish"
+msgstr "Pemecahan"
+
+#. Legacy key: add_new_section
+msgid "Add new section"
+msgstr "Tambahkan bagian baru"
+
+#. Legacy key: add_section
+msgid "Add section"
+msgstr "Tambahkan bagian"
+
+#. Legacy key: add_new_quiz
+msgid "Add new quiz"
+msgstr "Tambahkan kuis baru"
+
+#. Legacy key: add_quiz
+msgid "Add quiz"
+msgstr "Tambahkan kuis"
+
+#. Legacy key: sort_sections
+msgid "Sort sections"
+msgstr "Sortir bagian"
+
+#. Legacy key: sort_lessons
+msgid "Sort lessons"
+msgstr "Sortir pelajaran"
+
+#. Legacy key: sort_lesson
+msgid "Sort lesson"
+msgstr "Sortir pelajaran"
+
+#. Legacy key: update_section
+msgid "Update section"
+msgstr "Bagian pembaruan"
+
+#. Legacy key: edit_section
+msgid "Edit section"
+msgstr "Edit bagian"
+
+#. Legacy key: delete_section
+msgid "Delete section"
+msgstr "Hapus bagian"
+
+#. Legacy key: update_lesson
+msgid "Update lesson"
+msgstr "Perbarui pelajaran"
+
+#. Legacy key: edit
+msgid "Edit"
+msgstr "Sunting"
+
+#. Legacy key: quiz_results
+msgid "Quiz results"
+msgstr "Hasil kuis"
+
+#. Legacy key: manage_quiz_questions
+msgid "Manage quiz questions"
+msgstr "Kelola pertanyaan kuis"
+
+#. Legacy key: quiz_questions
+msgid "Quiz questions"
+msgstr "Pertanyaan kuis"
+
+#. Legacy key: update_quiz_information
+msgid "Update quiz information"
+msgstr "Perbarui informasi kuis"
+
+#. Legacy key: quiz
+msgid "Quiz"
+msgstr "Terhubung"
+
+#. Legacy key: live_class_schedule
+msgid "Live class schedule"
+msgstr "Jadwal kelas langsung"
+
+#. Legacy key: date
+msgid "Date"
+msgstr "Tanggal"
+
+#. Legacy key: time
+msgid "Time"
+msgstr "Waktu"
+
+#. Legacy key: note_to_students
+msgid "Note to students"
+msgstr "Catatan untuk siswa"
+
+#. Legacy key: zoom_meeting_id
+msgid "Zoom meeting id"
+msgstr "Zoom rapat id"
+
+#. Legacy key: enter_meeting_id
+msgid "Enter meeting id"
+msgstr "Masukkan id kontak"
+
+#. Legacy key: zoom_meeting_password
+msgid "Zoom meeting password"
+msgstr "Zoom kata sandi rapat"
+
+#. Legacy key: enter_meeting_password
+msgid "Enter meeting password"
+msgstr "Masukkan kata sandi rapat"
+
+#. Legacy key: course_enrolment_details
+msgid "Course enrolment details"
+msgstr "Detail pendaftaran kursus"
+
+#. Legacy key: get
+msgid "Get"
+msgstr "Mendapatkan"
+
+#. Legacy key: meeting_plans_that_fit_your_business_perfectly
+msgid "Meeting plans that fit your business perfectly"
+msgstr "Rencana pertemuan yang sesuai dengan bisnis Anda dengan sempurna"
+
+#. Legacy key: zoom_meeting_plans
+msgid "Zoom meeting plans"
+msgstr "Zoom rencana rapat"
+
+#. Legacy key: jitsi_meeting_password
+msgid "Jitsi meeting password"
+msgstr "Kata sandi rapat Jitsi"
+
+#. Legacy key: make_sure_you_save_the_live_class_password_before_starting_the_class
+msgid "Make sure you save the live class password before starting the class"
+msgstr "Pastikan Anda menyimpan kata sandi kelas langsung sebelum memulai kelas"
+
+#. Legacy key: enter_your_class_topic
+msgid "Enter your class topic"
+msgstr "Masukkan topik kelas Anda"
+
+#. Legacy key: enter_your_message
+msgid "Enter your message"
+msgstr "Masukkan pesan Anda"
+
+#. Legacy key: send_a_mail_to_students_to_join_this_live_class
+msgid "Send a mail to students to join this live class"
+msgstr "Kirim email ke siswa untuk bergabung dengan kelas langsung ini"
+
+#. Legacy key: start_live_video_class
+msgid "Start live video class"
+msgstr "Mulai kelas video langsung"
+
+#. Legacy key: sending_mail
+msgid "Sending mail"
+msgstr "Mengirim surat"
+
+#. Legacy key: the_message_field_is_empty
+msgid "The message field is empty"
+msgstr "Bidang pesan kosong"
+
+#. Legacy key: create_new_assignment
+msgid "Create new assignment"
+msgstr "Buat tugas baru"
+
+#. Legacy key: assignment_title
+msgid "Assignment title"
+msgstr "Judul tugas"
+
+#. Legacy key: enter_assignment_title
+msgid "Enter assignment title"
+msgstr "Masukkan judul tugas"
+
+#. Legacy key: questions
+msgid "Questions"
+msgstr "Pertanyaan"
+
+#. Legacy key: enter_your_assignment_questions
+msgid "Enter your assignment questions"
+msgstr "Masukkan pertanyaan tugas Anda"
+
+#. Legacy key: question_file
+msgid "Question file"
+msgstr "Berkas pertanyaan"
+
+#. Legacy key: choose_file
+msgid "Choose file"
+msgstr "Pilih File"
+
+#. Legacy key: total_marks
+msgid "Total marks"
+msgstr "Nilai total"
+
+#. Legacy key: deadline
+msgid "Deadline"
+msgstr "Tenggat waktu"
+
+#. Legacy key: note
+msgid "Note"
+msgstr "Catatan"
+
+#. Legacy key: submission_status
+msgid "Submission status"
+msgstr "Status penyerahan"
+
+#. Legacy key: draft
+msgid "Draft"
+msgstr "Draf"
+
+#. Legacy key: add_new_assignment
+msgid "Add new assignment"
+msgstr "Tambahkan tugas baru"
+
+#. Legacy key: uploading
+msgid "Uploading"
+msgstr "Mengunggah"
+
+#. Legacy key: fill_up_the_required_feilds
+msgid "Fill up the required feilds"
+msgstr "Isi kolom yang wajib diisi"
+
+#. Legacy key: course_title
+msgid "Course title"
+msgstr "Judul kursus"
+
+#. Legacy key: enter_your_notice_title
+msgid "Enter your notice title"
+msgstr "Masukkan judul pemberitahuan Anda"
+
+#. Legacy key: enter_your_notice_description
+msgid "Enter your notice description"
+msgstr "Masukkan deskripsi pemberitahuan Anda"
+
+#. Legacy key: send_mail_to_students_if_urgent
+msgid "Send mail to students if urgent"
+msgstr "Kirim email ke siswa jika mendesak"
+
+#. Legacy key: add_new_notice
+msgid "Add new notice"
+msgstr "Tambahkan pemberitahuan baru"
+
+#. Legacy key: updating
+msgid "Updating"
+msgstr "Memperbarui"
+
+#. Legacy key: course_type
+msgid "Course type"
+msgstr "Jenis kursus"
+
+#. Legacy key: general
+msgid "General"
+msgstr "Umum"
+
+#. Legacy key: the_course_type_can_not_be_editable
+msgid "The course type can not be editable"
+msgstr "Jenis kursus tidak dapat diedit"
+
+#. Legacy key: instructor_of_this_course
+msgid "Instructor of this course"
+msgstr "Instruktur kursus ini"
+
+#. Legacy key: enter_course_title
+msgid "Enter course title"
+msgstr "Masukkan judul kursus"
+
+#. Legacy key: short_description
+msgid "Short description"
+msgstr "Deskripsi Singkat"
+
+#. Legacy key: select_a_category
+msgid "Select a category"
+msgstr "Pilih Kategori"
+
+#. Legacy key: select_sub_category
+msgid "Select sub category"
+msgstr "Pilih sub kategori"
+
+#. Legacy key: language_made_in
+msgid "Language made in"
+msgstr "Bahasa buatan"
+
+#. Legacy key: enable_drip_content
+msgid "Enable drip content"
+msgstr "Aktifkan konten tetes"
+
+#. Legacy key: updated_as_a
+msgid "Updated as a"
+msgstr "Diperbarui sebagai"
+
+#. Legacy key: private_course
+msgid "Private course"
+msgstr "Kursus privat"
+
+#. Legacy key: upcoming_course
+msgid "Upcoming course"
+msgstr "Kursus yang akan datang"
+
+#. Legacy key: check_if_this_course_is_top_course
+msgid "Check if this course is top course"
+msgstr "Periksa apakah kursus ini adalah kursus teratas"
+
+#. Legacy key: course_faq
+msgid "Course faq"
+msgstr "Tentu saja pertanyaan umum"
+
+#. Legacy key: provide_requirements
+msgid "Provide requirements"
+msgstr "Berikan persyaratan"
+
+#. Legacy key: provide_outcomes
+msgid "Provide outcomes"
+msgstr "Memberikan hasil"
+
+#. Legacy key: check_if_this_is_a_free_course
+msgid "Check if this is a free course"
+msgstr "Periksa apakah ini kursus gratis"
+
+#. Legacy key: course_price
+msgid "Course price"
+msgstr "Harga kursus"
+
+#. Legacy key: enter_course_course_price
+msgid "Enter course course price"
+msgstr "Masukkan harga kursus"
+
+#. Legacy key: check_if_this_course_has_discount
+msgid "Check if this course has discount"
+msgstr "Periksa apakah kursus ini memiliki diskon"
+
+#. Legacy key: discounted_price
+msgid "Discounted price"
+msgstr "Harga setelah diskon"
+
+#. Legacy key: this_course_has
+msgid "This course has"
+msgstr "Kursus ini memiliki"
+
+#. Legacy key: discount
+msgid "Discount"
+msgstr "Diskon"
+
+#. Legacy key: limited_time
+msgid "Limited time"
+msgstr "Waktu terbatas"
+
+#. Legacy key: number_of_month
+msgid "Number of month"
+msgstr "Jumlah bulan"
+
+#. Legacy key: course_overview_provider
+msgid "Course overview provider"
+msgstr "Penyedia ikhtisar kursus"
+
+#. Legacy key: youtube
+msgid "Youtube"
+msgstr "Youtube"
+
+#. Legacy key: vimeo
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#. Legacy key: html5
+msgid "Html5"
+msgstr "HTML5"
+
+#. Legacy key: course_overview_url
+msgid "Course overview url"
+msgstr "URL ikhtisar kursus"
+
+#. Legacy key: course_thumbnail
+msgid "Course thumbnail"
+msgstr "Gambar mini kursus"
+
+#. Legacy key: meta_keywords
+msgid "Meta keywords"
+msgstr "Meta kata kunci"
+
+#. Legacy key: write_a_keyword_and_then_press_enter_button
+msgid "Write a keyword and then press enter button"
+msgstr "Tulis kata kunci lalu tekan tombol enter"
+
+#. Legacy key: meta_description
+msgid "Meta description"
+msgstr "Deskripsi meta"
+
+#. Legacy key: thank_you
+msgid "Thank you"
+msgstr "Terima kasih"
+
+#. Legacy key: you_are_just_one_click_away
+msgid "You are just one click away"
+msgstr "Anda hanya berjarak satu klik"
+
+#. Legacy key: submit
+msgid "Submit"
+msgstr "Kirim"
+
+#. Legacy key: course_updated_successfully
+msgid "Course updated successfully"
+msgstr "Kursus berhasil diperbarui"
+
+#. Legacy key: course_progress_analytics
+msgid "Course progress analytics"
+msgstr "Analisis kemajuan kursus"
+
+#. Legacy key: completion_percentage
+msgid "Completion percentage"
+msgstr "Persentase penyelesaian"
+
+#. Legacy key: enrolled_students
+msgid "Enrolled students"
+msgstr "Siswa terdaftar"
+
+#. Legacy key: number_of_students
+msgid "Number of students"
+msgstr "Jumlah siswa"
+
+#. Legacy key: course_enrolments
+msgid "Course enrolments"
+msgstr "Pendaftaran kursus"
+
+#. Legacy key: jan
+msgid "Jan"
+msgstr "Januari"
+
+#. Legacy key: feb
+msgid "Feb"
+msgstr "Februari"
+
+#. Legacy key: mar
+msgid "Mar"
+msgstr "Merusak"
+
+#. Legacy key: apr
+msgid "Apr"
+msgstr "April"
+
+#. Legacy key: jun
+msgid "Jun"
+msgstr "Juni"
+
+#. Legacy key: jul
+msgid "Jul"
+msgstr "Juli"
+
+#. Legacy key: aug
+msgid "Aug"
+msgstr "Agustus"
+
+#. Legacy key: sep
+msgid "Sep"
+msgstr "September"
+
+#. Legacy key: oct
+msgid "Oct"
+msgstr "Oktober"
+
+#. Legacy key: nov
+msgid "Nov"
+msgstr "November"
+
+#. Legacy key: go
+msgid "Go"
+msgstr "Pergilah"
+
+#. Legacy key: the_dates_of_month
+msgid "The dates of month"
+msgstr "Tanggal bulan"
+
+#. Legacy key: upload_scorm_course
+msgid "Upload scorm course"
+msgstr "Unggah kursus scrm"
+
+#. Legacy key: upload_course
+msgid "Upload course"
+msgstr "Unggah kursus"
+
+#. Legacy key: instruction
+msgid "Instruction"
+msgstr "Petunjuk"
+
+#. Legacy key: click_the_upload_course_button
+msgid "Click the upload course button"
+msgstr "Klik tombol unggah kursus"
+
+#. Legacy key: you_will_get_a_floating_form_after_clicking_the_button
+msgid "You will get a floating form after clicking the button"
+msgstr "Anda akan mendapatkan formulir mengambang setelah mengklik tombol"
+
+#. Legacy key: select_a_scorm_provider_first
+msgid "Select a scorm provider first"
+msgstr "Pilih penyedia scorm terlebih dahulu"
+
+#. Legacy key: choose_your_scorm_zip_file
+msgid "Choose your scorm zip file"
+msgstr "Pilih file zip scorm Anda"
+
+#. Legacy key: click_the_upload_button_to_save_the_course_file
+msgid "Click the upload button to save the course file"
+msgstr "Klik tombol unggah untuk menyimpan file kursus"
+
+#. Legacy key: scorm
+msgid "Scorm"
+msgstr "kutukan"
+
+#. Legacy key: upload_h5p_file
+msgid "Upload h5p file"
+msgstr "Unggah file h5p"
+
+#. Legacy key: remove
+msgid "Remove"
+msgstr "Menghapus"
+
+#. Legacy key: h5p
+msgid "H5p"
+msgstr "H5p"
+
+#. Legacy key: blogs
+msgid "Blogs"
+msgstr "Blog"
+
+#. Legacy key: add_new_blog
+msgid "Add new blog"
+msgstr "Tambahkan blog baru"
+
+#. Legacy key: creator
+msgid "Creator"
+msgstr "Pencipta"
+
+#. Legacy key: deactivate
+msgid "Deactivate"
+msgstr "Menonaktifkan"
+
+#. Legacy key: blog_details
+msgid "Blog details"
+msgstr "blog detailnya"
+
+#. Legacy key: inspirational_journeys
+msgid "Inspirational journeys"
+msgstr "Perjalanan inspirasional"
+
+#. Legacy key: follow_the_stories_of_academics_and_their_research_expeditions
+msgid "Follow the stories of academics and their research expeditions"
+msgstr "Ikuti kisah para akademisi dan ekspedisi penelitian mereka"
+
+#. Legacy key: comments
+msgid "Comments"
+msgstr "Komentar"
+
+#. Legacy key: leave_a_comment
+msgid "Leave a comment"
+msgstr "Tinggalkan komentar"
+
+#. Legacy key: enter_your_comments_here
+msgid "Enter your comments here"
+msgstr "Masukkan komentar Anda di sini"
+
+#. Legacy key: type_your_keywords
+msgid "Type your keywords"
+msgstr "Ketik kata kunci Anda"
+
+#. Legacy key: recent_posts
+msgid "Recent posts"
+msgstr "Tulisan Terbaru"
+
+#. Legacy key: edit_blog
+msgid "Edit blog"
+msgstr "Mengedit blog"
+
+#. Legacy key: edit_your_blog
+msgid "Edit your blog"
+msgstr "Mengedit blog Anda"
+
+#. Legacy key: enter_blog_title
+msgid "Enter blog title"
+msgstr "Masukkan judul blog"
+
+#. Legacy key: keywords
+msgid "Keywords"
+msgstr "Kata kunci"
+
+#. Legacy key: click_the_enter_button_after_writing_your_keyword
+msgid "Click the enter button after writing your keyword"
+msgstr "Klik tombol enter setelah menulis kata kunci Anda"
+
+#. Legacy key: blog_banner
+msgid "Blog banner"
+msgstr "Spanduk blog"
+
+#. Legacy key: choose_a_banner
+msgid "Choose a banner"
+msgstr "Pilih spanduk"
+
+#. Legacy key: blog_thumbnail
+msgid "Blog thumbnail"
+msgstr "gambar kecil blog"
+
+#. Legacy key: choose_a_thumbnail
+msgid "Choose a thumbnail"
+msgstr "Pilih gambar kecil"
+
+#. Legacy key: do_you_want_to_mark_it_as_popular
+msgid "Do you want to mark it as popular"
+msgstr "Apakah Anda ingin menandainya sebagai populer"
+
+#. Legacy key: mark_as_popular
+msgid "Mark as popular"
+msgstr "Tandai sebagai populer"
+
+#. Legacy key: update_blog
+msgid "Update blog"
+msgstr "Perbarui blog"
+
+#. Legacy key: blog_updated_successfully
+msgid "Blog updated successfully"
+msgstr "Blog berhasil diperbarui"
+
+#. Legacy key: add_instructor
+msgid "Add instructor"
+msgstr "Tambahkan instruktur"
+
+#. Legacy key: photo
+msgid "Photo"
+msgstr "Foto"
+
+#. Legacy key: name
+msgid "Name"
+msgstr "TIDAK"
+
+#. Legacy key: enrolled_courses
+msgid "Enrolled courses"
+msgstr "Kursus terdaftar"
+
+#. Legacy key: view_courses
+msgid "View courses"
+msgstr "Lihat kursus"
+
+#. Legacy key: instructor_edit
+msgid "Instructor edit"
+msgstr "Pengeditan instruktur"
+
+#. Legacy key: instructor_edit_form
+msgid "Instructor edit form"
+msgstr "Formulir edit instruktur"
+
+#. Legacy key: basic_info
+msgid "Basic info"
+msgstr "Info dasar"
+
+#. Legacy key: login_credentials
+msgid "Login credentials"
+msgstr "Kredensial masuk"
+
+#. Legacy key: social_information
+msgid "Social information"
+msgstr "Informasi sosial"
+
+#. Legacy key: payment_info
+msgid "Payment info"
+msgstr "informasi pembayaran"
+
+#. Legacy key: a_short_title_about_yourself
+msgid "A short title about yourself"
+msgstr "Judul singkat tentang diri Anda"
+
+#. Legacy key: short_title
+msgid "Short title"
+msgstr "Judul singkat"
+
+#. Legacy key: skills
+msgid "Skills"
+msgstr "Keterampilan"
+
+#. Legacy key: write_your_skill_and_click_the_enter_button
+msgid "Write your skill and click the enter button"
+msgstr "Tulis keahlian Anda dan klik tombol enter"
+
+#. Legacy key: biography
+msgid "Biography"
+msgstr "Biografi"
+
+#. Legacy key: user_image
+msgid "User image"
+msgstr "Foto pengguna"
+
+#. Legacy key: choose_user_image
+msgid "Choose user image"
+msgstr "Pilih gambar pengguna"
+
+#. Legacy key: razorpay
+msgid "Razorpay"
+msgstr "pembayaran pisau cukur"
+
+#. Legacy key: key_id
+msgid "Key id"
+msgstr "id kunci"
+
+#. Legacy key: required_for_instructor
+msgid "Required for instructor"
+msgstr "Diperlukan untuk instruktur"
+
+#. Legacy key: secret_key
+msgid "Secret key"
+msgstr "Kunci rahasia"
+
+#. Legacy key: theme_color
+msgid "Theme color"
+msgstr "Warna tema"
+
+#. Legacy key: stripe
+msgid "Stripe"
+msgstr "Garis"
+
+#. Legacy key: public_key
+msgid "Public key"
+msgstr "Kunci publik"
+
+#. Legacy key: public_live_key
+msgid "Public live key"
+msgstr "Kunci langsung publik"
+
+#. Legacy key: secret_live_key
+msgid "Secret live key"
+msgstr "Kunci hidup rahasia"
+
+#. Legacy key: paypal
+msgid "Paypal"
+msgstr "Paypal"
+
+#. Legacy key: sandbox_client_id
+msgid "Sandbox client id"
+msgstr "Id klien kotak pasir"
+
+#. Legacy key: sandbox_secret_key
+msgid "Sandbox secret key"
+msgstr "Kunci rahasia kotak pasir"
+
+#. Legacy key: production_client_id
+msgid "Production client id"
+msgstr "Id klien produksi"
+
+#. Legacy key: production_secret_key
+msgid "Production secret key"
+msgstr "Kunci rahasia produksi"
+
+#. Legacy key: ccavenue
+msgid "Ccavenue"
+msgstr "Gua"
+
+#. Legacy key: ccavenue_merchant_id
+msgid "Ccavenue merchant id"
+msgstr "Id pedagang Ccavenue"
+
+#. Legacy key: ccavenue_working_key
+msgid "Ccavenue working key"
+msgstr "Kunci kerja Ccavenue"
+
+#. Legacy key: ccavenue_access_code
+msgid "Ccavenue access code"
+msgstr "Kode akses Ccavenue"
+
+#. Legacy key: iyzico
+msgid "Iyzico"
+msgstr "Iyzico"
+
+#. Legacy key: api_test_key
+msgid "Api test key"
+msgstr "Kunci tahan api"
+
+#. Legacy key: secret_test_key
+msgid "Secret test key"
+msgstr "Kunci tes rahasia"
+
+#. Legacy key: api_live_key
+msgid "Api live key"
+msgstr "Kunci hidup api"
+
+#. Legacy key: paystack
+msgid "Paystack"
+msgstr "Tumpukan gaji"
+
+#. Legacy key: public_test_key
+msgid "Public test key"
+msgstr "Kunci uji publik"
+
+#. Legacy key: paytm
+msgid "Paytm"
+msgstr "pembayaran"
+
+#. Legacy key: paytm_merchant_key
+msgid "Paytm merchant key"
+msgstr "Kunci pedagang Paytm"
+
+#. Legacy key: paytm_merchant_mid
+msgid "Paytm merchant mid"
+msgstr "Pedagang pembayaran pertengahan"
+
+#. Legacy key: paytm_merchant_website
+msgid "Paytm merchant website"
+msgstr "Situs web pedagang Paytm"
+
+#. Legacy key: industry_type_id
+msgid "Industry type id"
+msgstr "Id jenis industri"
+
+#. Legacy key: channel_id
+msgid "Channel id"
+msgstr "ID saluran"
+
+#. Legacy key: user_update_successfully
+msgid "User update successfully"
+msgstr "Pembaruan pengguna berhasil"
+
+#. Legacy key: current_course_provider
+msgid "Current course provider"
+msgstr "Penyedia kursus saat ini"
+
+#. Legacy key: ispring
+msgid "Ispring"
+msgstr "musim semi"
+
+#. Legacy key: preview
+msgid "Preview"
+msgstr "Pratinjau"
+
+#. Legacy key: update_scorm_course
+msgid "Update scorm course"
+msgstr "Perbarui kursus scorm"
+
+#. Legacy key: update_course
+msgid "Update course"
+msgstr "Perbarui kursus"
+
+#. Legacy key: system_settings_updated
+msgid "System settings updated"
+msgstr "Pengaturan sistem diperbarui"
+
+#. Legacy key: student
+msgid "Student"
+msgstr "Murid"
+
+#. Legacy key: progress
+msgid "Progress"
+msgstr "Kemajuan"
+
+#. Legacy key: not_started_yet
+msgid "Not started yet"
+msgstr "Belum dimulai"
+
+#. Legacy key: not_completed_yet
+msgid "Not completed yet"
+msgstr "Belum selesai"
+
+#. Legacy key: enrolled_from
+msgid "Enrolled from"
+msgstr "Terdaftar dari"
+
+#. Legacy key: last_seen_on
+msgid "Last seen on"
+msgstr "Terakhir terlihat di"
+
+#. Legacy key: completed_on
+msgid "Completed on"
+msgstr "Selesai pada"
+
+#. Legacy key: completed_lesson
+msgid "Completed lesson"
+msgstr "Selesai pelajaran"
+
+#. Legacy key: out_of
+msgid "Out of"
+msgstr "Dari"
+
+#. Legacy key: watched_duration
+msgid "Watched duration"
+msgstr "Durasi yang ditonton"
+
+#. Legacy key: course_adding_form
+msgid "Course adding form"
+msgstr "Formulir penambahan kursus"
+
+#. Legacy key: create_as_a
+msgid "Create as a"
+msgstr "Jadikan sebagai"
+
+#. Legacy key: course_has_been_added_successfully
+msgid "Course has been added successfully"
+msgstr "Kursus telah berhasil ditambahkan"
+
+#. Legacy key: instructor_add
+msgid "Instructor add"
+msgstr "Instruktur menambahkan"
+
+#. Legacy key: instructor_add_form
+msgid "Instructor add form"
+msgstr "Instruktur menambahkan formulir"
+
+#. Legacy key: sub_categories
+msgid "Sub categories"
+msgstr "Sub kategori"
+
+#. Legacy key: edit_category
+msgid "Edit category"
+msgstr "Sunting kategori"
+
+#. Legacy key: update_category
+msgid "Update category"
+msgstr "Perbarui kategori"
+
+#. Legacy key: update_category_form
+msgid "Update category form"
+msgstr "Perbarui formulir kategori"
+
+#. Legacy key: category_title
+msgid "Category title"
+msgstr "Judul kategori"
+
+#. Legacy key: parent
+msgid "Parent"
+msgstr "Induk"
+
+#. Legacy key: none
+msgid "None"
+msgstr "Tidak ada"
+
+#. Legacy key: select_none_to_create_a_parent_category
+msgid "Select none to create a parent category"
+msgstr "Pilih tidak ada untuk membuat kategori induk"
+
+#. Legacy key: icon_picker
+msgid "Icon picker"
+msgstr "Pemilih ikon"
+
+#. Legacy key: category_thumbnail
+msgid "Category thumbnail"
+msgstr "Gambar mini kategori"
+
+#. Legacy key: the_image_size_should_be
+msgid "The image size should be"
+msgstr "Ukuran gambar harus"
+
+#. Legacy key: choose_thumbnail
+msgid "Choose thumbnail"
+msgstr "Pilih gambar kecil"
+
+#. Legacy key: data_added_successfully
+msgid "Data added successfully"
+msgstr "Data berhasil ditambahkan"
+
+#. Legacy key: logo_updated
+msgid "Logo updated"
+msgstr "Logo diperbarui"
+
+#. Legacy key: favicon_updated
+msgid "Favicon updated"
+msgstr "Favicon diperbarui"
+
+#. Legacy key: motivational_speech_updated_successfully
+msgid "Motivational speech updated successfully"
+msgstr "Pidato motivasi berhasil diperbarui"
+
+#. Legacy key: new_home_page_layout_has_been_activated
+msgid "New home page layout has been activated"
+msgstr "Tata letak halaman beranda baru telah diaktifkan"
+
+#. Legacy key: welcome_to
+msgid "Welcome to"
+msgstr "Selamat Datang di"
+
+#. Legacy key: join_for_free
+msgid "Join for free"
+msgstr "Bergabung secara gratis"
+
+#. Legacy key: happy_student
+msgid "Happy student"
+msgstr "Murid yang bahagia"
+
+#. Legacy key: experienced_instructor
+msgid "Experienced instructor"
+msgstr "Instruktur berpengalaman"
+
+#. Legacy key: quality_courses
+msgid "Quality courses"
+msgstr "Kursus berkualitas"
+
+#. Legacy key: latest_top_skills
+msgid "Latest top skills"
+msgstr "Keterampilan teratas terbaru"
+
+#. Legacy key: globalization
+msgid "Globalization"
+msgstr "Globalisasi"
+
+#. Legacy key: cost-effectiveness
+msgid "Cost-effectiveness"
+msgstr "Efektivitas biaya"
+
+#. Legacy key: popular_categories
+msgid "Popular categories"
+msgstr "Kategori populer"
+
+#. Legacy key: duration
+msgid "Duration"
+msgstr "Durasi"
+
+#. Legacy key: quality_educators
+msgid "Quality educators"
+msgstr "Pendidik berkualitas"
+
+#. Legacy key: premium_courses
+msgid "Premium courses"
+msgstr "Kursus premium"
+
+#. Legacy key: cost-free_course
+msgid "Cost-free course"
+msgstr "Kursus tanpa biaya"
+
+#. Legacy key: popular_instructor
+msgid "Popular instructor"
+msgstr "Instruktur populer"
+
+#. Legacy key: follow_the_latest_news
+msgid "Follow the latest news"
+msgstr "Ikuti berita terbaru"
+
+#. Legacy key: website_notification
+msgid "Website notification"
+msgstr "Pemberitahuan situs web"
+
+#. Legacy key: email_template
+msgid "Email template"
+msgstr "Templat email"
+
+#. Legacy key: protocol
+msgid "Protocol"
+msgstr "Protokol"
+
+#. Legacy key: smtp_crypto
+msgid "Smtp crypto"
+msgstr "smtp kripto"
+
+#. Legacy key: smtp_host
+msgid "Smtp host"
+msgstr "Tuan rumah smtp"
+
+#. Legacy key: smtp_port
+msgid "Smtp port"
+msgstr "Pelabuhan smtp"
+
+#. Legacy key: smtp_from_email
+msgid "Smtp from email"
+msgstr "Smtp dari email"
+
+#. Legacy key: smtp_username
+msgid "Smtp username"
+msgstr "nama pengguna smtp"
+
+#. Legacy key: smtp_password
+msgid "Smtp password"
+msgstr "Kata sandi smtp"
+
+#. Legacy key: email_type
+msgid "Email type"
+msgstr "Jenis email"
+
+#. Legacy key: email_subject
+msgid "Email subject"
+msgstr "Subjek email"
+
+#. Legacy key: action
+msgid "Action"
+msgstr "Tindakan"
+
+#. Legacy key: to_admin
+msgid "To admin"
+msgstr "Kepada admin"
+
+#. Legacy key: to_user
+msgid "To user"
+msgstr "Kepada pengguna"
+
+#. Legacy key: edit_email_template
+msgid "Edit email template"
+msgstr "Edit templat email"
+
+#. Legacy key: to_instructor
+msgid "To instructor"
+msgstr "Untuk instruktur"
+
+#. Legacy key: to_student
+msgid "To student"
+msgstr "Untuk siswa"
+
+#. Legacy key: to_affiliator
+msgid "To affiliator"
+msgstr "Ke afiliasi"
+
+#. Legacy key: to_payer
+msgid "To payer"
+msgstr "Untuk pembayar"
+
+#. Legacy key: to_receiver
+msgid "To receiver"
+msgstr "Ke penerima"
+
+#. Legacy key: configure_your_notification_settings
+msgid "Configure your notification settings"
+msgstr "Konfigurasikan pengaturan notifikasi Anda"
+
+#. Legacy key: new_user_registration
+msgid "New user registration"
+msgstr "Pendaftaran pengguna baru"
+
+#. Legacy key: get_notified_when_a_new_user_signs_up
+msgid "Get notified when a new user signs up"
+msgstr "Dapatkan pemberitahuan saat pengguna baru mendaftar"
+
+#. Legacy key: configure_for_admin
+msgid "Configure for admin"
+msgstr "Konfigurasi untuk admin"
+
+#. Legacy key: system_notification
+msgid "System notification"
+msgstr "Pemberitahuan sistem"
+
+#. Legacy key: email_notification
+msgid "Email notification"
+msgstr "Pemberitahuan email"
+
+#. Legacy key: configure_for_user
+msgid "Configure for user"
+msgstr "Konfigurasi untuk pengguna"
+
+#. Legacy key: email_verification
+msgid "Email verification"
+msgstr "Verifikasi email"
+
+#. Legacy key: not_editable
+msgid "Not editable"
+msgstr "Tidak dapat diedit"
+
+#. Legacy key: forgot_password_mail
+msgid "Forgot password mail"
+msgstr "Lupa kata sandi surat"
+
+#. Legacy key: account_security_alert
+msgid "Account security alert"
+msgstr "Peringatan keamanan akun"
+
+#. Legacy key: send_verification_code_for_login_from_a_new_device
+msgid "Send verification code for login from a new device"
+msgstr "Kirim kode verifikasi untuk masuk dari perangkat baru"
+
+#. Legacy key: course_purchase_notification
+msgid "Course purchase notification"
+msgstr "Pemberitahuan pembelian kursus"
+
+#. Legacy key: configure_for_student
+msgid "Configure for student"
+msgstr "Konfigurasi untuk siswa"
+
+#. Legacy key: configure_for_instructor
+msgid "Configure for instructor"
+msgstr "Konfigurasi untuk instruktur"
+
+#. Legacy key: course_completion_mail
+msgid "Course completion mail"
+msgstr "Surat penyelesaian kursus"
+
+#. Legacy key: course_eligibility_notification
+msgid "Course eligibility notification"
+msgstr "Pemberitahuan kelayakan kursus"
+
+#. Legacy key: offline_payment_suspended_mail
+msgid "Offline payment suspended mail"
+msgstr "Surat ditangguhkan pembayaran offline"
+
+#. Legacy key: course_bundle_purchase_notification
+msgid "Course bundle purchase notification"
+msgstr "Notifikasi pembelian paket kursus"
+
+#. Legacy key: new_user_added_as_affiliator
+msgid "New user added as affiliator"
+msgstr "Pengguna baru ditambahkan sebagai afiliasi"
+
+#. Legacy key: send_account_information_to_the_new_user
+msgid "Send account information to the new user"
+msgstr "Kirim informasi akun ke pengguna baru"
+
+#. Legacy key: configure_for_affiliator
+msgid "Configure for affiliator"
+msgstr "Konfigurasikan untuk afiliasi"
+
+#. Legacy key: affiliate_approval_notification
+msgid "Affiliate approval notification"
+msgstr "Pemberitahuan persetujuan afiliasi"
+
+#. Legacy key: send_affiliate_approval_mail_to_the_user_account
+msgid "Send affiliate approval mail to the user account"
+msgstr "Kirim email persetujuan afiliasi ke akun pengguna"
+
+#. Legacy key: affiliator_request_cancellation
+msgid "Affiliator request cancellation"
+msgstr "Pembatalan permintaan afiliasi"
+
+#. Legacy key: affiliation_money_withdrawal_request
+msgid "Affiliation money withdrawal request"
+msgstr "Permintaan penarikan uang afiliasi"
+
+#. Legacy key: approval_of_withdrawal_request_of_affiliation
+msgid "Approval of withdrawal request of affiliation"
+msgstr "Persetujuan permintaan penarikan afiliasi"
+
+#. Legacy key: course_gift_notification
+msgid "Course gift notification"
+msgstr "Pemberitahuan hadiah kursus"
+
+#. Legacy key: notify_users_after_course_gift
+msgid "Notify users after course gift"
+msgstr "Beri tahu pengguna setelah hadiah kursus"
+
+#. Legacy key: configure_for_payer
+msgid "Configure for payer"
+msgstr "Konfigurasi untuk pembayar"
+
+#. Legacy key: configure_for_receiver
+msgid "Configure for receiver"
+msgstr "Konfigurasi untuk penerima"
+
+#. Legacy key: custom_pages
+msgid "Custom pages"
+msgstr "Halaman khusus"
+
+#. Legacy key: add_a_new_page
+msgid "Add a new page"
+msgstr "Tambahkan halaman baru"
+
+#. Legacy key: page_title
+msgid "Page title"
+msgstr "Judul halaman"
+
+#. Legacy key: button_title
+msgid "Button title"
+msgstr "Judul tombol"
+
+#. Legacy key: button_position
+msgid "Button position"
+msgstr "Posisi tombol"
+
+#. Legacy key: social_login_configuration
+msgid "Social login configuration"
+msgstr "Konfigurasi login sosial"
+
+#. Legacy key: facebook_login
+msgid "Facebook login"
+msgstr "Masuk Facebook"
+
+#. Legacy key: facebook_app_creation_instruction
+msgid "Facebook app creation instruction"
+msgstr "Instruksi pembuatan aplikasi Facebook"
+
+#. Legacy key: facebook_app_id
+msgid "Facebook app id"
+msgstr "ID aplikasi Facebook"
+
+#. Legacy key: facebook_app_secret
+msgid "Facebook app secret"
+msgstr "rahasia aplikasi facebook"
+
+#. Legacy key: completed
+msgid "Completed"
+msgstr "Lengkap"
+
+#. Legacy key: lesson_type
+msgid "Lesson type"
+msgstr "Jenis pelajaran"
+
+#. Legacy key: video_url
+msgid "Video url"
+msgstr "URL video"
+
+#. Legacy key: this_video_will_be_shown_on_web_application
+msgid "This video will be shown on web application"
+msgstr "Video ini akan ditampilkan di aplikasi web"
+
+#. Legacy key: thumbnail
+msgid "Thumbnail"
+msgstr "gambar mini"
+
+#. Legacy key: caption
+msgid "Caption"
+msgstr "Keterangan"
+
+#. Legacy key: choose_your_caption_file
+msgid "Choose your caption file"
+msgstr "Pilih file teks Anda"
+
+#. Legacy key: lesson_provider
+msgid "Lesson provider"
+msgstr "Penyedia pelajaran"
+
+#. Legacy key: for_mobile_application
+msgid "For mobile application"
+msgstr "Untuk aplikasi seluler"
+
+#. Legacy key: only
+msgid "Only"
+msgstr "Hanya"
+
+#. Legacy key: type_video_is_acceptable_for_mobile_application
+msgid "Type video is acceptable for mobile application"
+msgstr "Jenis video dapat diterima untuk aplikasi seluler"
+
+#. Legacy key: do_you_want_to_keep_it_free_as_a_preview_lesson
+msgid "Do you want to keep it free as a preview lesson"
+msgstr "Apakah Anda ingin tetap gratis sebagai pelajaran pratinjau"
+
+#. Legacy key: mark_as_free_lesson
+msgid "Mark as free lesson"
+msgstr "Tandai sebagai pelajaran gratis"
+
+#. Legacy key: course_content
+msgid "Course content"
+msgstr "Konten kursus"
+
+#. Legacy key: mark_as_complete
+msgid "Mark as complete"
+msgstr "Tandai selesai"
+
+#. Legacy key: video
+msgid "Video"
+msgstr "Video"
+
+#. Legacy key: iframe
+msgid "Iframe"
+msgstr "iframe"
+
+#. Legacy key: pdf
+msgid "Pdf"
+msgstr "Pdf"
+
+#. Legacy key: forum
+msgid "Forum"
+msgstr "Forum"
+
+#. Legacy key: live_class
+msgid "Live class"
+msgstr "Kelas langsung"
+
+#. Legacy key: website_faqs_updated_successfully
+msgid "Website faqs updated successfully"
+msgstr "FAQ situs web berhasil diperbarui"
+
+#. Legacy key: frequently_asked_questions
+msgid "Frequently asked questions"
+msgstr "Pertanyaan yang sering diajukan"
+
+#. Legacy key: see_more
+msgid "See more"
+msgstr "Lihat lebih banyak"
+
+#. Legacy key: course_content_not_found
+msgid "Course content not found"
+msgstr "Konten kursus tidak ditemukan"
+
+#. Legacy key: total_questions
+msgid "Total questions"
+msgstr "Jumlah pertanyaan"
+
+#. Legacy key: total_participant_students
+msgid "Total participant students"
+msgstr "Jumlah siswa peserta"
+
+#. Legacy key: participant_students
+msgid "Participant students"
+msgstr "Siswa peserta"
+
+#. Legacy key: select_student
+msgid "Select student"
+msgstr "Pilih siswa"
+
+#. Legacy key: select_a_student_to_view_the_answer_sheet
+msgid "Select a student to view the answer sheet"
+msgstr "Pilih seorang siswa untuk melihat lembar jawaban"
+
+#. Legacy key: courses_included
+msgid "Courses included"
+msgstr "Termasuk kursus"
+
+#. Legacy key: subscription
+msgid "Subscription"
+msgstr "Berlangganan"
+
+#. Legacy key: days
+msgid "Days"
+msgstr "Hari"
+
+#. Legacy key: included_courses
+msgid "Included courses"
+msgstr "Termasuk kursus"
+
+#. Legacy key: think_more_clearly
+msgid "Think more clearly"
+msgstr "Berpikir lebih jernih"
+
+#. Legacy key: select_your_service
+msgid "Select your service"
+msgstr "Pilih layanan Anda"
+
+#. Legacy key: course_short_description
+msgid "Course short description"
+msgstr "Deskripsi singkat kursus"
+
+#. Legacy key: course_long_description
+msgid "Course long description"
+msgstr "Deskripsi panjang kursus"
+
+#. Legacy key: course_requirements
+msgid "Course requirements"
+msgstr "Persyaratan kursus"
+
+#. Legacy key: course_outcomes
+msgid "Course outcomes"
+msgstr "Hasil kursus"
+
+#. Legacy key: course_seo_tags
+msgid "Course seo tags"
+msgstr "Tag seo kursus"
+
+#. Legacy key: course_lesson_text
+msgid "Course lesson text"
+msgstr "Teks pelajaran kursus"
+
+#. Legacy key: course_certificate_text
+msgid "Course certificate text"
+msgstr "Teks sertifikat kursus"
+
+#. Legacy key: course_quiz_text
+msgid "Course quiz text"
+msgstr "Teks kuis kursus"
+
+#. Legacy key: course_blog_title
+msgid "Course blog title"
+msgstr "Judul blog kursus"
+
+#. Legacy key: course_blog_post
+msgid "Course blog post"
+msgstr "Entri blog kursus"
+
+#. Legacy key: enter_your_keyword
+msgid "Enter your keyword"
+msgstr "Masukkan kata kunci Anda"
+
+#. Legacy key: generate
+msgid "Generate"
+msgstr "Menghasilkan"
+
+#. Legacy key: generating
+msgid "Generating"
+msgstr "Menghasilkan"
+
+#. Legacy key: generated_text
+msgid "Generated text"
+msgstr "Teks yang dihasilkan"
+
+#. Legacy key: copy
+msgid "Copy"
+msgstr "Menyalin"
+
+#. Legacy key: copyed
+msgid "Copyed"
+msgstr "Disalin"
+
+#. Legacy key: _learning_animal_name_
+msgid " learning animal name "
+msgstr "belajar nama binatang"
+
+#. Legacy key: share_and_earn
+msgid "Share and earn"
+msgstr "Bagikan dan dapatkan"
+
+#. Legacy key: write_a_review
+msgid "Write a review"
+msgstr "Menulis review"
+
+#. Legacy key: 1_start_rating
+msgid "1 start rating"
+msgstr "1 peringkat awal"
+
+#. Legacy key: 2_start_rating
+msgid "2 start rating"
+msgstr "2 peringkat awal"
+
+#. Legacy key: 3_start_rating
+msgid "3 start rating"
+msgstr "3 peringkat awal"
+
+#. Legacy key: 4_start_rating
+msgid "4 start rating"
+msgstr "4 peringkat awal"
+
+#. Legacy key: 5_start_rating
+msgid "5 start rating"
+msgstr "5 peringkat awal"
+
+#. Legacy key: write_your_comment
+msgid "Write your comment"
+msgstr "Tulis komentar Anda"
+
+#. Legacy key: adobe_illustrator_cc_-_essentials_training_course
+msgid "Adobe illustrator cc - essentials training course"
+msgstr "Adobe ilustrator cc - kursus pelatihan penting"
+
+#. Legacy key: mon
+msgid "Mon"
+msgstr "Senin"
+
+#. Legacy key: select_a_user
+msgid "Select a user"
+msgstr "Pilih pengguna"
+
+#. Legacy key: write_your_message
+msgid "Write your message"
+msgstr "Tulis pesan Anda"
+
+#. Legacy key: send
+msgid "Send"
+msgstr "Mengirim"
+
+#. Legacy key: purchased_courses
+msgid "Purchased courses"
+msgstr "Kursus yang dibeli"
+
+#. Legacy key: payment_method
+msgid "Payment method"
+msgstr "Cara Pembayaran"
+
+#. Legacy key: purchased_date
+msgid "Purchased date"
+msgstr "Tanggal pembelian"
+
+#. Legacy key: invoice
+msgid "Invoice"
+msgstr "Faktur"
+
+#. Legacy key: assignment_list
+msgid "Assignment list"
+msgstr "Daftar tugas"
+
+#. Legacy key: no_data_found
+msgid "No data found"
+msgstr "Tidak ada data ditemukan"
+
+#. Legacy key: uncheck
+msgid "Uncheck"
+msgstr "Hapus centang"
+
+#. Legacy key: faqs
+msgid "Faqs"
+msgstr "Pertanyaan Umum"
+
+#. Legacy key: latest_from_our_blog
+msgid "Latest from our blog"
+msgstr "Terbaru dari blog kami"
+
+#. Legacy key: exploring_the_cutting-edge_insights_and_updates_on_our_blog
+msgid "Exploring the cutting-edge insights and updates on our blog"
+msgstr "Menjelajahi wawasan mutakhir dan pembaruan di blog kami"
+
+#. Legacy key: see_all
+msgid "See all"
+msgstr "Lihat semua"
+
+#. Legacy key: popular_blogs
+msgid "Popular blogs"
+msgstr "Blog populer"
+
+#. Legacy key: learn_from_expert_bloggers_and_expand_your_knowledge
+msgid "Learn from expert bloggers and expand your knowledge"
+msgstr "Belajar dari blogger ahli dan perluas pengetahuan Anda"
+
+#. Legacy key: shopping_cart
+msgid "Shopping cart"
+msgstr "Kereta Belanja"
+
+#. Legacy key: your_cart_items
+msgid "Your cart items"
+msgstr "item keranjang Anda"
+
+#. Legacy key: items
+msgid "Items"
+msgstr "Barang"
+
+#. Legacy key: subtotal
+msgid "Subtotal"
+msgstr "Subtotal"
+
+#. Legacy key: apply_coupon
+msgid "Apply coupon"
+msgstr "Terapkan kupon"
+
+#. Legacy key: apply
+msgid "Apply"
+msgstr "Menerapkan"
+
+#. Legacy key: send_as_a_gift
+msgid "Send as a gift"
+msgstr "Kirim sebagai hadiah"
+
+#. Legacy key: email_address
+msgid "Email address"
+msgstr "Alamat email"
+
+#. Legacy key: continue_to_payment
+msgid "Continue to payment"
+msgstr "Lanjutkan ke pembayaran"
+
+#. Legacy key: searching
+msgid "Searching"
+msgstr "Mencari"
+
+#. Legacy key: quiz_submission_successfully
+msgid "Quiz submission successfully"
+msgstr "Pengiriman kuis berhasil"
+
+#. Legacy key: obtained_marks
+msgid "Obtained marks"
+msgstr "Nilai yang diperoleh"
+
+#. Legacy key: correct
+msgid "Correct"
+msgstr "Benar"
+
+#. Legacy key: wrong
+msgid "Wrong"
+msgstr "Salah"
+
+#. Legacy key: correct_answer
+msgid "Correct answer"
+msgstr "Jawaban yang benar"
+
+#. Legacy key: user_added_successfully
+msgid "User added successfully"
+msgstr "Pengguna berhasil ditambahkan"
+
+#. Legacy key: instructor_payouts
+msgid "Instructor payouts"
+msgstr "Pembayaran instruktur"
+
+#. Legacy key: list_of_payouts
+msgid "List of payouts"
+msgstr "Daftar pembayaran"
+
+#. Legacy key: completed_payouts
+msgid "Completed payouts"
+msgstr "Pembayaran selesai"
+
+#. Legacy key: pending_payouts
+msgid "Pending payouts"
+msgstr "Pembayaran tertunda"
+
+#. Legacy key: payout_amount
+msgid "Payout amount"
+msgstr "jumlah pembayaran"
+
+#. Legacy key: payment_type
+msgid "Payment type"
+msgstr "Tipe pembayaran"
+
+#. Legacy key: payout_date
+msgid "Payout date"
+msgstr "Tanggal pembayaran"
+
+#. Legacy key: option
+msgid "Option"
+msgstr "Pilihan"
+
+#. Legacy key: pay
+msgid "Pay"
+msgstr "Pembayaran"
+
+#. Legacy key: public_instructor_settings
+msgid "Public instructor settings"
+msgstr "Pengaturan instruktur publik"
+
+#. Legacy key: allow_public_instructor
+msgid "Allow public instructor"
+msgstr "Izinkan instruktur publik"
+
+#. Legacy key: instructor_application_note
+msgid "Instructor application note"
+msgstr "Catatan aplikasi instruktur"
+
+#. Legacy key: instructor_commission_ettings
+msgid "Instructor commission ettings"
+msgstr "Pengaturan komisi instruktur"
+
+#. Legacy key: instructor_revenue_percentage
+msgid "Instructor revenue percentage"
+msgstr "Persentase pendapatan instruktur"
+
+#. Legacy key: admin_revenue_percentage
+msgid "Admin revenue percentage"
+msgstr "Persentase pendapatan admin"
+
+#. Legacy key: instructor_application
+msgid "Instructor application"
+msgstr "Aplikasi instruktur"
+
+#. Legacy key: instructor_applications
+msgid "Instructor applications"
+msgstr "Aplikasi instruktur"
+
+#. Legacy key: list_of_applications
+msgid "List of applications"
+msgstr "Daftar aplikasi"
+
+#. Legacy key: pending_applications
+msgid "Pending applications"
+msgstr "Aplikasi tertunda"
+
+#. Legacy key: approved_applications
+msgid "Approved applications"
+msgstr "Aplikasi yang disetujui"
+
+#. Legacy key: details
+msgid "Details"
+msgstr "Detil"
+
+#. Legacy key: applicant_details
+msgid "Applicant details"
+msgstr "Detail pelamar"
+
+#. Legacy key: application_details
+msgid "Application details"
+msgstr "Detail aplikasi"
+
+#. Legacy key: download
+msgid "Download"
+msgstr "Unduh"
+
+#. Legacy key: approve
+msgid "Approve"
+msgstr "Menyetujui"
+
+#. Legacy key: approved
+msgid "Approved"
+msgstr "Disetujui"
+
+#. Legacy key: add_admin
+msgid "Add admin"
+msgstr "Tambahkan admin"
+
+#. Legacy key: root_admin
+msgid "Root admin"
+msgstr "Admin akar"
+
+#. Legacy key: assign_permission
+msgid "Assign permission"
+msgstr "Tetapkan izin"
+
+#. Legacy key: manage_profil
+msgid "Manage profil"
+msgstr "Kelola profil"
+
+#. Legacy key: facebook_link
+msgid "Facebook link"
+msgstr "Tautan Facebook"
+
+#. Legacy key: twitter_link
+msgid "Twitter link"
+msgstr "Tautan Twitter"
+
+#. Legacy key: linkedin_link
+msgid "Linkedin link"
+msgstr "Tautan tertaut"
+
+#. Legacy key: the_image_size_should_be_any_square_image
+msgid "The image size should be any square image"
+msgstr "Ukuran gambar harus berupa gambar persegi apa saja"
+
+#. Legacy key: update_profile
+msgid "Update profile"
+msgstr "Memperbaharui profil"
+
+#. Legacy key: current_password
+msgid "Current password"
+msgstr "Kata sandi saat ini"
+
+#. Legacy key: new_password
+msgid "New password"
+msgstr "Kata sandi baru"
+
+#. Legacy key: confirm_new_password
+msgid "Confirm new password"
+msgstr "Konfirmasi password baru"
+
+#. Legacy key: update_password
+msgid "Update password"
+msgstr "Perbarui kata sandi"
+
+#. Legacy key: educator_profile
+msgid "Educator profile"
+msgstr "Profil pendidik"
+
+#. Legacy key: statistics
+msgid "Statistics"
+msgstr "Statistik"
+
+#. Legacy key: total_students
+msgid "Total students"
+msgstr "Jumlah siswa"
+
+#. Legacy key: the_complete_python_bootcamp_from_zero_to_hero
+msgid "The complete python bootcamp from zero to hero"
+msgstr "Bootcamp python lengkap dari nol menjadi pahlawan"
+
+#. Legacy key: course_added_to_wishlist
+msgid "Course added to wishlist"
+msgstr "Kursus ditambahkan ke wishlist"
+
+#. Legacy key: manage_course_bundle
+msgid "Manage course bundle"
+msgstr "Kelola bundel kursus"
+
+#. Legacy key: bundle
+msgid "Bundle"
+msgstr "Bundel"
+
+#. Legacy key: subscription_limit
+msgid "Subscription limit"
+msgstr "Batas berlangganan"
+
+#. Legacy key: deactive
+msgid "Deactive"
+msgstr "Nonaktif"
+
+#. Legacy key: edit_course_bundle
+msgid "Edit course bundle"
+msgstr "Edit paket kursus"
+
+#. Legacy key: bundle_add_form
+msgid "Bundle add form"
+msgstr "Bundel tambahkan formulir"
+
+#. Legacy key: course_bundle_title
+msgid "Course bundle title"
+msgstr "Judul paket kursus"
+
+#. Legacy key: select_courses
+msgid "Select courses"
+msgstr "Pilih kursus"
+
+#. Legacy key: current_price_of_the_courses_is
+msgid "Current price of the courses is"
+msgstr "Harga kursus saat ini adalah"
+
+#. Legacy key: bundle_price
+msgid "Bundle price"
+msgstr "Harga bundel"
+
+#. Legacy key: subscription_renew_days
+msgid "Subscription renew days"
+msgstr "Langganan memperbaharui hari"
+
+#. Legacy key: count_day
+msgid "Count day"
+msgstr "Hitung hari"
+
+#. Legacy key: banner
+msgid "Banner"
+msgstr "Spanduk"
+
+#. Legacy key: update_bundle
+msgid "Update bundle"
+msgstr "Perbarui bundel"
+
+#. Legacy key: complete_guitar_lessons_system_
+msgid "Complete guitar lessons system "
+msgstr "Sistem pelajaran gitar lengkap"
+
+#. Legacy key: item_successfully_added_to_cart
+msgid "Item successfully added to cart"
+msgstr "Barang berhasil ditambahkan ke troli"
+
+#. Legacy key: how_to_use_lighting_design_to_transform_your_home
+msgid "How to use lighting design to transform your home"
+msgstr "Cara menggunakan desain pencahayaan untuk mengubah rumah Anda"
+
+#. Legacy key: invoice_id
+msgid "Invoice id"
+msgstr "ID faktur"
+
+#. Legacy key: billed_to
+msgid "Billed to"
+msgstr "Ditagih ke"
+
+#. Legacy key: date_of_issue
+msgid "Date of issue"
+msgstr "Tanggal pengeluaran"
+
+#. Legacy key: invoice_total
+msgid "Invoice total"
+msgstr "Total tagihan"
+
+#. Legacy key: qty
+msgid "Qty"
+msgstr "Jumlah"
+
+#. Legacy key: paid_by
+msgid "Paid by"
+msgstr "Dibayar oleh"
+
+#. Legacy key: tax
+msgid "Tax"
+msgstr "Pajak"
+
+#. Legacy key: grand_total
+msgid "Grand total"
+msgstr "Total keseluruhan"
+
+#. Legacy key: print
+msgid "Print"
+msgstr "Mencetak"
+
+#. Legacy key: back
+msgid "Back"
+msgstr "Kembali"
+
+#. Legacy key: newsletters
+msgid "Newsletters"
+msgstr "Hilang"
+
+#. Legacy key: newsletter_template
+msgid "Newsletter template"
+msgstr "Templat buletin"
+
+#. Legacy key: your_phone
+msgid "Your phone"
+msgstr "Telepon Anda"
+
+#. Legacy key: subject
+msgid "Subject"
+msgstr "Subjek"
+
+#. Legacy key: subscriber
+msgid "Subscriber"
+msgstr "Pelanggan"
+
+#. Legacy key: user_status
+msgid "User status"
+msgstr "Status pengguna"
+
+#. Legacy key: newsletter_added_successfully
+msgid "Newsletter added successfully"
+msgstr "Buletin berhasil ditambahkan"
+
+#. Legacy key: edit_newsletter_template
+msgid "Edit newsletter template"
+msgstr "Edit templat buletin"
+
+#. Legacy key: send_newsletter
+msgid "Send newsletter"
+msgstr "Kirim buletin"
+
+#. Legacy key: send_to
+msgid "Send to"
+msgstr "Kirim ke"
+
+#. Legacy key: selected_user
+msgid "Selected user"
+msgstr "Pengguna terpilih"
+
+#. Legacy key: all_users
+msgid "All users"
+msgstr "Semua pengguna"
+
+#. Legacy key: all_student
+msgid "All student"
+msgstr "Semua siswa"
+
+#. Legacy key: all_instructor
+msgid "All instructor"
+msgstr "Semua instruktur"
+
+#. Legacy key: newsletter_subscriber
+msgid "Newsletter subscriber"
+msgstr "Pelanggan buletin"
+
+#. Legacy key: all_subscriber
+msgid "All subscriber"
+msgstr "Semua pelanggan"
+
+#. Legacy key: registered_user
+msgid "Registered user"
+msgstr "Pengguna terdaftar"
+
+#. Legacy key: non_registered_user
+msgid "Non registered user"
+msgstr "Pengguna tidak terdaftar"
+
+#. Legacy key: select_your_users
+msgid "Select your users"
+msgstr "Pilih pengguna Anda"
+
+#. Legacy key: newsletter_deleted_successfully
+msgid "Newsletter deleted successfully"
+msgstr "Nawala berhasil dihapus"
+
+#. Legacy key: item_successfully_removed_from_cart
+msgid "Item successfully removed from cart"
+msgstr "Item berhasil dihapus dari keranjang"
+
+#. Legacy key: multi_language_settings
+msgid "Multi language settings"
+msgstr "Pengaturan multi bahasa"
+
+#. Legacy key: manage_language
+msgid "Manage language"
+msgstr "Kelola bahasa"
+
+#. Legacy key: language_list
+msgid "Language list"
+msgstr "Daftar bahasa"
+
+#. Legacy key: add_language
+msgid "Add language"
+msgstr "Tambahkan bahasa"
+
+#. Legacy key: import_language
+msgid "Import language"
+msgstr "Impor bahasa"
+
+#. Legacy key: edit_phrase
+msgid "Edit phrase"
+msgstr "Edit frasa tersebut"
+
+#. Legacy key: export
+msgid "Export"
+msgstr "Ekspor"
+
+#. Legacy key: delete_language
+msgid "Delete language"
+msgstr "Hapus bahasa"
+
+#. Legacy key: add_new_phrase
+msgid "Add new phrase"
+msgstr "Tambahkan frase baru"
+
+#. Legacy key: add_new_language
+msgid "Add new language"
+msgstr "Tambahkan bahasa baru"
+
+#. Legacy key: no_special_character_or_space_is_allowed
+msgid "No special character or space is allowed"
+msgstr "Tidak ada karakter atau spasi khusus yang diperbolehkan"
+
+#. Legacy key: valid_examples
+msgid "Valid examples"
+msgstr "Contoh yang valid"
+
+#. Legacy key: choose_your_json_file
+msgid "Choose your json file"
+msgstr "Pilih file json Anda"
+
+#. Legacy key: import
+msgid "Import"
+msgstr "Impor"
+
+#. Legacy key: phrase_updated
+msgid "Phrase updated"
+msgstr "Frasa diperbarui"
+
+#. Legacy key: course_compare
+msgid "Course compare"
+msgstr "Bandingkan saja"
+
+#. Legacy key: compare_with_1_courses
+msgid "Compare with 1 courses"
+msgstr "Bandingkan dengan 1 kursus"
+
+#. Legacy key: select_a_course
+msgid "Select a course"
+msgstr "Pilih kursus"
+
+#. Legacy key: learn_more
+msgid "Learn more"
+msgstr "Belajarlah lagi"
+
+#. Legacy key: has_discount
+msgid "Has discount"
+msgstr "Memiliki diskon"
+
+#. Legacy key: made_in
+msgid "Made in"
+msgstr "Dibuat di"
+
+#. Legacy key: last_updated_at
+msgid "Last updated at"
+msgstr "Terakhir diperbarui pada"
+
+#. Legacy key: total_lectures
+msgid "Total lectures"
+msgstr "Jumlah kuliah"
+
+#. Legacy key: total_quizzes
+msgid "Total quizzes"
+msgstr "Total kuis"
+
+#. Legacy key: total_duration
+msgid "Total duration"
+msgstr "Durasi total"
+
+#. Legacy key: total_enrolment
+msgid "Total enrolment"
+msgstr "Jumlah pendaftaran"
+
+#. Legacy key: number_of_reviews
+msgid "Number of reviews"
+msgstr "Jumlah ulasan"
+
+#. Legacy key: avg_rating
+msgid "Avg rating"
+msgstr "Penilaian rata-rata"
+
+#. Legacy key: add_phrase
+msgid "Add phrase"
+msgstr "Tambahkan frasa"
+
+#. Legacy key: language_deleted_successfully
+msgid "Language deleted successfully"
+msgstr "Bahasa berhasil dihapus"
+
+#. Legacy key: language_added_successfully
+msgid "Language added successfully"
+msgstr "Bahasa berhasil ditambahkan"
+
+#. Legacy key: لوحة_القيادة
+msgid "لوحة القيادة"
+msgstr "Dasbor"
+
+#. Legacy key: تحرير_الدورة
+msgid "تحرير الدورة"
+msgstr "Sunting kursusnya"
+
+#. Legacy key: tableau_de_bord
+msgid "Tableau de bord"
+msgstr "Dasbor"
+
+#. Legacy key: credentials
+msgid "Credentials"
+msgstr "Kredensial"
+
+#. Legacy key: profile_photo
+msgid "Profile photo"
+msgstr "Foto Profil"
+
+#. Legacy key: update_your_profile_photo_and_personal_details
+msgid "Update your profile photo and personal details"
+msgstr "Perbarui foto profil dan detail pribadi Anda"
+
+#. Legacy key: upload_photo
+msgid "Upload photo"
+msgstr "Mengunggah foto"
+
+#. Legacy key: account_information
+msgid "Account information"
+msgstr "Informasi Akun"
+
+#. Legacy key: enter_current_password
+msgid "Enter current password"
+msgstr "Masukkan kata sandi saat ini"
+
+#. Legacy key: enter_new_password
+msgid "Enter new password"
+msgstr "Masukan kata sandi baru"
+
+#. Legacy key: confirm_password
+msgid "Confirm password"
+msgstr "Konfirmasi sandi"
+
+#. Legacy key: re-type_your_password
+msgid "Re-type your password"
+msgstr "Ketik ulang kata sandi Anda"
+
+#. Legacy key: profile_info
+msgid "Profile info"
+msgstr "Informasi profil"
+
+#. Legacy key: add_your_twitter_link
+msgid "Add your twitter link"
+msgstr "Tambahkan tautan Twitter Anda"
+
+#. Legacy key: add_your_facebook_link
+msgid "Add your facebook link"
+msgstr "Tambahkan tautan facebook Anda"
+
+#. Legacy key: add_your_linkedin_link
+msgid "Add your linkedin link"
+msgstr "Tambahkan tautan linkedin Anda"
+
+#. Legacy key: course_removed_from_wishlist
+msgid "Course removed from wishlist"
+msgstr "Kursus dihapus dari daftar keinginan"
+
+#. Legacy key: search_result
+msgid "Search result"
+msgstr "Hasil pencarian"
+
+#. Legacy key: add_custom_page
+msgid "Add custom page"
+msgstr "Tambahkan halaman khusus"
+
+#. Legacy key: add_your_new_page
+msgid "Add your new page"
+msgstr "Tambahkan halaman baru Anda"
+
+#. Legacy key: page_information
+msgid "Page information"
+msgstr "Informasi halaman"
+
+#. Legacy key: enter_page_title
+msgid "Enter page title"
+msgstr "Masukkan judul halaman"
+
+#. Legacy key: page_content
+msgid "Page content"
+msgstr "Konten halaman"
+
+#. Legacy key: footer
+msgid "Footer"
+msgstr "catatan kaki"
+
+#. Legacy key: header
+msgid "Header"
+msgstr "Tajuk"
+
+#. Legacy key: page_url
+msgid "Page url"
+msgstr "Halaman URL"
+
+#. Legacy key: add_page
+msgid "Add page"
+msgstr "Tambah halaman"
+
+#. Legacy key: new_page_added_successfully
+msgid "New page added successfully"
+msgstr "Halaman baru berhasil ditambahkan"
+
+#. Legacy key: more
+msgid "More"
+msgstr "Lagi"
+
+#. Legacy key: edit_custom_page
+msgid "Edit custom page"
+msgstr "Edit halaman khusus"
+
+#. Legacy key: edit_your_page
+msgid "Edit your page"
+msgstr "Edit halaman Anda"
+
+#. Legacy key: update_page
+msgid "Update page"
+msgstr "Perbarui halaman"
+
+#. Legacy key: page_updated_successfully
+msgid "Page updated successfully"
+msgstr "Halaman berhasil diperbarui"
+
+#. Legacy key: happy_students
+msgid "Happy students"
+msgstr "Siswa yang bahagia"
+
+#. Legacy key: experienced_instructors
+msgid "Experienced instructors"
+msgstr "Instruktur berpengalaman"
+
+#. Legacy key: we_provides_you_world_class_performance
+msgid "We provides you world class performance"
+msgstr "Kami memberi Anda kinerja kelas dunia"
+
+#. Legacy key: flexibility
+msgid "Flexibility"
+msgstr "Fleksibilitas"
+
+#. Legacy key: accessibility
+msgid "Accessibility"
+msgstr "Aksesibilitas"
+
+#. Legacy key: quality_trainers
+msgid "Quality trainers"
+msgstr "Pelatih berkualitas"
+
+#. Legacy key: cost-free_courses
+msgid "Cost-free courses"
+msgstr "Kursus tanpa biaya"
+
+#. Legacy key: what_the_people_tinks_about_us
+msgid "What the people tinks about us"
+msgstr "Apa yang dipikirkan orang-orang tentang kita"
+
+#. Legacy key: tue
+msgid "Tue"
+msgstr "Selasa"
+
+#. Legacy key: our_latest_blog
+msgid "Our latest blog"
+msgstr "Blog terbaru kami"
+
+#. Legacy key: pay_for_purchasing_course
+msgid "Pay for purchasing course"
+msgstr "Bayar untuk pembelian kursus"
+
+#. Legacy key: payment
+msgid "Payment"
+msgstr "Pembayaran"
+
+#. Legacy key: make_payment
+msgid "Make payment"
+msgstr "Melakukan pembayaran"
+
+#. Legacy key: select_payment_gateway
+msgid "Select payment gateway"
+msgstr "Pilih gerbang pembayaran"
+
+#. Legacy key: pay_by_razorpay
+msgid "Pay by razorpay"
+msgstr "Bayar dengan pisau cukur"
+
+#. Legacy key: pay_with_stripe
+msgid "Pay with stripe"
+msgstr "Bayar dengan garis"
+
+#. Legacy key: create_intelligence
+msgid "Create intelligence"
+msgstr "Ciptakan kecerdasan"
+
+#. Legacy key: learn_with_us
+msgid "Learn with us"
+msgstr "Belajar bersama kami"
+
+#. Legacy key: top_rated_courses
+msgid "Top rated courses"
+msgstr "Kursus dengan peringkat teratas"
+
+#. Legacy key: number_of_enrolled_students
+msgid "Number of enrolled students"
+msgstr "Jumlah siswa yang terdaftar"
+
+#. Legacy key: total_lessons
+msgid "Total lessons"
+msgstr "Jumlah pelajaran"
+
+#. Legacy key: our_identity
+msgid "Our identity"
+msgstr "Identitas kita"
+
+#. Legacy key: we_always_prioritize_quality_and_uniqueness
+msgid "We always prioritize quality and uniqueness"
+msgstr "Kami selalu mengutamakan kualitas dan keunikan"
+
+#. Legacy key: our_popular_instructor
+msgid "Our popular instructor"
+msgstr "Instruktur populer kami"
+
+#. Legacy key: read_more
+msgid "Read more"
+msgstr "Baca selengkapnya"
+
+#. Legacy key: no_search_value_found
+msgid "No search value found"
+msgstr "Tidak ada nilai pencarian yang ditemukan"
+
+#. Legacy key: home_pages
+msgid "Home pages"
+msgstr "Halaman rumah"
+
+#. Legacy key: wed
+msgid "Wed"
+msgstr "Menikahi"
+
+#. Legacy key: user_not_found
+msgid "User not found"
+msgstr "Pengguna tidak ditemukan"
+
+#. Legacy key: import_your_data
+msgid "Import your data"
+msgstr "Impor data Anda"
+
+#. Legacy key: choose_your_demo_file
+msgid "Choose your demo file"
+msgstr "Pilih file demo Anda"
+
+#. Legacy key: backup_your_website
+msgid "Backup your website"
+msgstr "Cadangkan situs web Anda"
+
+#. Legacy key: backup_your_current_data
+msgid "Backup your current data"
+msgstr "Cadangkan data Anda saat ini"
+
+#. Legacy key: keep_a_backup
+msgid "Keep a backup"
+msgstr "Simpan cadangan"
+
+#. Legacy key: no_backup
+msgid "No backup"
+msgstr "Tidak ada cadangan"
+
+#. Legacy key: your_backup_file_has_been_stored_successfully
+msgid "Your backup file has been stored successfully"
+msgstr "File cadangan Anda telah berhasil disimpan"
+
+#. Legacy key: backup_files_deleted_successfully
+msgid "Backup files deleted successfully"
+msgstr "File cadangan berhasil dihapus"
+
+#. Legacy key: buy_new_addon
+msgid "Buy new addon"
+msgstr "Beli tambahan baru"
+
+#. Legacy key: install_addon
+msgid "Install addon"
+msgstr "Instal tambahan"
+
+#. Legacy key: installed_addons
+msgid "Installed addons"
+msgstr "Add-on yang diinstal"
+
+#. Legacy key: version
+msgid "Version"
+msgstr "Versi: kapan"
+
+#. Legacy key: addon_update
+msgid "Addon update"
+msgstr "Pembaruan tambahan"
+
+#. Legacy key: about_this_addon
+msgid "About this addon"
+msgstr "Tentang tambahan ini"
+
+#. Legacy key: addon_is_activated_successfully
+msgid "Addon is activated successfully"
+msgstr "Addon berhasil diaktifkan"
+
+#. Legacy key: jitsi_live_class_schedule
+msgid "Jitsi live class schedule"
+msgstr "Jadwal kelas langsung Jitsi"
+
+#. Legacy key: join_live_video_class
+msgid "Join live video class"
+msgstr "Bergabunglah dengan kelas video langsung"
+
+#. Legacy key: live_class_is_not_scheduled_to_this_course_yet
+msgid "Live class is not scheduled to this course yet"
+msgstr "Kelas langsung belum dijadwalkan untuk kursus ini"
+
+#. Legacy key: find_a_tutor
+msgid "Find a tutor"
+msgstr "Temukan seorang guru"
+
+#. Legacy key: assignments
+msgid "Assignments"
+msgstr "Tugas"
+
+#. Legacy key: zoom_live_class_schedule
+msgid "Zoom live class schedule"
+msgstr "Zoom jadwal kelas live"
+
+#. Legacy key: your_question_has_been_successfully_published
+msgid "Your question has been successfully published"
+msgstr "Pertanyaan Anda telah berhasil dipublikasikan"
+
+#. Legacy key: please_write_your_question_title_or_summary
+msgid "Please write your question title or summary"
+msgstr "Silakan tulis judul atau ringkasan pertanyaan Anda"
+
+#. Legacy key: notifications
+msgid "Notifications"
+msgstr "Pemberitahuan"
+
+#. Legacy key: search_questions
+msgid "Search questions"
+msgstr "Cari pertanyaan"
+
+#. Legacy key: questions_in_this_course
+msgid "Questions in this course"
+msgstr "Pertanyaan dalam kursus ini"
+
+#. Legacy key: ask_a_new_question
+msgid "Ask a new question"
+msgstr "Ajukan pertanyaan baru"
+
+#. Legacy key: sat
+msgid "Sat"
+msgstr "Duduk"
+
+#. Legacy key: add_update
+msgid "Add update"
+msgstr "Tambahkan pembaruan"
+
+#. Legacy key: ge_to_addon_list
+msgid "Ge to addon list"
+msgstr "Buka daftar tambahan"
+
+#. Legacy key: upload_addon_file
+msgid "Upload addon file"
+msgstr "Unggah file tambahan"
+
+#. Legacy key: zip_file
+msgid "Zip file"
+msgstr "berkas zip"
+
+#. Legacy key: update_addon
+msgid "Update addon"
+msgstr "Perbarui tambahan"
+
+#. Legacy key: addon_updated_successfully
+msgid "Addon updated successfully"
+msgstr "Addon berhasil diperbarui"
+
+#. Legacy key: add_addon
+msgid "Add addon"
+msgstr "Tambahkan tambahan"
+
+#. Legacy key: install_an_addon
+msgid "Install an addon"
+msgstr "Instal tambahan"
+
+#. Legacy key: back_to_addon_list
+msgid "Back to addon list"
+msgstr "Kembali ke daftar tambahan"
+
+#. Legacy key: addon_installed_successfully
+msgid "Addon installed successfully"
+msgstr "Addon berhasil diinstal"
+
+#. Legacy key: meeting_invite_link
+msgid "Meeting invite link"
+msgstr "Tautan undangan rapat"
+
+#. Legacy key: enter_meeting_invite_link
+msgid "Enter meeting invite link"
+msgstr "Masukkan tautan undangan rapat"
+
+#. Legacy key: all_questions
+msgid "All questions"
+msgstr "Semua pertanyaan"
+
+#. Legacy key: found
+msgid "Found"
+msgstr "Ditemukan"
+
+#. Legacy key: there_is_no_data_related_to_your_question
+msgid "There is no data related to your question"
+msgstr "Tidak ada data terkait pertanyaan Anda"
+
+#. Legacy key: booked_tuition
+msgid "Booked tuition"
+msgstr "Biaya kuliah yang dipesan"
+
+#. Legacy key: my_ebooks
+msgid "My ebooks"
+msgstr "Ebook saya"
+
+#. Legacy key: affiliate_history_
+msgid "Affiliate history "
+msgstr "Sejarah afiliasi"
+
+#. Legacy key: payout_settings
+msgid "Payout settings"
+msgstr "Pengaturan pembayaran"
+
+#. Legacy key: be_careful
+msgid "Be careful"
+msgstr "Hati-hati"
+
+#. Legacy key: setup_your_payment_settings
+msgid "Setup your payment settings"
+msgstr "Siapkan pengaturan pembayaran Anda"
+
+#. Legacy key: affiliate_course_history
+msgid "Affiliate course history"
+msgstr "Sejarah kursus afiliasi"
+
+#. Legacy key: available_balance_to_withdrawal
+msgid "Available balance to withdrawal"
+msgstr "Saldo tersedia untuk penarikan"
+
+#. Legacy key: earning_history
+msgid "Earning history"
+msgstr "Menghasilkan sejarah"
+
+#. Legacy key: withdrawal_history
+msgid "Withdrawal history"
+msgstr "Riwayat penarikan"
+
+#. Legacy key: withdrawal_available_earning
+msgid "Withdrawal available earning"
+msgstr "Penarikan penghasilan yang tersedia"
+
+#. Legacy key: request_withdrawl
+msgid "Request withdrawl"
+msgstr "Minta penarikan"
+
+#. Legacy key: enter_withdrawl_amount
+msgid "Enter withdrawl amount"
+msgstr "Masukkan jumlah penarikan"
+
+#. Legacy key: you_have_to_buy_the_course_first
+msgid "You have to buy the course first"
+msgstr "Anda harus membeli kursusnya terlebih dahulu"
+
+#. Legacy key: notice
+msgid "Notice"
+msgstr "Melihat"
+
+#. Legacy key: you_have_completed
+msgid "You have completed"
+msgstr "Anda telah menyelesaikan"
+
+#. Legacy key: of_the_course
+msgid "Of the course"
+msgstr "Tentu saja"
+
+#. Legacy key: you_can_download_the_course_completion_certificate_after_completing_the_course
+msgid "You can download the course completion certificate after completing the course"
+msgstr "Anda dapat mengunduh sertifikat penyelesaian kursus setelah menyelesaikan kursus"
+
+#. Legacy key: the_course_is_not_over_yet
+msgid "The course is not over yet"
+msgstr "Kursus ini belum berakhir"
+
+#. Legacy key: list_of_tuitions
+msgid "List of tuitions"
+msgstr "Daftar biaya kuliah"
+
+#. Legacy key: filters
+msgid "Filters"
+msgstr "Filter"
+
+#. Legacy key: tuition_type
+msgid "Tuition type"
+msgstr "Jenis biaya kuliah"
+
+#. Legacy key: online
+msgid "Online"
+msgstr "On line"
+
+#. Legacy key: in_perosn
+msgid "In perosn"
+msgstr "Secara pribadi"
+
+#. Legacy key: main_category
+msgid "Main category"
+msgstr "Kategori utama"
+
+#. Legacy key: sub_category
+msgid "Sub category"
+msgstr "Sub kategori"
+
+#. Legacy key: price_range
+msgid "Price range"
+msgstr "Kisaran harga"
+
+#. Legacy key: hourly
+msgid "Hourly"
+msgstr "Per jam"
+
+#. Legacy key: fixed
+msgid "Fixed"
+msgstr "Tetap"
+
+#. Legacy key: tutors
+msgid "Tutors"
+msgstr "tutor"
+
+#. Legacy key: tution_availability
+msgid "Tution availability"
+msgstr "Ketersediaan biaya kuliah"
+
+#. Legacy key: single_time
+msgid "Single time"
+msgstr "Satu kali"
+
+#. Legacy key: selected_days_
+msgid "Selected days "
+msgstr "Hari yang dipilih"
+
+#. Legacy key: no_result_found
+msgid "No result found"
+msgstr "Tidak ada hasil yang ditemukan"
+
+#. Legacy key: purchase_for
+msgid "Purchase for"
+msgstr "Beli untuk"
+
+#. Legacy key: please_login_first
+msgid "Please login first"
+msgstr "Silahkan masuk terlebih dahulu"
+
+#. Legacy key: lesson_has_been_deleted_successfully
+msgid "Lesson has been deleted successfully"
+msgstr "Pelajaran telah berhasil dihapus"
+
+#. Legacy key: select_lesson_type
+msgid "Select lesson type"
+msgstr "Pilih jenis pelajaran"
+
+#. Legacy key: secured
+msgid "Secured"
+msgstr "Diamankan"
+
+#. Legacy key: video_file
+msgid "Video file"
+msgstr "Berkas video"
+
+#. Legacy key: google_drive_video
+msgid "Google drive video"
+msgstr "Video Google Drive"
+
+#. Legacy key: document_file
+msgid "Document file"
+msgstr "Berkas dokumen"
+
+#. Legacy key: text
+msgid "Text"
+msgstr "Teks"
+
+#. Legacy key: image_file
+msgid "Image file"
+msgstr "Berkas gambar"
+
+#. Legacy key: iframe_embed
+msgid "Iframe embed"
+msgstr "Penyematan iframe"
+
+#. Legacy key: please_select_a_course
+msgid "Please select a course"
+msgstr "Silakan pilih kursus"
+
+#. Legacy key: change
+msgid "Change"
+msgstr "Mengubah"
+
+#. Legacy key: upload_system_video_file
+msgid "Upload system video file"
+msgstr "Unggah file video sistem"
+
+#. Legacy key: select_system_video_file
+msgid "Select system video file"
+msgstr "Pilih file video sistem"
+
+#. Legacy key: has_to_be_bigger_than
+msgid "Has to be bigger than"
+msgstr "Harus lebih besar dari"
+
+#. Legacy key: lesson_has_been_added_successfully
+msgid "Lesson has been added successfully"
+msgstr "Pelajaran telah berhasil ditambahkan"
+
+#. Legacy key: your_servers_file_upload_limit_is_9000mb
+msgid "Your servers file upload limit is 9000mb"
+msgstr "Batas unggah file server Anda adalah 9000MB"
+
+#. Legacy key: contact
+msgid "Contact"
+msgstr "Kontak"
+
+#. Legacy key: cart
+msgid "Cart"
+msgstr "Keranjang"
+
+#. Legacy key: become_an_instructor
+msgid "Become an instructor"
+msgstr "Menjadi seorang instruktur"
+
+#. Legacy key: contact_information
+msgid "Contact information"
+msgstr "Kontak informasi"
+
+#. Legacy key: contact_email
+msgid "Contact email"
+msgstr "Kontak Email"
+
+#. Legacy key: phone_number
+msgid "Phone number"
+msgstr "Nomor telepon"
+
+#. Legacy key: office_hours
+msgid "Office hours"
+msgstr "Jam kerja"
+
+#. Legacy key: get_in_touch
+msgid "Get in touch"
+msgstr "Berhubungan"
+
+#. Legacy key: our_address
+msgid "Our address"
+msgstr "Alamat kami"
+
+#. Legacy key: contact_information_updated_successfully
+msgid "Contact information updated successfully"
+msgstr "Informasi kontak berhasil diperbarui"
+
+#. Legacy key: indonesian
+msgid "Indonesian"
+msgstr "bahasa Indonesia"
+
+#. Legacy key: has_been_added_successfully
+msgid "Has been added successfully"
+msgstr "Telah berhasil ditambahkan"
+

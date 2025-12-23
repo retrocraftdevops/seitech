@@ -1,0 +1,65 @@
+# Seitech International - Agent-OS Configuration
+
+project:
+  name: "Seitech E-Learning Platform"
+  company: "Seitech International"
+  website: "https://www.seitech.co.za"
+  version: "19.0.1.0.0"
+
+platform:
+  framework: "Odoo"
+  version: "19.0"
+  edition: "Enterprise"
+  python: "3.10+"
+  database: "PostgreSQL 13+"
+
+modules:
+  base:
+    name: "seitech_base"
+    path: "custom_addons/seitech_base"
+    status: "exists"
+
+  theme:
+    name: "seitech_website_theme"
+    path: "custom_addons/seitech_website_theme"
+    status: "planned"
+    depends:
+      - website
+      - website_slides
+
+  elearning:
+    name: "seitech_elearning"
+    path: "custom_addons/seitech_elearning"
+    status: "planned"
+    depends:
+      - website_slides
+      - survey
+      - website_sale
+      - payment
+
+design:
+  primary_color: "#0284c7"
+  secondary_color: "#0e9384"
+  background: "#ffffff"
+  surface: "#f8fafc"
+  text_primary: "#0b1220"
+  text_secondary: "#667085"
+  border: "#e4e7ec"
+
+migration:
+  source:
+    framework: "CodeIgniter 3.x"
+    database: "MySQL"
+    tables: 42
+    path: "/home/rodrickmakore/projects/seitech/oldsite/seitech/well-known/"
+
+  target:
+    framework: "Odoo 19.0"
+    database: "PostgreSQL"
+    path: "/home/rodrickmakore/projects/seitech/oldsite/seitech/odoo-19.0+e.20251219/"
+
+standards:
+  python: "PEP 8"
+  odoo: "Odoo Guidelines"
+  security: "OWASP Top 10"
+  accessibility: "WCAG AA"

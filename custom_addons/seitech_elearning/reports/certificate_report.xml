@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Certificate Report Action -->
+        <record id="action_report_certificate" model="ir.actions.report">
+            <field name="name">Certificate</field>
+            <field name="model">seitech.certificate</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">seitech_elearning.report_certificate</field>
+            <field name="report_file">seitech_elearning.report_certificate</field>
+            <field name="print_report_name">'Certificate - %s' % object.name</field>
+            <field name="binding_model_id" ref="model_seitech_certificate"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <!-- Certificate Report Template -->
+        <template id="report_certificate">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="seitech_elearning.report_certificate_document"/>
+                </t>
+            </t>
+        </template>
+
+        <!-- Certificate Document Template -->
+        <template id="report_certificate_document">
+            <div class="certificate-page" style="
+                width: 297mm;
+                height: 210mm;
+                padding: 20mm;
+                position: relative;
+                background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+                border: 3px solid #0284c7;
+                box-sizing: border-box;
+            ">
+                <!-- Border decoration -->
+                <div style="
+                    position: absolute;
+                    top: 10mm;
+                    left: 10mm;
+                    right: 10mm;
+                    bottom: 10mm;
+                    border: 1px solid #cbd5e1;
+                "/>
+
+                <!-- Header -->
+                <div style="text-align: center; margin-bottom: 15mm;">
+                    <t t-if="doc.template_id and doc.template_id.logo">
+                        <img t-att-src="'data:image/png;base64,%s' % doc.template_id.logo.decode()"
+                             style="max-height: 50px; margin-bottom: 10px;"/>
+                    </t>
+                    <h1 style="
+                        font-size: 36pt;
+                        color: #0284c7;
+                        margin: 0;
+                        font-weight: 300;
+                        letter-spacing: 3px;
+                    ">
+                        <t t-esc="doc.template_id.title if doc.template_id else 'CERTIFICATE'"/>
+                    </h1>
+                    <p style="
+                        font-size: 14pt;
+                        color: #64748b;
+                        margin: 5px 0 0 0;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                    ">
+                        <t t-esc="doc.template_id.subtitle if doc.template_id else 'of Completion'"/>
+                    </p>
+                </div>
+
+                <!-- Content -->
+                <div style="text-align: center; margin: 20mm 0;">
+                    <p style="font-size: 12pt; color: #475569; margin-bottom: 10px;">
+                        This is to certify that
+                    </p>
+                    <h2 style="
+                        font-size: 28pt;
+                        color: #1e293b;
+                        margin: 10px 0;
+                        font-weight: 600;
+                        border-bottom: 2px solid #0284c7;
+                        padding-bottom: 5px;
+                        display: inline-block;
+                    ">
+                        <t t-esc="doc.user_id.name"/>
+                    </h2>
+                    <p style="font-size: 12pt; color: #475569; margin: 15px 0;">
+                        has successfully completed the course
+                    </p>
+                    <h3 style="
+                        font-size: 20pt;
+                        color: #0284c7;
+                        margin: 10px 0;
+                        font-weight: 500;
+                    ">
+                        <t t-esc="doc.channel_id.name"/>
+                    </h3>
+
+                    <t t-if="doc.template_id and doc.template_id.include_course_details">
+                        <div style="margin: 15mm 0; display: flex; justify-content: center; gap: 30px;">
+                            <div style="text-align: center;">
+                                <p style="font-size: 10pt; color: #64748b; margin: 0;">Completion</p>
+                                <p style="font-size: 16pt; color: #1e293b; margin: 0; font-weight: 600;">
+                                    <t t-esc="'%.0f%%' % doc.completion_percentage"/>
+                                </p>
+                            </div>
+                            <div style="text-align: center;" t-if="doc.time_spent">
+                                <p style="font-size: 10pt; color: #64748b; margin: 0;">Time Invested</p>
+                                <p style="font-size: 16pt; color: #1e293b; margin: 0; font-weight: 600;">
+                                    <t t-esc="doc.time_spent"/> hours
+                                </p>
+                            </div>
+                        </div>
+                    </t>
+
+                    <p style="font-size: 12pt; color: #475569; margin-top: 15px;">
+                        on <t t-esc="doc.issue_date.strftime('%B %d, %Y')"/>
+                    </p>
+                </div>
+
+                <!-- Signatures -->
+                <div style="
+                    display: flex;
+                    justify-content: space-around;
+                    margin-top: 20mm;
+                    padding-top: 10mm;
+                ">
+                    <t t-if="doc.template_id">
+                        <div style="text-align: center; width: 150px;" t-if="doc.template_id.signature_1_name">
+                            <t t-if="doc.template_id.signature_1_image">
+                                <img t-att-src="'data:image/png;base64,%s' % doc.template_id.signature_1_image.decode()"
+                                     style="max-height: 40px; margin-bottom: 5px;"/>
+                            </t>
+                            <div style="border-top: 1px solid #94a3b8; padding-top: 5px;">
+                                <p style="font-size: 11pt; color: #1e293b; margin: 0; font-weight: 500;">
+                                    <t t-esc="doc.template_id.signature_1_name"/>
+                                </p>
+                                <p style="font-size: 9pt; color: #64748b; margin: 0;">
+                                    <t t-esc="doc.template_id.signature_1_title"/>
+                                </p>
+                            </div>
+                        </div>
+                        <div style="text-align: center; width: 150px;" t-if="doc.template_id.signature_2_name">
+                            <t t-if="doc.template_id.signature_2_image">
+                                <img t-att-src="'data:image/png;base64,%s' % doc.template_id.signature_2_image.decode()"
+                                     style="max-height: 40px; margin-bottom: 5px;"/>
+                            </t>
+                            <div style="border-top: 1px solid #94a3b8; padding-top: 5px;">
+                                <p style="font-size: 11pt; color: #1e293b; margin: 0; font-weight: 500;">
+                                    <t t-esc="doc.template_id.signature_2_name"/>
+                                </p>
+                                <p style="font-size: 9pt; color: #64748b; margin: 0;">
+                                    <t t-esc="doc.template_id.signature_2_title"/>
+                                </p>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+
+                <!-- Footer -->
+                <div style="
+                    position: absolute;
+                    bottom: 15mm;
+                    left: 20mm;
+                    right: 20mm;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                ">
+                    <div>
+                        <p style="font-size: 9pt; color: #64748b; margin: 0;">
+                            Certificate No: <t t-esc="doc.name"/>
+                        </p>
+                        <p style="font-size: 9pt; color: #64748b; margin: 0;">
+                            Verify at: <t t-esc="doc.verification_url"/>
+                        </p>
+                    </div>
+                    <t t-if="doc.qr_code">
+                        <img t-att-src="'data:image/png;base64,%s' % doc.qr_code.decode()"
+                             style="width: 60px; height: 60px;"/>
+                    </t>
+                </div>
+            </div>
+        </template>
+
+    </data>
+</odoo>

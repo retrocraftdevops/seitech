@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Main Layout Override -->
+        <template id="seitech_layout" inherit_id="website.layout" name="Seitech Layout">
+            <!-- Add skip to content link for accessibility -->
+            <xpath expr="//body" position="inside">
+                <a href="#main-content" class="skip-link">Skip to main content</a>
+            </xpath>
+        </template>
+
+        <!-- Custom Page Layout -->
+        <template id="page_layout" name="Seitech Page Layout">
+            <t t-call="website.layout">
+                <div id="wrap" class="oe_structure">
+                    <main id="main-content">
+                        <t t-out="0"/>
+                    </main>
+                </div>
+            </t>
+        </template>
+
+    </data>
+</odoo>

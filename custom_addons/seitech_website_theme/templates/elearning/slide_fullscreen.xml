@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Override the Fullscreen Slide View (Course Player) -->
+    <template id="slide_fullscreen_inherit_seitech" inherit_id="website_slides.slide_fullscreen" name="Seitech Course Player">
+        <!-- Add custom class to the main player container -->
+        <xpath expr="//div[hasclass('o_wslides_fs_main')]" position="attributes">
+            <attribute name="class" add="seitech-course-player" separator=" "/>
+        </xpath>
+
+        <!-- Add custom class to the sidebar -->
+        <xpath expr="//div[hasclass('o_wslides_fs_sidebar')]" position="attributes">
+            <attribute name="class" add="seitech-lesson-sidebar" separator=" "/>
+        </xpath>
+    </template>
+
+</odoo>

@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Course Listing Page Enhancement -->
+        <template id="courses_page" name="Courses Page">
+            <t t-call="website.layout">
+                <t t-set="pageName" t-value="'courses'"/>
+                <t t-set="additional_title">Courses</t>
+
+                <div id="wrap" class="o_seitech_courses">
+                    <!-- Hero Section -->
+                    <section class="courses-hero-section">
+                        <div class="container-seitech">
+                            <div class="courses-hero-content">
+                                <h1 class="courses-hero-title">Explore Our Courses</h1>
+                                <p class="courses-hero-subtitle">Learn new skills and advance your career with our expert-led courses</p>
+                                <!-- Breadcrumb -->
+                                <nav class="breadcrumb-seitech" aria-label="Breadcrumb">
+                                    <a href="/">Home</a>
+                                    <span class="breadcrumb-sep">/</span>
+                                    <span class="breadcrumb-current">Courses</span>
+                                </nav>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Main Content with Sidebar -->
+                    <section class="courses-main-section">
+                        <div class="container-seitech">
+                            <div class="courses-layout">
+                                <!-- Sidebar Filters -->
+                                <aside class="courses-sidebar">
+                                    <form action="/courses" method="get" id="course_filter_form" class="filter-form">
+                                        <!-- Preserve search query -->
+                                        <t t-if="search">
+                                            <input type="hidden" name="search" t-att-value="search"/>
+                                        </t>
+
+                                        <!-- Mobile Filter Toggle -->
+                                        <button type="button" class="filter-toggle-mobile" id="toggleFilters">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+                                            </svg>
+                                            Filters
+                                        </button>
+
+                                        <div class="filter-sections" id="filterSections">
+                                            <!-- Categories Filter -->
+                                            <div class="filter-section">
+                                                <h3 class="filter-title">
+                                                    <span>Categories</span>
+                                                    <svg class="filter-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="m6 9 6 6 6-6"/>
+                                                    </svg>
+                                                </h3>
+                                                <div class="filter-options">
+                                                    <div class="filter-option">
+                                                        <input type="radio" value="all" name="category" id="category_all" class="filter-radio"
+                                                               t-att-checked="'checked' if not selected_category or selected_category == 'all' else None"/>
+                                                        <label for="category_all" class="filter-label">
+                                                            <span>All Categories</span>
+                                                            <span class="filter-count" t-esc="'(%s)' % total_courses"/>
+                                                        </label>
+                                                    </div>
+                                                    <t t-foreach="categories" t-as="cat">
+                                                        <div class="filter-option">
+                                                            <input type="radio" t-att-value="cat.id" name="category" t-attf-id="category_#{cat.id}" class="filter-radio"
+                                                                   t-att-checked="'checked' if selected_category == str(cat.id) else None"/>
+                                                            <label t-attf-for="category_#{cat.id}" class="filter-label">
+                                                                <span t-esc="cat.name"/>
+                                                                <span class="filter-count" t-esc="'(%s)' % cat.course_count"/>
+                                                            </label>
+                                                        </div>
+                                                        <!-- Subcategories -->
+                                                        <t t-if="cat.child_ids">
+                                                            <div class="filter-subcategories">
+                                                                <t t-foreach="cat.child_ids" t-as="subcat">
+                                                                    <div class="filter-option filter-option-sub">
+                                                                        <input type="radio" t-att-value="subcat.id" name="category" t-attf-id="subcategory_#{subcat.id}" class="filter-radio"
+                                                                               t-att-checked="'checked' if selected_category == str(subcat.id) else None"/>
+                                                                        <label t-attf-for="subcategory_#{subcat.id}" class="filter-label">
+                                                                            <span t-esc="subcat.name"/>
+                                                                            <span class="filter-count" t-esc="'(%s)' % subcat.course_count"/>
+                                                                        </label>
+                                                                    </div>
+                                                                </t>
+                                                            </div>
+                                                        </t>
+                                                    </t>
+                                                </div>
+                                            </div>
+
+                                            <!-- Price Filter -->
+                                            <div class="filter-section">
+                                                <h3 class="filter-title">
+                                                    <span>Price</span>
+                                                    <svg class="filter-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="m6 9 6 6 6-6"/>
+                                                    </svg>
+                                                </h3>
+                                                <div class="filter-options">
+                                                    <div class="filter-option">
+                                                        <input type="radio" value="all" name="price" id="price_all" class="filter-radio"
+                                                               t-att-checked="'checked' if not selected_price or selected_price == 'all' else None"/>
+                                                        <label for="price_all" class="filter-label">All</label>
+                                                    </div>
+                                                    <div class="filter-option">
+                                                        <input type="radio" value="free" name="price" id="price_free" class="filter-radio"
+                                                               t-att-checked="'checked' if selected_price == 'free' else None"/>
+                                                        <label for="price_free" class="filter-label">Free</label>
+                                                    </div>
+                                                    <div class="filter-option">
+                                                        <input type="radio" value="paid" name="price" id="price_paid" class="filter-radio"
+                                                               t-att-checked="'checked' if selected_price == 'paid' else None"/>
+                                                        <label for="price_paid" class="filter-label">Paid</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Level Filter -->
+                                            <div class="filter-section">
+                                                <h3 class="filter-title">
+                                                    <span>Level</span>
+                                                    <svg class="filter-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="m6 9 6 6 6-6"/>
+                                                    </svg>
+                                                </h3>
+                                                <div class="filter-options">
+                                                    <div class="filter-option">
+                                                        <input type="radio" value="all" name="level" id="level_all" class="filter-radio"
+                                                               t-att-checked="'checked' if not selected_level or selected_level == 'all' else None"/>
+                                                        <label for="level_all" class="filter-label">All</label>
+                                                    </div>
+                                                    <div class="filter-option">
+                                                        <input type="radio" value="beginner" name="level" id="level_beginner" class="filter-radio"
+                                                               t-att-checked="'checked' if selected_level == 'beginner' else None"/>
+                                                        <label for="level_beginner" class="filter-label">Beginner</label>
+                                                    </div>
+                                                    <div class="filter-option">
+                                                        <input type="radio" value="intermediate" name="level" id="level_intermediate" class="filter-radio"
+                                                               t-att-checked="'checked' if selected_level == 'intermediate' else None"/>
+                                                        <label for="level_intermediate" class="filter-label">Intermediate</label>
+                                                    </div>
+                                                    <div class="filter-option">
+                                                        <input type="radio" value="advanced" name="level" id="level_advanced" class="filter-radio"
+                                                               t-att-checked="'checked' if selected_level == 'advanced' else None"/>
+                                                        <label for="level_advanced" class="filter-label">Advanced</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Language Filter -->
+                                            <div class="filter-section">
+                                                <h3 class="filter-title">
+                                                    <span>Language</span>
+                                                    <svg class="filter-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="m6 9 6 6 6-6"/>
+                                                    </svg>
+                                                </h3>
+                                                <div class="filter-options filter-options-scrollable">
+                                                    <div class="filter-option">
+                                                        <input type="radio" value="all" name="language" id="language_all" class="filter-radio"
+                                                               t-att-checked="'checked' if not selected_language or selected_language == 'all' else None"/>
+                                                        <label for="language_all" class="filter-label">All</label>
+                                                    </div>
+                                                    <t t-foreach="languages" t-as="lang">
+                                                        <div class="filter-option">
+                                                            <input type="radio" t-att-value="lang.code" name="language" t-attf-id="language_#{lang.code}" class="filter-radio"
+                                                                   t-att-checked="'checked' if selected_language == lang.code else None"/>
+                                                            <label t-attf-for="language_#{lang.code}" class="filter-label" t-esc="lang.name"/>
+                                                        </div>
+                                                    </t>
+                                                </div>
+                                            </div>
+
+                                            <!-- Rating Filter -->
+                                            <div class="filter-section">
+                                                <h3 class="filter-title">
+                                                    <span>Rating</span>
+                                                    <svg class="filter-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="m6 9 6 6 6-6"/>
+                                                    </svg>
+                                                </h3>
+                                                <div class="filter-options">
+                                                    <div class="filter-option">
+                                                        <input type="radio" value="all" name="rating" id="rating_all" class="filter-radio"
+                                                               t-att-checked="'checked' if not selected_rating or selected_rating == 'all' else None"/>
+                                                        <label for="rating_all" class="filter-label">All</label>
+                                                    </div>
+                                                    <t t-foreach="[5, 4, 3, 2, 1]" t-as="rating_val">
+                                                        <div class="filter-option">
+                                                            <input type="radio" t-att-value="rating_val" name="rating" t-attf-id="rating_#{rating_val}" class="filter-radio"
+                                                                   t-att-checked="'checked' if selected_rating == str(rating_val) else None"/>
+                                                            <label t-attf-for="rating_#{rating_val}" class="filter-label filter-label-rating">
+                                                                <div class="rating-stars">
+                                                                    <t t-foreach="range(5)" t-as="star">
+                                                                        <svg t-att-class="'star-icon ' + ('star-filled' if star &lt; rating_val else 'star-empty')" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                                                        </svg>
+                                                                    </t>
+                                                                </div>
+                                                                <span class="rating-text">&amp; up</span>
+                                                            </label>
+                                                        </div>
+                                                    </t>
+                                                </div>
+                                            </div>
+
+                                            <!-- Clear Filters -->
+                                            <div class="filter-actions">
+                                                <a href="/courses" class="btn-clear-filters">Clear All Filters</a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Hidden sort input -->
+                                        <input type="hidden" name="sort_by" id="sort_by_hidden" t-att-value="selected_sorting or 'popularity'"/>
+                                    </form>
+                                </aside>
+
+                                <!-- Main Content -->
+                                <main class="courses-content">
+                                    <!-- Results Header -->
+                                    <div class="courses-results-header">
+                                        <div class="results-count">
+                                            Showing <strong t-esc="len(courses)"/> of <strong t-esc="total_courses"/> courses
+                                            <t t-if="search">
+                                                for "<strong t-esc="search"/>"
+                                            </t>
+                                        </div>
+                                        <div class="results-controls">
+                                            <!-- View Toggle -->
+                                            <div class="view-toggle">
+                                                <button type="button" class="view-btn active" data-view="grid" title="Grid View">
+                                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <rect x="3" y="3" width="7" height="7"/>
+                                                        <rect x="14" y="3" width="7" height="7"/>
+                                                        <rect x="14" y="14" width="7" height="7"/>
+                                                        <rect x="3" y="14" width="7" height="7"/>
+                                                    </svg>
+                                                </button>
+                                                <button type="button" class="view-btn" data-view="list" title="List View">
+                                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <line x1="8" y1="6" x2="21" y2="6"/>
+                                                        <line x1="8" y1="12" x2="21" y2="12"/>
+                                                        <line x1="8" y1="18" x2="21" y2="18"/>
+                                                        <line x1="3" y1="6" x2="3.01" y2="6"/>
+                                                        <line x1="3" y1="12" x2="3.01" y2="12"/>
+                                                        <line x1="3" y1="18" x2="3.01" y2="18"/>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <!-- Sort Dropdown -->
+                                            <div class="sort-dropdown">
+                                                <label for="sort_by_select" class="sort-label">Sort by:</label>
+                                                <select class="sort-select" id="sort_by_select" onchange="document.getElementById('sort_by_hidden').value = this.value; document.getElementById('course_filter_form').submit();">
+                                                    <option value="popularity" t-att-selected="'selected' if selected_sorting == 'popularity' else None">Most Popular</option>
+                                                    <option value="newest" t-att-selected="'selected' if selected_sorting == 'newest' else None">Newest</option>
+                                                    <option value="rating" t-att-selected="'selected' if selected_sorting == 'rating' else None">Highest Rated</option>
+                                                    <option value="price_asc" t-att-selected="'selected' if selected_sorting == 'price_asc' else None">Price: Low to High</option>
+                                                    <option value="price_desc" t-att-selected="'selected' if selected_sorting == 'price_desc' else None">Price: High to Low</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Active Filters Tags -->
+                                    <div class="active-filters" t-if="active_filters">
+                                        <t t-foreach="active_filters" t-as="filter_item">
+                                            <span class="filter-tag">
+                                                <t t-esc="filter_item.label"/>
+                                                <a t-att-href="filter_item.remove_url" class="filter-tag-remove">×</a>
+                                            </span>
+                                        </t>
+                                    </div>
+
+                                    <!-- Course Grid -->
+                                    <div class="courses-grid" id="coursesGrid">
+                                        <t t-foreach="courses" t-as="course">
+                                            <t t-call="seitech_elearning.course_card"/>
+                                        </t>
+                                    </div>
+
+                                    <!-- Course List (hidden by default) -->
+                                    <div class="courses-list d-none" id="coursesList">
+                                        <t t-foreach="courses" t-as="course">
+                                            <t t-call="seitech_elearning.course_card_list"/>
+                                        </t>
+                                    </div>
+
+                                    <!-- Pagination -->
+                                    <t t-if="pager" t-call="website.pager"/>
+
+                                    <!-- No Results -->
+                                    <div t-if="not courses" class="no-results">
+                                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                            <circle cx="11" cy="11" r="8"/>
+                                            <path d="m21 21-4.35-4.35"/>
+                                        </svg>
+                                        <h3>No courses found</h3>
+                                        <p>Try adjusting your filters or search criteria</p>
+                                        <a href="/courses" class="btn-seitech-primary">View All Courses</a>
+                                    </div>
+                                </main>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </t>
+        </template>
+
+        <!-- Course Card List View Template -->
+        <template id="course_card_list" name="Course Card List View">
+            <div class="card-course-list">
+                <div class="card-course-list-img">
+                    <a t-attf-href="/slides/{{ course.id }}">
+                        <img t-att-src="'/web/image/slide.channel/%s/image_256' % course.id"
+                             t-att-alt="course.name"/>
+                    </a>
+                </div>
+                <div class="card-course-list-content">
+                    <div class="card-course-list-header">
+                        <span class="card-course-category"
+                              t-esc="course.seitech_category_id.name or 'General'"/>
+                        <div class="card-course-rating">
+                            <div class="rating-stars-sm">
+                                <t t-set="avg_rating" t-value="course.rating_avg or 0"/>
+                                <t t-foreach="range(5)" t-as="star">
+                                    <svg t-att-class="'star-icon ' + ('star-filled' if star &lt; int(avg_rating) else ('star-half' if star &lt; avg_rating else 'star-empty'))" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                    </svg>
+                                </t>
+                            </div>
+                            <span class="rating-value" t-esc="'%.1f' % avg_rating"/>
+                            <span class="rating-count" t-esc="'(%s reviews)' % course.rating_count"/>
+                        </div>
+                    </div>
+                    <h3 class="card-course-list-title">
+                        <a t-attf-href="/slides/{{ course.id }}" t-esc="course.name"/>
+                    </h3>
+                    <p class="card-course-list-description"
+                       t-esc="course.description_short or course.description[:150] + '...' if course.description else ''"/>
+                    <div class="card-course-list-meta">
+                        <span class="meta-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                            <t t-esc="'%.1f hrs' % course.total_time"/>
+                        </span>
+                        <span class="meta-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                            </svg>
+                            <t t-esc="course.slide_content_count"/> lessons
+                        </span>
+                        <span class="meta-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            </svg>
+                            <t t-esc="dict(course._fields['difficulty_level'].selection).get(course.difficulty_level, 'Beginner')"/>
+                        </span>
+                        <span class="meta-item" t-if="course.primary_instructor_id">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                            <t t-esc="course.primary_instructor_id.name"/>
+                        </span>
+                    </div>
+                </div>
+                <div class="card-course-list-actions">
+                    <div class="course-price-large">
+                        <t t-if="course.is_paid">
+                            <span class="price-current" t-esc="course.display_price"/>
+                            <span class="price-original" t-if="course.discount_price" t-esc="course.original_price"/>
+                        </t>
+                        <t t-else="">
+                            <span class="price-free">Free</span>
+                        </t>
+                    </div>
+                    <a t-attf-href="/slides/{{ course.id }}" class="btn-seitech-primary">View Course</a>
+                    <button class="btn-wishlist" t-att-data-course-id="course.id" title="Add to Wishlist">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </template>
+
+        <!-- Course Card Template -->
+        <template id="course_card" name="Course Card">
+            <div class="card-course">
+                <div class="card-course-img">
+                    <a t-attf-href="/slides/{{ course.id }}">
+                        <img t-att-src="'/web/image/slide.channel/%s/image_256' % course.id"
+                             t-att-alt="course.name"
+                             loading="lazy"/>
+                    </a>
+                    <!-- Price Badge -->
+                    <t t-if="course.is_paid">
+                        <span class="card-course-badge badge-seitech-primary-solid">
+                            <t t-esc="course.display_price"/>
+                        </span>
+                        <span class="card-course-badge-discount badge-seitech-success-solid" t-if="course.discount_price">
+                            <t t-esc="'-%.0f%%' % ((1 - course.discount_price / course.original_price) * 100)"/>
+                        </span>
+                    </t>
+                    <t t-else="">
+                        <span class="card-course-badge badge-seitech-success-solid">Free</span>
+                    </t>
+                    <!-- Wishlist Button -->
+                    <button class="card-wishlist-btn" t-att-data-course-id="course.id" title="Add to Wishlist">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="card-course-body">
+                    <div class="card-course-header">
+                        <span class="card-course-category"
+                              t-esc="course.seitech_category_id.name or 'General'"/>
+                        <!-- Rating Stars -->
+                        <div class="card-course-rating">
+                            <t t-set="avg_rating" t-value="course.rating_avg or 0"/>
+                            <div class="rating-stars-sm">
+                                <t t-foreach="range(5)" t-as="star">
+                                    <svg t-att-class="'star-icon ' + ('star-filled' if star &lt; int(avg_rating) else ('star-half' if star &lt; avg_rating else 'star-empty'))" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                    </svg>
+                                </t>
+                            </div>
+                            <span class="rating-value" t-esc="'%.1f' % avg_rating"/>
+                            <span class="rating-count" t-esc="'(%s)' % course.rating_count"/>
+                        </div>
+                    </div>
+                    <h3 class="card-course-title">
+                        <a t-attf-href="/slides/{{ course.id }}" t-esc="course.name"/>
+                    </h3>
+                    <p class="card-course-description"
+                       t-esc="course.description_short or ''"/>
+                    <div class="card-course-meta">
+                        <span class="meta-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                            <t t-esc="'%.1f hrs' % course.total_time"/>
+                        </span>
+                        <span class="meta-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                            </svg>
+                            <t t-esc="course.slide_content_count"/> lessons
+                        </span>
+                        <span class="meta-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            </svg>
+                            <t t-esc="dict(course._fields['difficulty_level'].selection).get(course.difficulty_level, 'Beginner')"/>
+                        </span>
+                    </div>
+                </div>
+                <div class="card-course-footer">
+                    <div class="course-instructor" t-if="course.primary_instructor_id">
+                        <img t-att-src="'/web/image/seitech.instructor/%s/image' % course.primary_instructor_id.id"
+                             class="instructor-avatar"
+                             t-att-alt="course.primary_instructor_id.name"
+                             loading="lazy"/>
+                        <span t-esc="course.primary_instructor_id.name"/>
+                    </div>
+                    <div class="course-enrollments">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                        <span t-esc="course.members_count or 0"/> students
+                    </div>
+                    <a t-attf-href="/slides/{{ course.id }}" class="btn-seitech-primary btn-seitech-sm">
+                        View Course
+                    </a>
+                </div>
+            </div>
+        </template>
+
+        <!-- Student Dashboard -->
+        <template id="student_dashboard" name="Student Dashboard">
+            <t t-call="website.layout">
+                <t t-set="pageName" t-value="'dashboard'"/>
+                <t t-set="additional_title">My Dashboard</t>
+
+                <div id="wrap" class="o_seitech_dashboard">
+                    <section class="dashboard-header">
+                        <div class="container-seitech">
+                            <h1>Welcome back, <t t-esc="request.env.user.name"/>!</h1>
+                            <p>Continue your learning journey</p>
+                        </div>
+                    </section>
+
+                    <section class="dashboard-stats">
+                        <div class="container-seitech">
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-icon"><i class="fa fa-book"></i></div>
+                                    <div class="stat-value" t-esc="stats.get('enrolled_courses', 0)"/>
+                                    <div class="stat-label">Enrolled Courses</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon"><i class="fa fa-check-circle"></i></div>
+                                    <div class="stat-value" t-esc="stats.get('completed_courses', 0)"/>
+                                    <div class="stat-label">Completed</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon"><i class="fa fa-certificate"></i></div>
+                                    <div class="stat-value" t-esc="stats.get('certificates', 0)"/>
+                                    <div class="stat-label">Certificates</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon"><i class="fa fa-star"></i></div>
+                                    <div class="stat-value" t-esc="stats.get('total_points', 0)"/>
+                                    <div class="stat-label">Points</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="dashboard-content">
+                        <div class="container-seitech">
+                            <div class="dashboard-grid">
+                                <!-- My Courses -->
+                                <div class="dashboard-section">
+                                    <h2>My Courses</h2>
+                                    <div class="courses-list">
+                                        <t t-foreach="enrollments" t-as="enrollment">
+                                            <div class="course-progress-card">
+                                                <img t-att-src="'/web/image/slide.channel/%s/image_128' % enrollment.channel_id.id"
+                                                     class="course-thumb"/>
+                                                <div class="course-info">
+                                                    <h4 t-esc="enrollment.channel_id.name"/>
+                                                    <div class="progress-bar">
+                                                        <div class="progress-fill"
+                                                             t-attf-style="width: {{ enrollment.completion_percentage }}%;"/>
+                                                    </div>
+                                                    <span class="progress-text">
+                                                        <t t-esc="'%.0f' % enrollment.completion_percentage"/>% complete
+                                                    </span>
+                                                </div>
+                                                <a t-attf-href="/slides/{{ enrollment.channel_id.id }}"
+                                                   class="btn-seitech-primary btn-seitech-sm">Continue</a>
+                                            </div>
+                                        </t>
+                                    </div>
+                                </div>
+
+                                <!-- Upcoming Classes -->
+                                <div class="dashboard-section">
+                                    <h2>Upcoming Live Classes</h2>
+                                    <div class="classes-list">
+                                        <t t-foreach="upcoming_classes" t-as="schedule">
+                                            <div class="class-card">
+                                                <div class="class-date">
+                                                    <span class="day" t-esc="schedule.start_datetime.strftime('%d')"/>
+                                                    <span class="month" t-esc="schedule.start_datetime.strftime('%b')"/>
+                                                </div>
+                                                <div class="class-info">
+                                                    <h4 t-esc="schedule.name"/>
+                                                    <p t-esc="schedule.channel_id.name"/>
+                                                    <span t-esc="schedule.start_datetime.strftime('%I:%M %p')"/>
+                                                </div>
+                                                <a t-if="schedule.meeting_url" t-att-href="schedule.meeting_url"
+                                                   class="btn-seitech-secondary btn-seitech-sm">Join</a>
+                                            </div>
+                                        </t>
+                                        <p t-if="not upcoming_classes" class="no-data">No upcoming classes</p>
+                                    </div>
+                                </div>
+
+                                <!-- Badges -->
+                                <div class="dashboard-section">
+                                    <h2>My Badges</h2>
+                                    <div class="badges-grid">
+                                        <t t-foreach="badges" t-as="badge">
+                                            <div class="badge-item">
+                                                <img t-att-src="'/web/image/seitech.badge/%s/image' % badge.badge_id.id"
+                                                     t-att-alt="badge.badge_id.name"/>
+                                                <span t-esc="badge.badge_id.name"/>
+                                            </div>
+                                        </t>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </t>
+        </template>
+
+        <!-- Certificate Verification Page -->
+        <template id="certificate_verify" name="Certificate Verification">
+            <t t-call="website.layout">
+                <t t-set="pageName" t-value="'certificate-verify'"/>
+                <t t-set="additional_title">Certificate Verification</t>
+
+                <div id="wrap" class="o_seitech_certificate_verify">
+                    <section class="verify-section">
+                        <div class="container-seitech">
+                            <t t-if="result.get('valid')">
+                                <div class="verify-result verify-valid">
+                                    <i class="fa fa-check-circle"></i>
+                                    <h1>Certificate Verified</h1>
+                                    <p>This certificate is authentic and valid.</p>
+
+                                    <div class="certificate-details">
+                                        <div class="detail-row">
+                                            <span class="label">Certificate Number:</span>
+                                            <span class="value" t-esc="certificate.name"/>
+                                        </div>
+                                        <div class="detail-row">
+                                            <span class="label">Issued To:</span>
+                                            <span class="value" t-esc="certificate.user_id.name"/>
+                                        </div>
+                                        <div class="detail-row">
+                                            <span class="label">Course:</span>
+                                            <span class="value" t-esc="certificate.channel_id.name"/>
+                                        </div>
+                                        <div class="detail-row">
+                                            <span class="label">Issue Date:</span>
+                                            <span class="value" t-esc="certificate.issue_date.strftime('%B %d, %Y')"/>
+                                        </div>
+                                        <div class="detail-row" t-if="certificate.expiration_date">
+                                            <span class="label">Valid Until:</span>
+                                            <span class="value" t-esc="certificate.expiration_date.strftime('%B %d, %Y')"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </t>
+                            <t t-else="">
+                                <div class="verify-result verify-invalid">
+                                    <i class="fa fa-times-circle"></i>
+                                    <h1>Verification Failed</h1>
+                                    <p t-esc="result.get('error', 'Certificate could not be verified.')"/>
+                                </div>
+                            </t>
+
+                            <!-- Verification Form -->
+                            <div class="verify-form">
+                                <h3>Verify Another Certificate</h3>
+                                <form action="/certificate/verify" method="get">
+                                    <input type="text" name="code" placeholder="Enter verification code"
+                                           class="form-control"/>
+                                    <button type="submit" class="btn-seitech-primary">Verify</button>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </t>
+        </template>
+
+    </data>
+</odoo>

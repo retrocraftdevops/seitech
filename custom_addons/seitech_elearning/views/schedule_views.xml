@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Schedule Form View -->
+        <record id="view_schedule_form" model="ir.ui.view">
+            <field name="name">seitech.schedule.form</field>
+            <field name="model">seitech.schedule</field>
+            <field name="arch" type="xml">
+                <form string="Live Class Schedule">
+                    <header>
+                        <button name="action_schedule" string="Schedule" type="object"
+                                class="btn-primary" invisible="state != 'draft'"/>
+                        <button name="action_start" string="Start Class" type="object"
+                                invisible="state != 'scheduled'"/>
+                        <button name="action_complete" string="Mark Completed" type="object"
+                                invisible="state != 'in_progress'"/>
+                        <button name="action_cancel" string="Cancel" type="object"
+                                invisible="state in ('completed', 'cancelled')"/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,scheduled,completed"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_view_attendees" type="object"
+                                    class="oe_stat_button" icon="fa-users">
+                                <field name="attendee_count" widget="statinfo" string="Registered"/>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <h1><field name="name" placeholder="Class Title"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="channel_id"/>
+                                <field name="slide_id" domain="[('channel_id', '=', channel_id)]"/>
+                                <field name="instructor_id"/>
+                            </group>
+                            <group>
+                                <field name="start_datetime"/>
+                                <field name="end_datetime"/>
+                                <field name="duration" readonly="1"/>
+                                <field name="timezone"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Meeting Details" name="meeting">
+                                <group>
+                                    <group>
+                                        <field name="meeting_type"/>
+                                        <field name="meeting_url" widget="url"
+                                               invisible="meeting_type == 'in_person'"/>
+                                        <field name="meeting_id"
+                                               invisible="meeting_type in ('custom', 'in_person')"/>
+                                        <field name="meeting_password"
+                                               invisible="meeting_type in ('custom', 'in_person')"/>
+                                    </group>
+                                    <group>
+                                        <field name="location" invisible="meeting_type != 'in_person'"/>
+                                        <field name="max_attendees"/>
+                                        <field name="registration_required"/>
+                                        <field name="registration_deadline"
+                                               invisible="not registration_required"/>
+                                    </group>
+                                </group>
+                                <field name="description" placeholder="Class description..."/>
+                            </page>
+                            <page string="Recurrence" name="recurrence">
+                                <group>
+                                    <field name="is_recurring"/>
+                                </group>
+                                <group invisible="not is_recurring">
+                                    <group>
+                                        <field name="recurrence_type"/>
+                                        <field name="recurrence_count"/>
+                                    </group>
+                                    <group>
+                                        <field name="recurrence_end_date"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Recording" name="recording">
+                                <group>
+                                    <field name="has_recording"/>
+                                </group>
+                                <group invisible="not has_recording">
+                                    <field name="recording_url" widget="url"/>
+                                    <field name="recording_attachment_id"/>
+                                </group>
+                            </page>
+                            <page string="Notifications" name="notifications">
+                                <group>
+                                    <field name="send_reminder"/>
+                                    <field name="reminder_time" invisible="not send_reminder"/>
+                                </group>
+                            </page>
+                            <page string="Attendees" name="attendees">
+                                <field name="attendee_ids">
+                                    <list editable="bottom">
+                                        <field name="user_id"/>
+                                        <field name="registration_date"/>
+                                        <field name="state" widget="badge"/>
+                                        <button name="action_mark_attended" string="Present" type="object"
+                                                icon="fa-check" invisible="state == 'attended'"/>
+                                        <button name="action_mark_absent" string="Absent" type="object"
+                                                icon="fa-times" invisible="state == 'absent'"/>
+                                    </list>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+        <!-- Schedule List View -->
+        <record id="view_schedule_list" model="ir.ui.view">
+            <field name="name">seitech.schedule.list</field>
+            <field name="model">seitech.schedule</field>
+            <field name="arch" type="xml">
+                <list string="Scheduled Classes"
+                      decoration-info="state == 'scheduled'"
+                      decoration-success="state == 'completed'"
+                      decoration-danger="state == 'cancelled'">
+                    <field name="name"/>
+                    <field name="channel_id"/>
+                    <field name="instructor_id"/>
+                    <field name="start_datetime"/>
+                    <field name="duration"/>
+                    <field name="meeting_type"/>
+                    <field name="attendee_count"/>
+                    <field name="state" widget="badge"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Schedule Calendar View -->
+        <record id="view_schedule_calendar" model="ir.ui.view">
+            <field name="name">seitech.schedule.calendar</field>
+            <field name="model">seitech.schedule</field>
+            <field name="arch" type="xml">
+                <calendar string="Class Schedule" date_start="start_datetime" date_stop="end_datetime"
+                          color="instructor_id" quick_create="0">
+                    <field name="name"/>
+                    <field name="channel_id"/>
+                    <field name="instructor_id"/>
+                </calendar>
+            </field>
+        </record>
+
+        <!-- Schedule Action -->
+        <record id="action_schedule" model="ir.actions.act_window">
+            <field name="name">Live Classes</field>
+            <field name="res_model">seitech.schedule</field>
+            <field name="view_mode">list,calendar,form</field>
+            
+            <field name="context">{'search_default_filter_upcoming': 1}</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="seitech_elearning.Dashboard">
+        <div class="o_elearning_dashboard">
+            <!-- Loading State -->
+            <div t-if="state.loading" class="d-flex justify-content-center align-items-center" style="min-height: 400px;">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+
+            <!-- Dashboard Content -->
+            <div t-else="" class="container-fluid py-4">
+                <!-- Header -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <h1 class="h2 mb-1">
+                            <i class="fa fa-graduation-cap me-2"/>
+                            E-Learning Dashboard
+                        </h1>
+                        <p class="text-muted mb-0">Overview of your e-learning platform performance</p>
+                    </div>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="row g-4 mb-4">
+                    <!-- Total Courses -->
+                    <div class="col-12 col-md-6 col-xl-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <div class="rounded-circle bg-primary bg-opacity-10 p-3">
+                                            <i class="fa fa-book fa-2x text-primary"/>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h6 class="text-muted mb-1">Total Courses</h6>
+                                        <h3 class="mb-0" t-esc="state.stats.totalCourses"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pt-0">
+                                <button class="btn btn-link p-0 text-decoration-none" t-on-click="openCourses">
+                                    View all courses <i class="fa fa-arrow-right ms-1"/>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Total Enrollments -->
+                    <div class="col-12 col-md-6 col-xl-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <div class="rounded-circle bg-success bg-opacity-10 p-3">
+                                            <i class="fa fa-users fa-2x text-success"/>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h6 class="text-muted mb-1">Total Enrollments</h6>
+                                        <h3 class="mb-0" t-esc="state.stats.totalEnrollments"/>
+                                        <small class="text-success">
+                                            <t t-esc="state.stats.activeEnrollments"/> active
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pt-0">
+                                <button class="btn btn-link p-0 text-decoration-none" t-on-click="openEnrollments">
+                                    Manage enrollments <i class="fa fa-arrow-right ms-1"/>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificates Issued -->
+                    <div class="col-12 col-md-6 col-xl-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <div class="rounded-circle bg-warning bg-opacity-10 p-3">
+                                            <i class="fa fa-certificate fa-2x text-warning"/>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h6 class="text-muted mb-1">Certificates Issued</h6>
+                                        <h3 class="mb-0" t-esc="state.stats.totalCertificates"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pt-0">
+                                <button class="btn btn-link p-0 text-decoration-none" t-on-click="openCertificates">
+                                    View certificates <i class="fa fa-arrow-right ms-1"/>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Total Revenue -->
+                    <div class="col-12 col-md-6 col-xl-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <div class="rounded-circle bg-info bg-opacity-10 p-3">
+                                            <i class="fa fa-money fa-2x text-info"/>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h6 class="text-muted mb-1">Total Revenue</h6>
+                                        <h3 class="mb-0" t-esc="formatCurrency(state.stats.totalRevenue)"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pt-0">
+                                <span class="text-muted small">From course enrollments</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions & Recent Activity -->
+                <div class="row g-4">
+                    <!-- Quick Actions -->
+                    <div class="col-12 col-lg-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-header bg-transparent border-bottom">
+                                <h5 class="card-title mb-0">
+                                    <i class="fa fa-bolt me-2 text-warning"/>
+                                    Quick Actions
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-outline-primary text-start" t-on-click="openCourses">
+                                        <i class="fa fa-plus-circle me-2"/>
+                                        Create New Course
+                                    </button>
+                                    <button class="btn btn-outline-success text-start" t-on-click="openEnrollments">
+                                        <i class="fa fa-user-plus me-2"/>
+                                        Enroll Students
+                                    </button>
+                                    <button class="btn btn-outline-warning text-start" t-on-click="openCertificates">
+                                        <i class="fa fa-certificate me-2"/>
+                                        Issue Certificate
+                                    </button>
+                                    <button class="btn btn-outline-info text-start" t-on-click="openInstructors">
+                                        <i class="fa fa-chalkboard-teacher me-2"/>
+                                        Manage Instructors
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Enrollments -->
+                    <div class="col-12 col-lg-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-header bg-transparent border-bottom">
+                                <h5 class="card-title mb-0">
+                                    <i class="fa fa-clock me-2 text-primary"/>
+                                    Recent Enrollments
+                                </h5>
+                            </div>
+                            <div class="card-body p-0">
+                                <div t-if="state.recentEnrollments.length === 0" class="p-4 text-center text-muted">
+                                    <i class="fa fa-inbox fa-2x mb-2"/>
+                                    <p class="mb-0">No recent enrollments</p>
+                                </div>
+                                <ul t-else="" class="list-group list-group-flush">
+                                    <li t-foreach="state.recentEnrollments" t-as="enrollment" t-key="enrollment.id" 
+                                        class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <strong t-esc="enrollment.user_id[1]"/>
+                                            <br/>
+                                            <small class="text-muted" t-esc="enrollment.channel_id[1]"/>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="badge bg-primary rounded-pill">
+                                                <t t-esc="Math.round(enrollment.completion_percentage || 0)"/>%
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Top Courses -->
+                    <div class="col-12 col-lg-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-header bg-transparent border-bottom">
+                                <h5 class="card-title mb-0">
+                                    <i class="fa fa-trophy me-2 text-success"/>
+                                    Top Courses
+                                </h5>
+                            </div>
+                            <div class="card-body p-0">
+                                <div t-if="state.topCourses.length === 0" class="p-4 text-center text-muted">
+                                    <i class="fa fa-book fa-2x mb-2"/>
+                                    <p class="mb-0">No courses yet</p>
+                                </div>
+                                <ul t-else="" class="list-group list-group-flush">
+                                    <li t-foreach="state.topCourses" t-as="course" t-key="course.id" 
+                                        class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <strong t-esc="course.name"/>
+                                            <br/>
+                                            <small class="text-muted">
+                                                <i class="fa fa-users me-1"/>
+                                                <t t-esc="course.enrollment_count || 0"/> enrolled
+                                            </small>
+                                        </div>
+                                        <div>
+                                            <span class="text-warning">
+                                                <i class="fa fa-star"/>
+                                                <t t-esc="course.total_votes || 0"/>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+</templates>

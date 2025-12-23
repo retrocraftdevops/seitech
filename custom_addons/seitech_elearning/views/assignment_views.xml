@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Assignment Form View -->
+        <record id="view_assignment_form" model="ir.ui.view">
+            <field name="name">seitech.assignment.form</field>
+            <field name="model">seitech.assignment</field>
+            <field name="arch" type="xml">
+                <form string="Assignment">
+                    <header>
+                        <button name="action_publish" string="Publish" type="object"
+                                class="btn-primary" invisible="is_published"/>
+                        <button name="action_unpublish" string="Unpublish" type="object"
+                                invisible="not is_published"/>
+                        <button name="action_view_submissions" string="View Submissions" type="object"
+                                class="btn-secondary"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_view_submissions" type="object"
+                                    class="oe_stat_button" icon="fa-file-text">
+                                <field name="submission_count" widget="statinfo" string="Submissions"/>
+                            </button>
+                        </div>
+                        <widget name="web_ribbon" title="Published" bg_color="bg-success"
+                                invisible="not is_published"/>
+                        <div class="oe_title">
+                            <h1><field name="name" placeholder="Assignment Title"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="channel_id"/>
+                                <field name="slide_id" domain="[('channel_id', '=', channel_id)]"/>
+                                <field name="instructor_id"/>
+                                <field name="sequence"/>
+                            </group>
+                            <group>
+                                <field name="available_date"/>
+                                <field name="deadline"/>
+                                <field name="late_deadline"/>
+                                <field name="late_penalty"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Instructions" name="instructions">
+                                <field name="description"/>
+                                <group>
+                                    <field name="attachment_ids" widget="many2many_binary"/>
+                                </group>
+                            </page>
+                            <page string="Grading" name="grading">
+                                <group>
+                                    <group>
+                                        <field name="grading_type"/>
+                                        <field name="points"/>
+                                        <field name="passing_score"/>
+                                    </group>
+                                    <group>
+                                        <field name="graded_count" readonly="1"/>
+                                    </group>
+                                </group>
+                                <field name="rubric" placeholder="Grading rubric..."/>
+                            </page>
+                            <page string="Submission Settings" name="settings">
+                                <group>
+                                    <group>
+                                        <field name="submission_type"/>
+                                        <field name="allowed_file_types"
+                                               invisible="submission_type not in ('file', 'any')"/>
+                                        <field name="max_file_size"
+                                               invisible="submission_type not in ('file', 'any')"/>
+                                    </group>
+                                    <group>
+                                        <field name="max_submissions"/>
+                                        <field name="is_group_assignment"/>
+                                        <field name="group_size" invisible="not is_group_assignment"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+        <!-- Assignment List View -->
+        <record id="view_assignment_list" model="ir.ui.view">
+            <field name="name">seitech.assignment.list</field>
+            <field name="model">seitech.assignment</field>
+            <field name="arch" type="xml">
+                <list string="Assignments">
+                    <field name="sequence" widget="handle"/>
+                    <field name="name"/>
+                    <field name="channel_id"/>
+                    <field name="deadline"/>
+                    <field name="points"/>
+                    <field name="submission_count"/>
+                    <field name="is_published" widget="boolean_toggle"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Assignment Submission Form View -->
+        <record id="view_submission_form" model="ir.ui.view">
+            <field name="name">seitech.assignment.submission.form</field>
+            <field name="model">seitech.assignment.submission</field>
+            <field name="arch" type="xml">
+                <form string="Submission">
+                    <header>
+                        <button name="action_submit" string="Submit" type="object"
+                                class="btn-primary" invisible="state != 'draft'"/>
+                        <button name="action_start_review" string="Start Review" type="object"
+                                invisible="state != 'submitted'"
+                                groups="seitech_elearning.group_elearning_instructor"/>
+                        <button name="action_finalize_grade" string="Finalize Grade" type="object"
+                                class="btn-primary" invisible="state != 'under_review'"
+                                groups="seitech_elearning.group_elearning_instructor"/>
+                        <button name="action_request_resubmit" string="Request Resubmission" type="object"
+                                invisible="state not in ('submitted', 'under_review')"
+                                groups="seitech_elearning.group_elearning_instructor"/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,submitted,graded"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" readonly="1"/>
+                                <field name="assignment_id" readonly="1"/>
+                                <field name="channel_id" readonly="1"/>
+                                <field name="user_id" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="submit_date" readonly="1"/>
+                                <field name="is_late" readonly="1"/>
+                                <field name="attempt_number" readonly="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Submission" name="submission">
+                                <group>
+                                    <field name="submission_type"/>
+                                </group>
+                                <group invisible="submission_type != 'text'">
+                                    <field name="text_content"/>
+                                </group>
+                                <group invisible="submission_type != 'url'">
+                                    <field name="url_content" widget="url"/>
+                                </group>
+                                <group invisible="submission_type != 'file'">
+                                    <field name="attachment_ids" widget="many2many_binary"/>
+                                </group>
+                                <group>
+                                    <field name="student_comment" placeholder="Add a comment for your instructor..."/>
+                                </group>
+                            </page>
+                            <page string="Grading" name="grading"
+                                  groups="seitech_elearning.group_elearning_instructor">
+                                <group>
+                                    <group>
+                                        <field name="score"/>
+                                        <field name="adjusted_score" readonly="1"/>
+                                        <field name="letter_grade"/>
+                                        <field name="is_passing" readonly="1"/>
+                                    </group>
+                                    <group>
+                                        <field name="graded_by_id" readonly="1"/>
+                                        <field name="graded_date" readonly="1"/>
+                                    </group>
+                                </group>
+                                <field name="feedback" placeholder="Feedback for student..."/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+        <!-- Assignment Submission List View -->
+        <record id="view_submission_list" model="ir.ui.view">
+            <field name="name">seitech.assignment.submission.list</field>
+            <field name="model">seitech.assignment.submission</field>
+            <field name="arch" type="xml">
+                <list string="Submissions"
+                      decoration-warning="is_late"
+                      decoration-success="is_passing"
+                      decoration-danger="state == 'resubmit'">
+                    <field name="name"/>
+                    <field name="assignment_id"/>
+                    <field name="user_id"/>
+                    <field name="submit_date"/>
+                    <field name="is_late"/>
+                    <field name="score"/>
+                    <field name="adjusted_score"/>
+                    <field name="state" widget="badge"
+                           decoration-success="state == 'graded'"
+                           decoration-info="state in ('submitted', 'under_review')"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Assignment Actions -->
+        <record id="action_assignment" model="ir.actions.act_window">
+            <field name="name">Assignments</field>
+            <field name="res_model">seitech.assignment</field>
+            <field name="view_mode">list,form</field>
+            
+        </record>
+
+        <record id="action_submission" model="ir.actions.act_window">
+            <field name="name">Submissions</field>
+            <field name="res_model">seitech.assignment.submission</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+    </data>
+</odoo>

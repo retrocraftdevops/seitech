@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_cms_team_member_tree" model="ir.ui.view">
+        <field name="name">seitech.cms.team.member.tree</field>
+        <field name="model">seitech.cms.team.member</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="job_title"/>
+                <field name="department"/>
+                <field name="is_instructor"/>
+                <field name="is_featured"/>
+                <field name="is_published"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_cms_team_member_form" model="ir.ui.view">
+        <field name="name">seitech.cms.team.member.form</field>
+        <field name="model">seitech.cms.team.member</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="is_published" widget="boolean_toggle"/>
+                </header>
+                <sheet>
+                    <field name="image" widget="image" class="oe_avatar"/>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Full Name"/></h1>
+                        <field name="job_title" placeholder="Job Title"/>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="slug"/>
+                            <field name="department"/>
+                            <field name="email"/>
+                        </group>
+                        <group>
+                            <field name="is_instructor"/>
+                            <field name="is_featured"/>
+                            <field name="show_on_homepage"/>
+                            <field name="sequence"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Biography">
+                            <group>
+                                <field name="short_bio" placeholder="Brief bio (200 chars)..."/>
+                            </group>
+                            <field name="full_bio"/>
+                        </page>
+                        <page string="Qualifications">
+                            <group>
+                                <field name="qualifications"/>
+                                <field name="certifications"/>
+                                <field name="specializations"/>
+                            </group>
+                        </page>
+                        <page string="Social">
+                            <group>
+                                <group>
+                                    <field name="phone"/>
+                                    <field name="linkedin_url"/>
+                                </group>
+                                <group>
+                                    <field name="twitter_url"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Related">
+                            <group>
+                                <field name="partner_id"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_cms_team_member_kanban" model="ir.ui.view">
+        <field name="name">seitech.cms.team.member.kanban</field>
+        <field name="model">seitech.cms.team.member</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="name"/>
+                <field name="image"/>
+                <field name="job_title"/>
+                <field name="department"/>
+                <templates>
+                    <t t-name="card">
+                        <aside>
+                            <field name="image" widget="image" class="o_kanban_image"/>
+                        </aside>
+                        <main>
+                            <field name="name" class="fw-bold fs-5"/>
+                            <field name="job_title"/>
+                            <field name="department" class="text-muted"/>
+                        </main>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="action_cms_team_members" model="ir.actions.act_window">
+        <field name="name">Team Members</field>
+        <field name="res_model">seitech.cms.team.member</field>
+        <field name="view_mode">kanban,list,form</field>
+    </record>
+</odoo>

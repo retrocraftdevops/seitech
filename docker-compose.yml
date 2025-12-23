@@ -1,0 +1,50 @@
+# Seitech Odoo 19.0 Enterprise - Docker Compose Configuration
+# Uses local PostgreSQL to avoid port conflicts
+
+services:
+  odoo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: seitech-odoo
+    # Use host network to connect to local PostgreSQL
+    network_mode: "host"
+    environment:
+      # Database connection (local PostgreSQL)
+      - DB_HOST=${DB_HOST:-localhost}
+      - DB_PORT=${DB_PORT:-5432}
+      - DB_USER=${DB_USER:-odoo}
+      - DB_PASSWORD=${DB_PASSWORD:-odoo}
+      - DB_NAME=${DB_NAME:-seitech}
+      # Server settings
+      - HTTP_PORT=${HTTP_PORT:-8069}
+      - LONGPOLLING_PORT=${LONGPOLLING_PORT:-8072}
+      - WORKERS=${WORKERS:-0}
+      - MAX_CRON_THREADS=${MAX_CRON_THREADS:-2}
+      # Logging
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+      # Security
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD:-admin}
+      - LIST_DB=${LIST_DB:-True}
+      # Proxy
+      - PROXY_MODE=${PROXY_MODE:-False}
+    volumes:
+      # Mount Odoo source (the entire package)
+      - ./odoo:/opt/odoo/odoo:ro
+      # Enterprise addons (requires valid license)
+      - ./enterprise:/opt/odoo/enterprise:ro
+      # Custom addons (our modules)
+      - ./custom_addons:/opt/odoo/custom_addons
+      # Data persistence
+      - ./data/filestore:/opt/odoo/data
+      # Logs
+      - ./logs:/opt/odoo/logs
+      # Config
+      - ./config:/opt/odoo/config
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:${HTTP_PORT:-8069}/web/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s

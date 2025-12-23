@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Hero Section Snippet -->
+        <template id="s_hero_section" name="Hero Section">
+            <section class="section-hero oe_snippet_body">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <span class="hero-badge">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                            </svg>
+                            Trusted by 10,000+ Professionals
+                        </span>
+                        <h1 class="hero-title">
+                            Transform Your Career with
+                            <span class="text-gradient">Expert Training</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            Access world-class courses designed by industry experts.
+                            Gain practical skills, earn certifications, and advance your professional journey.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="/courses" class="btn-seitech-primary btn-seitech-lg">
+                                Explore Courses
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                            <a href="/about" class="btn-seitech-white btn-seitech-lg">
+                                Learn More
+                            </a>
+                        </div>
+                        <div class="hero-features">
+                            <div class="feature-item">
+                                <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22,4 12,14.01 9,11.01"/>
+                                </svg>
+                                Industry Certifications
+                            </div>
+                            <div class="feature-item">
+                                <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22,4 12,14.01 9,11.01"/>
+                                </svg>
+                                Expert Instructors
+                            </div>
+                            <div class="feature-item">
+                                <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22,4 12,14.01 9,11.01"/>
+                                </svg>
+                                Lifetime Access
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="/seitech_website_theme/static/src/img/hero-learning.jpg"
+                             alt="Professional learning environment"
+                             loading="eager"/>
+                        <div class="hero-stat-card stat-top">
+                            <div class="stat-value">50+</div>
+                            <div class="stat-label">Courses</div>
+                        </div>
+                        <div class="hero-stat-card stat-bottom">
+                            <div class="stat-value">98%</div>
+                            <div class="stat-label">Success Rate</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+
+    </data>
+</odoo>

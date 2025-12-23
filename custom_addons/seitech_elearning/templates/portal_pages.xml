@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- My Courses Page -->
+    <template id="my_courses" name="My Courses">
+        <t t-call="website.layout">
+            <div id="wrap" class="o_portal">
+                <div class="container py-5">
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/my/learning">Dashboard</a></li>
+                                    <li class="breadcrumb-item active">My Courses</li>
+                                </ol>
+                            </nav>
+                            <h1 class="h2">My Courses</h1>
+                        </div>
+                    </div>
+
+                    <!-- Filter Tabs -->
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item">
+                                    <a t-attf-class="nav-link #{'active' if current_status == 'all' else ''}" 
+                                       href="/my/courses?status=all">All</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a t-attf-class="nav-link #{'active' if current_status == 'active' else ''}" 
+                                       href="/my/courses?status=active">In Progress</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a t-attf-class="nav-link #{'active' if current_status == 'completed' else ''}" 
+                                       href="/my/courses?status=completed">Completed</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a t-attf-class="nav-link #{'active' if current_status == 'expired' else ''}" 
+                                       href="/my/courses?status=expired">Expired</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Course Grid -->
+                    <div class="row">
+                        <t t-if="enrollments">
+                            <t t-foreach="enrollments" t-as="enrollment">
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="position-relative">
+                                            <t t-if="enrollment.channel_id.image_1920">
+                                                <img t-att-src="'/web/image/slide.channel/%s/image_256' % enrollment.channel_id.id"
+                                                     class="card-img-top" style="height: 160px; object-fit: cover;"/>
+                                            </t>
+                                            <t t-else="">
+                                                <div class="bg-light d-flex align-items-center justify-content-center" 
+                                                     style="height: 160px;">
+                                                    <i class="fa fa-book fa-3x text-muted"/>
+                                                </div>
+                                            </t>
+                                            <!-- Status Badge -->
+                                            <span t-attf-class="badge position-absolute top-0 end-0 m-2 
+                                                #{'bg-success' if enrollment.state == 'completed' else 
+                                                  'bg-primary' if enrollment.state == 'active' else 
+                                                  'bg-warning' if enrollment.state == 'expired' else 'bg-secondary'}">
+                                                <t t-esc="dict(enrollment._fields['state'].selection).get(enrollment.state)"/>
+                                            </span>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                <a t-att-href="'/slides/%s' % enrollment.channel_id.id" 
+                                                   class="text-dark text-decoration-none">
+                                                    <t t-esc="enrollment.channel_id.name"/>
+                                                </a>
+                                            </h5>
+                                            
+                                            <!-- Progress Bar -->
+                                            <div class="mb-3">
+                                                <div class="d-flex justify-content-between mb-1">
+                                                    <small>Progress</small>
+                                                    <small><t t-esc="int(enrollment.completion_percentage)"/>%</small>
+                                                </div>
+                                                <div class="progress" style="height: 8px;">
+                                                    <div class="progress-bar" 
+                                                         t-attf-style="width: #{enrollment.completion_percentage}%"
+                                                         t-attf-class="#{'bg-success' if enrollment.completion_percentage >= 100 else 'bg-primary'}"/>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Stats -->
+                                            <div class="d-flex justify-content-between text-muted small mb-3">
+                                                <span>
+                                                    <i class="fa fa-play-circle me-1"/>
+                                                    <t t-esc="enrollment.completed_slides"/>/<t t-esc="enrollment.total_slides"/> lessons
+                                                </span>
+                                                <span t-if="enrollment.time_spent">
+                                                    <i class="fa fa-clock me-1"/>
+                                                    <t t-esc="enrollment.time_spent"/> min
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bg-white border-0 pt-0">
+                                            <div class="d-grid gap-2">
+                                                <t t-if="enrollment.state == 'active'">
+                                                    <a t-att-href="'/slides/%s' % enrollment.channel_id.id" 
+                                                       class="btn btn-primary">
+                                                        <t t-if="enrollment.completion_percentage > 0">Continue</t>
+                                                        <t t-else="">Start Learning</t>
+                                                    </a>
+                                                </t>
+                                                <t t-elif="enrollment.state == 'completed'">
+                                                    <a t-att-href="'/slides/%s' % enrollment.channel_id.id" 
+                                                       class="btn btn-outline-primary">Review Course</a>
+                                                    <t t-if="enrollment.certificate_id">
+                                                        <a t-att-href="'/my/certificates/%s' % enrollment.certificate_id.id" 
+                                                           class="btn btn-success">
+                                                            <i class="fa fa-certificate me-1"/>View Certificate
+                                                        </a>
+                                                    </t>
+                                                </t>
+                                                <t t-else="">
+                                                    <button class="btn btn-secondary" disabled="disabled">
+                                                        <t t-esc="dict(enrollment._fields['state'].selection).get(enrollment.state)"/>
+                                                    </button>
+                                                </t>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </t>
+                        </t>
+                        <t t-else="">
+                            <div class="col-12">
+                                <div class="card border-0 shadow-sm">
+                                    <div class="card-body text-center py-5">
+                                        <i class="fa fa-graduation-cap fa-4x text-muted mb-3"/>
+                                        <h4>No courses found</h4>
+                                        <p class="text-muted">
+                                            <t t-if="current_status == 'all'">You haven't enrolled in any courses yet.</t>
+                                            <t t-else="">No courses match the selected filter.</t>
+                                        </p>
+                                        <a href="/courses" class="btn btn-primary mt-3">Browse Courses</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- My Certificates Page -->
+    <template id="my_certificates" name="My Certificates">
+        <t t-call="website.layout">
+            <div id="wrap" class="o_portal">
+                <div class="container py-5">
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/my/learning">Dashboard</a></li>
+                                    <li class="breadcrumb-item active">Certificates</li>
+                                </ol>
+                            </nav>
+                            <h1 class="h2">My Certificates</h1>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <t t-if="certificates">
+                            <t t-foreach="certificates" t-as="cert">
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="card-body text-center">
+                                            <div class="mb-3">
+                                                <i class="fa fa-certificate fa-4x text-warning"/>
+                                            </div>
+                                            <h5 class="card-title"><t t-esc="cert.channel_id.name"/></h5>
+                                            <p class="text-muted small mb-3">
+                                                Issued: <t t-esc="cert.issue_date" t-options="{'widget': 'date'}"/>
+                                            </p>
+                                            <p class="small">
+                                                <span class="badge bg-light text-dark">
+                                                    <t t-esc="cert.verification_code"/>
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div class="card-footer bg-white border-0">
+                                            <div class="d-grid gap-2">
+                                                <a t-att-href="'/certificate/download/%s' % cert.id" 
+                                                   class="btn btn-primary">
+                                                    <i class="fa fa-download me-1"/>Download PDF
+                                                </a>
+                                                <a t-att-href="'/certificate/verify/%s' % cert.verification_code" 
+                                                   class="btn btn-outline-secondary" target="_blank">
+                                                    <i class="fa fa-check-circle me-1"/>Verify
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </t>
+                        </t>
+                        <t t-else="">
+                            <div class="col-12">
+                                <div class="card border-0 shadow-sm">
+                                    <div class="card-body text-center py-5">
+                                        <i class="fa fa-award fa-4x text-muted mb-3"/>
+                                        <h4>No certificates yet</h4>
+                                        <p class="text-muted">Complete courses to earn certificates!</p>
+                                        <a href="/my/courses" class="btn btn-primary mt-3">View My Courses</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- My Achievements Page -->
+    <template id="my_achievements" name="My Achievements">
+        <t t-call="website.layout">
+            <div id="wrap" class="o_portal">
+                <div class="container py-5">
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/my/learning">Dashboard</a></li>
+                                    <li class="breadcrumb-item active">Achievements</li>
+                                </ol>
+                            </nav>
+                            <h1 class="h2">My Achievements</h1>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Stats Summary -->
+                        <div class="col-12 mb-4">
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="card border-0 shadow-sm bg-primary text-white">
+                                        <div class="card-body text-center">
+                                            <h2 class="display-4 mb-0"><t t-esc="total_points"/></h2>
+                                            <p class="mb-0">Total Points</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card border-0 shadow-sm bg-success text-white">
+                                        <div class="card-body text-center">
+                                            <h2 class="display-4 mb-0"><t t-esc="len(earned_badges)"/></h2>
+                                            <p class="mb-0">Badges Earned</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card border-0 shadow-sm bg-info text-white">
+                                        <div class="card-body text-center">
+                                            <h2 class="display-4 mb-0">#<t t-esc="leaderboard_position"/></h2>
+                                            <p class="mb-0">Leaderboard Rank</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earned Badges -->
+                        <div class="col-lg-6 mb-4">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-header bg-white border-0 py-3">
+                                    <h5 class="mb-0"><i class="fa fa-trophy text-warning me-2"/>Earned Badges</h5>
+                                </div>
+                                <div class="card-body">
+                                    <t t-if="earned_badges">
+                                        <div class="row g-3">
+                                            <t t-foreach="earned_badges" t-as="sb">
+                                                <div class="col-4 col-md-3 text-center">
+                                                    <div class="p-3 rounded" 
+                                                         t-attf-style="background-color: #{sb.badge_id.color}20;">
+                                                        <t t-if="sb.badge_id.image">
+                                                            <img t-att-src="'/web/image/seitech.badge/%s/image' % sb.badge_id.id"
+                                                                 class="img-fluid mb-2" style="max-width: 48px;"/>
+                                                        </t>
+                                                        <t t-else="">
+                                                            <i t-att-class="sb.badge_id.icon or 'fa fa-star'" 
+                                                               class="fa-2x mb-2"
+                                                               t-attf-style="color: #{sb.badge_id.color};"/>
+                                                        </t>
+                                                        <div class="small fw-bold"><t t-esc="sb.badge_id.name"/></div>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                        </div>
+                                    </t>
+                                    <t t-else="">
+                                        <p class="text-center text-muted mb-0">No badges earned yet. Keep learning!</p>
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Available Badges -->
+                        <div class="col-lg-6 mb-4">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-header bg-white border-0 py-3">
+                                    <h5 class="mb-0"><i class="fa fa-lock text-muted me-2"/>Badges to Unlock</h5>
+                                </div>
+                                <div class="card-body">
+                                    <t t-if="unearned_badges">
+                                        <div class="row g-3">
+                                            <t t-foreach="unearned_badges[:8]" t-as="badge">
+                                                <div class="col-4 col-md-3 text-center">
+                                                    <div class="p-3 rounded bg-light" style="opacity: 0.6;">
+                                                        <i t-att-class="badge.icon or 'fa fa-star'" 
+                                                           class="fa-2x mb-2 text-muted"/>
+                                                        <div class="small text-muted"><t t-esc="badge.name"/></div>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                        </div>
+                                    </t>
+                                    <t t-else="">
+                                        <p class="text-center text-success mb-0">You've unlocked all badges! 🎉</p>
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Points History -->
+                        <div class="col-12">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-white border-0 py-3">
+                                    <h5 class="mb-0"><i class="fa fa-history text-primary me-2"/>Points History</h5>
+                                </div>
+                                <div class="card-body p-0">
+                                    <t t-if="points_history">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover mb-0">
+                                                <thead class="bg-light">
+                                                    <tr>
+                                                        <th>Activity</th>
+                                                        <th>Course</th>
+                                                        <th>Date</th>
+                                                        <th class="text-end">Points</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <t t-foreach="points_history" t-as="points">
+                                                        <tr>
+                                                            <td>
+                                                                <t t-esc="dict(points._fields['activity_type'].selection).get(points.activity_type)"/>
+                                                            </td>
+                                                            <td>
+                                                                <t t-if="points.channel_id">
+                                                                    <t t-esc="points.channel_id.name"/>
+                                                                </t>
+                                                                <t t-else="">-</t>
+                                                            </td>
+                                                            <td><t t-esc="points.earn_date" t-options="{'widget': 'datetime'}"/></td>
+                                                            <td class="text-end">
+                                                                <span class="badge bg-success">+<t t-esc="points.points"/></span>
+                                                            </td>
+                                                        </tr>
+                                                    </t>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </t>
+                                    <t t-else="">
+                                        <div class="p-4 text-center text-muted">
+                                            <p class="mb-0">No points earned yet. Complete lessons to earn points!</p>
+                                        </div>
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- Leaderboard Page -->
+    <template id="leaderboard_page" name="Leaderboard">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="container py-5">
+                    <div class="row mb-4">
+                        <div class="col-12 text-center">
+                            <h1 class="display-4 mb-2">
+                                <i class="fa fa-trophy text-warning me-2"/>Leaderboard
+                            </h1>
+                            <p class="text-muted">Top learners in our community</p>
+                        </div>
+                    </div>
+
+                    <!-- Period Filter -->
+                    <div class="row mb-4">
+                        <div class="col-12 text-center">
+                            <div class="btn-group">
+                                <a t-attf-class="btn btn-outline-primary #{'active' if current_period == 'all' else ''}" 
+                                   href="/leaderboard?period=all">All Time</a>
+                                <a t-attf-class="btn btn-outline-primary #{'active' if current_period == 'month' else ''}" 
+                                   href="/leaderboard?period=month">This Month</a>
+                                <a t-attf-class="btn btn-outline-primary #{'active' if current_period == 'week' else ''}" 
+                                   href="/leaderboard?period=week">This Week</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Leaderboard Table -->
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="card border-0 shadow">
+                                <div class="card-body p-0">
+                                    <t t-if="leaderboard">
+                                        <t t-foreach="leaderboard" t-as="entry">
+                                            <div t-attf-class="p-3 d-flex align-items-center border-bottom 
+                                                #{'bg-warning bg-opacity-10' if entry_index == 0 else 
+                                                  'bg-light bg-opacity-50' if entry_index &lt; 3 else ''}">
+                                                <!-- Rank -->
+                                                <div class="me-3 text-center" style="width: 50px;">
+                                                    <t t-if="entry_index == 0">
+                                                        <span class="badge bg-warning text-dark fs-5">🥇</span>
+                                                    </t>
+                                                    <t t-elif="entry_index == 1">
+                                                        <span class="badge bg-secondary fs-5">🥈</span>
+                                                    </t>
+                                                    <t t-elif="entry_index == 2">
+                                                        <span class="badge bg-danger fs-5">🥉</span>
+                                                    </t>
+                                                    <t t-else="">
+                                                        <span class="text-muted fw-bold">#<t t-esc="entry_index + 1"/></span>
+                                                    </t>
+                                                </div>
+                                                
+                                                <!-- Avatar -->
+                                                <div class="me-3">
+                                                    <img t-att-src="'/web/image/res.users/%s/avatar_128' % entry['user'].id"
+                                                         class="rounded-circle" style="width: 48px; height: 48px; object-fit: cover;"/>
+                                                </div>
+                                                
+                                                <!-- Name -->
+                                                <div class="flex-grow-1">
+                                                    <strong><t t-esc="entry['user'].name"/></strong>
+                                                    <div class="small text-muted">
+                                                        <t t-esc="entry['courses_count']"/> courses
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- Points -->
+                                                <div class="text-end">
+                                                    <span class="badge bg-primary fs-6">
+                                                        <t t-esc="int(entry['total_points'])"/> pts
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </t>
+                                    </t>
+                                    <t t-else="">
+                                        <div class="p-5 text-center text-muted">
+                                            <i class="fa fa-users fa-3x mb-3"/>
+                                            <p>No leaderboard data available yet.</p>
+                                        </div>
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- Course Progress Page -->
+    <template id="course_progress" name="Course Progress">
+        <t t-call="website.layout">
+            <div id="wrap" class="o_portal">
+                <div class="container py-5">
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/my/learning">Dashboard</a></li>
+                                    <li class="breadcrumb-item"><a href="/my/courses">My Courses</a></li>
+                                    <li class="breadcrumb-item active"><t t-esc="course.name"/></li>
+                                </ol>
+                            </nav>
+                            <h1 class="h2"><t t-esc="course.name"/></h1>
+                            <p class="text-muted">Your detailed progress</p>
+                        </div>
+                    </div>
+
+                    <!-- Overall Progress -->
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8">
+                                            <h5>Overall Progress</h5>
+                                            <div class="progress mb-2" style="height: 20px;">
+                                                <div class="progress-bar bg-success" 
+                                                     t-attf-style="width: #{enrollment.completion_percentage}%">
+                                                    <t t-esc="int(enrollment.completion_percentage)"/>%
+                                                </div>
+                                            </div>
+                                            <p class="text-muted mb-0">
+                                                <t t-esc="enrollment.completed_slides"/> of <t t-esc="enrollment.total_slides"/> lessons completed
+                                            </p>
+                                        </div>
+                                        <div class="col-md-4 text-center">
+                                            <a t-att-href="'/slides/%s' % course.id" class="btn btn-lg btn-primary">
+                                                <i class="fa fa-play me-2"/>Continue Learning
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lesson Progress -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-white py-3">
+                                    <h5 class="mb-0">Lessons</h5>
+                                </div>
+                                <div class="list-group list-group-flush">
+                                    <t t-foreach="progress_data" t-as="item">
+                                        <div class="list-group-item d-flex align-items-center">
+                                            <!-- Status Icon -->
+                                            <div class="me-3">
+                                                <t t-if="item['progress'] and item['progress'].is_completed">
+                                                    <i class="fa fa-check-circle fa-lg text-success"/>
+                                                </t>
+                                                <t t-elif="item['progress'] and item['progress'].watch_percentage > 0">
+                                                    <i class="fa fa-play-circle fa-lg text-primary"/>
+                                                </t>
+                                                <t t-else="">
+                                                    <i class="fa fa-circle-o fa-lg text-muted"/>
+                                                </t>
+                                            </div>
+                                            
+                                            <!-- Lesson Info -->
+                                            <div class="flex-grow-1">
+                                                <strong><t t-esc="item['lesson'].name"/></strong>
+                                                <div class="small text-muted">
+                                                    <t t-if="item['lesson'].slide_type == 'video'">
+                                                        <i class="fa fa-video me-1"/>Video
+                                                    </t>
+                                                    <t t-elif="item['lesson'].slide_type == 'article'">
+                                                        <i class="fa fa-file-text me-1"/>Article
+                                                    </t>
+                                                    <t t-elif="item['lesson'].slide_type == 'quiz'">
+                                                        <i class="fa fa-question-circle me-1"/>Quiz
+                                                    </t>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Progress -->
+                                            <div class="text-end" style="width: 120px;">
+                                                <t t-if="item['progress']">
+                                                    <div class="progress mb-1" style="height: 6px;">
+                                                        <div class="progress-bar" 
+                                                             t-attf-style="width: #{item['progress'].watch_percentage}%"/>
+                                                    </div>
+                                                    <small class="text-muted">
+                                                        <t t-esc="int(item['progress'].watch_percentage)"/>%
+                                                    </small>
+                                                </t>
+                                                <t t-else="">
+                                                    <small class="text-muted">Not started</small>
+                                                </t>
+                                            </div>
+                                        </div>
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>

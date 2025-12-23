@@ -1,0 +1,460 @@
+// ==========================================================================
+// Seitech Website Theme - Cards
+// ==========================================================================
+
+// Note: variables and mixins are loaded before this file via __manifest__.py
+
+// --------------------------------------------------------------------------
+// Base Card
+// --------------------------------------------------------------------------
+
+.card-seitech {
+    @include card-base;
+    @include card-hover;
+}
+
+// --------------------------------------------------------------------------
+// Card Parts
+// --------------------------------------------------------------------------
+
+.card-seitech-header {
+    padding: $seitech-space-6;
+    border-bottom: 1px solid $seitech-gray-100;
+}
+
+.card-seitech-body {
+    padding: $seitech-space-6;
+}
+
+.card-seitech-footer {
+    padding: $seitech-space-4 $seitech-space-6;
+    background-color: $seitech-gray-50;
+    border-top: 1px solid $seitech-gray-100;
+}
+
+// --------------------------------------------------------------------------
+// Card Image
+// --------------------------------------------------------------------------
+
+.card-seitech-img {
+    position: relative;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform $seitech-transition-slow $seitech-ease-in-out;
+    }
+
+    .card-seitech:hover & img {
+        transform: scale(1.05);
+    }
+}
+
+.card-seitech-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+}
+
+// --------------------------------------------------------------------------
+// Featured Card
+// --------------------------------------------------------------------------
+
+.card-seitech-featured {
+    @include card-base;
+    position: relative;
+    border: 2px solid $seitech-primary;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, $seitech-primary, $seitech-secondary);
+    }
+}
+
+// --------------------------------------------------------------------------
+// Horizontal Card
+// --------------------------------------------------------------------------
+
+.card-seitech-horizontal {
+    @include card-base;
+    display: flex;
+    flex-direction: column;
+
+    @include md {
+        flex-direction: row;
+    }
+
+    .card-seitech-img {
+        width: 100%;
+        height: 200px;
+
+        @include md {
+            width: 300px;
+            height: auto;
+        }
+    }
+
+    .card-seitech-body {
+        flex: 1;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Course Card
+// --------------------------------------------------------------------------
+
+.card-course {
+    @include card-base;
+    @include card-hover;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .card-course-img {
+        position: relative;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform $seitech-transition-slow $seitech-ease-in-out;
+        }
+
+        &:hover img {
+            transform: scale(1.05);
+        }
+
+        .card-course-badge {
+            position: absolute;
+            top: $seitech-space-3;
+            left: $seitech-space-3;
+        }
+    }
+
+    .card-course-body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: $seitech-space-6;
+    }
+
+    .card-course-category {
+        font-size: $seitech-font-size-xs;
+        font-weight: $seitech-font-weight-semibold;
+        color: $seitech-primary;
+        text-transform: uppercase;
+        letter-spacing: $seitech-tracking-wide;
+        margin-bottom: $seitech-space-2;
+    }
+
+    .card-course-title {
+        font-size: $seitech-font-size-xl;
+        font-weight: $seitech-font-weight-bold;
+        color: $seitech-text-primary;
+        margin-bottom: $seitech-space-3;
+        @include line-clamp(2);
+    }
+
+    .card-course-description {
+        font-size: $seitech-font-size-sm;
+        color: $seitech-text-secondary;
+        margin-bottom: $seitech-space-4;
+        @include line-clamp(2);
+        flex: 1;
+    }
+
+    .card-course-meta {
+        display: flex;
+        align-items: center;
+        gap: $seitech-space-4;
+        font-size: $seitech-font-size-sm;
+        color: $seitech-text-muted;
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: $seitech-space-1;
+        }
+    }
+
+    .card-course-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: $seitech-space-4 $seitech-space-6;
+        border-top: 1px solid $seitech-gray-100;
+        background-color: $seitech-gray-50;
+    }
+
+    .card-course-price {
+        font-size: $seitech-font-size-xl;
+        font-weight: $seitech-font-weight-bold;
+        color: $seitech-text-primary;
+
+        .price-original {
+            font-size: $seitech-font-size-sm;
+            color: $seitech-text-muted;
+            text-decoration: line-through;
+            margin-left: $seitech-space-2;
+        }
+    }
+
+    .card-course-instructor {
+        display: flex;
+        align-items: center;
+        gap: $seitech-space-3;
+        margin-top: $seitech-space-4;
+        padding-top: $seitech-space-4;
+        border-top: 1px solid $seitech-gray-100;
+
+        .instructor-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: $seitech-radius-full;
+            object-fit: cover;
+        }
+
+        .instructor-name {
+            font-size: $seitech-font-size-sm;
+            font-weight: $seitech-font-weight-medium;
+            color: $seitech-text-primary;
+        }
+    }
+    
+    // Enhanced course card elements (PHP port)
+    .card-course-badge-discount {
+        position: absolute;
+        top: $seitech-space-3;
+        right: $seitech-space-3;
+    }
+    
+    .card-wishlist-btn {
+        position: absolute;
+        bottom: $seitech-space-3;
+        right: $seitech-space-3;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.95);
+        border: none;
+        border-radius: $seitech-radius-full;
+        cursor: pointer;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        
+        svg {
+            stroke: $seitech-gray-500;
+            transition: stroke 0.2s, fill 0.2s;
+        }
+        
+        &:hover {
+            svg {
+                stroke: #ef4444;
+            }
+        }
+        
+        &.active svg {
+            fill: #ef4444;
+            stroke: #ef4444;
+        }
+    }
+    
+    &:hover .card-wishlist-btn {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .card-course-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: $seitech-space-2;
+    }
+    
+    .card-course-rating {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        
+        .rating-stars-sm {
+            display: flex;
+            gap: 1px;
+        }
+        
+        .rating-value {
+            font-size: $seitech-font-size-xs;
+            font-weight: $seitech-font-weight-semibold;
+            color: $seitech-gray-800;
+        }
+        
+        .rating-count {
+            font-size: $seitech-font-size-xs;
+            color: $seitech-gray-400;
+        }
+    }
+    
+    .course-instructor {
+        display: flex;
+        align-items: center;
+        gap: $seitech-space-2;
+        flex: 1;
+        min-width: 0;
+        
+        .instructor-avatar {
+            width: 28px;
+            height: 28px;
+            border-radius: $seitech-radius-full;
+            object-fit: cover;
+        }
+        
+        span {
+            font-size: $seitech-font-size-xs;
+            color: $seitech-gray-600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    
+    .course-enrollments {
+        display: flex;
+        align-items: center;
+        gap: $seitech-space-1;
+        font-size: $seitech-font-size-xs;
+        color: $seitech-gray-500;
+        
+        svg {
+            stroke: $seitech-gray-400;
+        }
+    }
+}
+
+// Star icons for ratings
+.star-icon {
+    &.star-filled {
+        fill: #f59e0b;
+        color: #f59e0b;
+    }
+    
+    &.star-half {
+        fill: url(#star-gradient);
+        color: #f59e0b;
+    }
+    
+    &.star-empty {
+        fill: none;
+        stroke: #d1d5db;
+        color: #d1d5db;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Stats Card
+// --------------------------------------------------------------------------
+
+.card-stat {
+    @include card-base;
+    padding: $seitech-space-6;
+    text-align: center;
+
+    .stat-value {
+        font-size: $seitech-font-size-4xl;
+        font-weight: $seitech-font-weight-extrabold;
+        color: $seitech-primary;
+        line-height: 1;
+        margin-bottom: $seitech-space-2;
+
+        @include lg {
+            font-size: $seitech-font-size-5xl;
+        }
+    }
+
+    .stat-label {
+        font-size: $seitech-font-size-base;
+        font-weight: $seitech-font-weight-medium;
+        color: $seitech-text-primary;
+        margin-bottom: $seitech-space-1;
+    }
+
+    .stat-description {
+        font-size: $seitech-font-size-sm;
+        color: $seitech-text-secondary;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Testimonial Card
+// --------------------------------------------------------------------------
+
+.card-testimonial {
+    @include card-base;
+    padding: $seitech-space-8;
+
+    .testimonial-quote {
+        position: relative;
+        font-size: $seitech-font-size-lg;
+        font-style: italic;
+        color: $seitech-text-primary;
+        line-height: $seitech-line-height-relaxed;
+        margin-bottom: $seitech-space-6;
+
+        &::before {
+            content: '"';
+            position: absolute;
+            top: -$seitech-space-4;
+            left: -$seitech-space-2;
+            font-size: $seitech-font-size-6xl;
+            color: $seitech-primary-200;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+    }
+
+    .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: $seitech-space-4;
+
+        .author-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: $seitech-radius-full;
+            object-fit: cover;
+        }
+
+        .author-info {
+            .author-name {
+                font-weight: $seitech-font-weight-semibold;
+                color: $seitech-text-primary;
+            }
+
+            .author-title {
+                font-size: $seitech-font-size-sm;
+                color: $seitech-text-secondary;
+            }
+        }
+    }
+
+    .testimonial-rating {
+        display: flex;
+        gap: $seitech-space-1;
+        margin-top: $seitech-space-4;
+
+        .star {
+            color: $seitech-warning;
+        }
+    }
+}

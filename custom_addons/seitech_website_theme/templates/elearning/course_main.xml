@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Override Courses Homepage -->
+    <template id="courses_home_inherit_seitech" inherit_id="website_slides.courses_home" name="Seitech Courses Homepage">
+        <!-- Add custom wrapper class to main container - uses o_wslides_wrap in Odoo 19 -->
+        <xpath expr="//div[hasclass('o_wslides_wrap')]" position="attributes">
+            <attribute name="class" add="page-courses" separator=" "/>
+        </xpath>
+    </template>
+
+    <!-- Override Course Card - the card class is on an anchor element -->
+    <template id="course_card_inherit_seitech" inherit_id="website_slides.course_card" name="Seitech Course Card">
+        <xpath expr="//a[@t-title='channel.name']" position="attributes">
+            <attribute name="class" add="seitech-course-card" separator=" "/>
+        </xpath>
+    </template>
+
+    <!-- Override Course Detail Page -->
+    <template id="course_main_inherit_seitech" inherit_id="website_slides.course_main" name="Seitech Course Detail">
+        <!-- Add custom class to main container -->
+        <xpath expr="//div[hasclass('o_wslides_course_main')]" position="attributes">
+            <attribute name="class" add="page-course-detail" separator=" "/>
+        </xpath>
+    </template>
+
+    <!-- Override Course Sidebar -->
+    <template id="course_sidebar_inherit_seitech" inherit_id="website_slides.course_sidebar" name="Seitech Course Sidebar">
+        <xpath expr="//div[hasclass('o_wslides_course_sidebar')]" position="attributes">
+            <attribute name="class" add="seitech-course-sidebar" separator=" "/>
+        </xpath>
+    </template>
+
+    <!-- Override Lesson Card -->
+    <template id="lesson_card_inherit_seitech" inherit_id="website_slides.lesson_card" name="Seitech Lesson Card">
+        <xpath expr="//div[hasclass('o_wslides_lesson_card')]" position="attributes">
+            <attribute name="class" add="seitech-lesson-card" separator=" "/>
+        </xpath>
+    </template>
+
+    <!-- ================================================================== -->
+    <!-- Custom Course Detail Page (Migrated from PHP course_page.php) -->
+    <!-- ================================================================== -->
+
+    <template id="course_detail_page" name="Seitech Course Detail Page">
+        <t t-call="website.layout">
+            <t t-set="pageName" t-value="'course-detail'"/>
+            <t t-set="additional_title" t-value="course.name"/>
+
+            <div id="wrap" class="o_seitech_course_detail">
+                <!-- Course Hero Banner -->
+                <section class="course-detail-hero">
+                    <div class="course-hero-bg" t-attf-style="background-image: url('/web/image/slide.channel/#{course.id}/image_1024');"/>
+                    <div class="course-hero-overlay"/>
+                    <div class="container-seitech">
+                        <div class="course-hero-content">
+                            <!-- Breadcrumb -->
+                            <nav class="breadcrumb-seitech" aria-label="Breadcrumb">
+                                <a href="/">Home</a>
+                                <span class="breadcrumb-sep">/</span>
+                                <a href="/courses">Courses</a>
+                                <span class="breadcrumb-sep">/</span>
+                                <t t-if="course.seitech_category_id">
+                                    <a t-attf-href="/courses?category=#{course.seitech_category_id.id}" t-esc="course.seitech_category_id.name"/>
+                                    <span class="breadcrumb-sep">/</span>
+                                </t>
+                                <span class="breadcrumb-current" t-esc="course.name"/>
+                            </nav>
+
+                            <h1 class="course-hero-title" t-esc="course.name"/>
+                            <p class="course-hero-subtitle" t-esc="course.description_short or ''"/>
+
+                            <!-- Course Meta Info -->
+                            <div class="course-hero-meta">
+                                <!-- Instructor -->
+                                <div class="meta-item" t-if="course.primary_instructor_id">
+                                    <img t-att-src="'/web/image/seitech.instructor/%s/image' % course.primary_instructor_id.id"
+                                         class="instructor-avatar-sm" alt="Instructor"/>
+                                    <div class="meta-content">
+                                        <span class="meta-label">Created by</span>
+                                        <a t-attf-href="/instructor/#{course.primary_instructor_id.id}" class="meta-value" t-esc="course.primary_instructor_id.name"/>
+                                    </div>
+                                </div>
+
+                                <!-- Duration -->
+                                <div class="meta-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                    <span class="meta-value" t-esc="'%.1f hours' % course.total_time"/>
+                                </div>
+
+                                <!-- Enrolled -->
+                                <div class="meta-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="9" cy="7" r="4"/>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                    </svg>
+                                    <span class="meta-value"><t t-esc="course.members_count or 0"/> Enrolled</span>
+                                </div>
+
+                                <!-- Rating -->
+                                <div class="meta-item">
+                                    <div class="rating-stars-hero">
+                                        <t t-set="avg_rating" t-value="course.rating_avg or 0"/>
+                                        <t t-foreach="range(5)" t-as="star">
+                                            <svg t-att-class="'star-icon ' + ('star-filled' if star &lt; int(avg_rating) else 'star-empty')" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                            </svg>
+                                        </t>
+                                    </div>
+                                    <span class="meta-value"><t t-esc="'%.1f' % avg_rating"/> (<t t-esc="course.rating_count"/> reviews)</span>
+                                </div>
+
+                                <!-- Language -->
+                                <div class="meta-item" t-if="course.course_language">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <line x1="2" y1="12" x2="22" y2="12"/>
+                                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                    </svg>
+                                    <span class="meta-value" t-esc="course.course_language.capitalize()"/>
+                                </div>
+
+                                <!-- Last Updated -->
+                                <div class="meta-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    <span class="meta-value">Updated <t t-esc="course.write_date.strftime('%b %Y')"/></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Main Content -->
+                <section class="course-detail-main">
+                    <div class="container-seitech">
+                        <div class="course-detail-layout">
+                            <!-- Left Column - Tabs -->
+                            <div class="course-detail-content">
+                                <!-- Tab Navigation -->
+                                <div class="course-tabs">
+                                    <button class="course-tab active" data-tab="overview">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                                        </svg>
+                                        Overview
+                                    </button>
+                                    <button class="course-tab" data-tab="curriculum">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <line x1="8" y1="6" x2="21" y2="6"/>
+                                            <line x1="8" y1="12" x2="21" y2="12"/>
+                                            <line x1="8" y1="18" x2="21" y2="18"/>
+                                            <line x1="3" y1="6" x2="3.01" y2="6"/>
+                                            <line x1="3" y1="12" x2="3.01" y2="12"/>
+                                            <line x1="3" y1="18" x2="3.01" y2="18"/>
+                                        </svg>
+                                        Curriculum
+                                    </button>
+                                    <button class="course-tab" data-tab="instructor">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                            <circle cx="12" cy="7" r="4"/>
+                                        </svg>
+                                        Instructor
+                                    </button>
+                                    <button class="course-tab" data-tab="reviews">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                        </svg>
+                                        Reviews
+                                    </button>
+                                </div>
+
+                                <!-- Tab Panels -->
+                                <div class="course-tab-panels">
+                                    <!-- Overview Tab -->
+                                    <div class="course-tab-panel active" id="tab-overview">
+                                        <div class="course-overview">
+                                            <!-- What You'll Learn -->
+                                            <div class="overview-section" t-if="course.outcomes_html">
+                                                <h3 class="section-title">What You'll Learn</h3>
+                                                <div class="learning-outcomes" t-raw="course.outcomes_html"/>
+                                            </div>
+
+                                            <!-- Description -->
+                                            <div class="overview-section">
+                                                <h3 class="section-title">Description</h3>
+                                                <div class="course-description-full" t-raw="course.description"/>
+                                            </div>
+
+                                            <!-- Requirements -->
+                                            <div class="overview-section" t-if="course.requirements_html">
+                                                <h3 class="section-title">Requirements</h3>
+                                                <div class="requirements-list" t-raw="course.requirements_html"/>
+                                            </div>
+
+                                            <!-- Target Audience -->
+                                            <div class="overview-section" t-if="course.audience_html">
+                                                <h3 class="section-title">Who This Course Is For</h3>
+                                                <div class="audience-list" t-raw="course.audience_html"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Curriculum Tab -->
+                                    <div class="course-tab-panel" id="tab-curriculum">
+                                        <div class="curriculum-header">
+                                            <div class="curriculum-stats">
+                                                <span><t t-esc="len(course.slide_ids.filtered(lambda s: s.is_category))"/> sections</span>
+                                                <span>•</span>
+                                                <span><t t-esc="course.slide_content_count"/> lessons</span>
+                                                <span>•</span>
+                                                <span><t t-esc="'%.1f' % course.total_time"/> total hours</span>
+                                            </div>
+                                            <button class="btn-expand-all">Expand All</button>
+                                        </div>
+
+                                        <div class="curriculum-accordion">
+                                            <t t-set="section_idx" t-value="0"/>
+                                            <t t-foreach="course.slide_ids.filtered(lambda s: s.is_category)" t-as="section">
+                                                <div class="accordion-section">
+                                                    <button class="accordion-header" t-att-class="'accordion-header' + (' active' if section_idx == 0 else '')">
+                                                        <div class="accordion-title">
+                                                            <svg class="accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                                <path d="m6 9 6 6 6-6"/>
+                                                            </svg>
+                                                            <span t-esc="section.name"/>
+                                                        </div>
+                                                        <div class="accordion-meta">
+                                                            <span t-esc="'%d lessons' % len(section.child_ids)"/>
+                                                            <span class="meta-sep">•</span>
+                                                            <span t-esc="'%.0f min' % sum(section.child_ids.mapped('completion_time'))"/>
+                                                        </div>
+                                                    </button>
+                                                    <div class="accordion-content" t-att-style="'display: block;' if section_idx == 0 else 'display: none;'">
+                                                        <ul class="lesson-list">
+                                                            <t t-foreach="section.child_ids" t-as="lesson">
+                                                                <li class="lesson-item">
+                                                                    <div class="lesson-icon">
+                                                                        <t t-if="lesson.slide_type == 'video'">
+                                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                                                <polygon points="5 3 19 12 5 21 5 3"/>
+                                                                            </svg>
+                                                                        </t>
+                                                                        <t t-elif="lesson.slide_type == 'document'">
+                                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                                                                <polyline points="14 2 14 8 20 8"/>
+                                                                            </svg>
+                                                                        </t>
+                                                                        <t t-elif="lesson.slide_type == 'quiz'">
+                                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                                                <circle cx="12" cy="12" r="10"/>
+                                                                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                                                                                <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                                                            </svg>
+                                                                        </t>
+                                                                        <t t-else="">
+                                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                                                <circle cx="12" cy="12" r="10"/>
+                                                                                <polygon points="10 8 16 12 10 16 10 8"/>
+                                                                            </svg>
+                                                                        </t>
+                                                                    </div>
+                                                                    <span class="lesson-title" t-esc="lesson.name"/>
+                                                                    <t t-if="lesson.is_preview">
+                                                                        <span class="lesson-preview-badge">Preview</span>
+                                                                    </t>
+                                                                    <span class="lesson-duration" t-esc="'%d min' % lesson.completion_time"/>
+                                                                </li>
+                                                            </t>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <t t-set="section_idx" t-value="section_idx + 1"/>
+                                            </t>
+                                        </div>
+                                    </div>
+
+                                    <!-- Instructor Tab -->
+                                    <div class="course-tab-panel" id="tab-instructor">
+                                        <div class="instructor-profile" t-if="course.primary_instructor_id">
+                                            <div class="instructor-header">
+                                                <img t-att-src="'/web/image/seitech.instructor/%s/image' % course.primary_instructor_id.id"
+                                                     class="instructor-avatar-lg" alt="Instructor"/>
+                                                <div class="instructor-info">
+                                                    <h3 class="instructor-name" t-esc="course.primary_instructor_id.name"/>
+                                                    <p class="instructor-title" t-esc="course.primary_instructor_id.title or 'Instructor'"/>
+                                                    <div class="instructor-stats">
+                                                        <div class="stat">
+                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                                            </svg>
+                                                            <span><t t-esc="'%.1f' % (course.primary_instructor_id.rating_avg or 0)"/> Rating</span>
+                                                        </div>
+                                                        <div class="stat">
+                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                                                <circle cx="9" cy="7" r="4"/>
+                                                            </svg>
+                                                            <span><t t-esc="course.primary_instructor_id.total_students or 0"/> Students</span>
+                                                        </div>
+                                                        <div class="stat">
+                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                                <circle cx="12" cy="12" r="10"/>
+                                                                <polygon points="10 8 16 12 10 16 10 8"/>
+                                                            </svg>
+                                                            <span><t t-esc="course.primary_instructor_id.total_courses or 0"/> Courses</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="instructor-bio" t-raw="course.primary_instructor_id.bio or ''"/>
+                                        </div>
+                                    </div>
+
+                                    <!-- Reviews Tab -->
+                                    <div class="course-tab-panel" id="tab-reviews">
+                                        <div class="reviews-summary">
+                                            <div class="reviews-average">
+                                                <span class="average-value" t-esc="'%.1f' % (course.rating_avg or 0)"/>
+                                                <div class="rating-stars-lg">
+                                                    <t t-set="avg_rating" t-value="course.rating_avg or 0"/>
+                                                    <t t-foreach="range(5)" t-as="star">
+                                                        <svg t-att-class="'star-icon ' + ('star-filled' if star &lt; int(avg_rating) else 'star-empty')" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                                        </svg>
+                                                    </t>
+                                                </div>
+                                                <span class="reviews-count"><t t-esc="course.rating_count"/> reviews</span>
+                                            </div>
+                                            <!-- Rating Breakdown would go here -->
+                                        </div>
+
+                                        <div class="reviews-list">
+                                            <!-- Reviews are loaded dynamically or from course.rating_ids -->
+                                            <p class="no-reviews" t-if="not course.rating_count">No reviews yet. Be the first to review!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Column - Sidebar -->
+                            <aside class="course-detail-sidebar">
+                                <div class="course-card-sticky">
+                                    <!-- Course Preview Image/Video -->
+                                    <div class="course-preview">
+                                        <img t-att-src="'/web/image/slide.channel/%s/image_512' % course.id" alt="Course Preview"/>
+                                        <button class="play-preview-btn" t-if="course.preview_video_url">
+                                            <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                                                <polygon points="5 3 19 12 5 21 5 3"/>
+                                            </svg>
+                                        </button>
+                                        <!-- Wishlist -->
+                                        <button class="wishlist-btn" t-att-data-course-id="course.id">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <!-- Price -->
+                                    <div class="course-price-section">
+                                        <t t-if="course.is_paid">
+                                            <div class="price-display">
+                                                <span class="price-current" t-esc="course.display_price"/>
+                                                <span class="price-original" t-if="course.discount_price" t-esc="course.original_price"/>
+                                            </div>
+                                            <t t-if="course.discount_price">
+                                                <span class="discount-badge"><t t-esc="'-%.0f%%' % ((1 - course.discount_price / course.original_price) * 100)"/> off</span>
+                                            </t>
+                                        </t>
+                                        <t t-else="">
+                                            <span class="price-free">Free</span>
+                                        </t>
+                                    </div>
+
+                                    <!-- CTA Buttons -->
+                                    <div class="course-cta">
+                                        <t t-if="is_enrolled">
+                                            <a t-attf-href="/slides/slide/#{course.slide_ids[0].id if course.slide_ids else course.id}" class="btn-seitech-primary btn-lg w-full">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                                </svg>
+                                                Start Learning
+                                            </a>
+                                        </t>
+                                        <t t-else="">
+                                            <t t-if="course.is_paid">
+                                                <a t-attf-href="/shop/cart/update?product_id=#{course.product_id.id}" class="btn-seitech-primary btn-lg w-full">
+                                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <circle cx="9" cy="21" r="1"/>
+                                                        <circle cx="20" cy="21" r="1"/>
+                                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                                                    </svg>
+                                                    Add to Cart
+                                                </a>
+                                                <a t-attf-href="/shop/checkout?product_id=#{course.product_id.id}" class="btn-seitech-secondary btn-lg w-full">
+                                                    Buy Now
+                                                </a>
+                                            </t>
+                                            <t t-else="">
+                                                <a t-attf-href="/slides/#{course.id}/enroll" class="btn-seitech-primary btn-lg w-full">
+                                                    Enroll Now - Free
+                                                </a>
+                                            </t>
+                                        </t>
+                                    </div>
+
+                                    <!-- Course Includes -->
+                                    <div class="course-includes">
+                                        <h4>This course includes:</h4>
+                                        <ul class="includes-list">
+                                            <li>
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                                </svg>
+                                                <t t-esc="'%.1f' % course.total_time"/> hours of video
+                                            </li>
+                                            <li>
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                                    <polyline points="14 2 14 8 20 8"/>
+                                                </svg>
+                                                <t t-esc="course.slide_content_count"/> lessons
+                                            </li>
+                                            <li t-if="course.quiz_count">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <circle cx="12" cy="12" r="10"/>
+                                                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                                                </svg>
+                                                <t t-esc="course.quiz_count"/> quizzes
+                                            </li>
+                                            <li>
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                                    <line x1="9" y1="9" x2="15" y2="15"/>
+                                                    <line x1="15" y1="9" x2="9" y2="15"/>
+                                                </svg>
+                                                Full lifetime access
+                                            </li>
+                                            <li>
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                                                    <line x1="12" y1="18" x2="12.01" y2="18"/>
+                                                </svg>
+                                                Access on mobile and TV
+                                            </li>
+                                            <li t-if="course.has_certificate">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <circle cx="12" cy="8" r="7"/>
+                                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                                                </svg>
+                                                Certificate of completion
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Share -->
+                                    <div class="course-share">
+                                        <span>Share this course:</span>
+                                        <div class="share-buttons">
+                                            <a t-attf-href="https://www.facebook.com/sharer/sharer.php?u=#{request.httprequest.url}" target="_blank" class="share-btn facebook">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                                                </svg>
+                                            </a>
+                                            <a t-attf-href="https://twitter.com/intent/tweet?url=#{request.httprequest.url}&amp;text=#{course.name}" target="_blank" class="share-btn twitter">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                                                </svg>
+                                            </a>
+                                            <a t-attf-href="https://www.linkedin.com/shareArticle?url=#{request.httprequest.url}&amp;title=#{course.name}" target="_blank" class="share-btn linkedin">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                                    <rect x="2" y="9" width="4" height="12"/>
+                                                    <circle cx="4" cy="4" r="2"/>
+                                                </svg>
+                                            </a>
+                                            <a t-attf-href="https://api.whatsapp.com/send?text=#{course.name}%20#{request.httprequest.url}" target="_blank" class="share-btn whatsapp">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Related Courses -->
+                <section class="related-courses-section" t-if="related_courses">
+                    <div class="container-seitech">
+                        <h2 class="section-title">Related Courses</h2>
+                        <div class="courses-grid">
+                            <t t-foreach="related_courses[:4]" t-as="course">
+                                <t t-call="seitech_elearning.course_card"/>
+                            </t>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+
+</odoo>

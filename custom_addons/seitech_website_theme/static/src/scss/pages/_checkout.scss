@@ -1,0 +1,503 @@
+// ============================================================================
+// Checkout/Cart/Payment Page Styles
+// Migrated from PHP: shopping_cart.php, payment_gateway.php
+// ============================================================================
+
+// ============================================================================
+// CART PAGE
+// ============================================================================
+.oe_cart {
+  // Cart Hero Section
+  .cart-hero {
+    background: linear-gradient(135deg, var(--seitech-surface, #f8fafc) 0%, #e2e8f0 100%);
+
+    .breadcrumb {
+      background: transparent;
+      padding: 0;
+      margin: 0;
+
+      .breadcrumb-item {
+        a {
+          color: var(--seitech-primary, #0284c7);
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        &.active {
+          color: var(--bs-secondary);
+        }
+      }
+    }
+
+    h2 {
+      color: var(--seitech-text, #0b1220);
+    }
+  }
+
+  // Cart Table Styling
+  .table {
+    border-collapse: separate;
+    border-spacing: 0;
+
+    thead {
+      th {
+        background-color: var(--seitech-surface, #f8fafc);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+        color: var(--bs-secondary);
+        border: none;
+        padding: 1rem;
+      }
+    }
+
+    tbody {
+      tr {
+        transition: background-color 0.2s ease;
+
+        &:hover {
+          background-color: rgba(var(--seitech-primary-rgb), 0.03);
+        }
+
+        td {
+          vertical-align: middle;
+          padding: 1.25rem 1rem;
+          border-bottom: 1px solid var(--bs-border-color);
+        }
+      }
+    }
+
+    // Product name styling
+    .td-product_name {
+      a {
+        text-decoration: none;
+        color: var(--seitech-text, #0b1220);
+
+        &:hover {
+          color: var(--seitech-primary, #0284c7);
+        }
+
+        .fw-bold {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    // Quantity input
+    .css_quantity {
+      .form-control {
+        width: 60px;
+        text-align: center;
+        border-radius: 8px;
+      }
+
+      .btn {
+        border-radius: 8px;
+      }
+    }
+
+    // Price styling
+    .oe_currency_value {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--seitech-primary, #0284c7);
+    }
+
+    // Remove button
+    .js_delete_product {
+      color: var(--bs-danger);
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  // Cart Summary Card
+  .card {
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+    .card-header {
+      background-color: var(--seitech-surface, #f8fafc);
+      border-radius: 16px 16px 0 0;
+      border: none;
+      font-weight: 600;
+    }
+
+    .card-body {
+      .row {
+        &:not(:last-child) {
+          border-bottom: 1px solid var(--bs-border-color);
+          padding-bottom: 0.75rem;
+          margin-bottom: 0.75rem;
+        }
+      }
+    }
+  }
+
+  // Checkout Button
+  .a-submit {
+    background-color: var(--seitech-primary, #0284c7);
+    border-color: var(--seitech-primary, #0284c7);
+    border-radius: 12px;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: var(--seitech-primary-dark, #0369a1);
+      border-color: var(--seitech-primary-dark, #0369a1);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(var(--seitech-primary-rgb), 0.3);
+    }
+  }
+}
+
+// ============================================================================
+// COUPON FORM
+// ============================================================================
+.o_coupon_form {
+  background-color: var(--seitech-surface, #f8fafc) !important;
+  border-radius: 12px !important;
+  padding: 1rem !important;
+
+  .input-group {
+    .form-control {
+      border-radius: 8px 0 0 8px;
+      border-right: none;
+
+      &:focus {
+        border-color: var(--seitech-primary, #0284c7);
+        box-shadow: none;
+      }
+    }
+
+    .btn {
+      border-radius: 0 8px 8px 0;
+    }
+  }
+
+  // Coupon success message
+  .alert-success {
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(var(--bs-success-rgb), 0.1);
+    color: var(--bs-success);
+  }
+}
+
+// ============================================================================
+// GIFT COURSE OPTION
+// ============================================================================
+.gift-course-option {
+  .form-check-input:checked {
+    background-color: var(--seitech-primary, #0284c7);
+    border-color: var(--seitech-primary, #0284c7);
+  }
+
+  #gift_email_section {
+    .input-group {
+      .input-group-text {
+        border-radius: 8px 0 0 8px;
+        border-right: none;
+      }
+
+      .form-control {
+        border-radius: 0 8px 8px 0;
+
+        &:focus {
+          border-color: var(--seitech-primary, #0284c7);
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+// ============================================================================
+// PAYMENT PAGE
+// ============================================================================
+#o_payment {
+  .payment-hero {
+    background: linear-gradient(135deg, var(--seitech-surface, #f8fafc) 0%, #e2e8f0 100%);
+    
+    .breadcrumb {
+      background: transparent;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  // Payment Form
+  .o_payment_form {
+    background-color: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+    // Payment Provider Cards
+    .o_payment_option_card {
+      border: 2px solid var(--bs-border-color);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      transition: all 0.2s ease;
+      cursor: pointer;
+
+      &:hover {
+        border-color: var(--seitech-primary, #0284c7);
+        background-color: rgba(var(--seitech-primary-rgb), 0.03);
+      }
+
+      &.o_selected {
+        border-color: var(--bs-success);
+        background-color: rgba(var(--bs-success-rgb), 0.05);
+
+        &::before {
+          content: '\f00c';
+          font-family: 'Font Awesome 6 Free';
+          font-weight: 900;
+          position: absolute;
+          right: 1rem;
+          color: var(--bs-success);
+        }
+      }
+
+      img {
+        max-height: 32px;
+        max-width: 100px;
+      }
+    }
+
+    // Pay Button
+    .o_payment_submit {
+      background-color: var(--seitech-primary, #0284c7);
+      border-color: var(--seitech-primary, #0284c7);
+      border-radius: 12px;
+      padding: 1rem 2rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+
+      &:hover:not(:disabled) {
+        background-color: var(--seitech-primary-dark, #0369a1);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(var(--seitech-primary-rgb), 0.3);
+      }
+
+      &:disabled {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  // Order Summary Sidebar
+  .o_payment_summary {
+    background-color: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 100px;
+
+    h5 {
+      font-weight: 700;
+      color: var(--seitech-text, #0b1220);
+    }
+
+    .o_payment_order_line {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--bs-border-color);
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    .o_payment_total {
+      background-color: var(--seitech-surface, #f8fafc);
+      margin: 1rem -1.5rem -1.5rem;
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 0 16px 16px;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+// ============================================================================
+// CONFIRMATION PAGE
+// ============================================================================
+.course-confirmation-section {
+  border: 2px solid var(--bs-success);
+
+  .icon-wrapper {
+    flex-shrink: 0;
+  }
+
+  h4 {
+    margin-bottom: 0.25rem;
+  }
+}
+
+.purchased-courses {
+  .course-card {
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateX(5px);
+    }
+
+    .course-thumb {
+      flex-shrink: 0;
+    }
+
+    .course-info {
+      min-width: 0;
+
+      h6 {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+// ============================================================================
+// PAYMENT SUCCESS PAGE
+// ============================================================================
+.o_seitech_payment_success {
+  .success-hero {
+    background: linear-gradient(135deg, var(--bs-success) 0%, #059669 100%);
+
+    .check-circle {
+      animation: scaleIn 0.5s ease-out;
+    }
+  }
+
+  .next-steps {
+    .step-item {
+      .step-number {
+        font-weight: 700;
+      }
+    }
+
+    .action-buttons {
+      .btn {
+        border-radius: 12px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// ============================================================================
+// EMPTY CART STATE
+// ============================================================================
+.oe_cart {
+  .o_empty_cart {
+    text-align: center;
+    padding: 3rem 1rem;
+
+    i {
+      font-size: 4rem;
+      color: var(--bs-secondary);
+      opacity: 0.5;
+      margin-bottom: 1.5rem;
+    }
+
+    h3 {
+      font-weight: 700;
+      color: var(--seitech-text, #0b1220);
+    }
+
+    .btn {
+      border-radius: 12px;
+      padding: 0.75rem 2rem;
+    }
+  }
+}
+
+// ============================================================================
+// ANIMATIONS
+// ============================================================================
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+// ============================================================================
+// RESPONSIVE
+// ============================================================================
+@media (max-width: 991.98px) {
+  .oe_cart {
+    .table {
+      font-size: 0.9rem;
+
+      .td-product_name {
+        min-width: 200px;
+      }
+    }
+  }
+
+  #o_payment {
+    .o_payment_summary {
+      position: static;
+      margin-top: 2rem;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .oe_cart {
+    .table {
+      display: block;
+      overflow-x: auto;
+    }
+  }
+
+  .course-confirmation-section {
+    .row {
+      flex-direction: column;
+      text-align: center;
+
+      .col-auto {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .o_seitech_payment_success {
+    .steps-grid {
+      .step-item {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .action-buttons {
+      flex-direction: column;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,312 @@
+// ==========================================================================
+// Seitech - Odoo E-Learning (website_slides) Style Overrides
+// ==========================================================================
+// This file overrides the default Odoo website_slides styles
+
+// Note: variables and mixins are loaded before this file via __manifest__.py
+
+// --------------------------------------------------------------------------
+// General Overrides
+// --------------------------------------------------------------------------
+
+// Override Odoo's default card styling
+.o_wslides_home_main {
+    background-color: $seitech-gray-50 !important;
+    padding: $seitech-space-8 0;
+}
+
+// Course Cards
+.o_wslides_slides_channel_card,
+.o_wslides_channel_card {
+    border: none !important;
+    border-radius: $seitech-radius-2xl !important;
+    box-shadow: $seitech-shadow-md !important;
+    overflow: hidden;
+    transition: all $seitech-transition-base $seitech-ease-in-out !important;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: $seitech-shadow-xl !important;
+    }
+
+    .card-body {
+        padding: $seitech-space-5 !important;
+    }
+
+    .card-title {
+        font-weight: $seitech-font-weight-semibold !important;
+        color: $seitech-text-primary !important;
+
+        a {
+            color: inherit !important;
+            text-decoration: none !important;
+
+            &:hover {
+                color: $seitech-primary !important;
+            }
+        }
+    }
+}
+
+// Course Image
+.o_wslides_channel_card_img {
+    height: 180px !important;
+    object-fit: cover !important;
+}
+
+// --------------------------------------------------------------------------
+// Course Detail Page
+// --------------------------------------------------------------------------
+
+.o_wslides_course_main {
+    background-color: $seitech-gray-50;
+}
+
+// Course Header/Hero
+.o_wslides_channel_header {
+    @include gradient-hero;
+    padding: $seitech-space-16 0 !important;
+    margin-bottom: 0 !important;
+
+    * {
+        color: $seitech-white !important;
+    }
+
+    h1 {
+        font-size: $seitech-font-size-4xl !important;
+        font-weight: $seitech-font-weight-bold !important;
+    }
+
+    .text-muted {
+        color: $seitech-gray-300 !important;
+    }
+}
+
+// Course Description
+.o_wslides_channel_desc {
+    background-color: $seitech-white;
+    border-radius: $seitech-radius-2xl;
+    padding: $seitech-space-8;
+    margin-top: -$seitech-space-8;
+    position: relative;
+    z-index: 10;
+    box-shadow: $seitech-shadow-lg;
+}
+
+// --------------------------------------------------------------------------
+// Course Content / Curriculum
+// --------------------------------------------------------------------------
+
+.o_wslides_lesson_content {
+    @include card-base;
+    margin-bottom: $seitech-space-4;
+}
+
+// Lesson List
+.o_wslides_slides_list {
+    .o_wslides_slides_list_slide {
+        padding: $seitech-space-4 $seitech-space-5 !important;
+        border-bottom: 1px solid $seitech-gray-100;
+        transition: background-color $seitech-transition-fast $seitech-ease-in-out;
+
+        &:hover {
+            background-color: $seitech-gray-50;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        .o_wslides_slides_list_slide_link {
+            color: $seitech-text-primary !important;
+            text-decoration: none !important;
+            font-weight: $seitech-font-weight-medium;
+
+            &:hover {
+                color: $seitech-primary !important;
+            }
+        }
+
+        // Completed lesson indicator
+        &.done {
+            .o_wslides_slides_list_slide_link::before {
+                content: '✓';
+                color: $seitech-success;
+                margin-right: $seitech-space-2;
+            }
+        }
+    }
+}
+
+// Category/Section Headers
+.o_wslides_slide_category {
+    background-color: $seitech-gray-100;
+    padding: $seitech-space-4 $seitech-space-5;
+    font-weight: $seitech-font-weight-semibold;
+    color: $seitech-text-primary;
+    border-radius: $seitech-radius-lg $seitech-radius-lg 0 0;
+}
+
+// --------------------------------------------------------------------------
+// Course Player (Fullscreen View)
+// --------------------------------------------------------------------------
+
+.o_wslides_fs_main {
+    background-color: $seitech-gray-900;
+
+    &.seitech-course-player {
+        // Custom player styles
+    }
+}
+
+// Sidebar
+.o_wslides_fs_sidebar {
+    background-color: $seitech-white !important;
+    border-left: 1px solid $seitech-gray-200;
+
+    &.seitech-lesson-sidebar {
+        .o_wslides_fs_sidebar_header {
+            padding: $seitech-space-5;
+            border-bottom: 1px solid $seitech-gray-200;
+            font-weight: $seitech-font-weight-semibold;
+        }
+    }
+}
+
+// Progress Bar
+.o_wslides_progress {
+    height: 8px !important;
+    border-radius: $seitech-radius-full !important;
+    background-color: $seitech-gray-200 !important;
+
+    .progress-bar {
+        background-color: $seitech-primary !important;
+        border-radius: $seitech-radius-full !important;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Buttons & Actions
+// --------------------------------------------------------------------------
+
+.o_wslides_channel_enroll_form {
+    .btn-primary {
+        @include button-primary;
+        width: 100%;
+        padding: $seitech-space-4 $seitech-space-6;
+    }
+}
+
+// Join/Enroll Button
+.o_wslides_channel_enroll,
+.o_wslides_js_channel_enroll {
+    @include button-primary;
+}
+
+// --------------------------------------------------------------------------
+// Ratings & Reviews
+// --------------------------------------------------------------------------
+
+.o_wslides_channel_rating {
+    .fa-star {
+        color: $seitech-warning;
+    }
+
+    .fa-star-o {
+        color: $seitech-gray-300;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Statistics/Meta
+// --------------------------------------------------------------------------
+
+.o_wslides_channel_meta {
+    display: flex;
+    gap: $seitech-space-6;
+    flex-wrap: wrap;
+
+    .o_wslides_channel_meta_item {
+        display: flex;
+        align-items: center;
+        gap: $seitech-space-2;
+        color: $seitech-text-secondary;
+        font-size: $seitech-font-size-sm;
+
+        .fa {
+            color: $seitech-primary;
+        }
+    }
+}
+
+// --------------------------------------------------------------------------
+// Quiz & Quizz Styles
+// --------------------------------------------------------------------------
+
+.o_wslides_js_quiz {
+    @include card-base;
+    padding: $seitech-space-6;
+
+    .o_wslides_quiz_answer {
+        @include card-base;
+        padding: $seitech-space-4;
+        margin-bottom: $seitech-space-3;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: all $seitech-transition-fast $seitech-ease-in-out;
+
+        &:hover {
+            border-color: $seitech-primary-light;
+            background-color: $seitech-gray-50;
+        }
+
+        &.selected {
+            border-color: $seitech-primary;
+            background-color: rgba($seitech-primary, 0.05);
+        }
+
+        &.correct {
+            border-color: $seitech-success;
+            background-color: rgba($seitech-success, 0.05);
+        }
+
+        &.wrong {
+            border-color: $seitech-error;
+            background-color: rgba($seitech-error, 0.05);
+        }
+    }
+}
+
+// --------------------------------------------------------------------------
+// Mobile Responsiveness
+// --------------------------------------------------------------------------
+
+@include md-down {
+    .o_wslides_channel_header {
+        padding: $seitech-space-8 0 !important;
+
+        h1 {
+            font-size: $seitech-font-size-2xl !important;
+        }
+    }
+
+    .o_wslides_channel_desc {
+        margin-top: 0;
+        border-radius: 0;
+    }
+
+    .o_wslides_fs_sidebar {
+        width: 100% !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 50vh;
+        z-index: 100;
+        transform: translateY(100%);
+        transition: transform $seitech-transition-base $seitech-ease-in-out;
+
+        &.open {
+            transform: translateY(0);
+        }
+    }
+}

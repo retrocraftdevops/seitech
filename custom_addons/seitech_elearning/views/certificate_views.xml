@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Certificate Template Form View -->
+        <record id="view_certificate_template_form" model="ir.ui.view">
+            <field name="name">seitech.certificate.template.form</field>
+            <field name="model">seitech.certificate.template</field>
+            <field name="arch" type="xml">
+                <form string="Certificate Template">
+                    <sheet>
+                        <field name="is_active" widget="boolean_toggle"/>
+                        <div class="oe_title">
+                            <h1><field name="name" placeholder="Template Name"/></h1>
+                        </div>
+                        <group>
+                            <group string="Design">
+                                <field name="background_image" widget="image"/>
+                                <field name="logo" widget="image"/>
+                                <field name="primary_color" widget="color"/>
+                                <field name="secondary_color" widget="color"/>
+                            </group>
+                            <group string="Settings">
+                                <field name="include_qr_code"/>
+                                <field name="include_course_details"/>
+                                <field name="expiration_period"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Content" name="content">
+                                <group>
+                                    <field name="title"/>
+                                    <field name="subtitle"/>
+                                </group>
+                                <field name="body_text"/>
+                                <field name="footer_text"/>
+                            </page>
+                            <page string="Signatures" name="signatures">
+                                <group>
+                                    <group string="Signature 1">
+                                        <field name="signature_1_name"/>
+                                        <field name="signature_1_title"/>
+                                        <field name="signature_1_image" widget="image"/>
+                                    </group>
+                                    <group string="Signature 2">
+                                        <field name="signature_2_name"/>
+                                        <field name="signature_2_title"/>
+                                        <field name="signature_2_image" widget="image"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                        <field name="description" placeholder="Description..."/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Certificate Template List View -->
+        <record id="view_certificate_template_list" model="ir.ui.view">
+            <field name="name">seitech.certificate.template.list</field>
+            <field name="model">seitech.certificate.template</field>
+            <field name="arch" type="xml">
+                <list string="Certificate Templates">
+                    <field name="name"/>
+                    <field name="title"/>
+                    <field name="expiration_period"/>
+                    <field name="is_active" widget="boolean_toggle"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Certificate Form View -->
+        <record id="view_certificate_form" model="ir.ui.view">
+            <field name="name">seitech.certificate.form</field>
+            <field name="model">seitech.certificate</field>
+            <field name="arch" type="xml">
+                <form string="Certificate">
+                    <header>
+                        <button name="action_issue" string="Issue Certificate" type="object"
+                                class="btn-primary" invisible="state != 'draft'"/>
+                        <button name="action_generate_pdf" string="Regenerate PDF" type="object"
+                                invisible="state != 'issued'"/>
+                        <button name="action_revoke" string="Revoke" type="object"
+                                class="btn-danger" invisible="state != 'issued'"/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,issued"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <a name="%(action_report_certificate)d" type="action"
+                               class="oe_stat_button" icon="fa-download"
+                               invisible="not certificate_pdf">
+                                <span class="o_stat_text">Download PDF</span>
+                            </a>
+                        </div>
+                        <div class="oe_title">
+                            <h1><field name="name" readonly="1"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="channel_id"/>
+                                <field name="user_id"/>
+                                <field name="enrollment_id"/>
+                                <field name="template_id"/>
+                            </group>
+                            <group>
+                                <field name="issue_date"/>
+                                <field name="expiration_date"/>
+                                <field name="verification_code"/>
+                                <field name="verification_url" widget="url"/>
+                            </group>
+                        </group>
+                        <group string="Completion Details">
+                            <group>
+                                <field name="completion_date"/>
+                                <field name="completion_percentage"/>
+                            </group>
+                            <group>
+                                <field name="quiz_average"/>
+                                <field name="time_spent"/>
+                                <field name="instructor_id"/>
+                            </group>
+                        </group>
+                        <group string="QR Code" invisible="not qr_code">
+                            <field name="qr_code" widget="image" class="oe_avatar"/>
+                        </group>
+                        <group string="Revocation" invisible="state != 'revoked'">
+                            <field name="revocation_reason"/>
+                            <field name="revoked_date"/>
+                            <field name="revoked_by_id"/>
+                        </group>
+                    </sheet>
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+        <!-- Certificate List View -->
+        <record id="view_certificate_list" model="ir.ui.view">
+            <field name="name">seitech.certificate.list</field>
+            <field name="model">seitech.certificate</field>
+            <field name="arch" type="xml">
+                <list string="Certificates"
+                      decoration-success="state == 'issued'"
+                      decoration-danger="state == 'revoked'"
+                      decoration-muted="state == 'expired'">
+                    <field name="name"/>
+                    <field name="channel_id"/>
+                    <field name="user_id"/>
+                    <field name="issue_date"/>
+                    <field name="verification_code"/>
+                    <field name="state" widget="badge"
+                           decoration-success="state == 'issued'"
+                           decoration-info="state == 'draft'"
+                           decoration-danger="state == 'revoked'"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Certificate Actions -->
+        <record id="action_certificate_template" model="ir.actions.act_window">
+            <field name="name">Certificate Templates</field>
+            <field name="res_model">seitech.certificate.template</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <record id="action_certificate" model="ir.actions.act_window">
+            <field name="name">Certificates</field>
+            <field name="res_model">seitech.certificate</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+    </data>
+</odoo>

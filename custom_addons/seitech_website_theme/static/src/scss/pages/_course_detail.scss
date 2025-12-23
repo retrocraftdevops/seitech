@@ -1,0 +1,920 @@
+// ==========================================================================
+// Course Detail Page Styles
+// Migrated from PHP course_page.php
+// ==========================================================================
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// ==========================================================================
+// Hero Banner
+// ==========================================================================
+
+.course-detail-hero {
+    position: relative;
+    padding: 4rem 0 3rem;
+    min-height: 300px;
+    color: white;
+    overflow: hidden;
+
+    .course-hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
+        background-position: center;
+        filter: blur(8px);
+        transform: scale(1.1);
+    }
+
+    .course-hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(2, 132, 199, 0.95) 0%, rgba(11, 18, 32, 0.9) 100%);
+    }
+}
+
+.course-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 70%;
+
+    @include respond-to(tablet) {
+        max-width: 100%;
+    }
+}
+
+.breadcrumb-seitech {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    opacity: 0.9;
+
+    a {
+        color: white;
+        text-decoration: none;
+        transition: opacity 0.2s;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .breadcrumb-sep {
+        opacity: 0.6;
+    }
+
+    .breadcrumb-current {
+        opacity: 0.8;
+        max-width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.course-hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+
+    @include respond-to(tablet) {
+        font-size: 1.75rem;
+    }
+}
+
+.course-hero-subtitle {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+.course-hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+
+    @include respond-to(mobile) {
+        gap: 1rem;
+    }
+
+    .meta-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        svg {
+            opacity: 0.9;
+        }
+    }
+
+    .meta-content {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+
+        .meta-label {
+            font-size: 0.75rem;
+            opacity: 0.7;
+        }
+
+        .meta-value {
+            color: white;
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+    }
+
+    .instructor-avatar-sm {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+}
+
+.rating-stars-hero {
+    display: flex;
+    gap: 2px;
+
+    .star-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    .star-filled {
+        color: #f59e0b;
+    }
+
+    .star-empty {
+        color: rgba(255, 255, 255, 0.3);
+    }
+}
+
+// ==========================================================================
+// Main Content Layout
+// ==========================================================================
+
+.course-detail-main {
+    padding: 3rem 0;
+    background: $gray-50;
+}
+
+.course-detail-layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 2rem;
+
+    @include respond-to(tablet) {
+        grid-template-columns: 1fr;
+    }
+}
+
+// ==========================================================================
+// Tabs Navigation
+// ==========================================================================
+
+.course-tabs {
+    display: flex;
+    gap: 0.5rem;
+    border-bottom: 2px solid $gray-200;
+    margin-bottom: 2rem;
+
+    @include respond-to(mobile) {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+.course-tab {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: $gray-600;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+
+    &:hover {
+        color: $primary-color;
+    }
+
+    &.active {
+        color: $primary-color;
+        border-bottom-color: $primary-color;
+    }
+
+    svg {
+        opacity: 0.7;
+    }
+}
+
+// ==========================================================================
+// Tab Panels
+// ==========================================================================
+
+.course-tab-panels {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.course-tab-panel {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+// ==========================================================================
+// Overview Tab
+// ==========================================================================
+
+.course-overview {
+    .overview-section {
+        margin-bottom: 2rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: $text-dark;
+        margin-bottom: 1rem;
+    }
+}
+
+.learning-outcomes,
+.requirements-list,
+.audience-list {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+
+        @include respond-to(mobile) {
+            grid-template-columns: 1fr;
+        }
+
+        li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: $gray-50;
+            border-radius: 0.5rem;
+            font-size: 0.9375rem;
+            line-height: 1.5;
+
+            &::before {
+                content: "✓";
+                color: $success-color;
+                font-weight: bold;
+                flex-shrink: 0;
+            }
+        }
+    }
+}
+
+.course-description-full {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: $gray-700;
+
+    h3, h4 {
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    p {
+        margin-bottom: 1rem;
+    }
+
+    ul, ol {
+        margin: 1rem 0;
+        padding-left: 1.5rem;
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+// ==========================================================================
+// Curriculum Tab
+// ==========================================================================
+
+.curriculum-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.curriculum-stats {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: $gray-600;
+}
+
+.btn-expand-all {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    color: $primary-color;
+    background: none;
+    border: 1px solid $primary-color;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+        background: $primary-color;
+        color: white;
+    }
+}
+
+.curriculum-accordion {
+    border: 1px solid $gray-200;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.accordion-section {
+    border-bottom: 1px solid $gray-200;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: $text-dark;
+    background: $gray-50;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background: $gray-100;
+    }
+
+    &.active {
+        background: $gray-100;
+
+        .accordion-chevron {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.accordion-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.accordion-chevron {
+    transition: transform 0.2s ease;
+    color: $gray-500;
+}
+
+.accordion-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    color: $gray-500;
+
+    .meta-sep {
+        opacity: 0.5;
+    }
+}
+
+.accordion-content {
+    padding: 0;
+    background: white;
+}
+
+.lesson-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lesson-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1.25rem 0.875rem 2.5rem;
+    border-top: 1px solid $gray-100;
+    font-size: 0.9375rem;
+    color: $gray-700;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background: $gray-50;
+    }
+}
+
+.lesson-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: $gray-100;
+    color: $gray-600;
+    flex-shrink: 0;
+
+    svg {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+.lesson-title {
+    flex: 1;
+    color: $text-dark;
+}
+
+.lesson-preview-badge {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $primary-color;
+    background: rgba($primary-color, 0.1);
+    border-radius: 0.25rem;
+}
+
+.lesson-duration {
+    font-size: 0.8125rem;
+    color: $gray-500;
+}
+
+// ==========================================================================
+// Instructor Tab
+// ==========================================================================
+
+.instructor-profile {
+    padding: 0;
+}
+
+.instructor-header {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    @include respond-to(mobile) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.instructor-avatar-lg {
+    width: 120px;
+    height: 120px;
+    border-radius: 1rem;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.instructor-info {
+    flex: 1;
+}
+
+.instructor-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $text-dark;
+    margin-bottom: 0.25rem;
+}
+
+.instructor-title {
+    font-size: 1rem;
+    color: $gray-600;
+    margin-bottom: 1rem;
+}
+
+.instructor-stats {
+    display: flex;
+    gap: 1.5rem;
+
+    @include respond-to(mobile) {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .stat {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9375rem;
+        color: $gray-600;
+
+        svg {
+            color: $primary-color;
+        }
+    }
+}
+
+.instructor-bio {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: $gray-700;
+
+    p {
+        margin-bottom: 1rem;
+    }
+}
+
+// ==========================================================================
+// Reviews Tab
+// ==========================================================================
+
+.reviews-summary {
+    display: flex;
+    gap: 2rem;
+    padding: 1.5rem;
+    background: $gray-50;
+    border-radius: 0.75rem;
+    margin-bottom: 2rem;
+
+    @include respond-to(mobile) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.reviews-average {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    .average-value {
+        font-size: 3rem;
+        font-weight: 700;
+        color: $text-dark;
+        line-height: 1;
+    }
+
+    .reviews-count {
+        font-size: 0.875rem;
+        color: $gray-500;
+    }
+}
+
+.rating-stars-lg {
+    display: flex;
+    gap: 2px;
+
+    .star-filled {
+        color: #f59e0b;
+    }
+
+    .star-empty {
+        color: $gray-300;
+    }
+}
+
+.reviews-list {
+    .no-reviews {
+        text-align: center;
+        padding: 3rem;
+        color: $gray-500;
+        font-style: italic;
+    }
+}
+
+// ==========================================================================
+// Sidebar
+// ==========================================================================
+
+.course-detail-sidebar {
+    @include respond-to(tablet) {
+        order: -1;
+    }
+}
+
+.course-card-sticky {
+    position: sticky;
+    top: 100px;
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.course-preview {
+    position: relative;
+    margin: -1.5rem -1.5rem 1.5rem;
+    border-radius: 1rem 1rem 0 0;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+    }
+
+    .play-preview-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.6);
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+
+        &:hover {
+            background: $primary-color;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        svg {
+            margin-left: 4px; // Optical centering
+        }
+    }
+
+    .wishlist-btn {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: white;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        transition: all 0.2s;
+
+        svg {
+            color: $gray-400;
+            transition: all 0.2s;
+        }
+
+        &:hover svg {
+            color: #ef4444;
+        }
+
+        &.active svg {
+            fill: #ef4444;
+            color: #ef4444;
+        }
+    }
+}
+
+.course-price-section {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid $gray-200;
+
+    .price-display {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    .price-current {
+        font-size: 2rem;
+        font-weight: 700;
+        color: $text-dark;
+    }
+
+    .price-original {
+        font-size: 1.125rem;
+        color: $gray-400;
+        text-decoration: line-through;
+    }
+
+    .price-free {
+        font-size: 2rem;
+        font-weight: 700;
+        color: $success-color;
+    }
+
+    .discount-badge {
+        display: inline-block;
+        margin-top: 0.5rem;
+        padding: 0.25rem 0.75rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: white;
+        background: #ef4444;
+        border-radius: 0.25rem;
+    }
+}
+
+.course-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-seitech-primary,
+.btn-seitech-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.btn-seitech-primary {
+    background: $primary-color;
+    color: white;
+    border: none;
+
+    &:hover {
+        background: darken($primary-color, 8%);
+        transform: translateY(-1px);
+    }
+}
+
+.btn-seitech-secondary {
+    background: white;
+    color: $primary-color;
+    border: 2px solid $primary-color;
+
+    &:hover {
+        background: rgba($primary-color, 0.05);
+    }
+}
+
+.btn-lg {
+    padding: 1rem 1.5rem;
+}
+
+.w-full {
+    width: 100%;
+}
+
+// ==========================================================================
+// Course Includes
+// ==========================================================================
+
+.course-includes {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid $gray-200;
+
+    h4 {
+        font-size: 0.9375rem;
+        font-weight: 600;
+        color: $text-dark;
+        margin-bottom: 1rem;
+    }
+}
+
+.includes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.5rem 0;
+        font-size: 0.9375rem;
+        color: $gray-700;
+
+        svg {
+            color: $gray-500;
+            flex-shrink: 0;
+        }
+    }
+}
+
+// ==========================================================================
+// Social Share
+// ==========================================================================
+
+.course-share {
+    text-align: center;
+
+    span {
+        display: block;
+        font-size: 0.875rem;
+        color: $gray-500;
+        margin-bottom: 0.75rem;
+    }
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.share-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    transition: transform 0.2s, opacity 0.2s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &.facebook {
+        background: #1877f2;
+    }
+
+    &.twitter {
+        background: #1da1f2;
+    }
+
+    &.linkedin {
+        background: #0a66c2;
+    }
+
+    &.whatsapp {
+        background: #25d366;
+    }
+}
+
+// ==========================================================================
+// Related Courses
+// ==========================================================================
+
+.related-courses-section {
+    padding: 4rem 0;
+    background: white;
+
+    .section-title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: $text-dark;
+        margin-bottom: 2rem;
+    }
+}

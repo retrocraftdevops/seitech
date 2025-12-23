@@ -1,0 +1,1160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- ===================================================================
+         Instructor Dashboard Templates
+         Migrated from PHP: instructor_page.php, dashboard.php, courses.php
+         
+         Templates:
+         1. Public instructor profile page (/instructor/<id>)
+         2. Instructor dashboard (/instructor/dashboard)
+         3. Instructor courses management (/instructor/courses)
+         4. Instructor earnings (/instructor/earnings)
+    =================================================================== -->
+
+    <!-- ===================================================================
+         PUBLIC INSTRUCTOR PROFILE PAGE
+         Shows instructor details, stats, and their courses
+         Migrated from: frontend/default-new/instructor_page.php
+    =================================================================== -->
+    <template id="instructor_profile_page" name="Instructor Profile">
+        <t t-call="website.layout">
+            <t t-set="title" t-value="instructor.name"/>
+            <div id="wrap" class="o_seitech_instructor_profile">
+                
+                <!-- Breadcrumb -->
+                <section class="s_breadcrumb bg-light py-3">
+                    <div class="container">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb mb-0">
+                                <li class="breadcrumb-item">
+                                    <a href="/">Home</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="/instructors">Instructors</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <t t-esc="instructor.name"/>
+                                </li>
+                            </ol>
+                        </nav>
+                    </div>
+                </section>
+
+                <!-- Instructor Profile Section -->
+                <section class="instructor-profile py-5">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Main Content - 8 columns -->
+                            <div class="col-lg-8">
+                                <!-- Profile Header Card -->
+                                <div class="instructor-about bg-white rounded-4 shadow-sm p-4 mb-4">
+                                    <!-- Header with photo and name -->
+                                    <div class="instructor-header mb-4">
+                                        <div class="row align-items-center">
+                                            <div class="col-lg-8 col-md-7 col-7">
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="instructor-avatar">
+                                                        <t t-if="instructor.image">
+                                                            <img t-att-src="'/web/image/seitech.instructor/%s/image' % instructor.id"
+                                                                 class="rounded-3" alt="Instructor Photo"
+                                                                 style="height: 110px; width: 110px; object-fit: cover;"/>
+                                                        </t>
+                                                        <t t-else="">
+                                                            <div class="avatar-placeholder rounded-3 bg-primary d-flex align-items-center justify-content-center"
+                                                                 style="height: 110px; width: 110px;">
+                                                                <span class="text-white fs-1 fw-bold" 
+                                                                      t-esc="instructor.name[:2].upper()"/>
+                                                            </div>
+                                                        </t>
+                                                    </div>
+                                                    <div class="instructor-info">
+                                                        <h4 class="mb-1 fw-bold text-dark">
+                                                            <t t-esc="instructor.name"/>
+                                                            <t t-if="instructor.is_featured">
+                                                                <i class="fa fa-check-circle text-primary ms-2" 
+                                                                   title="Featured Instructor"/>
+                                                            </t>
+                                                        </h4>
+                                                        <p class="text-muted mb-0 text-truncate-3" 
+                                                           t-esc="instructor.title"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-5 col-5">
+                                                <div class="rating-box text-end">
+                                                    <h5 class="text-muted mb-2">Rating</h5>
+                                                    <div class="d-flex align-items-center justify-content-end gap-2">
+                                                        <span class="rating-value fw-bold fs-4 text-warning">
+                                                            <t t-esc="'%.1f' % instructor.average_rating"/>
+                                                        </span>
+                                                        <i class="fa fa-star text-warning"/>
+                                                        <span class="text-muted">
+                                                            (<t t-esc="instructor.total_reviews"/> Reviews)
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- About Section -->
+                                    <div class="about-section mb-4">
+                                        <h5 class="fw-bold text-dark mb-3">About</h5>
+                                        <div class="biography text-muted" t-raw="instructor.bio or 'No biography available.'"/>
+                                    </div>
+
+                                    <!-- Skills/Expertise Section -->
+                                    <t t-if="instructor.expertise">
+                                        <div class="skills-section mb-4">
+                                            <h5 class="fw-bold text-dark mb-3">Professional Skills</h5>
+                                            <div class="skill-tags d-flex flex-wrap gap-2">
+                                                <t t-foreach="instructor.expertise.split(',')" t-as="skill">
+                                                    <span class="badge bg-light text-dark border px-3 py-2">
+                                                        <t t-esc="skill.strip()"/>
+                                                    </span>
+                                                </t>
+                                            </div>
+                                        </div>
+                                    </t>
+
+                                    <!-- Statistics Section -->
+                                    <div class="stats-section">
+                                        <h5 class="fw-bold text-dark mb-3">Statistics</h5>
+                                        <div class="row g-3">
+                                            <div class="col-4">
+                                                <div class="stat-box text-center p-3 bg-light rounded-3">
+                                                    <h2 class="fw-bold text-primary mb-1">
+                                                        <t t-esc="instructor.total_students"/>
+                                                    </h2>
+                                                    <span class="text-muted small">Total Students</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="stat-box text-center p-3 bg-light rounded-3">
+                                                    <h2 class="fw-bold text-primary mb-1">
+                                                        <t t-esc="instructor.course_count"/>
+                                                    </h2>
+                                                    <span class="text-muted small">Courses</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="stat-box text-center p-3 bg-light rounded-3">
+                                                    <h2 class="fw-bold text-primary mb-1">
+                                                        <t t-esc="instructor.total_reviews"/>
+                                                    </h2>
+                                                    <span class="text-muted small">Reviews</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Instructor's Courses Section -->
+                                <div class="instructor-courses bg-white rounded-4 shadow-sm p-4">
+                                    <h5 class="fw-bold text-dark mb-4">
+                                        Courses (<t t-esc="len(courses)"/>)
+                                    </h5>
+                                    <div class="row g-4">
+                                        <t t-foreach="courses" t-as="course">
+                                            <div class="col-md-6">
+                                                <div class="course-card h-100">
+                                                    <a t-attf-href="/slides/{{ course.id }}" class="text-decoration-none">
+                                                        <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+                                                            <div class="card-img-wrapper position-relative">
+                                                                <t t-if="course.image_1920">
+                                                                    <img t-att-src="'/web/image/slide.channel/%s/image_1920' % course.id"
+                                                                         class="card-img-top" alt="Course Thumbnail"
+                                                                         style="height: 160px; object-fit: cover;"/>
+                                                                </t>
+                                                                <t t-else="">
+                                                                    <div class="placeholder-img bg-secondary d-flex align-items-center justify-content-center"
+                                                                         style="height: 160px;">
+                                                                        <i class="fa fa-graduation-cap fa-3x text-white opacity-50"/>
+                                                                    </div>
+                                                                </t>
+                                                                <div class="course-level position-absolute bottom-0 start-0 m-2">
+                                                                    <span class="badge bg-dark text-white px-2 py-1">
+                                                                        <t t-esc="course.difficulty_level.capitalize() if course.difficulty_level else 'Beginner'"/>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <h6 class="card-title fw-bold text-dark mb-2 text-truncate-2">
+                                                                    <t t-esc="course.name"/>
+                                                                </h6>
+                                                                <div class="d-flex align-items-center gap-2 mb-2">
+                                                                    <span class="text-warning">
+                                                                        <t t-esc="'%.1f' % course.rating_avg"/>
+                                                                    </span>
+                                                                    <i class="fa fa-star text-warning small"/>
+                                                                    <span class="text-muted small">
+                                                                        (<t t-esc="course.rating_count"/> reviews)
+                                                                    </span>
+                                                                </div>
+                                                                <div class="d-flex justify-content-between align-items-center">
+                                                                    <div class="price">
+                                                                        <t t-if="not course.is_paid">
+                                                                            <span class="fw-bold text-success">Free</span>
+                                                                        </t>
+                                                                        <t t-elif="course.is_on_sale and course.sale_price">
+                                                                            <span class="fw-bold text-primary">
+                                                                                <t t-esc="'%s%.2f' % (course.currency_id.symbol, course.sale_price)"/>
+                                                                            </span>
+                                                                            <del class="text-muted small ms-1">
+                                                                                <t t-esc="'%s%.2f' % (course.currency_id.symbol, course.list_price)"/>
+                                                                            </del>
+                                                                        </t>
+                                                                        <t t-else="">
+                                                                            <span class="fw-bold text-primary">
+                                                                                <t t-esc="'%s%.2f' % (course.currency_id.symbol, course.list_price)"/>
+                                                                            </span>
+                                                                        </t>
+                                                                    </div>
+                                                                    <div class="course-duration text-muted small">
+                                                                        <i class="fa fa-clock-o me-1"/>
+                                                                        <t t-esc="course.total_time"/> hrs
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </t>
+
+                                        <t t-if="not courses">
+                                            <div class="col-12">
+                                                <div class="text-center py-5 text-muted">
+                                                    <i class="fa fa-book fa-3x mb-3 opacity-50"/>
+                                                    <p>No courses available yet.</p>
+                                                </div>
+                                            </div>
+                                        </t>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sidebar - 4 columns -->
+                            <div class="col-lg-4">
+                                <div class="instructor-sidebar sticky-lg-top" style="top: 100px;">
+                                    <!-- Contact Information Card -->
+                                    <div class="contact-card bg-white rounded-4 shadow-sm p-4 mb-4">
+                                        <h6 class="fw-bold text-dark mb-4">Contact Information</h6>
+                                        
+                                        <t t-if="instructor.phone">
+                                            <div class="contact-item d-flex align-items-center gap-3 mb-3">
+                                                <div class="icon-box bg-light rounded-circle d-flex align-items-center justify-content-center"
+                                                     style="width: 40px; height: 40px;">
+                                                    <i class="fa fa-phone text-primary"/>
+                                                </div>
+                                                <div>
+                                                    <small class="text-muted d-block">Phone Number</small>
+                                                    <span class="text-dark"><t t-esc="instructor.phone"/></span>
+                                                </div>
+                                            </div>
+                                        </t>
+
+                                        <t t-if="instructor.email">
+                                            <div class="contact-item d-flex align-items-center gap-3 mb-3">
+                                                <div class="icon-box bg-light rounded-circle d-flex align-items-center justify-content-center"
+                                                     style="width: 40px; height: 40px;">
+                                                    <i class="fa fa-envelope text-primary"/>
+                                                </div>
+                                                <div>
+                                                    <small class="text-muted d-block">Email</small>
+                                                    <span class="text-dark"><t t-esc="instructor.email"/></span>
+                                                </div>
+                                            </div>
+                                        </t>
+
+                                        <t t-if="instructor.website">
+                                            <div class="contact-item d-flex align-items-center gap-3 mb-3">
+                                                <div class="icon-box bg-light rounded-circle d-flex align-items-center justify-content-center"
+                                                     style="width: 40px; height: 40px;">
+                                                    <i class="fa fa-globe text-primary"/>
+                                                </div>
+                                                <div>
+                                                    <small class="text-muted d-block">Website</small>
+                                                    <a t-att-href="instructor.website" target="_blank" class="text-primary">
+                                                        Visit Website
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </t>
+
+                                        <!-- Social Links -->
+                                        <t t-if="instructor.linkedin_url or instructor.twitter_url or instructor.youtube_url">
+                                            <div class="social-links mt-4 pt-3 border-top">
+                                                <div class="d-flex flex-wrap gap-2">
+                                                    <t t-if="instructor.linkedin_url">
+                                                        <a t-att-href="instructor.linkedin_url" target="_blank"
+                                                           class="btn btn-sm btn-outline-primary">
+                                                            <i class="fab fa-linkedin-in me-1"/> LinkedIn
+                                                        </a>
+                                                    </t>
+                                                    <t t-if="instructor.twitter_url">
+                                                        <a t-att-href="instructor.twitter_url" target="_blank"
+                                                           class="btn btn-sm btn-outline-info">
+                                                            <i class="fab fa-twitter me-1"/> Twitter
+                                                        </a>
+                                                    </t>
+                                                    <t t-if="instructor.youtube_url">
+                                                        <a t-att-href="instructor.youtube_url" target="_blank"
+                                                           class="btn btn-sm btn-outline-danger">
+                                                            <i class="fab fa-youtube me-1"/> YouTube
+                                                        </a>
+                                                    </t>
+                                                </div>
+                                            </div>
+                                        </t>
+                                    </div>
+
+                                    <!-- Message Button -->
+                                    <div class="message-card bg-primary rounded-4 p-4 text-center">
+                                        <a href="#" class="btn btn-light btn-lg w-100" 
+                                           onclick="return false;">
+                                            <i class="fa fa-envelope me-2"/>
+                                            Send Message
+                                        </a>
+                                        <p class="text-white-50 small mt-2 mb-0">
+                                            Get in touch with this instructor
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </t>
+    </template>
+
+
+    <!-- ===================================================================
+         INSTRUCTOR DASHBOARD (Private - for logged-in instructors)
+         Migrated from: backend/user/dashboard.php
+    =================================================================== -->
+    <template id="instructor_dashboard" name="Instructor Dashboard">
+        <t t-call="website.layout">
+            <t t-set="title">Instructor Dashboard</t>
+            <div id="wrap" class="o_seitech_instructor_dashboard">
+                
+                <section class="instructor-dashboard py-5 bg-light min-vh-100">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Sidebar Navigation -->
+                            <div class="col-lg-3 mb-4">
+                                <div class="dashboard-sidebar bg-white rounded-4 shadow-sm overflow-hidden">
+                                    <!-- User Info -->
+                                    <div class="user-info p-4 bg-primary text-white text-center">
+                                        <div class="avatar mb-3">
+                                            <t t-if="instructor.image">
+                                                <img t-att-src="'/web/image/seitech.instructor/%s/image' % instructor.id"
+                                                     class="rounded-circle border border-3 border-white"
+                                                     style="width: 80px; height: 80px; object-fit: cover;"/>
+                                            </t>
+                                            <t t-else="">
+                                                <div class="avatar-placeholder rounded-circle bg-white d-inline-flex align-items-center justify-content-center"
+                                                     style="width: 80px; height: 80px;">
+                                                    <span class="text-primary fs-3 fw-bold">
+                                                        <t t-esc="instructor.name[:2].upper()"/>
+                                                    </span>
+                                                </div>
+                                            </t>
+                                        </div>
+                                        <h6 class="mb-1"><t t-esc="instructor.name"/></h6>
+                                        <small class="opacity-75">Instructor</small>
+                                    </div>
+                                    
+                                    <!-- Navigation Menu -->
+                                    <nav class="dashboard-nav p-3">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link active rounded-3 d-flex align-items-center gap-2" 
+                                                   href="/instructor/dashboard">
+                                                    <i class="fa fa-tachometer-alt fa-fw"/>
+                                                    Dashboard
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link rounded-3 d-flex align-items-center gap-2" 
+                                                   href="/instructor/courses">
+                                                    <i class="fa fa-book fa-fw"/>
+                                                    My Courses
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link rounded-3 d-flex align-items-center gap-2" 
+                                                   href="/instructor/earnings">
+                                                    <i class="fa fa-money fa-fw"/>
+                                                    Earnings
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link rounded-3 d-flex align-items-center gap-2" 
+                                                   href="/instructor/schedule">
+                                                    <i class="fa fa-calendar fa-fw"/>
+                                                    Schedule
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link rounded-3 d-flex align-items-center gap-2" 
+                                                   href="/instructor/reviews">
+                                                    <i class="fa fa-star fa-fw"/>
+                                                    Reviews
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link rounded-3 d-flex align-items-center gap-2" 
+                                                   href="/instructor/settings">
+                                                    <i class="fa fa-cog fa-fw"/>
+                                                    Settings
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+
+                            <!-- Main Content -->
+                            <div class="col-lg-9">
+                                <!-- Page Title -->
+                                <div class="page-header bg-white rounded-4 shadow-sm p-4 mb-4">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h4 class="mb-1 fw-bold">
+                                                <i class="fa fa-tachometer-alt text-primary me-2"/>
+                                                Dashboard
+                                            </h4>
+                                            <p class="text-muted mb-0 small">
+                                                Welcome back, <t t-esc="instructor.name"/>!
+                                            </p>
+                                        </div>
+                                        <a href="/instructor/courses/new" class="btn btn-primary">
+                                            <i class="fa fa-plus me-2"/>
+                                            New Course
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Stats Cards Row -->
+                                <div class="row g-4 mb-4">
+                                    <div class="col-md-3 col-6">
+                                        <a href="/instructor/courses" class="text-decoration-none">
+                                            <div class="stat-card bg-white rounded-4 shadow-sm p-4 text-center h-100 hover-lift">
+                                                <div class="icon mb-3">
+                                                    <i class="fa fa-book fa-2x text-primary opacity-75"/>
+                                                </div>
+                                                <h3 class="fw-bold text-dark mb-1">
+                                                    <t t-esc="stats.get('total_courses', 0)"/>
+                                                </h3>
+                                                <small class="text-muted">Courses</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 col-6">
+                                        <div class="stat-card bg-white rounded-4 shadow-sm p-4 text-center h-100">
+                                            <div class="icon mb-3">
+                                                <i class="fa fa-users fa-2x text-success opacity-75"/>
+                                            </div>
+                                            <h3 class="fw-bold text-dark mb-1">
+                                                <t t-esc="stats.get('total_students', 0)"/>
+                                            </h3>
+                                            <small class="text-muted">Students</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-6">
+                                        <a href="/instructor/earnings" class="text-decoration-none">
+                                            <div class="stat-card bg-white rounded-4 shadow-sm p-4 text-center h-100 hover-lift">
+                                                <div class="icon mb-3">
+                                                    <i class="fa fa-money fa-2x text-warning opacity-75"/>
+                                                </div>
+                                                <h3 class="fw-bold text-dark mb-1">
+                                                    <t t-esc="'%s%.2f' % (instructor.currency_id.symbol, stats.get('pending_balance', 0))"/>
+                                                </h3>
+                                                <small class="text-muted">Pending Balance</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 col-6">
+                                        <div class="stat-card bg-white rounded-4 shadow-sm p-4 text-center h-100">
+                                            <div class="icon mb-3">
+                                                <i class="fa fa-dollar-sign fa-2x text-info opacity-75"/>
+                                            </div>
+                                            <h3 class="fw-bold text-dark mb-1">
+                                                <t t-esc="'%s%.2f' % (instructor.currency_id.symbol, stats.get('total_earnings', 0))"/>
+                                            </h3>
+                                            <small class="text-muted">Total Earnings</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Course Status Overview -->
+                                <div class="row g-4 mb-4">
+                                    <div class="col-md-8">
+                                        <div class="bg-white rounded-4 shadow-sm p-4 h-100">
+                                            <h5 class="fw-bold mb-4">Revenue Chart</h5>
+                                            <div class="chart-container" style="height: 250px;">
+                                                <canvas id="revenueChart"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="bg-white rounded-4 shadow-sm p-4 h-100">
+                                            <h5 class="fw-bold mb-4">Course Status</h5>
+                                            <div class="status-list">
+                                                <div class="status-item d-flex align-items-center justify-content-between mb-3 p-3 bg-success bg-opacity-10 rounded-3">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <i class="fa fa-check-circle text-success"/>
+                                                        <span>Active</span>
+                                                    </div>
+                                                    <span class="badge bg-success">
+                                                        <t t-esc="stats.get('active_courses', 0)"/>
+                                                    </span>
+                                                </div>
+                                                <div class="status-item d-flex align-items-center justify-content-between mb-3 p-3 bg-warning bg-opacity-10 rounded-3">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <i class="fa fa-clock text-warning"/>
+                                                        <span>Pending</span>
+                                                    </div>
+                                                    <span class="badge bg-warning text-dark">
+                                                        <t t-esc="stats.get('pending_courses', 0)"/>
+                                                    </span>
+                                                </div>
+                                                <div class="status-item d-flex align-items-center justify-content-between p-3 bg-secondary bg-opacity-10 rounded-3">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <i class="fa fa-edit text-secondary"/>
+                                                        <span>Draft</span>
+                                                    </div>
+                                                    <span class="badge bg-secondary">
+                                                        <t t-esc="stats.get('draft_courses', 0)"/>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Recent Activity -->
+                                <div class="bg-white rounded-4 shadow-sm p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                        <h5 class="fw-bold mb-0">Recent Enrollments</h5>
+                                        <a href="/instructor/enrollments" class="btn btn-sm btn-outline-primary">
+                                            View All
+                                        </a>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-hover align-middle mb-0">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th>Student</th>
+                                                    <th>Course</th>
+                                                    <th>Date</th>
+                                                    <th>Amount</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <t t-foreach="recent_enrollments[:5]" t-as="enrollment">
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <div class="avatar-sm bg-light rounded-circle d-flex align-items-center justify-content-center"
+                                                                     style="width: 32px; height: 32px;">
+                                                                    <span class="small fw-bold text-muted">
+                                                                        <t t-esc="enrollment.user_id.name[:2].upper()"/>
+                                                                    </span>
+                                                                </div>
+                                                                <span><t t-esc="enrollment.user_id.name"/></span>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-truncate" style="max-width: 200px;">
+                                                            <t t-esc="enrollment.channel_id.name"/>
+                                                        </td>
+                                                        <td class="text-muted small">
+                                                            <t t-esc="enrollment.create_date" t-options="{'widget': 'date'}"/>
+                                                        </td>
+                                                        <td class="fw-bold">
+                                                            <t t-if="enrollment.amount_paid">
+                                                                <t t-esc="'%s%.2f' % (enrollment.currency_id.symbol or '$', enrollment.amount_paid)"/>
+                                                            </t>
+                                                            <t t-else="">
+                                                                <span class="text-muted">Free</span>
+                                                            </t>
+                                                        </td>
+                                                    </tr>
+                                                </t>
+                                                <t t-if="not recent_enrollments">
+                                                    <tr>
+                                                        <td colspan="4" class="text-center text-muted py-4">
+                                                            <i class="fa fa-inbox fa-2x mb-2 d-block opacity-50"/>
+                                                            No recent enrollments
+                                                        </td>
+                                                    </tr>
+                                                </t>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </t>
+    </template>
+
+
+    <!-- ===================================================================
+         INSTRUCTOR COURSES LIST
+         Migrated from: backend/user/courses.php
+    =================================================================== -->
+    <template id="instructor_courses" name="Instructor Courses">
+        <t t-call="website.layout">
+            <t t-set="title">My Courses</t>
+            <div id="wrap" class="o_seitech_instructor_courses">
+                
+                <section class="instructor-courses-page py-5 bg-light min-vh-100">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Include Sidebar -->
+                            <div class="col-lg-3 mb-4">
+                                <t t-call="seitech_elearning.instructor_sidebar"/>
+                            </div>
+
+                            <!-- Main Content -->
+                            <div class="col-lg-9">
+                                <!-- Page Header -->
+                                <div class="page-header bg-white rounded-4 shadow-sm p-4 mb-4">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h4 class="mb-1 fw-bold">
+                                                <i class="fa fa-book text-primary me-2"/>
+                                                My Courses
+                                            </h4>
+                                            <p class="text-muted mb-0 small">
+                                                Manage your courses
+                                            </p>
+                                        </div>
+                                        <a href="/instructor/courses/new" class="btn btn-primary">
+                                            <i class="fa fa-plus me-2"/>
+                                            Add New Course
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Course Stats Cards -->
+                                <div class="row g-3 mb-4">
+                                    <div class="col">
+                                        <div class="stat-card bg-white rounded-3 shadow-sm p-3 text-center">
+                                            <i class="fa fa-link text-success mb-2"/>
+                                            <h5 class="fw-bold mb-1"><t t-esc="stats.get('active_courses', 0)"/></h5>
+                                            <small class="text-muted">Active</small>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="stat-card bg-white rounded-3 shadow-sm p-3 text-center">
+                                            <i class="fa fa-clock text-warning mb-2"/>
+                                            <h5 class="fw-bold mb-1"><t t-esc="stats.get('pending_courses', 0)"/></h5>
+                                            <small class="text-muted">Pending</small>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="stat-card bg-white rounded-3 shadow-sm p-3 text-center">
+                                            <i class="fa fa-edit text-secondary mb-2"/>
+                                            <h5 class="fw-bold mb-1"><t t-esc="stats.get('draft_courses', 0)"/></h5>
+                                            <small class="text-muted">Draft</small>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="stat-card bg-white rounded-3 shadow-sm p-3 text-center">
+                                            <i class="fa fa-gift text-info mb-2"/>
+                                            <h5 class="fw-bold mb-1"><t t-esc="stats.get('free_courses', 0)"/></h5>
+                                            <small class="text-muted">Free</small>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="stat-card bg-white rounded-3 shadow-sm p-3 text-center">
+                                            <i class="fa fa-dollar-sign text-primary mb-2"/>
+                                            <h5 class="fw-bold mb-1"><t t-esc="stats.get('paid_courses', 0)"/></h5>
+                                            <small class="text-muted">Paid</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Courses Table -->
+                                <div class="bg-white rounded-4 shadow-sm p-4">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover align-middle">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th style="min-width: 300px;">Course</th>
+                                                    <th>Price</th>
+                                                    <th>Students</th>
+                                                    <th>Rating</th>
+                                                    <th>Status</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <t t-foreach="courses" t-as="course">
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center gap-3">
+                                                                <div class="course-thumb">
+                                                                    <t t-if="course.image_1920">
+                                                                        <img t-att-src="'/web/image/slide.channel/%s/image_1920' % course.id"
+                                                                             class="rounded-2" 
+                                                                             style="width: 60px; height: 40px; object-fit: cover;"/>
+                                                                    </t>
+                                                                    <t t-else="">
+                                                                        <div class="bg-light rounded-2 d-flex align-items-center justify-content-center"
+                                                                             style="width: 60px; height: 40px;">
+                                                                            <i class="fa fa-book text-muted"/>
+                                                                        </div>
+                                                                    </t>
+                                                                </div>
+                                                                <div>
+                                                                    <a t-attf-href="/slides/{{ course.id }}" 
+                                                                       class="fw-semibold text-dark text-decoration-none">
+                                                                        <t t-esc="course.name"/>
+                                                                    </a>
+                                                                    <small class="d-block text-muted">
+                                                                        <t t-esc="course.seitech_category_id.name or 'Uncategorized'"/>
+                                                                    </small>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <t t-if="not course.is_paid">
+                                                                <span class="badge bg-success-subtle text-success">Free</span>
+                                                            </t>
+                                                            <t t-else="">
+                                                                <span class="fw-semibold">
+                                                                    <t t-esc="'%s%.2f' % (course.currency_id.symbol, course.list_price)"/>
+                                                                </span>
+                                                            </t>
+                                                        </td>
+                                                        <td>
+                                                            <t t-esc="course.members_count"/>
+                                                        </td>
+                                                        <td>
+                                                            <span class="text-warning">
+                                                                <i class="fa fa-star"/>
+                                                                <t t-esc="'%.1f' % course.rating_avg"/>
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <t t-if="course.is_published">
+                                                                <span class="badge bg-success">Active</span>
+                                                            </t>
+                                                            <t t-else="">
+                                                                <span class="badge bg-warning text-dark">Draft</span>
+                                                            </t>
+                                                        </td>
+                                                        <td>
+                                                            <div class="btn-group">
+                                                                <a t-attf-href="/slides/{{ course.id }}" 
+                                                                   class="btn btn-sm btn-outline-secondary" title="View">
+                                                                    <i class="fa fa-eye"/>
+                                                                </a>
+                                                                <a t-attf-href="/web#id={{ course.id }}&amp;model=slide.channel&amp;view_type=form" 
+                                                                   class="btn btn-sm btn-outline-primary" title="Edit">
+                                                                    <i class="fa fa-edit"/>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </t>
+                                                <t t-if="not courses">
+                                                    <tr>
+                                                        <td colspan="6" class="text-center py-5">
+                                                            <i class="fa fa-book fa-3x text-muted opacity-50 mb-3"/>
+                                                            <p class="text-muted mb-3">You haven't created any courses yet.</p>
+                                                            <a href="/instructor/courses/new" class="btn btn-primary">
+                                                                <i class="fa fa-plus me-2"/>
+                                                                Create Your First Course
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </t>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </t>
+    </template>
+
+
+    <!-- ===================================================================
+         INSTRUCTOR EARNINGS PAGE
+         Migrated from: backend/user/payout_report.php
+    =================================================================== -->
+    <template id="instructor_earnings" name="Instructor Earnings">
+        <t t-call="website.layout">
+            <t t-set="title">Earnings</t>
+            <div id="wrap" class="o_seitech_instructor_earnings">
+                
+                <section class="instructor-earnings-page py-5 bg-light min-vh-100">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Include Sidebar -->
+                            <div class="col-lg-3 mb-4">
+                                <t t-call="seitech_elearning.instructor_sidebar"/>
+                            </div>
+
+                            <!-- Main Content -->
+                            <div class="col-lg-9">
+                                <!-- Page Header -->
+                                <div class="page-header bg-white rounded-4 shadow-sm p-4 mb-4">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h4 class="mb-1 fw-bold">
+                                                <i class="fa fa-money text-primary me-2"/>
+                                                Earnings
+                                            </h4>
+                                            <p class="text-muted mb-0 small">
+                                                Track your revenue and payouts
+                                            </p>
+                                        </div>
+                                        <a href="#" class="btn btn-success">
+                                            <i class="fa fa-download me-2"/>
+                                            Request Payout
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Earnings Summary Cards -->
+                                <div class="row g-4 mb-4">
+                                    <div class="col-md-4">
+                                        <div class="earnings-card bg-white rounded-4 shadow-sm p-4 text-center">
+                                            <div class="icon mb-3">
+                                                <i class="fa fa-wallet fa-2x text-primary opacity-75"/>
+                                            </div>
+                                            <h3 class="fw-bold text-dark mb-1">
+                                                <t t-esc="'%s%.2f' % (instructor.currency_id.symbol, instructor.total_revenue)"/>
+                                            </h3>
+                                            <small class="text-muted">Total Revenue</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="earnings-card bg-white rounded-4 shadow-sm p-4 text-center">
+                                            <div class="icon mb-3">
+                                                <i class="fa fa-clock fa-2x text-warning opacity-75"/>
+                                            </div>
+                                            <h3 class="fw-bold text-dark mb-1">
+                                                <t t-esc="'%s%.2f' % (instructor.currency_id.symbol, stats.get('pending_balance', 0))"/>
+                                            </h3>
+                                            <small class="text-muted">Pending Balance</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="earnings-card bg-white rounded-4 shadow-sm p-4 text-center">
+                                            <div class="icon mb-3">
+                                                <i class="fa fa-check-circle fa-2x text-success opacity-75"/>
+                                            </div>
+                                            <h3 class="fw-bold text-dark mb-1">
+                                                <t t-esc="'%s%.2f' % (instructor.currency_id.symbol, stats.get('total_paid', 0))"/>
+                                            </h3>
+                                            <small class="text-muted">Total Paid Out</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Commission Info -->
+                                <div class="alert alert-info rounded-4 mb-4">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <i class="fa fa-info-circle fa-lg"/>
+                                        <div>
+                                            <strong>Your Commission Rate: <t t-esc="instructor.commission_rate"/>%</strong>
+                                            <br/>
+                                            <small>You receive <t t-esc="instructor.commission_rate"/>% of each course sale after payment processing fees.</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Transactions Table -->
+                                <div class="bg-white rounded-4 shadow-sm p-4">
+                                    <h5 class="fw-bold mb-4">Recent Transactions</h5>
+                                    <div class="table-responsive">
+                                        <table class="table table-hover align-middle">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Description</th>
+                                                    <th>Course</th>
+                                                    <th>Amount</th>
+                                                    <th>Your Earnings</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <t t-foreach="transactions" t-as="txn">
+                                                    <tr>
+                                                        <td class="text-muted small">
+                                                            <t t-esc="txn.create_date" t-options="{'widget': 'date'}"/>
+                                                        </td>
+                                                        <td>
+                                                            <t t-esc="txn.description or 'Course Sale'"/>
+                                                        </td>
+                                                        <td class="text-truncate" style="max-width: 150px;">
+                                                            <t t-esc="txn.channel_id.name"/>
+                                                        </td>
+                                                        <td class="fw-semibold">
+                                                            <t t-esc="'%s%.2f' % (txn.currency_id.symbol or '$', txn.amount)"/>
+                                                        </td>
+                                                        <td class="fw-bold text-success">
+                                                            <t t-esc="'%s%.2f' % (txn.currency_id.symbol or '$', txn.instructor_amount)"/>
+                                                        </td>
+                                                        <td>
+                                                            <t t-if="txn.state == 'paid'">
+                                                                <span class="badge bg-success">Paid</span>
+                                                            </t>
+                                                            <t t-elif="txn.state == 'pending'">
+                                                                <span class="badge bg-warning text-dark">Pending</span>
+                                                            </t>
+                                                            <t t-else="">
+                                                                <span class="badge bg-secondary">
+                                                                    <t t-esc="txn.state"/>
+                                                                </span>
+                                                            </t>
+                                                        </td>
+                                                    </tr>
+                                                </t>
+                                                <t t-if="not transactions">
+                                                    <tr>
+                                                        <td colspan="6" class="text-center py-5">
+                                                            <i class="fa fa-receipt fa-3x text-muted opacity-50 mb-3"/>
+                                                            <p class="text-muted">No transactions yet.</p>
+                                                        </td>
+                                                    </tr>
+                                                </t>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </t>
+    </template>
+
+
+    <!-- ===================================================================
+         INSTRUCTOR SIDEBAR (Reusable Component)
+    =================================================================== -->
+    <template id="instructor_sidebar" name="Instructor Sidebar">
+        <div class="dashboard-sidebar bg-white rounded-4 shadow-sm overflow-hidden">
+            <!-- User Info -->
+            <div class="user-info p-4 bg-primary text-white text-center">
+                <div class="avatar mb-3">
+                    <t t-if="instructor.image">
+                        <img t-att-src="'/web/image/seitech.instructor/%s/image' % instructor.id"
+                             class="rounded-circle border border-3 border-white"
+                             style="width: 80px; height: 80px; object-fit: cover;"/>
+                    </t>
+                    <t t-else="">
+                        <div class="avatar-placeholder rounded-circle bg-white d-inline-flex align-items-center justify-content-center"
+                             style="width: 80px; height: 80px;">
+                            <span class="text-primary fs-3 fw-bold">
+                                <t t-esc="instructor.name[:2].upper()"/>
+                            </span>
+                        </div>
+                    </t>
+                </div>
+                <h6 class="mb-1"><t t-esc="instructor.name"/></h6>
+                <small class="opacity-75">Instructor</small>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav class="dashboard-nav p-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a t-attf-class="nav-link rounded-3 d-flex align-items-center gap-2 #{'active' if active_menu == 'dashboard' else ''}" 
+                           href="/instructor/dashboard">
+                            <i class="fa fa-tachometer-alt fa-fw"/>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a t-attf-class="nav-link rounded-3 d-flex align-items-center gap-2 #{'active' if active_menu == 'courses' else ''}" 
+                           href="/instructor/courses">
+                            <i class="fa fa-book fa-fw"/>
+                            My Courses
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a t-attf-class="nav-link rounded-3 d-flex align-items-center gap-2 #{'active' if active_menu == 'earnings' else ''}" 
+                           href="/instructor/earnings">
+                            <i class="fa fa-money fa-fw"/>
+                            Earnings
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a t-attf-class="nav-link rounded-3 d-flex align-items-center gap-2 #{'active' if active_menu == 'schedule' else ''}" 
+                           href="/instructor/schedule">
+                            <i class="fa fa-calendar fa-fw"/>
+                            Schedule
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a t-attf-class="nav-link rounded-3 d-flex align-items-center gap-2 #{'active' if active_menu == 'reviews' else ''}" 
+                           href="/instructor/reviews">
+                            <i class="fa fa-star fa-fw"/>
+                            Reviews
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a t-attf-class="nav-link rounded-3 d-flex align-items-center gap-2 #{'active' if active_menu == 'settings' else ''}" 
+                           href="/instructor/settings">
+                            <i class="fa fa-cog fa-fw"/>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </template>
+
+
+    <!-- ===================================================================
+         ALL INSTRUCTORS LIST PAGE
+         Public page showing all active instructors
+    =================================================================== -->
+    <template id="instructors_list" name="All Instructors">
+        <t t-call="website.layout">
+            <t t-set="title">Our Instructors</t>
+            <div id="wrap" class="o_seitech_instructors_list">
+                
+                <!-- Breadcrumb -->
+                <section class="s_breadcrumb bg-light py-3">
+                    <div class="container">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb mb-0">
+                                <li class="breadcrumb-item">
+                                    <a href="/">Home</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    Instructors
+                                </li>
+                            </ol>
+                        </nav>
+                    </div>
+                </section>
+
+                <!-- Hero Section -->
+                <section class="instructor-hero py-5 bg-primary text-white">
+                    <div class="container text-center">
+                        <h1 class="display-5 fw-bold mb-3">Our Expert Instructors</h1>
+                        <p class="lead opacity-75 mb-0">
+                            Learn from industry professionals with years of experience
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Instructors Grid -->
+                <section class="instructors-grid py-5">
+                    <div class="container">
+                        <div class="row g-4">
+                            <t t-foreach="instructors" t-as="instr">
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <a t-attf-href="/instructor/{{ instr.id }}" class="text-decoration-none">
+                                        <div class="instructor-card bg-white rounded-4 shadow-sm p-4 text-center h-100">
+                                            <!-- Featured Badge -->
+                                            <t t-if="instr.is_featured">
+                                                <div class="featured-badge position-absolute top-0 end-0 m-3">
+                                                    <span class="badge bg-warning text-dark">
+                                                        <i class="fa fa-star me-1"/>Featured
+                                                    </span>
+                                                </div>
+                                            </t>
+                                            
+                                            <!-- Avatar -->
+                                            <div class="instructor-avatar mb-3 mx-auto rounded-circle overflow-hidden">
+                                                <t t-if="instr.image">
+                                                    <img t-att-src="'/web/image/seitech.instructor/%s/image' % instr.id"
+                                                         alt="Instructor Photo"/>
+                                                </t>
+                                                <t t-else="">
+                                                    <div class="avatar-placeholder bg-primary d-flex align-items-center justify-content-center rounded-circle">
+                                                        <span class="text-white fw-bold">
+                                                            <t t-esc="instr.name[:2].upper()"/>
+                                                        </span>
+                                                    </div>
+                                                </t>
+                                            </div>
+                                            
+                                            <!-- Name and Title -->
+                                            <h5 class="instructor-name fw-bold text-dark mb-1">
+                                                <t t-esc="instr.name"/>
+                                            </h5>
+                                            <p class="text-muted small mb-3 text-truncate">
+                                                <t t-esc="instr.title or 'Instructor'"/>
+                                            </p>
+                                            
+                                            <!-- Rating -->
+                                            <div class="rating mb-3">
+                                                <span class="text-warning">
+                                                    <i class="fa fa-star"/>
+                                                    <t t-esc="'%.1f' % instr.average_rating"/>
+                                                </span>
+                                                <span class="text-muted small">
+                                                    (<t t-esc="instr.total_reviews"/> reviews)
+                                                </span>
+                                            </div>
+                                            
+                                            <!-- Stats -->
+                                            <div class="instructor-stats d-flex justify-content-around border-top pt-3">
+                                                <div class="stat">
+                                                    <div class="value"><t t-esc="instr.course_count"/></div>
+                                                    <div class="label">Courses</div>
+                                                </div>
+                                                <div class="stat">
+                                                    <div class="value"><t t-esc="instr.total_students"/></div>
+                                                    <div class="label">Students</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </t>
+
+                            <t t-if="not instructors">
+                                <div class="col-12 text-center py-5">
+                                    <i class="fa fa-users fa-4x text-muted opacity-50 mb-3"/>
+                                    <h4 class="text-muted">No instructors available</h4>
+                                    <p class="text-muted">Check back later for our expert instructors.</p>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Become Instructor CTA -->
+                <section class="become-instructor py-5 bg-light">
+                    <div class="container text-center">
+                        <h3 class="fw-bold mb-3">Become an Instructor</h3>
+                        <p class="text-muted mb-4">
+                            Share your expertise and earn money teaching what you love.
+                        </p>
+                        <a href="/become-instructor" class="btn btn-primary btn-lg px-5">
+                            Start Teaching Today
+                        </a>
+                    </div>
+                </section>
+
+            </div>
+        </t>
+    </template>
+
+</odoo>

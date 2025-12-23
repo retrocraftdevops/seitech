@@ -1,0 +1,4190 @@
+# Translation file for Seitech E-Learning
+# Converted from legacy PHP application
+# Copyright (C) 2025 Seitech International
+# This file is distributed under the LGPL-3 license.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Seitech E-Learning 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-22 21:34+0000\n"
+"PO-Revision-Date: 2025-12-22 21:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Legacy key: manage_profile
+msgid "Manage profile"
+msgstr "Profile verwalten"
+
+#. Legacy key: write_a_public_review
+msgid "Write a public review"
+msgstr "Schreiben Sie eine öffentliche Rezension"
+
+#. Legacy key: heads_up
+msgid "Heads up"
+msgstr "Kopf hoch"
+
+#. Legacy key: describe_your_experience_what_you_got_out_of_the_course_and_other_helpful_highlights
+msgid "Describe your experience what you got out of the course and other helpful highlights"
+msgstr "Beschreiben Sie Ihre Erfahrungen mit dem Kurs und andere hilfreiche Highlights"
+
+#. Legacy key: are_you_sure
+msgid "Are you sure"
+msgstr "Bist du dir sicher?"
+
+#. Legacy key: what_did_the_instructor_do_well_and_what_could_use_some_improvement
+msgid "What did the instructor do well and what could use some improvement"
+msgstr "Was hat der Dozent gut gemacht und was könnte verbessert werden?"
+
+#. Legacy key: cancel
+msgid "Cancel"
+msgstr "Stornieren"
+
+#. Legacy key: continue
+msgid "Continue"
+msgstr "Weitermachen"
+
+#. Legacy key: next
+msgid "Next"
+msgstr "Nächste"
+
+#. Legacy key: previous
+msgid "Previous"
+msgstr "vorherige"
+
+#. Legacy key: publish
+msgid "Publish"
+msgstr "veröffentlichen"
+
+#. Legacy key: delete
+msgid "Delete"
+msgstr "Löschen"
+
+#. Legacy key: 404_page_not_found
+msgid "404 page not found"
+msgstr "404 Seite nicht gefunden"
+
+#. Legacy key: courses
+msgid "Courses"
+msgstr "Kurse"
+
+#. Legacy key: all_courses
+msgid "All courses"
+msgstr "Alle Kurse"
+
+#. Legacy key: search_for_courses
+msgid "Search for courses"
+msgstr "Nach Kursen suchen"
+
+#. Legacy key: total
+msgid "Total"
+msgstr "Total"
+
+#. Legacy key: go_to_cart
+msgid "Go to cart"
+msgstr "Gehen Sie zum Warenkorb"
+
+#. Legacy key: your_cart_is_empty
+msgid "Your cart is empty"
+msgstr "Ihr Warenkorb ist leer"
+
+#. Legacy key: log_in
+msgid "Log in"
+msgstr "registrieren"
+
+#. Legacy key: sign_up
+msgid "Sign up"
+msgstr "registrieren"
+
+#. Legacy key: cookie_policy
+msgid "Cookie policy"
+msgstr "Cookie-Richtlinie"
+
+#. Legacy key: accept
+msgid "Accept"
+msgstr "Akzeptieren"
+
+#. Legacy key: oh_snap
+msgid "Oh snap"
+msgstr "verdammt"
+
+#. Legacy key: this_is_not_the_web_page_you_are_looking_for
+msgid "This is not the web page you are looking for"
+msgstr "Dies ist nicht die Website, die Sie suchen"
+
+#. Legacy key: back_to_home
+msgid "Back to home"
+msgstr "Zurück zuhause"
+
+#. Legacy key: about
+msgid "About"
+msgstr "Um"
+
+#. Legacy key: privacy_policy
+msgid "Privacy policy"
+msgstr "Datenschutz-Bestimmungen"
+
+#. Legacy key: terms_and_condition
+msgid "Terms and condition"
+msgstr "Geschäftsbedingung"
+
+#. Legacy key: login
+msgid "Login"
+msgstr "Anmeldung"
+
+#. Legacy key: step
+msgid "Step"
+msgstr "Schritt"
+
+#. Legacy key: how_would_you_rate_this_course_overall
+msgid "How would you rate this course overall"
+msgstr "Wie würden Sie diesen Kurs insgesamt bewerten?"
+
+#. Legacy key: all_category
+msgid "All category"
+msgstr "Alle Kategorie"
+
+#. Legacy key: showing_on_this_page
+msgid "Showing on this page"
+msgstr "Wird auf dieser Seite angezeigt"
+
+#. Legacy key: filter
+msgid "Filter"
+msgstr "Filter"
+
+#. Legacy key: categories
+msgid "Categories"
+msgstr "Kategorien"
+
+#. Legacy key: show_more
+msgid "Show more"
+msgstr "Zeig mehr"
+
+#. Legacy key: price
+msgid "Price"
+msgstr "Price"
+
+#. Legacy key: all
+msgid "All"
+msgstr "All"
+
+#. Legacy key: free
+msgid "Free"
+msgstr "Free"
+
+#. Legacy key: paid
+msgid "Paid"
+msgstr "Paid"
+
+#. Legacy key: level
+msgid "Level"
+msgstr "Even"
+
+#. Legacy key: beginner
+msgid "Beginner"
+msgstr "Beginner"
+
+#. Legacy key: advanced
+msgid "Advanced"
+msgstr "Progressive"
+
+#. Legacy key: intermediate
+msgid "Intermediate"
+msgstr "intermediate"
+
+#. Legacy key: language
+msgid "Language"
+msgstr "Language"
+
+#. Legacy key: ratings
+msgid "Ratings"
+msgstr "reviews"
+
+#. Legacy key: lessons
+msgid "Lessons"
+msgstr "Instruction"
+
+#. Legacy key: hours
+msgid "Hours"
+msgstr "Hours"
+
+#. Legacy key: show_less
+msgid "Show less"
+msgstr "Show less"
+
+#. Legacy key: course
+msgid "Course"
+msgstr "course"
+
+#. Legacy key: students_enrolled
+msgid "Students enrolled"
+msgstr "students enrolled"
+
+#. Legacy key: created_by
+msgid "Created by"
+msgstr "Created by"
+
+#. Legacy key: last_updated
+msgid "Last updated"
+msgstr "last update"
+
+#. Legacy key: what_will_i_learn
+msgid "What will i learn"
+msgstr "What will I learn"
+
+#. Legacy key: curriculum_for_this_course
+msgid "Curriculum for this course"
+msgstr "syllabus for this course"
+
+#. Legacy key: requirements
+msgid "Requirements"
+msgstr "Requirements"
+
+#. Legacy key: view_more
+msgid "View more"
+msgstr "See more"
+
+#. Legacy key: description
+msgid "Description"
+msgstr "Description"
+
+#. Legacy key: other_related_courses
+msgid "Other related courses"
+msgstr "Other related courses"
+
+#. Legacy key: updated
+msgid "Updated"
+msgstr "updated"
+
+#. Legacy key: about_the_instructor
+msgid "About the instructor"
+msgstr "About the lecturer"
+
+#. Legacy key: reviews
+msgid "Reviews"
+msgstr "reviews"
+
+#. Legacy key: students
+msgid "Students"
+msgstr "students"
+
+#. Legacy key: student_feedback
+msgid "Student feedback"
+msgstr "Student feedback"
+
+#. Legacy key: average_rating
+msgid "Average rating"
+msgstr "Average rating"
+
+#. Legacy key: buy_now
+msgid "Buy now"
+msgstr "buy now"
+
+#. Legacy key: added_to_cart
+msgid "Added to cart"
+msgstr "Added to cart"
+
+#. Legacy key: includes
+msgid "Includes"
+msgstr "Included"
+
+#. Legacy key: on_demand_videos
+msgid "On demand videos"
+msgstr "On Demand Videos"
+
+#. Legacy key: full_lifetime_access
+msgid "Full lifetime access"
+msgstr "Full lifetime access"
+
+#. Legacy key: access_on_mobile_and_tv
+msgid "Access on mobile and tv"
+msgstr "Access to cell phone and TV"
+
+#. Legacy key: add_to_cart
+msgid "Add to cart"
+msgstr "Add to Cart"
+
+#. Legacy key: please_wait
+msgid "Please wait"
+msgstr "Please wait"
+
+#. Legacy key: preview_this_course
+msgid "Preview this course"
+msgstr "Preview this course"
+
+#. Legacy key: course_preview
+msgid "Course preview"
+msgstr "course preview"
+
+#. Legacy key: admin_revenue
+msgid "Admin revenue"
+msgstr "administrative income"
+
+#. Legacy key: admin
+msgid "Admin"
+msgstr "Administrator"
+
+#. Legacy key: welcome
+msgid "Welcome"
+msgstr "Welcome"
+
+#. Legacy key: my_account
+msgid "My account"
+msgstr "My account"
+
+#. Legacy key: settings
+msgid "Settings"
+msgstr "Ideas"
+
+#. Legacy key: logout
+msgid "Logout"
+msgstr "log out"
+
+#. Legacy key: visit_website
+msgid "Visit website"
+msgstr "Visit the website"
+
+#. Legacy key: navigation
+msgid "Navigation"
+msgstr "navigation"
+
+#. Legacy key: dashboard
+msgid "Dashboard"
+msgstr "dashboard"
+
+#. Legacy key: add_new_category
+msgid "Add new category"
+msgstr "Add new category"
+
+#. Legacy key: instructors
+msgid "Instructors"
+msgstr "instructor"
+
+#. Legacy key: enrolment
+msgid "Enrolment"
+msgstr "enrollment"
+
+#. Legacy key: enrol_history
+msgid "Enrol history"
+msgstr "login history"
+
+#. Legacy key: enrol_a_student
+msgid "Enrol a student"
+msgstr "Enroll a student"
+
+#. Legacy key: report
+msgid "Report"
+msgstr "Nachricht"
+
+#. Legacy key: instructor_revenue
+msgid "Instructor revenue"
+msgstr "income of the trainers"
+
+#. Legacy key: message
+msgid "Message"
+msgstr "News"
+
+#. Legacy key: addons
+msgid "Addons"
+msgstr "Add ons"
+
+#. Legacy key: addon_manager
+msgid "Addon manager"
+msgstr "addon manager"
+
+#. Legacy key: available_addons
+msgid "Available addons"
+msgstr "Available Addons"
+
+#. Legacy key: system_settings
+msgid "System settings"
+msgstr "system settings"
+
+#. Legacy key: website_settings
+msgid "Website settings"
+msgstr "Website Settings"
+
+#. Legacy key: payment_settings
+msgid "Payment settings"
+msgstr "payment settings"
+
+#. Legacy key: instructor_settings
+msgid "Instructor settings"
+msgstr "teacher settings"
+
+#. Legacy key: language_settings
+msgid "Language settings"
+msgstr "language settings"
+
+#. Legacy key: smtp_settings
+msgid "Smtp settings"
+msgstr "SMTP settings"
+
+#. Legacy key: theme_settings
+msgid "Theme settings"
+msgstr "Theme Settings"
+
+#. Legacy key: enrolled_course
+msgid "Enrolled course"
+msgstr "Enrolled course"
+
+#. Legacy key: total_amount
+msgid "Total amount"
+msgstr "total quantity"
+
+#. Legacy key: enrolment_date
+msgid "Enrolment date"
+msgstr "registration date"
+
+#. Legacy key: actions
+msgid "Actions"
+msgstr "Actions"
+
+#. Legacy key: this_year
+msgid "This year"
+msgstr "This year"
+
+#. Legacy key: active_course
+msgid "Active course"
+msgstr "Active course"
+
+#. Legacy key: pending_course
+msgid "Pending course"
+msgstr "Pending course"
+
+#. Legacy key: congratulations
+msgid "Congratulations"
+msgstr "congratulations"
+
+#. Legacy key: please_fill_all_the_required_fields
+msgid "Please fill all the required fields"
+msgstr "Please fill out all required fields"
+
+#. Legacy key: close
+msgid "Close"
+msgstr "Close"
+
+#. Legacy key: private_messaging
+msgid "Private messaging"
+msgstr "private messages"
+
+#. Legacy key: private_message
+msgid "Private message"
+msgstr "Private message"
+
+#. Legacy key: new_message
+msgid "New message"
+msgstr "New message"
+
+#. Legacy key: home
+msgid "Home"
+msgstr "Home"
+
+#. Legacy key: menu
+msgid "Menu"
+msgstr "Menu"
+
+#. Legacy key: all_tutions
+msgid "All tutions"
+msgstr "All lessons"
+
+#. Legacy key: ebooks
+msgid "Ebooks"
+msgstr "eBooks"
+
+#. Legacy key: course_bundles
+msgid "Course bundles"
+msgstr "course packages"
+
+#. Legacy key: administrator
+msgid "Administrator"
+msgstr "Administrator"
+
+#. Legacy key: learn_on_your_schedule
+msgid "Learn on your schedule"
+msgstr "Study on your schedule"
+
+#. Legacy key: what_do_you_want_to_learn
+msgid "What do you want to learn"
+msgstr "What do you want to learn"
+
+#. Legacy key: search
+msgid "Search"
+msgstr "Seek"
+
+#. Legacy key: online_courses
+msgid "Online courses"
+msgstr "online courses"
+
+#. Legacy key: explore_a_variety_of_fresh_topics
+msgid "Explore a variety of fresh topics"
+msgstr "Discover a variety of new themes"
+
+#. Legacy key: expert_instruction
+msgid "Expert instruction"
+msgstr "Expert instruction"
+
+#. Legacy key: find_the_right_course_for_you
+msgid "Find the right course for you"
+msgstr "Find the right course for you"
+
+#. Legacy key: lifetime_access
+msgid "Lifetime access"
+msgstr "Lifetime access"
+
+#. Legacy key: top_categories
+msgid "Top categories"
+msgstr "top categories"
+
+#. Legacy key: top_courses
+msgid "Top courses"
+msgstr "top courses"
+
+#. Legacy key: compare
+msgid "Compare"
+msgstr "Vergleichen"
+
+#. Legacy key: lectures
+msgid "Lectures"
+msgstr "Vorträge"
+
+#. Legacy key: get_enrolled
+msgid "Get enrolled"
+msgstr "Melden Sie sich an"
+
+#. Legacy key: top
+msgid "Top"
+msgstr "Spitze"
+
+#. Legacy key: latest_courses
+msgid "Latest courses"
+msgstr "Aktuelle Kurse"
+
+#. Legacy key: h5p_course
+msgid "H5p course"
+msgstr "H5p course"
+
+#. Legacy key: scorm_course
+msgid "Scorm course"
+msgstr "Scorm-Kurs"
+
+#. Legacy key: featured_instructor
+msgid "Featured instructor"
+msgstr "Selected teacher"
+
+#. Legacy key: join_now_to_start_learning
+msgid "Join now to start learning"
+msgstr "Sign up now to start learning"
+
+#. Legacy key: get_started
+msgid "Get started"
+msgstr "Getting started"
+
+#. Legacy key: become_a_new_instructor
+msgid "Become a new instructor"
+msgstr "Become a new instructor"
+
+#. Legacy key: join_now
+msgid "Join now"
+msgstr "Join now"
+
+#. Legacy key: useful_links
+msgid "Useful links"
+msgstr "usefull links"
+
+#. Legacy key: blog
+msgid "Blog"
+msgstr "Blog"
+
+#. Legacy key: help
+msgid "Help"
+msgstr "Help"
+
+#. Legacy key: about_us
+msgid "About us"
+msgstr "About Us"
+
+#. Legacy key: refund_policy
+msgid "Refund policy"
+msgstr "refund policy"
+
+#. Legacy key: all_rights_reserved
+msgid "All rights reserved"
+msgstr "All rights reserved"
+
+#. Legacy key: yes
+msgid "Yes"
+msgstr "Und"
+
+#. Legacy key: no
+msgid "No"
+msgstr "NO"
+
+#. Legacy key: view_less
+msgid "View less"
+msgstr "show less"
+
+#. Legacy key: ai_writer
+msgid "Ai writer"
+msgstr "KI-Autor"
+
+#. Legacy key: quick_actions
+msgid "Quick actions"
+msgstr "Fast Actions"
+
+#. Legacy key: create_course
+msgid "Create course"
+msgstr "Create course"
+
+#. Legacy key: add_course
+msgid "Add course"
+msgstr "Add course"
+
+#. Legacy key: add_new_lesson
+msgid "Add new lesson"
+msgstr "Add new lesson"
+
+#. Legacy key: add_lesson
+msgid "Add lesson"
+msgstr "Add Lesson"
+
+#. Legacy key: add_student
+msgid "Add student"
+msgstr "Add student"
+
+#. Legacy key: enrol_student
+msgid "Enrol student"
+msgstr "Register students"
+
+#. Legacy key: help_center
+msgid "Help center"
+msgstr "help center"
+
+#. Legacy key: read_documentation
+msgid "Read documentation"
+msgstr "read documentation"
+
+#. Legacy key: watch_video_tutorial
+msgid "Watch video tutorial"
+msgstr "Watch the video tutorial"
+
+#. Legacy key: get_customer_support
+msgid "Get customer support"
+msgstr "Get customer support"
+
+#. Legacy key: order_customization
+msgid "Order customization"
+msgstr "order adjustment"
+
+#. Legacy key: request_a_new_feature
+msgid "Request a new feature"
+msgstr "Request a new feature"
+
+#. Legacy key: browse_addons
+msgid "Browse addons"
+msgstr "Browse add-ons"
+
+#. Legacy key: manage_courses
+msgid "Manage courses"
+msgstr "Manage Courses"
+
+#. Legacy key: add_new_course
+msgid "Add new course"
+msgstr "Add new course"
+
+#. Legacy key: course_category
+msgid "Course category"
+msgstr "Kurskategorie"
+
+#. Legacy key: coupons
+msgid "Coupons"
+msgstr "coupons"
+
+#. Legacy key: course_bundle
+msgid "Course bundle"
+msgstr "Kurspaket"
+
+#. Legacy key: add_new_bundle
+msgid "Add new bundle"
+msgstr "Add new package"
+
+#. Legacy key: manage_bundle
+msgid "Manage bundle"
+msgstr "Manage bundles"
+
+#. Legacy key: subscription_report
+msgid "Subscription report"
+msgstr "subscription report"
+
+#. Legacy key: tutor_booking
+msgid "Tutor booking"
+msgstr "Booking a tutor"
+
+#. Legacy key: subject_category
+msgid "Subject category"
+msgstr "topic category"
+
+#. Legacy key: add_booking
+msgid "Add booking"
+msgstr "Add booking"
+
+#. Legacy key: all_bookings
+msgid "All bookings"
+msgstr "All bookings"
+
+#. Legacy key: booked_schedules
+msgid "Booked schedules"
+msgstr "Booked schedules"
+
+#. Legacy key: live_class_settings
+msgid "Live class settings"
+msgstr "Live class settings"
+
+#. Legacy key: ebook
+msgid "Ebook"
+msgstr "E-Book"
+
+#. Legacy key: all_ebooks
+msgid "All ebooks"
+msgstr "Zu E-Books"
+
+#. Legacy key: add_ebook
+msgid "Add ebook"
+msgstr "Add eBook"
+
+#. Legacy key: payment_history
+msgid "Payment history"
+msgstr "payment history"
+
+#. Legacy key: category
+msgid "Category"
+msgstr "Kategorie"
+
+#. Legacy key: course_enrollment
+msgid "Course enrollment"
+msgstr "course registration"
+
+#. Legacy key: purchase_history
+msgid "Purchase history"
+msgstr "purchase history"
+
+#. Legacy key: affiliate
+msgid "Affiliate"
+msgstr "affiliate"
+
+#. Legacy key: affliliator_list
+msgid "Affliliator list"
+msgstr "partner list"
+
+#. Legacy key: affiliation_history
+msgid "Affiliation history"
+msgstr "affiliation history"
+
+#. Legacy key: payouts
+msgid "Payouts"
+msgstr "payouts"
+
+#. Legacy key: create_affiliator
+msgid "Create affiliator"
+msgstr "create partners"
+
+#. Legacy key: affiliation_settings
+msgid "Affiliation settings"
+msgstr "Affiliation Settings"
+
+#. Legacy key: users
+msgid "Users"
+msgstr "user"
+
+#. Legacy key: admins
+msgid "Admins"
+msgstr "admins"
+
+#. Legacy key: manage_admins
+msgid "Manage admins"
+msgstr "Manage Administrators"
+
+#. Legacy key: add_new_admin
+msgid "Add new admin"
+msgstr "Add new admin"
+
+#. Legacy key: manage_instructors
+msgid "Manage instructors"
+msgstr "Manage trainers"
+
+#. Legacy key: add_new_instructor
+msgid "Add new instructor"
+msgstr "Add new teacher"
+
+#. Legacy key: instructor_payout
+msgid "Instructor payout"
+msgstr "payment of the teacher"
+
+#. Legacy key: applications
+msgid "Applications"
+msgstr "applications"
+
+#. Legacy key: manage_students
+msgid "Manage students"
+msgstr "manage students"
+
+#. Legacy key: add_new_student
+msgid "Add new student"
+msgstr "Add new student"
+
+#. Legacy key: offline_payment
+msgid "Offline payment"
+msgstr "offline payment"
+
+#. Legacy key: pending_request
+msgid "Pending request"
+msgstr "Pending request"
+
+#. Legacy key: accepted_request
+msgid "Accepted request"
+msgstr "Accepted request"
+
+#. Legacy key: suspended_request
+msgid "Suspended request"
+msgstr "request suspended"
+
+#. Legacy key: offline_payment_settings
+msgid "Offline payment settings"
+msgstr "Offline payment settings"
+
+#. Legacy key: all_blogs
+msgid "All blogs"
+msgstr "All blogs"
+
+#. Legacy key: pending_blog
+msgid "Pending blog"
+msgstr "Pending blog"
+
+#. Legacy key: blog_category
+msgid "Blog category"
+msgstr "blog category"
+
+#. Legacy key: blog_settings
+msgid "Blog settings"
+msgstr "blog settings"
+
+#. Legacy key: customer_support
+msgid "Customer support"
+msgstr "Customer service"
+
+#. Legacy key: ticket_list
+msgid "Ticket list"
+msgstr "ticket list"
+
+#. Legacy key: support_category
+msgid "Support category"
+msgstr "support category"
+
+#. Legacy key: macro
+msgid "Macro"
+msgstr "macro"
+
+#. Legacy key: create_ticket
+msgid "Create ticket"
+msgstr "Create Ticket"
+
+#. Legacy key: themes
+msgid "Themes"
+msgstr "subjects"
+
+#. Legacy key: academy_cloud
+msgid "Academy cloud"
+msgstr "Academy Cloud"
+
+#. Legacy key: drip_content_settings
+msgid "Drip content settings"
+msgstr "Drip Content Settings"
+
+#. Legacy key: certificate_settings
+msgid "Certificate settings"
+msgstr "Certificate Settings"
+
+#. Legacy key: s3_settings
+msgid "S3 settings"
+msgstr "S3 settings"
+
+#. Legacy key: open_ai_settings
+msgid "Open ai settings"
+msgstr "Open the AI ​​settings"
+
+#. Legacy key: social_login
+msgid "Social login"
+msgstr "Social login"
+
+#. Legacy key: custom_page
+msgid "Custom page"
+msgstr "Custom Page"
+
+#. Legacy key: data_center
+msgid "Data center"
+msgstr "data center"
+
+#. Legacy key: admin_revenue_this_year
+msgid "Admin revenue this year"
+msgstr "administrative income this year"
+
+#. Legacy key: number_courses
+msgid "Number courses"
+msgstr "number of courses"
+
+#. Legacy key: number_of_lessons
+msgid "Number of lessons"
+msgstr "number of lessons"
+
+#. Legacy key: number_of_enrolment
+msgid "Number of enrolment"
+msgstr "Number of enrollments"
+
+#. Legacy key: number_of_student
+msgid "Number of student"
+msgstr "number of students"
+
+#. Legacy key: course_overview
+msgid "Course overview"
+msgstr "Course Overview"
+
+#. Legacy key: active_courses
+msgid "Active courses"
+msgstr "Active Courses"
+
+#. Legacy key: pending_courses
+msgid "Pending courses"
+msgstr "Pending Courses"
+
+#. Legacy key: requested_withdrawal
+msgid "Requested withdrawal"
+msgstr "payment requested"
+
+#. Legacy key: email
+msgid "Email"
+msgstr "E-mail"
+
+#. Legacy key: requested_withdrawal_amount
+msgid "Requested withdrawal amount"
+msgstr "Requested payout amount"
+
+#. Legacy key: january
+msgid "January"
+msgstr "January"
+
+#. Legacy key: february
+msgid "February"
+msgstr "February"
+
+#. Legacy key: march
+msgid "March"
+msgstr "march"
+
+#. Legacy key: april
+msgid "April"
+msgstr "April"
+
+#. Legacy key: may
+msgid "May"
+msgstr "May"
+
+#. Legacy key: june
+msgid "June"
+msgstr "June"
+
+#. Legacy key: july
+msgid "July"
+msgstr "July"
+
+#. Legacy key: august
+msgid "August"
+msgstr "August"
+
+#. Legacy key: september
+msgid "September"
+msgstr "September"
+
+#. Legacy key: october
+msgid "October"
+msgstr "October"
+
+#. Legacy key: november
+msgid "November"
+msgstr "November"
+
+#. Legacy key: december
+msgid "December"
+msgstr "December"
+
+#. Legacy key: ok
+msgid "Ok"
+msgstr "OK"
+
+#. Legacy key: success
+msgid "Success"
+msgstr "Success"
+
+#. Legacy key: successfully
+msgid "Successfully"
+msgstr "Successful"
+
+#. Legacy key: div_added_to_bottom_
+msgid "Div added to bottom "
+msgstr "Added div below"
+
+#. Legacy key: div_has_been_deleted_
+msgid "Div has been deleted "
+msgstr "Div has been deleted"
+
+#. Legacy key: provide_your_valid_login_credentials
+msgid "Provide your valid login credentials"
+msgstr "Enter your valid login details"
+
+#. Legacy key: continue_with_email
+msgid "Continue with email"
+msgstr "Continue with email"
+
+#. Legacy key: password
+msgid "Password"
+msgstr "password"
+
+#. Legacy key: forgot_password
+msgid "Forgot password"
+msgstr "Forgot Password"
+
+#. Legacy key: do_not_have_an_account
+msgid "Do not have an account"
+msgstr "Don't have an account"
+
+#. Legacy key: website_name
+msgid "Website name"
+msgstr "website name"
+
+#. Legacy key: website_title
+msgid "Website title"
+msgstr "webpage title"
+
+#. Legacy key: website_keywords
+msgid "Website keywords"
+msgstr "Website Keywords"
+
+#. Legacy key: website_description
+msgid "Website description"
+msgstr "Website Description"
+
+#. Legacy key: author
+msgid "Author"
+msgstr "author"
+
+#. Legacy key: slogan
+msgid "Slogan"
+msgstr "slogan"
+
+#. Legacy key: system_email
+msgid "System email"
+msgstr "System email"
+
+#. Legacy key: address
+msgid "Address"
+msgstr "address"
+
+#. Legacy key: phone
+msgid "Phone"
+msgstr "phone"
+
+#. Legacy key: youtube_api_key
+msgid "Youtube api key"
+msgstr "Youtube API Key"
+
+#. Legacy key: get_youtube_api_key
+msgid "Get youtube api key"
+msgstr "Get the YouTube API key"
+
+#. Legacy key: vimeo_api_key
+msgid "Vimeo api key"
+msgstr "Vimeo API Key"
+
+#. Legacy key: get_vimeo_api_key
+msgid "Get vimeo api key"
+msgstr "Get the Vimeo API key"
+
+#. Legacy key: purchase_code
+msgid "Purchase code"
+msgstr "purchase code"
+
+#. Legacy key: system_language
+msgid "System language"
+msgstr "system language"
+
+#. Legacy key: student_email_verification
+msgid "Student email verification"
+msgstr "E-mail confirmation of the students"
+
+#. Legacy key: enable
+msgid "Enable"
+msgstr "Make possible"
+
+#. Legacy key: disable
+msgid "Disable"
+msgstr "Deactivate"
+
+#. Legacy key: course_accessibility
+msgid "Course accessibility"
+msgstr "Accessibility of the course"
+
+#. Legacy key: publicly
+msgid "Publicly"
+msgstr "Public"
+
+#. Legacy key: only_logged_in_users
+msgid "Only logged in users"
+msgstr "Registered users only"
+
+#. Legacy key: number_of_authorized_devices
+msgid "Number of authorized devices"
+msgstr "Number of authorized devices"
+
+#. Legacy key: how_many_devices_do_you_want_to_allow_for_logging_in_using_a_single_account
+msgid "How many devices do you want to allow for logging in using a single account"
+msgstr "How many devices do you want to allow to sign in with a single account?"
+
+#. Legacy key: course_selling_tax
+msgid "Course selling tax"
+msgstr "Course Sales Tax"
+
+#. Legacy key: enter_0_if_you_want_to_disable_the_tax_option
+msgid "Enter 0 if you want to disable the tax option"
+msgstr "Geben Sie 0 ein, wenn Sie die Steueroption deaktivieren möchten"
+
+#. Legacy key: google_analytics_id
+msgid "Google analytics id"
+msgstr "Google Analytics ID"
+
+#. Legacy key: keep_it_blank_if_you_want_to_disable_it
+msgid "Keep it blank if you want to disable it"
+msgstr "Lassen Sie es leer, wenn Sie es deaktivieren möchten"
+
+#. Legacy key: meta_pixel_id
+msgid "Meta pixel id"
+msgstr "Meta-Pixel-ID"
+
+#. Legacy key: footer_text
+msgid "Footer text"
+msgstr "Fusszeile"
+
+#. Legacy key: footer_link
+msgid "Footer link"
+msgstr "Fußzeilenlink"
+
+#. Legacy key: save
+msgid "Save"
+msgstr "Speichern"
+
+#. Legacy key: update_product
+msgid "Update product"
+msgstr "Produkt aktualisieren"
+
+#. Legacy key: file
+msgid "File"
+msgstr "Datei"
+
+#. Legacy key: update
+msgid "Update"
+msgstr "Aktualisieren"
+
+#. Legacy key: not_found
+msgid "Not found"
+msgstr "Nicht gefunden"
+
+#. Legacy key: about_this_application
+msgid "About this application"
+msgstr "Über diese Anwendung"
+
+#. Legacy key: software_version
+msgid "Software version"
+msgstr "Softwareversion"
+
+#. Legacy key: check_update
+msgid "Check update"
+msgstr "Aktualisierung überprüfen"
+
+#. Legacy key: php_version
+msgid "Php version"
+msgstr "PHP-Version"
+
+#. Legacy key: curl_enable
+msgid "Curl enable"
+msgstr "Curl aktivieren"
+
+#. Legacy key: enabled
+msgid "Enabled"
+msgstr "Ermöglicht"
+
+#. Legacy key: product_license
+msgid "Product license"
+msgstr "Produktlizenz"
+
+#. Legacy key: invalid
+msgid "Invalid"
+msgstr "Ungültig"
+
+#. Legacy key: enter_valid_purchase_code
+msgid "Enter valid purchase code"
+msgstr "Geben Sie einen gültigen Kaufcode ein"
+
+#. Legacy key: customer_support_status
+msgid "Customer support status"
+msgstr "Status des Kundensupports"
+
+#. Legacy key: support_expiry_date
+msgid "Support expiry date"
+msgstr "Ablaufdatum des Supports"
+
+#. Legacy key: customer_name
+msgid "Customer name"
+msgstr "Kundenname"
+
+#. Legacy key: product_updated_successfully
+msgid "Product updated successfully"
+msgstr "Produkt erfolgreich aktualisiert"
+
+#. Legacy key: remove_all
+msgid "Remove all"
+msgstr "Alles entfernen"
+
+#. Legacy key: notification
+msgid "Notification"
+msgstr "Benachrichtigung"
+
+#. Legacy key: no_notification
+msgid "No notification"
+msgstr "Keine Benachrichtigung"
+
+#. Legacy key: notification_settings
+msgid "Notification settings"
+msgstr "Benachrichtigungseinstellungen"
+
+#. Legacy key: mark_all_as_read
+msgid "Mark all as read"
+msgstr "Alles als gelesen markieren"
+
+#. Legacy key: enrollments
+msgid "Enrollments"
+msgstr "Anmeldungen"
+
+#. Legacy key: newsletter
+msgid "Newsletter"
+msgstr "Newsletter"
+
+#. Legacy key: all_newsletter
+msgid "All newsletter"
+msgstr "Alle Newsletter"
+
+#. Legacy key: subscribed_user
+msgid "Subscribed user"
+msgstr "Abonnierter Benutzer"
+
+#. Legacy key: custom_page_builder
+msgid "Custom page builder"
+msgstr "Benutzerdefinierter Seitenersteller"
+
+#. Legacy key: your_servers_file_upload_limit_is_900mb
+msgid "Your servers file upload limit is 900mb"
+msgstr "Das Datei-Upload-Limit Ihres Servers beträgt 900 MB"
+
+#. Legacy key: 404_not_found
+msgid "404 not found"
+msgstr "404 Nicht gefunden"
+
+#. Legacy key: administration
+msgid "Administration"
+msgstr "Verwaltung"
+
+#. Legacy key: checkout
+msgid "Checkout"
+msgstr "Kasse"
+
+#. Legacy key: log_out
+msgid "Log out"
+msgstr "Ausloggen"
+
+#. Legacy key: the_page_you_requested_could_not_be_found
+msgid "The page you requested could not be found"
+msgstr "Die von Ihnen angeforderte Seite konnte nicht gefunden werden"
+
+#. Legacy key: check_the_spelling_of_the_url
+msgid "Check the spelling of the url"
+msgstr "Überprüfen Sie die Schreibweise der URL"
+
+#. Legacy key: contact_us
+msgid "Contact us"
+msgstr "Kontaktiere uns"
+
+#. Legacy key: faq
+msgid "Faq"
+msgstr "FAQ"
+
+#. Legacy key: subscribe_to_our_newsletter
+msgid "Subscribe to our newsletter"
+msgstr "Abonniere unseren Newsletter"
+
+#. Legacy key: enter_your_email_address
+msgid "Enter your email address"
+msgstr "Geben sie ihre E-Mailadresse ein"
+
+#. Legacy key: happy
+msgid "Happy"
+msgstr "Glücklich"
+
+#. Legacy key: experienced
+msgid "Experienced"
+msgstr "Erfahren"
+
+#. Legacy key: smart_solution
+msgid "Smart solution"
+msgstr "Schlaue Lösung"
+
+#. Legacy key: upcoming
+msgid "Upcoming"
+msgstr "Bevorstehende"
+
+#. Legacy key: upcoming_courses
+msgid "Upcoming courses"
+msgstr "Kommende Kurse"
+
+#. Legacy key: these_are_the_most_popular_courses_among_listen_courses_learners_worldwide
+msgid "These are the most popular courses among listen courses learners worldwide"
+msgstr "Dies sind die beliebtesten Kurse unter Hörerkurs-Lernenden weltweit"
+
+#. Legacy key: outcomes
+msgid "Outcomes"
+msgstr "Ergebnisse"
+
+#. Legacy key: remove_from_cart
+msgid "Remove from cart"
+msgstr "Aus dem Warenkorb entfernen"
+
+#. Legacy key: enroll_now
+msgid "Enroll now"
+msgstr "Melden Sie sich jetzt an"
+
+#. Legacy key: these_are_the_most_latest_courses_among_listen_courses_learners_worldwide
+msgid "These are the most latest courses among listen courses learners worldwide"
+msgstr "Dies sind die neuesten Kurse unter Hörerkurs-Lernenden weltweit"
+
+#. Legacy key: top_instructors
+msgid "Top instructors"
+msgstr "Top-Lehrer"
+
+#. Legacy key: they_efficiently_serve_large_number_of_students_on_our_platform
+msgid "They efficiently serve large number of students on our platform"
+msgstr "Sie betreuen effizient eine große Anzahl von Studenten auf unserer Plattform"
+
+#. Legacy key: thanks_for_subscribing_to_our_newsletter
+msgid "Thanks for subscribing to our newsletter"
+msgstr "Vielen Dank, dass Sie sich für unseren Newsletter angemeldet haben"
+
+#. Legacy key: such_script_searches_are_not_allowed
+msgid "Such script searches are not allowed"
+msgstr "Solche Skriptsuchen sind nicht erlaubt"
+
+#. Legacy key: list_view
+msgid "List view"
+msgstr "Listenansicht"
+
+#. Legacy key: grid_view
+msgid "Grid view"
+msgstr "Rasteransicht"
+
+#. Legacy key: reset
+msgid "Reset"
+msgstr "Zurücksetzen"
+
+#. Legacy key: showing
+msgid "Showing"
+msgstr "Zeigt"
+
+#. Legacy key: of
+msgid "Of"
+msgstr "Von"
+
+#. Legacy key: results
+msgid "Results"
+msgstr "Ergebnisse"
+
+#. Legacy key: newly_published
+msgid "Newly published"
+msgstr "Neu erschienen"
+
+#. Legacy key: highest_rating
+msgid "Highest rating"
+msgstr "Höchste Bewertung"
+
+#. Legacy key: lowest_price
+msgid "Lowest price"
+msgstr "Geringster Preis"
+
+#. Legacy key: highest_price
+msgid "Highest price"
+msgstr "Höchster Preis"
+
+#. Legacy key: discounted
+msgid "Discounted"
+msgstr "Ermäßigt"
+
+#. Legacy key: english
+msgid "English"
+msgstr "Englisch"
+
+#. Legacy key: bundles
+msgid "Bundles"
+msgstr "Bündel"
+
+#. Legacy key: search_for_bundle
+msgid "Search for bundle"
+msgstr "Nach Bundle suchen"
+
+#. Legacy key: rating_updated_successfully
+msgid "Rating updated successfully"
+msgstr "Bewertung erfolgreich aktualisiert"
+
+#. Legacy key: please_select_a_rating_greater_than_0
+msgid "Please select a rating greater than 0"
+msgstr "Bitte wählen Sie eine Bewertung größer als 0 aus"
+
+#. Legacy key: your_subscription_date_is_over_please_renew_your_bundle
+msgid "Your subscription date is over please renew your bundle"
+msgstr "Ihr Abonnementdatum ist abgelaufen. Bitte erneuern Sie Ihr Paket"
+
+#. Legacy key: bundle_details
+msgid "Bundle details"
+msgstr "Bundle-Details"
+
+#. Legacy key: buy
+msgid "Buy"
+msgstr "Besorgen"
+
+#. Legacy key: all_categories
+msgid "All categories"
+msgstr "Alle Kategorien"
+
+#. Legacy key: view_details
+msgid "View details"
+msgstr "Details anzeigen"
+
+#. Legacy key: your_email
+msgid "Your email"
+msgstr "Deine E-Mail"
+
+#. Legacy key: enter_your_email
+msgid "Enter your email"
+msgstr "Geben sie ihre E-Mail Adresse ein"
+
+#. Legacy key: enter_your_valid_password
+msgid "Enter your valid password"
+msgstr "Geben Sie Ihr gültiges Passwort ein"
+
+#. Legacy key: or
+msgid "Or"
+msgstr "Oder"
+
+#. Legacy key: send_request
+msgid "Send request"
+msgstr "Anfrage senden"
+
+#. Legacy key: back_to_login
+msgid "Back to login"
+msgstr "Zurück zur Anmeldung"
+
+#. Legacy key: my_course
+msgid "My course"
+msgstr "Mein Kurs"
+
+#. Legacy key: by
+msgid "By"
+msgstr "Von"
+
+#. Legacy key: go_to_wishlist
+msgid "Go to wishlist"
+msgstr "Zur Wunschliste gehen"
+
+#. Legacy key: become_a_instructor
+msgid "Become a instructor"
+msgstr "Werden Sie Ausbilder"
+
+#. Legacy key: my_courses
+msgid "My courses"
+msgstr "Meine Kurse"
+
+#. Legacy key: my_wishlist
+msgid "My wishlist"
+msgstr "Meine Wunschliste"
+
+#. Legacy key: my_messages
+msgid "My messages"
+msgstr "Meine Nachrichten"
+
+#. Legacy key: user_profile
+msgid "User profile"
+msgstr "Benutzerprofil"
+
+#. Legacy key: support
+msgid "Support"
+msgstr "Unterstützung"
+
+#. Legacy key: start_now
+msgid "Start now"
+msgstr "Jetzt anfangen"
+
+#. Legacy key: gift_someone_else
+msgid "Gift someone else"
+msgstr "Schenken Sie jemand anderen"
+
+#. Legacy key: wishlist
+msgid "Wishlist"
+msgstr "Wunschzettel"
+
+#. Legacy key: messages
+msgid "Messages"
+msgstr "Mitteilungen"
+
+#. Legacy key: profile
+msgid "Profile"
+msgstr "Profil"
+
+#. Legacy key: account_credentials
+msgid "Account credentials"
+msgstr "Kontoanmeldeinformationen"
+
+#. Legacy key: go_to_course_page
+msgid "Go to course page"
+msgstr "Gehen Sie zur Kursseite"
+
+#. Legacy key: author_profile
+msgid "Author profile"
+msgstr "Autorenprofil"
+
+#. Legacy key: quizzes
+msgid "Quizzes"
+msgstr "Quiz"
+
+#. Legacy key: expiry_period
+msgid "Expiry period"
+msgstr "Ablauffrist"
+
+#. Legacy key: upcoming_live_class
+msgid "Upcoming live class"
+msgstr "Kommende Live-Klasse"
+
+#. Legacy key: enrolled
+msgid "Enrolled"
+msgstr "Eingeschrieben"
+
+#. Legacy key: overview
+msgid "Overview"
+msgstr "Überblick"
+
+#. Legacy key: curriculum
+msgid "Curriculum"
+msgstr "Lehrplan"
+
+#. Legacy key: instructor
+msgid "Instructor"
+msgstr "Lehrer"
+
+#. Legacy key: course_description
+msgid "Course description"
+msgstr "Kursbeschreibung"
+
+#. Legacy key: instructor_profile
+msgid "Instructor profile"
+msgstr "Profil des Ausbilders"
+
+#. Legacy key: facebook
+msgid "Facebook"
+msgstr "Facebook"
+
+#. Legacy key: twitter
+msgid "Twitter"
+msgstr "Twitter"
+
+#. Legacy key: linkedin
+msgid "Linkedin"
+msgstr "Linkedin"
+
+#. Legacy key: how_to_shoot_cinematic_tech_videos_like_apple
+msgid "How to shoot cinematic tech videos like apple"
+msgstr "Wie man filmische Technikvideos wie Apple dreht"
+
+#. Legacy key: compare_this_course
+msgid "Compare this course"
+msgstr "Vergleichen Sie diesen Kurs"
+
+#. Legacy key: skill_level
+msgid "Skill level"
+msgstr "Fähigkeits Level"
+
+#. Legacy key: lifetime
+msgid "Lifetime"
+msgstr "Lebensdauer"
+
+#. Legacy key: certificate
+msgid "Certificate"
+msgstr "Zertifikat"
+
+#. Legacy key: related_courses
+msgid "Related courses"
+msgstr "Ähnliche Kurse"
+
+#. Legacy key: first_name
+msgid "First name"
+msgstr "Vorname"
+
+#. Legacy key: enter_your_first_name
+msgid "Enter your first name"
+msgstr "Geben Sie Ihren Vornamen ein"
+
+#. Legacy key: last_name
+msgid "Last name"
+msgstr "Familienname, Nachname"
+
+#. Legacy key: enter_your_last_name
+msgid "Enter your last name"
+msgstr "Geben Sie Ihren Nachnamen ein"
+
+#. Legacy key: apply_to_become_a_instructor
+msgid "Apply to become a instructor"
+msgstr "Bewerben Sie sich als Ausbilder"
+
+#. Legacy key: enter_your_phone_number
+msgid "Enter your phone number"
+msgstr "Gib deine Telefonnummer ein"
+
+#. Legacy key: document
+msgid "Document"
+msgstr "Dokumentieren"
+
+#. Legacy key: provide_some_documents_about_your_qualifications
+msgid "Provide some documents about your qualifications"
+msgstr "Stellen Sie einige Dokumente zu Ihren Qualifikationen bereit"
+
+#. Legacy key: invalid_login_credentials
+msgid "Invalid login credentials"
+msgstr "Ungültige Login-Details"
+
+#. Legacy key: publication_name
+msgid "Publication name"
+msgstr "Name der Veröffentlichung"
+
+#. Legacy key: published_date
+msgid "Published date"
+msgstr "Veröffentlichungsdatum"
+
+#. Legacy key: category_name
+msgid "Category name"
+msgstr "Kategoriename"
+
+#. Legacy key: read_preview
+msgid "Read preview"
+msgstr "Vorschau lesen"
+
+#. Legacy key: free_download
+msgid "Free download"
+msgstr "Kostenfreier Download"
+
+#. Legacy key: book_specification_and_summary
+msgid "Book specification and summary"
+msgstr "Buchspezifikation und Zusammenfassung"
+
+#. Legacy key: summary
+msgid "Summary"
+msgstr "Zusammenfassung"
+
+#. Legacy key: specification
+msgid "Specification"
+msgstr "Spezifikation"
+
+#. Legacy key: other_related_ebooks
+msgid "Other related ebooks"
+msgstr "Andere verwandte E-Books"
+
+#. Legacy key: about_instructor
+msgid "About instructor"
+msgstr "Über den Lehrer"
+
+#. Legacy key: ebook_review
+msgid "Ebook review"
+msgstr "E-Book-Rezension"
+
+#. Legacy key: add_to_wishlist
+msgid "Add to wishlist"
+msgstr "Zur Wunschliste hinzufügen"
+
+#. Legacy key: added_to_wishlist
+msgid "Added to wishlist"
+msgstr "Zur Wunschliste hinzugefügt"
+
+#. Legacy key: wordpress_theme_development_with_bootstrap
+msgid "Wordpress theme development with bootstrap"
+msgstr "WordPress-Theme-Entwicklung mit Bootstrap"
+
+#. Legacy key: frontend_settings
+msgid "Frontend settings"
+msgstr "Frontend-Einstellungen"
+
+#. Legacy key: home_page_layout
+msgid "Home page layout"
+msgstr "Homepage-Layout"
+
+#. Legacy key: motivational_speech
+msgid "Motivational speech"
+msgstr "Motivationsrede"
+
+#. Legacy key: website_faqs
+msgid "Website faqs"
+msgstr "Website-FAQs"
+
+#. Legacy key: recaptcha
+msgid "Recaptcha"
+msgstr "ReCaptcha"
+
+#. Legacy key: frontend_website_settings
+msgid "Frontend website settings"
+msgstr "Frontend-Website-Einstellungen"
+
+#. Legacy key: banner_title
+msgid "Banner title"
+msgstr "Bannertitel"
+
+#. Legacy key: banner_sub_title
+msgid "Banner sub title"
+msgstr "Untertitel des Banners"
+
+#. Legacy key: cookie_status
+msgid "Cookie status"
+msgstr "Cookie-Status"
+
+#. Legacy key: active
+msgid "Active"
+msgstr "Aktiv"
+
+#. Legacy key: inactive
+msgid "Inactive"
+msgstr "Inaktiv"
+
+#. Legacy key: cookie_note
+msgid "Cookie note"
+msgstr "Cookie-Hinweis"
+
+#. Legacy key: update_settings
+msgid "Update settings"
+msgstr "Update Einstellungen"
+
+#. Legacy key: activated
+msgid "Activated"
+msgstr "Aktiviert"
+
+#. Legacy key: title
+msgid "Title"
+msgstr "Titel"
+
+#. Legacy key: faq_question
+msgid "Faq question"
+msgstr "FAQ-Frage"
+
+#. Legacy key: image
+msgid "Image"
+msgstr "Bild"
+
+#. Legacy key: upload_image
+msgid "Upload image"
+msgstr "Bild hochladen"
+
+#. Legacy key: save_changes
+msgid "Save changes"
+msgstr "Änderungen speichern"
+
+#. Legacy key: question
+msgid "Question"
+msgstr "Frage"
+
+#. Legacy key: answer
+msgid "Answer"
+msgstr "Antworten"
+
+#. Legacy key: recaptcha_settings
+msgid "Recaptcha settings"
+msgstr "Recaptcha-Einstellungen"
+
+#. Legacy key: recaptcha_status
+msgid "Recaptcha status"
+msgstr "Recaptcha-Status"
+
+#. Legacy key: recaptcha_sitekey
+msgid "Recaptcha sitekey"
+msgstr "Recaptcha-Sitekey"
+
+#. Legacy key: recaptcha_secretkey
+msgid "Recaptcha secretkey"
+msgstr "Recaptcha-Geheimschlüssel"
+
+#. Legacy key: update_recaptcha_settings
+msgid "Update recaptcha settings"
+msgstr "Aktualisieren Sie die Recaptcha-Einstellungen"
+
+#. Legacy key: update_banner_image
+msgid "Update banner image"
+msgstr "Bannerbild aktualisieren"
+
+#. Legacy key: upload_banner_image
+msgid "Upload banner image"
+msgstr "Bannerbild hochladen"
+
+#. Legacy key: update_light_logo
+msgid "Update light logo"
+msgstr "Lichtlogo aktualisieren"
+
+#. Legacy key: upload_light_logo
+msgid "Upload light logo"
+msgstr "Lichtlogo hochladen"
+
+#. Legacy key: update_dark_logo
+msgid "Update dark logo"
+msgstr "Dunkles Logo aktualisieren"
+
+#. Legacy key: upload_dark_logo
+msgid "Upload dark logo"
+msgstr "Laden Sie ein dunkles Logo hoch"
+
+#. Legacy key: update_small_logo
+msgid "Update small logo"
+msgstr "Kleines Logo aktualisieren"
+
+#. Legacy key: upload_small_logo
+msgid "Upload small logo"
+msgstr "Laden Sie ein kleines Logo hoch"
+
+#. Legacy key: update_favicon
+msgid "Update favicon"
+msgstr "Favicon aktualisieren"
+
+#. Legacy key: upload_favicon
+msgid "Upload favicon"
+msgstr "Favicon hochladen"
+
+#. Legacy key: banner_image_update
+msgid "Banner image update"
+msgstr "Aktualisierung des Bannerbildes"
+
+#. Legacy key: frontend_settings_updated
+msgid "Frontend settings updated"
+msgstr "Frontend-Einstellungen aktualisiert"
+
+#. Legacy key: start_learning_from_best_platform
+msgid "Start learning from best platform"
+msgstr "Beginnen Sie mit dem Lernen von der besten Plattform"
+
+#. Legacy key: your_servers_file_upload_limit_is_512mb
+msgid "Your servers file upload limit is 512mb"
+msgstr "Das Datei-Upload-Limit Ihres Servers beträgt 512 MB"
+
+#. Legacy key: blog_page_title
+msgid "Blog page title"
+msgstr "Titel der Blog-Seite"
+
+#. Legacy key: blog_page_subtitle
+msgid "Blog page subtitle"
+msgstr "Untertitel der Blog-Seite"
+
+#. Legacy key: instructors_blog_permission
+msgid "Instructors blog permission"
+msgstr "Blog-Erlaubnis für Kursleiter"
+
+#. Legacy key: blog_visibility_on_the_home_page
+msgid "Blog visibility on the home page"
+msgstr "Blog-Sichtbarkeit auf der Startseite"
+
+#. Legacy key: visible
+msgid "Visible"
+msgstr "Sichtbar"
+
+#. Legacy key: invisible
+msgid "Invisible"
+msgstr "Unsichtbar"
+
+#. Legacy key: blog_page_banner
+msgid "Blog page banner"
+msgstr "Blog-Seitenbanner"
+
+#. Legacy key: blog_settings_updated_successfully
+msgid "Blog settings updated successfully"
+msgstr "Blog-Einstellungen erfolgreich aktualisiert"
+
+#. Legacy key: visit_our_latest_blogs
+msgid "Visit our latest blogs"
+msgstr "Besuchen Sie unsere neuesten Blogs"
+
+#. Legacy key: thu
+msgid "Thu"
+msgstr "Do"
+
+#. Legacy key: dec
+msgid "Dec"
+msgstr "Dez"
+
+#. Legacy key: free_courses
+msgid "Free courses"
+msgstr "Kostenlose Kurse"
+
+#. Legacy key: paid_courses
+msgid "Paid courses"
+msgstr "Bezahlte Kurse"
+
+#. Legacy key: course_list
+msgid "Course list"
+msgstr "Kursliste"
+
+#. Legacy key: status
+msgid "Status"
+msgstr "Status"
+
+#. Legacy key: pending
+msgid "Pending"
+msgstr "Ausstehend"
+
+#. Legacy key: private
+msgid "Private"
+msgstr "Privatgelände"
+
+#. Legacy key: lesson_and_section
+msgid "Lesson and section"
+msgstr "Lektion und Abschnitt"
+
+#. Legacy key: enrolled_student
+msgid "Enrolled student"
+msgstr "Eingeschriebener Student"
+
+#. Legacy key: mark_as_pending
+msgid "Mark as pending"
+msgstr "Als ausstehend markieren"
+
+#. Legacy key: section_and_lesson
+msgid "Section and lesson"
+msgstr "Abschnitt und Lektion"
+
+#. Legacy key: academic_progress
+msgid "Academic progress"
+msgstr "Akademischer Fortschritt"
+
+#. Legacy key: edit_this_course
+msgid "Edit this course"
+msgstr "Bearbeiten Sie diesen Kurs"
+
+#. Legacy key: view_course_on_frontend
+msgid "View course on frontend"
+msgstr "Kurs im Frontend ansehen"
+
+#. Legacy key: go_to_course_playing_page
+msgid "Go to course playing page"
+msgstr "Gehen Sie zur Kursspielseite"
+
+#. Legacy key: section
+msgid "Section"
+msgstr "Abschnitt"
+
+#. Legacy key: lesson
+msgid "Lesson"
+msgstr "Lektion"
+
+#. Legacy key: mark_as_active
+msgid "Mark as active"
+msgstr "Als aktiv markieren"
+
+#. Legacy key: edit_course
+msgid "Edit course"
+msgstr "Kurs bearbeiten"
+
+#. Legacy key: course_manager
+msgid "Course manager"
+msgstr "Kursmanager"
+
+#. Legacy key: view_on_frontend
+msgid "View on frontend"
+msgstr "Ansicht im Frontend"
+
+#. Legacy key: back_to_course_list
+msgid "Back to course list"
+msgstr "Zurück zur Kursliste"
+
+#. Legacy key: zoom_live_class
+msgid "Zoom live class"
+msgstr "Zoom-Live-Kurs"
+
+#. Legacy key: jitsi_live_class
+msgid "Jitsi live class"
+msgstr "Jitsi-Live-Kurs"
+
+#. Legacy key: assignment
+msgid "Assignment"
+msgstr "Abtretung"
+
+#. Legacy key: noticeboard
+msgid "Noticeboard"
+msgstr "Schild"
+
+#. Legacy key: analytics
+msgid "Analytics"
+msgstr "Analytik"
+
+#. Legacy key: basic
+msgid "Basic"
+msgstr "Basic"
+
+#. Legacy key: info
+msgid "Info"
+msgstr "Die Info"
+
+#. Legacy key: pricing
+msgid "Pricing"
+msgstr "Preisgestaltung"
+
+#. Legacy key: media
+msgid "Media"
+msgstr "Medien"
+
+#. Legacy key: seo
+msgid "Seo"
+msgstr "SEO"
+
+#. Legacy key: finish
+msgid "Finish"
+msgstr "Beenden"
+
+#. Legacy key: add_new_section
+msgid "Add new section"
+msgstr "Neuen Abschnitt hinzufügen"
+
+#. Legacy key: add_section
+msgid "Add section"
+msgstr "Abschnitt hinzufügen"
+
+#. Legacy key: add_new_quiz
+msgid "Add new quiz"
+msgstr "Neues Quiz hinzufügen"
+
+#. Legacy key: add_quiz
+msgid "Add quiz"
+msgstr "Quiz hinzufügen"
+
+#. Legacy key: sort_sections
+msgid "Sort sections"
+msgstr "Abschnitte sortieren"
+
+#. Legacy key: sort_lessons
+msgid "Sort lessons"
+msgstr "Lektionen sortieren"
+
+#. Legacy key: sort_lesson
+msgid "Sort lesson"
+msgstr "Lektion sortieren"
+
+#. Legacy key: update_section
+msgid "Update section"
+msgstr "Update-Bereich"
+
+#. Legacy key: edit_section
+msgid "Edit section"
+msgstr "Abschnitt bearbeiten"
+
+#. Legacy key: delete_section
+msgid "Delete section"
+msgstr "Abschnitt löschen"
+
+#. Legacy key: update_lesson
+msgid "Update lesson"
+msgstr "Lektion aktualisieren"
+
+#. Legacy key: edit
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#. Legacy key: quiz_results
+msgid "Quiz results"
+msgstr "Quizergebnisse"
+
+#. Legacy key: manage_quiz_questions
+msgid "Manage quiz questions"
+msgstr "Quizfragen verwalten"
+
+#. Legacy key: quiz_questions
+msgid "Quiz questions"
+msgstr "Quizfragen"
+
+#. Legacy key: update_quiz_information
+msgid "Update quiz information"
+msgstr "Quizinformationen aktualisieren"
+
+#. Legacy key: quiz
+msgid "Quiz"
+msgstr "Quiz"
+
+#. Legacy key: live_class_schedule
+msgid "Live class schedule"
+msgstr "Live-Stundenplan"
+
+#. Legacy key: date
+msgid "Date"
+msgstr "Datum"
+
+#. Legacy key: time
+msgid "Time"
+msgstr "Zeit"
+
+#. Legacy key: note_to_students
+msgid "Note to students"
+msgstr "Hinweis für Studierende"
+
+#. Legacy key: zoom_meeting_id
+msgid "Zoom meeting id"
+msgstr "Zoom-Meeting-ID"
+
+#. Legacy key: enter_meeting_id
+msgid "Enter meeting id"
+msgstr "Geben Sie die Meeting-ID ein"
+
+#. Legacy key: zoom_meeting_password
+msgid "Zoom meeting password"
+msgstr "Passwort für Zoom-Meeting"
+
+#. Legacy key: enter_meeting_password
+msgid "Enter meeting password"
+msgstr "Geben Sie das Meeting-Passwort ein"
+
+#. Legacy key: course_enrolment_details
+msgid "Course enrolment details"
+msgstr "Details zur Kursanmeldung"
+
+#. Legacy key: get
+msgid "Get"
+msgstr "Erhalten"
+
+#. Legacy key: meeting_plans_that_fit_your_business_perfectly
+msgid "Meeting plans that fit your business perfectly"
+msgstr "Tagungspläne, die perfekt zu Ihrem Unternehmen passen"
+
+#. Legacy key: zoom_meeting_plans
+msgid "Zoom meeting plans"
+msgstr "Zoom-Meetingpläne"
+
+#. Legacy key: jitsi_meeting_password
+msgid "Jitsi meeting password"
+msgstr "Passwort für Jitsi-Meeting"
+
+#. Legacy key: make_sure_you_save_the_live_class_password_before_starting_the_class
+msgid "Make sure you save the live class password before starting the class"
+msgstr "Stellen Sie sicher, dass Sie das Passwort für den Live-Kurs speichern, bevor Sie mit dem Kurs beginnen"
+
+#. Legacy key: enter_your_class_topic
+msgid "Enter your class topic"
+msgstr "Geben Sie Ihr Unterrichtsthema ein"
+
+#. Legacy key: enter_your_message
+msgid "Enter your message"
+msgstr "Gib deine Nachricht ein"
+
+#. Legacy key: send_a_mail_to_students_to_join_this_live_class
+msgid "Send a mail to students to join this live class"
+msgstr "Senden Sie eine E-Mail an die Schüler, um an diesem Live-Kurs teilzunehmen"
+
+#. Legacy key: start_live_video_class
+msgid "Start live video class"
+msgstr "Starten Sie den Live-Videokurs"
+
+#. Legacy key: sending_mail
+msgid "Sending mail"
+msgstr "Nachrichten senden"
+
+#. Legacy key: the_message_field_is_empty
+msgid "The message field is empty"
+msgstr "Das Nachrichtenfeld ist leer"
+
+#. Legacy key: create_new_assignment
+msgid "Create new assignment"
+msgstr "Neue Aufgabe erstellen"
+
+#. Legacy key: assignment_title
+msgid "Assignment title"
+msgstr "Titel der Aufgabe"
+
+#. Legacy key: enter_assignment_title
+msgid "Enter assignment title"
+msgstr "Geben Sie den Aufgabentitel ein"
+
+#. Legacy key: questions
+msgid "Questions"
+msgstr "Fragen"
+
+#. Legacy key: enter_your_assignment_questions
+msgid "Enter your assignment questions"
+msgstr "Geben Sie Ihre Aufgabenfragen ein"
+
+#. Legacy key: question_file
+msgid "Question file"
+msgstr "Fragendatei"
+
+#. Legacy key: choose_file
+msgid "Choose file"
+msgstr "Datei wählen"
+
+#. Legacy key: total_marks
+msgid "Total marks"
+msgstr "Gesamtnoten"
+
+#. Legacy key: deadline
+msgid "Deadline"
+msgstr "Termin"
+
+#. Legacy key: note
+msgid "Note"
+msgstr "Notiz"
+
+#. Legacy key: submission_status
+msgid "Submission status"
+msgstr "Submission Status"
+
+#. Legacy key: draft
+msgid "Draft"
+msgstr "Entwurf"
+
+#. Legacy key: add_new_assignment
+msgid "Add new assignment"
+msgstr "Neue Aufgabe hinzufügen"
+
+#. Legacy key: uploading
+msgid "Uploading"
+msgstr "Hochladen"
+
+#. Legacy key: fill_up_the_required_feilds
+msgid "Fill up the required feilds"
+msgstr "Füllen Sie die erforderlichen Felder aus"
+
+#. Legacy key: course_title
+msgid "Course title"
+msgstr "Kursname"
+
+#. Legacy key: enter_your_notice_title
+msgid "Enter your notice title"
+msgstr "Geben Sie den Titel Ihrer Mitteilung ein"
+
+#. Legacy key: enter_your_notice_description
+msgid "Enter your notice description"
+msgstr "Geben Sie Ihre Benachrichtigungsbeschreibung ein"
+
+#. Legacy key: send_mail_to_students_if_urgent
+msgid "Send mail to students if urgent"
+msgstr "Senden Sie in dringenden Fällen eine E-Mail an die Studierenden"
+
+#. Legacy key: add_new_notice
+msgid "Add new notice"
+msgstr "Neuen Hinweis hinzufügen"
+
+#. Legacy key: updating
+msgid "Updating"
+msgstr "Aktualisierung"
+
+#. Legacy key: course_type
+msgid "Course type"
+msgstr "Kurstyp"
+
+#. Legacy key: general
+msgid "General"
+msgstr "Allgemein"
+
+#. Legacy key: the_course_type_can_not_be_editable
+msgid "The course type can not be editable"
+msgstr "Der Kurstyp kann nicht bearbeitet werden"
+
+#. Legacy key: instructor_of_this_course
+msgid "Instructor of this course"
+msgstr "Dozent dieses Kurses"
+
+#. Legacy key: enter_course_title
+msgid "Enter course title"
+msgstr "Geben Sie den Kurstitel ein"
+
+#. Legacy key: short_description
+msgid "Short description"
+msgstr "Kurze Beschreibung"
+
+#. Legacy key: select_a_category
+msgid "Select a category"
+msgstr "Wählen Sie eine Kategorie"
+
+#. Legacy key: select_sub_category
+msgid "Select sub category"
+msgstr "Unterkategorie auswählen"
+
+#. Legacy key: language_made_in
+msgid "Language made in"
+msgstr "Sprache gemacht in"
+
+#. Legacy key: enable_drip_content
+msgid "Enable drip content"
+msgstr "Aktivieren Sie Drip-Inhalte"
+
+#. Legacy key: updated_as_a
+msgid "Updated as a"
+msgstr "Aktualisiert als"
+
+#. Legacy key: private_course
+msgid "Private course"
+msgstr "Privatkurs"
+
+#. Legacy key: upcoming_course
+msgid "Upcoming course"
+msgstr "Kommender Kurs"
+
+#. Legacy key: check_if_this_course_is_top_course
+msgid "Check if this course is top course"
+msgstr "Überprüfen Sie, ob dieser Kurs ein Top-Kurs ist"
+
+#. Legacy key: course_faq
+msgid "Course faq"
+msgstr "Kurs-FAQ"
+
+#. Legacy key: provide_requirements
+msgid "Provide requirements"
+msgstr "Stellen Sie Anforderungen bereit"
+
+#. Legacy key: provide_outcomes
+msgid "Provide outcomes"
+msgstr "Liefern Sie Ergebnisse"
+
+#. Legacy key: check_if_this_is_a_free_course
+msgid "Check if this is a free course"
+msgstr "Prüfen Sie, ob es sich um einen kostenlosen Kurs handelt"
+
+#. Legacy key: course_price
+msgid "Course price"
+msgstr "Kurspreis"
+
+#. Legacy key: enter_course_course_price
+msgid "Enter course course price"
+msgstr "Geben Sie den Kurspreis ein"
+
+#. Legacy key: check_if_this_course_has_discount
+msgid "Check if this course has discount"
+msgstr "Prüfen Sie, ob für diesen Kurs ein Rabatt gewährt wird"
+
+#. Legacy key: discounted_price
+msgid "Discounted price"
+msgstr "Herabgesetzter Preis"
+
+#. Legacy key: this_course_has
+msgid "This course has"
+msgstr "Dieser Kurs hat"
+
+#. Legacy key: discount
+msgid "Discount"
+msgstr "Rabatt"
+
+#. Legacy key: limited_time
+msgid "Limited time"
+msgstr "Begrenzte Zeit"
+
+#. Legacy key: number_of_month
+msgid "Number of month"
+msgstr "Anzahl des Monats"
+
+#. Legacy key: course_overview_provider
+msgid "Course overview provider"
+msgstr "Anbieter von Kursübersichten"
+
+#. Legacy key: youtube
+msgid "Youtube"
+msgstr "Youtube"
+
+#. Legacy key: vimeo
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#. Legacy key: html5
+msgid "Html5"
+msgstr "HTML5"
+
+#. Legacy key: course_overview_url
+msgid "Course overview url"
+msgstr "URL zur Kursübersicht"
+
+#. Legacy key: course_thumbnail
+msgid "Course thumbnail"
+msgstr "Miniaturansicht des Kurses"
+
+#. Legacy key: meta_keywords
+msgid "Meta keywords"
+msgstr "Meta-Keywords"
+
+#. Legacy key: write_a_keyword_and_then_press_enter_button
+msgid "Write a keyword and then press enter button"
+msgstr "Geben Sie ein Schlüsselwort ein und drücken Sie dann die Eingabetaste"
+
+#. Legacy key: meta_description
+msgid "Meta description"
+msgstr "Meta-Beschreibung"
+
+#. Legacy key: thank_you
+msgid "Thank you"
+msgstr "Danke"
+
+#. Legacy key: you_are_just_one_click_away
+msgid "You are just one click away"
+msgstr "Sie sind nur einen Klick entfernt"
+
+#. Legacy key: submit
+msgid "Submit"
+msgstr "Einreichen"
+
+#. Legacy key: course_updated_successfully
+msgid "Course updated successfully"
+msgstr "Kurs erfolgreich aktualisiert"
+
+#. Legacy key: course_progress_analytics
+msgid "Course progress analytics"
+msgstr "Analyse des Kursfortschritts"
+
+#. Legacy key: completion_percentage
+msgid "Completion percentage"
+msgstr "Abschlussprozentsatz"
+
+#. Legacy key: enrolled_students
+msgid "Enrolled students"
+msgstr "Eingeschriebene Studierende"
+
+#. Legacy key: number_of_students
+msgid "Number of students"
+msgstr "Anzahl der Schüler"
+
+#. Legacy key: course_enrolments
+msgid "Course enrolments"
+msgstr "Kursanmeldungen"
+
+#. Legacy key: jan
+msgid "Jan"
+msgstr "Jan"
+
+#. Legacy key: feb
+msgid "Feb"
+msgstr "Febr"
+
+#. Legacy key: mar
+msgid "Mar"
+msgstr "Beschädigen"
+
+#. Legacy key: apr
+msgid "Apr"
+msgstr "Apr"
+
+#. Legacy key: jun
+msgid "Jun"
+msgstr "Jun"
+
+#. Legacy key: jul
+msgid "Jul"
+msgstr "Juli"
+
+#. Legacy key: aug
+msgid "Aug"
+msgstr "Aug"
+
+#. Legacy key: sep
+msgid "Sep"
+msgstr "Sept"
+
+#. Legacy key: oct
+msgid "Oct"
+msgstr "Okt"
+
+#. Legacy key: nov
+msgid "Nov"
+msgstr "Nov"
+
+#. Legacy key: go
+msgid "Go"
+msgstr "Gehen"
+
+#. Legacy key: the_dates_of_month
+msgid "The dates of month"
+msgstr "Die Daten des Monats"
+
+#. Legacy key: upload_scorm_course
+msgid "Upload scorm course"
+msgstr "Scorm-Kurs hochladen"
+
+#. Legacy key: upload_course
+msgid "Upload course"
+msgstr "Kurs hochladen"
+
+#. Legacy key: instruction
+msgid "Instruction"
+msgstr "Anweisung"
+
+#. Legacy key: click_the_upload_course_button
+msgid "Click the upload course button"
+msgstr "Klicken Sie auf die Schaltfläche „Kurs hochladen“."
+
+#. Legacy key: you_will_get_a_floating_form_after_clicking_the_button
+msgid "You will get a floating form after clicking the button"
+msgstr "Nach dem Klicken auf die Schaltfläche erhalten Sie ein schwebendes Formular"
+
+#. Legacy key: select_a_scorm_provider_first
+msgid "Select a scorm provider first"
+msgstr "Wählen Sie zunächst einen Scorm-Anbieter aus"
+
+#. Legacy key: choose_your_scorm_zip_file
+msgid "Choose your scorm zip file"
+msgstr "Wählen Sie Ihre Scorm-ZIP-Datei"
+
+#. Legacy key: click_the_upload_button_to_save_the_course_file
+msgid "Click the upload button to save the course file"
+msgstr "Klicken Sie auf die Schaltfläche „Hochladen“, um die Kursdatei zu speichern"
+
+#. Legacy key: scorm
+msgid "Scorm"
+msgstr "Skorm"
+
+#. Legacy key: upload_h5p_file
+msgid "Upload h5p file"
+msgstr "Laden Sie die h5p-Datei hoch"
+
+#. Legacy key: remove
+msgid "Remove"
+msgstr "Entfernen"
+
+#. Legacy key: h5p
+msgid "H5p"
+msgstr "H5p"
+
+#. Legacy key: blogs
+msgid "Blogs"
+msgstr "Blogs"
+
+#. Legacy key: add_new_blog
+msgid "Add new blog"
+msgstr "Neuen Blog hinzufügen"
+
+#. Legacy key: creator
+msgid "Creator"
+msgstr "Schöpfer"
+
+#. Legacy key: deactivate
+msgid "Deactivate"
+msgstr "Deaktivieren"
+
+#. Legacy key: blog_details
+msgid "Blog details"
+msgstr "Blogdetails"
+
+#. Legacy key: inspirational_journeys
+msgid "Inspirational journeys"
+msgstr "Inspirierende Reisen"
+
+#. Legacy key: follow_the_stories_of_academics_and_their_research_expeditions
+msgid "Follow the stories of academics and their research expeditions"
+msgstr "Verfolgen Sie die Geschichten von Wissenschaftlern und ihren Forschungsexpeditionen"
+
+#. Legacy key: comments
+msgid "Comments"
+msgstr "Kommentare"
+
+#. Legacy key: leave_a_comment
+msgid "Leave a comment"
+msgstr "Hinterlasse einen Kommentar"
+
+#. Legacy key: enter_your_comments_here
+msgid "Enter your comments here"
+msgstr "Geben Sie hier Ihre Kommentare ein"
+
+#. Legacy key: type_your_keywords
+msgid "Type your keywords"
+msgstr "Geben Sie Ihre Schlüsselwörter ein"
+
+#. Legacy key: recent_posts
+msgid "Recent posts"
+msgstr "Kürzliche Posts"
+
+#. Legacy key: edit_blog
+msgid "Edit blog"
+msgstr "Blog bearbeiten"
+
+#. Legacy key: edit_your_blog
+msgid "Edit your blog"
+msgstr "Bearbeiten Sie Ihren Blog"
+
+#. Legacy key: enter_blog_title
+msgid "Enter blog title"
+msgstr "Geben Sie den Blogtitel ein"
+
+#. Legacy key: keywords
+msgid "Keywords"
+msgstr "Schlüsselwörter"
+
+#. Legacy key: click_the_enter_button_after_writing_your_keyword
+msgid "Click the enter button after writing your keyword"
+msgstr "Klicken Sie auf die Eingabetaste, nachdem Sie Ihr Schlüsselwort eingegeben haben"
+
+#. Legacy key: blog_banner
+msgid "Blog banner"
+msgstr "Blog-Banner"
+
+#. Legacy key: choose_a_banner
+msgid "Choose a banner"
+msgstr "Wählen Sie ein Banner"
+
+#. Legacy key: blog_thumbnail
+msgid "Blog thumbnail"
+msgstr "Blog-Miniaturansicht"
+
+#. Legacy key: choose_a_thumbnail
+msgid "Choose a thumbnail"
+msgstr "Wählen Sie ein Miniaturbild"
+
+#. Legacy key: do_you_want_to_mark_it_as_popular
+msgid "Do you want to mark it as popular"
+msgstr "Möchten Sie es als beliebt markieren?"
+
+#. Legacy key: mark_as_popular
+msgid "Mark as popular"
+msgstr "Als beliebt markieren"
+
+#. Legacy key: update_blog
+msgid "Update blog"
+msgstr "Blog aktualisieren"
+
+#. Legacy key: blog_updated_successfully
+msgid "Blog updated successfully"
+msgstr "Blog erfolgreich aktualisiert"
+
+#. Legacy key: add_instructor
+msgid "Add instructor"
+msgstr "Dozent hinzufügen"
+
+#. Legacy key: photo
+msgid "Photo"
+msgstr "Foto"
+
+#. Legacy key: name
+msgid "Name"
+msgstr "Name"
+
+#. Legacy key: enrolled_courses
+msgid "Enrolled courses"
+msgstr "Eingeschriebene Kurse"
+
+#. Legacy key: view_courses
+msgid "View courses"
+msgstr "Kurse ansehen"
+
+#. Legacy key: instructor_edit
+msgid "Instructor edit"
+msgstr "Bearbeitung durch den Kursleiter"
+
+#. Legacy key: instructor_edit_form
+msgid "Instructor edit form"
+msgstr "Bearbeitungsformular für Kursleiter"
+
+#. Legacy key: basic_info
+msgid "Basic info"
+msgstr "Basisinformation"
+
+#. Legacy key: login_credentials
+msgid "Login credentials"
+msgstr "Anmeldedaten"
+
+#. Legacy key: social_information
+msgid "Social information"
+msgstr "Soziale Informationen"
+
+#. Legacy key: payment_info
+msgid "Payment info"
+msgstr "Zahlungsinformationen"
+
+#. Legacy key: a_short_title_about_yourself
+msgid "A short title about yourself"
+msgstr "Ein kurzer Titel über dich"
+
+#. Legacy key: short_title
+msgid "Short title"
+msgstr "Kurzer Titel"
+
+#. Legacy key: skills
+msgid "Skills"
+msgstr "Fähigkeiten"
+
+#. Legacy key: write_your_skill_and_click_the_enter_button
+msgid "Write your skill and click the enter button"
+msgstr "Geben Sie Ihre Fähigkeiten ein und klicken Sie auf die Eingabetaste"
+
+#. Legacy key: biography
+msgid "Biography"
+msgstr "Biografie"
+
+#. Legacy key: user_image
+msgid "User image"
+msgstr "Benutzerbild"
+
+#. Legacy key: choose_user_image
+msgid "Choose user image"
+msgstr "Wählen Sie ein Benutzerbild"
+
+#. Legacy key: razorpay
+msgid "Razorpay"
+msgstr "Razorpay"
+
+#. Legacy key: key_id
+msgid "Key id"
+msgstr "Schlüssel-ID"
+
+#. Legacy key: required_for_instructor
+msgid "Required for instructor"
+msgstr "Erforderlich für den Ausbilder"
+
+#. Legacy key: secret_key
+msgid "Secret key"
+msgstr "Geheimer Schlüssel"
+
+#. Legacy key: theme_color
+msgid "Theme color"
+msgstr "Themenfarbe"
+
+#. Legacy key: stripe
+msgid "Stripe"
+msgstr "Streifen"
+
+#. Legacy key: public_key
+msgid "Public key"
+msgstr "Öffentlicher Schlüssel"
+
+#. Legacy key: public_live_key
+msgid "Public live key"
+msgstr "Öffentlicher Live-Schlüssel"
+
+#. Legacy key: secret_live_key
+msgid "Secret live key"
+msgstr "Geheimer Live-Schlüssel"
+
+#. Legacy key: paypal
+msgid "Paypal"
+msgstr "Paypal"
+
+#. Legacy key: sandbox_client_id
+msgid "Sandbox client id"
+msgstr "Sandbox-Client-ID"
+
+#. Legacy key: sandbox_secret_key
+msgid "Sandbox secret key"
+msgstr "Geheimer Sandbox-Schlüssel"
+
+#. Legacy key: production_client_id
+msgid "Production client id"
+msgstr "Produktionskunden-ID"
+
+#. Legacy key: production_secret_key
+msgid "Production secret key"
+msgstr "Geheimer Produktionsschlüssel"
+
+#. Legacy key: ccavenue
+msgid "Ccavenue"
+msgstr "Ccavenue"
+
+#. Legacy key: ccavenue_merchant_id
+msgid "Ccavenue merchant id"
+msgstr "Ccavenue-Händler-ID"
+
+#. Legacy key: ccavenue_working_key
+msgid "Ccavenue working key"
+msgstr "Ccavenue-Arbeitsschlüssel"
+
+#. Legacy key: ccavenue_access_code
+msgid "Ccavenue access code"
+msgstr "Ccavenue-Zugangscode"
+
+#. Legacy key: iyzico
+msgid "Iyzico"
+msgstr "Iyzico"
+
+#. Legacy key: api_test_key
+msgid "Api test key"
+msgstr "API-Testschlüssel"
+
+#. Legacy key: secret_test_key
+msgid "Secret test key"
+msgstr "Geheimer Testschlüssel"
+
+#. Legacy key: api_live_key
+msgid "Api live key"
+msgstr "API-Live-Schlüssel"
+
+#. Legacy key: paystack
+msgid "Paystack"
+msgstr "Gehaltsstapel"
+
+#. Legacy key: public_test_key
+msgid "Public test key"
+msgstr "Öffentlicher Testschlüssel"
+
+#. Legacy key: paytm
+msgid "Paytm"
+msgstr "Paytm"
+
+#. Legacy key: paytm_merchant_key
+msgid "Paytm merchant key"
+msgstr "Paytm-Händlerschlüssel"
+
+#. Legacy key: paytm_merchant_mid
+msgid "Paytm merchant mid"
+msgstr "Paytm-Händler Mitte"
+
+#. Legacy key: paytm_merchant_website
+msgid "Paytm merchant website"
+msgstr "Paytm-Händler-Website"
+
+#. Legacy key: industry_type_id
+msgid "Industry type id"
+msgstr "Branchentyp-ID"
+
+#. Legacy key: channel_id
+msgid "Channel id"
+msgstr "Kanal ID"
+
+#. Legacy key: user_update_successfully
+msgid "User update successfully"
+msgstr "Benutzeraktualisierung erfolgreich"
+
+#. Legacy key: current_course_provider
+msgid "Current course provider"
+msgstr "Aktueller Kursanbieter"
+
+#. Legacy key: ispring
+msgid "Ispring"
+msgstr "Ispring"
+
+#. Legacy key: preview
+msgid "Preview"
+msgstr "Vorschau"
+
+#. Legacy key: update_scorm_course
+msgid "Update scorm course"
+msgstr "Scorm-Kurs aktualisieren"
+
+#. Legacy key: update_course
+msgid "Update course"
+msgstr "Kurs aktualisieren"
+
+#. Legacy key: system_settings_updated
+msgid "System settings updated"
+msgstr "Systemeinstellungen aktualisiert"
+
+#. Legacy key: student
+msgid "Student"
+msgstr "Student"
+
+#. Legacy key: progress
+msgid "Progress"
+msgstr "Fortschritt"
+
+#. Legacy key: not_started_yet
+msgid "Not started yet"
+msgstr "Noch nicht angefangen"
+
+#. Legacy key: not_completed_yet
+msgid "Not completed yet"
+msgstr "Noch nicht abgeschlossen"
+
+#. Legacy key: enrolled_from
+msgid "Enrolled from"
+msgstr "Eingeschrieben von"
+
+#. Legacy key: last_seen_on
+msgid "Last seen on"
+msgstr "Zuletzt gesehen am"
+
+#. Legacy key: completed_on
+msgid "Completed on"
+msgstr "Vervollständigt am"
+
+#. Legacy key: completed_lesson
+msgid "Completed lesson"
+msgstr "Lektion abgeschlossen"
+
+#. Legacy key: out_of
+msgid "Out of"
+msgstr "Aus"
+
+#. Legacy key: watched_duration
+msgid "Watched duration"
+msgstr "Beobachtete Dauer"
+
+#. Legacy key: course_adding_form
+msgid "Course adding form"
+msgstr "Formular zum Hinzufügen von Kursen"
+
+#. Legacy key: create_as_a
+msgid "Create as a"
+msgstr "Erstellen Sie als"
+
+#. Legacy key: course_has_been_added_successfully
+msgid "Course has been added successfully"
+msgstr "Der Kurs wurde erfolgreich hinzugefügt"
+
+#. Legacy key: instructor_add
+msgid "Instructor add"
+msgstr "Dozent hinzufügen"
+
+#. Legacy key: instructor_add_form
+msgid "Instructor add form"
+msgstr "Kursleiter fügt Formular hinzu"
+
+#. Legacy key: sub_categories
+msgid "Sub categories"
+msgstr "Unterkategorien"
+
+#. Legacy key: edit_category
+msgid "Edit category"
+msgstr "Kategorie bearbeiten"
+
+#. Legacy key: update_category
+msgid "Update category"
+msgstr "Kategorie aktualisieren"
+
+#. Legacy key: update_category_form
+msgid "Update category form"
+msgstr "Kategorieformular aktualisieren"
+
+#. Legacy key: category_title
+msgid "Category title"
+msgstr "Kategorietitel"
+
+#. Legacy key: parent
+msgid "Parent"
+msgstr "Elternteil"
+
+#. Legacy key: none
+msgid "None"
+msgstr "Keiner"
+
+#. Legacy key: select_none_to_create_a_parent_category
+msgid "Select none to create a parent category"
+msgstr "Wählen Sie „Keine“ aus, um eine übergeordnete Kategorie zu erstellen"
+
+#. Legacy key: icon_picker
+msgid "Icon picker"
+msgstr "Symbolauswahl"
+
+#. Legacy key: category_thumbnail
+msgid "Category thumbnail"
+msgstr "Miniaturansicht der Kategorie"
+
+#. Legacy key: the_image_size_should_be
+msgid "The image size should be"
+msgstr "Die Bildgröße sollte sein"
+
+#. Legacy key: choose_thumbnail
+msgid "Choose thumbnail"
+msgstr "Miniaturansicht auswählen"
+
+#. Legacy key: data_added_successfully
+msgid "Data added successfully"
+msgstr "Daten erfolgreich hinzugefügt"
+
+#. Legacy key: logo_updated
+msgid "Logo updated"
+msgstr "Logo aktualisiert"
+
+#. Legacy key: favicon_updated
+msgid "Favicon updated"
+msgstr "Favicon aktualisiert"
+
+#. Legacy key: motivational_speech_updated_successfully
+msgid "Motivational speech updated successfully"
+msgstr "Motivationsrede erfolgreich aktualisiert"
+
+#. Legacy key: new_home_page_layout_has_been_activated
+msgid "New home page layout has been activated"
+msgstr "Neues Homepage-Layout wurde aktiviert"
+
+#. Legacy key: welcome_to
+msgid "Welcome to"
+msgstr "Willkommen zu"
+
+#. Legacy key: join_for_free
+msgid "Join for free"
+msgstr "Kostenlos beitreten"
+
+#. Legacy key: happy_student
+msgid "Happy student"
+msgstr "Glücklicher Student"
+
+#. Legacy key: experienced_instructor
+msgid "Experienced instructor"
+msgstr "Erfahrener Ausbilder"
+
+#. Legacy key: quality_courses
+msgid "Quality courses"
+msgstr "Qualitätskurse"
+
+#. Legacy key: latest_top_skills
+msgid "Latest top skills"
+msgstr "Neueste Top-Fähigkeiten"
+
+#. Legacy key: globalization
+msgid "Globalization"
+msgstr "Globalisierung"
+
+#. Legacy key: cost-effectiveness
+msgid "Cost-effectiveness"
+msgstr "Kosteneffektivität"
+
+#. Legacy key: popular_categories
+msgid "Popular categories"
+msgstr "Beliebte Kategorien"
+
+#. Legacy key: duration
+msgid "Duration"
+msgstr "Dauer"
+
+#. Legacy key: quality_educators
+msgid "Quality educators"
+msgstr "Qualitätspädagogen"
+
+#. Legacy key: premium_courses
+msgid "Premium courses"
+msgstr "Premium-Kurse"
+
+#. Legacy key: cost-free_course
+msgid "Cost-free course"
+msgstr "Kostenfreier Kurs"
+
+#. Legacy key: popular_instructor
+msgid "Popular instructor"
+msgstr "Beliebter Lehrer"
+
+#. Legacy key: follow_the_latest_news
+msgid "Follow the latest news"
+msgstr "Verfolgen Sie die neuesten Nachrichten"
+
+#. Legacy key: website_notification
+msgid "Website notification"
+msgstr "Website-Benachrichtigung"
+
+#. Legacy key: email_template
+msgid "Email template"
+msgstr "E-Mail-Vorlage"
+
+#. Legacy key: protocol
+msgid "Protocol"
+msgstr "Protokoll"
+
+#. Legacy key: smtp_crypto
+msgid "Smtp crypto"
+msgstr "SMTP-Krypto"
+
+#. Legacy key: smtp_host
+msgid "Smtp host"
+msgstr "SMTP-Host"
+
+#. Legacy key: smtp_port
+msgid "Smtp port"
+msgstr "SMTP-Port"
+
+#. Legacy key: smtp_from_email
+msgid "Smtp from email"
+msgstr "SMTP von E-Mail"
+
+#. Legacy key: smtp_username
+msgid "Smtp username"
+msgstr "SMTP-Benutzername"
+
+#. Legacy key: smtp_password
+msgid "Smtp password"
+msgstr "SMTP-Passwort"
+
+#. Legacy key: email_type
+msgid "Email type"
+msgstr "E-Mail-Typ"
+
+#. Legacy key: email_subject
+msgid "Email subject"
+msgstr "E-Mail Betreff"
+
+#. Legacy key: action
+msgid "Action"
+msgstr "Aktion"
+
+#. Legacy key: to_admin
+msgid "To admin"
+msgstr "Zum Admin"
+
+#. Legacy key: to_user
+msgid "To user"
+msgstr "An den Benutzer"
+
+#. Legacy key: edit_email_template
+msgid "Edit email template"
+msgstr "E-Mail-Vorlage bearbeiten"
+
+#. Legacy key: to_instructor
+msgid "To instructor"
+msgstr "Zum Ausbilder"
+
+#. Legacy key: to_student
+msgid "To student"
+msgstr "Zum Studenten"
+
+#. Legacy key: to_affiliator
+msgid "To affiliator"
+msgstr "Zum Partner"
+
+#. Legacy key: to_payer
+msgid "To payer"
+msgstr "Zum Zahler"
+
+#. Legacy key: to_receiver
+msgid "To receiver"
+msgstr "Zum Empfänger"
+
+#. Legacy key: configure_your_notification_settings
+msgid "Configure your notification settings"
+msgstr "Konfigurieren Sie Ihre Benachrichtigungseinstellungen"
+
+#. Legacy key: new_user_registration
+msgid "New user registration"
+msgstr "Neue Benutzerregistrierung"
+
+#. Legacy key: get_notified_when_a_new_user_signs_up
+msgid "Get notified when a new user signs up"
+msgstr "Lassen Sie sich benachrichtigen, wenn sich ein neuer Benutzer anmeldet"
+
+#. Legacy key: configure_for_admin
+msgid "Configure for admin"
+msgstr "Für den Administrator konfigurieren"
+
+#. Legacy key: system_notification
+msgid "System notification"
+msgstr "Systembenachrichtigung"
+
+#. Legacy key: email_notification
+msgid "Email notification"
+msgstr "Email Benachrichtigung"
+
+#. Legacy key: configure_for_user
+msgid "Configure for user"
+msgstr "Für Benutzer konfigurieren"
+
+#. Legacy key: email_verification
+msgid "Email verification"
+msgstr "E-Mail-Verifizierung"
+
+#. Legacy key: not_editable
+msgid "Not editable"
+msgstr "Nicht editierbar"
+
+#. Legacy key: forgot_password_mail
+msgid "Forgot password mail"
+msgstr "Passwort-Mail vergessen"
+
+#. Legacy key: account_security_alert
+msgid "Account security alert"
+msgstr "Warnung zur Kontosicherheit"
+
+#. Legacy key: send_verification_code_for_login_from_a_new_device
+msgid "Send verification code for login from a new device"
+msgstr "Senden Sie den Bestätigungscode für die Anmeldung von einem neuen Gerät aus"
+
+#. Legacy key: course_purchase_notification
+msgid "Course purchase notification"
+msgstr "Benachrichtigung zum Kurskauf"
+
+#. Legacy key: configure_for_student
+msgid "Configure for student"
+msgstr "Für Schüler konfigurieren"
+
+#. Legacy key: configure_for_instructor
+msgid "Configure for instructor"
+msgstr "Für den Lehrer konfigurieren"
+
+#. Legacy key: course_completion_mail
+msgid "Course completion mail"
+msgstr "E-Mail zum Kursabschluss"
+
+#. Legacy key: course_eligibility_notification
+msgid "Course eligibility notification"
+msgstr "Benachrichtigung über die Kursberechtigung"
+
+#. Legacy key: offline_payment_suspended_mail
+msgid "Offline payment suspended mail"
+msgstr "Offline-Zahlung per E-Mail ausgesetzt"
+
+#. Legacy key: course_bundle_purchase_notification
+msgid "Course bundle purchase notification"
+msgstr "Benachrichtigung über den Kauf eines Kurspakets"
+
+#. Legacy key: new_user_added_as_affiliator
+msgid "New user added as affiliator"
+msgstr "Neuer Benutzer als Partner hinzugefügt"
+
+#. Legacy key: send_account_information_to_the_new_user
+msgid "Send account information to the new user"
+msgstr "Kontoinformationen an den neuen Benutzer senden"
+
+#. Legacy key: configure_for_affiliator
+msgid "Configure for affiliator"
+msgstr "Für Partner konfigurieren"
+
+#. Legacy key: affiliate_approval_notification
+msgid "Affiliate approval notification"
+msgstr "Benachrichtigung über die Affiliate-Genehmigung"
+
+#. Legacy key: send_affiliate_approval_mail_to_the_user_account
+msgid "Send affiliate approval mail to the user account"
+msgstr "Senden Sie eine Affiliate-Genehmigungsmail an das Benutzerkonto"
+
+#. Legacy key: affiliator_request_cancellation
+msgid "Affiliator request cancellation"
+msgstr "Stornierung des Affiliate-Antrags"
+
+#. Legacy key: affiliation_money_withdrawal_request
+msgid "Affiliation money withdrawal request"
+msgstr "Antrag auf Abhebung von Mitgliedsgeldern"
+
+#. Legacy key: approval_of_withdrawal_request_of_affiliation
+msgid "Approval of withdrawal request of affiliation"
+msgstr "Genehmigung des Antrags auf Austritt aus der Mitgliedschaft"
+
+#. Legacy key: course_gift_notification
+msgid "Course gift notification"
+msgstr "Benachrichtigung über Kursgeschenke"
+
+#. Legacy key: notify_users_after_course_gift
+msgid "Notify users after course gift"
+msgstr "Benachrichtigen Sie Benutzer nach der Kursspende"
+
+#. Legacy key: configure_for_payer
+msgid "Configure for payer"
+msgstr "Für Zahler konfigurieren"
+
+#. Legacy key: configure_for_receiver
+msgid "Configure for receiver"
+msgstr "Für Empfänger konfigurieren"
+
+#. Legacy key: custom_pages
+msgid "Custom pages"
+msgstr "Benutzerdefinierte Seiten"
+
+#. Legacy key: add_a_new_page
+msgid "Add a new page"
+msgstr "Fügen Sie eine neue Seite hinzu"
+
+#. Legacy key: page_title
+msgid "Page title"
+msgstr "Seitentitel"
+
+#. Legacy key: button_title
+msgid "Button title"
+msgstr "Schaltflächentitel"
+
+#. Legacy key: button_position
+msgid "Button position"
+msgstr "Knopfposition"
+
+#. Legacy key: social_login_configuration
+msgid "Social login configuration"
+msgstr "Konfiguration der sozialen Anmeldung"
+
+#. Legacy key: facebook_login
+msgid "Facebook login"
+msgstr "Facebook Login"
+
+#. Legacy key: facebook_app_creation_instruction
+msgid "Facebook app creation instruction"
+msgstr "Anleitung zur Erstellung einer Facebook-App"
+
+#. Legacy key: facebook_app_id
+msgid "Facebook app id"
+msgstr "Facebook-App-ID"
+
+#. Legacy key: facebook_app_secret
+msgid "Facebook app secret"
+msgstr "Geheimnis der Facebook-App"
+
+#. Legacy key: completed
+msgid "Completed"
+msgstr "Vollendet"
+
+#. Legacy key: lesson_type
+msgid "Lesson type"
+msgstr "Unterrichtsart"
+
+#. Legacy key: video_url
+msgid "Video url"
+msgstr "Video-URL"
+
+#. Legacy key: this_video_will_be_shown_on_web_application
+msgid "This video will be shown on web application"
+msgstr "Dieses Video wird in einer Webanwendung gezeigt"
+
+#. Legacy key: thumbnail
+msgid "Thumbnail"
+msgstr "Miniaturansicht"
+
+#. Legacy key: caption
+msgid "Caption"
+msgstr "Untertitel"
+
+#. Legacy key: choose_your_caption_file
+msgid "Choose your caption file"
+msgstr "Wählen Sie Ihre Untertiteldatei"
+
+#. Legacy key: lesson_provider
+msgid "Lesson provider"
+msgstr "Unterrichtsanbieter"
+
+#. Legacy key: for_mobile_application
+msgid "For mobile application"
+msgstr "Für den mobilen Einsatz"
+
+#. Legacy key: only
+msgid "Only"
+msgstr "Nur"
+
+#. Legacy key: type_video_is_acceptable_for_mobile_application
+msgid "Type video is acceptable for mobile application"
+msgstr "Der Typ Video ist für mobile Anwendungen akzeptabel"
+
+#. Legacy key: do_you_want_to_keep_it_free_as_a_preview_lesson
+msgid "Do you want to keep it free as a preview lesson"
+msgstr "Möchten Sie es als Vorschau-Lektion kostenlos behalten?"
+
+#. Legacy key: mark_as_free_lesson
+msgid "Mark as free lesson"
+msgstr "Als kostenlose Lektion markieren"
+
+#. Legacy key: course_content
+msgid "Course content"
+msgstr "Kursinhalte"
+
+#. Legacy key: mark_as_complete
+msgid "Mark as complete"
+msgstr "Als abgeschlossen markieren"
+
+#. Legacy key: video
+msgid "Video"
+msgstr "Video"
+
+#. Legacy key: iframe
+msgid "Iframe"
+msgstr "Iframe"
+
+#. Legacy key: pdf
+msgid "Pdf"
+msgstr "PDF"
+
+#. Legacy key: forum
+msgid "Forum"
+msgstr "Forum"
+
+#. Legacy key: live_class
+msgid "Live class"
+msgstr "Live-Klasse"
+
+#. Legacy key: website_faqs_updated_successfully
+msgid "Website faqs updated successfully"
+msgstr "Website-FAQs erfolgreich aktualisiert"
+
+#. Legacy key: frequently_asked_questions
+msgid "Frequently asked questions"
+msgstr "Häufig gestellte Fragen"
+
+#. Legacy key: see_more
+msgid "See more"
+msgstr "Mehr sehen"
+
+#. Legacy key: course_content_not_found
+msgid "Course content not found"
+msgstr "Kursinhalt nicht gefunden"
+
+#. Legacy key: total_questions
+msgid "Total questions"
+msgstr "Gesamtzahl der Fragen"
+
+#. Legacy key: total_participant_students
+msgid "Total participant students"
+msgstr "Gesamtzahl der teilnehmenden Studierenden"
+
+#. Legacy key: participant_students
+msgid "Participant students"
+msgstr "Teilnehmende Studierende"
+
+#. Legacy key: select_student
+msgid "Select student"
+msgstr "Schüler auswählen"
+
+#. Legacy key: select_a_student_to_view_the_answer_sheet
+msgid "Select a student to view the answer sheet"
+msgstr "Wählen Sie einen Schüler aus, um den Antwortbogen anzuzeigen"
+
+#. Legacy key: courses_included
+msgid "Courses included"
+msgstr "Kurse inklusive"
+
+#. Legacy key: subscription
+msgid "Subscription"
+msgstr "Abonnement"
+
+#. Legacy key: days
+msgid "Days"
+msgstr "Tage"
+
+#. Legacy key: included_courses
+msgid "Included courses"
+msgstr "Inklusive Kurse"
+
+#. Legacy key: think_more_clearly
+msgid "Think more clearly"
+msgstr "Denken Sie klarer"
+
+#. Legacy key: select_your_service
+msgid "Select your service"
+msgstr "Wählen Sie Ihren Service aus"
+
+#. Legacy key: course_short_description
+msgid "Course short description"
+msgstr "Kurzbeschreibung des Kurses"
+
+#. Legacy key: course_long_description
+msgid "Course long description"
+msgstr "Lange Beschreibung des Kurses"
+
+#. Legacy key: course_requirements
+msgid "Course requirements"
+msgstr "Kursanforderungen"
+
+#. Legacy key: course_outcomes
+msgid "Course outcomes"
+msgstr "Kursergebnisse"
+
+#. Legacy key: course_seo_tags
+msgid "Course seo tags"
+msgstr "Kurs-SEO-Tags"
+
+#. Legacy key: course_lesson_text
+msgid "Course lesson text"
+msgstr "Text der Kurslektion"
+
+#. Legacy key: course_certificate_text
+msgid "Course certificate text"
+msgstr "Text des Kurszertifikats"
+
+#. Legacy key: course_quiz_text
+msgid "Course quiz text"
+msgstr "Text zum Kursquiz"
+
+#. Legacy key: course_blog_title
+msgid "Course blog title"
+msgstr "Titel des Kursblogs"
+
+#. Legacy key: course_blog_post
+msgid "Course blog post"
+msgstr "Kurs-Blogbeitrag"
+
+#. Legacy key: enter_your_keyword
+msgid "Enter your keyword"
+msgstr "Geben Sie Ihr Schlüsselwort ein"
+
+#. Legacy key: generate
+msgid "Generate"
+msgstr "Generieren"
+
+#. Legacy key: generating
+msgid "Generating"
+msgstr "Erstellen"
+
+#. Legacy key: generated_text
+msgid "Generated text"
+msgstr "Generierter Text"
+
+#. Legacy key: copy
+msgid "Copy"
+msgstr "Kopieren"
+
+#. Legacy key: copyed
+msgid "Copyed"
+msgstr "Kopiert"
+
+#. Legacy key: _learning_animal_name_
+msgid " learning animal name "
+msgstr "Tiernamen lernen"
+
+#. Legacy key: share_and_earn
+msgid "Share and earn"
+msgstr "Teilen und verdienen"
+
+#. Legacy key: write_a_review
+msgid "Write a review"
+msgstr "Eine Rezension schreiben"
+
+#. Legacy key: 1_start_rating
+msgid "1 start rating"
+msgstr "1 Startbewertung"
+
+#. Legacy key: 2_start_rating
+msgid "2 start rating"
+msgstr "2 Startbewertung"
+
+#. Legacy key: 3_start_rating
+msgid "3 start rating"
+msgstr "3 Startbewertung"
+
+#. Legacy key: 4_start_rating
+msgid "4 start rating"
+msgstr "4 Startbewertung"
+
+#. Legacy key: 5_start_rating
+msgid "5 start rating"
+msgstr "5 Startbewertung"
+
+#. Legacy key: write_your_comment
+msgid "Write your comment"
+msgstr "Schreiben Sie Ihren Kommentar"
+
+#. Legacy key: adobe_illustrator_cc_-_essentials_training_course
+msgid "Adobe illustrator cc - essentials training course"
+msgstr "Adobe Illustrator CC – Essentials-Schulungskurs"
+
+#. Legacy key: mon
+msgid "Mon"
+msgstr "Mo"
+
+#. Legacy key: select_a_user
+msgid "Select a user"
+msgstr "Wählen Sie einen Benutzer aus"
+
+#. Legacy key: write_your_message
+msgid "Write your message"
+msgstr "Schreibe deine Nachricht"
+
+#. Legacy key: send
+msgid "Send"
+msgstr "Schicken"
+
+#. Legacy key: purchased_courses
+msgid "Purchased courses"
+msgstr "Gekaufte Kurse"
+
+#. Legacy key: payment_method
+msgid "Payment method"
+msgstr "Bezahlverfahren"
+
+#. Legacy key: purchased_date
+msgid "Purchased date"
+msgstr "Gekauftes Datum"
+
+#. Legacy key: invoice
+msgid "Invoice"
+msgstr "Rechnung"
+
+#. Legacy key: assignment_list
+msgid "Assignment list"
+msgstr "Aufgabenliste"
+
+#. Legacy key: no_data_found
+msgid "No data found"
+msgstr "Keine Daten gefunden"
+
+#. Legacy key: uncheck
+msgid "Uncheck"
+msgstr "Deaktivieren Sie das Kontrollkästchen"
+
+#. Legacy key: faqs
+msgid "Faqs"
+msgstr "FAQs"
+
+#. Legacy key: latest_from_our_blog
+msgid "Latest from our blog"
+msgstr "Das Neueste aus unserem Blog"
+
+#. Legacy key: exploring_the_cutting-edge_insights_and_updates_on_our_blog
+msgid "Exploring the cutting-edge insights and updates on our blog"
+msgstr "Entdecken Sie die neuesten Erkenntnisse und Updates in unserem Blog"
+
+#. Legacy key: see_all
+msgid "See all"
+msgstr "Alles sehen"
+
+#. Legacy key: popular_blogs
+msgid "Popular blogs"
+msgstr "Beliebte Blogs"
+
+#. Legacy key: learn_from_expert_bloggers_and_expand_your_knowledge
+msgid "Learn from expert bloggers and expand your knowledge"
+msgstr "Lernen Sie von erfahrenen Bloggern und erweitern Sie Ihr Wissen"
+
+#. Legacy key: shopping_cart
+msgid "Shopping cart"
+msgstr "Einkaufswagen"
+
+#. Legacy key: your_cart_items
+msgid "Your cart items"
+msgstr "Ihre Warenkorbartikel"
+
+#. Legacy key: items
+msgid "Items"
+msgstr "Artikel"
+
+#. Legacy key: subtotal
+msgid "Subtotal"
+msgstr "Zwischensumme"
+
+#. Legacy key: apply_coupon
+msgid "Apply coupon"
+msgstr "Gutschein anwenden"
+
+#. Legacy key: apply
+msgid "Apply"
+msgstr "Anwenden"
+
+#. Legacy key: send_as_a_gift
+msgid "Send as a gift"
+msgstr "Als Geschenk verschicken"
+
+#. Legacy key: email_address
+msgid "Email address"
+msgstr "E-Mail-Addresse"
+
+#. Legacy key: continue_to_payment
+msgid "Continue to payment"
+msgstr "Weiter zur Zahlung"
+
+#. Legacy key: searching
+msgid "Searching"
+msgstr "Suchen"
+
+#. Legacy key: quiz_submission_successfully
+msgid "Quiz submission successfully"
+msgstr "Quiz-Übermittlung erfolgreich"
+
+#. Legacy key: obtained_marks
+msgid "Obtained marks"
+msgstr "Noten erhalten"
+
+#. Legacy key: correct
+msgid "Correct"
+msgstr "Richtig"
+
+#. Legacy key: wrong
+msgid "Wrong"
+msgstr "Falsch"
+
+#. Legacy key: correct_answer
+msgid "Correct answer"
+msgstr "Korrekte Antwort"
+
+#. Legacy key: user_added_successfully
+msgid "User added successfully"
+msgstr "Benutzer erfolgreich hinzugefügt"
+
+#. Legacy key: instructor_payouts
+msgid "Instructor payouts"
+msgstr "Auszahlungen für Ausbilder"
+
+#. Legacy key: list_of_payouts
+msgid "List of payouts"
+msgstr "Liste der Auszahlungen"
+
+#. Legacy key: completed_payouts
+msgid "Completed payouts"
+msgstr "Auszahlungen abgeschlossen"
+
+#. Legacy key: pending_payouts
+msgid "Pending payouts"
+msgstr "Ausstehende Auszahlungen"
+
+#. Legacy key: payout_amount
+msgid "Payout amount"
+msgstr "Auszahlungsbetrag"
+
+#. Legacy key: payment_type
+msgid "Payment type"
+msgstr "Zahlungsart"
+
+#. Legacy key: payout_date
+msgid "Payout date"
+msgstr "Auszahlungsdatum"
+
+#. Legacy key: option
+msgid "Option"
+msgstr "Möglichkeit"
+
+#. Legacy key: pay
+msgid "Pay"
+msgstr "Zahlen"
+
+#. Legacy key: public_instructor_settings
+msgid "Public instructor settings"
+msgstr "Öffentliche Lehrereinstellungen"
+
+#. Legacy key: allow_public_instructor
+msgid "Allow public instructor"
+msgstr "Öffentlichen Lehrer zulassen"
+
+#. Legacy key: instructor_application_note
+msgid "Instructor application note"
+msgstr "Anwendungshinweis für Ausbilder"
+
+#. Legacy key: instructor_commission_ettings
+msgid "Instructor commission ettings"
+msgstr "Einstellungen der Lehrerprovision"
+
+#. Legacy key: instructor_revenue_percentage
+msgid "Instructor revenue percentage"
+msgstr "Prozentsatz des Dozentenumsatzes"
+
+#. Legacy key: admin_revenue_percentage
+msgid "Admin revenue percentage"
+msgstr "Prozentsatz des Verwaltungsumsatzes"
+
+#. Legacy key: instructor_application
+msgid "Instructor application"
+msgstr "Bewerbung als Ausbilder"
+
+#. Legacy key: instructor_applications
+msgid "Instructor applications"
+msgstr "Bewerbungen für Ausbilder"
+
+#. Legacy key: list_of_applications
+msgid "List of applications"
+msgstr "Liste der Anwendungen"
+
+#. Legacy key: pending_applications
+msgid "Pending applications"
+msgstr "Ausstehende Bewerbungen"
+
+#. Legacy key: approved_applications
+msgid "Approved applications"
+msgstr "Genehmigte Anwendungen"
+
+#. Legacy key: details
+msgid "Details"
+msgstr "Einzelheiten"
+
+#. Legacy key: applicant_details
+msgid "Applicant details"
+msgstr "Angaben über den Anmelder"
+
+#. Legacy key: application_details
+msgid "Application details"
+msgstr "Anwendungsdetails"
+
+#. Legacy key: download
+msgid "Download"
+msgstr "Herunterladen"
+
+#. Legacy key: approve
+msgid "Approve"
+msgstr "Genehmigen"
+
+#. Legacy key: approved
+msgid "Approved"
+msgstr "Genehmigt"
+
+#. Legacy key: add_admin
+msgid "Add admin"
+msgstr "Administrator hinzufügen"
+
+#. Legacy key: root_admin
+msgid "Root admin"
+msgstr "Root-Administrator"
+
+#. Legacy key: assign_permission
+msgid "Assign permission"
+msgstr "Berechtigung erteilen"
+
+#. Legacy key: manage_profil
+msgid "Manage profil"
+msgstr "Manage profile"
+
+#. Legacy key: facebook_link
+msgid "Facebook link"
+msgstr "Facebook-Link"
+
+#. Legacy key: twitter_link
+msgid "Twitter link"
+msgstr "Twitter-Link"
+
+#. Legacy key: linkedin_link
+msgid "Linkedin link"
+msgstr "LinkedIn-Link"
+
+#. Legacy key: the_image_size_should_be_any_square_image
+msgid "The image size should be any square image"
+msgstr "Die Bildgröße sollte ein beliebiges quadratisches Bild sein"
+
+#. Legacy key: update_profile
+msgid "Update profile"
+msgstr "Profil aktualisieren"
+
+#. Legacy key: current_password
+msgid "Current password"
+msgstr "Aktuelles Passwort"
+
+#. Legacy key: new_password
+msgid "New password"
+msgstr "Neues Kennwort"
+
+#. Legacy key: confirm_new_password
+msgid "Confirm new password"
+msgstr "Bestätige neues Passwort"
+
+#. Legacy key: update_password
+msgid "Update password"
+msgstr "Kennwort aktualisieren"
+
+#. Legacy key: educator_profile
+msgid "Educator profile"
+msgstr "Profil des Pädagogen"
+
+#. Legacy key: statistics
+msgid "Statistics"
+msgstr "Statistiken"
+
+#. Legacy key: total_students
+msgid "Total students"
+msgstr "Gesamtzahl der Studierenden"
+
+#. Legacy key: the_complete_python_bootcamp_from_zero_to_hero
+msgid "The complete python bootcamp from zero to hero"
+msgstr "Das komplette Python-Bootcamp von Null bis zum Helden"
+
+#. Legacy key: course_added_to_wishlist
+msgid "Course added to wishlist"
+msgstr "Kurs zur Wunschliste hinzugefügt"
+
+#. Legacy key: manage_course_bundle
+msgid "Manage course bundle"
+msgstr "Kurspaket verwalten"
+
+#. Legacy key: bundle
+msgid "Bundle"
+msgstr "Bündeln"
+
+#. Legacy key: subscription_limit
+msgid "Subscription limit"
+msgstr "Abonnementlimit"
+
+#. Legacy key: deactive
+msgid "Deactive"
+msgstr "Aktiv"
+
+#. Legacy key: edit_course_bundle
+msgid "Edit course bundle"
+msgstr "Kurspaket bearbeiten"
+
+#. Legacy key: bundle_add_form
+msgid "Bundle add form"
+msgstr "Formular zum Hinzufügen von Paketen"
+
+#. Legacy key: course_bundle_title
+msgid "Course bundle title"
+msgstr "Titel des Kurspakets"
+
+#. Legacy key: select_courses
+msgid "Select courses"
+msgstr "Kurse auswählen"
+
+#. Legacy key: current_price_of_the_courses_is
+msgid "Current price of the courses is"
+msgstr "Der aktuelle Preis der Kurse beträgt"
+
+#. Legacy key: bundle_price
+msgid "Bundle price"
+msgstr "Bundle-Preis"
+
+#. Legacy key: subscription_renew_days
+msgid "Subscription renew days"
+msgstr "Tage der Abonnementverlängerung"
+
+#. Legacy key: count_day
+msgid "Count day"
+msgstr "Tag zählen"
+
+#. Legacy key: banner
+msgid "Banner"
+msgstr "Banner"
+
+#. Legacy key: update_bundle
+msgid "Update bundle"
+msgstr "Paket aktualisieren"
+
+#. Legacy key: complete_guitar_lessons_system_
+msgid "Complete guitar lessons system "
+msgstr "Komplettes Gitarrenunterrichtssystem"
+
+#. Legacy key: item_successfully_added_to_cart
+msgid "Item successfully added to cart"
+msgstr "Artikel erfolgreich zum Warenkorb hinzugefügt"
+
+#. Legacy key: how_to_use_lighting_design_to_transform_your_home
+msgid "How to use lighting design to transform your home"
+msgstr "So verwandeln Sie Ihr Zuhause mit Lichtdesign"
+
+#. Legacy key: invoice_id
+msgid "Invoice id"
+msgstr "Rechnungs-ID"
+
+#. Legacy key: billed_to
+msgid "Billed to"
+msgstr "In Rechnung gestellt"
+
+#. Legacy key: date_of_issue
+msgid "Date of issue"
+msgstr "Datum der Ausstellung"
+
+#. Legacy key: invoice_total
+msgid "Invoice total"
+msgstr "Rechnungsbetrag"
+
+#. Legacy key: qty
+msgid "Qty"
+msgstr "Menge"
+
+#. Legacy key: paid_by
+msgid "Paid by"
+msgstr "Bezahlt von"
+
+#. Legacy key: tax
+msgid "Tax"
+msgstr "Steuer"
+
+#. Legacy key: grand_total
+msgid "Grand total"
+msgstr "Gesamtsumme"
+
+#. Legacy key: print
+msgid "Print"
+msgstr "Drucken"
+
+#. Legacy key: back
+msgid "Back"
+msgstr "Zurück"
+
+#. Legacy key: newsletters
+msgid "Newsletters"
+msgstr "Newsletter"
+
+#. Legacy key: newsletter_template
+msgid "Newsletter template"
+msgstr "Newsletter-Vorlage"
+
+#. Legacy key: your_phone
+msgid "Your phone"
+msgstr "Dein Telefon"
+
+#. Legacy key: subject
+msgid "Subject"
+msgstr "Thema"
+
+#. Legacy key: subscriber
+msgid "Subscriber"
+msgstr "Teilnehmer"
+
+#. Legacy key: user_status
+msgid "User status"
+msgstr "Benutzerstatus"
+
+#. Legacy key: newsletter_added_successfully
+msgid "Newsletter added successfully"
+msgstr "Newsletter erfolgreich hinzugefügt"
+
+#. Legacy key: edit_newsletter_template
+msgid "Edit newsletter template"
+msgstr "Newsletter-Vorlage bearbeiten"
+
+#. Legacy key: send_newsletter
+msgid "Send newsletter"
+msgstr "Newsletter versenden"
+
+#. Legacy key: send_to
+msgid "Send to"
+msgstr "Senden an"
+
+#. Legacy key: selected_user
+msgid "Selected user"
+msgstr "Ausgewählter Benutzer"
+
+#. Legacy key: all_users
+msgid "All users"
+msgstr "Alle Nutzer"
+
+#. Legacy key: all_student
+msgid "All student"
+msgstr "Alle Studenten"
+
+#. Legacy key: all_instructor
+msgid "All instructor"
+msgstr "Alle Lehrer"
+
+#. Legacy key: newsletter_subscriber
+msgid "Newsletter subscriber"
+msgstr "Newsletter-Abonnent"
+
+#. Legacy key: all_subscriber
+msgid "All subscriber"
+msgstr "Alle Abonnenten"
+
+#. Legacy key: registered_user
+msgid "Registered user"
+msgstr "Registrierter Nutzer"
+
+#. Legacy key: non_registered_user
+msgid "Non registered user"
+msgstr "Nicht registrierter Benutzer"
+
+#. Legacy key: select_your_users
+msgid "Select your users"
+msgstr "Wählen Sie Ihre Benutzer aus"
+
+#. Legacy key: newsletter_deleted_successfully
+msgid "Newsletter deleted successfully"
+msgstr "Newsletter erfolgreich gelöscht"
+
+#. Legacy key: item_successfully_removed_from_cart
+msgid "Item successfully removed from cart"
+msgstr "Artikel erfolgreich aus dem Warenkorb entfernt"
+
+#. Legacy key: multi_language_settings
+msgid "Multi language settings"
+msgstr "Mehrsprachige Einstellungen"
+
+#. Legacy key: manage_language
+msgid "Manage language"
+msgstr "Sprache verwalten"
+
+#. Legacy key: language_list
+msgid "Language list"
+msgstr "Sprachliste"
+
+#. Legacy key: add_language
+msgid "Add language"
+msgstr "Sprache hinzufügen"
+
+#. Legacy key: import_language
+msgid "Import language"
+msgstr "Sprache importieren"
+
+#. Legacy key: edit_phrase
+msgid "Edit phrase"
+msgstr "Phrase bearbeiten"
+
+#. Legacy key: export
+msgid "Export"
+msgstr "Export"
+
+#. Legacy key: delete_language
+msgid "Delete language"
+msgstr "Sprache löschen"
+
+#. Legacy key: add_new_phrase
+msgid "Add new phrase"
+msgstr "Neue Phrase hinzufügen"
+
+#. Legacy key: add_new_language
+msgid "Add new language"
+msgstr "Neue Sprache hinzufügen"
+
+#. Legacy key: no_special_character_or_space_is_allowed
+msgid "No special character or space is allowed"
+msgstr "Es sind keine Sonderzeichen oder Leerzeichen zulässig"
+
+#. Legacy key: valid_examples
+msgid "Valid examples"
+msgstr "Gültige Beispiele"
+
+#. Legacy key: choose_your_json_file
+msgid "Choose your json file"
+msgstr "Wählen Sie Ihre JSON-Datei"
+
+#. Legacy key: import
+msgid "Import"
+msgstr "Importieren"
+
+#. Legacy key: phrase_updated
+msgid "Phrase updated"
+msgstr "Satz aktualisiert"
+
+#. Legacy key: course_compare
+msgid "Course compare"
+msgstr "Kursvergleich"
+
+#. Legacy key: compare_with_1_courses
+msgid "Compare with 1 courses"
+msgstr "Vergleichen Sie mit 1 Kursen"
+
+#. Legacy key: select_a_course
+msgid "Select a course"
+msgstr "Wählen Sie einen Kurs aus"
+
+#. Legacy key: learn_more
+msgid "Learn more"
+msgstr "Erfahren Sie mehr"
+
+#. Legacy key: has_discount
+msgid "Has discount"
+msgstr "Hat Rabatt"
+
+#. Legacy key: made_in
+msgid "Made in"
+msgstr "Hergestellt in"
+
+#. Legacy key: last_updated_at
+msgid "Last updated at"
+msgstr "Zuletzt aktualisiert um"
+
+#. Legacy key: total_lectures
+msgid "Total lectures"
+msgstr "Gesamtzahl der Vorträge"
+
+#. Legacy key: total_quizzes
+msgid "Total quizzes"
+msgstr "Insgesamt Tests"
+
+#. Legacy key: total_duration
+msgid "Total duration"
+msgstr "Gesamtdauer"
+
+#. Legacy key: total_enrolment
+msgid "Total enrolment"
+msgstr "Gesamteinschreibung"
+
+#. Legacy key: number_of_reviews
+msgid "Number of reviews"
+msgstr "Anzahl der Bewertungen"
+
+#. Legacy key: avg_rating
+msgid "Avg rating"
+msgstr "Durchschnittliche Bewertung"
+
+#. Legacy key: add_phrase
+msgid "Add phrase"
+msgstr "Satz hinzufügen"
+
+#. Legacy key: language_deleted_successfully
+msgid "Language deleted successfully"
+msgstr "Sprache erfolgreich gelöscht"
+
+#. Legacy key: language_added_successfully
+msgid "Language added successfully"
+msgstr "Sprache erfolgreich hinzugefügt"
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Stats Section Snippet -->
+        <template id="s_stats_section" name="Stats Section">
+            <section class="section-stats oe_snippet_body">
+                <div class="stats-grid">
+                    <!-- Stat 1 -->
+                    <div class="card-stat" data-animate="fadeInUp">
+                        <div class="stat-value" data-counter="10000">10,000+</div>
+                        <div class="stat-label">Students Trained</div>
+                        <div class="stat-description">Professionals across South Africa</div>
+                    </div>
+
+                    <!-- Stat 2 -->
+                    <div class="card-stat" data-animate="fadeInUp">
+                        <div class="stat-value" data-counter="50">50+</div>
+                        <div class="stat-label">Expert Courses</div>
+                        <div class="stat-description">Industry-focused curriculum</div>
+                    </div>
+
+                    <!-- Stat 3 -->
+                    <div class="card-stat" data-animate="fadeInUp">
+                        <div class="stat-value">98%</div>
+                        <div class="stat-label">Success Rate</div>
+                        <div class="stat-description">Student satisfaction score</div>
+                    </div>
+
+                    <!-- Stat 4 -->
+                    <div class="card-stat" data-animate="fadeInUp">
+                        <div class="stat-value" data-counter="15">15+</div>
+                        <div class="stat-label">Years Experience</div>
+                        <div class="stat-description">Trusted training provider</div>
+                    </div>
+                </div>
+            </section>
+        </template>
+
+    </data>
+</odoo>

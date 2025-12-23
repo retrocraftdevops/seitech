@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- CMS Page Views -->
+    <record id="view_cms_page_tree" model="ir.ui.view">
+        <field name="name">seitech.cms.page.tree</field>
+        <field name="model">seitech.cms.page</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="slug"/>
+                <field name="is_published"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_cms_page_form" model="ir.ui.view">
+        <field name="name">seitech.cms.page.form</field>
+        <field name="model">seitech.cms.page</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="is_published" widget="boolean_toggle"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="slug"/>
+                        </group>
+                        <group>
+                            <field name="title"/>
+                            <field name="sequence"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="SEO">
+                            <group>
+                                <field name="meta_description"/>
+                                <field name="meta_keywords"/>
+                                <field name="og_image" widget="image"/>
+                            </group>
+                        </page>
+                        <page string="Sections">
+                            <field name="section_ids">
+                                <list>
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="name"/>
+                                    <field name="identifier"/>
+                                    <field name="section_type"/>
+                                    <field name="is_published"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_cms_pages" model="ir.actions.act_window">
+        <field name="name">Pages</field>
+        <field name="res_model">seitech.cms.page</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- CMS Section Views -->
+    <record id="view_cms_section_tree" model="ir.ui.view">
+        <field name="name">seitech.cms.section.tree</field>
+        <field name="model">seitech.cms.section</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="identifier"/>
+                <field name="section_type"/>
+                <field name="page_id"/>
+                <field name="is_published"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_cms_section_form" model="ir.ui.view">
+        <field name="name">seitech.cms.section.form</field>
+        <field name="model">seitech.cms.section</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="is_published" widget="boolean_toggle"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="identifier"/>
+                            <field name="section_type"/>
+                            <field name="page_id"/>
+                        </group>
+                        <group>
+                            <field name="layout"/>
+                            <field name="sequence"/>
+                            <field name="css_class"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Content">
+                            <group>
+                                <field name="title"/>
+                                <field name="subtitle"/>
+                            </group>
+                            <field name="description"/>
+                            <field name="content"/>
+                        </page>
+                        <page string="Media">
+                            <group>
+                                <group>
+                                    <field name="image" widget="image"/>
+                                    <field name="image_alt"/>
+                                </group>
+                                <group>
+                                    <field name="background_image" widget="image"/>
+                                    <field name="video_url"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Styling">
+                            <group>
+                                <group>
+                                    <field name="background_color"/>
+                                    <field name="text_color"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Call to Action">
+                            <group>
+                                <group>
+                                    <field name="cta_text"/>
+                                    <field name="cta_url"/>
+                                    <field name="cta_style"/>
+                                </group>
+                                <group>
+                                    <field name="secondary_cta_text"/>
+                                    <field name="secondary_cta_url"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Items">
+                            <field name="item_ids">
+                                <list editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="title"/>
+                                    <field name="icon"/>
+                                    <field name="description"/>
+                                    <field name="url"/>
+                                    <field name="stat_value"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Related Content">
+                            <group>
+                                <field name="testimonial_ids" widget="many2many_tags"/>
+                                <field name="faq_ids" widget="many2many_tags"/>
+                                <field name="team_member_ids" widget="many2many_tags"/>
+                                <field name="partner_ids" widget="many2many_tags"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_cms_sections" model="ir.actions.act_window">
+        <field name="name">Sections</field>
+        <field name="res_model">seitech.cms.section</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Section Item Views -->
+    <record id="view_cms_section_item_form" model="ir.ui.view">
+        <field name="name">seitech.cms.section.item.form</field>
+        <field name="model">seitech.cms.section.item</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="title"/>
+                            <field name="subtitle"/>
+                            <field name="icon"/>
+                            <field name="icon_color"/>
+                        </group>
+                        <group>
+                            <field name="url"/>
+                            <field name="url_text"/>
+                            <field name="open_new_tab"/>
+                            <field name="sequence"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="description"/>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="stat_value"/>
+                            <field name="stat_prefix"/>
+                            <field name="stat_suffix"/>
+                        </group>
+                        <group>
+                            <field name="image" widget="image"/>
+                            <field name="image_alt"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

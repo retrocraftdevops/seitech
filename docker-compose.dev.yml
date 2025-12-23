@@ -1,0 +1,21 @@
+# Development Override for Docker Compose
+# Usage: docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
+
+version: '3.8'
+
+services:
+  odoo:
+    # Mount custom_addons as read-write for development
+    volumes:
+      - ${ODOO_SOURCE:-./odoo}:/opt/odoo/odoo:ro
+      - ${ENTERPRISE_SOURCE:-./enterprise}:/opt/odoo/enterprise:ro
+      - ./custom_addons:/opt/odoo/custom_addons:rw
+      - ./data/filestore:/opt/odoo/data
+      - ./logs:/opt/odoo/logs
+      - ./config:/opt/odoo/config
+    environment:
+      - LOG_LEVEL=debug
+      - WORKERS=0
+      - LIST_DB=True
+    # Override command to enable auto-reload
+    command: ["odoo", "--dev=reload,qweb,xml"]

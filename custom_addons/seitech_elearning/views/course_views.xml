@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Course Category Form View -->
+        <record id="view_course_category_form" model="ir.ui.view">
+            <field name="name">seitech.course.category.form</field>
+            <field name="model">seitech.course.category</field>
+            <field name="arch" type="xml">
+                <form string="Course Category">
+                    <sheet>
+                        <field name="image" widget="image" class="oe_avatar"/>
+                        <div class="oe_title">
+                            <h1><field name="name" placeholder="Category Name"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="parent_id"/>
+                                <field name="sequence"/>
+                                <field name="slug"/>
+                            </group>
+                            <group>
+                                <field name="icon"/>
+                                <field name="color" widget="color"/>
+                                <field name="is_published"/>
+                            </group>
+                        </group>
+                        <field name="description" placeholder="Category description..."/>
+                        <group string="Subcategories" invisible="not child_ids">
+                            <field name="child_ids" nolabel="1">
+                                <list>
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="name"/>
+                                    <field name="course_count"/>
+                                    <field name="is_published"/>
+                                </list>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Course Category List View -->
+        <record id="view_course_category_list" model="ir.ui.view">
+            <field name="name">seitech.course.category.list</field>
+            <field name="model">seitech.course.category</field>
+            <field name="arch" type="xml">
+                <list string="Course Categories">
+                    <field name="sequence" widget="handle"/>
+                    <field name="name"/>
+                    <field name="parent_id"/>
+                    <field name="course_count"/>
+                    <field name="is_published" widget="boolean_toggle"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Extended slide.channel (Course) Form View -->
+        <record id="view_slide_channel_form_inherit" model="ir.ui.view">
+            <field name="name">slide.channel.form.inherit.seitech</field>
+            <field name="model">slide.channel</field>
+            <field name="inherit_id" ref="website_slides.view_slide_channel_form"/>
+            <field name="arch" type="xml">
+                <!-- Add button box items -->
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_view_enrollments" type="object"
+                            class="oe_stat_button" icon="fa-users">
+                        <field name="enrollment_count" widget="statinfo" string="Enrollments"/>
+                    </button>
+                    <button name="action_view_certificates" type="object"
+                            class="oe_stat_button" icon="fa-certificate">
+                        <span class="o_stat_text">Certificates</span>
+                    </button>
+                </xpath>
+
+                <!-- Add pricing section after description -->
+                <xpath expr="//page[@name='content']" position="after">
+                    <page string="Pricing" name="pricing">
+                        <group>
+                            <group>
+                                <field name="is_paid"/>
+                                <field name="list_price" invisible="not is_paid"/>
+                                <field name="currency_id" invisible="not is_paid"/>
+                            </group>
+                            <group invisible="not is_paid">
+                                <field name="is_on_sale"/>
+                                <field name="sale_price" invisible="not is_on_sale"/>
+                                <field name="display_price" readonly="1"/>
+                                <field name="product_id"/>
+                            </group>
+                        </group>
+                        <button name="action_create_product" string="Create Product" type="object"
+                                class="btn-secondary" invisible="product_id or not is_paid"/>
+                    </page>
+                    <page string="E-Learning Settings" name="elearning_settings">
+                        <group>
+                            <group string="Category &amp; Details">
+                                <field name="seitech_category_id"/>
+                                <field name="difficulty_level"/>
+                                <field name="language"/>
+                            </group>
+                            <group string="Scheduling">
+                                <field name="start_date"/>
+                                <field name="end_date"/>
+                                <field name="enrollment_deadline"/>
+                                <field name="max_enrollments"/>
+                                <field name="is_enrollment_open" readonly="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="Instructors">
+                                <field name="primary_instructor_id"/>
+                                <field name="instructor_ids" widget="many2many_tags"/>
+                            </group>
+                            <group string="Certificate">
+                                <field name="enable_certificate"/>
+                                <field name="certificate_template_id" invisible="not enable_certificate"/>
+                                <field name="min_completion_for_certificate" invisible="not enable_certificate"/>
+                            </group>
+                        </group>
+                        <group string="Course Content">
+                            <field name="prerequisites" placeholder="Prerequisites for this course..."/>
+                            <field name="learning_outcomes" placeholder="What students will learn..."/>
+                            <field name="target_audience" placeholder="Who this course is for..."/>
+                        </group>
+                        <group string="Gamification">
+                            <group>
+                                <field name="points_for_completion"/>
+                                <field name="badge_id"/>
+                            </group>
+                            <group>
+                                <field name="enable_discussions"/>
+                            </group>
+                        </group>
+                        <group string="Media">
+                            <field name="intro_video_url" widget="url"/>
+                            <field name="banner_image" widget="image"/>
+                        </group>
+                        <group string="SEO">
+                            <field name="meta_title"/>
+                            <field name="meta_description"/>
+                            <field name="meta_keywords"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Course Category Action -->
+        <record id="action_course_category" model="ir.actions.act_window">
+            <field name="name">Course Categories</field>
+            <field name="res_model">seitech.course.category</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+    </data>
+</odoo>

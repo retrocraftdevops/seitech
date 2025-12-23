@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- ===================================================================
+             HIDE ORIGINAL WEBSITE_SLIDES MENU
+             We consolidate everything under Seitech E-Learning
+        =================================================================== -->
+        <record id="website_slides.website_slides_menu_root" model="ir.ui.menu">
+            <field name="active" eval="False"/>
+        </record>
+
+        <!-- ===================================================================
+             MAIN E-LEARNING MENU (ROOT)
+        =================================================================== -->
+        <menuitem id="menu_elearning_root"
+                  name="E-Learning"
+                  web_icon="seitech_elearning,static/description/icon.png"
+                  sequence="25"/>
+
+        <!-- ===================================================================
+             DASHBOARD
+        =================================================================== -->
+        <menuitem id="menu_elearning_dashboard"
+                  name="Dashboard"
+                  parent="menu_elearning_root"
+                  action="action_elearning_dashboard"
+                  sequence="1"/>
+
+        <!-- ===================================================================
+             COURSES MENU
+        =================================================================== -->
+        <menuitem id="menu_elearning_courses"
+                  name="Courses"
+                  parent="menu_elearning_root"
+                  sequence="10"/>
+
+        <menuitem id="menu_all_courses"
+                  name="All Courses"
+                  parent="menu_elearning_courses"
+                  action="website_slides.slide_channel_action_overview"
+                  sequence="1"/>
+
+        <menuitem id="menu_course_contents"
+                  name="Contents"
+                  parent="menu_elearning_courses"
+                  action="website_slides.slide_slide_action"
+                  sequence="2"/>
+
+        <menuitem id="menu_course_categories"
+                  name="Categories"
+                  parent="menu_elearning_courses"
+                  action="action_course_category"
+                  sequence="3"/>
+
+        <!-- ===================================================================
+             STUDENTS MENU
+        =================================================================== -->
+        <menuitem id="menu_elearning_students"
+                  name="Students"
+                  parent="menu_elearning_root"
+                  sequence="20"/>
+
+        <menuitem id="menu_enrollments"
+                  name="Enrollments"
+                  parent="menu_elearning_students"
+                  action="action_enrollment"
+                  sequence="1"/>
+
+        <menuitem id="menu_attendees"
+                  name="Attendees"
+                  parent="menu_elearning_students"
+                  action="website_slides.slide_channel_partner_action_report"
+                  sequence="2"/>
+
+        <menuitem id="menu_certificates"
+                  name="Certificates"
+                  parent="menu_elearning_students"
+                  action="action_certificate"
+                  sequence="3"/>
+
+        <!-- ===================================================================
+             INSTRUCTORS MENU
+        =================================================================== -->
+        <menuitem id="menu_elearning_instructors"
+                  name="Instructors"
+                  parent="menu_elearning_root"
+                  action="action_instructor"
+                  sequence="30"/>
+
+        <!-- ===================================================================
+             ASSIGNMENTS MENU
+        =================================================================== -->
+        <menuitem id="menu_elearning_assignments"
+                  name="Assignments"
+                  parent="menu_elearning_root"
+                  sequence="40"/>
+
+        <menuitem id="menu_assignments_list"
+                  name="All Assignments"
+                  parent="menu_elearning_assignments"
+                  action="action_assignment"
+                  sequence="1"/>
+
+        <menuitem id="menu_submissions"
+                  name="Submissions"
+                  parent="menu_elearning_assignments"
+                  action="action_submission"
+                  sequence="2"/>
+
+        <!-- ===================================================================
+             LIVE CLASSES MENU
+        =================================================================== -->
+        <menuitem id="menu_elearning_schedule"
+                  name="Live Classes"
+                  parent="menu_elearning_root"
+                  action="action_schedule"
+                  sequence="50"/>
+
+        <!-- ===================================================================
+             GAMIFICATION MENU
+        =================================================================== -->
+        <menuitem id="menu_elearning_gamification"
+                  name="Gamification"
+                  parent="menu_elearning_root"
+                  sequence="60"/>
+
+        <menuitem id="menu_badges"
+                  name="Badges"
+                  parent="menu_elearning_gamification"
+                  action="action_badge"
+                  sequence="1"/>
+
+        <menuitem id="menu_leaderboard"
+                  name="Leaderboard"
+                  parent="menu_elearning_gamification"
+                  action="action_leaderboard"
+                  sequence="2"/>
+
+        <menuitem id="menu_points_history"
+                  name="Points History"
+                  parent="menu_elearning_gamification"
+                  action="action_student_points"
+                  sequence="3"/>
+
+        <!-- ===================================================================
+             REPORTS MENU
+        =================================================================== -->
+        <menuitem id="menu_elearning_reports"
+                  name="Reporting"
+                  parent="menu_elearning_root"
+                  groups="seitech_elearning.group_elearning_manager"
+                  sequence="70"/>
+
+        <!-- Odoo eLearning Reports -->
+        <menuitem id="menu_report_courses"
+                  name="Courses"
+                  parent="menu_elearning_reports"
+                  action="website_slides.slide_channel_action_report"
+                  sequence="1"/>
+
+        <menuitem id="menu_report_contents"
+                  name="Contents"
+                  parent="menu_elearning_reports"
+                  action="website_slides.slide_slide_action_report"
+                  sequence="2"/>
+
+        <menuitem id="menu_report_attendees"
+                  name="Attendees"
+                  parent="menu_elearning_reports"
+                  action="website_slides.slide_channel_partner_action_report"
+                  sequence="3"/>
+
+        <menuitem id="menu_report_reviews"
+                  name="Reviews"
+                  parent="menu_elearning_reports"
+                  action="website_slides.rating_rating_action_slide_channel"
+                  sequence="4"/>
+
+        <menuitem id="menu_report_quizzes"
+                  name="Quizzes"
+                  parent="menu_elearning_reports"
+                  action="website_slides.slide_question_action_report"
+                  sequence="5"/>
+
+        <!-- Seitech Custom Reports -->
+        <menuitem id="menu_enrollment_stats"
+                  name="Enrollments"
+                  parent="menu_elearning_reports"
+                  action="action_enrollment_stats"
+                  sequence="10"/>
+
+        <menuitem id="menu_certificate_stats"
+                  name="Certificates"
+                  parent="menu_elearning_reports"
+                  action="action_certificate_stats"
+                  sequence="11"/>
+
+        <menuitem id="menu_revenue_stats"
+                  name="Revenue"
+                  parent="menu_elearning_reports"
+                  action="action_revenue_stats"
+                  sequence="12"/>
+
+        <menuitem id="menu_instructor_performance"
+                  name="Instructor Performance"
+                  parent="menu_elearning_reports"
+                  action="action_instructor_performance"
+                  sequence="13"/>
+
+        <!-- ===================================================================
+             CONFIGURATION MENU
+        =================================================================== -->
+        <menuitem id="menu_elearning_config"
+                  name="Configuration"
+                  parent="menu_elearning_root"
+                  groups="seitech_elearning.group_elearning_manager"
+                  sequence="100"/>
+
+        <!-- Odoo eLearning Settings -->
+        <menuitem id="menu_config_settings"
+                  name="Settings"
+                  parent="menu_elearning_config"
+                  action="website_slides.website_slides_action_settings"
+                  groups="base.group_system"
+                  sequence="1"/>
+
+        <menuitem id="menu_config_course_groups"
+                  name="Course Groups"
+                  parent="menu_elearning_config"
+                  action="website_slides.slide_channel_tag_group_action"
+                  sequence="2"/>
+
+        <menuitem id="menu_config_content_tags"
+                  name="Content Tags"
+                  parent="menu_elearning_config"
+                  action="website_slides.action_slide_tag"
+                  sequence="3"/>
+
+        <!-- Seitech Custom Configuration -->
+        <menuitem id="menu_certificate_templates"
+                  name="Certificate Templates"
+                  parent="menu_elearning_config"
+                  action="action_certificate_template"
+                  sequence="10"/>
+
+    </data>
+</odoo>

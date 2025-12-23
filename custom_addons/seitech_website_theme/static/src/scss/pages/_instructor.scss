@@ -1,0 +1,432 @@
+// ============================================================================
+// Instructor Pages Styles
+// Migrated from PHP: instructor_page.php, dashboard.php, courses.php
+// ============================================================================
+
+// ============================================================================
+// PUBLIC INSTRUCTOR PROFILE PAGE
+// ============================================================================
+.o_seitech_instructor_profile {
+  // Instructor About Card
+  .instructor-about {
+    .instructor-header {
+      .instructor-avatar {
+        flex-shrink: 0;
+      }
+
+      .instructor-info {
+        min-width: 0;
+
+        h4 {
+          color: var(--bs-dark);
+        }
+
+        .text-truncate-3 {
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+      }
+
+      .rating-box {
+        .rating-value {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    // About Section
+    .about-section {
+      .biography {
+        line-height: 1.8;
+
+        p {
+          margin-bottom: 1rem;
+        }
+
+        ul,
+        ol {
+          padding-left: 1.5rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    // Skills Section
+    .skills-section {
+      .skill-tags {
+        .badge {
+          font-weight: 500;
+          transition: all 0.2s ease;
+
+          &:hover {
+            background-color: var(--seitech-primary) !important;
+            color: white !important;
+            border-color: var(--seitech-primary) !important;
+          }
+        }
+      }
+    }
+
+    // Statistics Section
+    .stats-section {
+      .stat-box {
+        transition: transform 0.2s ease;
+
+        &:hover {
+          transform: translateY(-2px);
+        }
+
+        h2 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  // Instructor Courses Grid
+  .instructor-courses {
+    .course-card {
+      .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .card-img-wrapper {
+          overflow: hidden;
+
+          img {
+            transition: transform 0.3s ease;
+          }
+
+          &:hover img {
+            transform: scale(1.05);
+          }
+        }
+
+        .card-title {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+
+  // Sidebar
+  .instructor-sidebar {
+    .contact-card {
+      .contact-item {
+        .icon-box {
+          flex-shrink: 0;
+        }
+      }
+
+      .social-links {
+        .btn {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .message-card {
+      .btn {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// ============================================================================
+// INSTRUCTOR DASHBOARD (Private)
+// ============================================================================
+.o_seitech_instructor_dashboard,
+.o_seitech_instructor_courses,
+.o_seitech_instructor_earnings {
+  background-color: var(--seitech-surface, #f8fafc);
+
+  // Dashboard Sidebar
+  .dashboard-sidebar {
+    .user-info {
+      background: linear-gradient(135deg, var(--seitech-primary, #0284c7), var(--seitech-primary-dark, #0369a1));
+    }
+
+    .dashboard-nav {
+      .nav-link {
+        color: var(--bs-body-color);
+        padding: 0.75rem 1rem;
+        font-weight: 500;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background-color: rgba(var(--seitech-primary-rgb, 2, 132, 199), 0.1);
+          color: var(--seitech-primary, #0284c7);
+        }
+
+        &.active {
+          background-color: var(--seitech-primary, #0284c7);
+          color: white;
+
+          i {
+            color: white;
+          }
+        }
+
+        i {
+          width: 20px;
+          color: var(--bs-secondary);
+        }
+      }
+    }
+  }
+
+  // Stat Cards
+  .stat-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &.hover-lift:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .icon i {
+      opacity: 0.8;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+  // Page Header
+  .page-header {
+    h4 {
+      i {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  // Status Cards Row
+  .status-list {
+    .status-item {
+      font-weight: 500;
+
+      i {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  // Tables
+  .table {
+    th {
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--bs-secondary);
+    }
+
+    td {
+      vertical-align: middle;
+    }
+
+    .avatar-sm {
+      font-size: 0.7rem;
+    }
+
+    .course-thumb {
+      flex-shrink: 0;
+    }
+  }
+
+  // Chart Container
+  .chart-container {
+    position: relative;
+    min-height: 250px;
+  }
+}
+
+// ============================================================================
+// INSTRUCTOR COURSES PAGE
+// ============================================================================
+.o_seitech_instructor_courses {
+  .stat-card {
+    i {
+      font-size: 1.25rem;
+    }
+
+    h5 {
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  .btn-group {
+    .btn {
+      padding: 0.375rem 0.5rem;
+    }
+  }
+}
+
+// ============================================================================
+// INSTRUCTOR EARNINGS PAGE
+// ============================================================================
+.o_seitech_instructor_earnings {
+  .earnings-card {
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+
+    .icon i {
+      opacity: 0.75;
+    }
+
+    h3 {
+      font-size: 1.75rem;
+    }
+  }
+
+  .alert {
+    border: none;
+  }
+}
+
+// ============================================================================
+// INSTRUCTORS LIST PAGE
+// ============================================================================
+.o_seitech_instructors_list {
+  .instructor-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12) !important;
+    }
+
+    .instructor-avatar {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .avatar-placeholder {
+        width: 100%;
+        height: 100%;
+        font-size: 2rem;
+      }
+    }
+
+    .instructor-name {
+      font-size: 1.1rem;
+    }
+
+    .instructor-stats {
+      .stat {
+        text-align: center;
+        padding: 0.5rem;
+
+        .value {
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: var(--seitech-primary, #0284c7);
+        }
+
+        .label {
+          font-size: 0.75rem;
+          color: var(--bs-secondary);
+        }
+      }
+    }
+  }
+}
+
+// ============================================================================
+// RESPONSIVE ADJUSTMENTS
+// ============================================================================
+@media (max-width: 991.98px) {
+  .o_seitech_instructor_profile {
+    .instructor-about {
+      .instructor-header {
+        .row {
+          flex-direction: column;
+          text-align: center;
+
+          .col-7,
+          .col-5 {
+            width: 100%;
+          }
+
+          .d-flex {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .rating-box {
+            text-align: center !important;
+            margin-top: 1rem;
+
+            .d-flex {
+              justify-content: center !important;
+            }
+          }
+        }
+      }
+    }
+
+    .instructor-sidebar {
+      margin-top: 2rem;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .o_seitech_instructor_dashboard,
+  .o_seitech_instructor_courses,
+  .o_seitech_instructor_earnings {
+    .dashboard-sidebar {
+      margin-bottom: 1.5rem;
+    }
+
+    .stat-card {
+      h3 {
+        font-size: 1.25rem;
+      }
+    }
+
+    .table {
+      font-size: 0.85rem;
+
+      th,
+      td {
+        padding: 0.5rem;
+      }
+    }
+  }
+
+  .o_seitech_instructor_profile {
+    .stats-section {
+      .stat-box {
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        span {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+}

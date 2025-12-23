@@ -1,0 +1,15 @@
+export { HeroSection } from './HeroSection';
+export { ServicesOverview } from './ServicesOverview';
+export { TrainingMethods } from './TrainingMethods';
+export { AccreditationsSection } from './AccreditationsSection';
+export { CTASection } from './CTASection';
+export { TestimonialsSection } from './TestimonialsSection';
+export { TrustedBySection } from './TrustedBySection';
+export { StatisticsSection } from './StatisticsSection';
+export { NewsletterSection } from './NewsletterSection';
+export { FeaturedCoursesSection } from './FeaturedCoursesSection';
+export { ConsultancyServicesSection } from './ConsultancyServicesSection';
+export { BlogPreviewSection } from './BlogPreviewSection';
+export { FAQSection } from './FAQSection';
+export { TeamSection } from './TeamSection';
+export { UpcomingScheduleSection } from './UpcomingScheduleSection';

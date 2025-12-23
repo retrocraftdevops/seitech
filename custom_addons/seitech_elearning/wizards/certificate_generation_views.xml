@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Certificate Generation Wizard Form -->
+        <record id="view_certificate_generation_wizard_form" model="ir.ui.view">
+            <field name="name">seitech.certificate.generation.wizard.form</field>
+            <field name="model">seitech.certificate.generation.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Generate Certificates">
+                    <group>
+                        <group>
+                            <field name="channel_id"/>
+                            <field name="template_id"/>
+                            <field name="min_completion"/>
+                        </group>
+                        <group>
+                            <field name="issue_date"/>
+                            <field name="instructor_id"/>
+                            <field name="send_notification"/>
+                        </group>
+                    </group>
+                    <group string="Eligible Enrollments">
+                        <field name="enrollment_count" readonly="1"/>
+                        <field name="enrollment_ids" nolabel="1" readonly="1">
+                            <list>
+                                <field name="user_id"/>
+                                <field name="completion_percentage" widget="progressbar"/>
+                                <field name="state"/>
+                            </list>
+                        </field>
+                    </group>
+                    <footer>
+                        <button name="action_generate" string="Generate Certificates"
+                                type="object" class="btn-primary"
+                                invisible="enrollment_count == 0"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- Certificate Generation Action -->
+        <record id="action_certificate_generation_wizard" model="ir.actions.act_window">
+            <field name="name">Generate Certificates</field>
+            <field name="res_model">seitech.certificate.generation.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

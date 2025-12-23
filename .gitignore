@@ -1,0 +1,73 @@
+# Seitech Odoo Project .gitignore
+
+# Environment
+.env
+*.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+.venv/
+
+# Odoo
+*.log
+*.csv
+*.xls
+*.xlsx
+filestore/
+sessions/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+.docker/
+
+# Data directories (keep structure, ignore contents)
+data/filestore/*
+!data/filestore/.gitkeep
+logs/*
+!logs/.gitkeep
+backups/*
+!backups/.gitkeep
+
+# Config (may contain secrets)
+config/*.conf
+!config/.gitkeep
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Archives
+*.tar.gz
+*.zip
+
+# Odoo source (symlinked or downloaded)
+odoo/
+odoo-source/
+enterprise/
+
+# Data directory
+data/
+
+# Old site files (large legacy content)
+oldsite/
+legacy-php/
+
+# Playwright MCP
+.playwright-mcp/

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Testimonials Section Snippet -->
+        <template id="s_testimonials" name="Testimonials">
+            <section class="section-testimonials section-seitech oe_snippet_body">
+                <div class="container-seitech">
+                    <div class="section-header">
+                        <span class="badge-seitech-primary badge-seitech-lg">Testimonials</span>
+                        <h2 class="section-title">What Our Students Say</h2>
+                        <p class="section-subtitle">
+                            Discover how our courses have helped professionals achieve their goals
+                            and advance their careers.
+                        </p>
+                    </div>
+
+                    <div class="testimonials-grid">
+                        <!-- Testimonial 1 -->
+                        <div class="card-testimonial" data-animate="fadeInUp">
+                            <p class="testimonial-quote">
+                                The safety training course exceeded my expectations. The practical
+                                approach and expert instruction helped me implement real changes
+                                in our workplace safety protocols.
+                            </p>
+                            <div class="testimonial-author">
+                                <img src="/seitech_website_theme/static/src/img/testimonial-1.jpg"
+                                     alt="Thabo Mokoena"
+                                     class="author-avatar"/>
+                                <div class="author-info">
+                                    <div class="author-name">Thabo Mokoena</div>
+                                    <div class="author-title">Safety Manager, Mining Corp</div>
+                                </div>
+                            </div>
+                            <div class="testimonial-rating">
+                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="card-testimonial" data-animate="fadeInUp">
+                            <p class="testimonial-quote">
+                                I was able to complete my IT certification while working full-time.
+                                The flexible schedule and quality content made all the difference
+                                in my career progression.
+                            </p>
+                            <div class="testimonial-author">
+                                <img src="/seitech_website_theme/static/src/img/testimonial-2.jpg"
+                                     alt="Nomsa Dlamini"
+                                     class="author-avatar"/>
+                                <div class="author-info">
+                                    <div class="author-name">Nomsa Dlamini</div>
+                                    <div class="author-title">IT Administrator, Tech Solutions</div>
+                                </div>
+                            </div>
+                            <div class="testimonial-rating">
+                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="card-testimonial" data-animate="fadeInUp">
+                            <p class="testimonial-quote">
+                                The management training program gave me the skills I needed to lead
+                                my team effectively. The certificate from Seitech opened doors
+                                to new opportunities.
+                            </p>
+                            <div class="testimonial-author">
+                                <img src="/seitech_website_theme/static/src/img/testimonial-3.jpg"
+                                     alt="James van der Berg"
+                                     class="author-avatar"/>
+                                <div class="author-info">
+                                    <div class="author-name">James van der Berg</div>
+                                    <div class="author-title">Operations Director, Logistics Co</div>
+                                </div>
+                            </div>
+                            <div class="testimonial-rating">
+                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+
+    </data>
+</odoo>

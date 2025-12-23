@@ -1,0 +1,612 @@
+// ==========================================================================
+// Seitech Website Theme - E-Learning Page Styles
+// ==========================================================================
+
+// Note: variables and mixins are loaded before this file via __manifest__.py
+
+// --------------------------------------------------------------------------
+// Course Listing Page
+// --------------------------------------------------------------------------
+
+.page-courses {
+    background-color: $seitech-gray-50;
+    min-height: 100vh;
+}
+
+.courses-header {
+    background-color: $seitech-white;
+    border-bottom: 1px solid $seitech-gray-100;
+    padding: $seitech-space-8 0;
+}
+
+.courses-header-inner {
+    @include container;
+    @include flex-between;
+    flex-wrap: wrap;
+    gap: $seitech-space-4;
+}
+
+.courses-title {
+    @include heading-2;
+}
+
+.courses-count {
+    font-size: $seitech-font-size-base;
+    color: $seitech-text-secondary;
+}
+
+.courses-filters {
+    display: flex;
+    gap: $seitech-space-4;
+
+    .filter-select {
+        min-width: 180px;
+    }
+}
+
+.courses-content {
+    @include container;
+    @include section-padding;
+}
+
+.courses-sidebar {
+    @include card-base;
+    padding: $seitech-space-6;
+    position: sticky;
+    top: 100px;
+}
+
+.filter-section {
+    margin-bottom: $seitech-space-6;
+    padding-bottom: $seitech-space-6;
+    border-bottom: 1px solid $seitech-gray-100;
+
+    &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .filter-title {
+        font-size: $seitech-font-size-sm;
+        font-weight: $seitech-font-weight-semibold;
+        color: $seitech-text-primary;
+        margin-bottom: $seitech-space-4;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Course Detail Page
+// --------------------------------------------------------------------------
+
+.page-course-detail {
+    background-color: $seitech-gray-50;
+}
+
+.course-hero {
+    @include gradient-hero;
+    padding: $seitech-space-16 0;
+}
+
+.course-hero-container {
+    @include container;
+    display: grid;
+    gap: $seitech-space-12;
+
+    @include lg {
+        grid-template-columns: 1fr 400px;
+        align-items: start;
+    }
+}
+
+.course-hero-content {
+    color: $seitech-white;
+
+    .course-category {
+        display: inline-block;
+        margin-bottom: $seitech-space-4;
+    }
+
+    .course-title {
+        @include heading-1;
+        color: $seitech-white;
+        margin-bottom: $seitech-space-4;
+    }
+
+    .course-description {
+        font-size: $seitech-font-size-lg;
+        color: $seitech-gray-300;
+        line-height: $seitech-line-height-relaxed;
+        margin-bottom: $seitech-space-6;
+    }
+
+    .course-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $seitech-space-6;
+        margin-bottom: $seitech-space-6;
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: $seitech-space-2;
+            font-size: $seitech-font-size-sm;
+            color: $seitech-gray-300;
+        }
+    }
+
+    .course-instructor {
+        display: flex;
+        align-items: center;
+        gap: $seitech-space-4;
+
+        .instructor-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: $seitech-radius-full;
+            border: 2px solid $seitech-white;
+        }
+
+        .instructor-info {
+            .instructor-label {
+                font-size: $seitech-font-size-xs;
+                color: $seitech-gray-400;
+                text-transform: uppercase;
+                letter-spacing: $seitech-tracking-wide;
+            }
+
+            .instructor-name {
+                font-weight: $seitech-font-weight-semibold;
+            }
+        }
+    }
+}
+
+.course-enrollment-card {
+    @include card-base;
+    padding: $seitech-space-6;
+    position: sticky;
+    top: 100px;
+
+    .course-video-preview {
+        position: relative;
+        aspect-ratio: 16 / 9;
+        margin: -$seitech-space-6;
+        margin-bottom: $seitech-space-6;
+        border-radius: $seitech-radius-2xl $seitech-radius-2xl 0 0;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .play-button {
+            @include flex-center;
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: $seitech-white;
+            cursor: pointer;
+            transition: background-color $seitech-transition-base $seitech-ease-in-out;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.6);
+            }
+
+            .play-icon {
+                width: 64px;
+                height: 64px;
+            }
+        }
+    }
+
+    .course-price {
+        margin-bottom: $seitech-space-4;
+
+        .price-current {
+            font-size: $seitech-font-size-3xl;
+            font-weight: $seitech-font-weight-bold;
+            color: $seitech-text-primary;
+        }
+
+        .price-original {
+            font-size: $seitech-font-size-lg;
+            color: $seitech-text-muted;
+            text-decoration: line-through;
+            margin-left: $seitech-space-2;
+        }
+
+        .price-discount {
+            display: inline-block;
+            margin-left: $seitech-space-2;
+        }
+    }
+
+    .enrollment-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: $seitech-space-3;
+        margin-bottom: $seitech-space-6;
+    }
+
+    .course-includes {
+        .includes-title {
+            font-weight: $seitech-font-weight-semibold;
+            margin-bottom: $seitech-space-4;
+        }
+
+        .includes-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: $seitech-space-3;
+                padding: $seitech-space-2 0;
+                font-size: $seitech-font-size-sm;
+                color: $seitech-text-secondary;
+
+                .include-icon {
+                    color: $seitech-success;
+                }
+            }
+        }
+    }
+}
+
+.course-content-section {
+    @include container;
+    @include section-padding;
+}
+
+.course-tabs {
+    display: flex;
+    gap: $seitech-space-1;
+    margin-bottom: $seitech-space-8;
+    border-bottom: 2px solid $seitech-gray-200;
+
+    .tab-item {
+        padding: $seitech-space-4 $seitech-space-6;
+        font-weight: $seitech-font-weight-medium;
+        color: $seitech-text-secondary;
+        border-bottom: 2px solid transparent;
+        margin-bottom: -2px;
+        cursor: pointer;
+        transition: all $seitech-transition-base $seitech-ease-in-out;
+
+        &:hover {
+            color: $seitech-primary;
+        }
+
+        &.active {
+            color: $seitech-primary;
+            border-bottom-color: $seitech-primary;
+        }
+    }
+}
+
+// --------------------------------------------------------------------------
+// Curriculum/Lessons
+// --------------------------------------------------------------------------
+
+.curriculum-section {
+    .section-card {
+        @include card-base;
+        margin-bottom: $seitech-space-4;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .section-header {
+        @include flex-between;
+        padding: $seitech-space-4 $seitech-space-6;
+        cursor: pointer;
+        transition: background-color $seitech-transition-base $seitech-ease-in-out;
+
+        &:hover {
+            background-color: $seitech-gray-50;
+        }
+
+        .section-title {
+            font-weight: $seitech-font-weight-semibold;
+            color: $seitech-text-primary;
+        }
+
+        .section-meta {
+            font-size: $seitech-font-size-sm;
+            color: $seitech-text-secondary;
+        }
+
+        .section-toggle {
+            color: $seitech-gray-400;
+            transition: transform $seitech-transition-base $seitech-ease-in-out;
+        }
+
+        &.expanded .section-toggle {
+            transform: rotate(180deg);
+        }
+    }
+
+    .section-lessons {
+        border-top: 1px solid $seitech-gray-100;
+    }
+
+    .lesson-item {
+        @include flex-between;
+        padding: $seitech-space-4 $seitech-space-6;
+        border-bottom: 1px solid $seitech-gray-100;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        .lesson-info {
+            display: flex;
+            align-items: center;
+            gap: $seitech-space-3;
+
+            .lesson-icon {
+                color: $seitech-gray-400;
+            }
+
+            .lesson-title {
+                font-size: $seitech-font-size-base;
+                color: $seitech-text-primary;
+            }
+
+            .lesson-preview {
+                font-size: $seitech-font-size-xs;
+                color: $seitech-primary;
+                margin-left: $seitech-space-2;
+            }
+        }
+
+        .lesson-meta {
+            display: flex;
+            align-items: center;
+            gap: $seitech-space-4;
+            font-size: $seitech-font-size-sm;
+            color: $seitech-text-muted;
+        }
+
+        &.completed {
+            .lesson-icon {
+                color: $seitech-success;
+            }
+        }
+
+        &.locked {
+            opacity: 0.6;
+
+            .lesson-icon {
+                color: $seitech-gray-400;
+            }
+        }
+    }
+}
+
+// --------------------------------------------------------------------------
+// Learning Dashboard
+// --------------------------------------------------------------------------
+
+.page-dashboard {
+    background-color: $seitech-gray-50;
+    min-height: 100vh;
+}
+
+.dashboard-header {
+    background-color: $seitech-white;
+    border-bottom: 1px solid $seitech-gray-100;
+    padding: $seitech-space-8 0;
+}
+
+.dashboard-welcome {
+    @include container;
+
+    .welcome-title {
+        @include heading-2;
+        margin-bottom: $seitech-space-2;
+    }
+
+    .welcome-subtitle {
+        color: $seitech-text-secondary;
+    }
+}
+
+.dashboard-content {
+    @include container;
+    @include section-padding;
+    display: grid;
+    gap: $seitech-space-8;
+
+    @include lg {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+.dashboard-main {
+    display: flex;
+    flex-direction: column;
+    gap: $seitech-space-8;
+}
+
+.dashboard-section {
+    .section-header {
+        @include flex-between;
+        margin-bottom: $seitech-space-6;
+        text-align: left;
+
+        .section-title {
+            font-size: $seitech-font-size-xl;
+            font-weight: $seitech-font-weight-bold;
+        }
+    }
+}
+
+.progress-course-card {
+    @include card-base;
+    display: flex;
+    gap: $seitech-space-4;
+    padding: $seitech-space-4;
+
+    .course-thumbnail {
+        width: 120px;
+        height: 80px;
+        border-radius: $seitech-radius-lg;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .course-info {
+        flex: 1;
+
+        .course-title {
+            font-weight: $seitech-font-weight-semibold;
+            margin-bottom: $seitech-space-2;
+        }
+
+        .course-progress {
+            margin-bottom: $seitech-space-2;
+
+            .progress-bar {
+                height: 8px;
+                background-color: $seitech-gray-200;
+                border-radius: $seitech-radius-full;
+                overflow: hidden;
+
+                .progress-fill {
+                    height: 100%;
+                    background-color: $seitech-primary;
+                    border-radius: $seitech-radius-full;
+                    transition: width $seitech-transition-slow $seitech-ease-in-out;
+                }
+            }
+
+            .progress-text {
+                font-size: $seitech-font-size-sm;
+                color: $seitech-text-secondary;
+                margin-top: $seitech-space-1;
+            }
+        }
+    }
+}
+
+.dashboard-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: $seitech-space-8;
+}
+
+.achievement-card {
+    @include card-base;
+    padding: $seitech-space-6;
+    text-align: center;
+
+    .achievement-icon {
+        width: 64px;
+        height: 64px;
+        margin: 0 auto $seitech-space-4;
+    }
+
+    .achievement-title {
+        font-weight: $seitech-font-weight-semibold;
+        margin-bottom: $seitech-space-1;
+    }
+
+    .achievement-description {
+        font-size: $seitech-font-size-sm;
+        color: $seitech-text-secondary;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Certificate Page
+// --------------------------------------------------------------------------
+
+.page-certificate {
+    @include section-padding;
+    background-color: $seitech-gray-50;
+    min-height: 100vh;
+    @include flex-center;
+}
+
+.certificate-container {
+    @include container;
+    max-width: 800px;
+}
+
+.certificate-card {
+    @include card-base;
+    padding: $seitech-space-12;
+    text-align: center;
+    background: linear-gradient(135deg, $seitech-white 0%, $seitech-gray-50 100%);
+    border: 4px solid $seitech-primary;
+
+    .certificate-header {
+        margin-bottom: $seitech-space-8;
+
+        .certificate-logo {
+            height: 60px;
+            margin-bottom: $seitech-space-4;
+        }
+
+        .certificate-label {
+            font-size: $seitech-font-size-sm;
+            font-weight: $seitech-font-weight-semibold;
+            color: $seitech-primary;
+            text-transform: uppercase;
+            letter-spacing: $seitech-tracking-widest;
+        }
+    }
+
+    .certificate-title {
+        font-size: $seitech-font-size-3xl;
+        font-weight: $seitech-font-weight-bold;
+        color: $seitech-text-primary;
+        margin-bottom: $seitech-space-6;
+    }
+
+    .certificate-recipient {
+        font-size: $seitech-font-size-2xl;
+        font-weight: $seitech-font-weight-bold;
+        color: $seitech-primary;
+        margin-bottom: $seitech-space-4;
+    }
+
+    .certificate-course {
+        font-size: $seitech-font-size-lg;
+        color: $seitech-text-secondary;
+        margin-bottom: $seitech-space-8;
+    }
+
+    .certificate-date {
+        font-size: $seitech-font-size-sm;
+        color: $seitech-text-muted;
+        margin-bottom: $seitech-space-8;
+    }
+
+    .certificate-qr {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+    }
+
+    .certificate-id {
+        font-size: $seitech-font-size-xs;
+        color: $seitech-text-muted;
+        margin-top: $seitech-space-4;
+    }
+}
+
+.certificate-actions {
+    display: flex;
+    justify-content: center;
+    gap: $seitech-space-4;
+    margin-top: $seitech-space-8;
+}

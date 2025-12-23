@@ -1,0 +1,388 @@
+// ==========================================================================
+// Seitech Website Theme - Homepage Styles
+// ==========================================================================
+
+// Note: variables and mixins are loaded before this file via __manifest__.py
+
+// --------------------------------------------------------------------------
+// Hero Section
+// --------------------------------------------------------------------------
+
+.section-hero {
+    @include gradient-hero;
+    position: relative;
+    overflow: hidden;
+    padding: $seitech-space-20 0;
+
+    @include lg {
+        padding: $seitech-space-32 0;
+    }
+}
+
+.hero-container {
+    @include container;
+    display: grid;
+    gap: $seitech-space-12;
+
+    @include lg {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: $seitech-space-16;
+    }
+}
+
+.hero-content {
+    text-align: center;
+
+    @include lg {
+        text-align: left;
+    }
+
+    .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: $seitech-space-2;
+        padding: $seitech-space-2 $seitech-space-4;
+        background-color: rgba($seitech-white, 0.1);
+        border: 1px solid rgba($seitech-white, 0.2);
+        border-radius: $seitech-radius-full;
+        color: $seitech-primary-300;
+        font-size: $seitech-font-size-sm;
+        font-weight: $seitech-font-weight-medium;
+        margin-bottom: $seitech-space-6;
+    }
+
+    .hero-title {
+        @include heading-1;
+        color: $seitech-white;
+        margin-bottom: $seitech-space-6;
+
+        .text-gradient {
+            @include gradient-text;
+        }
+    }
+
+    .hero-subtitle {
+        font-size: $seitech-font-size-lg;
+        color: $seitech-gray-300;
+        line-height: $seitech-line-height-relaxed;
+        margin-bottom: $seitech-space-8;
+        max-width: 540px;
+
+        @include lg {
+            font-size: $seitech-font-size-xl;
+        }
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $seitech-space-4;
+        justify-content: center;
+        margin-bottom: $seitech-space-8;
+
+        @include lg {
+            justify-content: flex-start;
+        }
+    }
+
+    .hero-features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $seitech-space-6;
+        justify-content: center;
+
+        @include lg {
+            justify-content: flex-start;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: $seitech-space-2;
+            color: $seitech-gray-300;
+            font-size: $seitech-font-size-sm;
+
+            .feature-icon {
+                color: $seitech-success;
+            }
+        }
+    }
+}
+
+.hero-image {
+    position: relative;
+
+    img {
+        width: 100%;
+        border-radius: $seitech-radius-2xl;
+        box-shadow: $seitech-shadow-2xl;
+    }
+
+    .hero-stat-card {
+        position: absolute;
+        background-color: $seitech-white;
+        padding: $seitech-space-4;
+        border-radius: $seitech-radius-xl;
+        box-shadow: $seitech-shadow-xl;
+
+        &.stat-top {
+            top: -$seitech-space-4;
+            right: $seitech-space-4;
+        }
+
+        &.stat-bottom {
+            bottom: $seitech-space-4;
+            left: -$seitech-space-4;
+        }
+
+        .stat-value {
+            font-size: $seitech-font-size-2xl;
+            font-weight: $seitech-font-weight-bold;
+            color: $seitech-primary;
+        }
+
+        .stat-label {
+            font-size: $seitech-font-size-sm;
+            color: $seitech-text-secondary;
+        }
+    }
+}
+
+// --------------------------------------------------------------------------
+// Stats Section
+// --------------------------------------------------------------------------
+
+.section-stats {
+    @include section-padding;
+    background-color: $seitech-white;
+    border-bottom: 1px solid $seitech-gray-100;
+}
+
+.stats-grid {
+    @include container;
+    display: grid;
+    gap: $seitech-space-8;
+
+    @include md {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include lg {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+// --------------------------------------------------------------------------
+// Features Section
+// --------------------------------------------------------------------------
+
+.section-features {
+    @include section-padding;
+    background-color: $seitech-gray-50;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 768px;
+    margin: 0 auto $seitech-space-16;
+
+    .section-badge {
+        display: inline-block;
+        margin-bottom: $seitech-space-4;
+    }
+
+    .section-title {
+        @include heading-2;
+        margin-bottom: $seitech-space-4;
+    }
+
+    .section-subtitle {
+        @include body-text;
+    }
+}
+
+.features-grid {
+    @include container;
+    display: grid;
+    gap: $seitech-space-8;
+
+    @include md {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include lg {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.feature-card {
+    @include card-base;
+    @include card-hover;
+    padding: $seitech-space-8;
+    text-align: center;
+
+    .feature-icon {
+        @include flex-center;
+        width: 64px;
+        height: 64px;
+        margin: 0 auto $seitech-space-6;
+        background-color: $seitech-primary-50;
+        color: $seitech-primary;
+        border-radius: $seitech-radius-xl;
+
+        svg {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    .feature-title {
+        font-size: $seitech-font-size-xl;
+        font-weight: $seitech-font-weight-bold;
+        color: $seitech-text-primary;
+        margin-bottom: $seitech-space-3;
+    }
+
+    .feature-description {
+        font-size: $seitech-font-size-base;
+        color: $seitech-text-secondary;
+        line-height: $seitech-line-height-relaxed;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Courses Section
+// --------------------------------------------------------------------------
+
+.section-courses {
+    @include section-padding;
+    background-color: $seitech-white;
+}
+
+.courses-grid {
+    @include container;
+    display: grid;
+    gap: $seitech-space-8;
+
+    @include md {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include lg {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.section-footer {
+    text-align: center;
+    margin-top: $seitech-space-12;
+}
+
+// --------------------------------------------------------------------------
+// Testimonials Section
+// --------------------------------------------------------------------------
+
+.section-testimonials {
+    @include section-padding;
+    background-color: $seitech-gray-50;
+}
+
+.testimonials-grid {
+    @include container;
+    display: grid;
+    gap: $seitech-space-8;
+
+    @include lg {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+// --------------------------------------------------------------------------
+// CTA Section
+// --------------------------------------------------------------------------
+
+.section-cta {
+    @include section-padding;
+    @include gradient-hero;
+    text-align: center;
+}
+
+.cta-container {
+    @include container;
+    max-width: 800px;
+}
+
+.cta-title {
+    @include heading-2;
+    color: $seitech-white;
+    margin-bottom: $seitech-space-4;
+}
+
+.cta-subtitle {
+    font-size: $seitech-font-size-lg;
+    color: $seitech-gray-300;
+    margin-bottom: $seitech-space-8;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $seitech-space-4;
+    justify-content: center;
+}
+
+.cta-trust {
+    margin-top: $seitech-space-8;
+    font-size: $seitech-font-size-sm;
+    color: $seitech-gray-400;
+}
+
+// --------------------------------------------------------------------------
+// Partners/Logos Section
+// --------------------------------------------------------------------------
+
+.section-partners {
+    padding: $seitech-space-12 0;
+    background-color: $seitech-gray-50;
+    border-top: 1px solid $seitech-gray-100;
+    border-bottom: 1px solid $seitech-gray-100;
+}
+
+.partners-container {
+    @include container;
+}
+
+.partners-title {
+    text-align: center;
+    font-size: $seitech-font-size-sm;
+    font-weight: $seitech-font-weight-medium;
+    color: $seitech-text-muted;
+    text-transform: uppercase;
+    letter-spacing: $seitech-tracking-wider;
+    margin-bottom: $seitech-space-8;
+}
+
+.partners-logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: $seitech-space-8;
+
+    @include lg {
+        gap: $seitech-space-12;
+    }
+
+    .partner-logo {
+        height: 32px;
+        opacity: 0.5;
+        filter: grayscale(100%);
+        transition: all $seitech-transition-base $seitech-ease-in-out;
+
+        &:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+        }
+    }
+}

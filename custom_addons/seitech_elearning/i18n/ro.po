@@ -1,0 +1,4190 @@
+# Translation file for Seitech E-Learning
+# Converted from legacy PHP application
+# Copyright (C) 2025 Seitech International
+# This file is distributed under the LGPL-3 license.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Seitech E-Learning 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-22 21:34+0000\n"
+"PO-Revision-Date: 2025-12-22 21:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Legacy key: manage_profile
+msgid "Manage profile"
+msgstr "Gestionează profilul"
+
+#. Legacy key: write_a_public_review
+msgid "Write a public review"
+msgstr "Scrieți o recenzie publică"
+
+#. Legacy key: heads_up
+msgid "Heads up"
+msgstr "Atenție"
+
+#. Legacy key: describe_your_experience_what_you_got_out_of_the_course_and_other_helpful_highlights
+msgid "Describe your experience what you got out of the course and other helpful highlights"
+msgstr "Descrieți experiența dvs. ceea ce ați obținut la curs și alte aspecte utile"
+
+#. Legacy key: are_you_sure
+msgid "Are you sure"
+msgstr "Esti sigur"
+
+#. Legacy key: what_did_the_instructor_do_well_and_what_could_use_some_improvement
+msgid "What did the instructor do well and what could use some improvement"
+msgstr "Ce a făcut bine instructorul și la ce ar putea folosi unele îmbunătățiri"
+
+#. Legacy key: cancel
+msgid "Cancel"
+msgstr "Anulare"
+
+#. Legacy key: continue
+msgid "Continue"
+msgstr "Continua"
+
+#. Legacy key: next
+msgid "Next"
+msgstr "Următorul"
+
+#. Legacy key: previous
+msgid "Previous"
+msgstr "Anterior"
+
+#. Legacy key: publish
+msgid "Publish"
+msgstr "Publica"
+
+#. Legacy key: delete
+msgid "Delete"
+msgstr "Șterge"
+
+#. Legacy key: 404_page_not_found
+msgid "404 page not found"
+msgstr "404 Pagina nu a fost găsită"
+
+#. Legacy key: courses
+msgid "Courses"
+msgstr "Cursuri"
+
+#. Legacy key: all_courses
+msgid "All courses"
+msgstr "Toate cursurile"
+
+#. Legacy key: search_for_courses
+msgid "Search for courses"
+msgstr "Caută cursuri"
+
+#. Legacy key: total
+msgid "Total"
+msgstr "Total"
+
+#. Legacy key: go_to_cart
+msgid "Go to cart"
+msgstr "Du-te la coș"
+
+#. Legacy key: your_cart_is_empty
+msgid "Your cart is empty"
+msgstr "Coșul tău este gol"
+
+#. Legacy key: log_in
+msgid "Log in"
+msgstr "Log in"
+
+#. Legacy key: sign_up
+msgid "Sign up"
+msgstr "Inscrie-te"
+
+#. Legacy key: cookie_policy
+msgid "Cookie policy"
+msgstr "Politica de cookie-uri"
+
+#. Legacy key: accept
+msgid "Accept"
+msgstr "Accept"
+
+#. Legacy key: oh_snap
+msgid "Oh snap"
+msgstr "Oh, trage"
+
+#. Legacy key: this_is_not_the_web_page_you_are_looking_for
+msgid "This is not the web page you are looking for"
+msgstr "Aceasta nu este pagina web pe care o căutați"
+
+#. Legacy key: back_to_home
+msgid "Back to home"
+msgstr "Înapoi acasă"
+
+#. Legacy key: about
+msgid "About"
+msgstr "Despre"
+
+#. Legacy key: privacy_policy
+msgid "Privacy policy"
+msgstr "Politica de confidențialitate"
+
+#. Legacy key: terms_and_condition
+msgid "Terms and condition"
+msgstr "Termeni și condiții"
+
+#. Legacy key: login
+msgid "Login"
+msgstr "Log in"
+
+#. Legacy key: step
+msgid "Step"
+msgstr "Etapa"
+
+#. Legacy key: how_would_you_rate_this_course_overall
+msgid "How would you rate this course overall"
+msgstr "Cum ați evalua acest curs în ansamblu"
+
+#. Legacy key: all_category
+msgid "All category"
+msgstr "Toate categoriile"
+
+#. Legacy key: showing_on_this_page
+msgid "Showing on this page"
+msgstr "Afișat pe această pagină"
+
+#. Legacy key: filter
+msgid "Filter"
+msgstr "Filtru"
+
+#. Legacy key: categories
+msgid "Categories"
+msgstr "Categorii"
+
+#. Legacy key: show_more
+msgid "Show more"
+msgstr "Afișați mai multe"
+
+#. Legacy key: price
+msgid "Price"
+msgstr "Preț"
+
+#. Legacy key: all
+msgid "All"
+msgstr "Toate"
+
+#. Legacy key: free
+msgid "Free"
+msgstr "Gratuit"
+
+#. Legacy key: paid
+msgid "Paid"
+msgstr "Plătit"
+
+#. Legacy key: level
+msgid "Level"
+msgstr "Nivel"
+
+#. Legacy key: beginner
+msgid "Beginner"
+msgstr "Începător"
+
+#. Legacy key: advanced
+msgid "Advanced"
+msgstr "Avansat"
+
+#. Legacy key: intermediate
+msgid "Intermediate"
+msgstr "Intermediar"
+
+#. Legacy key: language
+msgid "Language"
+msgstr "Limba"
+
+#. Legacy key: ratings
+msgid "Ratings"
+msgstr "Evaluări"
+
+#. Legacy key: lessons
+msgid "Lessons"
+msgstr "Lecții"
+
+#. Legacy key: hours
+msgid "Hours"
+msgstr "Ore"
+
+#. Legacy key: show_less
+msgid "Show less"
+msgstr "Arata mai putin"
+
+#. Legacy key: course
+msgid "Course"
+msgstr "Curs"
+
+#. Legacy key: students_enrolled
+msgid "Students enrolled"
+msgstr "Elevii înscriși"
+
+#. Legacy key: created_by
+msgid "Created by"
+msgstr "Creat de"
+
+#. Legacy key: last_updated
+msgid "Last updated"
+msgstr "Ultima actualizare"
+
+#. Legacy key: what_will_i_learn
+msgid "What will i learn"
+msgstr "Ce voi invata"
+
+#. Legacy key: curriculum_for_this_course
+msgid "Curriculum for this course"
+msgstr "Curriculum pentru acest curs"
+
+#. Legacy key: requirements
+msgid "Requirements"
+msgstr "Cerințe"
+
+#. Legacy key: view_more
+msgid "View more"
+msgstr "Vezi mai mult"
+
+#. Legacy key: description
+msgid "Description"
+msgstr "Descriere"
+
+#. Legacy key: other_related_courses
+msgid "Other related courses"
+msgstr "Alte cursuri conexe"
+
+#. Legacy key: updated
+msgid "Updated"
+msgstr "Actualizat"
+
+#. Legacy key: about_the_instructor
+msgid "About the instructor"
+msgstr "Despre instructor"
+
+#. Legacy key: reviews
+msgid "Reviews"
+msgstr "Recenzii"
+
+#. Legacy key: students
+msgid "Students"
+msgstr "Elevi"
+
+#. Legacy key: student_feedback
+msgid "Student feedback"
+msgstr "Feedback-ul elevilor"
+
+#. Legacy key: average_rating
+msgid "Average rating"
+msgstr "Rata medie"
+
+#. Legacy key: buy_now
+msgid "Buy now"
+msgstr "Cumpără acum"
+
+#. Legacy key: added_to_cart
+msgid "Added to cart"
+msgstr "Adăugat în coș"
+
+#. Legacy key: includes
+msgid "Includes"
+msgstr "Include"
+
+#. Legacy key: on_demand_videos
+msgid "On demand videos"
+msgstr "Videoclipuri la cerere"
+
+#. Legacy key: full_lifetime_access
+msgid "Full lifetime access"
+msgstr "Acces pe viață completă"
+
+#. Legacy key: access_on_mobile_and_tv
+msgid "Access on mobile and tv"
+msgstr "Acces pe mobil si tv"
+
+#. Legacy key: add_to_cart
+msgid "Add to cart"
+msgstr "Adaugă in coş"
+
+#. Legacy key: please_wait
+msgid "Please wait"
+msgstr "Va rugam asteptati"
+
+#. Legacy key: preview_this_course
+msgid "Preview this course"
+msgstr "Previzualizează acest curs"
+
+#. Legacy key: course_preview
+msgid "Course preview"
+msgstr "Previzualizare curs"
+
+#. Legacy key: admin_revenue
+msgid "Admin revenue"
+msgstr "Venitul administrativ"
+
+#. Legacy key: admin
+msgid "Admin"
+msgstr "Admin"
+
+#. Legacy key: welcome
+msgid "Welcome"
+msgstr "Bine ati venit"
+
+#. Legacy key: my_account
+msgid "My account"
+msgstr "Contul meu"
+
+#. Legacy key: settings
+msgid "Settings"
+msgstr "Setări"
+
+#. Legacy key: logout
+msgid "Logout"
+msgstr "Deconectare"
+
+#. Legacy key: visit_website
+msgid "Visit website"
+msgstr "Vizitati site-ul"
+
+#. Legacy key: navigation
+msgid "Navigation"
+msgstr "Navigare"
+
+#. Legacy key: dashboard
+msgid "Dashboard"
+msgstr "Bord"
+
+#. Legacy key: add_new_category
+msgid "Add new category"
+msgstr "Adăugați o nouă categorie"
+
+#. Legacy key: instructors
+msgid "Instructors"
+msgstr "Instructori"
+
+#. Legacy key: enrolment
+msgid "Enrolment"
+msgstr "Înscriere"
+
+#. Legacy key: enrol_history
+msgid "Enrol history"
+msgstr "Istoricul înscrierii"
+
+#. Legacy key: enrol_a_student
+msgid "Enrol a student"
+msgstr "Înscrieți un student"
+
+#. Legacy key: report
+msgid "Report"
+msgstr "Raport"
+
+#. Legacy key: instructor_revenue
+msgid "Instructor revenue"
+msgstr "Venitul instructorului"
+
+#. Legacy key: message
+msgid "Message"
+msgstr "Mesaj"
+
+#. Legacy key: addons
+msgid "Addons"
+msgstr "Suplimente"
+
+#. Legacy key: addon_manager
+msgid "Addon manager"
+msgstr "Manager de suplimente"
+
+#. Legacy key: available_addons
+msgid "Available addons"
+msgstr "Suplimente disponibile"
+
+#. Legacy key: system_settings
+msgid "System settings"
+msgstr "Setarile sistemului"
+
+#. Legacy key: website_settings
+msgid "Website settings"
+msgstr "Setări site"
+
+#. Legacy key: payment_settings
+msgid "Payment settings"
+msgstr "Setări de plată"
+
+#. Legacy key: instructor_settings
+msgid "Instructor settings"
+msgstr "Setările instructorului"
+
+#. Legacy key: language_settings
+msgid "Language settings"
+msgstr "Setările de limbă"
+
+#. Legacy key: smtp_settings
+msgid "Smtp settings"
+msgstr "Setări smtp"
+
+#. Legacy key: theme_settings
+msgid "Theme settings"
+msgstr "Setari tema"
+
+#. Legacy key: enrolled_course
+msgid "Enrolled course"
+msgstr "Curs inscris"
+
+#. Legacy key: total_amount
+msgid "Total amount"
+msgstr "Valoare totală"
+
+#. Legacy key: enrolment_date
+msgid "Enrolment date"
+msgstr "Data înscrierii"
+
+#. Legacy key: actions
+msgid "Actions"
+msgstr "Acțiuni"
+
+#. Legacy key: this_year
+msgid "This year"
+msgstr "Anul acesta"
+
+#. Legacy key: active_course
+msgid "Active course"
+msgstr "Curs activ"
+
+#. Legacy key: pending_course
+msgid "Pending course"
+msgstr "Curs în așteptare"
+
+#. Legacy key: congratulations
+msgid "Congratulations"
+msgstr "Felicitări"
+
+#. Legacy key: please_fill_all_the_required_fields
+msgid "Please fill all the required fields"
+msgstr "Vă rugăm să completați toate câmpurile obligatorii"
+
+#. Legacy key: close
+msgid "Close"
+msgstr "Închide"
+
+#. Legacy key: private_messaging
+msgid "Private messaging"
+msgstr "Mesaje private"
+
+#. Legacy key: private_message
+msgid "Private message"
+msgstr "Mesaj privat"
+
+#. Legacy key: new_message
+msgid "New message"
+msgstr "Mesaj nou"
+
+#. Legacy key: home
+msgid "Home"
+msgstr "Acasă"
+
+#. Legacy key: menu
+msgid "Menu"
+msgstr "Meniul"
+
+#. Legacy key: all_tutions
+msgid "All tutions"
+msgstr "Toate preturile"
+
+#. Legacy key: ebooks
+msgid "Ebooks"
+msgstr "Cărți electronice"
+
+#. Legacy key: course_bundles
+msgid "Course bundles"
+msgstr "Pachetele de curs"
+
+#. Legacy key: administrator
+msgid "Administrator"
+msgstr "Administrator"
+
+#. Legacy key: learn_on_your_schedule
+msgid "Learn on your schedule"
+msgstr "Învață în programul tău"
+
+#. Legacy key: what_do_you_want_to_learn
+msgid "What do you want to learn"
+msgstr "Ce vrei să inveți"
+
+#. Legacy key: search
+msgid "Search"
+msgstr "Căutare"
+
+#. Legacy key: online_courses
+msgid "Online courses"
+msgstr "Cursuri online"
+
+#. Legacy key: explore_a_variety_of_fresh_topics
+msgid "Explore a variety of fresh topics"
+msgstr "Explorați o varietate de subiecte noi"
+
+#. Legacy key: expert_instruction
+msgid "Expert instruction"
+msgstr "Instruire de specialitate"
+
+#. Legacy key: find_the_right_course_for_you
+msgid "Find the right course for you"
+msgstr "Găsiți cursul potrivit pentru dvs"
+
+#. Legacy key: lifetime_access
+msgid "Lifetime access"
+msgstr "Acces pe viață"
+
+#. Legacy key: top_categories
+msgid "Top categories"
+msgstr "Categorii de top"
+
+#. Legacy key: top_courses
+msgid "Top courses"
+msgstr "Cursuri de top"
+
+#. Legacy key: compare
+msgid "Compare"
+msgstr "Comparaţie"
+
+#. Legacy key: lectures
+msgid "Lectures"
+msgstr "Prelegeri"
+
+#. Legacy key: get_enrolled
+msgid "Get enrolled"
+msgstr "Înscrieți-vă"
+
+#. Legacy key: top
+msgid "Top"
+msgstr "Top"
+
+#. Legacy key: latest_courses
+msgid "Latest courses"
+msgstr "Ultimele cursuri"
+
+#. Legacy key: h5p_course
+msgid "H5p course"
+msgstr "curs H5p"
+
+#. Legacy key: scorm_course
+msgid "Scorm course"
+msgstr "Curs scorm"
+
+#. Legacy key: featured_instructor
+msgid "Featured instructor"
+msgstr "Instructor recomandat"
+
+#. Legacy key: join_now_to_start_learning
+msgid "Join now to start learning"
+msgstr "Înscrie-te acum pentru a începe să înveți"
+
+#. Legacy key: get_started
+msgid "Get started"
+msgstr "Incepe"
+
+#. Legacy key: become_a_new_instructor
+msgid "Become a new instructor"
+msgstr "Deveniți un nou instructor"
+
+#. Legacy key: join_now
+msgid "Join now"
+msgstr "Alătură-te acum"
+
+#. Legacy key: useful_links
+msgid "Useful links"
+msgstr "Link-uri utile"
+
+#. Legacy key: blog
+msgid "Blog"
+msgstr "Blog"
+
+#. Legacy key: help
+msgid "Help"
+msgstr "Ajutor"
+
+#. Legacy key: about_us
+msgid "About us"
+msgstr "Despre noi"
+
+#. Legacy key: refund_policy
+msgid "Refund policy"
+msgstr "Politica de rambursare"
+
+#. Legacy key: all_rights_reserved
+msgid "All rights reserved"
+msgstr "Toate drepturile rezervate"
+
+#. Legacy key: yes
+msgid "Yes"
+msgstr "da"
+
+#. Legacy key: no
+msgid "No"
+msgstr "Nu"
+
+#. Legacy key: view_less
+msgid "View less"
+msgstr "Vedeți mai puțin"
+
+#. Legacy key: ai_writer
+msgid "Ai writer"
+msgstr "Ai scriitor"
+
+#. Legacy key: quick_actions
+msgid "Quick actions"
+msgstr "Acțiuni rapide"
+
+#. Legacy key: create_course
+msgid "Create course"
+msgstr "Creați un curs"
+
+#. Legacy key: add_course
+msgid "Add course"
+msgstr "Adaugă curs"
+
+#. Legacy key: add_new_lesson
+msgid "Add new lesson"
+msgstr "Adăugați o lecție nouă"
+
+#. Legacy key: add_lesson
+msgid "Add lesson"
+msgstr "Adăugați o lecție"
+
+#. Legacy key: add_student
+msgid "Add student"
+msgstr "Adăugați un student"
+
+#. Legacy key: enrol_student
+msgid "Enrol student"
+msgstr "Înscrieți studentul"
+
+#. Legacy key: help_center
+msgid "Help center"
+msgstr "Centru de ajutor"
+
+#. Legacy key: read_documentation
+msgid "Read documentation"
+msgstr "Citiți documentația"
+
+#. Legacy key: watch_video_tutorial
+msgid "Watch video tutorial"
+msgstr "Urmăriți tutorialul video"
+
+#. Legacy key: get_customer_support
+msgid "Get customer support"
+msgstr "Obțineți asistență pentru clienți"
+
+#. Legacy key: order_customization
+msgid "Order customization"
+msgstr "Personalizarea comenzii"
+
+#. Legacy key: request_a_new_feature
+msgid "Request a new feature"
+msgstr "Solicitați o nouă funcție"
+
+#. Legacy key: browse_addons
+msgid "Browse addons"
+msgstr "Răsfoiți suplimente"
+
+#. Legacy key: manage_courses
+msgid "Manage courses"
+msgstr "Gestionați cursurile"
+
+#. Legacy key: add_new_course
+msgid "Add new course"
+msgstr "Adăugați un curs nou"
+
+#. Legacy key: course_category
+msgid "Course category"
+msgstr "Categoria cursului"
+
+#. Legacy key: coupons
+msgid "Coupons"
+msgstr "Cupoane"
+
+#. Legacy key: course_bundle
+msgid "Course bundle"
+msgstr "Pachet de cursuri"
+
+#. Legacy key: add_new_bundle
+msgid "Add new bundle"
+msgstr "Adăugați un pachet nou"
+
+#. Legacy key: manage_bundle
+msgid "Manage bundle"
+msgstr "Gestionați pachetul"
+
+#. Legacy key: subscription_report
+msgid "Subscription report"
+msgstr "Raport de abonament"
+
+#. Legacy key: tutor_booking
+msgid "Tutor booking"
+msgstr "Rezervare tutore"
+
+#. Legacy key: subject_category
+msgid "Subject category"
+msgstr "Categoria de subiect"
+
+#. Legacy key: add_booking
+msgid "Add booking"
+msgstr "Adăugați rezervarea"
+
+#. Legacy key: all_bookings
+msgid "All bookings"
+msgstr "Toate rezervările"
+
+#. Legacy key: booked_schedules
+msgid "Booked schedules"
+msgstr "Programe rezervate"
+
+#. Legacy key: live_class_settings
+msgid "Live class settings"
+msgstr "Setări de curs live"
+
+#. Legacy key: ebook
+msgid "Ebook"
+msgstr "Ebook"
+
+#. Legacy key: all_ebooks
+msgid "All ebooks"
+msgstr "Toate cărțile electronice"
+
+#. Legacy key: add_ebook
+msgid "Add ebook"
+msgstr "Adăugați o carte electronică"
+
+#. Legacy key: payment_history
+msgid "Payment history"
+msgstr "Istoria platilor"
+
+#. Legacy key: category
+msgid "Category"
+msgstr "Categorie"
+
+#. Legacy key: course_enrollment
+msgid "Course enrollment"
+msgstr "Inscrierea la curs"
+
+#. Legacy key: purchase_history
+msgid "Purchase history"
+msgstr "Istoricul cumparaturilor"
+
+#. Legacy key: affiliate
+msgid "Affiliate"
+msgstr "Afiliat"
+
+#. Legacy key: affliliator_list
+msgid "Affliliator list"
+msgstr "Lista de afiliați"
+
+#. Legacy key: affiliation_history
+msgid "Affiliation history"
+msgstr "Istoricul afilierii"
+
+#. Legacy key: payouts
+msgid "Payouts"
+msgstr "Plăți"
+
+#. Legacy key: create_affiliator
+msgid "Create affiliator"
+msgstr "Creați un afiliat"
+
+#. Legacy key: affiliation_settings
+msgid "Affiliation settings"
+msgstr "Setări de afiliere"
+
+#. Legacy key: users
+msgid "Users"
+msgstr "Utilizatori"
+
+#. Legacy key: admins
+msgid "Admins"
+msgstr "Administratori"
+
+#. Legacy key: manage_admins
+msgid "Manage admins"
+msgstr "Gestionați administratorii"
+
+#. Legacy key: add_new_admin
+msgid "Add new admin"
+msgstr "Adăugați un nou administrator"
+
+#. Legacy key: manage_instructors
+msgid "Manage instructors"
+msgstr "Gestionați instructorii"
+
+#. Legacy key: add_new_instructor
+msgid "Add new instructor"
+msgstr "Adăugați un instructor nou"
+
+#. Legacy key: instructor_payout
+msgid "Instructor payout"
+msgstr "Plata instructorului"
+
+#. Legacy key: applications
+msgid "Applications"
+msgstr "Aplicații"
+
+#. Legacy key: manage_students
+msgid "Manage students"
+msgstr "Gestionați studenții"
+
+#. Legacy key: add_new_student
+msgid "Add new student"
+msgstr "Adăugați un nou student"
+
+#. Legacy key: offline_payment
+msgid "Offline payment"
+msgstr "Plată offline"
+
+#. Legacy key: pending_request
+msgid "Pending request"
+msgstr "Cerere in asteptare"
+
+#. Legacy key: accepted_request
+msgid "Accepted request"
+msgstr "Cerere acceptată"
+
+#. Legacy key: suspended_request
+msgid "Suspended request"
+msgstr "Cerere suspendată"
+
+#. Legacy key: offline_payment_settings
+msgid "Offline payment settings"
+msgstr "Setări de plată offline"
+
+#. Legacy key: all_blogs
+msgid "All blogs"
+msgstr "Toate blogurile"
+
+#. Legacy key: pending_blog
+msgid "Pending blog"
+msgstr "Blog în așteptare"
+
+#. Legacy key: blog_category
+msgid "Blog category"
+msgstr "Categoria blog"
+
+#. Legacy key: blog_settings
+msgid "Blog settings"
+msgstr "Setări blog"
+
+#. Legacy key: customer_support
+msgid "Customer support"
+msgstr "Relații Clienți"
+
+#. Legacy key: ticket_list
+msgid "Ticket list"
+msgstr "Lista de bilete"
+
+#. Legacy key: support_category
+msgid "Support category"
+msgstr "Categoria suport"
+
+#. Legacy key: macro
+msgid "Macro"
+msgstr "Macro"
+
+#. Legacy key: create_ticket
+msgid "Create ticket"
+msgstr "Creați un bilet"
+
+#. Legacy key: themes
+msgid "Themes"
+msgstr "Teme"
+
+#. Legacy key: academy_cloud
+msgid "Academy cloud"
+msgstr "Norul academiei"
+
+#. Legacy key: drip_content_settings
+msgid "Drip content settings"
+msgstr "Setări de conținut pentru picurare"
+
+#. Legacy key: certificate_settings
+msgid "Certificate settings"
+msgstr "Setări de certificat"
+
+#. Legacy key: s3_settings
+msgid "S3 settings"
+msgstr "Setări S3"
+
+#. Legacy key: open_ai_settings
+msgid "Open ai settings"
+msgstr "Deschideți setările IA"
+
+#. Legacy key: social_login
+msgid "Social login"
+msgstr "Conectare socială"
+
+#. Legacy key: custom_page
+msgid "Custom page"
+msgstr "Pagina personalizată"
+
+#. Legacy key: data_center
+msgid "Data center"
+msgstr "Centru de date"
+
+#. Legacy key: admin_revenue_this_year
+msgid "Admin revenue this year"
+msgstr "Venituri de administrare anul acesta"
+
+#. Legacy key: number_courses
+msgid "Number courses"
+msgstr "Număr cursuri"
+
+#. Legacy key: number_of_lessons
+msgid "Number of lessons"
+msgstr "Numărul de lecții"
+
+#. Legacy key: number_of_enrolment
+msgid "Number of enrolment"
+msgstr "Numărul de înscrieri"
+
+#. Legacy key: number_of_student
+msgid "Number of student"
+msgstr "Numărul de elev"
+
+#. Legacy key: course_overview
+msgid "Course overview"
+msgstr "Privire de ansamblu asupra curs"
+
+#. Legacy key: active_courses
+msgid "Active courses"
+msgstr "Cursuri active"
+
+#. Legacy key: pending_courses
+msgid "Pending courses"
+msgstr "Cursuri în așteptare"
+
+#. Legacy key: requested_withdrawal
+msgid "Requested withdrawal"
+msgstr "Retragere solicitată"
+
+#. Legacy key: email
+msgid "Email"
+msgstr "E-mail"
+
+#. Legacy key: requested_withdrawal_amount
+msgid "Requested withdrawal amount"
+msgstr "Suma de retragere solicitată"
+
+#. Legacy key: january
+msgid "January"
+msgstr "ianuarie"
+
+#. Legacy key: february
+msgid "February"
+msgstr "februarie"
+
+#. Legacy key: march
+msgid "March"
+msgstr "Martie"
+
+#. Legacy key: april
+msgid "April"
+msgstr "Aprilie"
+
+#. Legacy key: may
+msgid "May"
+msgstr "Mai"
+
+#. Legacy key: june
+msgid "June"
+msgstr "iunie"
+
+#. Legacy key: july
+msgid "July"
+msgstr "iulie"
+
+#. Legacy key: august
+msgid "August"
+msgstr "August"
+
+#. Legacy key: september
+msgid "September"
+msgstr "Septembrie"
+
+#. Legacy key: october
+msgid "October"
+msgstr "octombrie"
+
+#. Legacy key: november
+msgid "November"
+msgstr "noiembrie"
+
+#. Legacy key: december
+msgid "December"
+msgstr "decembrie"
+
+#. Legacy key: ok
+msgid "Ok"
+msgstr "Bine"
+
+#. Legacy key: success
+msgid "Success"
+msgstr "Succes"
+
+#. Legacy key: successfully
+msgid "Successfully"
+msgstr "Cu succes"
+
+#. Legacy key: div_added_to_bottom_
+msgid "Div added to bottom "
+msgstr "Div adăugat în partea de jos"
+
+#. Legacy key: div_has_been_deleted_
+msgid "Div has been deleted "
+msgstr "Div a fost șters"
+
+#. Legacy key: provide_your_valid_login_credentials
+msgid "Provide your valid login credentials"
+msgstr "Furnizați datele dvs. de conectare valide"
+
+#. Legacy key: continue_with_email
+msgid "Continue with email"
+msgstr "Continuați cu e-mailul"
+
+#. Legacy key: password
+msgid "Password"
+msgstr "Parola"
+
+#. Legacy key: forgot_password
+msgid "Forgot password"
+msgstr "Aţi uitat parola"
+
+#. Legacy key: do_not_have_an_account
+msgid "Do not have an account"
+msgstr "Nu ai un cont"
+
+#. Legacy key: website_name
+msgid "Website name"
+msgstr "Numele site-ului"
+
+#. Legacy key: website_title
+msgid "Website title"
+msgstr "Titlul site-ului"
+
+#. Legacy key: website_keywords
+msgid "Website keywords"
+msgstr "Cuvinte cheie pentru site-uri web"
+
+#. Legacy key: website_description
+msgid "Website description"
+msgstr "Descrierea site-ului"
+
+#. Legacy key: author
+msgid "Author"
+msgstr "Autor"
+
+#. Legacy key: slogan
+msgid "Slogan"
+msgstr "Slogan"
+
+#. Legacy key: system_email
+msgid "System email"
+msgstr "E-mail de sistem"
+
+#. Legacy key: address
+msgid "Address"
+msgstr "Abordare"
+
+#. Legacy key: phone
+msgid "Phone"
+msgstr "Telefon"
+
+#. Legacy key: youtube_api_key
+msgid "Youtube api key"
+msgstr "Cheie API Youtube"
+
+#. Legacy key: get_youtube_api_key
+msgid "Get youtube api key"
+msgstr "Obțineți cheia API youtube"
+
+#. Legacy key: vimeo_api_key
+msgid "Vimeo api key"
+msgstr "Tasta API Vimeo"
+
+#. Legacy key: get_vimeo_api_key
+msgid "Get vimeo api key"
+msgstr "Obțineți cheia API Vimeo"
+
+#. Legacy key: purchase_code
+msgid "Purchase code"
+msgstr "Cod de achiziție"
+
+#. Legacy key: system_language
+msgid "System language"
+msgstr "Limba sistemului"
+
+#. Legacy key: student_email_verification
+msgid "Student email verification"
+msgstr "Verificarea e-mailului studentului"
+
+#. Legacy key: enable
+msgid "Enable"
+msgstr "Permite"
+
+#. Legacy key: disable
+msgid "Disable"
+msgstr "Dezactivați"
+
+#. Legacy key: course_accessibility
+msgid "Course accessibility"
+msgstr "Accesibilitatea cursurilor"
+
+#. Legacy key: publicly
+msgid "Publicly"
+msgstr "Public"
+
+#. Legacy key: only_logged_in_users
+msgid "Only logged in users"
+msgstr "Doar utilizatori autentificati"
+
+#. Legacy key: number_of_authorized_devices
+msgid "Number of authorized devices"
+msgstr "Numărul de dispozitive autorizate"
+
+#. Legacy key: how_many_devices_do_you_want_to_allow_for_logging_in_using_a_single_account
+msgid "How many devices do you want to allow for logging in using a single account"
+msgstr "Câte dispozitive doriți să permiteți conectarea folosind un singur cont"
+
+#. Legacy key: course_selling_tax
+msgid "Course selling tax"
+msgstr "Taxa de vânzare curs"
+
+#. Legacy key: enter_0_if_you_want_to_disable_the_tax_option
+msgid "Enter 0 if you want to disable the tax option"
+msgstr "Introduceți 0 dacă doriți să dezactivați opțiunea fiscală"
+
+#. Legacy key: google_analytics_id
+msgid "Google analytics id"
+msgstr "ID Google Analytics"
+
+#. Legacy key: keep_it_blank_if_you_want_to_disable_it
+msgid "Keep it blank if you want to disable it"
+msgstr "Păstrați-l gol dacă doriți să îl dezactivați"
+
+#. Legacy key: meta_pixel_id
+msgid "Meta pixel id"
+msgstr "Meta pixel id"
+
+#. Legacy key: footer_text
+msgid "Footer text"
+msgstr "Text de subsol"
+
+#. Legacy key: footer_link
+msgid "Footer link"
+msgstr "Link de subsol"
+
+#. Legacy key: save
+msgid "Save"
+msgstr "Salvați"
+
+#. Legacy key: update_product
+msgid "Update product"
+msgstr "Actualizați produsul"
+
+#. Legacy key: file
+msgid "File"
+msgstr "Fişier"
+
+#. Legacy key: update
+msgid "Update"
+msgstr "Actualizați"
+
+#. Legacy key: not_found
+msgid "Not found"
+msgstr "Nu a fost găsit"
+
+#. Legacy key: about_this_application
+msgid "About this application"
+msgstr "Despre această aplicație"
+
+#. Legacy key: software_version
+msgid "Software version"
+msgstr "Versiune software"
+
+#. Legacy key: check_update
+msgid "Check update"
+msgstr "Verifica actualizarea"
+
+#. Legacy key: php_version
+msgid "Php version"
+msgstr "versiunea PHP"
+
+#. Legacy key: curl_enable
+msgid "Curl enable"
+msgstr "Activare curl"
+
+#. Legacy key: enabled
+msgid "Enabled"
+msgstr "Activat"
+
+#. Legacy key: product_license
+msgid "Product license"
+msgstr "Licență de produs"
+
+#. Legacy key: invalid
+msgid "Invalid"
+msgstr "Invalid"
+
+#. Legacy key: enter_valid_purchase_code
+msgid "Enter valid purchase code"
+msgstr "Introduceți codul de achiziție valid"
+
+#. Legacy key: customer_support_status
+msgid "Customer support status"
+msgstr "Starea asistenței pentru clienți"
+
+#. Legacy key: support_expiry_date
+msgid "Support expiry date"
+msgstr "Data de expirare a suportului"
+
+#. Legacy key: customer_name
+msgid "Customer name"
+msgstr "Numele clientului"
+
+#. Legacy key: product_updated_successfully
+msgid "Product updated successfully"
+msgstr "Produsul a fost actualizat cu succes"
+
+#. Legacy key: remove_all
+msgid "Remove all"
+msgstr "Inlătură tot"
+
+#. Legacy key: notification
+msgid "Notification"
+msgstr "Notificare"
+
+#. Legacy key: no_notification
+msgid "No notification"
+msgstr "Nicio notificare"
+
+#. Legacy key: notification_settings
+msgid "Notification settings"
+msgstr "Setări de notificare"
+
+#. Legacy key: mark_all_as_read
+msgid "Mark all as read"
+msgstr "Marcheaza totul ca fiind citit"
+
+#. Legacy key: enrollments
+msgid "Enrollments"
+msgstr "Înscrieri"
+
+#. Legacy key: newsletter
+msgid "Newsletter"
+msgstr "Buletin informativ"
+
+#. Legacy key: all_newsletter
+msgid "All newsletter"
+msgstr "Toate newsletter-ul"
+
+#. Legacy key: subscribed_user
+msgid "Subscribed user"
+msgstr "Utilizator abonat"
+
+#. Legacy key: custom_page_builder
+msgid "Custom page builder"
+msgstr "Creator de pagini personalizate"
+
+#. Legacy key: your_servers_file_upload_limit_is_900mb
+msgid "Your servers file upload limit is 900mb"
+msgstr "Limita de încărcare a fișierelor de pe serverele dvs. este de 900 MB"
+
+#. Legacy key: 404_not_found
+msgid "404 not found"
+msgstr "404 Nu a fost gasit"
+
+#. Legacy key: administration
+msgid "Administration"
+msgstr "Administrare"
+
+#. Legacy key: checkout
+msgid "Checkout"
+msgstr "Verifică"
+
+#. Legacy key: log_out
+msgid "Log out"
+msgstr "Deconectați-vă"
+
+#. Legacy key: the_page_you_requested_could_not_be_found
+msgid "The page you requested could not be found"
+msgstr "Pagina pe care ați solicitat-o ​​nu a putut fi găsită"
+
+#. Legacy key: check_the_spelling_of_the_url
+msgid "Check the spelling of the url"
+msgstr "Verificați ortografia adresei URL"
+
+#. Legacy key: contact_us
+msgid "Contact us"
+msgstr "Contactaţi-ne"
+
+#. Legacy key: faq
+msgid "Faq"
+msgstr "FAQ"
+
+#. Legacy key: subscribe_to_our_newsletter
+msgid "Subscribe to our newsletter"
+msgstr "Aboneaza-te la newsletter-ul nostru"
+
+#. Legacy key: enter_your_email_address
+msgid "Enter your email address"
+msgstr "Introdu adresa ta de e-mail"
+
+#. Legacy key: happy
+msgid "Happy"
+msgstr "Fericit"
+
+#. Legacy key: experienced
+msgid "Experienced"
+msgstr "Cu experienta"
+
+#. Legacy key: smart_solution
+msgid "Smart solution"
+msgstr "Soluție inteligentă"
+
+#. Legacy key: upcoming
+msgid "Upcoming"
+msgstr "În viitor"
+
+#. Legacy key: upcoming_courses
+msgid "Upcoming courses"
+msgstr "Cursuri viitoare"
+
+#. Legacy key: these_are_the_most_popular_courses_among_listen_courses_learners_worldwide
+msgid "These are the most popular courses among listen courses learners worldwide"
+msgstr "Acestea sunt cele mai populare cursuri printre cursanții de cursuri de ascultare din întreaga lume"
+
+#. Legacy key: outcomes
+msgid "Outcomes"
+msgstr "Rezultate"
+
+#. Legacy key: remove_from_cart
+msgid "Remove from cart"
+msgstr "Scoateți din coș"
+
+#. Legacy key: enroll_now
+msgid "Enroll now"
+msgstr "Inscrie-te acum"
+
+#. Legacy key: these_are_the_most_latest_courses_among_listen_courses_learners_worldwide
+msgid "These are the most latest courses among listen courses learners worldwide"
+msgstr "Acestea sunt cele mai recente cursuri dintre cursanții de ascultare din întreaga lume"
+
+#. Legacy key: top_instructors
+msgid "Top instructors"
+msgstr "Instructori de top"
+
+#. Legacy key: they_efficiently_serve_large_number_of_students_on_our_platform
+msgid "They efficiently serve large number of students on our platform"
+msgstr "Deservesc eficient un număr mare de studenți pe platforma noastră"
+
+#. Legacy key: thanks_for_subscribing_to_our_newsletter
+msgid "Thanks for subscribing to our newsletter"
+msgstr "Vă mulțumim că v-ați abonat la newsletter-ul nostru"
+
+#. Legacy key: such_script_searches_are_not_allowed
+msgid "Such script searches are not allowed"
+msgstr "Astfel de căutări de script nu sunt permise"
+
+#. Legacy key: list_view
+msgid "List view"
+msgstr "Vizualizare listă"
+
+#. Legacy key: grid_view
+msgid "Grid view"
+msgstr "Vizualizare grilă"
+
+#. Legacy key: reset
+msgid "Reset"
+msgstr "Resetați"
+
+#. Legacy key: showing
+msgid "Showing"
+msgstr "Se arată"
+
+#. Legacy key: of
+msgid "Of"
+msgstr "De"
+
+#. Legacy key: results
+msgid "Results"
+msgstr "Rezultate"
+
+#. Legacy key: newly_published
+msgid "Newly published"
+msgstr "Nou publicat"
+
+#. Legacy key: highest_rating
+msgid "Highest rating"
+msgstr "Cel mai mare rating"
+
+#. Legacy key: lowest_price
+msgid "Lowest price"
+msgstr "Cel mai mic pret"
+
+#. Legacy key: highest_price
+msgid "Highest price"
+msgstr "Cel mai mare preț"
+
+#. Legacy key: discounted
+msgid "Discounted"
+msgstr "Reducere"
+
+#. Legacy key: english
+msgid "English"
+msgstr "Engleză"
+
+#. Legacy key: bundles
+msgid "Bundles"
+msgstr "Pachete"
+
+#. Legacy key: search_for_bundle
+msgid "Search for bundle"
+msgstr "Căutați pachet"
+
+#. Legacy key: rating_updated_successfully
+msgid "Rating updated successfully"
+msgstr "Evaluarea a fost actualizată cu succes"
+
+#. Legacy key: please_select_a_rating_greater_than_0
+msgid "Please select a rating greater than 0"
+msgstr "Vă rugăm să selectați o evaluare mai mare de 0"
+
+#. Legacy key: your_subscription_date_is_over_please_renew_your_bundle
+msgid "Your subscription date is over please renew your bundle"
+msgstr "Data abonamentului s-a încheiat, vă rugăm să reînnoiți pachetul"
+
+#. Legacy key: bundle_details
+msgid "Bundle details"
+msgstr "Detalii pachet"
+
+#. Legacy key: buy
+msgid "Buy"
+msgstr "Cumpără"
+
+#. Legacy key: all_categories
+msgid "All categories"
+msgstr "Toate categoriile"
+
+#. Legacy key: view_details
+msgid "View details"
+msgstr "Vezi detalii"
+
+#. Legacy key: your_email
+msgid "Your email"
+msgstr "Email-ul tau"
+
+#. Legacy key: enter_your_email
+msgid "Enter your email"
+msgstr "Introduceți adresa dvs. de email"
+
+#. Legacy key: enter_your_valid_password
+msgid "Enter your valid password"
+msgstr "Introduceți parola dvs. validă"
+
+#. Legacy key: or
+msgid "Or"
+msgstr "Sau"
+
+#. Legacy key: send_request
+msgid "Send request"
+msgstr "Trimite cerere"
+
+#. Legacy key: back_to_login
+msgid "Back to login"
+msgstr "Înapoi la autentificare"
+
+#. Legacy key: my_course
+msgid "My course"
+msgstr "Cursul meu"
+
+#. Legacy key: by
+msgid "By"
+msgstr "De"
+
+#. Legacy key: go_to_wishlist
+msgid "Go to wishlist"
+msgstr "Accesați lista de dorințe"
+
+#. Legacy key: become_a_instructor
+msgid "Become a instructor"
+msgstr "Deveniți instructor"
+
+#. Legacy key: my_courses
+msgid "My courses"
+msgstr "Cursurile mele"
+
+#. Legacy key: my_wishlist
+msgid "My wishlist"
+msgstr "Lista mea de dorinte"
+
+#. Legacy key: my_messages
+msgid "My messages"
+msgstr "Mesajele mele"
+
+#. Legacy key: user_profile
+msgid "User profile"
+msgstr "Profil de utilizator"
+
+#. Legacy key: support
+msgid "Support"
+msgstr "A sustine"
+
+#. Legacy key: start_now
+msgid "Start now"
+msgstr "Începe acum"
+
+#. Legacy key: gift_someone_else
+msgid "Gift someone else"
+msgstr "Cadou altcuiva"
+
+#. Legacy key: wishlist
+msgid "Wishlist"
+msgstr "lista de dorințe"
+
+#. Legacy key: messages
+msgid "Messages"
+msgstr "Mesaje"
+
+#. Legacy key: profile
+msgid "Profile"
+msgstr "Profil"
+
+#. Legacy key: account_credentials
+msgid "Account credentials"
+msgstr "Acreditările contului"
+
+#. Legacy key: go_to_course_page
+msgid "Go to course page"
+msgstr "Accesați pagina cursului"
+
+#. Legacy key: author_profile
+msgid "Author profile"
+msgstr "Profilul autorului"
+
+#. Legacy key: quizzes
+msgid "Quizzes"
+msgstr "Chestionare"
+
+#. Legacy key: expiry_period
+msgid "Expiry period"
+msgstr "Perioada de expirare"
+
+#. Legacy key: upcoming_live_class
+msgid "Upcoming live class"
+msgstr "Următorul curs live"
+
+#. Legacy key: enrolled
+msgid "Enrolled"
+msgstr "Înscris"
+
+#. Legacy key: overview
+msgid "Overview"
+msgstr "Prezentare generală"
+
+#. Legacy key: curriculum
+msgid "Curriculum"
+msgstr "Curriculum"
+
+#. Legacy key: instructor
+msgid "Instructor"
+msgstr "Instructor"
+
+#. Legacy key: course_description
+msgid "Course description"
+msgstr "Descrierea cursului"
+
+#. Legacy key: instructor_profile
+msgid "Instructor profile"
+msgstr "Profilul instructorului"
+
+#. Legacy key: facebook
+msgid "Facebook"
+msgstr "Facebook"
+
+#. Legacy key: twitter
+msgid "Twitter"
+msgstr "Stare de nervozitate"
+
+#. Legacy key: linkedin
+msgid "Linkedin"
+msgstr "Linkedin"
+
+#. Legacy key: how_to_shoot_cinematic_tech_videos_like_apple
+msgid "How to shoot cinematic tech videos like apple"
+msgstr "Cum să înregistrezi videoclipuri tehnologice cinematografice precum Apple"
+
+#. Legacy key: compare_this_course
+msgid "Compare this course"
+msgstr "Compara acest curs"
+
+#. Legacy key: skill_level
+msgid "Skill level"
+msgstr "Nivelul de aptitudine"
+
+#. Legacy key: lifetime
+msgid "Lifetime"
+msgstr "Durata de viață"
+
+#. Legacy key: certificate
+msgid "Certificate"
+msgstr "Certificat"
+
+#. Legacy key: related_courses
+msgid "Related courses"
+msgstr "Cursuri conexe"
+
+#. Legacy key: first_name
+msgid "First name"
+msgstr "Nume"
+
+#. Legacy key: enter_your_first_name
+msgid "Enter your first name"
+msgstr "Introduceți prenumele dvs"
+
+#. Legacy key: last_name
+msgid "Last name"
+msgstr "Nume"
+
+#. Legacy key: enter_your_last_name
+msgid "Enter your last name"
+msgstr "Introduceți numele dvs. de familie"
+
+#. Legacy key: apply_to_become_a_instructor
+msgid "Apply to become a instructor"
+msgstr "Aplicați pentru a deveni instructor"
+
+#. Legacy key: enter_your_phone_number
+msgid "Enter your phone number"
+msgstr "Introdu numarul tau de telefon"
+
+#. Legacy key: document
+msgid "Document"
+msgstr "Document"
+
+#. Legacy key: provide_some_documents_about_your_qualifications
+msgid "Provide some documents about your qualifications"
+msgstr "Furnizați câteva documente despre calificările dvs"
+
+#. Legacy key: invalid_login_credentials
+msgid "Invalid login credentials"
+msgstr "Date de conectare nevalide"
+
+#. Legacy key: publication_name
+msgid "Publication name"
+msgstr "Numele publicației"
+
+#. Legacy key: published_date
+msgid "Published date"
+msgstr "Data publicării"
+
+#. Legacy key: category_name
+msgid "Category name"
+msgstr "Numele categoriei"
+
+#. Legacy key: read_preview
+msgid "Read preview"
+msgstr "Citiți previzualizarea"
+
+#. Legacy key: free_download
+msgid "Free download"
+msgstr "Descărcare gratuită"
+
+#. Legacy key: book_specification_and_summary
+msgid "Book specification and summary"
+msgstr "Specificația cărții și rezumatul"
+
+#. Legacy key: summary
+msgid "Summary"
+msgstr "rezumat"
+
+#. Legacy key: specification
+msgid "Specification"
+msgstr "Specificație"
+
+#. Legacy key: other_related_ebooks
+msgid "Other related ebooks"
+msgstr "Alte cărți electronice conexe"
+
+#. Legacy key: about_instructor
+msgid "About instructor"
+msgstr "Despre instructor"
+
+#. Legacy key: ebook_review
+msgid "Ebook review"
+msgstr "Recenzie de ebook"
+
+#. Legacy key: add_to_wishlist
+msgid "Add to wishlist"
+msgstr "Adaugă la lista de dorințe"
+
+#. Legacy key: added_to_wishlist
+msgid "Added to wishlist"
+msgstr "Adăugat la lista de dorințe"
+
+#. Legacy key: wordpress_theme_development_with_bootstrap
+msgid "Wordpress theme development with bootstrap"
+msgstr "Dezvoltarea temei Wordpress cu bootstrap"
+
+#. Legacy key: frontend_settings
+msgid "Frontend settings"
+msgstr "Setări pentru front-end"
+
+#. Legacy key: home_page_layout
+msgid "Home page layout"
+msgstr "Aspectul paginii de pornire"
+
+#. Legacy key: motivational_speech
+msgid "Motivational speech"
+msgstr "Discurs motivațional"
+
+#. Legacy key: website_faqs
+msgid "Website faqs"
+msgstr "Întrebări frecvente pe site"
+
+#. Legacy key: recaptcha
+msgid "Recaptcha"
+msgstr "Recaptcha"
+
+#. Legacy key: frontend_website_settings
+msgid "Frontend website settings"
+msgstr "Setări site-ul frontend"
+
+#. Legacy key: banner_title
+msgid "Banner title"
+msgstr "Titlul bannerului"
+
+#. Legacy key: banner_sub_title
+msgid "Banner sub title"
+msgstr "Subtitlul bannerului"
+
+#. Legacy key: cookie_status
+msgid "Cookie status"
+msgstr "Starea cookie-urilor"
+
+#. Legacy key: active
+msgid "Active"
+msgstr "Activ"
+
+#. Legacy key: inactive
+msgid "Inactive"
+msgstr "Inactiv"
+
+#. Legacy key: cookie_note
+msgid "Cookie note"
+msgstr "Notă de cookie"
+
+#. Legacy key: update_settings
+msgid "Update settings"
+msgstr "Actualizați setările"
+
+#. Legacy key: activated
+msgid "Activated"
+msgstr "Activat"
+
+#. Legacy key: title
+msgid "Title"
+msgstr "Titlu"
+
+#. Legacy key: faq_question
+msgid "Faq question"
+msgstr "Întrebare frecventă"
+
+#. Legacy key: image
+msgid "Image"
+msgstr "Imagine"
+
+#. Legacy key: upload_image
+msgid "Upload image"
+msgstr "Incarca imaginea"
+
+#. Legacy key: save_changes
+msgid "Save changes"
+msgstr "Salvează modificările"
+
+#. Legacy key: question
+msgid "Question"
+msgstr "Întrebare"
+
+#. Legacy key: answer
+msgid "Answer"
+msgstr "Răspuns"
+
+#. Legacy key: recaptcha_settings
+msgid "Recaptcha settings"
+msgstr "Setări Recaptcha"
+
+#. Legacy key: recaptcha_status
+msgid "Recaptcha status"
+msgstr "Starea recaptcha"
+
+#. Legacy key: recaptcha_sitekey
+msgid "Recaptcha sitekey"
+msgstr "Recaptcha sitekey"
+
+#. Legacy key: recaptcha_secretkey
+msgid "Recaptcha secretkey"
+msgstr "Recaptcha cheie secretă"
+
+#. Legacy key: update_recaptcha_settings
+msgid "Update recaptcha settings"
+msgstr "Actualizați setările recaptcha"
+
+#. Legacy key: update_banner_image
+msgid "Update banner image"
+msgstr "Actualizați imaginea bannerului"
+
+#. Legacy key: upload_banner_image
+msgid "Upload banner image"
+msgstr "Încărcați imaginea bannerului"
+
+#. Legacy key: update_light_logo
+msgid "Update light logo"
+msgstr "Actualizați sigla luminii"
+
+#. Legacy key: upload_light_logo
+msgid "Upload light logo"
+msgstr "Încărcați sigla luminii"
+
+#. Legacy key: update_dark_logo
+msgid "Update dark logo"
+msgstr "Actualizați sigla întunecată"
+
+#. Legacy key: upload_dark_logo
+msgid "Upload dark logo"
+msgstr "Încărcați sigla întunecată"
+
+#. Legacy key: update_small_logo
+msgid "Update small logo"
+msgstr "Actualizați sigla mică"
+
+#. Legacy key: upload_small_logo
+msgid "Upload small logo"
+msgstr "Încărcați un logo mic"
+
+#. Legacy key: update_favicon
+msgid "Update favicon"
+msgstr "Actualizați favicon"
+
+#. Legacy key: upload_favicon
+msgid "Upload favicon"
+msgstr "Încărcați favicon"
+
+#. Legacy key: banner_image_update
+msgid "Banner image update"
+msgstr "Actualizare imagine banner"
+
+#. Legacy key: frontend_settings_updated
+msgid "Frontend settings updated"
+msgstr "Setările pentru front-end au fost actualizate"
+
+#. Legacy key: start_learning_from_best_platform
+msgid "Start learning from best platform"
+msgstr "Începeți să învățați de la cea mai bună platformă"
+
+#. Legacy key: your_servers_file_upload_limit_is_512mb
+msgid "Your servers file upload limit is 512mb"
+msgstr "Limita de încărcare a fișierelor de pe serverele dvs. este de 512 MB"
+
+#. Legacy key: blog_page_title
+msgid "Blog page title"
+msgstr "Titlul paginii de blog"
+
+#. Legacy key: blog_page_subtitle
+msgid "Blog page subtitle"
+msgstr "Subtitrarea paginii de blog"
+
+#. Legacy key: instructors_blog_permission
+msgid "Instructors blog permission"
+msgstr "Permisiunea blogului instructorilor"
+
+#. Legacy key: blog_visibility_on_the_home_page
+msgid "Blog visibility on the home page"
+msgstr "Vizibilitatea blogului pe pagina de start"
+
+#. Legacy key: visible
+msgid "Visible"
+msgstr "Vizibil"
+
+#. Legacy key: invisible
+msgid "Invisible"
+msgstr "Invizibil"
+
+#. Legacy key: blog_page_banner
+msgid "Blog page banner"
+msgstr "Banner pentru pagina de blog"
+
+#. Legacy key: blog_settings_updated_successfully
+msgid "Blog settings updated successfully"
+msgstr "Setările blogului au fost actualizate cu succes"
+
+#. Legacy key: visit_our_latest_blogs
+msgid "Visit our latest blogs"
+msgstr "Vizitați cele mai recente bloguri ale noastre"
+
+#. Legacy key: thu
+msgid "Thu"
+msgstr "joi"
+
+#. Legacy key: dec
+msgid "Dec"
+msgstr "Dec"
+
+#. Legacy key: free_courses
+msgid "Free courses"
+msgstr "Cursuri gratuite"
+
+#. Legacy key: paid_courses
+msgid "Paid courses"
+msgstr "Cursuri platite"
+
+#. Legacy key: course_list
+msgid "Course list"
+msgstr "Lista de cursuri"
+
+#. Legacy key: status
+msgid "Status"
+msgstr "stare"
+
+#. Legacy key: pending
+msgid "Pending"
+msgstr "In asteptarea"
+
+#. Legacy key: private
+msgid "Private"
+msgstr "Privat"
+
+#. Legacy key: lesson_and_section
+msgid "Lesson and section"
+msgstr "Lecție și secțiune"
+
+#. Legacy key: enrolled_student
+msgid "Enrolled student"
+msgstr "Student inscris"
+
+#. Legacy key: mark_as_pending
+msgid "Mark as pending"
+msgstr "Marcați ca în așteptare"
+
+#. Legacy key: section_and_lesson
+msgid "Section and lesson"
+msgstr "Secțiune și lecție"
+
+#. Legacy key: academic_progress
+msgid "Academic progress"
+msgstr "Progresul academic"
+
+#. Legacy key: edit_this_course
+msgid "Edit this course"
+msgstr "Editați acest curs"
+
+#. Legacy key: view_course_on_frontend
+msgid "View course on frontend"
+msgstr "Vizualizați cursul pe frontend"
+
+#. Legacy key: go_to_course_playing_page
+msgid "Go to course playing page"
+msgstr "Accesați pagina de joc curs"
+
+#. Legacy key: section
+msgid "Section"
+msgstr "Secțiune"
+
+#. Legacy key: lesson
+msgid "Lesson"
+msgstr "Lecţie"
+
+#. Legacy key: mark_as_active
+msgid "Mark as active"
+msgstr "Marcați ca activ"
+
+#. Legacy key: edit_course
+msgid "Edit course"
+msgstr "Editați cursul"
+
+#. Legacy key: course_manager
+msgid "Course manager"
+msgstr "Manager de curs"
+
+#. Legacy key: view_on_frontend
+msgid "View on frontend"
+msgstr "Vizualizare pe frontend"
+
+#. Legacy key: back_to_course_list
+msgid "Back to course list"
+msgstr "Înapoi la lista de cursuri"
+
+#. Legacy key: zoom_live_class
+msgid "Zoom live class"
+msgstr "Zoom live curs"
+
+#. Legacy key: jitsi_live_class
+msgid "Jitsi live class"
+msgstr "curs live Jitsi"
+
+#. Legacy key: assignment
+msgid "Assignment"
+msgstr "Misiune"
+
+#. Legacy key: noticeboard
+msgid "Noticeboard"
+msgstr "Avizier"
+
+#. Legacy key: analytics
+msgid "Analytics"
+msgstr "Analytics"
+
+#. Legacy key: basic
+msgid "Basic"
+msgstr "De bază"
+
+#. Legacy key: info
+msgid "Info"
+msgstr "Info"
+
+#. Legacy key: pricing
+msgid "Pricing"
+msgstr "Prețuri"
+
+#. Legacy key: media
+msgid "Media"
+msgstr "Mass-media"
+
+#. Legacy key: seo
+msgid "Seo"
+msgstr "Seo"
+
+#. Legacy key: finish
+msgid "Finish"
+msgstr "finalizarea"
+
+#. Legacy key: add_new_section
+msgid "Add new section"
+msgstr "Adăugați o nouă secțiune"
+
+#. Legacy key: add_section
+msgid "Add section"
+msgstr "Adăugați o secțiune"
+
+#. Legacy key: add_new_quiz
+msgid "Add new quiz"
+msgstr "Adăugați un nou test"
+
+#. Legacy key: add_quiz
+msgid "Add quiz"
+msgstr "Adăugați test"
+
+#. Legacy key: sort_sections
+msgid "Sort sections"
+msgstr "Sortați secțiuni"
+
+#. Legacy key: sort_lessons
+msgid "Sort lessons"
+msgstr "Sortați lecțiile"
+
+#. Legacy key: sort_lesson
+msgid "Sort lesson"
+msgstr "Sortează lecția"
+
+#. Legacy key: update_section
+msgid "Update section"
+msgstr "Secțiunea de actualizare"
+
+#. Legacy key: edit_section
+msgid "Edit section"
+msgstr "Editați secțiunea"
+
+#. Legacy key: delete_section
+msgid "Delete section"
+msgstr "Ștergeți secțiunea"
+
+#. Legacy key: update_lesson
+msgid "Update lesson"
+msgstr "Actualizați lecția"
+
+#. Legacy key: edit
+msgid "Edit"
+msgstr "Editați | ×"
+
+#. Legacy key: quiz_results
+msgid "Quiz results"
+msgstr "Rezultatele testului"
+
+#. Legacy key: manage_quiz_questions
+msgid "Manage quiz questions"
+msgstr "Gestionați întrebările testului"
+
+#. Legacy key: quiz_questions
+msgid "Quiz questions"
+msgstr "Întrebări test"
+
+#. Legacy key: update_quiz_information
+msgid "Update quiz information"
+msgstr "Actualizați informațiile testului"
+
+#. Legacy key: quiz
+msgid "Quiz"
+msgstr "Test"
+
+#. Legacy key: live_class_schedule
+msgid "Live class schedule"
+msgstr "Programul de curs live"
+
+#. Legacy key: date
+msgid "Date"
+msgstr "Data"
+
+#. Legacy key: time
+msgid "Time"
+msgstr "Timp"
+
+#. Legacy key: note_to_students
+msgid "Note to students"
+msgstr "Notă pentru studenți"
+
+#. Legacy key: zoom_meeting_id
+msgid "Zoom meeting id"
+msgstr "ID întâlnire Zoom"
+
+#. Legacy key: enter_meeting_id
+msgid "Enter meeting id"
+msgstr "Introduceți id-ul întâlnirii"
+
+#. Legacy key: zoom_meeting_password
+msgid "Zoom meeting password"
+msgstr "Parola de întâlnire Zoom"
+
+#. Legacy key: enter_meeting_password
+msgid "Enter meeting password"
+msgstr "Introduceți parola întâlnirii"
+
+#. Legacy key: course_enrolment_details
+msgid "Course enrolment details"
+msgstr "Detalii de înscriere la curs"
+
+#. Legacy key: get
+msgid "Get"
+msgstr "obține"
+
+#. Legacy key: meeting_plans_that_fit_your_business_perfectly
+msgid "Meeting plans that fit your business perfectly"
+msgstr "Planuri de întâlniri care se potrivesc perfect afacerii tale"
+
+#. Legacy key: zoom_meeting_plans
+msgid "Zoom meeting plans"
+msgstr "Planuri de întâlnire Zoom"
+
+#. Legacy key: jitsi_meeting_password
+msgid "Jitsi meeting password"
+msgstr "Parola de întâlnire Jitsi"
+
+#. Legacy key: make_sure_you_save_the_live_class_password_before_starting_the_class
+msgid "Make sure you save the live class password before starting the class"
+msgstr "Asigurați-vă că salvați parola pentru cursul live înainte de a începe cursul"
+
+#. Legacy key: enter_your_class_topic
+msgid "Enter your class topic"
+msgstr "Introduceți subiectul clasei dvs"
+
+#. Legacy key: enter_your_message
+msgid "Enter your message"
+msgstr "Introduceți mesajul dvs"
+
+#. Legacy key: send_a_mail_to_students_to_join_this_live_class
+msgid "Send a mail to students to join this live class"
+msgstr "Trimiteți un e-mail studenților pentru a se înscrie la acest curs live"
+
+#. Legacy key: start_live_video_class
+msgid "Start live video class"
+msgstr "Începeți cursul video live"
+
+#. Legacy key: sending_mail
+msgid "Sending mail"
+msgstr "Se trimite mail"
+
+#. Legacy key: the_message_field_is_empty
+msgid "The message field is empty"
+msgstr "Câmpul mesajului este gol"
+
+#. Legacy key: create_new_assignment
+msgid "Create new assignment"
+msgstr "Creați o nouă misiune"
+
+#. Legacy key: assignment_title
+msgid "Assignment title"
+msgstr "Titlul sarcinii"
+
+#. Legacy key: enter_assignment_title
+msgid "Enter assignment title"
+msgstr "Introduceți titlul sarcinii"
+
+#. Legacy key: questions
+msgid "Questions"
+msgstr "Întrebări"
+
+#. Legacy key: enter_your_assignment_questions
+msgid "Enter your assignment questions"
+msgstr "Introduceți întrebările legate de temă"
+
+#. Legacy key: question_file
+msgid "Question file"
+msgstr "Fișier cu întrebări"
+
+#. Legacy key: choose_file
+msgid "Choose file"
+msgstr "Alege fișierul"
+
+#. Legacy key: total_marks
+msgid "Total marks"
+msgstr "Note totale"
+
+#. Legacy key: deadline
+msgid "Deadline"
+msgstr "Termen limită"
+
+#. Legacy key: note
+msgid "Note"
+msgstr "Notă"
+
+#. Legacy key: submission_status
+msgid "Submission status"
+msgstr "Statusul cererii"
+
+#. Legacy key: draft
+msgid "Draft"
+msgstr "Proiect"
+
+#. Legacy key: add_new_assignment
+msgid "Add new assignment"
+msgstr "Adăugați o nouă misiune"
+
+#. Legacy key: uploading
+msgid "Uploading"
+msgstr "Încărcare"
+
+#. Legacy key: fill_up_the_required_feilds
+msgid "Fill up the required feilds"
+msgstr "Completați câmpurile necesare"
+
+#. Legacy key: course_title
+msgid "Course title"
+msgstr "Titlul cursului"
+
+#. Legacy key: enter_your_notice_title
+msgid "Enter your notice title"
+msgstr "Introduceți titlul notificării dvs"
+
+#. Legacy key: enter_your_notice_description
+msgid "Enter your notice description"
+msgstr "Introduceți descrierea notificării dvs"
+
+#. Legacy key: send_mail_to_students_if_urgent
+msgid "Send mail to students if urgent"
+msgstr "Trimiteți e-mail studenților dacă este urgent"
+
+#. Legacy key: add_new_notice
+msgid "Add new notice"
+msgstr "Adăugați o notificare nouă"
+
+#. Legacy key: updating
+msgid "Updating"
+msgstr "Actualizare"
+
+#. Legacy key: course_type
+msgid "Course type"
+msgstr "Tipul de curs"
+
+#. Legacy key: general
+msgid "General"
+msgstr "General"
+
+#. Legacy key: the_course_type_can_not_be_editable
+msgid "The course type can not be editable"
+msgstr "Tipul de curs nu poate fi editabil"
+
+#. Legacy key: instructor_of_this_course
+msgid "Instructor of this course"
+msgstr "Instructor al acestui curs"
+
+#. Legacy key: enter_course_title
+msgid "Enter course title"
+msgstr "Introduceți titlul cursului"
+
+#. Legacy key: short_description
+msgid "Short description"
+msgstr "Scurta descriere"
+
+#. Legacy key: select_a_category
+msgid "Select a category"
+msgstr "Selectați o categorie"
+
+#. Legacy key: select_sub_category
+msgid "Select sub category"
+msgstr "Selectați subcategoria"
+
+#. Legacy key: language_made_in
+msgid "Language made in"
+msgstr "Limba făcută în"
+
+#. Legacy key: enable_drip_content
+msgid "Enable drip content"
+msgstr "Activați conținutul prin picurare"
+
+#. Legacy key: updated_as_a
+msgid "Updated as a"
+msgstr "Actualizat ca a"
+
+#. Legacy key: private_course
+msgid "Private course"
+msgstr "Curs privat"
+
+#. Legacy key: upcoming_course
+msgid "Upcoming course"
+msgstr "Curs viitor"
+
+#. Legacy key: check_if_this_course_is_top_course
+msgid "Check if this course is top course"
+msgstr "Verificați dacă acest curs este cursul de top"
+
+#. Legacy key: course_faq
+msgid "Course faq"
+msgstr "Întrebări frecvente ale cursului"
+
+#. Legacy key: provide_requirements
+msgid "Provide requirements"
+msgstr "Furnizați cerințe"
+
+#. Legacy key: provide_outcomes
+msgid "Provide outcomes"
+msgstr "Oferiți rezultate"
+
+#. Legacy key: check_if_this_is_a_free_course
+msgid "Check if this is a free course"
+msgstr "Verificați dacă acesta este un curs gratuit"
+
+#. Legacy key: course_price
+msgid "Course price"
+msgstr "Pretul cursului"
+
+#. Legacy key: enter_course_course_price
+msgid "Enter course course price"
+msgstr "Introduceți prețul cursului"
+
+#. Legacy key: check_if_this_course_has_discount
+msgid "Check if this course has discount"
+msgstr "Verificați dacă acest curs are reducere"
+
+#. Legacy key: discounted_price
+msgid "Discounted price"
+msgstr "Pret redus"
+
+#. Legacy key: this_course_has
+msgid "This course has"
+msgstr "Acest curs are"
+
+#. Legacy key: discount
+msgid "Discount"
+msgstr "Reducere"
+
+#. Legacy key: limited_time
+msgid "Limited time"
+msgstr "Timp limitat"
+
+#. Legacy key: number_of_month
+msgid "Number of month"
+msgstr "Numărul lunii"
+
+#. Legacy key: course_overview_provider
+msgid "Course overview provider"
+msgstr "Furnizor de prezentare generală a cursului"
+
+#. Legacy key: youtube
+msgid "Youtube"
+msgstr "Youtube"
+
+#. Legacy key: vimeo
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#. Legacy key: html5
+msgid "Html5"
+msgstr "HTML5"
+
+#. Legacy key: course_overview_url
+msgid "Course overview url"
+msgstr "Url de prezentare generală a cursului"
+
+#. Legacy key: course_thumbnail
+msgid "Course thumbnail"
+msgstr "Miniatura cursului"
+
+#. Legacy key: meta_keywords
+msgid "Meta keywords"
+msgstr "Cuvinte cheie meta"
+
+#. Legacy key: write_a_keyword_and_then_press_enter_button
+msgid "Write a keyword and then press enter button"
+msgstr "Scrieți un cuvânt cheie și apoi apăsați butonul Enter"
+
+#. Legacy key: meta_description
+msgid "Meta description"
+msgstr "Meta descriere"
+
+#. Legacy key: thank_you
+msgid "Thank you"
+msgstr "Mulțumesc"
+
+#. Legacy key: you_are_just_one_click_away
+msgid "You are just one click away"
+msgstr "Ești la doar un clic distanță"
+
+#. Legacy key: submit
+msgid "Submit"
+msgstr "Trimite"
+
+#. Legacy key: course_updated_successfully
+msgid "Course updated successfully"
+msgstr "Cursul a fost actualizat cu succes"
+
+#. Legacy key: course_progress_analytics
+msgid "Course progress analytics"
+msgstr "Analiza progresului cursului"
+
+#. Legacy key: completion_percentage
+msgid "Completion percentage"
+msgstr "Procent de finalizare"
+
+#. Legacy key: enrolled_students
+msgid "Enrolled students"
+msgstr "Studenți înscriși"
+
+#. Legacy key: number_of_students
+msgid "Number of students"
+msgstr "Numarul studentilor"
+
+#. Legacy key: course_enrolments
+msgid "Course enrolments"
+msgstr "Inscrieri la cursuri"
+
+#. Legacy key: jan
+msgid "Jan"
+msgstr "ian"
+
+#. Legacy key: feb
+msgid "Feb"
+msgstr "feb"
+
+#. Legacy key: mar
+msgid "Mar"
+msgstr "Mar"
+
+#. Legacy key: apr
+msgid "Apr"
+msgstr "Aprilie"
+
+#. Legacy key: jun
+msgid "Jun"
+msgstr "Iunie"
+
+#. Legacy key: jul
+msgid "Jul"
+msgstr "iul"
+
+#. Legacy key: aug
+msgid "Aug"
+msgstr "aug"
+
+#. Legacy key: sep
+msgid "Sep"
+msgstr "sept"
+
+#. Legacy key: oct
+msgid "Oct"
+msgstr "oct"
+
+#. Legacy key: nov
+msgid "Nov"
+msgstr "nov"
+
+#. Legacy key: go
+msgid "Go"
+msgstr "Merge"
+
+#. Legacy key: the_dates_of_month
+msgid "The dates of month"
+msgstr "Datele lunii"
+
+#. Legacy key: upload_scorm_course
+msgid "Upload scorm course"
+msgstr "Încărcați cursul scorm"
+
+#. Legacy key: upload_course
+msgid "Upload course"
+msgstr "Încărcați cursul"
+
+#. Legacy key: instruction
+msgid "Instruction"
+msgstr "Instruire"
+
+#. Legacy key: click_the_upload_course_button
+msgid "Click the upload course button"
+msgstr "Faceți clic pe butonul de încărcare a cursului"
+
+#. Legacy key: you_will_get_a_floating_form_after_clicking_the_button
+msgid "You will get a floating form after clicking the button"
+msgstr "Veți primi un formular plutitor după ce faceți clic pe butonul"
+
+#. Legacy key: select_a_scorm_provider_first
+msgid "Select a scorm provider first"
+msgstr "Selectați mai întâi un furnizor de scorm"
+
+#. Legacy key: choose_your_scorm_zip_file
+msgid "Choose your scorm zip file"
+msgstr "Alegeți fișierul zip scorm"
+
+#. Legacy key: click_the_upload_button_to_save_the_course_file
+msgid "Click the upload button to save the course file"
+msgstr "Faceți clic pe butonul de încărcare pentru a salva fișierul cursului"
+
+#. Legacy key: scorm
+msgid "Scorm"
+msgstr "batjocor"
+
+#. Legacy key: upload_h5p_file
+msgid "Upload h5p file"
+msgstr "Încărcați fișierul h5p"
+
+#. Legacy key: remove
+msgid "Remove"
+msgstr "Elimina"
+
+#. Legacy key: h5p
+msgid "H5p"
+msgstr "H5p"
+
+#. Legacy key: blogs
+msgid "Blogs"
+msgstr "Bloguri"
+
+#. Legacy key: add_new_blog
+msgid "Add new blog"
+msgstr "Adăugați un blog nou"
+
+#. Legacy key: creator
+msgid "Creator"
+msgstr "Creator"
+
+#. Legacy key: deactivate
+msgid "Deactivate"
+msgstr "Dezactivați"
+
+#. Legacy key: blog_details
+msgid "Blog details"
+msgstr "Detalii blog"
+
+#. Legacy key: inspirational_journeys
+msgid "Inspirational journeys"
+msgstr "Călătorii inspiraționale"
+
+#. Legacy key: follow_the_stories_of_academics_and_their_research_expeditions
+msgid "Follow the stories of academics and their research expeditions"
+msgstr "Urmărește poveștile academicilor și expedițiile lor de cercetare"
+
+#. Legacy key: comments
+msgid "Comments"
+msgstr "Comentarii"
+
+#. Legacy key: leave_a_comment
+msgid "Leave a comment"
+msgstr "Lasa un comentariu"
+
+#. Legacy key: enter_your_comments_here
+msgid "Enter your comments here"
+msgstr "Introdu aici comentariile tale"
+
+#. Legacy key: type_your_keywords
+msgid "Type your keywords"
+msgstr "Introduceți cuvintele cheie"
+
+#. Legacy key: recent_posts
+msgid "Recent posts"
+msgstr "Postări recente"
+
+#. Legacy key: edit_blog
+msgid "Edit blog"
+msgstr "Editează blogul"
+
+#. Legacy key: edit_your_blog
+msgid "Edit your blog"
+msgstr "Editează-ți blogul"
+
+#. Legacy key: enter_blog_title
+msgid "Enter blog title"
+msgstr "Introduceți titlul blogului"
+
+#. Legacy key: keywords
+msgid "Keywords"
+msgstr "Cuvinte cheie"
+
+#. Legacy key: click_the_enter_button_after_writing_your_keyword
+msgid "Click the enter button after writing your keyword"
+msgstr "Faceți clic pe butonul Enter după ce ați scris cuvântul cheie"
+
+#. Legacy key: blog_banner
+msgid "Blog banner"
+msgstr "Banner de blog"
+
+#. Legacy key: choose_a_banner
+msgid "Choose a banner"
+msgstr "Alegeți un banner"
+
+#. Legacy key: blog_thumbnail
+msgid "Blog thumbnail"
+msgstr "Miniatura blogului"
+
+#. Legacy key: choose_a_thumbnail
+msgid "Choose a thumbnail"
+msgstr "Alegeți o miniatură"
+
+#. Legacy key: do_you_want_to_mark_it_as_popular
+msgid "Do you want to mark it as popular"
+msgstr "Doriți să-l marcați ca popular"
+
+#. Legacy key: mark_as_popular
+msgid "Mark as popular"
+msgstr "Marcați ca popular"
+
+#. Legacy key: update_blog
+msgid "Update blog"
+msgstr "Actualizați blogul"
+
+#. Legacy key: blog_updated_successfully
+msgid "Blog updated successfully"
+msgstr "Blog actualizat cu succes"
+
+#. Legacy key: add_instructor
+msgid "Add instructor"
+msgstr "Adăugați instructor"
+
+#. Legacy key: photo
+msgid "Photo"
+msgstr "Fotografie"
+
+#. Legacy key: name
+msgid "Name"
+msgstr "Nume"
+
+#. Legacy key: enrolled_courses
+msgid "Enrolled courses"
+msgstr "Cursuri inscrise"
+
+#. Legacy key: view_courses
+msgid "View courses"
+msgstr "Vizualizați cursurile"
+
+#. Legacy key: instructor_edit
+msgid "Instructor edit"
+msgstr "Editarea instructorului"
+
+#. Legacy key: instructor_edit_form
+msgid "Instructor edit form"
+msgstr "Formular de editare a instructorului"
+
+#. Legacy key: basic_info
+msgid "Basic info"
+msgstr "Informatii de baza"
+
+#. Legacy key: login_credentials
+msgid "Login credentials"
+msgstr "Date de conectare"
+
+#. Legacy key: social_information
+msgid "Social information"
+msgstr "Informații sociale"
+
+#. Legacy key: payment_info
+msgid "Payment info"
+msgstr "Informatii plată"
+
+#. Legacy key: a_short_title_about_yourself
+msgid "A short title about yourself"
+msgstr "Un scurt titlu despre tine"
+
+#. Legacy key: short_title
+msgid "Short title"
+msgstr "Titlu scurt"
+
+#. Legacy key: skills
+msgid "Skills"
+msgstr "Aptitudini"
+
+#. Legacy key: write_your_skill_and_click_the_enter_button
+msgid "Write your skill and click the enter button"
+msgstr "Scrieți-vă abilitățile și faceți clic pe butonul Enter"
+
+#. Legacy key: biography
+msgid "Biography"
+msgstr "Biografie"
+
+#. Legacy key: user_image
+msgid "User image"
+msgstr "Imaginea utilizatorului"
+
+#. Legacy key: choose_user_image
+msgid "Choose user image"
+msgstr "Alegeți imaginea utilizatorului"
+
+#. Legacy key: razorpay
+msgid "Razorpay"
+msgstr "Razorpay"
+
+#. Legacy key: key_id
+msgid "Key id"
+msgstr "Id-ul cheii"
+
+#. Legacy key: required_for_instructor
+msgid "Required for instructor"
+msgstr "Necesar pentru instructor"
+
+#. Legacy key: secret_key
+msgid "Secret key"
+msgstr "Cheie secreta"
+
+#. Legacy key: theme_color
+msgid "Theme color"
+msgstr "Culoarea temei"
+
+#. Legacy key: stripe
+msgid "Stripe"
+msgstr "Dunga"
+
+#. Legacy key: public_key
+msgid "Public key"
+msgstr "Cheie publică"
+
+#. Legacy key: public_live_key
+msgid "Public live key"
+msgstr "Cheie publică live"
+
+#. Legacy key: secret_live_key
+msgid "Secret live key"
+msgstr "Cheie secretă live"
+
+#. Legacy key: paypal
+msgid "Paypal"
+msgstr "Paypal"
+
+#. Legacy key: sandbox_client_id
+msgid "Sandbox client id"
+msgstr "ID client Sandbox"
+
+#. Legacy key: sandbox_secret_key
+msgid "Sandbox secret key"
+msgstr "Cheie secretă pentru Sandbox"
+
+#. Legacy key: production_client_id
+msgid "Production client id"
+msgstr "ID client de producție"
+
+#. Legacy key: production_secret_key
+msgid "Production secret key"
+msgstr "Cheie secretă de producție"
+
+#. Legacy key: ccavenue
+msgid "Ccavenue"
+msgstr "Ccavenue"
+
+#. Legacy key: ccavenue_merchant_id
+msgid "Ccavenue merchant id"
+msgstr "Id-ul comerciantului Ccavenue"
+
+#. Legacy key: ccavenue_working_key
+msgid "Ccavenue working key"
+msgstr "Cheie de lucru Ccavenue"
+
+#. Legacy key: ccavenue_access_code
+msgid "Ccavenue access code"
+msgstr "Cod de acces Ccavenue"
+
+#. Legacy key: iyzico
+msgid "Iyzico"
+msgstr "Iyzico"
+
+#. Legacy key: api_test_key
+msgid "Api test key"
+msgstr "Cheie de testare API"
+
+#. Legacy key: secret_test_key
+msgid "Secret test key"
+msgstr "Cheie de testare secretă"
+
+#. Legacy key: api_live_key
+msgid "Api live key"
+msgstr "Tasta API live"
+
+#. Legacy key: paystack
+msgid "Paystack"
+msgstr "Paysstack"
+
+#. Legacy key: public_test_key
+msgid "Public test key"
+msgstr "Cheie publică de testare"
+
+#. Legacy key: paytm
+msgid "Paytm"
+msgstr "Paytm"
+
+#. Legacy key: paytm_merchant_key
+msgid "Paytm merchant key"
+msgstr "Cheie de comerciant Paytm"
+
+#. Legacy key: paytm_merchant_mid
+msgid "Paytm merchant mid"
+msgstr "Comerciant Paytm mid"
+
+#. Legacy key: paytm_merchant_website
+msgid "Paytm merchant website"
+msgstr "Site-ul comercial Paytm"
+
+#. Legacy key: industry_type_id
+msgid "Industry type id"
+msgstr "Id-ul tipului de industrie"
+
+#. Legacy key: channel_id
+msgid "Channel id"
+msgstr "ID canal"
+
+#. Legacy key: user_update_successfully
+msgid "User update successfully"
+msgstr "Actualizarea utilizatorului cu succes"
+
+#. Legacy key: current_course_provider
+msgid "Current course provider"
+msgstr "Furnizor curent de cursuri"
+
+#. Legacy key: ispring
+msgid "Ispring"
+msgstr "Isprimava"
+
+#. Legacy key: preview
+msgid "Preview"
+msgstr "previzualizare"
+
+#. Legacy key: update_scorm_course
+msgid "Update scorm course"
+msgstr "Actualizați cursul scorm"
+
+#. Legacy key: update_course
+msgid "Update course"
+msgstr "Actualizați cursul"
+
+#. Legacy key: system_settings_updated
+msgid "System settings updated"
+msgstr "Setările sistemului au fost actualizate"
+
+#. Legacy key: student
+msgid "Student"
+msgstr "Student"
+
+#. Legacy key: progress
+msgid "Progress"
+msgstr "Progres"
+
+#. Legacy key: not_started_yet
+msgid "Not started yet"
+msgstr "Încă nu a început"
+
+#. Legacy key: not_completed_yet
+msgid "Not completed yet"
+msgstr "Nu a fost finalizată încă"
+
+#. Legacy key: enrolled_from
+msgid "Enrolled from"
+msgstr "Înscris din"
+
+#. Legacy key: last_seen_on
+msgid "Last seen on"
+msgstr "Văzut ultima dată pe"
+
+#. Legacy key: completed_on
+msgid "Completed on"
+msgstr "Completat pe"
+
+#. Legacy key: completed_lesson
+msgid "Completed lesson"
+msgstr "Lecție finalizată"
+
+#. Legacy key: out_of
+msgid "Out of"
+msgstr "Din"
+
+#. Legacy key: watched_duration
+msgid "Watched duration"
+msgstr "Durata urmărită"
+
+#. Legacy key: course_adding_form
+msgid "Course adding form"
+msgstr "Formular de adăugare a cursului"
+
+#. Legacy key: create_as_a
+msgid "Create as a"
+msgstr "Creați ca a"
+
+#. Legacy key: course_has_been_added_successfully
+msgid "Course has been added successfully"
+msgstr "Cursul a fost adăugat cu succes"
+
+#. Legacy key: instructor_add
+msgid "Instructor add"
+msgstr "Add instructor"
+
+#. Legacy key: instructor_add_form
+msgid "Instructor add form"
+msgstr "Formular de adăugare a instructorului"
+
+#. Legacy key: sub_categories
+msgid "Sub categories"
+msgstr "Subcategorii"
+
+#. Legacy key: edit_category
+msgid "Edit category"
+msgstr "Editați categoria"
+
+#. Legacy key: update_category
+msgid "Update category"
+msgstr "Actualizați categoria"
+
+#. Legacy key: update_category_form
+msgid "Update category form"
+msgstr "Actualizați formularul categoriei"
+
+#. Legacy key: category_title
+msgid "Category title"
+msgstr "Titlul categoriei"
+
+#. Legacy key: parent
+msgid "Parent"
+msgstr "Mamă"
+
+#. Legacy key: none
+msgid "None"
+msgstr "Nici unul"
+
+#. Legacy key: select_none_to_create_a_parent_category
+msgid "Select none to create a parent category"
+msgstr "Selectați niciunul pentru a crea o categorie părinte"
+
+#. Legacy key: icon_picker
+msgid "Icon picker"
+msgstr "Selector de pictograme"
+
+#. Legacy key: category_thumbnail
+msgid "Category thumbnail"
+msgstr "Miniatura categoriei"
+
+#. Legacy key: the_image_size_should_be
+msgid "The image size should be"
+msgstr "Dimensiunea imaginii ar trebui să fie"
+
+#. Legacy key: choose_thumbnail
+msgid "Choose thumbnail"
+msgstr "Alegeți o miniatură"
+
+#. Legacy key: data_added_successfully
+msgid "Data added successfully"
+msgstr "Date adăugate cu succes"
+
+#. Legacy key: logo_updated
+msgid "Logo updated"
+msgstr "Logo-ul a fost actualizat"
+
+#. Legacy key: favicon_updated
+msgid "Favicon updated"
+msgstr "Favicon actualizat"
+
+#. Legacy key: motivational_speech_updated_successfully
+msgid "Motivational speech updated successfully"
+msgstr "Discursul motivațional a fost actualizat cu succes"
+
+#. Legacy key: new_home_page_layout_has_been_activated
+msgid "New home page layout has been activated"
+msgstr "A fost activat un nou aspect al paginii de pornire"
+
+#. Legacy key: welcome_to
+msgid "Welcome to"
+msgstr "Bun venit la"
+
+#. Legacy key: join_for_free
+msgid "Join for free"
+msgstr "Înscrie-te gratis"
+
+#. Legacy key: happy_student
+msgid "Happy student"
+msgstr "Student fericit"
+
+#. Legacy key: experienced_instructor
+msgid "Experienced instructor"
+msgstr "Instructor cu experienta"
+
+#. Legacy key: quality_courses
+msgid "Quality courses"
+msgstr "Cursuri de calitate"
+
+#. Legacy key: latest_top_skills
+msgid "Latest top skills"
+msgstr "Cele mai recente abilități de top"
+
+#. Legacy key: globalization
+msgid "Globalization"
+msgstr "Globalizarea"
+
+#. Legacy key: cost-effectiveness
+msgid "Cost-effectiveness"
+msgstr "Eficiența costurilor"
+
+#. Legacy key: popular_categories
+msgid "Popular categories"
+msgstr "Categorii populare"
+
+#. Legacy key: duration
+msgid "Duration"
+msgstr "Durată"
+
+#. Legacy key: quality_educators
+msgid "Quality educators"
+msgstr "Educatori de calitate"
+
+#. Legacy key: premium_courses
+msgid "Premium courses"
+msgstr "Cursuri premium"
+
+#. Legacy key: cost-free_course
+msgid "Cost-free course"
+msgstr "Curs gratuit"
+
+#. Legacy key: popular_instructor
+msgid "Popular instructor"
+msgstr "Instructor popular"
+
+#. Legacy key: follow_the_latest_news
+msgid "Follow the latest news"
+msgstr "Urmăriți cele mai recente știri"
+
+#. Legacy key: website_notification
+msgid "Website notification"
+msgstr "Notificare pe site"
+
+#. Legacy key: email_template
+msgid "Email template"
+msgstr "Șablon de e-mail"
+
+#. Legacy key: protocol
+msgid "Protocol"
+msgstr "Protocol"
+
+#. Legacy key: smtp_crypto
+msgid "Smtp crypto"
+msgstr "Smtp cripto"
+
+#. Legacy key: smtp_host
+msgid "Smtp host"
+msgstr "gazdă smtp"
+
+#. Legacy key: smtp_port
+msgid "Smtp port"
+msgstr "Port smtp"
+
+#. Legacy key: smtp_from_email
+msgid "Smtp from email"
+msgstr "Smtp din e-mail"
+
+#. Legacy key: smtp_username
+msgid "Smtp username"
+msgstr "Nume de utilizator SMS"
+
+#. Legacy key: smtp_password
+msgid "Smtp password"
+msgstr "Parola smtp"
+
+#. Legacy key: email_type
+msgid "Email type"
+msgstr "Tipul de e-mail"
+
+#. Legacy key: email_subject
+msgid "Email subject"
+msgstr "Subiectul emailului"
+
+#. Legacy key: action
+msgid "Action"
+msgstr "Acțiune"
+
+#. Legacy key: to_admin
+msgid "To admin"
+msgstr "Pentru admin"
+
+#. Legacy key: to_user
+msgid "To user"
+msgstr "Către utilizator"
+
+#. Legacy key: edit_email_template
+msgid "Edit email template"
+msgstr "Editați șablonul de e-mail"
+
+#. Legacy key: to_instructor
+msgid "To instructor"
+msgstr "Către instructor"
+
+#. Legacy key: to_student
+msgid "To student"
+msgstr "Pentru student"
+
+#. Legacy key: to_affiliator
+msgid "To affiliator"
+msgstr "Către afiliat"
+
+#. Legacy key: to_payer
+msgid "To payer"
+msgstr "Pentru plătitor"
+
+#. Legacy key: to_receiver
+msgid "To receiver"
+msgstr "La receptor"
+
+#. Legacy key: configure_your_notification_settings
+msgid "Configure your notification settings"
+msgstr "Configurați setările de notificare"
+
+#. Legacy key: new_user_registration
+msgid "New user registration"
+msgstr "Înregistrare utilizator nou"
+
+#. Legacy key: get_notified_when_a_new_user_signs_up
+msgid "Get notified when a new user signs up"
+msgstr "Primiți notificări când se înregistrează un nou utilizator"
+
+#. Legacy key: configure_for_admin
+msgid "Configure for admin"
+msgstr "Configurați pentru admin"
+
+#. Legacy key: system_notification
+msgid "System notification"
+msgstr "Notificare de sistem"
+
+#. Legacy key: email_notification
+msgid "Email notification"
+msgstr "Notificare prin e-mail"
+
+#. Legacy key: configure_for_user
+msgid "Configure for user"
+msgstr "Configurați pentru utilizator"
+
+#. Legacy key: email_verification
+msgid "Email verification"
+msgstr "Verificare a email-ului"
+
+#. Legacy key: not_editable
+msgid "Not editable"
+msgstr "Nu este editabil"
+
+#. Legacy key: forgot_password_mail
+msgid "Forgot password mail"
+msgstr "Am uitat parola e-mail"
+
+#. Legacy key: account_security_alert
+msgid "Account security alert"
+msgstr "Alertă de securitate a contului"
+
+#. Legacy key: send_verification_code_for_login_from_a_new_device
+msgid "Send verification code for login from a new device"
+msgstr "Trimiteți codul de verificare pentru autentificare de pe un dispozitiv nou"
+
+#. Legacy key: course_purchase_notification
+msgid "Course purchase notification"
+msgstr "Notificare de achiziție de curs"
+
+#. Legacy key: configure_for_student
+msgid "Configure for student"
+msgstr "Configurați pentru student"
+
+#. Legacy key: configure_for_instructor
+msgid "Configure for instructor"
+msgstr "Configurați pentru instructor"
+
+#. Legacy key: course_completion_mail
+msgid "Course completion mail"
+msgstr "E-mail de finalizare a cursului"
+
+#. Legacy key: course_eligibility_notification
+msgid "Course eligibility notification"
+msgstr "Notificare de eligibilitate a cursului"
+
+#. Legacy key: offline_payment_suspended_mail
+msgid "Offline payment suspended mail"
+msgstr "Plată offline e-mail suspendată"
+
+#. Legacy key: course_bundle_purchase_notification
+msgid "Course bundle purchase notification"
+msgstr "Notificare de cumpărare a pachetului de cursuri"
+
+#. Legacy key: new_user_added_as_affiliator
+msgid "New user added as affiliator"
+msgstr "Utilizator nou adăugat ca afiliat"
+
+#. Legacy key: send_account_information_to_the_new_user
+msgid "Send account information to the new user"
+msgstr "Trimiteți informații despre cont noului utilizator"
+
+#. Legacy key: configure_for_affiliator
+msgid "Configure for affiliator"
+msgstr "Configurați pentru afiliat"
+
+#. Legacy key: affiliate_approval_notification
+msgid "Affiliate approval notification"
+msgstr "Notificare de aprobare a afiliaților"
+
+#. Legacy key: send_affiliate_approval_mail_to_the_user_account
+msgid "Send affiliate approval mail to the user account"
+msgstr "Trimiteți e-mail de aprobare a afiliaților în contul de utilizator"
+
+#. Legacy key: affiliator_request_cancellation
+msgid "Affiliator request cancellation"
+msgstr "Anularea cererii afiliatului"
+
+#. Legacy key: affiliation_money_withdrawal_request
+msgid "Affiliation money withdrawal request"
+msgstr "Cerere de retragere a banilor de afiliere"
+
+#. Legacy key: approval_of_withdrawal_request_of_affiliation
+msgid "Approval of withdrawal request of affiliation"
+msgstr "Aprobarea cererii de retragere a afilierii"
+
+#. Legacy key: course_gift_notification
+msgid "Course gift notification"
+msgstr "Notificare cadou curs"
+
+#. Legacy key: notify_users_after_course_gift
+msgid "Notify users after course gift"
+msgstr "Notificați utilizatorii după cadou curs"
+
+#. Legacy key: configure_for_payer
+msgid "Configure for payer"
+msgstr "Configurați pentru plătitor"
+
+#. Legacy key: configure_for_receiver
+msgid "Configure for receiver"
+msgstr "Configurați pentru receptor"
+
+#. Legacy key: custom_pages
+msgid "Custom pages"
+msgstr "Pagini personalizate"
+
+#. Legacy key: add_a_new_page
+msgid "Add a new page"
+msgstr "Adăugați o pagină nouă"
+
+#. Legacy key: page_title
+msgid "Page title"
+msgstr "Titlul paginii"
+
+#. Legacy key: button_title
+msgid "Button title"
+msgstr "Titlul butonului"
+
+#. Legacy key: button_position
+msgid "Button position"
+msgstr "Poziția butonului"
+
+#. Legacy key: social_login_configuration
+msgid "Social login configuration"
+msgstr "Configurare autentificare socială"
+
+#. Legacy key: facebook_login
+msgid "Facebook login"
+msgstr "logare Facebook"
+
+#. Legacy key: facebook_app_creation_instruction
+msgid "Facebook app creation instruction"
+msgstr "Instrucțiuni pentru crearea aplicației Facebook"
+
+#. Legacy key: facebook_app_id
+msgid "Facebook app id"
+msgstr "Id-ul aplicației Facebook"
+
+#. Legacy key: facebook_app_secret
+msgid "Facebook app secret"
+msgstr "Secretul aplicației Facebook"
+
+#. Legacy key: completed
+msgid "Completed"
+msgstr "Efectuat"
+
+#. Legacy key: lesson_type
+msgid "Lesson type"
+msgstr "Tipul de lecție"
+
+#. Legacy key: video_url
+msgid "Video url"
+msgstr "Adresa URL a videoclipului"
+
+#. Legacy key: this_video_will_be_shown_on_web_application
+msgid "This video will be shown on web application"
+msgstr "Acest videoclip va fi afișat pe aplicația web"
+
+#. Legacy key: thumbnail
+msgid "Thumbnail"
+msgstr "Miniatură"
+
+#. Legacy key: caption
+msgid "Caption"
+msgstr "Legendă"
+
+#. Legacy key: choose_your_caption_file
+msgid "Choose your caption file"
+msgstr "Alegeți fișierul subtitrare"
+
+#. Legacy key: lesson_provider
+msgid "Lesson provider"
+msgstr "Furnizor de lecții"
+
+#. Legacy key: for_mobile_application
+msgid "For mobile application"
+msgstr "Pentru aplicația mobilă"
+
+#. Legacy key: only
+msgid "Only"
+msgstr "Numai"
+
+#. Legacy key: type_video_is_acceptable_for_mobile_application
+msgid "Type video is acceptable for mobile application"
+msgstr "Tipul video este acceptabil pentru aplicația mobilă"
+
+#. Legacy key: do_you_want_to_keep_it_free_as_a_preview_lesson
+msgid "Do you want to keep it free as a preview lesson"
+msgstr "Doriți să o păstrați gratuit ca lecție de previzualizare"
+
+#. Legacy key: mark_as_free_lesson
+msgid "Mark as free lesson"
+msgstr "Marcați ca lecție gratuită"
+
+#. Legacy key: course_content
+msgid "Course content"
+msgstr "Conținutul cursului"
+
+#. Legacy key: mark_as_complete
+msgid "Mark as complete"
+msgstr "Marcați ca fiind complet"
+
+#. Legacy key: video
+msgid "Video"
+msgstr "Video"
+
+#. Legacy key: iframe
+msgid "Iframe"
+msgstr "Iframe"
+
+#. Legacy key: pdf
+msgid "Pdf"
+msgstr "Pdf"
+
+#. Legacy key: forum
+msgid "Forum"
+msgstr "forum"
+
+#. Legacy key: live_class
+msgid "Live class"
+msgstr "Clasă live"
+
+#. Legacy key: website_faqs_updated_successfully
+msgid "Website faqs updated successfully"
+msgstr "Întrebările frecvente ale site-ului au fost actualizate cu succes"
+
+#. Legacy key: frequently_asked_questions
+msgid "Frequently asked questions"
+msgstr "Întrebări frecvente"
+
+#. Legacy key: see_more
+msgid "See more"
+msgstr "Vezi mai mult"
+
+#. Legacy key: course_content_not_found
+msgid "Course content not found"
+msgstr "Conținutul cursului nu a fost găsit"
+
+#. Legacy key: total_questions
+msgid "Total questions"
+msgstr "Total intrebari"
+
+#. Legacy key: total_participant_students
+msgid "Total participant students"
+msgstr "Total studenți participanți"
+
+#. Legacy key: participant_students
+msgid "Participant students"
+msgstr "Elevii participanți"
+
+#. Legacy key: select_student
+msgid "Select student"
+msgstr "Selectați student"
+
+#. Legacy key: select_a_student_to_view_the_answer_sheet
+msgid "Select a student to view the answer sheet"
+msgstr "Selectați un student pentru a vizualiza foaia de răspuns"
+
+#. Legacy key: courses_included
+msgid "Courses included"
+msgstr "Cursuri incluse"
+
+#. Legacy key: subscription
+msgid "Subscription"
+msgstr "Abonament"
+
+#. Legacy key: days
+msgid "Days"
+msgstr "Zile"
+
+#. Legacy key: included_courses
+msgid "Included courses"
+msgstr "Cursuri incluse"
+
+#. Legacy key: think_more_clearly
+msgid "Think more clearly"
+msgstr "Gandeste mai clar"
+
+#. Legacy key: select_your_service
+msgid "Select your service"
+msgstr "Selectați serviciul dvs"
+
+#. Legacy key: course_short_description
+msgid "Course short description"
+msgstr "Scurtă descriere a cursului"
+
+#. Legacy key: course_long_description
+msgid "Course long description"
+msgstr "Descriere lungă a cursului"
+
+#. Legacy key: course_requirements
+msgid "Course requirements"
+msgstr "Cerințele cursului"
+
+#. Legacy key: course_outcomes
+msgid "Course outcomes"
+msgstr "Rezultatele cursului"
+
+#. Legacy key: course_seo_tags
+msgid "Course seo tags"
+msgstr "Etichete seo de curs"
+
+#. Legacy key: course_lesson_text
+msgid "Course lesson text"
+msgstr "Textul lecției de curs"
+
+#. Legacy key: course_certificate_text
+msgid "Course certificate text"
+msgstr "Textul certificatului de curs"
+
+#. Legacy key: course_quiz_text
+msgid "Course quiz text"
+msgstr "Textul testului de curs"
+
+#. Legacy key: course_blog_title
+msgid "Course blog title"
+msgstr "Titlul blogului cursului"
+
+#. Legacy key: course_blog_post
+msgid "Course blog post"
+msgstr "Postare pe blogul cursului"
+
+#. Legacy key: enter_your_keyword
+msgid "Enter your keyword"
+msgstr "Introduceți cuvântul cheie"
+
+#. Legacy key: generate
+msgid "Generate"
+msgstr "Genera"
+
+#. Legacy key: generating
+msgid "Generating"
+msgstr "Generarea"
+
+#. Legacy key: generated_text
+msgid "Generated text"
+msgstr "Text generat"
+
+#. Legacy key: copy
+msgid "Copy"
+msgstr "Copie"
+
+#. Legacy key: copyed
+msgid "Copyed"
+msgstr "Copiat"
+
+#. Legacy key: _learning_animal_name_
+msgid " learning animal name "
+msgstr "învățarea numelui animalului"
+
+#. Legacy key: share_and_earn
+msgid "Share and earn"
+msgstr "Distribuie și câștigă"
+
+#. Legacy key: write_a_review
+msgid "Write a review"
+msgstr "Scrie o recenzie"
+
+#. Legacy key: 1_start_rating
+msgid "1 start rating"
+msgstr "1 evaluare de început"
+
+#. Legacy key: 2_start_rating
+msgid "2 start rating"
+msgstr "2 start rating"
+
+#. Legacy key: 3_start_rating
+msgid "3 start rating"
+msgstr "3 start rating"
+
+#. Legacy key: 4_start_rating
+msgid "4 start rating"
+msgstr "4 start rating"
+
+#. Legacy key: 5_start_rating
+msgid "5 start rating"
+msgstr "5 start rating"
+
+#. Legacy key: write_your_comment
+msgid "Write your comment"
+msgstr "Scrie comentariul tău"
+
+#. Legacy key: adobe_illustrator_cc_-_essentials_training_course
+msgid "Adobe illustrator cc - essentials training course"
+msgstr "Adobe Illustrator cc - curs de instruire esențiale"
+
+#. Legacy key: mon
+msgid "Mon"
+msgstr "Lun"
+
+#. Legacy key: select_a_user
+msgid "Select a user"
+msgstr "Selectați un utilizator"
+
+#. Legacy key: write_your_message
+msgid "Write your message"
+msgstr "Scrie-ți mesajul"
+
+#. Legacy key: send
+msgid "Send"
+msgstr "Trimite"
+
+#. Legacy key: purchased_courses
+msgid "Purchased courses"
+msgstr "Cursuri achiziționate"
+
+#. Legacy key: payment_method
+msgid "Payment method"
+msgstr "Modalitate de plată"
+
+#. Legacy key: purchased_date
+msgid "Purchased date"
+msgstr "Data achiziției"
+
+#. Legacy key: invoice
+msgid "Invoice"
+msgstr "Factura fiscala"
+
+#. Legacy key: assignment_list
+msgid "Assignment list"
+msgstr "Lista de sarcini"
+
+#. Legacy key: no_data_found
+msgid "No data found"
+msgstr "Nu s-au gasit date"
+
+#. Legacy key: uncheck
+msgid "Uncheck"
+msgstr "Debifați"
+
+#. Legacy key: faqs
+msgid "Faqs"
+msgstr "Întrebări frecvente"
+
+#. Legacy key: latest_from_our_blog
+msgid "Latest from our blog"
+msgstr "Cele mai recente de pe blogul nostru"
+
+#. Legacy key: exploring_the_cutting-edge_insights_and_updates_on_our_blog
+msgid "Exploring the cutting-edge insights and updates on our blog"
+msgstr "Explorând perspectivele și actualizările de ultimă oră de pe blogul nostru"
+
+#. Legacy key: see_all
+msgid "See all"
+msgstr "Vezi toate"
+
+#. Legacy key: popular_blogs
+msgid "Popular blogs"
+msgstr "Bloguri populare"
+
+#. Legacy key: learn_from_expert_bloggers_and_expand_your_knowledge
+msgid "Learn from expert bloggers and expand your knowledge"
+msgstr "Învață de la bloggeri experți și extinde-ți cunoștințele"
+
+#. Legacy key: shopping_cart
+msgid "Shopping cart"
+msgstr "Cărucior de cumpărături"
+
+#. Legacy key: your_cart_items
+msgid "Your cart items"
+msgstr "Articolele din coșul dvs"
+
+#. Legacy key: items
+msgid "Items"
+msgstr "Articole"
+
+#. Legacy key: subtotal
+msgid "Subtotal"
+msgstr "Subtotal"
+
+#. Legacy key: apply_coupon
+msgid "Apply coupon"
+msgstr "Aplicați cuponul"
+
+#. Legacy key: apply
+msgid "Apply"
+msgstr "aplica"
+
+#. Legacy key: send_as_a_gift
+msgid "Send as a gift"
+msgstr "Trimite cadou"
+
+#. Legacy key: email_address
+msgid "Email address"
+msgstr "Adresa de e-mail"
+
+#. Legacy key: continue_to_payment
+msgid "Continue to payment"
+msgstr "Continuați cu plata"
+
+#. Legacy key: searching
+msgid "Searching"
+msgstr "In cautarea"
+
+#. Legacy key: quiz_submission_successfully
+msgid "Quiz submission successfully"
+msgstr "Trimiterea testului cu succes"
+
+#. Legacy key: obtained_marks
+msgid "Obtained marks"
+msgstr "Note obținute"
+
+#. Legacy key: correct
+msgid "Correct"
+msgstr "Corect"
+
+#. Legacy key: wrong
+msgid "Wrong"
+msgstr "Gresit"
+
+#. Legacy key: correct_answer
+msgid "Correct answer"
+msgstr "Răspuns corect"
+
+#. Legacy key: user_added_successfully
+msgid "User added successfully"
+msgstr "Utilizatorul adăugat cu succes"
+
+#. Legacy key: instructor_payouts
+msgid "Instructor payouts"
+msgstr "Plățile instructorului"
+
+#. Legacy key: list_of_payouts
+msgid "List of payouts"
+msgstr "Lista plăților"
+
+#. Legacy key: completed_payouts
+msgid "Completed payouts"
+msgstr "Plăți finalizate"
+
+#. Legacy key: pending_payouts
+msgid "Pending payouts"
+msgstr "Plăți în așteptare"
+
+#. Legacy key: payout_amount
+msgid "Payout amount"
+msgstr "suma de plata"
+
+#. Legacy key: payment_type
+msgid "Payment type"
+msgstr "Tipul de plată"
+
+#. Legacy key: payout_date
+msgid "Payout date"
+msgstr "Data plății"
+
+#. Legacy key: option
+msgid "Option"
+msgstr "Opțiune"
+
+#. Legacy key: pay
+msgid "Pay"
+msgstr "A plati"
+
+#. Legacy key: public_instructor_settings
+msgid "Public instructor settings"
+msgstr "Setările instructorilor publici"
+
+#. Legacy key: allow_public_instructor
+msgid "Allow public instructor"
+msgstr "Permiteți instructor public"
+
+#. Legacy key: instructor_application_note
+msgid "Instructor application note"
+msgstr "Notă de aplicare a instructorului"
+
+#. Legacy key: instructor_commission_ettings
+msgid "Instructor commission ettings"
+msgstr "Stabilirea comisiei de instructor"
+
+#. Legacy key: instructor_revenue_percentage
+msgid "Instructor revenue percentage"
+msgstr "Procentul veniturilor instructorului"
+
+#. Legacy key: admin_revenue_percentage
+msgid "Admin revenue percentage"
+msgstr "Procentul venitului administrativ"
+
+#. Legacy key: instructor_application
+msgid "Instructor application"
+msgstr "Aplicație pentru instructor"
+
+#. Legacy key: instructor_applications
+msgid "Instructor applications"
+msgstr "Aplicații pentru instructori"
+
+#. Legacy key: list_of_applications
+msgid "List of applications"
+msgstr "Lista aplicațiilor"
+
+#. Legacy key: pending_applications
+msgid "Pending applications"
+msgstr "Aplicații în așteptare"
+
+#. Legacy key: approved_applications
+msgid "Approved applications"
+msgstr "Aplicații aprobate"
+
+#. Legacy key: details
+msgid "Details"
+msgstr "Detalii"
+
+#. Legacy key: applicant_details
+msgid "Applicant details"
+msgstr "Detalii solicitant"
+
+#. Legacy key: application_details
+msgid "Application details"
+msgstr "Detalii aplicație"
+
+#. Legacy key: download
+msgid "Download"
+msgstr "Descarca"
+
+#. Legacy key: approve
+msgid "Approve"
+msgstr "Aproba"
+
+#. Legacy key: approved
+msgid "Approved"
+msgstr "Aprobat"
+
+#. Legacy key: add_admin
+msgid "Add admin"
+msgstr "Adăugați admin"
+
+#. Legacy key: root_admin
+msgid "Root admin"
+msgstr "Administrator rădăcină"
+
+#. Legacy key: assign_permission
+msgid "Assign permission"
+msgstr "Atribuiți permisiunea"
+
+#. Legacy key: manage_profil
+msgid "Manage profil"
+msgstr "Gestionați profilul"
+
+#. Legacy key: facebook_link
+msgid "Facebook link"
+msgstr "link pe Facebook"
+
+#. Legacy key: twitter_link
+msgid "Twitter link"
+msgstr "link Twitter"
+
+#. Legacy key: linkedin_link
+msgid "Linkedin link"
+msgstr "Link-ul Linkedin"
+
+#. Legacy key: the_image_size_should_be_any_square_image
+msgid "The image size should be any square image"
+msgstr "Dimensiunea imaginii ar trebui să fie orice imagine pătrată"
+
+#. Legacy key: update_profile
+msgid "Update profile"
+msgstr "Actualizare profil"
+
+#. Legacy key: current_password
+msgid "Current password"
+msgstr "Parola actuală"
+
+#. Legacy key: new_password
+msgid "New password"
+msgstr "Parolă Nouă"
+
+#. Legacy key: confirm_new_password
+msgid "Confirm new password"
+msgstr "Confirmă noua parolă"
+
+#. Legacy key: update_password
+msgid "Update password"
+msgstr "Actualizați parola"
+
+#. Legacy key: educator_profile
+msgid "Educator profile"
+msgstr "Profilul educatorului"
+
+#. Legacy key: statistics
+msgid "Statistics"
+msgstr "Statistici"
+
+#. Legacy key: total_students
+msgid "Total students"
+msgstr "Total studenți"
+
+#. Legacy key: the_complete_python_bootcamp_from_zero_to_hero
+msgid "The complete python bootcamp from zero to hero"
+msgstr "Campul de pregătire complet python de la zero la erou"
+
+#. Legacy key: course_added_to_wishlist
+msgid "Course added to wishlist"
+msgstr "Curs adăugat la lista de dorințe"
+
+#. Legacy key: manage_course_bundle
+msgid "Manage course bundle"
+msgstr "Gestionați pachetul de cursuri"
+
+#. Legacy key: bundle
+msgid "Bundle"
+msgstr "Pachet"
+
+#. Legacy key: subscription_limit
+msgid "Subscription limit"
+msgstr "Limită de abonament"
+
+#. Legacy key: deactive
+msgid "Deactive"
+msgstr "Activ"
+
+#. Legacy key: edit_course_bundle
+msgid "Edit course bundle"
+msgstr "Editați pachetul de cursuri"
+
+#. Legacy key: bundle_add_form
+msgid "Bundle add form"
+msgstr "Formular de adăugare a pachetului"
+
+#. Legacy key: course_bundle_title
+msgid "Course bundle title"
+msgstr "Titlul pachetului de curs"
+
+#. Legacy key: select_courses
+msgid "Select courses"
+msgstr "Selectați cursuri"
+
+#. Legacy key: current_price_of_the_courses_is
+msgid "Current price of the courses is"
+msgstr "Pretul curent al cursurilor este"
+
+#. Legacy key: bundle_price
+msgid "Bundle price"
+msgstr "Prețul pachetului"
+
+#. Legacy key: subscription_renew_days
+msgid "Subscription renew days"
+msgstr "Zile de reînnoire a abonamentului"
+
+#. Legacy key: count_day
+msgid "Count day"
+msgstr "Numără ziua"
+
+#. Legacy key: banner
+msgid "Banner"
+msgstr "Banner"
+
+#. Legacy key: update_bundle
+msgid "Update bundle"
+msgstr "Actualizați pachetul"
+
+#. Legacy key: complete_guitar_lessons_system_
+msgid "Complete guitar lessons system "
+msgstr "Sistem complet de lecții de chitară"
+
+#. Legacy key: item_successfully_added_to_cart
+msgid "Item successfully added to cart"
+msgstr "Articol adăugat cu succes în coș"
+
+#. Legacy key: how_to_use_lighting_design_to_transform_your_home
+msgid "How to use lighting design to transform your home"
+msgstr "Cum să utilizați designul de iluminat pentru a vă transforma casa"
+
+#. Legacy key: invoice_id
+msgid "Invoice id"
+msgstr "Numărul de indentificare al facturii"
+
+#. Legacy key: billed_to
+msgid "Billed to"
+msgstr "Facturat către"
+
+#. Legacy key: date_of_issue
+msgid "Date of issue"
+msgstr "Data emiterii"
+
+#. Legacy key: invoice_total
+msgid "Invoice total"
+msgstr "Totalul facturii"
+
+#. Legacy key: qty
+msgid "Qty"
+msgstr "Cant"
+
+#. Legacy key: paid_by
+msgid "Paid by"
+msgstr "Platit de"
+
+#. Legacy key: tax
+msgid "Tax"
+msgstr "Impozit"
+
+#. Legacy key: grand_total
+msgid "Grand total"
+msgstr "Total general"
+
+#. Legacy key: print
+msgid "Print"
+msgstr "Imprimare"
+
+#. Legacy key: back
+msgid "Back"
+msgstr "Înapoi"
+
+#. Legacy key: newsletters
+msgid "Newsletters"
+msgstr "Buletine informative"
+
+#. Legacy key: newsletter_template
+msgid "Newsletter template"
+msgstr "Șablon de buletin informativ"
+
+#. Legacy key: your_phone
+msgid "Your phone"
+msgstr "Telefonul tau"
+
+#. Legacy key: subject
+msgid "Subject"
+msgstr "Subiect"
+
+#. Legacy key: subscriber
+msgid "Subscriber"
+msgstr "Abonat"
+
+#. Legacy key: user_status
+msgid "User status"
+msgstr "Starea utilizatorului"
+
+#. Legacy key: newsletter_added_successfully
+msgid "Newsletter added successfully"
+msgstr "Newsletter adăugat cu succes"
+
+#. Legacy key: edit_newsletter_template
+msgid "Edit newsletter template"
+msgstr "Editați șablonul de buletin informativ"
+
+#. Legacy key: send_newsletter
+msgid "Send newsletter"
+msgstr "Trimite newsletter"
+
+#. Legacy key: send_to
+msgid "Send to"
+msgstr "Trimite catre"
+
+#. Legacy key: selected_user
+msgid "Selected user"
+msgstr "Utilizator selectat"
+
+#. Legacy key: all_users
+msgid "All users"
+msgstr "Toți utilizatorii"
+
+#. Legacy key: all_student
+msgid "All student"
+msgstr "Tot student"
+
+#. Legacy key: all_instructor
+msgid "All instructor"
+msgstr "Tot instructor"
+
+#. Legacy key: newsletter_subscriber
+msgid "Newsletter subscriber"
+msgstr "Abonat la newsletter"
+
+#. Legacy key: all_subscriber
+msgid "All subscriber"
+msgstr "Tot abonat"
+
+#. Legacy key: registered_user
+msgid "Registered user"
+msgstr "Utilizator Inregistrat"
+
+#. Legacy key: non_registered_user
+msgid "Non registered user"
+msgstr "Utilizator neînregistrat"
+
+#. Legacy key: select_your_users
+msgid "Select your users"
+msgstr "Selectați utilizatorii dvs"
+
+#. Legacy key: newsletter_deleted_successfully
+msgid "Newsletter deleted successfully"
+msgstr "Buletinul informativ a fost șters cu succes"
+
+#. Legacy key: item_successfully_removed_from_cart
+msgid "Item successfully removed from cart"
+msgstr "Articolul a fost eliminat cu succes din coș"
+
+#. Legacy key: multi_language_settings
+msgid "Multi language settings"
+msgstr "Setări în mai multe limbi"
+
+#. Legacy key: manage_language
+msgid "Manage language"
+msgstr "Gestionați limba"
+
+#. Legacy key: language_list
+msgid "Language list"
+msgstr "Lista de limbi"
+
+#. Legacy key: add_language
+msgid "Add language"
+msgstr "Adăugați limba"
+
+#. Legacy key: import_language
+msgid "Import language"
+msgstr "Limba de import"
+
+#. Legacy key: edit_phrase
+msgid "Edit phrase"
+msgstr "Editați fraza"
+
+#. Legacy key: export
+msgid "Export"
+msgstr "Export"
+
+#. Legacy key: delete_language
+msgid "Delete language"
+msgstr "Ștergeți limba"
+
+#. Legacy key: add_new_phrase
+msgid "Add new phrase"
+msgstr "Adăugați o frază nouă"
+
+#. Legacy key: add_new_language
+msgid "Add new language"
+msgstr "Adăugați o limbă nouă"
+
+#. Legacy key: no_special_character_or_space_is_allowed
+msgid "No special character or space is allowed"
+msgstr "Nu este permis niciun caracter special sau spațiu"
+
+#. Legacy key: valid_examples
+msgid "Valid examples"
+msgstr "Exemple valide"
+
+#. Legacy key: choose_your_json_file
+msgid "Choose your json file"
+msgstr "Alegeți fișierul json"
+
+#. Legacy key: import
+msgid "Import"
+msgstr "Import"
+
+#. Legacy key: phrase_updated
+msgid "Phrase updated"
+msgstr "Expresia a fost actualizată"
+
+#. Legacy key: course_compare
+msgid "Course compare"
+msgstr "Comparare curs"
+
+#. Legacy key: compare_with_1_courses
+msgid "Compare with 1 courses"
+msgstr "Comparați cu 1 curs"
+
+#. Legacy key: select_a_course
+msgid "Select a course"
+msgstr "Selectați un curs"
+
+#. Legacy key: learn_more
+msgid "Learn more"
+msgstr "Află mai multe"
+
+#. Legacy key: has_discount
+msgid "Has discount"
+msgstr "Are reducere"
+
+#. Legacy key: made_in
+msgid "Made in"
+msgstr "Facut in"
+
+#. Legacy key: last_updated_at
+msgid "Last updated at"
+msgstr "Ultima actualizare la"
+
+#. Legacy key: total_lectures
+msgid "Total lectures"
+msgstr "Total prelegeri"
+
+#. Legacy key: total_quizzes
+msgid "Total quizzes"
+msgstr "Total chestionare"
+
+#. Legacy key: total_duration
+msgid "Total duration"
+msgstr "Durata totala"
+
+#. Legacy key: total_enrolment
+msgid "Total enrolment"
+msgstr "Înscriere totală"
+
+#. Legacy key: number_of_reviews
+msgid "Number of reviews"
+msgstr "Numărul de recenzii"
+
+#. Legacy key: avg_rating
+msgid "Avg rating"
+msgstr "Evaluare medie"
+
+#. Legacy key: add_phrase
+msgid "Add phrase"
+msgstr "Adăugați o frază"
+
+#. Legacy key: language_deleted_successfully
+msgid "Language deleted successfully"
+msgstr "Limba a fost ștearsă cu succes"
+
+#. Legacy key: language_added_successfully
+msgid "Language added successfully"
+msgstr "Limba adăugată cu succes"
+

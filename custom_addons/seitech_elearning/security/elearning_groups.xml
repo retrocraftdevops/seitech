@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- E-Learning Category -->
+        <record id="module_category_elearning" model="ir.module.category">
+            <field name="name">E-Learning</field>
+            <field name="description">E-Learning Platform Management</field>
+            <field name="sequence">20</field>
+        </record>
+
+        <!-- Student Group -->
+        <record id="group_elearning_student" model="res.groups">
+            <field name="name">Student</field>
+            <field name="comment">Basic access for enrolled students</field>
+        </record>
+
+        <!-- Instructor Group -->
+        <record id="group_elearning_instructor" model="res.groups">
+            <field name="name">Instructor</field>
+            <field name="implied_ids" eval="[(4, ref('group_elearning_student'))]"/>
+            <field name="comment">Can create and manage own courses</field>
+        </record>
+
+        <!-- Manager Group -->
+        <record id="group_elearning_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="implied_ids" eval="[(4, ref('group_elearning_instructor'))]"/>
+            <field name="comment">Can manage all courses and instructors</field>
+        </record>
+
+        <!-- Administrator Group -->
+        <record id="group_elearning_admin" model="res.groups">
+            <field name="name">Administrator</field>
+            <field name="implied_ids" eval="[(4, ref('group_elearning_manager'))]"/>
+            <field name="comment">Full access to e-learning configuration</field>
+        </record>
+
+    </data>
+</odoo>

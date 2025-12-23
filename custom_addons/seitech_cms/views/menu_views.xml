@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Main CMS Menu -->
+    <menuitem id="menu_cms_root"
+        name="CMS"
+        web_icon="seitech_cms,static/description/icon.png"
+        sequence="5"/>
+
+    <!-- Content Submenu -->
+    <menuitem id="menu_cms_content"
+        name="Content"
+        parent="menu_cms_root"
+        sequence="10"/>
+
+    <menuitem id="menu_cms_pages"
+        name="Pages"
+        parent="menu_cms_content"
+        action="action_cms_pages"
+        sequence="10"/>
+
+    <menuitem id="menu_cms_sections"
+        name="Sections"
+        parent="menu_cms_content"
+        action="action_cms_sections"
+        sequence="20"/>
+
+    <menuitem id="menu_cms_testimonials"
+        name="Testimonials"
+        parent="menu_cms_content"
+        action="action_cms_testimonials"
+        sequence="30"/>
+
+    <!-- FAQs Submenu -->
+    <menuitem id="menu_cms_faqs_parent"
+        name="FAQs"
+        parent="menu_cms_root"
+        sequence="20"/>
+
+    <menuitem id="menu_cms_faqs"
+        name="All FAQs"
+        parent="menu_cms_faqs_parent"
+        action="action_cms_faqs"
+        sequence="10"/>
+
+    <menuitem id="menu_cms_faq_categories"
+        name="Categories"
+        parent="menu_cms_faqs_parent"
+        action="action_cms_faq_categories"
+        sequence="20"/>
+
+    <!-- Services Submenu -->
+    <menuitem id="menu_cms_services_parent"
+        name="Services"
+        parent="menu_cms_root"
+        sequence="25"/>
+
+    <menuitem id="menu_cms_services"
+        name="All Services"
+        parent="menu_cms_services_parent"
+        action="action_cms_services"
+        sequence="10"/>
+
+    <menuitem id="menu_cms_service_categories"
+        name="Categories"
+        parent="menu_cms_services_parent"
+        action="action_cms_service_categories"
+        sequence="20"/>
+
+    <!-- People Submenu -->
+    <menuitem id="menu_cms_people"
+        name="People"
+        parent="menu_cms_root"
+        sequence="30"/>
+
+    <menuitem id="menu_cms_team"
+        name="Team Members"
+        parent="menu_cms_people"
+        action="action_cms_team_members"
+        sequence="10"/>
+
+    <menuitem id="menu_cms_partners"
+        name="Partners &amp; Accreditations"
+        parent="menu_cms_people"
+        action="action_cms_partners"
+        sequence="20"/>
+
+    <!-- Statistics Submenu -->
+    <menuitem id="menu_cms_statistics"
+        name="Statistics"
+        parent="menu_cms_root"
+        sequence="35"/>
+
+    <menuitem id="menu_cms_stats_list"
+        name="All Statistics"
+        parent="menu_cms_statistics"
+        action="action_cms_statistics"
+        sequence="10"/>
+
+    <!-- Configuration Submenu -->
+    <menuitem id="menu_cms_config"
+        name="Configuration"
+        parent="menu_cms_root"
+        sequence="100"/>
+
+    <menuitem id="menu_cms_site_settings"
+        name="Site Settings"
+        parent="menu_cms_config"
+        action="action_cms_site_settings"
+        sequence="10"/>
+
+    <menuitem id="menu_cms_navigation"
+        name="Navigation Menus"
+        parent="menu_cms_config"
+        action="action_cms_navigation"
+        sequence="20"/>
+</odoo>

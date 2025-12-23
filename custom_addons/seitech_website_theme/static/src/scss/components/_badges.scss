@@ -1,0 +1,273 @@
+// ==========================================================================
+// Seitech Website Theme - Badges
+// ==========================================================================
+
+// Note: variables and mixins are loaded before this file via __manifest__.py
+
+// --------------------------------------------------------------------------
+// Base Badge
+// --------------------------------------------------------------------------
+
+.badge-seitech {
+    @include badge-base;
+}
+
+// --------------------------------------------------------------------------
+// Color Variants
+// --------------------------------------------------------------------------
+
+.badge-seitech-primary {
+    @include badge-base;
+    background-color: rgba($seitech-primary, 0.1);
+    color: $seitech-primary;
+    border: 1px solid rgba($seitech-primary, 0.2);
+}
+
+.badge-seitech-secondary {
+    @include badge-base;
+    background-color: $seitech-gray-100;
+    color: $seitech-gray-700;
+    border: 1px solid $seitech-gray-200;
+}
+
+.badge-seitech-success {
+    @include badge-base;
+    background-color: $seitech-success-light;
+    color: darken($seitech-success, 10%);
+    border: 1px solid rgba($seitech-success, 0.2);
+}
+
+.badge-seitech-warning {
+    @include badge-base;
+    background-color: $seitech-warning-light;
+    color: darken($seitech-warning, 10%);
+    border: 1px solid rgba($seitech-warning, 0.2);
+}
+
+.badge-seitech-danger {
+    @include badge-base;
+    background-color: $seitech-danger-light;
+    color: $seitech-danger;
+    border: 1px solid rgba($seitech-danger, 0.2);
+}
+
+.badge-seitech-info {
+    @include badge-base;
+    background-color: $seitech-info-light;
+    color: darken($seitech-info, 10%);
+    border: 1px solid rgba($seitech-info, 0.2);
+}
+
+// --------------------------------------------------------------------------
+// Dark Badges (Solid Background)
+// --------------------------------------------------------------------------
+
+.badge-seitech-primary-solid {
+    @include badge-base;
+    background-color: $seitech-primary;
+    color: $seitech-white;
+}
+
+.badge-seitech-success-solid {
+    @include badge-base;
+    background-color: $seitech-success;
+    color: $seitech-white;
+}
+
+.badge-seitech-danger-solid {
+    @include badge-base;
+    background-color: $seitech-danger;
+    color: $seitech-white;
+}
+
+// --------------------------------------------------------------------------
+// Size Variants
+// --------------------------------------------------------------------------
+
+.badge-seitech-sm {
+    padding: 2px $seitech-space-2;
+    font-size: 10px;
+}
+
+.badge-seitech-lg {
+    padding: $seitech-space-2 $seitech-space-4;
+    font-size: $seitech-font-size-sm;
+}
+
+// --------------------------------------------------------------------------
+// With Icon
+// --------------------------------------------------------------------------
+
+.badge-with-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: $seitech-space-1;
+
+    .badge-icon {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Status Badge (Dot Style)
+// --------------------------------------------------------------------------
+
+.badge-status {
+    display: inline-flex;
+    align-items: center;
+    gap: $seitech-space-2;
+    padding: $seitech-space-1 $seitech-space-3;
+    font-size: $seitech-font-size-xs;
+    font-weight: $seitech-font-weight-medium;
+    color: $seitech-text-primary;
+    background-color: $seitech-gray-100;
+    border-radius: $seitech-radius-full;
+
+    .status-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: $seitech-radius-full;
+    }
+
+    &.status-active .status-dot {
+        background-color: $seitech-success;
+    }
+
+    &.status-pending .status-dot {
+        background-color: $seitech-warning;
+    }
+
+    &.status-inactive .status-dot {
+        background-color: $seitech-gray-400;
+    }
+
+    &.status-error .status-dot {
+        background-color: $seitech-danger;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Counter Badge
+// --------------------------------------------------------------------------
+
+.badge-counter {
+    @include flex-center;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 $seitech-space-1;
+    font-size: 11px;
+    font-weight: $seitech-font-weight-semibold;
+    color: $seitech-white;
+    background-color: $seitech-danger;
+    border-radius: $seitech-radius-full;
+
+    &.badge-counter-primary {
+        background-color: $seitech-primary;
+    }
+
+    &.badge-counter-sm {
+        min-width: 16px;
+        height: 16px;
+        font-size: 10px;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Category Badge
+// --------------------------------------------------------------------------
+
+.badge-category {
+    display: inline-block;
+    padding: $seitech-space-1 $seitech-space-3;
+    font-size: $seitech-font-size-xs;
+    font-weight: $seitech-font-weight-semibold;
+    color: $seitech-primary;
+    background-color: $seitech-primary-50;
+    border-radius: $seitech-radius-md;
+    text-transform: uppercase;
+    letter-spacing: $seitech-tracking-wide;
+
+    &:hover {
+        background-color: $seitech-primary-100;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Difficulty Badge
+// --------------------------------------------------------------------------
+
+.badge-difficulty {
+    @include badge-base;
+
+    &.difficulty-beginner {
+        background-color: #dcfce7;
+        color: #166534;
+        border: 1px solid #bbf7d0;
+    }
+
+    &.difficulty-intermediate {
+        background-color: #fef3c7;
+        color: #92400e;
+        border: 1px solid #fde68a;
+    }
+
+    &.difficulty-advanced {
+        background-color: #fee2e2;
+        color: #991b1b;
+        border: 1px solid #fecaca;
+    }
+}
+
+// --------------------------------------------------------------------------
+// New/Featured Badge
+// --------------------------------------------------------------------------
+
+.badge-new {
+    @include badge-base;
+    background: linear-gradient(135deg, $seitech-primary, $seitech-secondary);
+    color: $seitech-white;
+    animation: pulse 2s infinite;
+}
+
+.badge-featured {
+    @include badge-base;
+    background: linear-gradient(135deg, #f59e0b, #eab308);
+    color: $seitech-white;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Price Badge
+// --------------------------------------------------------------------------
+
+.badge-price {
+    @include badge-base;
+    padding: $seitech-space-2 $seitech-space-4;
+    font-size: $seitech-font-size-base;
+    font-weight: $seitech-font-weight-bold;
+
+    &.price-free {
+        background-color: $seitech-success-light;
+        color: darken($seitech-success, 10%);
+    }
+
+    &.price-paid {
+        background-color: $seitech-primary-50;
+        color: $seitech-primary;
+    }
+
+    &.price-discount {
+        background-color: $seitech-danger-light;
+        color: $seitech-danger;
+        text-decoration: line-through;
+    }
+}

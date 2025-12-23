@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- CMS Manager Group -->
+    <record id="group_cms_manager" model="res.groups">
+        <field name="name">CMS Manager</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <!-- CMS Editor Group -->
+    <record id="group_cms_editor" model="res.groups">
+        <field name="name">CMS Editor</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+</odoo>

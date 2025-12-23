@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- ===================================================================
+         Checkout/Cart Template Overrides
+         Extends Odoo website_sale templates with Seitech styling
+         
+         Odoo handles the actual payment processing, we just style it
+         to match our e-learning theme.
+         
+         Key integration points:
+         - Course enrollment on purchase completion
+         - Cart items link to courses not products
+         - Enrollment records created after payment
+    =================================================================== -->
+
+
+    <!-- ===================================================================
+         COURSE ADD TO CART BUTTON
+         Custom add-to-cart for course detail pages
+    =================================================================== -->
+    <template id="course_add_to_cart_button" name="Course Add to Cart Button">
+        <div class="course-purchase-actions">
+            <t t-if="not is_enrolled">
+                <t t-if="course.is_paid and course.product_id">
+                    <!-- Paid Course - Add to Cart -->
+                    <form t-attf-action="/shop/cart/update" method="POST" class="mb-3">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <input type="hidden" name="product_id" t-att-value="course.product_id.id"/>
+                        <input type="hidden" name="add_qty" value="1"/>
+                        <button type="submit" class="btn btn-primary btn-lg w-100">
+                            <i class="fa fa-shopping-cart me-2"/>
+                            Add to Cart
+                        </button>
+                    </form>
+                    <a href="/shop/cart" class="btn btn-outline-primary w-100">
+                        <i class="fa fa-credit-card me-2"/>
+                        Go to Checkout
+                    </a>
+                </t>
+                <t t-elif="not course.is_paid">
+                    <!-- Free Course - Enroll Now -->
+                    <form t-attf-action="/course/enroll/{{ course.id }}" method="POST" class="mb-3">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <button type="submit" class="btn btn-success btn-lg w-100">
+                            <i class="fa fa-graduation-cap me-2"/>
+                            Enroll Now - Free
+                        </button>
+                    </form>
+                </t>
+                <t t-else="">
+                    <!-- Course not set up for sale -->
+                    <div class="alert alert-info mb-3">
+                        <i class="fa fa-info-circle me-2"/>
+                        This course is not available for enrollment yet.
+                    </div>
+                </t>
+            </t>
+            <t t-else="">
+                <!-- Already Enrolled -->
+                <a t-attf-href="/slides/{{ course.id }}/{{ course.slide_ids[0].id if course.slide_ids else '' }}" 
+                   class="btn btn-success btn-lg w-100 mb-2">
+                    <i class="fa fa-play-circle me-2"/>
+                    Continue Learning
+                </a>
+                <div class="text-center text-muted small">
+                    <i class="fa fa-check-circle text-success me-1"/>
+                    You're enrolled in this course
+                </div>
+            </t>
+        </div>
+    </template>
+
+
+    <!-- ===================================================================
+         CART PAGE HEADER CUSTOMIZATION
+         Adds e-learning branding to cart page
+    =================================================================== -->
+    <template id="cart_header" inherit_id="website_sale.cart" name="Seitech Cart Header">
+        <xpath expr="//div[@id='shop_cart']" position="before">
+            <section class="cart-hero bg-light py-4 mb-4">
+                <div class="container">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-2">
+                            <li class="breadcrumb-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/courses">Courses</a></li>
+                            <li class="breadcrumb-item active">Shopping Cart</li>
+                        </ol>
+                    </nav>
+                    <h2 class="fw-bold mb-0">
+                        <i class="fa fa-shopping-cart text-primary me-2"/>
+                        Your Cart
+                    </h2>
+                </div>
+            </section>
+        </xpath>
+    </template>
+
+
+    <!-- ===================================================================
+         CART LINE CUSTOMIZATION
+         Shows course info instead of generic product
+         NOTE: Odoo 19 cart_lines uses flexbox, not table. Updated xpath.
+    =================================================================== -->
+    <template id="cart_lines" inherit_id="website_sale.cart_lines" name="Seitech Cart Lines">
+        <!-- Add course badge after the product link in the cart -->
+        <xpath expr="//div[@class='o_cart_product d-flex gap-3 pb-4']//h6" position="after">
+            <t t-if="line.product_id.slide_channel_ids">
+                <small class="d-block text-muted mt-1">
+                    <i class="fa fa-graduation-cap me-1"/>
+                    Online Course
+                </small>
+            </t>
+        </xpath>
+    </template>
+
+
+    <!-- ===================================================================
+         CHECKOUT CONFIRMATION PAGE
+         Custom confirmation for course purchases
+    =================================================================== -->
+    <template id="confirmation_course_info" inherit_id="website_sale.confirmation" name="Course Purchase Confirmation">
+        <xpath expr="//div[@id='oe_structure_website_sale_confirmation_2']" position="after">
+            <t t-if="order.order_line.filtered(lambda l: l.product_id.slide_channel_ids)">
+                <div class="course-confirmation-section bg-success bg-opacity-10 rounded-4 p-4 mb-4">
+                    <div class="row align-items-center">
+                        <div class="col-auto">
+                            <div class="icon-wrapper bg-success rounded-circle d-flex align-items-center justify-content-center"
+                                 style="width: 60px; height: 60px;">
+                                <i class="fa fa-graduation-cap fa-2x text-white"/>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h4 class="fw-bold text-success mb-1">You're Enrolled!</h4>
+                            <p class="text-muted mb-0">
+                                Your course enrollment is now active. Start learning right away!
+                            </p>
+                        </div>
+                        <div class="col-auto">
+                            <a href="/my/courses" class="btn btn-success btn-lg">
+                                <i class="fa fa-play-circle me-2"/>
+                                Start Learning
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Purchased Courses List -->
+                <div class="purchased-courses bg-white rounded-4 shadow-sm p-4 mb-4">
+                    <h5 class="fw-bold mb-4">Your New Courses</h5>
+                    <div class="row g-3">
+                        <t t-foreach="order.order_line.filtered(lambda l: l.product_id.slide_channel_ids)" t-as="line">
+                            <t t-set="course" t-value="line.product_id.slide_channel_ids[0]"/>
+                            <div class="col-md-6">
+                                <div class="course-card d-flex align-items-center gap-3 p-3 bg-light rounded-3">
+                                    <div class="course-thumb">
+                                        <t t-if="course.image_1920">
+                                            <img t-att-src="'/web/image/slide.channel/%s/image_1920' % course.id"
+                                                 class="rounded-2" style="width: 80px; height: 60px; object-fit: cover;"/>
+                                        </t>
+                                        <t t-else="">
+                                            <div class="bg-secondary rounded-2 d-flex align-items-center justify-content-center"
+                                                 style="width: 80px; height: 60px;">
+                                                <i class="fa fa-book text-white"/>
+                                            </div>
+                                        </t>
+                                    </div>
+                                    <div class="course-info flex-grow-1">
+                                        <h6 class="fw-bold mb-1 text-truncate"><t t-esc="course.name"/></h6>
+                                        <small class="text-muted">
+                                            <i class="fa fa-clock-o me-1"/>
+                                            <t t-esc="course.total_time"/> hours
+                                            <span class="mx-1">•</span>
+                                            <i class="fa fa-play-circle me-1"/>
+                                            <t t-esc="len(course.slide_ids)"/> lessons
+                                        </small>
+                                    </div>
+                                    <a t-attf-href="/slides/{{ course.id }}" class="btn btn-outline-primary btn-sm">
+                                        Start <i class="fa fa-arrow-right ms-1"/>
+                                    </a>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+
+    <!-- ===================================================================
+         EMPTY CART STATE
+         Custom empty cart for courses - adds courses CTA
+    =================================================================== -->
+    <template id="empty_cart_courses" inherit_id="website_sale.cart_lines" name="Empty Cart Courses CTA">
+        <!-- Add courses CTA after the shop button in empty cart state -->
+        <xpath expr="//div[@t-if='not website_sale_order or not website_sale_order.website_order_line']//p[last()]" position="after">
+            <div class="mt-4 pt-4 border-top">
+                <h5 class="fw-bold mb-3">Looking for courses?</h5>
+                <p class="text-muted mb-3">
+                    Explore our catalog of professional courses taught by industry experts.
+                </p>
+                <a href="/courses" class="btn btn-primary">
+                    <i class="fa fa-graduation-cap me-2"/>
+                    Browse Courses
+                </a>
+            </div>
+        </xpath>
+    </template>
+
+
+    <!-- ===================================================================
+         GIFT COURSE OPTION
+         Add gift option to cart (migrated from PHP)
+    =================================================================== -->
+    <template id="cart_gift_option" name="Gift Course Option">
+        <div class="gift-course-option border-top pt-4 mt-4">
+            <div class="form-check mb-3">
+                <input type="checkbox" class="form-check-input" id="is_gift_course" 
+                       name="is_gift" value="1"
+                       onchange="document.getElementById('gift_email_section').classList.toggle('d-none')"/>
+                <label class="form-check-label" for="is_gift_course">
+                    <i class="fa fa-gift text-primary me-1"/>
+                    Send as a gift
+                </label>
+            </div>
+            <div id="gift_email_section" class="d-none">
+                <div class="input-group">
+                    <span class="input-group-text bg-light">
+                        <i class="fa fa-envelope text-muted"/>
+                    </span>
+                    <input type="email" class="form-control" name="gift_email" 
+                           placeholder="Recipient's email address"/>
+                </div>
+                <small class="text-muted mt-1 d-block">
+                    The recipient will receive an email with enrollment instructions.
+                </small>
+            </div>
+        </div>
+    </template>
+
+
+    <!-- ===================================================================
+         COUPON CODE SECTION STYLING
+         Match PHP coupon styling
+         NOTE: Disabled - website_sale.cart_coupon doesn't exist in Odoo 19
+         Coupons are handled by loyalty/coupon modules if installed
+    =================================================================== -->
+    <!--
+    <template id="cart_coupon_styling" inherit_id="website_sale.cart_coupon" name="Seitech Coupon Styling">
+        <xpath expr="//div[hasclass('o_coupon_form')]" position="attributes">
+            <attribute name="class">o_coupon_form bg-light rounded-3 p-3</attribute>
+        </xpath>
+    </template>
+    -->
+
+
+    <!-- ===================================================================
+         PAYMENT PAGE STYLING
+         Custom payment page header
+    =================================================================== -->
+    <template id="payment_header" inherit_id="website_sale.payment" name="Seitech Payment Header">
+        <xpath expr="//div[hasclass('oe_structure')][@id='oe_structure_website_sale_payment_1']" position="before">
+            <section class="payment-hero bg-light py-4 mb-4">
+                <div class="container">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-2">
+                            <li class="breadcrumb-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/shop/cart">Cart</a></li>
+                            <li class="breadcrumb-item active">Payment</li>
+                        </ol>
+                    </nav>
+                    <h2 class="fw-bold mb-0">
+                        <i class="fa fa-credit-card text-primary me-2"/>
+                        Complete Your Purchase
+                    </h2>
+                </div>
+            </section>
+        </xpath>
+    </template>
+
+
+    <!-- ===================================================================
+         THANK YOU / SUCCESS PAGE
+         Custom success page after purchase
+    =================================================================== -->
+    <template id="payment_success_page" name="Payment Success Page">
+        <t t-call="website.layout">
+            <t t-set="title">Payment Successful</t>
+            <div id="wrap" class="o_seitech_payment_success">
+                
+                <!-- Success Hero -->
+                <section class="success-hero py-5 text-center bg-success text-white">
+                    <div class="container">
+                        <div class="success-icon mb-4">
+                            <div class="check-circle bg-white rounded-circle d-inline-flex align-items-center justify-content-center"
+                                 style="width: 100px; height: 100px;">
+                                <i class="fa fa-check fa-3x text-success"/>
+                            </div>
+                        </div>
+                        <h1 class="fw-bold mb-3">Payment Successful!</h1>
+                        <p class="lead opacity-75 mb-0">
+                            Thank you for your purchase. You're now enrolled!
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Next Steps -->
+                <section class="next-steps py-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="bg-white rounded-4 shadow-sm p-5 text-center">
+                                    <h3 class="fw-bold mb-4">What's Next?</h3>
+                                    
+                                    <div class="steps-grid row g-4 mb-5">
+                                        <div class="col-md-4">
+                                            <div class="step-item">
+                                                <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                                                     style="width: 50px; height: 50px; font-size: 1.5rem;">
+                                                    1
+                                                </div>
+                                                <h6 class="fw-bold">Check Your Email</h6>
+                                                <p class="text-muted small mb-0">
+                                                    Confirmation sent to your inbox
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="step-item">
+                                                <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                                                     style="width: 50px; height: 50px; font-size: 1.5rem;">
+                                                    2
+                                                </div>
+                                                <h6 class="fw-bold">Access Course</h6>
+                                                <p class="text-muted small mb-0">
+                                                    Go to My Courses to start
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="step-item">
+                                                <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                                                     style="width: 50px; height: 50px; font-size: 1.5rem;">
+                                                    3
+                                                </div>
+                                                <h6 class="fw-bold">Start Learning</h6>
+                                                <p class="text-muted small mb-0">
+                                                    Complete lessons at your pace
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="action-buttons d-flex justify-content-center gap-3 flex-wrap">
+                                        <a href="/my/courses" class="btn btn-primary btn-lg px-5">
+                                            <i class="fa fa-play-circle me-2"/>
+                                            Go to My Courses
+                                        </a>
+                                        <a href="/courses" class="btn btn-outline-secondary btn-lg">
+                                            Browse More Courses
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </t>
+    </template>
+
+</odoo>

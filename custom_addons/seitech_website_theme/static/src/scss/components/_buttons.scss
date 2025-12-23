@@ -1,0 +1,192 @@
+// ==========================================================================
+// Seitech Website Theme - Buttons
+// ==========================================================================
+
+// Note: variables and mixins are loaded before this file via __manifest__.py
+
+// --------------------------------------------------------------------------
+// Base Button
+// --------------------------------------------------------------------------
+
+.btn-seitech {
+    @include button-base;
+}
+
+// --------------------------------------------------------------------------
+// Primary Button
+// --------------------------------------------------------------------------
+
+.btn-seitech-primary {
+    @include button-primary;
+}
+
+.btn-seitech-primary-lg {
+    @include button-primary;
+    padding: $seitech-space-4 $seitech-space-8;
+    font-size: $seitech-font-size-lg;
+}
+
+.btn-seitech-primary-sm {
+    @include button-primary;
+    padding: $seitech-space-2 $seitech-space-4;
+    font-size: $seitech-font-size-sm;
+}
+
+// --------------------------------------------------------------------------
+// Secondary Button
+// --------------------------------------------------------------------------
+
+.btn-seitech-secondary {
+    @include button-secondary;
+}
+
+.btn-seitech-secondary-lg {
+    @include button-secondary;
+    padding: $seitech-space-4 $seitech-space-8;
+    font-size: $seitech-font-size-lg;
+}
+
+// --------------------------------------------------------------------------
+// Ghost Button
+// --------------------------------------------------------------------------
+
+.btn-seitech-ghost {
+    @include button-ghost;
+}
+
+// --------------------------------------------------------------------------
+// Icon Button
+// --------------------------------------------------------------------------
+
+.btn-seitech-icon {
+    @include button-base;
+    padding: $seitech-space-3;
+    border-radius: $seitech-radius-lg;
+
+    &.btn-seitech-icon-sm {
+        padding: $seitech-space-2;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Button with Icon
+// --------------------------------------------------------------------------
+
+.btn-seitech-with-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: $seitech-space-2;
+
+    .btn-icon {
+        width: 1.25em;
+        height: 1.25em;
+    }
+
+    .btn-icon-right {
+        order: 1;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Button Group
+// --------------------------------------------------------------------------
+
+.btn-group-seitech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $seitech-space-4;
+
+    &.btn-group-center {
+        justify-content: center;
+    }
+
+    &.btn-group-right {
+        justify-content: flex-end;
+    }
+}
+
+// --------------------------------------------------------------------------
+// White/Dark Background Buttons
+// --------------------------------------------------------------------------
+
+.btn-seitech-white {
+    @include button-base;
+    background-color: $seitech-white;
+    color: $seitech-gray-900;
+    box-shadow: $seitech-shadow-md;
+
+    &:hover {
+        background-color: $seitech-gray-50;
+        box-shadow: $seitech-shadow-lg;
+    }
+}
+
+.btn-seitech-dark {
+    @include button-base;
+    background-color: $seitech-gray-900;
+    color: $seitech-white;
+
+    &:hover {
+        background-color: $seitech-gray-800;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Link Style Button
+// --------------------------------------------------------------------------
+
+.btn-seitech-link {
+    display: inline-flex;
+    align-items: center;
+    gap: $seitech-space-1;
+    padding: 0;
+    font-weight: $seitech-font-weight-medium;
+    color: $seitech-primary;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color $seitech-transition-base $seitech-ease-in-out;
+
+    &:hover {
+        color: $seitech-primary-700;
+
+        .btn-arrow {
+            transform: translateX(4px);
+        }
+    }
+
+    .btn-arrow {
+        transition: transform $seitech-transition-base $seitech-ease-in-out;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Loading State
+// --------------------------------------------------------------------------
+
+.btn-seitech-loading {
+    position: relative;
+    color: transparent !important;
+    pointer-events: none;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1.25em;
+        height: 1.25em;
+        margin-top: -0.625em;
+        margin-left: -0.625em;
+        border: 2px solid currentColor;
+        border-right-color: transparent;
+        border-radius: 50%;
+        animation: spin 0.75s linear infinite;
+    }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

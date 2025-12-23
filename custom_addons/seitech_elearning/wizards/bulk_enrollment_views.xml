@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Bulk Enrollment Wizard Form -->
+        <record id="view_bulk_enrollment_wizard_form" model="ir.ui.view">
+            <field name="name">seitech.bulk.enrollment.wizard.form</field>
+            <field name="model">seitech.bulk.enrollment.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Bulk Enrollment">
+                    <group>
+                        <group>
+                            <field name="channel_id"/>
+                            <field name="enrollment_type"/>
+                            <field name="company_sponsor_id"
+                                   invisible="enrollment_type != 'corporate'"/>
+                        </group>
+                        <group>
+                            <field name="expiration_date"/>
+                            <field name="send_notification"/>
+                        </group>
+                    </group>
+                    <group string="Select Students">
+                        <field name="user_ids" widget="many2many_tags"
+                               options="{'no_create': True}"
+                               domain="[('share', '=', False)]"/>
+                    </group>
+                    <group>
+                        <field name="notes" placeholder="Optional notes..."/>
+                    </group>
+                    <footer>
+                        <button name="action_enroll" string="Enroll Students"
+                                type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- Bulk Enrollment Action -->
+        <record id="action_bulk_enrollment_wizard" model="ir.actions.act_window">
+            <field name="name">Bulk Enrollment</field>
+            <field name="res_model">seitech.bulk.enrollment.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

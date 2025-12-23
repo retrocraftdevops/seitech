@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_cms_partner_tree" model="ir.ui.view">
+        <field name="name">seitech.cms.partner.tree</field>
+        <field name="model">seitech.cms.partner</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="partner_type"/>
+                <field name="accreditation_number"/>
+                <field name="show_on_homepage"/>
+                <field name="is_published"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_cms_partner_form" model="ir.ui.view">
+        <field name="name">seitech.cms.partner.form</field>
+        <field name="model">seitech.cms.partner</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="is_published" widget="boolean_toggle"/>
+                </header>
+                <sheet>
+                    <field name="logo" widget="image" class="oe_avatar"/>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Partner Name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="partner_type"/>
+                            <field name="website_url"/>
+                            <field name="description"/>
+                        </group>
+                        <group>
+                            <field name="is_featured"/>
+                            <field name="show_on_homepage"/>
+                            <field name="sequence"/>
+                        </group>
+                    </group>
+                    <group string="Accreditation Details" invisible="partner_type not in ('accreditation', 'certification')">
+                        <group>
+                            <field name="accreditation_number"/>
+                            <field name="accreditation_expiry"/>
+                        </group>
+                        <group>
+                            <field name="certificate_url"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="logo_dark" widget="image"/>
+                        </group>
+                        <group>
+                            <field name="partner_id"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_cms_partner_kanban" model="ir.ui.view">
+        <field name="name">seitech.cms.partner.kanban</field>
+        <field name="model">seitech.cms.partner</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="name"/>
+                <field name="logo"/>
+                <field name="partner_type"/>
+                <templates>
+                    <t t-name="card">
+                        <aside>
+                            <field name="logo" widget="image" class="o_kanban_image"/>
+                        </aside>
+                        <main>
+                            <field name="name" class="fw-bold fs-5"/>
+                            <field name="partner_type" class="text-muted"/>
+                        </main>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="action_cms_partners" model="ir.actions.act_window">
+        <field name="name">Partners &amp; Accreditations</field>
+        <field name="res_model">seitech.cms.partner</field>
+        <field name="view_mode">kanban,list,form</field>
+    </record>
+</odoo>

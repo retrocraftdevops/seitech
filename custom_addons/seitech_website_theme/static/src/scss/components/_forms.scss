@@ -1,0 +1,306 @@
+// ==========================================================================
+// Seitech Website Theme - Forms
+// ==========================================================================
+
+// Note: variables and mixins are loaded before this file via __manifest__.py
+
+// --------------------------------------------------------------------------
+// Form Group
+// --------------------------------------------------------------------------
+
+.form-group-seitech {
+    margin-bottom: $seitech-space-6;
+}
+
+// --------------------------------------------------------------------------
+// Labels
+// --------------------------------------------------------------------------
+
+.label-seitech {
+    display: block;
+    margin-bottom: $seitech-space-2;
+    font-size: $seitech-font-size-sm;
+    font-weight: $seitech-font-weight-medium;
+    color: $seitech-gray-700;
+
+    .required {
+        color: $seitech-danger;
+        margin-left: $seitech-space-1;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Input Fields
+// --------------------------------------------------------------------------
+
+.input-seitech {
+    @include input-base;
+}
+
+.input-seitech-lg {
+    @include input-base;
+    padding: $seitech-space-4 $seitech-space-5;
+    font-size: $seitech-font-size-lg;
+}
+
+.input-seitech-sm {
+    @include input-base;
+    padding: $seitech-space-2 $seitech-space-3;
+    font-size: $seitech-font-size-sm;
+}
+
+// With icon
+.input-with-icon {
+    position: relative;
+
+    .input-icon {
+        position: absolute;
+        top: 50%;
+        left: $seitech-space-4;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        color: $seitech-gray-400;
+        pointer-events: none;
+    }
+
+    .input-seitech {
+        padding-left: $seitech-space-12;
+    }
+
+    &.icon-right {
+        .input-icon {
+            left: auto;
+            right: $seitech-space-4;
+        }
+
+        .input-seitech {
+            padding-left: $seitech-space-4;
+            padding-right: $seitech-space-12;
+        }
+    }
+}
+
+// --------------------------------------------------------------------------
+// Textarea
+// --------------------------------------------------------------------------
+
+.textarea-seitech {
+    @include input-base;
+    min-height: 120px;
+    resize: vertical;
+}
+
+// --------------------------------------------------------------------------
+// Select
+// --------------------------------------------------------------------------
+
+.select-seitech {
+    @include input-base;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right $seitech-space-4 center;
+    padding-right: $seitech-space-12;
+    cursor: pointer;
+}
+
+// --------------------------------------------------------------------------
+// Checkbox & Radio
+// --------------------------------------------------------------------------
+
+.checkbox-seitech,
+.radio-seitech {
+    display: flex;
+    align-items: flex-start;
+    gap: $seitech-space-3;
+    cursor: pointer;
+
+    input {
+        width: 20px;
+        height: 20px;
+        margin: 0;
+        accent-color: $seitech-primary;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+
+    .checkbox-label,
+    .radio-label {
+        font-size: $seitech-font-size-base;
+        color: $seitech-text-primary;
+        line-height: $seitech-line-height-normal;
+    }
+
+    .checkbox-description,
+    .radio-description {
+        font-size: $seitech-font-size-sm;
+        color: $seitech-text-secondary;
+        margin-top: $seitech-space-1;
+    }
+}
+
+// Custom checkbox
+.checkbox-custom {
+    display: flex;
+    align-items: center;
+    gap: $seitech-space-3;
+    cursor: pointer;
+
+    input {
+        display: none;
+    }
+
+    .checkbox-box {
+        width: 20px;
+        height: 20px;
+        border: 2px solid $seitech-gray-300;
+        border-radius: $seitech-radius-sm;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all $seitech-transition-base $seitech-ease-in-out;
+
+        svg {
+            width: 14px;
+            height: 14px;
+            color: $seitech-white;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all $seitech-transition-base $seitech-ease-in-out;
+        }
+    }
+
+    input:checked + .checkbox-box {
+        background-color: $seitech-primary;
+        border-color: $seitech-primary;
+
+        svg {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    input:focus + .checkbox-box {
+        box-shadow: 0 0 0 3px rgba($seitech-primary, 0.2);
+    }
+}
+
+// --------------------------------------------------------------------------
+// Toggle Switch
+// --------------------------------------------------------------------------
+
+.toggle-seitech {
+    display: flex;
+    align-items: center;
+    gap: $seitech-space-3;
+    cursor: pointer;
+
+    input {
+        display: none;
+    }
+
+    .toggle-track {
+        width: 44px;
+        height: 24px;
+        background-color: $seitech-gray-300;
+        border-radius: $seitech-radius-full;
+        position: relative;
+        transition: background-color $seitech-transition-base $seitech-ease-in-out;
+
+        .toggle-thumb {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 20px;
+            height: 20px;
+            background-color: $seitech-white;
+            border-radius: $seitech-radius-full;
+            box-shadow: $seitech-shadow-sm;
+            transition: transform $seitech-transition-base $seitech-ease-in-out;
+        }
+    }
+
+    input:checked + .toggle-track {
+        background-color: $seitech-primary;
+
+        .toggle-thumb {
+            transform: translateX(20px);
+        }
+    }
+
+    .toggle-label {
+        font-size: $seitech-font-size-base;
+        color: $seitech-text-primary;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Error State
+// --------------------------------------------------------------------------
+
+.input-error {
+    border-color: $seitech-danger !important;
+
+    &:focus {
+        box-shadow: 0 0 0 3px rgba($seitech-danger, 0.1) !important;
+    }
+}
+
+.error-message {
+    display: flex;
+    align-items: center;
+    gap: $seitech-space-1;
+    margin-top: $seitech-space-2;
+    font-size: $seitech-font-size-sm;
+    color: $seitech-danger;
+
+    .error-icon {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Help Text
+// --------------------------------------------------------------------------
+
+.help-text {
+    margin-top: $seitech-space-2;
+    font-size: $seitech-font-size-sm;
+    color: $seitech-text-secondary;
+}
+
+// --------------------------------------------------------------------------
+// Newsletter Form
+// --------------------------------------------------------------------------
+
+.newsletter-form-seitech {
+    display: flex;
+    gap: $seitech-space-3;
+
+    @include sm {
+        max-width: 400px;
+    }
+
+    .newsletter-input {
+        flex: 1;
+        @include input-base;
+        background-color: $seitech-gray-800;
+        border-color: $seitech-gray-700;
+        color: $seitech-white;
+
+        &::placeholder {
+            color: $seitech-gray-400;
+        }
+
+        &:focus {
+            border-color: $seitech-primary;
+        }
+    }
+
+    .newsletter-submit {
+        @include button-primary;
+        flex-shrink: 0;
+    }
+}

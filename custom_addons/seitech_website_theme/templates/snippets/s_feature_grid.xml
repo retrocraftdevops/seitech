@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Feature Grid Snippet -->
+        <template id="s_feature_grid" name="Feature Grid">
+            <section class="section-features section-seitech oe_snippet_body">
+                <div class="container-seitech">
+                    <div class="section-header">
+                        <span class="badge-seitech-primary badge-seitech-lg">Why Choose Us</span>
+                        <h2 class="section-title">Everything You Need to Succeed</h2>
+                        <p class="section-subtitle">
+                            Our comprehensive learning platform provides all the tools and resources
+                            you need to develop new skills and advance your career.
+                        </p>
+                    </div>
+
+                    <div class="features-grid">
+                        <!-- Feature 1 -->
+                        <div class="feature-card" data-animate="fadeInUp">
+                            <div class="feature-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Expert-Led Courses</h3>
+                            <p class="feature-description">
+                                Learn from industry professionals with years of real-world experience.
+                                Our instructors bring practical insights to every lesson.
+                            </p>
+                        </div>
+
+                        <!-- Feature 2 -->
+                        <div class="feature-card" data-animate="fadeInUp">
+                            <div class="feature-icon" style="background-color: #ecfdf5; color: #059669;">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    <path d="m9 12 2 2 4-4"/>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Verified Certificates</h3>
+                            <p class="feature-description">
+                                Earn industry-recognized certificates that validate your skills.
+                                Share your achievements with employers and on LinkedIn.
+                            </p>
+                        </div>
+
+                        <!-- Feature 3 -->
+                        <div class="feature-card" data-animate="fadeInUp">
+                            <div class="feature-icon" style="background-color: #fef3c7; color: #d97706;">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Learn at Your Pace</h3>
+                            <p class="feature-description">
+                                Access courses anytime, anywhere. Our flexible platform lets you
+                                learn on your schedule with lifetime access to content.
+                            </p>
+                        </div>
+
+                        <!-- Feature 4 -->
+                        <div class="feature-card" data-animate="fadeInUp">
+                            <div class="feature-icon" style="background-color: #fce7f3; color: #db2777;">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Interactive Learning</h3>
+                            <p class="feature-description">
+                                Engage with quizzes, assignments, and hands-on projects.
+                                Get feedback from instructors and connect with peers.
+                            </p>
+                        </div>
+
+                        <!-- Feature 5 -->
+                        <div class="feature-card" data-animate="fadeInUp">
+                            <div class="feature-icon" style="background-color: #ede9fe; color: #7c3aed;">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2"/>
+                                    <path d="M8 21h8M12 17v4"/>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Multi-Device Access</h3>
+                            <p class="feature-description">
+                                Learn on desktop, tablet, or mobile. Your progress syncs
+                                automatically so you can continue where you left off.
+                            </p>
+                        </div>
+
+                        <!-- Feature 6 -->
+                        <div class="feature-card" data-animate="fadeInUp">
+                            <div class="feature-icon" style="background-color: #fee2e2; color: #dc2626;">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Community Support</h3>
+                            <p class="feature-description">
+                                Join a community of learners and professionals. Share knowledge,
+                                ask questions, and grow together.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+
+    </data>
+</odoo>

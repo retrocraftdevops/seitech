@@ -1,0 +1,339 @@
+// ==========================================================================
+// Seitech Website Theme - Main Stylesheet
+// ==========================================================================
+// Note: All component/page files are loaded via __manifest__.py assets bundle
+// Do NOT use @import - Odoo 19 forbids local imports for security reasons
+
+// ==========================================================================
+// Global Styles
+// ==========================================================================
+
+// --------------------------------------------------------------------------
+// Base
+// --------------------------------------------------------------------------
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $seitech-font-family;
+    font-size: $seitech-font-size-base;
+    line-height: $seitech-line-height-normal;
+    color: $seitech-text-primary;
+    background-color: $seitech-white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// --------------------------------------------------------------------------
+// Typography
+// --------------------------------------------------------------------------
+
+h1, .h1 {
+    @include heading-1;
+}
+
+h2, .h2 {
+    @include heading-2;
+}
+
+h3, .h3 {
+    @include heading-3;
+}
+
+p {
+    margin-bottom: $seitech-space-4;
+}
+
+a {
+    color: $seitech-primary;
+    text-decoration: none;
+    transition: color $seitech-transition-base $seitech-ease-in-out;
+
+    &:hover {
+        color: $seitech-primary-700;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Layout Utilities
+// --------------------------------------------------------------------------
+
+.container-seitech {
+    @include container;
+}
+
+.section-seitech {
+    @include section-padding;
+}
+
+.section-gray {
+    background-color: $seitech-gray-50;
+}
+
+.section-dark {
+    @include gradient-hero;
+    color: $seitech-white;
+
+    h1, h2, h3, h4, h5, h6 {
+        color: $seitech-white;
+    }
+
+    p {
+        color: $seitech-gray-300;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Flexbox Utilities
+// --------------------------------------------------------------------------
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.gap-2 { gap: $seitech-space-2; }
+.gap-4 { gap: $seitech-space-4; }
+.gap-6 { gap: $seitech-space-6; }
+.gap-8 { gap: $seitech-space-8; }
+
+// --------------------------------------------------------------------------
+// Grid Utilities
+// --------------------------------------------------------------------------
+
+.grid {
+    display: grid;
+}
+
+.grid-cols-1 { grid-template-columns: repeat(1, 1fr); }
+
+@include md {
+    .md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@include lg {
+    .lg\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .lg\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+// --------------------------------------------------------------------------
+// Spacing Utilities
+// --------------------------------------------------------------------------
+
+// Margin
+.m-0 { margin: 0; }
+.mt-4 { margin-top: $seitech-space-4; }
+.mt-6 { margin-top: $seitech-space-6; }
+.mt-8 { margin-top: $seitech-space-8; }
+.mb-4 { margin-bottom: $seitech-space-4; }
+.mb-6 { margin-bottom: $seitech-space-6; }
+.mb-8 { margin-bottom: $seitech-space-8; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+// Padding
+.p-0 { padding: 0; }
+.p-4 { padding: $seitech-space-4; }
+.p-6 { padding: $seitech-space-6; }
+.p-8 { padding: $seitech-space-8; }
+.py-4 { padding-top: $seitech-space-4; padding-bottom: $seitech-space-4; }
+.py-8 { padding-top: $seitech-space-8; padding-bottom: $seitech-space-8; }
+.py-16 { padding-top: $seitech-space-16; padding-bottom: $seitech-space-16; }
+.px-4 { padding-left: $seitech-space-4; padding-right: $seitech-space-4; }
+.px-6 { padding-left: $seitech-space-6; padding-right: $seitech-space-6; }
+
+// --------------------------------------------------------------------------
+// Text Utilities
+// --------------------------------------------------------------------------
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.text-sm { font-size: $seitech-font-size-sm; }
+.text-base { font-size: $seitech-font-size-base; }
+.text-lg { font-size: $seitech-font-size-lg; }
+.text-xl { font-size: $seitech-font-size-xl; }
+.text-2xl { font-size: $seitech-font-size-2xl; }
+
+.font-normal { font-weight: $seitech-font-weight-normal; }
+.font-medium { font-weight: $seitech-font-weight-medium; }
+.font-semibold { font-weight: $seitech-font-weight-semibold; }
+.font-bold { font-weight: $seitech-font-weight-bold; }
+
+.text-primary { color: $seitech-primary; }
+.text-secondary { color: $seitech-text-secondary; }
+.text-muted { color: $seitech-text-muted; }
+.text-white { color: $seitech-white; }
+.text-success { color: $seitech-success; }
+.text-danger { color: $seitech-danger; }
+
+// --------------------------------------------------------------------------
+// Background Utilities
+// --------------------------------------------------------------------------
+
+.bg-white { background-color: $seitech-white; }
+.bg-gray-50 { background-color: $seitech-gray-50; }
+.bg-gray-100 { background-color: $seitech-gray-100; }
+.bg-primary { background-color: $seitech-primary; }
+.bg-primary-50 { background-color: $seitech-primary-50; }
+
+// --------------------------------------------------------------------------
+// Border Utilities
+// --------------------------------------------------------------------------
+
+.rounded { border-radius: $seitech-radius-base; }
+.rounded-lg { border-radius: $seitech-radius-lg; }
+.rounded-xl { border-radius: $seitech-radius-xl; }
+.rounded-2xl { border-radius: $seitech-radius-2xl; }
+.rounded-full { border-radius: $seitech-radius-full; }
+
+.border { border: 1px solid $seitech-border; }
+.border-t { border-top: 1px solid $seitech-border; }
+.border-b { border-bottom: 1px solid $seitech-border; }
+
+// --------------------------------------------------------------------------
+// Shadow Utilities
+// --------------------------------------------------------------------------
+
+.shadow-sm { box-shadow: $seitech-shadow-sm; }
+.shadow { box-shadow: $seitech-shadow-base; }
+.shadow-md { box-shadow: $seitech-shadow-md; }
+.shadow-lg { box-shadow: $seitech-shadow-lg; }
+.shadow-xl { box-shadow: $seitech-shadow-xl; }
+
+// --------------------------------------------------------------------------
+// Visibility Utilities
+// --------------------------------------------------------------------------
+
+.hidden { display: none; }
+.block { display: block; }
+.inline-block { display: inline-block; }
+.inline-flex { display: inline-flex; }
+
+@include md {
+    .md\:block { display: block; }
+    .md\:hidden { display: none; }
+}
+
+@include lg {
+    .lg\:block { display: block; }
+    .lg\:hidden { display: none; }
+    .lg\:flex { display: flex; }
+}
+
+// --------------------------------------------------------------------------
+// Width/Height Utilities
+// --------------------------------------------------------------------------
+
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+.min-h-screen { min-height: 100vh; }
+
+// --------------------------------------------------------------------------
+// Accessibility
+// --------------------------------------------------------------------------
+
+.sr-only {
+    @include visually-hidden;
+}
+
+.focus-visible:focus {
+    outline: 2px solid $seitech-primary;
+    outline-offset: 2px;
+}
+
+// Skip to content link
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: $seitech-primary;
+    color: $seitech-white;
+    padding: $seitech-space-3 $seitech-space-4;
+    z-index: $seitech-z-tooltip;
+    transition: top $seitech-transition-base $seitech-ease-in-out;
+
+    &:focus {
+        top: 0;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Animations
+// --------------------------------------------------------------------------
+
+.animate-fade-in {
+    @include fade-in;
+}
+
+.animate-fade-in-up {
+    @include fade-in-up;
+}
+
+.hover-lift {
+    @include hover-lift;
+}
+
+// --------------------------------------------------------------------------
+// Odoo Overrides
+// --------------------------------------------------------------------------
+
+// Override default website builder styles to match our theme
+.o_website_preview,
+.o_website_render {
+    font-family: $seitech-font-family !important;
+}
+
+// Ensure snippets use our styling
+.s_text_block,
+.s_features,
+.s_three_columns {
+    .container {
+        max-width: $seitech-container-max-width;
+    }
+}
+
+// Footer override
+.o_footer {
+    background-color: $seitech-gray-900;
+    color: $seitech-gray-300;
+
+    a {
+        color: $seitech-gray-400;
+
+        &:hover {
+            color: $seitech-white;
+        }
+    }
+}

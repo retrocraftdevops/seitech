@@ -1,0 +1,4190 @@
+# Translation file for Seitech E-Learning
+# Converted from legacy PHP application
+# Copyright (C) 2025 Seitech International
+# This file is distributed under the LGPL-3 license.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Seitech E-Learning 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-22 21:34+0000\n"
+"PO-Revision-Date: 2025-12-22 21:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ur\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Legacy key: manage_profile
+msgid "Manage profile"
+msgstr "پروفائل کا نظم کریں۔"
+
+#. Legacy key: write_a_public_review
+msgid "Write a public review"
+msgstr "ایک عوامی جائزہ لکھیں۔"
+
+#. Legacy key: heads_up
+msgid "Heads up"
+msgstr "سر اپ"
+
+#. Legacy key: describe_your_experience_what_you_got_out_of_the_course_and_other_helpful_highlights
+msgid "Describe your experience what you got out of the course and other helpful highlights"
+msgstr "اپنے تجربے کی وضاحت کریں کہ آپ کو کورس سے کیا حاصل ہوا اور دیگر مددگار جھلکیاں"
+
+#. Legacy key: are_you_sure
+msgid "Are you sure"
+msgstr "کیا تمہیں یقین ہے"
+
+#. Legacy key: what_did_the_instructor_do_well_and_what_could_use_some_improvement
+msgid "What did the instructor do well and what could use some improvement"
+msgstr "انسٹرکٹر نے کیا اچھا کیا اور کیا کچھ بہتری کا استعمال کر سکتا ہے"
+
+#. Legacy key: cancel
+msgid "Cancel"
+msgstr "منسوخ کریں۔"
+
+#. Legacy key: continue
+msgid "Continue"
+msgstr "جاری رہے"
+
+#. Legacy key: next
+msgid "Next"
+msgstr "اگلے"
+
+#. Legacy key: previous
+msgid "Previous"
+msgstr "پچھلا"
+
+#. Legacy key: publish
+msgid "Publish"
+msgstr "شائع کریں۔"
+
+#. Legacy key: delete
+msgid "Delete"
+msgstr "حذف کریں۔"
+
+#. Legacy key: 404_page_not_found
+msgid "404 page not found"
+msgstr "404 صفحہ نہیں ملا"
+
+#. Legacy key: courses
+msgid "Courses"
+msgstr "کورسز"
+
+#. Legacy key: all_courses
+msgid "All courses"
+msgstr "تمام کورسز"
+
+#. Legacy key: search_for_courses
+msgid "Search for courses"
+msgstr "کورسز تلاش کریں۔"
+
+#. Legacy key: total
+msgid "Total"
+msgstr "کل"
+
+#. Legacy key: go_to_cart
+msgid "Go to cart"
+msgstr "ٹوکری پر جائیں۔"
+
+#. Legacy key: your_cart_is_empty
+msgid "Your cart is empty"
+msgstr "آپ کی ٹوکری خالی ہے"
+
+#. Legacy key: log_in
+msgid "Log in"
+msgstr "لاگ ان کریں"
+
+#. Legacy key: sign_up
+msgid "Sign up"
+msgstr "سائن اپ"
+
+#. Legacy key: cookie_policy
+msgid "Cookie policy"
+msgstr "کوکی پالیسی"
+
+#. Legacy key: accept
+msgid "Accept"
+msgstr "قبول کریں۔"
+
+#. Legacy key: oh_snap
+msgid "Oh snap"
+msgstr "اوہ سنیپ"
+
+#. Legacy key: this_is_not_the_web_page_you_are_looking_for
+msgid "This is not the web page you are looking for"
+msgstr "یہ وہ ویب صفحہ نہیں ہے جس کی آپ تلاش کر رہے ہیں۔"
+
+#. Legacy key: back_to_home
+msgid "Back to home"
+msgstr "واپس گھر"
+
+#. Legacy key: about
+msgid "About"
+msgstr "کے بارے میں"
+
+#. Legacy key: privacy_policy
+msgid "Privacy policy"
+msgstr "رازداری کی پالیسی"
+
+#. Legacy key: terms_and_condition
+msgid "Terms and condition"
+msgstr "شرائط و ضوابط"
+
+#. Legacy key: login
+msgid "Login"
+msgstr "لاگ ان کریں"
+
+#. Legacy key: step
+msgid "Step"
+msgstr "قدم"
+
+#. Legacy key: how_would_you_rate_this_course_overall
+msgid "How would you rate this course overall"
+msgstr "آپ اس کورس کو مجموعی طور پر کیسے درجہ دیں گے۔"
+
+#. Legacy key: all_category
+msgid "All category"
+msgstr "تمام زمرہ"
+
+#. Legacy key: showing_on_this_page
+msgid "Showing on this page"
+msgstr "اس صفحہ پر دکھا رہا ہے۔"
+
+#. Legacy key: filter
+msgid "Filter"
+msgstr "فلٹر"
+
+#. Legacy key: categories
+msgid "Categories"
+msgstr "اقسام"
+
+#. Legacy key: show_more
+msgid "Show more"
+msgstr "مزید دکھائیں"
+
+#. Legacy key: price
+msgid "Price"
+msgstr "قیمت"
+
+#. Legacy key: all
+msgid "All"
+msgstr "تمام"
+
+#. Legacy key: free
+msgid "Free"
+msgstr "مفت"
+
+#. Legacy key: paid
+msgid "Paid"
+msgstr "ادا کیا"
+
+#. Legacy key: level
+msgid "Level"
+msgstr "سطح"
+
+#. Legacy key: beginner
+msgid "Beginner"
+msgstr "شروع"
+
+#. Legacy key: advanced
+msgid "Advanced"
+msgstr "اعلی درجے کی"
+
+#. Legacy key: intermediate
+msgid "Intermediate"
+msgstr "انٹرمیڈیٹ"
+
+#. Legacy key: language
+msgid "Language"
+msgstr "زبان"
+
+#. Legacy key: ratings
+msgid "Ratings"
+msgstr "ریٹنگز"
+
+#. Legacy key: lessons
+msgid "Lessons"
+msgstr "اسباق"
+
+#. Legacy key: hours
+msgid "Hours"
+msgstr "گھنٹے"
+
+#. Legacy key: show_less
+msgid "Show less"
+msgstr "کم دکھائیں۔"
+
+#. Legacy key: course
+msgid "Course"
+msgstr "کورس"
+
+#. Legacy key: students_enrolled
+msgid "Students enrolled"
+msgstr "طلباء نے داخلہ لیا۔"
+
+#. Legacy key: created_by
+msgid "Created by"
+msgstr "بنائی گئی"
+
+#. Legacy key: last_updated
+msgid "Last updated"
+msgstr "آخری بار اپ ڈیٹ کیا گیا۔"
+
+#. Legacy key: what_will_i_learn
+msgid "What will i learn"
+msgstr "میں کیا سیکھوں گا"
+
+#. Legacy key: curriculum_for_this_course
+msgid "Curriculum for this course"
+msgstr "اس کورس کے لیے نصاب"
+
+#. Legacy key: requirements
+msgid "Requirements"
+msgstr "تقاضے"
+
+#. Legacy key: view_more
+msgid "View more"
+msgstr "مزید دیکھیں"
+
+#. Legacy key: description
+msgid "Description"
+msgstr "تفصیل"
+
+#. Legacy key: other_related_courses
+msgid "Other related courses"
+msgstr "دیگر متعلقہ کورسز"
+
+#. Legacy key: updated
+msgid "Updated"
+msgstr "تازہ کاری"
+
+#. Legacy key: about_the_instructor
+msgid "About the instructor"
+msgstr "انسٹرکٹر کے بارے میں"
+
+#. Legacy key: reviews
+msgid "Reviews"
+msgstr "جائزے"
+
+#. Legacy key: students
+msgid "Students"
+msgstr "طلباء"
+
+#. Legacy key: student_feedback
+msgid "Student feedback"
+msgstr "طالب علم کی رائے"
+
+#. Legacy key: average_rating
+msgid "Average rating"
+msgstr "اوسط درجہ بندی"
+
+#. Legacy key: buy_now
+msgid "Buy now"
+msgstr "ابھی خریدئے"
+
+#. Legacy key: added_to_cart
+msgid "Added to cart"
+msgstr "کارٹ میں شامل کر دیا گیا۔"
+
+#. Legacy key: includes
+msgid "Includes"
+msgstr "شامل"
+
+#. Legacy key: on_demand_videos
+msgid "On demand videos"
+msgstr "آن ڈیمانڈ ویڈیوز"
+
+#. Legacy key: full_lifetime_access
+msgid "Full lifetime access"
+msgstr "پوری زندگی تک رسائی"
+
+#. Legacy key: access_on_mobile_and_tv
+msgid "Access on mobile and tv"
+msgstr "موبائل اور ٹی وی پر رسائی"
+
+#. Legacy key: add_to_cart
+msgid "Add to cart"
+msgstr "ٹوکری میں شامل کریں"
+
+#. Legacy key: please_wait
+msgid "Please wait"
+msgstr "برائے مہربانی انتظار کریں"
+
+#. Legacy key: preview_this_course
+msgid "Preview this course"
+msgstr "اس کورس کا جائزہ لیں۔"
+
+#. Legacy key: course_preview
+msgid "Course preview"
+msgstr "کورس کا پیش نظارہ"
+
+#. Legacy key: admin_revenue
+msgid "Admin revenue"
+msgstr "ایڈمن کی آمدنی"
+
+#. Legacy key: admin
+msgid "Admin"
+msgstr "ایڈمن"
+
+#. Legacy key: welcome
+msgid "Welcome"
+msgstr "خوش آمدید"
+
+#. Legacy key: my_account
+msgid "My account"
+msgstr "میرا اکاونٹ"
+
+#. Legacy key: settings
+msgid "Settings"
+msgstr "ترتیبات"
+
+#. Legacy key: logout
+msgid "Logout"
+msgstr "لاگ آوٹ"
+
+#. Legacy key: visit_website
+msgid "Visit website"
+msgstr "ویب سائیٹ پر جائیں"
+
+#. Legacy key: navigation
+msgid "Navigation"
+msgstr "سمت شناسی"
+
+#. Legacy key: dashboard
+msgid "Dashboard"
+msgstr "ڈیش بورڈ"
+
+#. Legacy key: add_new_category
+msgid "Add new category"
+msgstr "نیا زمرہ شامل کریں۔"
+
+#. Legacy key: instructors
+msgid "Instructors"
+msgstr "انسٹرکٹرز"
+
+#. Legacy key: enrolment
+msgid "Enrolment"
+msgstr "اندراج"
+
+#. Legacy key: enrol_history
+msgid "Enrol history"
+msgstr "تاریخ کا اندراج کریں۔"
+
+#. Legacy key: enrol_a_student
+msgid "Enrol a student"
+msgstr "ایک طالب علم کا اندراج کریں۔"
+
+#. Legacy key: report
+msgid "Report"
+msgstr "رپورٹ"
+
+#. Legacy key: instructor_revenue
+msgid "Instructor revenue"
+msgstr "انسٹرکٹر کی آمدنی"
+
+#. Legacy key: message
+msgid "Message"
+msgstr "پیغام"
+
+#. Legacy key: addons
+msgid "Addons"
+msgstr "ایڈونز"
+
+#. Legacy key: addon_manager
+msgid "Addon manager"
+msgstr "ایڈون مینیجر"
+
+#. Legacy key: available_addons
+msgid "Available addons"
+msgstr "دستیاب ایڈونز"
+
+#. Legacy key: system_settings
+msgid "System settings"
+msgstr "سسٹم کی ترتیبات"
+
+#. Legacy key: website_settings
+msgid "Website settings"
+msgstr "ویب سائٹ کی ترتیبات"
+
+#. Legacy key: payment_settings
+msgid "Payment settings"
+msgstr "ادائیگی کی ترتیبات"
+
+#. Legacy key: instructor_settings
+msgid "Instructor settings"
+msgstr "انسٹرکٹر کی ترتیبات"
+
+#. Legacy key: language_settings
+msgid "Language settings"
+msgstr "زبان کی ترتیبات"
+
+#. Legacy key: smtp_settings
+msgid "Smtp settings"
+msgstr "ایس ایم ٹی پی کی ترتیبات"
+
+#. Legacy key: theme_settings
+msgid "Theme settings"
+msgstr "تھیم کی ترتیبات"
+
+#. Legacy key: enrolled_course
+msgid "Enrolled course"
+msgstr "اندراج شدہ کورس"
+
+#. Legacy key: total_amount
+msgid "Total amount"
+msgstr "کل رقم"
+
+#. Legacy key: enrolment_date
+msgid "Enrolment date"
+msgstr "اندراج کی تاریخ"
+
+#. Legacy key: actions
+msgid "Actions"
+msgstr "اعمال"
+
+#. Legacy key: this_year
+msgid "This year"
+msgstr "اس سال"
+
+#. Legacy key: active_course
+msgid "Active course"
+msgstr "ایکٹو کورس"
+
+#. Legacy key: pending_course
+msgid "Pending course"
+msgstr "زیر التوا کورس"
+
+#. Legacy key: congratulations
+msgid "Congratulations"
+msgstr "مبارک ہو"
+
+#. Legacy key: please_fill_all_the_required_fields
+msgid "Please fill all the required fields"
+msgstr "براہ کرم تمام مطلوبہ فیلڈز کو پُر کریں۔"
+
+#. Legacy key: close
+msgid "Close"
+msgstr "بند کریں"
+
+#. Legacy key: private_messaging
+msgid "Private messaging"
+msgstr "نجی پیغام رسانی"
+
+#. Legacy key: private_message
+msgid "Private message"
+msgstr "ذاتی پیغام"
+
+#. Legacy key: new_message
+msgid "New message"
+msgstr "نیا پیغام"
+
+#. Legacy key: home
+msgid "Home"
+msgstr "گھر"
+
+#. Legacy key: menu
+msgid "Menu"
+msgstr "مینو"
+
+#. Legacy key: all_tutions
+msgid "All tutions"
+msgstr "تمام ٹیوشنز"
+
+#. Legacy key: ebooks
+msgid "Ebooks"
+msgstr "ای بکس"
+
+#. Legacy key: course_bundles
+msgid "Course bundles"
+msgstr "کورس کے بنڈل"
+
+#. Legacy key: administrator
+msgid "Administrator"
+msgstr "ایڈمنسٹریٹر"
+
+#. Legacy key: learn_on_your_schedule
+msgid "Learn on your schedule"
+msgstr "اپنے شیڈول پر سیکھیں۔"
+
+#. Legacy key: what_do_you_want_to_learn
+msgid "What do you want to learn"
+msgstr "آپ کیا سیکھنا چاہتے ہو"
+
+#. Legacy key: search
+msgid "Search"
+msgstr "تلاش کریں۔"
+
+#. Legacy key: online_courses
+msgid "Online courses"
+msgstr "آن لائن کورسز"
+
+#. Legacy key: explore_a_variety_of_fresh_topics
+msgid "Explore a variety of fresh topics"
+msgstr "مختلف قسم کے تازہ موضوعات کو دریافت کریں۔"
+
+#. Legacy key: expert_instruction
+msgid "Expert instruction"
+msgstr "ماہر کی ہدایت"
+
+#. Legacy key: find_the_right_course_for_you
+msgid "Find the right course for you"
+msgstr "اپنے لیے صحیح کورس تلاش کریں۔"
+
+#. Legacy key: lifetime_access
+msgid "Lifetime access"
+msgstr "زندگی بھر رسائی"
+
+#. Legacy key: top_categories
+msgid "Top categories"
+msgstr "سرفہرست زمرے"
+
+#. Legacy key: top_courses
+msgid "Top courses"
+msgstr "ٹاپ کورسز"
+
+#. Legacy key: compare
+msgid "Compare"
+msgstr "موازنہ کریں۔"
+
+#. Legacy key: lectures
+msgid "Lectures"
+msgstr "لیکچرز"
+
+#. Legacy key: get_enrolled
+msgid "Get enrolled"
+msgstr "اندراج کروائیں۔"
+
+#. Legacy key: top
+msgid "Top"
+msgstr "اوپر"
+
+#. Legacy key: latest_courses
+msgid "Latest courses"
+msgstr "تازہ ترین کورسز"
+
+#. Legacy key: h5p_course
+msgid "H5p course"
+msgstr "H5p کورس"
+
+#. Legacy key: scorm_course
+msgid "Scorm course"
+msgstr "اسکارم کورس"
+
+#. Legacy key: featured_instructor
+msgid "Featured instructor"
+msgstr "نمایاں انسٹرکٹر"
+
+#. Legacy key: join_now_to_start_learning
+msgid "Join now to start learning"
+msgstr "سیکھنا شروع کرنے کے لیے ابھی شامل ہوں۔"
+
+#. Legacy key: get_started
+msgid "Get started"
+msgstr "شروع کرنے کے"
+
+#. Legacy key: become_a_new_instructor
+msgid "Become a new instructor"
+msgstr "ایک نیا انسٹرکٹر بنیں۔"
+
+#. Legacy key: join_now
+msgid "Join now"
+msgstr "ابھی شامل ہوں"
+
+#. Legacy key: useful_links
+msgid "Useful links"
+msgstr "مفید لنکس"
+
+#. Legacy key: blog
+msgid "Blog"
+msgstr "بلاگ"
+
+#. Legacy key: help
+msgid "Help"
+msgstr "مدد"
+
+#. Legacy key: about_us
+msgid "About us"
+msgstr "ہمارے بارے میں"
+
+#. Legacy key: refund_policy
+msgid "Refund policy"
+msgstr "رقم کی واپسی کی پالیسی"
+
+#. Legacy key: all_rights_reserved
+msgid "All rights reserved"
+msgstr "جملہ حقوق محفوظ ہیں"
+
+#. Legacy key: yes
+msgid "Yes"
+msgstr "جی ہاں"
+
+#. Legacy key: no
+msgid "No"
+msgstr "نہیں"
+
+#. Legacy key: view_less
+msgid "View less"
+msgstr "کم دیکھیں"
+
+#. Legacy key: ai_writer
+msgid "Ai writer"
+msgstr "اے لکھاری"
+
+#. Legacy key: quick_actions
+msgid "Quick actions"
+msgstr "فوری اقدامات"
+
+#. Legacy key: create_course
+msgid "Create course"
+msgstr "کورس بنائیں"
+
+#. Legacy key: add_course
+msgid "Add course"
+msgstr "کورس شامل کریں۔"
+
+#. Legacy key: add_new_lesson
+msgid "Add new lesson"
+msgstr "نیا سبق شامل کریں۔"
+
+#. Legacy key: add_lesson
+msgid "Add lesson"
+msgstr "سبق شامل کریں۔"
+
+#. Legacy key: add_student
+msgid "Add student"
+msgstr "طالب علم کو شامل کریں۔"
+
+#. Legacy key: enrol_student
+msgid "Enrol student"
+msgstr "طالب علم کا اندراج کریں۔"
+
+#. Legacy key: help_center
+msgid "Help center"
+msgstr "مدداور تعاون کا مرکز"
+
+#. Legacy key: read_documentation
+msgid "Read documentation"
+msgstr "دستاویزات پڑھیں"
+
+#. Legacy key: watch_video_tutorial
+msgid "Watch video tutorial"
+msgstr "ویڈیو ٹیوٹوریل دیکھیں"
+
+#. Legacy key: get_customer_support
+msgid "Get customer support"
+msgstr "کسٹمر سپورٹ حاصل کریں۔"
+
+#. Legacy key: order_customization
+msgid "Order customization"
+msgstr "حسب ضرورت آرڈر کریں۔"
+
+#. Legacy key: request_a_new_feature
+msgid "Request a new feature"
+msgstr "ایک نئی خصوصیت کی درخواست کریں۔"
+
+#. Legacy key: browse_addons
+msgid "Browse addons"
+msgstr "ایڈونز کو براؤز کریں۔"
+
+#. Legacy key: manage_courses
+msgid "Manage courses"
+msgstr "کورسز کا انتظام کریں۔"
+
+#. Legacy key: add_new_course
+msgid "Add new course"
+msgstr "نیا کورس شامل کریں۔"
+
+#. Legacy key: course_category
+msgid "Course category"
+msgstr "کورس کیٹیگری"
+
+#. Legacy key: coupons
+msgid "Coupons"
+msgstr "کوپن"
+
+#. Legacy key: course_bundle
+msgid "Course bundle"
+msgstr "کورس بنڈل"
+
+#. Legacy key: add_new_bundle
+msgid "Add new bundle"
+msgstr "نیا بنڈل شامل کریں۔"
+
+#. Legacy key: manage_bundle
+msgid "Manage bundle"
+msgstr "بنڈل کا نظم کریں۔"
+
+#. Legacy key: subscription_report
+msgid "Subscription report"
+msgstr "سبسکرپشن رپورٹ"
+
+#. Legacy key: tutor_booking
+msgid "Tutor booking"
+msgstr "ٹیوٹر بکنگ"
+
+#. Legacy key: subject_category
+msgid "Subject category"
+msgstr "مضمون کا زمرہ"
+
+#. Legacy key: add_booking
+msgid "Add booking"
+msgstr "بکنگ شامل کریں۔"
+
+#. Legacy key: all_bookings
+msgid "All bookings"
+msgstr "تمام بکنگ"
+
+#. Legacy key: booked_schedules
+msgid "Booked schedules"
+msgstr "بک شدہ نظام الاوقات"
+
+#. Legacy key: live_class_settings
+msgid "Live class settings"
+msgstr "لائیو کلاس کی ترتیبات"
+
+#. Legacy key: ebook
+msgid "Ebook"
+msgstr "ای بک"
+
+#. Legacy key: all_ebooks
+msgid "All ebooks"
+msgstr "تمام ای بکس"
+
+#. Legacy key: add_ebook
+msgid "Add ebook"
+msgstr "ای بک شامل کریں۔"
+
+#. Legacy key: payment_history
+msgid "Payment history"
+msgstr "ادائیگی کی تاریخ"
+
+#. Legacy key: category
+msgid "Category"
+msgstr "قسم"
+
+#. Legacy key: course_enrollment
+msgid "Course enrollment"
+msgstr "کورس کا اندراج"
+
+#. Legacy key: purchase_history
+msgid "Purchase history"
+msgstr "خریداری کی تاریخ"
+
+#. Legacy key: affiliate
+msgid "Affiliate"
+msgstr "ملحق"
+
+#. Legacy key: affliliator_list
+msgid "Affliliator list"
+msgstr "الحاق کرنے والوں کی فہرست"
+
+#. Legacy key: affiliation_history
+msgid "Affiliation history"
+msgstr "وابستگی کی تاریخ"
+
+#. Legacy key: payouts
+msgid "Payouts"
+msgstr "ادائیگیاں"
+
+#. Legacy key: create_affiliator
+msgid "Create affiliator"
+msgstr "ملحقہ بنائیں"
+
+#. Legacy key: affiliation_settings
+msgid "Affiliation settings"
+msgstr "وابستگی کی ترتیبات"
+
+#. Legacy key: users
+msgid "Users"
+msgstr "صارفین"
+
+#. Legacy key: admins
+msgid "Admins"
+msgstr "ایڈمنز"
+
+#. Legacy key: manage_admins
+msgid "Manage admins"
+msgstr "ایڈمنز کا نظم کریں۔"
+
+#. Legacy key: add_new_admin
+msgid "Add new admin"
+msgstr "نیا ایڈمن شامل کریں۔"
+
+#. Legacy key: manage_instructors
+msgid "Manage instructors"
+msgstr "انسٹرکٹرز کا نظم کریں۔"
+
+#. Legacy key: add_new_instructor
+msgid "Add new instructor"
+msgstr "نیا انسٹرکٹر شامل کریں۔"
+
+#. Legacy key: instructor_payout
+msgid "Instructor payout"
+msgstr "انسٹرکٹر کی ادائیگی"
+
+#. Legacy key: applications
+msgid "Applications"
+msgstr "ایپلی کیشنز"
+
+#. Legacy key: manage_students
+msgid "Manage students"
+msgstr "طلباء کا انتظام کریں۔"
+
+#. Legacy key: add_new_student
+msgid "Add new student"
+msgstr "نیا طالب علم شامل کریں۔"
+
+#. Legacy key: offline_payment
+msgid "Offline payment"
+msgstr "آف لائن ادائیگی"
+
+#. Legacy key: pending_request
+msgid "Pending request"
+msgstr "زیر التواء درخواست"
+
+#. Legacy key: accepted_request
+msgid "Accepted request"
+msgstr "درخواست قبول کر لی"
+
+#. Legacy key: suspended_request
+msgid "Suspended request"
+msgstr "معطل درخواست"
+
+#. Legacy key: offline_payment_settings
+msgid "Offline payment settings"
+msgstr "آف لائن ادائیگی کی ترتیبات"
+
+#. Legacy key: all_blogs
+msgid "All blogs"
+msgstr "تمام بلاگز"
+
+#. Legacy key: pending_blog
+msgid "Pending blog"
+msgstr "زیر التواء بلاگ"
+
+#. Legacy key: blog_category
+msgid "Blog category"
+msgstr "بلاگ زمرہ"
+
+#. Legacy key: blog_settings
+msgid "Blog settings"
+msgstr "بلاگ کی ترتیبات"
+
+#. Legacy key: customer_support
+msgid "Customer support"
+msgstr "کسٹمر سپورٹ"
+
+#. Legacy key: ticket_list
+msgid "Ticket list"
+msgstr "ٹکٹ کی فہرست"
+
+#. Legacy key: support_category
+msgid "Support category"
+msgstr "سپورٹ زمرہ"
+
+#. Legacy key: macro
+msgid "Macro"
+msgstr "وسیع"
+
+#. Legacy key: create_ticket
+msgid "Create ticket"
+msgstr "ٹکٹ بنائیں"
+
+#. Legacy key: themes
+msgid "Themes"
+msgstr "تھیمز"
+
+#. Legacy key: academy_cloud
+msgid "Academy cloud"
+msgstr "اکیڈمی کلاؤڈ"
+
+#. Legacy key: drip_content_settings
+msgid "Drip content settings"
+msgstr "ڈرپ مواد کی ترتیبات"
+
+#. Legacy key: certificate_settings
+msgid "Certificate settings"
+msgstr "سرٹیفکیٹ کی ترتیبات"
+
+#. Legacy key: s3_settings
+msgid "S3 settings"
+msgstr "S3 کی ترتیبات"
+
+#. Legacy key: open_ai_settings
+msgid "Open ai settings"
+msgstr "ai کی ترتیبات کھولیں۔"
+
+#. Legacy key: social_login
+msgid "Social login"
+msgstr "سماجی لاگ ان"
+
+#. Legacy key: custom_page
+msgid "Custom page"
+msgstr "حسب ضرورت صفحہ"
+
+#. Legacy key: data_center
+msgid "Data center"
+msgstr "ڈیٹا سینٹر"
+
+#. Legacy key: admin_revenue_this_year
+msgid "Admin revenue this year"
+msgstr "اس سال ایڈمن کی آمدنی"
+
+#. Legacy key: number_courses
+msgid "Number courses"
+msgstr "نمبر کورسز"
+
+#. Legacy key: number_of_lessons
+msgid "Number of lessons"
+msgstr "اسباق کی تعداد"
+
+#. Legacy key: number_of_enrolment
+msgid "Number of enrolment"
+msgstr "اندراج کی تعداد"
+
+#. Legacy key: number_of_student
+msgid "Number of student"
+msgstr "طالب علم کی تعداد"
+
+#. Legacy key: course_overview
+msgid "Course overview"
+msgstr "کورس کا جائزہ"
+
+#. Legacy key: active_courses
+msgid "Active courses"
+msgstr "فعال کورسز"
+
+#. Legacy key: pending_courses
+msgid "Pending courses"
+msgstr "زیر التواء کورسز"
+
+#. Legacy key: requested_withdrawal
+msgid "Requested withdrawal"
+msgstr "واپس لینے کی درخواست کی۔"
+
+#. Legacy key: email
+msgid "Email"
+msgstr "ای میل"
+
+#. Legacy key: requested_withdrawal_amount
+msgid "Requested withdrawal amount"
+msgstr "واپسی کی رقم کی درخواست کی۔"
+
+#. Legacy key: january
+msgid "January"
+msgstr "جنوری"
+
+#. Legacy key: february
+msgid "February"
+msgstr "فروری"
+
+#. Legacy key: march
+msgid "March"
+msgstr "مارچ"
+
+#. Legacy key: april
+msgid "April"
+msgstr "اپریل"
+
+#. Legacy key: may
+msgid "May"
+msgstr "مئی"
+
+#. Legacy key: june
+msgid "June"
+msgstr "جون"
+
+#. Legacy key: july
+msgid "July"
+msgstr "جولائی"
+
+#. Legacy key: august
+msgid "August"
+msgstr "اگست"
+
+#. Legacy key: september
+msgid "September"
+msgstr "ستمبر"
+
+#. Legacy key: october
+msgid "October"
+msgstr "اکتوبر"
+
+#. Legacy key: november
+msgid "November"
+msgstr "نومبر"
+
+#. Legacy key: december
+msgid "December"
+msgstr "دسمبر"
+
+#. Legacy key: ok
+msgid "Ok"
+msgstr "ٹھیک ہے"
+
+#. Legacy key: success
+msgid "Success"
+msgstr "کامیابی"
+
+#. Legacy key: successfully
+msgid "Successfully"
+msgstr "کامیابی سے"
+
+#. Legacy key: div_added_to_bottom_
+msgid "Div added to bottom "
+msgstr "Div نیچے شامل کیا گیا۔"
+
+#. Legacy key: div_has_been_deleted_
+msgid "Div has been deleted "
+msgstr "Div کو حذف کر دیا گیا ہے۔"
+
+#. Legacy key: provide_your_valid_login_credentials
+msgid "Provide your valid login credentials"
+msgstr "اپنی درست لاگ ان اسناد فراہم کریں۔"
+
+#. Legacy key: continue_with_email
+msgid "Continue with email"
+msgstr "ای میل کے ساتھ جاری رکھیں"
+
+#. Legacy key: password
+msgid "Password"
+msgstr "پاس ورڈ"
+
+#. Legacy key: forgot_password
+msgid "Forgot password"
+msgstr "پاسورڈ بھول گے"
+
+#. Legacy key: do_not_have_an_account
+msgid "Do not have an account"
+msgstr "کھاتہ نہیں ہے کیا"
+
+#. Legacy key: website_name
+msgid "Website name"
+msgstr "ویب سائٹ کا نام"
+
+#. Legacy key: website_title
+msgid "Website title"
+msgstr "ویب سائٹ کا عنوان"
+
+#. Legacy key: website_keywords
+msgid "Website keywords"
+msgstr "ویب سائٹ کے مطلوبہ الفاظ"
+
+#. Legacy key: website_description
+msgid "Website description"
+msgstr "ویب سائٹ کی تفصیل"
+
+#. Legacy key: author
+msgid "Author"
+msgstr "مصنف"
+
+#. Legacy key: slogan
+msgid "Slogan"
+msgstr "نعرہ"
+
+#. Legacy key: system_email
+msgid "System email"
+msgstr "سسٹم ای میل"
+
+#. Legacy key: address
+msgid "Address"
+msgstr "پتہ"
+
+#. Legacy key: phone
+msgid "Phone"
+msgstr "فون"
+
+#. Legacy key: youtube_api_key
+msgid "Youtube api key"
+msgstr "یوٹیوب API کلید"
+
+#. Legacy key: get_youtube_api_key
+msgid "Get youtube api key"
+msgstr "youtube api کلید حاصل کریں۔"
+
+#. Legacy key: vimeo_api_key
+msgid "Vimeo api key"
+msgstr "Vimeo api کلید"
+
+#. Legacy key: get_vimeo_api_key
+msgid "Get vimeo api key"
+msgstr "Vimeo api کلید حاصل کریں۔"
+
+#. Legacy key: purchase_code
+msgid "Purchase code"
+msgstr "خریداری کوڈ"
+
+#. Legacy key: system_language
+msgid "System language"
+msgstr "سسٹم کی زبان"
+
+#. Legacy key: student_email_verification
+msgid "Student email verification"
+msgstr "طالب علم کی ای میل کی توثیق"
+
+#. Legacy key: enable
+msgid "Enable"
+msgstr "فعال"
+
+#. Legacy key: disable
+msgid "Disable"
+msgstr "غیر فعال کریں۔"
+
+#. Legacy key: course_accessibility
+msgid "Course accessibility"
+msgstr "کورس تک رسائی"
+
+#. Legacy key: publicly
+msgid "Publicly"
+msgstr "عوامی طور پر"
+
+#. Legacy key: only_logged_in_users
+msgid "Only logged in users"
+msgstr "صرف لاگ ان صارفین"
+
+#. Legacy key: number_of_authorized_devices
+msgid "Number of authorized devices"
+msgstr "مجاز آلات کی تعداد"
+
+#. Legacy key: how_many_devices_do_you_want_to_allow_for_logging_in_using_a_single_account
+msgid "How many devices do you want to allow for logging in using a single account"
+msgstr "آپ کتنے آلات کو ایک اکاؤنٹ کا استعمال کرکے لاگ ان کرنے کی اجازت دینا چاہتے ہیں۔"
+
+#. Legacy key: course_selling_tax
+msgid "Course selling tax"
+msgstr "کورس سیلنگ ٹیکس"
+
+#. Legacy key: enter_0_if_you_want_to_disable_the_tax_option
+msgid "Enter 0 if you want to disable the tax option"
+msgstr "اگر آپ ٹیکس آپشن کو غیر فعال کرنا چاہتے ہیں تو 0 درج کریں۔"
+
+#. Legacy key: google_analytics_id
+msgid "Google analytics id"
+msgstr "گوگل اینالیٹکس آئی ڈی"
+
+#. Legacy key: keep_it_blank_if_you_want_to_disable_it
+msgid "Keep it blank if you want to disable it"
+msgstr "اگر آپ اسے غیر فعال کرنا چاہتے ہیں تو اسے خالی رکھیں"
+
+#. Legacy key: meta_pixel_id
+msgid "Meta pixel id"
+msgstr "میٹا پکسل آئی ڈی"
+
+#. Legacy key: footer_text
+msgid "Footer text"
+msgstr "فوٹر متن"
+
+#. Legacy key: footer_link
+msgid "Footer link"
+msgstr "فوٹر لنک"
+
+#. Legacy key: save
+msgid "Save"
+msgstr "محفوظ کریں۔"
+
+#. Legacy key: update_product
+msgid "Update product"
+msgstr "پروڈکٹ کو اپ ڈیٹ کریں۔"
+
+#. Legacy key: file
+msgid "File"
+msgstr "فائل"
+
+#. Legacy key: update
+msgid "Update"
+msgstr "اپ ڈیٹ"
+
+#. Legacy key: not_found
+msgid "Not found"
+msgstr "نہیں ملا"
+
+#. Legacy key: about_this_application
+msgid "About this application"
+msgstr "اس درخواست کے بارے میں"
+
+#. Legacy key: software_version
+msgid "Software version"
+msgstr "سافٹ ویئر ورژن"
+
+#. Legacy key: check_update
+msgid "Check update"
+msgstr "اپ ڈیٹ چیک کریں۔"
+
+#. Legacy key: php_version
+msgid "Php version"
+msgstr "پی ایچ پی ورژن"
+
+#. Legacy key: curl_enable
+msgid "Curl enable"
+msgstr "کرل کو فعال کریں۔"
+
+#. Legacy key: enabled
+msgid "Enabled"
+msgstr "فعال"
+
+#. Legacy key: product_license
+msgid "Product license"
+msgstr "پروڈکٹ لائسنس"
+
+#. Legacy key: invalid
+msgid "Invalid"
+msgstr "غلط"
+
+#. Legacy key: enter_valid_purchase_code
+msgid "Enter valid purchase code"
+msgstr "درست خریداری کوڈ درج کریں۔"
+
+#. Legacy key: customer_support_status
+msgid "Customer support status"
+msgstr "کسٹمر سپورٹ کی حیثیت"
+
+#. Legacy key: support_expiry_date
+msgid "Support expiry date"
+msgstr "سپورٹ کی میعاد ختم ہونے کی تاریخ"
+
+#. Legacy key: customer_name
+msgid "Customer name"
+msgstr "گاہک کا نام"
+
+#. Legacy key: product_updated_successfully
+msgid "Product updated successfully"
+msgstr "پروڈکٹ کو کامیابی سے اپ ڈیٹ کر دیا گیا۔"
+
+#. Legacy key: remove_all
+msgid "Remove all"
+msgstr "سب کو ہٹا دیں"
+
+#. Legacy key: notification
+msgid "Notification"
+msgstr "اطلاع"
+
+#. Legacy key: no_notification
+msgid "No notification"
+msgstr "کوئی اطلاع نہیں۔"
+
+#. Legacy key: notification_settings
+msgid "Notification settings"
+msgstr "اطلاع کی ترتیبات"
+
+#. Legacy key: mark_all_as_read
+msgid "Mark all as read"
+msgstr "سب کو پڑھا ہوا شمار کریں"
+
+#. Legacy key: enrollments
+msgid "Enrollments"
+msgstr "اندراجات"
+
+#. Legacy key: newsletter
+msgid "Newsletter"
+msgstr "نیوز لیٹر"
+
+#. Legacy key: all_newsletter
+msgid "All newsletter"
+msgstr "تمام نیوز لیٹر"
+
+#. Legacy key: subscribed_user
+msgid "Subscribed user"
+msgstr "سبسکرائب شدہ صارف"
+
+#. Legacy key: custom_page_builder
+msgid "Custom page builder"
+msgstr "کسٹم پیج بلڈر"
+
+#. Legacy key: your_servers_file_upload_limit_is_900mb
+msgid "Your servers file upload limit is 900mb"
+msgstr "آپ کے سرورز فائل اپ لوڈ کی حد 900mb ہے۔"
+
+#. Legacy key: 404_not_found
+msgid "404 not found"
+msgstr "404 نہیں ملا"
+
+#. Legacy key: administration
+msgid "Administration"
+msgstr "انتظامیہ"
+
+#. Legacy key: checkout
+msgid "Checkout"
+msgstr "اس کو دیکھو"
+
+#. Legacy key: log_out
+msgid "Log out"
+msgstr "لاگ آوٹ"
+
+#. Legacy key: the_page_you_requested_could_not_be_found
+msgid "The page you requested could not be found"
+msgstr "آپ کا درخواست کردہ صفحہ نہیں مل سکا"
+
+#. Legacy key: check_the_spelling_of_the_url
+msgid "Check the spelling of the url"
+msgstr "یو آر ایل کے ہجے چیک کریں۔"
+
+#. Legacy key: contact_us
+msgid "Contact us"
+msgstr "ہم سے رابطہ کریں۔"
+
+#. Legacy key: faq
+msgid "Faq"
+msgstr "عمومی سوالات"
+
+#. Legacy key: subscribe_to_our_newsletter
+msgid "Subscribe to our newsletter"
+msgstr "ہماری نیوز لیٹر کو سبسکرائب کریں"
+
+#. Legacy key: enter_your_email_address
+msgid "Enter your email address"
+msgstr "اپنا ای میل کا پتا لکھو"
+
+#. Legacy key: happy
+msgid "Happy"
+msgstr "خوش"
+
+#. Legacy key: experienced
+msgid "Experienced"
+msgstr "تجربہ کار"
+
+#. Legacy key: smart_solution
+msgid "Smart solution"
+msgstr "سمارٹ حل"
+
+#. Legacy key: upcoming
+msgid "Upcoming"
+msgstr "آنے والا"
+
+#. Legacy key: upcoming_courses
+msgid "Upcoming courses"
+msgstr "آنے والے کورسز"
+
+#. Legacy key: these_are_the_most_popular_courses_among_listen_courses_learners_worldwide
+msgid "These are the most popular courses among listen courses learners worldwide"
+msgstr "یہ دنیا بھر میں سننے والے کورس سیکھنے والوں میں سب سے زیادہ مقبول کورسز ہیں۔"
+
+#. Legacy key: outcomes
+msgid "Outcomes"
+msgstr "نتائج"
+
+#. Legacy key: remove_from_cart
+msgid "Remove from cart"
+msgstr "کارٹ سے ہٹا دیں۔"
+
+#. Legacy key: enroll_now
+msgid "Enroll now"
+msgstr "ابھی نام درج کرائیں"
+
+#. Legacy key: these_are_the_most_latest_courses_among_listen_courses_learners_worldwide
+msgid "These are the most latest courses among listen courses learners worldwide"
+msgstr "یہ دنیا بھر میں سننے والے کورس سیکھنے والوں کے درمیان تازہ ترین کورسز ہیں۔"
+
+#. Legacy key: top_instructors
+msgid "Top instructors"
+msgstr "اعلیٰ اساتذہ"
+
+#. Legacy key: they_efficiently_serve_large_number_of_students_on_our_platform
+msgid "They efficiently serve large number of students on our platform"
+msgstr "وہ ہمارے پلیٹ فارم پر بڑی تعداد میں طلباء کی مؤثر طریقے سے خدمت کرتے ہیں۔"
+
+#. Legacy key: thanks_for_subscribing_to_our_newsletter
+msgid "Thanks for subscribing to our newsletter"
+msgstr "ہمارے نیوز لیٹر کو سبسکرائب کرنے کا شکریہ"
+
+#. Legacy key: such_script_searches_are_not_allowed
+msgid "Such script searches are not allowed"
+msgstr "اسکرپٹ کی اس طرح کی تلاش کی اجازت نہیں ہے۔"
+
+#. Legacy key: list_view
+msgid "List view"
+msgstr "فہرست دیکھیں"
+
+#. Legacy key: grid_view
+msgid "Grid view"
+msgstr "جالی دار نظارہ"
+
+#. Legacy key: reset
+msgid "Reset"
+msgstr "دوبارہ ترتیب دیں۔"
+
+#. Legacy key: showing
+msgid "Showing"
+msgstr "دکھا رہا ہے۔"
+
+#. Legacy key: of
+msgid "Of"
+msgstr "کی"
+
+#. Legacy key: results
+msgid "Results"
+msgstr "نتائج"
+
+#. Legacy key: newly_published
+msgid "Newly published"
+msgstr "تازہ شائع ہوا۔"
+
+#. Legacy key: highest_rating
+msgid "Highest rating"
+msgstr "سب سے زیادہ درجہ بندی"
+
+#. Legacy key: lowest_price
+msgid "Lowest price"
+msgstr "کم ترین قیمت"
+
+#. Legacy key: highest_price
+msgid "Highest price"
+msgstr "سب سے زیادہ قیمت"
+
+#. Legacy key: discounted
+msgid "Discounted"
+msgstr "رعایتی"
+
+#. Legacy key: english
+msgid "English"
+msgstr "انگریزی"
+
+#. Legacy key: bundles
+msgid "Bundles"
+msgstr "بنڈلز"
+
+#. Legacy key: search_for_bundle
+msgid "Search for bundle"
+msgstr "بنڈل تلاش کریں۔"
+
+#. Legacy key: rating_updated_successfully
+msgid "Rating updated successfully"
+msgstr "درجہ بندی کامیابی کے ساتھ اپ ڈیٹ ہو گئی۔"
+
+#. Legacy key: please_select_a_rating_greater_than_0
+msgid "Please select a rating greater than 0"
+msgstr "براہ کرم 0 سے زیادہ درجہ بندی منتخب کریں۔"
+
+#. Legacy key: your_subscription_date_is_over_please_renew_your_bundle
+msgid "Your subscription date is over please renew your bundle"
+msgstr "آپ کی رکنیت کی تاریخ ختم ہو گئی ہے براہ کرم اپنے بنڈل کی تجدید کریں۔"
+
+#. Legacy key: bundle_details
+msgid "Bundle details"
+msgstr "بنڈل کی تفصیلات"
+
+#. Legacy key: buy
+msgid "Buy"
+msgstr "خریدنے"
+
+#. Legacy key: all_categories
+msgid "All categories"
+msgstr "تمام زمرے"
+
+#. Legacy key: view_details
+msgid "View details"
+msgstr "تفصیلات دیکھیں"
+
+#. Legacy key: your_email
+msgid "Your email"
+msgstr "آپ کا ای میل"
+
+#. Legacy key: enter_your_email
+msgid "Enter your email"
+msgstr "اپنا ای میل درج کریں۔"
+
+#. Legacy key: enter_your_valid_password
+msgid "Enter your valid password"
+msgstr "اپنا درست پاس ورڈ درج کریں۔"
+
+#. Legacy key: or
+msgid "Or"
+msgstr "یا"
+
+#. Legacy key: send_request
+msgid "Send request"
+msgstr "درخواست بھیجیں"
+
+#. Legacy key: back_to_login
+msgid "Back to login"
+msgstr "لاگ ان پر واپس جائیں۔"
+
+#. Legacy key: my_course
+msgid "My course"
+msgstr "میرا کورس"
+
+#. Legacy key: by
+msgid "By"
+msgstr "کی طرف سے"
+
+#. Legacy key: go_to_wishlist
+msgid "Go to wishlist"
+msgstr "خواہش کی فہرست پر جائیں۔"
+
+#. Legacy key: become_a_instructor
+msgid "Become a instructor"
+msgstr "ایک انسٹرکٹر بنیں۔"
+
+#. Legacy key: my_courses
+msgid "My courses"
+msgstr "میرے کورسز"
+
+#. Legacy key: my_wishlist
+msgid "My wishlist"
+msgstr "میری خواہشات کی فہرست"
+
+#. Legacy key: my_messages
+msgid "My messages"
+msgstr "میرے پیغامات"
+
+#. Legacy key: user_profile
+msgid "User profile"
+msgstr "صارف پروفائل"
+
+#. Legacy key: support
+msgid "Support"
+msgstr "حمایت"
+
+#. Legacy key: start_now
+msgid "Start now"
+msgstr "اب شروع کریں"
+
+#. Legacy key: gift_someone_else
+msgid "Gift someone else"
+msgstr "کسی اور کو تحفہ دیں۔"
+
+#. Legacy key: wishlist
+msgid "Wishlist"
+msgstr "خواہش کی فہرست"
+
+#. Legacy key: messages
+msgid "Messages"
+msgstr "پیغامات"
+
+#. Legacy key: profile
+msgid "Profile"
+msgstr "پروفائل"
+
+#. Legacy key: account_credentials
+msgid "Account credentials"
+msgstr "اکاؤنٹ کی اسناد"
+
+#. Legacy key: go_to_course_page
+msgid "Go to course page"
+msgstr "کورس کے صفحے پر جائیں۔"
+
+#. Legacy key: author_profile
+msgid "Author profile"
+msgstr "مصنف کا پروفائل"
+
+#. Legacy key: quizzes
+msgid "Quizzes"
+msgstr "کوئزز"
+
+#. Legacy key: expiry_period
+msgid "Expiry period"
+msgstr "میعاد ختم ہونے کی مدت"
+
+#. Legacy key: upcoming_live_class
+msgid "Upcoming live class"
+msgstr "آنے والی لائیو کلاس"
+
+#. Legacy key: enrolled
+msgid "Enrolled"
+msgstr "اندراج"
+
+#. Legacy key: overview
+msgid "Overview"
+msgstr "جائزہ"
+
+#. Legacy key: curriculum
+msgid "Curriculum"
+msgstr "نصاب"
+
+#. Legacy key: instructor
+msgid "Instructor"
+msgstr "انسٹرکٹر"
+
+#. Legacy key: course_description
+msgid "Course description"
+msgstr "کورس کی تفصیل"
+
+#. Legacy key: instructor_profile
+msgid "Instructor profile"
+msgstr "انسٹرکٹر پروفائل"
+
+#. Legacy key: facebook
+msgid "Facebook"
+msgstr "فیس بک"
+
+#. Legacy key: twitter
+msgid "Twitter"
+msgstr "ٹویٹر"
+
+#. Legacy key: linkedin
+msgid "Linkedin"
+msgstr "لنکڈن"
+
+#. Legacy key: how_to_shoot_cinematic_tech_videos_like_apple
+msgid "How to shoot cinematic tech videos like apple"
+msgstr "سیب جیسے سنیما ٹیک ویڈیوز کو کیسے شوٹ کریں۔"
+
+#. Legacy key: compare_this_course
+msgid "Compare this course"
+msgstr "اس کورس کا موازنہ کریں۔"
+
+#. Legacy key: skill_level
+msgid "Skill level"
+msgstr "مہارت کی سطح"
+
+#. Legacy key: lifetime
+msgid "Lifetime"
+msgstr "زندگی بھر"
+
+#. Legacy key: certificate
+msgid "Certificate"
+msgstr "سرٹیفیکیٹ"
+
+#. Legacy key: related_courses
+msgid "Related courses"
+msgstr "متعلقہ کورسز"
+
+#. Legacy key: first_name
+msgid "First name"
+msgstr "پہلا نام"
+
+#. Legacy key: enter_your_first_name
+msgid "Enter your first name"
+msgstr "اپنا پہلا نام درج کریں۔"
+
+#. Legacy key: last_name
+msgid "Last name"
+msgstr "آخری نام"
+
+#. Legacy key: enter_your_last_name
+msgid "Enter your last name"
+msgstr "اپنا آخری نام درج کریں۔"
+
+#. Legacy key: apply_to_become_a_instructor
+msgid "Apply to become a instructor"
+msgstr "انسٹرکٹر بننے کے لیے اپلائی کریں۔"
+
+#. Legacy key: enter_your_phone_number
+msgid "Enter your phone number"
+msgstr "اپنا فون نمبر درج کریں۔"
+
+#. Legacy key: document
+msgid "Document"
+msgstr "دستاویز"
+
+#. Legacy key: provide_some_documents_about_your_qualifications
+msgid "Provide some documents about your qualifications"
+msgstr "اپنی اہلیت کے بارے میں کچھ دستاویزات فراہم کریں۔"
+
+#. Legacy key: invalid_login_credentials
+msgid "Invalid login credentials"
+msgstr "غلط لاگ ان کی تفصیلات"
+
+#. Legacy key: publication_name
+msgid "Publication name"
+msgstr "اشاعت کا نام"
+
+#. Legacy key: published_date
+msgid "Published date"
+msgstr "اشاعت کی تاریخ"
+
+#. Legacy key: category_name
+msgid "Category name"
+msgstr "قسم کا نام"
+
+#. Legacy key: read_preview
+msgid "Read preview"
+msgstr "پیش نظارہ پڑھیں"
+
+#. Legacy key: free_download
+msgid "Free download"
+msgstr "مفت ڈاؤنلوڈ"
+
+#. Legacy key: book_specification_and_summary
+msgid "Book specification and summary"
+msgstr "کتاب کی تفصیلات اور خلاصہ"
+
+#. Legacy key: summary
+msgid "Summary"
+msgstr "خلاصہ"
+
+#. Legacy key: specification
+msgid "Specification"
+msgstr "تفصیلات"
+
+#. Legacy key: other_related_ebooks
+msgid "Other related ebooks"
+msgstr "دیگر متعلقہ ای بکس"
+
+#. Legacy key: about_instructor
+msgid "About instructor"
+msgstr "انسٹرکٹر کے بارے میں"
+
+#. Legacy key: ebook_review
+msgid "Ebook review"
+msgstr "ای بک کا جائزہ"
+
+#. Legacy key: add_to_wishlist
+msgid "Add to wishlist"
+msgstr "خواہشات کی فہرست میں شامل کرنا"
+
+#. Legacy key: added_to_wishlist
+msgid "Added to wishlist"
+msgstr "خواہش کی فہرست میں شامل کر دیا گیا۔"
+
+#. Legacy key: wordpress_theme_development_with_bootstrap
+msgid "Wordpress theme development with bootstrap"
+msgstr "بوٹسٹریپ کے ساتھ ورڈپریس تھیم کی ترقی"
+
+#. Legacy key: frontend_settings
+msgid "Frontend settings"
+msgstr "فرنٹ اینڈ کی ترتیبات"
+
+#. Legacy key: home_page_layout
+msgid "Home page layout"
+msgstr "ہوم پیج لے آؤٹ"
+
+#. Legacy key: motivational_speech
+msgid "Motivational speech"
+msgstr "حوصلہ افزا تقریر"
+
+#. Legacy key: website_faqs
+msgid "Website faqs"
+msgstr "ویب سائٹ کے سوالات"
+
+#. Legacy key: recaptcha
+msgid "Recaptcha"
+msgstr "Recaptcha"
+
+#. Legacy key: frontend_website_settings
+msgid "Frontend website settings"
+msgstr "فرنٹ اینڈ ویب سائٹ کی ترتیبات"
+
+#. Legacy key: banner_title
+msgid "Banner title"
+msgstr "بینر کا عنوان"
+
+#. Legacy key: banner_sub_title
+msgid "Banner sub title"
+msgstr "بینر ذیلی عنوان"
+
+#. Legacy key: cookie_status
+msgid "Cookie status"
+msgstr "کوکی کی حیثیت"
+
+#. Legacy key: active
+msgid "Active"
+msgstr "فعال"
+
+#. Legacy key: inactive
+msgid "Inactive"
+msgstr "غیر فعال"
+
+#. Legacy key: cookie_note
+msgid "Cookie note"
+msgstr "کوکی نوٹ"
+
+#. Legacy key: update_settings
+msgid "Update settings"
+msgstr "ترتیبات کو اپ ڈیٹ کریں۔"
+
+#. Legacy key: activated
+msgid "Activated"
+msgstr "چالو"
+
+#. Legacy key: title
+msgid "Title"
+msgstr "عنوان"
+
+#. Legacy key: faq_question
+msgid "Faq question"
+msgstr "عمومی سوال"
+
+#. Legacy key: image
+msgid "Image"
+msgstr "تصویر"
+
+#. Legacy key: upload_image
+msgid "Upload image"
+msgstr "تصویر انٹرنیٹ پر ڈالنا"
+
+#. Legacy key: save_changes
+msgid "Save changes"
+msgstr "تبدیلیاں محفوظ کرو"
+
+#. Legacy key: question
+msgid "Question"
+msgstr "سوال"
+
+#. Legacy key: answer
+msgid "Answer"
+msgstr "جواب دیں۔"
+
+#. Legacy key: recaptcha_settings
+msgid "Recaptcha settings"
+msgstr "Recaptcha کی ترتیبات"
+
+#. Legacy key: recaptcha_status
+msgid "Recaptcha status"
+msgstr "Recaptcha کی حیثیت"
+
+#. Legacy key: recaptcha_sitekey
+msgid "Recaptcha sitekey"
+msgstr "Recaptcha sitekey"
+
+#. Legacy key: recaptcha_secretkey
+msgid "Recaptcha secretkey"
+msgstr "Recaptcha secretkey"
+
+#. Legacy key: update_recaptcha_settings
+msgid "Update recaptcha settings"
+msgstr "recaptcha کی ترتیبات کو اپ ڈیٹ کریں۔"
+
+#. Legacy key: update_banner_image
+msgid "Update banner image"
+msgstr "بینر کی تصویر کو اپ ڈیٹ کریں۔"
+
+#. Legacy key: upload_banner_image
+msgid "Upload banner image"
+msgstr "بینر کی تصویر اپ لوڈ کریں۔"
+
+#. Legacy key: update_light_logo
+msgid "Update light logo"
+msgstr "لائٹ لوگو کو اپ ڈیٹ کریں۔"
+
+#. Legacy key: upload_light_logo
+msgid "Upload light logo"
+msgstr "لائٹ لوگو اپ لوڈ کریں۔"
+
+#. Legacy key: update_dark_logo
+msgid "Update dark logo"
+msgstr "سیاہ لوگو کو اپ ڈیٹ کریں۔"
+
+#. Legacy key: upload_dark_logo
+msgid "Upload dark logo"
+msgstr "گہرا لوگو اپ لوڈ کریں۔"
+
+#. Legacy key: update_small_logo
+msgid "Update small logo"
+msgstr "چھوٹے لوگو کو اپ ڈیٹ کریں۔"
+
+#. Legacy key: upload_small_logo
+msgid "Upload small logo"
+msgstr "چھوٹا لوگو اپ لوڈ کریں۔"
+
+#. Legacy key: update_favicon
+msgid "Update favicon"
+msgstr "فیویکن کو اپ ڈیٹ کریں۔"
+
+#. Legacy key: upload_favicon
+msgid "Upload favicon"
+msgstr "فیویکن اپ لوڈ کریں۔"
+
+#. Legacy key: banner_image_update
+msgid "Banner image update"
+msgstr "بینر امیج اپ ڈیٹ"
+
+#. Legacy key: frontend_settings_updated
+msgid "Frontend settings updated"
+msgstr "فرنٹ اینڈ کی ترتیبات کو اپ ڈیٹ کر دیا گیا۔"
+
+#. Legacy key: start_learning_from_best_platform
+msgid "Start learning from best platform"
+msgstr "بہترین پلیٹ فارم سے سیکھنا شروع کریں۔"
+
+#. Legacy key: your_servers_file_upload_limit_is_512mb
+msgid "Your servers file upload limit is 512mb"
+msgstr "آپ کے سرورز فائل اپ لوڈ کی حد 512mb ہے۔"
+
+#. Legacy key: blog_page_title
+msgid "Blog page title"
+msgstr "بلاگ صفحہ کا عنوان"
+
+#. Legacy key: blog_page_subtitle
+msgid "Blog page subtitle"
+msgstr "بلاگ صفحہ ذیلی عنوان"
+
+#. Legacy key: instructors_blog_permission
+msgid "Instructors blog permission"
+msgstr "انسٹرکٹرز بلاگ کی اجازت"
+
+#. Legacy key: blog_visibility_on_the_home_page
+msgid "Blog visibility on the home page"
+msgstr "ہوم پیج پر بلاگ کی مرئیت"
+
+#. Legacy key: visible
+msgid "Visible"
+msgstr "نظر آنے والا"
+
+#. Legacy key: invisible
+msgid "Invisible"
+msgstr "غیر مرئی"
+
+#. Legacy key: blog_page_banner
+msgid "Blog page banner"
+msgstr "بلاگ صفحہ بینر"
+
+#. Legacy key: blog_settings_updated_successfully
+msgid "Blog settings updated successfully"
+msgstr "بلاگ کی ترتیبات کامیابی کے ساتھ اپ ڈیٹ ہو گئیں۔"
+
+#. Legacy key: visit_our_latest_blogs
+msgid "Visit our latest blogs"
+msgstr "ہمارے تازہ ترین بلاگز پر جائیں۔"
+
+#. Legacy key: thu
+msgid "Thu"
+msgstr "جمعرات"
+
+#. Legacy key: dec
+msgid "Dec"
+msgstr "دسمبر"
+
+#. Legacy key: free_courses
+msgid "Free courses"
+msgstr "مفت کورسز"
+
+#. Legacy key: paid_courses
+msgid "Paid courses"
+msgstr "ادا شدہ کورسز"
+
+#. Legacy key: course_list
+msgid "Course list"
+msgstr "کورس کی فہرست"
+
+#. Legacy key: status
+msgid "Status"
+msgstr "حالت"
+
+#. Legacy key: pending
+msgid "Pending"
+msgstr "زیر التواء"
+
+#. Legacy key: private
+msgid "Private"
+msgstr "نجی"
+
+#. Legacy key: lesson_and_section
+msgid "Lesson and section"
+msgstr "سبق اور سیکشن"
+
+#. Legacy key: enrolled_student
+msgid "Enrolled student"
+msgstr "اندراج شدہ طالب علم"
+
+#. Legacy key: mark_as_pending
+msgid "Mark as pending"
+msgstr "زیر التواء کے بطور نشان زد کریں۔"
+
+#. Legacy key: section_and_lesson
+msgid "Section and lesson"
+msgstr "سیکشن اور سبق"
+
+#. Legacy key: academic_progress
+msgid "Academic progress"
+msgstr "تعلیمی ترقی"
+
+#. Legacy key: edit_this_course
+msgid "Edit this course"
+msgstr "اس کورس میں ترمیم کریں۔"
+
+#. Legacy key: view_course_on_frontend
+msgid "View course on frontend"
+msgstr "فرنٹ اینڈ پر کورس دیکھیں"
+
+#. Legacy key: go_to_course_playing_page
+msgid "Go to course playing page"
+msgstr "کورس پلےنگ پیج پر جائیں۔"
+
+#. Legacy key: section
+msgid "Section"
+msgstr "سیکشن"
+
+#. Legacy key: lesson
+msgid "Lesson"
+msgstr "سبق"
+
+#. Legacy key: mark_as_active
+msgid "Mark as active"
+msgstr "فعال کے بطور نشان زد کریں۔"
+
+#. Legacy key: edit_course
+msgid "Edit course"
+msgstr "کورس میں ترمیم کریں۔"
+
+#. Legacy key: course_manager
+msgid "Course manager"
+msgstr "کورس مینیجر"
+
+#. Legacy key: view_on_frontend
+msgid "View on frontend"
+msgstr "فرنٹ اینڈ پر دیکھیں"
+
+#. Legacy key: back_to_course_list
+msgid "Back to course list"
+msgstr "کورس کی فہرست پر واپس جائیں۔"
+
+#. Legacy key: zoom_live_class
+msgid "Zoom live class"
+msgstr "زوم لائیو کلاس"
+
+#. Legacy key: jitsi_live_class
+msgid "Jitsi live class"
+msgstr "جیتی لائیو کلاس"
+
+#. Legacy key: assignment
+msgid "Assignment"
+msgstr "تفویض"
+
+#. Legacy key: noticeboard
+msgid "Noticeboard"
+msgstr "نوٹس بورڈ"
+
+#. Legacy key: analytics
+msgid "Analytics"
+msgstr "تجزیات"
+
+#. Legacy key: basic
+msgid "Basic"
+msgstr "بنیادی"
+
+#. Legacy key: info
+msgid "Info"
+msgstr "معلومات"
+
+#. Legacy key: pricing
+msgid "Pricing"
+msgstr "قیمتوں کا تعین"
+
+#. Legacy key: media
+msgid "Media"
+msgstr "میڈیا"
+
+#. Legacy key: seo
+msgid "Seo"
+msgstr "ایس ای او"
+
+#. Legacy key: finish
+msgid "Finish"
+msgstr "ختم کرنا"
+
+#. Legacy key: add_new_section
+msgid "Add new section"
+msgstr "نیا سیکشن شامل کریں۔"
+
+#. Legacy key: add_section
+msgid "Add section"
+msgstr "سیکشن شامل کریں۔"
+
+#. Legacy key: add_new_quiz
+msgid "Add new quiz"
+msgstr "نیا کوئز شامل کریں۔"
+
+#. Legacy key: add_quiz
+msgid "Add quiz"
+msgstr "کوئز شامل کریں۔"
+
+#. Legacy key: sort_sections
+msgid "Sort sections"
+msgstr "حصوں کو ترتیب دیں۔"
+
+#. Legacy key: sort_lessons
+msgid "Sort lessons"
+msgstr "اسباق کو ترتیب دیں۔"
+
+#. Legacy key: sort_lesson
+msgid "Sort lesson"
+msgstr "سبق کو ترتیب دیں۔"
+
+#. Legacy key: update_section
+msgid "Update section"
+msgstr "اپ ڈیٹ سیکشن"
+
+#. Legacy key: edit_section
+msgid "Edit section"
+msgstr "سیکشن میں ترمیم کریں۔"
+
+#. Legacy key: delete_section
+msgid "Delete section"
+msgstr "سیکشن کو حذف کریں۔"
+
+#. Legacy key: update_lesson
+msgid "Update lesson"
+msgstr "سبق کو اپ ڈیٹ کریں۔"
+
+#. Legacy key: edit
+msgid "Edit"
+msgstr "ترمیم"
+
+#. Legacy key: quiz_results
+msgid "Quiz results"
+msgstr "کوئز کے نتائج"
+
+#. Legacy key: manage_quiz_questions
+msgid "Manage quiz questions"
+msgstr "کوئز سوالات کا نظم کریں۔"
+
+#. Legacy key: quiz_questions
+msgid "Quiz questions"
+msgstr "کوئز سوالات"
+
+#. Legacy key: update_quiz_information
+msgid "Update quiz information"
+msgstr "کوئز کی معلومات کو اپ ڈیٹ کریں۔"
+
+#. Legacy key: quiz
+msgid "Quiz"
+msgstr "کوئز"
+
+#. Legacy key: live_class_schedule
+msgid "Live class schedule"
+msgstr "لائیو کلاس شیڈول"
+
+#. Legacy key: date
+msgid "Date"
+msgstr "تاریخ"
+
+#. Legacy key: time
+msgid "Time"
+msgstr "وقت"
+
+#. Legacy key: note_to_students
+msgid "Note to students"
+msgstr "طلباء کے لیے نوٹ"
+
+#. Legacy key: zoom_meeting_id
+msgid "Zoom meeting id"
+msgstr "زوم میٹنگ آئی ڈی"
+
+#. Legacy key: enter_meeting_id
+msgid "Enter meeting id"
+msgstr "میٹنگ آئی ڈی درج کریں۔"
+
+#. Legacy key: zoom_meeting_password
+msgid "Zoom meeting password"
+msgstr "زوم میٹنگ کا پاس ورڈ"
+
+#. Legacy key: enter_meeting_password
+msgid "Enter meeting password"
+msgstr "میٹنگ کا پاس ورڈ درج کریں۔"
+
+#. Legacy key: course_enrolment_details
+msgid "Course enrolment details"
+msgstr "کورس کے اندراج کی تفصیلات"
+
+#. Legacy key: get
+msgid "Get"
+msgstr "حاصل کریں۔"
+
+#. Legacy key: meeting_plans_that_fit_your_business_perfectly
+msgid "Meeting plans that fit your business perfectly"
+msgstr "ملاقات کے منصوبے جو آپ کے کاروبار سے بالکل فٹ بیٹھتے ہیں۔"
+
+#. Legacy key: zoom_meeting_plans
+msgid "Zoom meeting plans"
+msgstr "زوم میٹنگ پلانز"
+
+#. Legacy key: jitsi_meeting_password
+msgid "Jitsi meeting password"
+msgstr "جِتسی میٹنگ پاس ورڈ"
+
+#. Legacy key: make_sure_you_save_the_live_class_password_before_starting_the_class
+msgid "Make sure you save the live class password before starting the class"
+msgstr "کلاس شروع کرنے سے پہلے لائیو کلاس پاس ورڈ کو محفوظ کر لیں۔"
+
+#. Legacy key: enter_your_class_topic
+msgid "Enter your class topic"
+msgstr "اپنی کلاس کا موضوع درج کریں۔"
+
+#. Legacy key: enter_your_message
+msgid "Enter your message"
+msgstr "اپنا پیغام درج کریں۔"
+
+#. Legacy key: send_a_mail_to_students_to_join_this_live_class
+msgid "Send a mail to students to join this live class"
+msgstr "اس لائیو کلاس میں شامل ہونے کے لیے طلباء کو ایک میل بھیجیں۔"
+
+#. Legacy key: start_live_video_class
+msgid "Start live video class"
+msgstr "لائیو ویڈیو کلاس شروع کریں۔"
+
+#. Legacy key: sending_mail
+msgid "Sending mail"
+msgstr "میل بھیج رہا ہے۔"
+
+#. Legacy key: the_message_field_is_empty
+msgid "The message field is empty"
+msgstr "پیغام کا میدان خالی ہے۔"
+
+#. Legacy key: create_new_assignment
+msgid "Create new assignment"
+msgstr "نئی اسائنمنٹ بنائیں"
+
+#. Legacy key: assignment_title
+msgid "Assignment title"
+msgstr "تفویض کا عنوان"
+
+#. Legacy key: enter_assignment_title
+msgid "Enter assignment title"
+msgstr "تفویض کا عنوان درج کریں۔"
+
+#. Legacy key: questions
+msgid "Questions"
+msgstr "سوالات"
+
+#. Legacy key: enter_your_assignment_questions
+msgid "Enter your assignment questions"
+msgstr "اپنے اسائنمنٹ کے سوالات درج کریں۔"
+
+#. Legacy key: question_file
+msgid "Question file"
+msgstr "سوال فائل"
+
+#. Legacy key: choose_file
+msgid "Choose file"
+msgstr "فائل منتخب کریں"
+
+#. Legacy key: total_marks
+msgid "Total marks"
+msgstr "کل نمبر"
+
+#. Legacy key: deadline
+msgid "Deadline"
+msgstr "ڈیڈ لائن"
+
+#. Legacy key: note
+msgid "Note"
+msgstr "نوٹ"
+
+#. Legacy key: submission_status
+msgid "Submission status"
+msgstr "جمع کرانے کی حیثیت"
+
+#. Legacy key: draft
+msgid "Draft"
+msgstr "مسودہ"
+
+#. Legacy key: add_new_assignment
+msgid "Add new assignment"
+msgstr "نئی اسائنمنٹ شامل کریں۔"
+
+#. Legacy key: uploading
+msgid "Uploading"
+msgstr "اپ لوڈ ہو رہا ہے۔"
+
+#. Legacy key: fill_up_the_required_feilds
+msgid "Fill up the required feilds"
+msgstr "مطلوبہ فیلڈز کو بھریں۔"
+
+#. Legacy key: course_title
+msgid "Course title"
+msgstr "کورس کا عنوان"
+
+#. Legacy key: enter_your_notice_title
+msgid "Enter your notice title"
+msgstr "اپنے نوٹس کا عنوان درج کریں۔"
+
+#. Legacy key: enter_your_notice_description
+msgid "Enter your notice description"
+msgstr "اپنے نوٹس کی تفصیل درج کریں۔"
+
+#. Legacy key: send_mail_to_students_if_urgent
+msgid "Send mail to students if urgent"
+msgstr "اگر ضروری ہو تو طلباء کو میل بھیجیں۔"
+
+#. Legacy key: add_new_notice
+msgid "Add new notice"
+msgstr "نیا نوٹس شامل کریں۔"
+
+#. Legacy key: updating
+msgid "Updating"
+msgstr "اپ ڈیٹ کر رہا ہے۔"
+
+#. Legacy key: course_type
+msgid "Course type"
+msgstr "کورس کی قسم"
+
+#. Legacy key: general
+msgid "General"
+msgstr "جنرل"
+
+#. Legacy key: the_course_type_can_not_be_editable
+msgid "The course type can not be editable"
+msgstr "کورس کی قسم قابل تدوین نہیں ہو سکتی"
+
+#. Legacy key: instructor_of_this_course
+msgid "Instructor of this course"
+msgstr "اس کورس کے انسٹرکٹر"
+
+#. Legacy key: enter_course_title
+msgid "Enter course title"
+msgstr "کورس کا عنوان درج کریں۔"
+
+#. Legacy key: short_description
+msgid "Short description"
+msgstr "مختصر کوائف"
+
+#. Legacy key: select_a_category
+msgid "Select a category"
+msgstr "ایک زمرہ منتخب کریں"
+
+#. Legacy key: select_sub_category
+msgid "Select sub category"
+msgstr "ذیلی زمرہ منتخب کریں۔"
+
+#. Legacy key: language_made_in
+msgid "Language made in"
+msgstr "زبان میں بنائی گئی۔"
+
+#. Legacy key: enable_drip_content
+msgid "Enable drip content"
+msgstr "ڈرپ مواد کو فعال کریں۔"
+
+#. Legacy key: updated_as_a
+msgid "Updated as a"
+msgstr "بطور اپ ڈیٹ"
+
+#. Legacy key: private_course
+msgid "Private course"
+msgstr "پرائیویٹ کورس"
+
+#. Legacy key: upcoming_course
+msgid "Upcoming course"
+msgstr "آنے والا کورس"
+
+#. Legacy key: check_if_this_course_is_top_course
+msgid "Check if this course is top course"
+msgstr "چیک کریں کہ آیا یہ کورس ٹاپ کورس ہے۔"
+
+#. Legacy key: course_faq
+msgid "Course faq"
+msgstr "کورس سوالات"
+
+#. Legacy key: provide_requirements
+msgid "Provide requirements"
+msgstr "ضروریات فراہم کریں۔"
+
+#. Legacy key: provide_outcomes
+msgid "Provide outcomes"
+msgstr "نتائج فراہم کریں۔"
+
+#. Legacy key: check_if_this_is_a_free_course
+msgid "Check if this is a free course"
+msgstr "چیک کریں کہ آیا یہ مفت کورس ہے۔"
+
+#. Legacy key: course_price
+msgid "Course price"
+msgstr "کورس کی قیمت"
+
+#. Legacy key: enter_course_course_price
+msgid "Enter course course price"
+msgstr "کورس کورس کی قیمت درج کریں۔"
+
+#. Legacy key: check_if_this_course_has_discount
+msgid "Check if this course has discount"
+msgstr "چیک کریں کہ آیا اس کورس میں رعایت ہے۔"
+
+#. Legacy key: discounted_price
+msgid "Discounted price"
+msgstr "رعایتی قیمت"
+
+#. Legacy key: this_course_has
+msgid "This course has"
+msgstr "یہ کورس ہے"
+
+#. Legacy key: discount
+msgid "Discount"
+msgstr "رعایت"
+
+#. Legacy key: limited_time
+msgid "Limited time"
+msgstr "محدود وقت"
+
+#. Legacy key: number_of_month
+msgid "Number of month"
+msgstr "مہینے کی تعداد"
+
+#. Legacy key: course_overview_provider
+msgid "Course overview provider"
+msgstr "کورس کا جائزہ فراہم کنندہ"
+
+#. Legacy key: youtube
+msgid "Youtube"
+msgstr "یوٹیوب"
+
+#. Legacy key: vimeo
+msgid "Vimeo"
+msgstr "ویمیو"
+
+#. Legacy key: html5
+msgid "Html5"
+msgstr "HTML5"
+
+#. Legacy key: course_overview_url
+msgid "Course overview url"
+msgstr "کورس کا جائزہ یو آر ایل"
+
+#. Legacy key: course_thumbnail
+msgid "Course thumbnail"
+msgstr "کورس تھمب نیل"
+
+#. Legacy key: meta_keywords
+msgid "Meta keywords"
+msgstr "میٹا کلیدی الفاظ"
+
+#. Legacy key: write_a_keyword_and_then_press_enter_button
+msgid "Write a keyword and then press enter button"
+msgstr "کلیدی لفظ لکھیں اور پھر انٹر بٹن دبائیں۔"
+
+#. Legacy key: meta_description
+msgid "Meta description"
+msgstr "میٹا تفصیل"
+
+#. Legacy key: thank_you
+msgid "Thank you"
+msgstr "شکریہ"
+
+#. Legacy key: you_are_just_one_click_away
+msgid "You are just one click away"
+msgstr "آپ صرف ایک کلک کی دوری پر ہیں۔"
+
+#. Legacy key: submit
+msgid "Submit"
+msgstr "جمع کرائیں"
+
+#. Legacy key: course_updated_successfully
+msgid "Course updated successfully"
+msgstr "کورس کامیابی سے اپ ڈیٹ ہو گیا۔"
+
+#. Legacy key: course_progress_analytics
+msgid "Course progress analytics"
+msgstr "کورس کی ترقی کے تجزیات"
+
+#. Legacy key: completion_percentage
+msgid "Completion percentage"
+msgstr "تکمیل کا فیصد"
+
+#. Legacy key: enrolled_students
+msgid "Enrolled students"
+msgstr "اندراج شدہ طلباء"
+
+#. Legacy key: number_of_students
+msgid "Number of students"
+msgstr "طلباء کی تعداد"
+
+#. Legacy key: course_enrolments
+msgid "Course enrolments"
+msgstr "کورس کے اندراجات"
+
+#. Legacy key: jan
+msgid "Jan"
+msgstr "جنوری"
+
+#. Legacy key: feb
+msgid "Feb"
+msgstr "فروری"
+
+#. Legacy key: mar
+msgid "Mar"
+msgstr "مارچ"
+
+#. Legacy key: apr
+msgid "Apr"
+msgstr "اپریل"
+
+#. Legacy key: jun
+msgid "Jun"
+msgstr "جون"
+
+#. Legacy key: jul
+msgid "Jul"
+msgstr "جولائی"
+
+#. Legacy key: aug
+msgid "Aug"
+msgstr "اگست"
+
+#. Legacy key: sep
+msgid "Sep"
+msgstr "ستمبر"
+
+#. Legacy key: oct
+msgid "Oct"
+msgstr "اکتوبر"
+
+#. Legacy key: nov
+msgid "Nov"
+msgstr "نومبر"
+
+#. Legacy key: go
+msgid "Go"
+msgstr "جاؤ"
+
+#. Legacy key: the_dates_of_month
+msgid "The dates of month"
+msgstr "مہینے کی تاریخیں۔"
+
+#. Legacy key: upload_scorm_course
+msgid "Upload scorm course"
+msgstr "اسکارم کورس اپ لوڈ کریں۔"
+
+#. Legacy key: upload_course
+msgid "Upload course"
+msgstr "کورس اپ لوڈ کریں۔"
+
+#. Legacy key: instruction
+msgid "Instruction"
+msgstr "ہدایت"
+
+#. Legacy key: click_the_upload_course_button
+msgid "Click the upload course button"
+msgstr "اپ لوڈ کورس کے بٹن پر کلک کریں۔"
+
+#. Legacy key: you_will_get_a_floating_form_after_clicking_the_button
+msgid "You will get a floating form after clicking the button"
+msgstr "بٹن پر کلک کرنے کے بعد آپ کو ایک تیرتا ہوا فارم ملے گا۔"
+
+#. Legacy key: select_a_scorm_provider_first
+msgid "Select a scorm provider first"
+msgstr "پہلے اسکارم فراہم کنندہ کو منتخب کریں۔"
+
+#. Legacy key: choose_your_scorm_zip_file
+msgid "Choose your scorm zip file"
+msgstr "اپنی اسکارم زپ فائل کا انتخاب کریں۔"
+
+#. Legacy key: click_the_upload_button_to_save_the_course_file
+msgid "Click the upload button to save the course file"
+msgstr "کورس فائل کو محفوظ کرنے کے لیے اپ لوڈ بٹن پر کلک کریں۔"
+
+#. Legacy key: scorm
+msgid "Scorm"
+msgstr "لعنت"
+
+#. Legacy key: upload_h5p_file
+msgid "Upload h5p file"
+msgstr "h5p فائل اپ لوڈ کریں۔"
+
+#. Legacy key: remove
+msgid "Remove"
+msgstr "دور"
+
+#. Legacy key: h5p
+msgid "H5p"
+msgstr "H5p"
+
+#. Legacy key: blogs
+msgid "Blogs"
+msgstr "بلاگز"
+
+#. Legacy key: add_new_blog
+msgid "Add new blog"
+msgstr "نیا بلاگ شامل کریں۔"
+
+#. Legacy key: creator
+msgid "Creator"
+msgstr "خالق"
+
+#. Legacy key: deactivate
+msgid "Deactivate"
+msgstr "غیر فعال کریں۔"
+
+#. Legacy key: blog_details
+msgid "Blog details"
+msgstr "بلاگ کی تفصیلات"
+
+#. Legacy key: inspirational_journeys
+msgid "Inspirational journeys"
+msgstr "متاثر کن سفر"
+
+#. Legacy key: follow_the_stories_of_academics_and_their_research_expeditions
+msgid "Follow the stories of academics and their research expeditions"
+msgstr "ماہرین تعلیم کی کہانیوں اور ان کی تحقیقی مہمات پر عمل کریں۔"
+
+#. Legacy key: comments
+msgid "Comments"
+msgstr "تبصرے"
+
+#. Legacy key: leave_a_comment
+msgid "Leave a comment"
+msgstr "ایک تبصرہ چھوڑیں"
+
+#. Legacy key: enter_your_comments_here
+msgid "Enter your comments here"
+msgstr "اپنے تبصرے یہاں درج کریں۔"
+
+#. Legacy key: type_your_keywords
+msgid "Type your keywords"
+msgstr "اپنے مطلوبہ الفاظ ٹائپ کریں۔"
+
+#. Legacy key: recent_posts
+msgid "Recent posts"
+msgstr "حالیہ پوسٹس"
+
+#. Legacy key: edit_blog
+msgid "Edit blog"
+msgstr "بلاگ میں ترمیم کریں۔"
+
+#. Legacy key: edit_your_blog
+msgid "Edit your blog"
+msgstr "اپنے بلاگ میں ترمیم کریں۔"
+
+#. Legacy key: enter_blog_title
+msgid "Enter blog title"
+msgstr "بلاگ کا عنوان درج کریں۔"
+
+#. Legacy key: keywords
+msgid "Keywords"
+msgstr "مطلوبہ الفاظ"
+
+#. Legacy key: click_the_enter_button_after_writing_your_keyword
+msgid "Click the enter button after writing your keyword"
+msgstr "اپنا کلیدی لفظ لکھنے کے بعد enter بٹن پر کلک کریں۔"
+
+#. Legacy key: blog_banner
+msgid "Blog banner"
+msgstr "بلاگ بینر"
+
+#. Legacy key: choose_a_banner
+msgid "Choose a banner"
+msgstr "ایک بینر منتخب کریں۔"
+
+#. Legacy key: blog_thumbnail
+msgid "Blog thumbnail"
+msgstr "بلاگ تھمب نیل"
+
+#. Legacy key: choose_a_thumbnail
+msgid "Choose a thumbnail"
+msgstr "ایک تھمب نیل منتخب کریں۔"
+
+#. Legacy key: do_you_want_to_mark_it_as_popular
+msgid "Do you want to mark it as popular"
+msgstr "کیا آپ اسے مقبول کے طور پر نشان زد کرنا چاہتے ہیں؟"
+
+#. Legacy key: mark_as_popular
+msgid "Mark as popular"
+msgstr "مقبول کے بطور نشان زد کریں۔"
+
+#. Legacy key: update_blog
+msgid "Update blog"
+msgstr "بلاگ کو اپ ڈیٹ کریں۔"
+
+#. Legacy key: blog_updated_successfully
+msgid "Blog updated successfully"
+msgstr "بلاگ کامیابی کے ساتھ اپ ڈیٹ ہو گیا۔"
+
+#. Legacy key: add_instructor
+msgid "Add instructor"
+msgstr "انسٹرکٹر شامل کریں۔"
+
+#. Legacy key: photo
+msgid "Photo"
+msgstr "تصویر"
+
+#. Legacy key: name
+msgid "Name"
+msgstr "نام"
+
+#. Legacy key: enrolled_courses
+msgid "Enrolled courses"
+msgstr "اندراج شدہ کورسز"
+
+#. Legacy key: view_courses
+msgid "View courses"
+msgstr "کورسز دیکھیں"
+
+#. Legacy key: instructor_edit
+msgid "Instructor edit"
+msgstr "انسٹرکٹر میں ترمیم کریں۔"
+
+#. Legacy key: instructor_edit_form
+msgid "Instructor edit form"
+msgstr "انسٹرکٹر ایڈٹ فارم"
+
+#. Legacy key: basic_info
+msgid "Basic info"
+msgstr "بنیادی معلومات"
+
+#. Legacy key: login_credentials
+msgid "Login credentials"
+msgstr "لاگ ان کی اسناد"
+
+#. Legacy key: social_information
+msgid "Social information"
+msgstr "سماجی معلومات"
+
+#. Legacy key: payment_info
+msgid "Payment info"
+msgstr "ادائیگی کی معلومات"
+
+#. Legacy key: a_short_title_about_yourself
+msgid "A short title about yourself"
+msgstr "اپنے بارے میں ایک مختصر عنوان"
+
+#. Legacy key: short_title
+msgid "Short title"
+msgstr "مختصر عنوان"
+
+#. Legacy key: skills
+msgid "Skills"
+msgstr "ہنر"
+
+#. Legacy key: write_your_skill_and_click_the_enter_button
+msgid "Write your skill and click the enter button"
+msgstr "اپنی مہارت لکھیں اور انٹر بٹن پر کلک کریں۔"
+
+#. Legacy key: biography
+msgid "Biography"
+msgstr "سیرت"
+
+#. Legacy key: user_image
+msgid "User image"
+msgstr "صارف کی تصویر"
+
+#. Legacy key: choose_user_image
+msgid "Choose user image"
+msgstr "صارف کی تصویر کا انتخاب کریں۔"
+
+#. Legacy key: razorpay
+msgid "Razorpay"
+msgstr "ریزر پے"
+
+#. Legacy key: key_id
+msgid "Key id"
+msgstr "کلیدی شناخت"
+
+#. Legacy key: required_for_instructor
+msgid "Required for instructor"
+msgstr "انسٹرکٹر کے لیے ضروری ہے۔"
+
+#. Legacy key: secret_key
+msgid "Secret key"
+msgstr "خفیہ چابی"
+
+#. Legacy key: theme_color
+msgid "Theme color"
+msgstr "تھیم کا رنگ"
+
+#. Legacy key: stripe
+msgid "Stripe"
+msgstr "پٹی"
+
+#. Legacy key: public_key
+msgid "Public key"
+msgstr "عوامی کلید"
+
+#. Legacy key: public_live_key
+msgid "Public live key"
+msgstr "عوامی لائیو کلید"
+
+#. Legacy key: secret_live_key
+msgid "Secret live key"
+msgstr "خفیہ لائیو کلید"
+
+#. Legacy key: paypal
+msgid "Paypal"
+msgstr "پے پال"
+
+#. Legacy key: sandbox_client_id
+msgid "Sandbox client id"
+msgstr "سینڈ باکس کلائنٹ آئی ڈی"
+
+#. Legacy key: sandbox_secret_key
+msgid "Sandbox secret key"
+msgstr "سینڈ باکس خفیہ کلید"
+
+#. Legacy key: production_client_id
+msgid "Production client id"
+msgstr "پروڈکشن کلائنٹ کی شناخت"
+
+#. Legacy key: production_secret_key
+msgid "Production secret key"
+msgstr "پیداوار کی خفیہ کلید"
+
+#. Legacy key: ccavenue
+msgid "Ccavenue"
+msgstr "Ccavenue"
+
+#. Legacy key: ccavenue_merchant_id
+msgid "Ccavenue merchant id"
+msgstr "Ccavenue مرچنٹ آئی ڈی"
+
+#. Legacy key: ccavenue_working_key
+msgid "Ccavenue working key"
+msgstr "Ccavenue ورکنگ کلید"
+
+#. Legacy key: ccavenue_access_code
+msgid "Ccavenue access code"
+msgstr "Ccavenue رسائی کوڈ"
+
+#. Legacy key: iyzico
+msgid "Iyzico"
+msgstr "آئیزیکو"
+
+#. Legacy key: api_test_key
+msgid "Api test key"
+msgstr "اے پی آئی ٹیسٹ کلید"
+
+#. Legacy key: secret_test_key
+msgid "Secret test key"
+msgstr "خفیہ ٹیسٹ کی کلید"
+
+#. Legacy key: api_live_key
+msgid "Api live key"
+msgstr "اے پی آئی لائیو کلید"
+
+#. Legacy key: paystack
+msgid "Paystack"
+msgstr "پے اسٹیک"
+
+#. Legacy key: public_test_key
+msgid "Public test key"
+msgstr "عوامی ٹیسٹ کلید"
+
+#. Legacy key: paytm
+msgid "Paytm"
+msgstr "پے ٹی ایم"
+
+#. Legacy key: paytm_merchant_key
+msgid "Paytm merchant key"
+msgstr "Paytm مرچنٹ کلید"
+
+#. Legacy key: paytm_merchant_mid
+msgid "Paytm merchant mid"
+msgstr "پے ٹی ایم مرچنٹ وسط"
+
+#. Legacy key: paytm_merchant_website
+msgid "Paytm merchant website"
+msgstr "پے ٹی ایم مرچنٹ کی ویب سائٹ"
+
+#. Legacy key: industry_type_id
+msgid "Industry type id"
+msgstr "صنعت کی قسم کی شناخت"
+
+#. Legacy key: channel_id
+msgid "Channel id"
+msgstr "چینل آئی ڈی"
+
+#. Legacy key: user_update_successfully
+msgid "User update successfully"
+msgstr "صارف کی تازہ کاری کامیابی سے ہوئی۔"
+
+#. Legacy key: current_course_provider
+msgid "Current course provider"
+msgstr "موجودہ کورس فراہم کنندہ"
+
+#. Legacy key: ispring
+msgid "Ispring"
+msgstr "اسپرنگ"
+
+#. Legacy key: preview
+msgid "Preview"
+msgstr "پیش نظارہ"
+
+#. Legacy key: update_scorm_course
+msgid "Update scorm course"
+msgstr "اسکارم کورس کو اپ ڈیٹ کریں۔"
+
+#. Legacy key: update_course
+msgid "Update course"
+msgstr "کورس کو اپ ڈیٹ کریں۔"
+
+#. Legacy key: system_settings_updated
+msgid "System settings updated"
+msgstr "سسٹم کی ترتیبات کو اپ ڈیٹ کر دیا گیا۔"
+
+#. Legacy key: student
+msgid "Student"
+msgstr "طالب علم"
+
+#. Legacy key: progress
+msgid "Progress"
+msgstr "پیش رفت"
+
+#. Legacy key: not_started_yet
+msgid "Not started yet"
+msgstr "ابھی شروع نہیں ہوا۔"
+
+#. Legacy key: not_completed_yet
+msgid "Not completed yet"
+msgstr "ابھی تک مکمل نہیں ہوا۔"
+
+#. Legacy key: enrolled_from
+msgid "Enrolled from"
+msgstr "سے داخلہ لیا۔"
+
+#. Legacy key: last_seen_on
+msgid "Last seen on"
+msgstr "آخری بار دیکھا گیا۔"
+
+#. Legacy key: completed_on
+msgid "Completed on"
+msgstr "پر مکمل ہوا۔"
+
+#. Legacy key: completed_lesson
+msgid "Completed lesson"
+msgstr "مکمل سبق"
+
+#. Legacy key: out_of
+msgid "Out of"
+msgstr "سے باہر"
+
+#. Legacy key: watched_duration
+msgid "Watched duration"
+msgstr "دیکھا گیا دورانیہ"
+
+#. Legacy key: course_adding_form
+msgid "Course adding form"
+msgstr "کورس کا اضافہ فارم"
+
+#. Legacy key: create_as_a
+msgid "Create as a"
+msgstr "ایک کے طور پر بنائیں"
+
+#. Legacy key: course_has_been_added_successfully
+msgid "Course has been added successfully"
+msgstr "کورس کامیابی کے ساتھ شامل کر دیا گیا ہے۔"
+
+#. Legacy key: instructor_add
+msgid "Instructor add"
+msgstr "انسٹرکٹر شامل کریں۔"
+
+#. Legacy key: instructor_add_form
+msgid "Instructor add form"
+msgstr "انسٹرکٹر فارم شامل کریں۔"
+
+#. Legacy key: sub_categories
+msgid "Sub categories"
+msgstr "ذیلی زمرے"
+
+#. Legacy key: edit_category
+msgid "Edit category"
+msgstr "زمرہ میں ترمیم کریں۔"
+
+#. Legacy key: update_category
+msgid "Update category"
+msgstr "زمرہ کو اپ ڈیٹ کریں۔"
+
+#. Legacy key: update_category_form
+msgid "Update category form"
+msgstr "زمرہ فارم کو اپ ڈیٹ کریں۔"
+
+#. Legacy key: category_title
+msgid "Category title"
+msgstr "زمرہ کا عنوان"
+
+#. Legacy key: parent
+msgid "Parent"
+msgstr "والدین"
+
+#. Legacy key: none
+msgid "None"
+msgstr "کوئی نہیں۔"
+
+#. Legacy key: select_none_to_create_a_parent_category
+msgid "Select none to create a parent category"
+msgstr "پیرنٹ زمرہ بنانے کے لیے کوئی نہیں منتخب کریں۔"
+
+#. Legacy key: icon_picker
+msgid "Icon picker"
+msgstr "آئیکن چننے والا"
+
+#. Legacy key: category_thumbnail
+msgid "Category thumbnail"
+msgstr "زمرہ تھمب نیل"
+
+#. Legacy key: the_image_size_should_be
+msgid "The image size should be"
+msgstr "تصویر کا سائز ہونا چاہئے۔"
+
+#. Legacy key: choose_thumbnail
+msgid "Choose thumbnail"
+msgstr "تھمب نیل کا انتخاب کریں۔"
+
+#. Legacy key: data_added_successfully
+msgid "Data added successfully"
+msgstr "ڈیٹا کامیابی سے شامل ہو گیا۔"
+
+#. Legacy key: logo_updated
+msgid "Logo updated"
+msgstr "لوگو کو اپ ڈیٹ کر دیا گیا۔"
+
+#. Legacy key: favicon_updated
+msgid "Favicon updated"
+msgstr "Favicon کو اپ ڈیٹ کر دیا گیا۔"
+
+#. Legacy key: motivational_speech_updated_successfully
+msgid "Motivational speech updated successfully"
+msgstr "تحریکی تقریر کامیابی کے ساتھ اپ ڈیٹ ہو گئی۔"
+
+#. Legacy key: new_home_page_layout_has_been_activated
+msgid "New home page layout has been activated"
+msgstr "ہوم پیج کی نئی ترتیب کو چالو کر دیا گیا ہے۔"
+
+#. Legacy key: welcome_to
+msgid "Welcome to"
+msgstr "میں خوش آمدید"
+
+#. Legacy key: join_for_free
+msgid "Join for free"
+msgstr "مفت میں شامل ہوں۔"
+
+#. Legacy key: happy_student
+msgid "Happy student"
+msgstr "خوش طالب علم"
+
+#. Legacy key: experienced_instructor
+msgid "Experienced instructor"
+msgstr "تجربہ کار انسٹرکٹر"
+
+#. Legacy key: quality_courses
+msgid "Quality courses"
+msgstr "معیاری کورسز"
+
+#. Legacy key: latest_top_skills
+msgid "Latest top skills"
+msgstr "تازہ ترین اعلیٰ مہارتیں۔"
+
+#. Legacy key: globalization
+msgid "Globalization"
+msgstr "عالمگیریت"
+
+#. Legacy key: cost-effectiveness
+msgid "Cost-effectiveness"
+msgstr "قیمت تاثیر"
+
+#. Legacy key: popular_categories
+msgid "Popular categories"
+msgstr "مقبول زمرے"
+
+#. Legacy key: duration
+msgid "Duration"
+msgstr "دورانیہ"
+
+#. Legacy key: quality_educators
+msgid "Quality educators"
+msgstr "معیاری تعلیم دینے والے"
+
+#. Legacy key: premium_courses
+msgid "Premium courses"
+msgstr "پریمیم کورسز"
+
+#. Legacy key: cost-free_course
+msgid "Cost-free course"
+msgstr "لاگت سے پاک کورس"
+
+#. Legacy key: popular_instructor
+msgid "Popular instructor"
+msgstr "مشہور انسٹرکٹر"
+
+#. Legacy key: follow_the_latest_news
+msgid "Follow the latest news"
+msgstr "تازہ ترین خبروں پر عمل کریں۔"
+
+#. Legacy key: website_notification
+msgid "Website notification"
+msgstr "ویب سائٹ کی اطلاع"
+
+#. Legacy key: email_template
+msgid "Email template"
+msgstr "ای میل ٹیمپلیٹ"
+
+#. Legacy key: protocol
+msgid "Protocol"
+msgstr "پروٹوکول"
+
+#. Legacy key: smtp_crypto
+msgid "Smtp crypto"
+msgstr "ایس ایم ٹی پی کرپٹو"
+
+#. Legacy key: smtp_host
+msgid "Smtp host"
+msgstr "ایس ایم ٹی پی میزبان"
+
+#. Legacy key: smtp_port
+msgid "Smtp port"
+msgstr "ایس ایم ٹی پی پورٹ"
+
+#. Legacy key: smtp_from_email
+msgid "Smtp from email"
+msgstr "ای میل سے ایس ایم ٹی پی"
+
+#. Legacy key: smtp_username
+msgid "Smtp username"
+msgstr "Smtp صارف نام"
+
+#. Legacy key: smtp_password
+msgid "Smtp password"
+msgstr "ایس ایم ٹی پی پاس ورڈ"
+
+#. Legacy key: email_type
+msgid "Email type"
+msgstr "ای میل کی قسم"
+
+#. Legacy key: email_subject
+msgid "Email subject"
+msgstr "ای میل کے موضوع"
+
+#. Legacy key: action
+msgid "Action"
+msgstr "عمل"
+
+#. Legacy key: to_admin
+msgid "To admin"
+msgstr "ایڈمن کو"
+
+#. Legacy key: to_user
+msgid "To user"
+msgstr "صارف کو"
+
+#. Legacy key: edit_email_template
+msgid "Edit email template"
+msgstr "ای میل ٹیمپلیٹ میں ترمیم کریں۔"
+
+#. Legacy key: to_instructor
+msgid "To instructor"
+msgstr "انسٹرکٹر کو"
+
+#. Legacy key: to_student
+msgid "To student"
+msgstr "طالب علم کو"
+
+#. Legacy key: to_affiliator
+msgid "To affiliator"
+msgstr "الحاق کرنے والے کو"
+
+#. Legacy key: to_payer
+msgid "To payer"
+msgstr "ادا کرنے والے کو"
+
+#. Legacy key: to_receiver
+msgid "To receiver"
+msgstr "وصول کنندہ کو"
+
+#. Legacy key: configure_your_notification_settings
+msgid "Configure your notification settings"
+msgstr "اپنی اطلاع کی ترتیبات کو ترتیب دیں۔"
+
+#. Legacy key: new_user_registration
+msgid "New user registration"
+msgstr "نئے صارف کی رجسٹریشن"
+
+#. Legacy key: get_notified_when_a_new_user_signs_up
+msgid "Get notified when a new user signs up"
+msgstr "جب کوئی نیا صارف سائن اپ کرتا ہے تو اطلاع حاصل کریں۔"
+
+#. Legacy key: configure_for_admin
+msgid "Configure for admin"
+msgstr "منتظم کے لیے ترتیب دیں۔"
+
+#. Legacy key: system_notification
+msgid "System notification"
+msgstr "سسٹم کی اطلاع"
+
+#. Legacy key: email_notification
+msgid "Email notification"
+msgstr "ای میل اطلاع"
+
+#. Legacy key: configure_for_user
+msgid "Configure for user"
+msgstr "صارف کے لیے ترتیب دیں۔"
+
+#. Legacy key: email_verification
+msgid "Email verification"
+msgstr "ای میل کی توثیق"
+
+#. Legacy key: not_editable
+msgid "Not editable"
+msgstr "قابل تدوین نہیں۔"
+
+#. Legacy key: forgot_password_mail
+msgid "Forgot password mail"
+msgstr "پاس ورڈ میل بھول گئے۔"
+
+#. Legacy key: account_security_alert
+msgid "Account security alert"
+msgstr "اکاؤنٹ سیکیورٹی الرٹ"
+
+#. Legacy key: send_verification_code_for_login_from_a_new_device
+msgid "Send verification code for login from a new device"
+msgstr "نئے آلے سے لاگ ان کے لیے تصدیقی کوڈ بھیجیں۔"
+
+#. Legacy key: course_purchase_notification
+msgid "Course purchase notification"
+msgstr "کورس کی خریداری کی اطلاع"
+
+#. Legacy key: configure_for_student
+msgid "Configure for student"
+msgstr "طالب علم کے لیے ترتیب دیں۔"
+
+#. Legacy key: configure_for_instructor
+msgid "Configure for instructor"
+msgstr "انسٹرکٹر کے لیے ترتیب دیں۔"
+
+#. Legacy key: course_completion_mail
+msgid "Course completion mail"
+msgstr "کورس کی تکمیل کا میل"
+
+#. Legacy key: course_eligibility_notification
+msgid "Course eligibility notification"
+msgstr "کورس کی اہلیت کی اطلاع"
+
+#. Legacy key: offline_payment_suspended_mail
+msgid "Offline payment suspended mail"
+msgstr "آف لائن ادائیگی معطل شدہ میل"
+
+#. Legacy key: course_bundle_purchase_notification
+msgid "Course bundle purchase notification"
+msgstr "کورس بنڈل خریداری کی اطلاع"
+
+#. Legacy key: new_user_added_as_affiliator
+msgid "New user added as affiliator"
+msgstr "نئے صارف کو بطور الحاق شامل کیا گیا۔"
+
+#. Legacy key: send_account_information_to_the_new_user
+msgid "Send account information to the new user"
+msgstr "نئے صارف کو اکاؤنٹ کی معلومات بھیجیں۔"
+
+#. Legacy key: configure_for_affiliator
+msgid "Configure for affiliator"
+msgstr "الحاق کنندہ کے لیے ترتیب دیں۔"
+
+#. Legacy key: affiliate_approval_notification
+msgid "Affiliate approval notification"
+msgstr "الحاق کی منظوری کی اطلاع"
+
+#. Legacy key: send_affiliate_approval_mail_to_the_user_account
+msgid "Send affiliate approval mail to the user account"
+msgstr "صارف کے اکاؤنٹ پر الحاق کی منظوری کا میل بھیجیں۔"
+
+#. Legacy key: affiliator_request_cancellation
+msgid "Affiliator request cancellation"
+msgstr "الحاق کی درخواست منسوخی"
+
+#. Legacy key: affiliation_money_withdrawal_request
+msgid "Affiliation money withdrawal request"
+msgstr "وابستگی رقم نکالنے کی درخواست"
+
+#. Legacy key: approval_of_withdrawal_request_of_affiliation
+msgid "Approval of withdrawal request of affiliation"
+msgstr "الحاق کی واپسی کی درخواست کی منظوری"
+
+#. Legacy key: course_gift_notification
+msgid "Course gift notification"
+msgstr "کورس گفٹ کی اطلاع"
+
+#. Legacy key: notify_users_after_course_gift
+msgid "Notify users after course gift"
+msgstr "کورس گفٹ کے بعد صارفین کو مطلع کریں۔"
+
+#. Legacy key: configure_for_payer
+msgid "Configure for payer"
+msgstr "ادا کنندہ کے لیے ترتیب دیں۔"
+
+#. Legacy key: configure_for_receiver
+msgid "Configure for receiver"
+msgstr "وصول کنندہ کے لیے ترتیب دیں۔"
+
+#. Legacy key: custom_pages
+msgid "Custom pages"
+msgstr "حسب ضرورت صفحات"
+
+#. Legacy key: add_a_new_page
+msgid "Add a new page"
+msgstr "ایک نیا صفحہ شامل کریں۔"
+
+#. Legacy key: page_title
+msgid "Page title"
+msgstr "صفحہ کا عنوان"
+
+#. Legacy key: button_title
+msgid "Button title"
+msgstr "بٹن کا عنوان"
+
+#. Legacy key: button_position
+msgid "Button position"
+msgstr "بٹن کی پوزیشن"
+
+#. Legacy key: social_login_configuration
+msgid "Social login configuration"
+msgstr "سوشل لاگ ان کنفیگریشن"
+
+#. Legacy key: facebook_login
+msgid "Facebook login"
+msgstr "فیس بک لاگ ان"
+
+#. Legacy key: facebook_app_creation_instruction
+msgid "Facebook app creation instruction"
+msgstr "فیس بک ایپ بنانے کی ہدایات"
+
+#. Legacy key: facebook_app_id
+msgid "Facebook app id"
+msgstr "فیس بک ایپ آئی ڈی"
+
+#. Legacy key: facebook_app_secret
+msgid "Facebook app secret"
+msgstr "فیس بک ایپ کا راز"
+
+#. Legacy key: completed
+msgid "Completed"
+msgstr "مکمل"
+
+#. Legacy key: lesson_type
+msgid "Lesson type"
+msgstr "سبق کی قسم"
+
+#. Legacy key: video_url
+msgid "Video url"
+msgstr "ویڈیو یو آر ایل"
+
+#. Legacy key: this_video_will_be_shown_on_web_application
+msgid "This video will be shown on web application"
+msgstr "یہ ویڈیو ویب ایپلیکیشن پر دکھائی جائے گی۔"
+
+#. Legacy key: thumbnail
+msgid "Thumbnail"
+msgstr "تھمب نیل"
+
+#. Legacy key: caption
+msgid "Caption"
+msgstr "کیپشن"
+
+#. Legacy key: choose_your_caption_file
+msgid "Choose your caption file"
+msgstr "اپنی کیپشن فائل کا انتخاب کریں۔"
+
+#. Legacy key: lesson_provider
+msgid "Lesson provider"
+msgstr "سبق فراہم کرنے والا"
+
+#. Legacy key: for_mobile_application
+msgid "For mobile application"
+msgstr "موبائل ایپلیکیشن کے لیے"
+
+#. Legacy key: only
+msgid "Only"
+msgstr "صرف"
+
+#. Legacy key: type_video_is_acceptable_for_mobile_application
+msgid "Type video is acceptable for mobile application"
+msgstr "قسم کی ویڈیو موبائل ایپلیکیشن کے لیے قابل قبول ہے۔"
+
+#. Legacy key: do_you_want_to_keep_it_free_as_a_preview_lesson
+msgid "Do you want to keep it free as a preview lesson"
+msgstr "کیا آپ اسے پیش نظارہ سبق کے طور پر مفت رکھنا چاہتے ہیں؟"
+
+#. Legacy key: mark_as_free_lesson
+msgid "Mark as free lesson"
+msgstr "مفت سبق کے بطور نشان زد کریں۔"
+
+#. Legacy key: course_content
+msgid "Course content"
+msgstr "کورس کا مواد"
+
+#. Legacy key: mark_as_complete
+msgid "Mark as complete"
+msgstr "مکمل کے بطور نشان زد کریں۔"
+
+#. Legacy key: video
+msgid "Video"
+msgstr "ویڈیو"
+
+#. Legacy key: iframe
+msgid "Iframe"
+msgstr "iframe"
+
+#. Legacy key: pdf
+msgid "Pdf"
+msgstr "پی ڈی ایف"
+
+#. Legacy key: forum
+msgid "Forum"
+msgstr "فورم"
+
+#. Legacy key: live_class
+msgid "Live class"
+msgstr "لائیو کلاس"
+
+#. Legacy key: website_faqs_updated_successfully
+msgid "Website faqs updated successfully"
+msgstr "ویب سائٹ کے سوالات کامیابی سے اپ ڈیٹ ہو گئے۔"
+
+#. Legacy key: frequently_asked_questions
+msgid "Frequently asked questions"
+msgstr "اکثر پوچھے گئے سوالات"
+
+#. Legacy key: see_more
+msgid "See more"
+msgstr "دیکھیں مزید"
+
+#. Legacy key: course_content_not_found
+msgid "Course content not found"
+msgstr "کورس کا مواد نہیں ملا"
+
+#. Legacy key: total_questions
+msgid "Total questions"
+msgstr "کل سوالات"
+
+#. Legacy key: total_participant_students
+msgid "Total participant students"
+msgstr "کل شریک طلباء"
+
+#. Legacy key: participant_students
+msgid "Participant students"
+msgstr "شریک طلباء"
+
+#. Legacy key: select_student
+msgid "Select student"
+msgstr "طالب علم کو منتخب کریں۔"
+
+#. Legacy key: select_a_student_to_view_the_answer_sheet
+msgid "Select a student to view the answer sheet"
+msgstr "جوابی پرچہ دیکھنے کے لیے طالب علم کا انتخاب کریں۔"
+
+#. Legacy key: courses_included
+msgid "Courses included"
+msgstr "کورسز شامل ہیں۔"
+
+#. Legacy key: subscription
+msgid "Subscription"
+msgstr "رکنیت"
+
+#. Legacy key: days
+msgid "Days"
+msgstr "دن"
+
+#. Legacy key: included_courses
+msgid "Included courses"
+msgstr "شامل کورسز"
+
+#. Legacy key: think_more_clearly
+msgid "Think more clearly"
+msgstr "مزید واضح طور پر سوچیں۔"
+
+#. Legacy key: select_your_service
+msgid "Select your service"
+msgstr "اپنی خدمت کا انتخاب کریں۔"
+
+#. Legacy key: course_short_description
+msgid "Course short description"
+msgstr "کورس کی مختصر تفصیل"
+
+#. Legacy key: course_long_description
+msgid "Course long description"
+msgstr "کورس کی لمبی تفصیل"
+
+#. Legacy key: course_requirements
+msgid "Course requirements"
+msgstr "کورس کی ضروریات"
+
+#. Legacy key: course_outcomes
+msgid "Course outcomes"
+msgstr "کورس کے نتائج"
+
+#. Legacy key: course_seo_tags
+msgid "Course seo tags"
+msgstr "کورس SEO ٹیگز"
+
+#. Legacy key: course_lesson_text
+msgid "Course lesson text"
+msgstr "کورس کے سبق کا متن"
+
+#. Legacy key: course_certificate_text
+msgid "Course certificate text"
+msgstr "کورس سرٹیفکیٹ کا متن"
+
+#. Legacy key: course_quiz_text
+msgid "Course quiz text"
+msgstr "کورس کوئز کا متن"
+
+#. Legacy key: course_blog_title
+msgid "Course blog title"
+msgstr "کورس بلاگ کا عنوان"
+
+#. Legacy key: course_blog_post
+msgid "Course blog post"
+msgstr "کورس بلاگ پوسٹ"
+
+#. Legacy key: enter_your_keyword
+msgid "Enter your keyword"
+msgstr "اپنا کلیدی لفظ درج کریں۔"
+
+#. Legacy key: generate
+msgid "Generate"
+msgstr "پیدا کریں۔"
+
+#. Legacy key: generating
+msgid "Generating"
+msgstr "پیدا کرنا"
+
+#. Legacy key: generated_text
+msgid "Generated text"
+msgstr "تیار کردہ متن"
+
+#. Legacy key: copy
+msgid "Copy"
+msgstr "کاپی"
+
+#. Legacy key: copyed
+msgid "Copyed"
+msgstr "نقل"
+
+#. Legacy key: _learning_animal_name_
+msgid " learning animal name "
+msgstr "جانوروں کا نام سیکھنا"
+
+#. Legacy key: share_and_earn
+msgid "Share and earn"
+msgstr "شیئر کریں اور کمائیں۔"
+
+#. Legacy key: write_a_review
+msgid "Write a review"
+msgstr "تجزیہ لکھیں"
+
+#. Legacy key: 1_start_rating
+msgid "1 start rating"
+msgstr "1 آغاز کی درجہ بندی"
+
+#. Legacy key: 2_start_rating
+msgid "2 start rating"
+msgstr "2 شروع کی درجہ بندی"
+
+#. Legacy key: 3_start_rating
+msgid "3 start rating"
+msgstr "3 شروع کی درجہ بندی"
+
+#. Legacy key: 4_start_rating
+msgid "4 start rating"
+msgstr "4 شروع کی درجہ بندی"
+
+#. Legacy key: 5_start_rating
+msgid "5 start rating"
+msgstr "5 شروع کی درجہ بندی"
+
+#. Legacy key: write_your_comment
+msgid "Write your comment"
+msgstr "اپنا تبصرہ لکھیں۔"
+
+#. Legacy key: adobe_illustrator_cc_-_essentials_training_course
+msgid "Adobe illustrator cc - essentials training course"
+msgstr "ایڈوب السٹریٹر سی سی - ضروری تربیتی کورس"
+
+#. Legacy key: mon
+msgid "Mon"
+msgstr "پیر"
+
+#. Legacy key: select_a_user
+msgid "Select a user"
+msgstr "ایک صارف منتخب کریں۔"
+
+#. Legacy key: write_your_message
+msgid "Write your message"
+msgstr "اپنا پیغام لکھیں۔"
+
+#. Legacy key: send
+msgid "Send"
+msgstr "بھیجیں"
+
+#. Legacy key: purchased_courses
+msgid "Purchased courses"
+msgstr "کورسز خریدے۔"
+
+#. Legacy key: payment_method
+msgid "Payment method"
+msgstr "ادائیگی کا طریقہ"
+
+#. Legacy key: purchased_date
+msgid "Purchased date"
+msgstr "خریداری کی تاریخ"
+
+#. Legacy key: invoice
+msgid "Invoice"
+msgstr "رسید"
+
+#. Legacy key: assignment_list
+msgid "Assignment list"
+msgstr "اسائنمنٹ لسٹ"
+
+#. Legacy key: no_data_found
+msgid "No data found"
+msgstr "کوئی ڈیٹا نہیں ملا"
+
+#. Legacy key: uncheck
+msgid "Uncheck"
+msgstr "غیر چیک کریں۔"
+
+#. Legacy key: faqs
+msgid "Faqs"
+msgstr "سوالات"
+
+#. Legacy key: latest_from_our_blog
+msgid "Latest from our blog"
+msgstr "ہمارے بلاگ سے تازہ ترین"
+
+#. Legacy key: exploring_the_cutting-edge_insights_and_updates_on_our_blog
+msgid "Exploring the cutting-edge insights and updates on our blog"
+msgstr "ہمارے بلاگ پر جدید ترین بصیرت اور اپ ڈیٹس کو دریافت کرنا"
+
+#. Legacy key: see_all
+msgid "See all"
+msgstr "تمام دیکھیں"
+
+#. Legacy key: popular_blogs
+msgid "Popular blogs"
+msgstr "مشہور بلاگز"
+
+#. Legacy key: learn_from_expert_bloggers_and_expand_your_knowledge
+msgid "Learn from expert bloggers and expand your knowledge"
+msgstr "ماہر بلاگرز سے سیکھیں اور اپنے علم میں اضافہ کریں۔"
+
+#. Legacy key: shopping_cart
+msgid "Shopping cart"
+msgstr "خریداری کی ٹوکری"
+
+#. Legacy key: your_cart_items
+msgid "Your cart items"
+msgstr "آپ کی ٹوکری اشیاء"
+
+#. Legacy key: items
+msgid "Items"
+msgstr "اشیاء"
+
+#. Legacy key: subtotal
+msgid "Subtotal"
+msgstr "ذیلی ٹوٹل"
+
+#. Legacy key: apply_coupon
+msgid "Apply coupon"
+msgstr "کوپن کا اطلاق کریں"
+
+#. Legacy key: apply
+msgid "Apply"
+msgstr "درخواست دیں"
+
+#. Legacy key: send_as_a_gift
+msgid "Send as a gift"
+msgstr "بطور تحفہ بھیجیں۔"
+
+#. Legacy key: email_address
+msgid "Email address"
+msgstr "ای میل اڈریس"
+
+#. Legacy key: continue_to_payment
+msgid "Continue to payment"
+msgstr "ادائیگی جاری رکھیں"
+
+#. Legacy key: searching
+msgid "Searching"
+msgstr "تلاش کر رہا ہے۔"
+
+#. Legacy key: quiz_submission_successfully
+msgid "Quiz submission successfully"
+msgstr "کوئز جمع کروانا کامیابی کے ساتھ"
+
+#. Legacy key: obtained_marks
+msgid "Obtained marks"
+msgstr "نمبر حاصل کئے"
+
+#. Legacy key: correct
+msgid "Correct"
+msgstr "درست"
+
+#. Legacy key: wrong
+msgid "Wrong"
+msgstr "غلط"
+
+#. Legacy key: correct_answer
+msgid "Correct answer"
+msgstr "درست جواب"
+
+#. Legacy key: user_added_successfully
+msgid "User added successfully"
+msgstr "صارف کو کامیابی کے ساتھ شامل کیا گیا۔"
+
+#. Legacy key: instructor_payouts
+msgid "Instructor payouts"
+msgstr "انسٹرکٹر کی ادائیگی"
+
+#. Legacy key: list_of_payouts
+msgid "List of payouts"
+msgstr "ادائیگیوں کی فہرست"
+
+#. Legacy key: completed_payouts
+msgid "Completed payouts"
+msgstr "مکمل ادائیگیاں"
+
+#. Legacy key: pending_payouts
+msgid "Pending payouts"
+msgstr "زیر التواء ادائیگیاں"
+
+#. Legacy key: payout_amount
+msgid "Payout amount"
+msgstr "ادائیگی کی رقم"
+
+#. Legacy key: payment_type
+msgid "Payment type"
+msgstr "ادائیگی کی قسم"
+
+#. Legacy key: payout_date
+msgid "Payout date"
+msgstr "ادائیگی کی تاریخ"
+
+#. Legacy key: option
+msgid "Option"
+msgstr "آپشن"
+
+#. Legacy key: pay
+msgid "Pay"
+msgstr "ادا کریں۔"
+
+#. Legacy key: public_instructor_settings
+msgid "Public instructor settings"
+msgstr "پبلک انسٹرکٹر کی ترتیبات"
+
+#. Legacy key: allow_public_instructor
+msgid "Allow public instructor"
+msgstr "پبلک انسٹرکٹر کو اجازت دیں۔"
+
+#. Legacy key: instructor_application_note
+msgid "Instructor application note"
+msgstr "انسٹرکٹر کی درخواست کا نوٹ"
+
+#. Legacy key: instructor_commission_ettings
+msgid "Instructor commission ettings"
+msgstr "انسٹرکٹر کمیشن کی ترتیبات"
+
+#. Legacy key: instructor_revenue_percentage
+msgid "Instructor revenue percentage"
+msgstr "انسٹرکٹر کی آمدنی کا فیصد"
+
+#. Legacy key: admin_revenue_percentage
+msgid "Admin revenue percentage"
+msgstr "ایڈمن کی آمدنی کا فیصد"
+
+#. Legacy key: instructor_application
+msgid "Instructor application"
+msgstr "انسٹرکٹر کی درخواست"
+
+#. Legacy key: instructor_applications
+msgid "Instructor applications"
+msgstr "انسٹرکٹر ایپلی کیشنز"
+
+#. Legacy key: list_of_applications
+msgid "List of applications"
+msgstr "درخواستوں کی فہرست"
+
+#. Legacy key: pending_applications
+msgid "Pending applications"
+msgstr "زیر التواء درخواستیں"
+
+#. Legacy key: approved_applications
+msgid "Approved applications"
+msgstr "منظور شدہ درخواستیں۔"
+
+#. Legacy key: details
+msgid "Details"
+msgstr "تفصیلات"
+
+#. Legacy key: applicant_details
+msgid "Applicant details"
+msgstr "درخواست گزار کی تفصیلات"
+
+#. Legacy key: application_details
+msgid "Application details"
+msgstr "درخواست کی تفصیلات"
+
+#. Legacy key: download
+msgid "Download"
+msgstr "ڈاؤن لوڈ کریں"
+
+#. Legacy key: approve
+msgid "Approve"
+msgstr "منظور کرو"
+
+#. Legacy key: approved
+msgid "Approved"
+msgstr "منظورشدہ"
+
+#. Legacy key: add_admin
+msgid "Add admin"
+msgstr "ایڈمن شامل کریں۔"
+
+#. Legacy key: root_admin
+msgid "Root admin"
+msgstr "روٹ ایڈمن"
+
+#. Legacy key: assign_permission
+msgid "Assign permission"
+msgstr "اجازت تفویض کریں۔"
+
+#. Legacy key: manage_profil
+msgid "Manage profil"
+msgstr "پروفائل کا نظم کریں۔"
+
+#. Legacy key: facebook_link
+msgid "Facebook link"
+msgstr "فیس بک لنک"
+
+#. Legacy key: twitter_link
+msgid "Twitter link"
+msgstr "ٹویٹر لنک"
+
+#. Legacy key: linkedin_link
+msgid "Linkedin link"
+msgstr "لنکڈین لنک"
+
+#. Legacy key: the_image_size_should_be_any_square_image
+msgid "The image size should be any square image"
+msgstr "تصویر کا سائز کسی بھی مربع تصویر کا ہونا چاہیے۔"
+
+#. Legacy key: update_profile
+msgid "Update profile"
+msgstr "پروفائل کو اپ ڈیٹ کریں۔"
+
+#. Legacy key: current_password
+msgid "Current password"
+msgstr "موجودہ خفیہ لفظ"
+
+#. Legacy key: new_password
+msgid "New password"
+msgstr "نیا پاس ورڈ"
+
+#. Legacy key: confirm_new_password
+msgid "Confirm new password"
+msgstr "نئے پاس ورڈ کی توثیق کریں"
+
+#. Legacy key: update_password
+msgid "Update password"
+msgstr "پاس ورڈ اپ ڈیٹ کریں۔"
+
+#. Legacy key: educator_profile
+msgid "Educator profile"
+msgstr "معلم پروفائل"
+
+#. Legacy key: statistics
+msgid "Statistics"
+msgstr "شماریات"
+
+#. Legacy key: total_students
+msgid "Total students"
+msgstr "کل طلباء"
+
+#. Legacy key: the_complete_python_bootcamp_from_zero_to_hero
+msgid "The complete python bootcamp from zero to hero"
+msgstr "زیرو سے ہیرو تک مکمل ازگر کا بوٹ کیمپ"
+
+#. Legacy key: course_added_to_wishlist
+msgid "Course added to wishlist"
+msgstr "کورس کو خواہش کی فہرست میں شامل کیا گیا۔"
+
+#. Legacy key: manage_course_bundle
+msgid "Manage course bundle"
+msgstr "کورس بنڈل کا نظم کریں۔"
+
+#. Legacy key: bundle
+msgid "Bundle"
+msgstr "بنڈل"
+
+#. Legacy key: subscription_limit
+msgid "Subscription limit"
+msgstr "رکنیت کی حد"
+
+#. Legacy key: deactive
+msgid "Deactive"
+msgstr "فعال"
+
+#. Legacy key: edit_course_bundle
+msgid "Edit course bundle"
+msgstr "کورس بنڈل میں ترمیم کریں۔"
+
+#. Legacy key: bundle_add_form
+msgid "Bundle add form"
+msgstr "بنڈل ایڈ فارم"
+
+#. Legacy key: course_bundle_title
+msgid "Course bundle title"
+msgstr "کورس بنڈل کا عنوان"
+
+#. Legacy key: select_courses
+msgid "Select courses"
+msgstr "کورسز کا انتخاب کریں۔"
+
+#. Legacy key: current_price_of_the_courses_is
+msgid "Current price of the courses is"
+msgstr "کورسز کی موجودہ قیمت ہے۔"
+
+#. Legacy key: bundle_price
+msgid "Bundle price"
+msgstr "بنڈل کی قیمت"
+
+#. Legacy key: subscription_renew_days
+msgid "Subscription renew days"
+msgstr "سبسکرپشن کی تجدید کے دن"
+
+#. Legacy key: count_day
+msgid "Count day"
+msgstr "دن گننا"
+
+#. Legacy key: banner
+msgid "Banner"
+msgstr "بینر"
+
+#. Legacy key: update_bundle
+msgid "Update bundle"
+msgstr "بنڈل کو اپ ڈیٹ کریں۔"
+
+#. Legacy key: complete_guitar_lessons_system_
+msgid "Complete guitar lessons system "
+msgstr "گٹار اسباق کا مکمل نظام"
+
+#. Legacy key: item_successfully_added_to_cart
+msgid "Item successfully added to cart"
+msgstr "آئٹم کو کامیابی کے ساتھ کارٹ میں شامل کر دیا گیا۔"
+
+#. Legacy key: how_to_use_lighting_design_to_transform_your_home
+msgid "How to use lighting design to transform your home"
+msgstr "اپنے گھر کو تبدیل کرنے کے لیے لائٹنگ ڈیزائن کا استعمال کیسے کریں۔"
+
+#. Legacy key: invoice_id
+msgid "Invoice id"
+msgstr "انوائس آئی ڈی"
+
+#. Legacy key: billed_to
+msgid "Billed to"
+msgstr "کو بل دیا گیا۔"
+
+#. Legacy key: date_of_issue
+msgid "Date of issue"
+msgstr "تاریخ اجراء"
+
+#. Legacy key: invoice_total
+msgid "Invoice total"
+msgstr "انوائس کل"
+
+#. Legacy key: qty
+msgid "Qty"
+msgstr "مقدار"
+
+#. Legacy key: paid_by
+msgid "Paid by"
+msgstr "کی طرف سے ادا کیا"
+
+#. Legacy key: tax
+msgid "Tax"
+msgstr "ٹیکس"
+
+#. Legacy key: grand_total
+msgid "Grand total"
+msgstr "مجموعی عدد"
+
+#. Legacy key: print
+msgid "Print"
+msgstr "پرنٹ کریں"
+
+#. Legacy key: back
+msgid "Back"
+msgstr "پیچھے"
+
+#. Legacy key: newsletters
+msgid "Newsletters"
+msgstr "خبرنامے"
+
+#. Legacy key: newsletter_template
+msgid "Newsletter template"
+msgstr "نیوز لیٹر ٹیمپلیٹ"
+
+#. Legacy key: your_phone
+msgid "Your phone"
+msgstr "آپ کا فون"
+
+#. Legacy key: subject
+msgid "Subject"
+msgstr "مضمون"
+
+#. Legacy key: subscriber
+msgid "Subscriber"
+msgstr "سبسکرائبر"
+
+#. Legacy key: user_status
+msgid "User status"
+msgstr "صارف کی حیثیت"
+
+#. Legacy key: newsletter_added_successfully
+msgid "Newsletter added successfully"
+msgstr "نیوز لیٹر کامیابی کے ساتھ شامل کیا گیا۔"
+
+#. Legacy key: edit_newsletter_template
+msgid "Edit newsletter template"
+msgstr "نیوز لیٹر ٹیمپلیٹ میں ترمیم کریں۔"
+
+#. Legacy key: send_newsletter
+msgid "Send newsletter"
+msgstr "نیوز لیٹر بھیجیں۔"
+
+#. Legacy key: send_to
+msgid "Send to"
+msgstr "کے لئے بھیج"
+
+#. Legacy key: selected_user
+msgid "Selected user"
+msgstr "منتخب صارف"
+
+#. Legacy key: all_users
+msgid "All users"
+msgstr "تمام صارفین"
+
+#. Legacy key: all_student
+msgid "All student"
+msgstr "تمام طالب علم"
+
+#. Legacy key: all_instructor
+msgid "All instructor"
+msgstr "تمام انسٹرکٹر"
+
+#. Legacy key: newsletter_subscriber
+msgid "Newsletter subscriber"
+msgstr "نیوز لیٹر سبسکرائبر"
+
+#. Legacy key: all_subscriber
+msgid "All subscriber"
+msgstr "تمام سبسکرائبر"
+
+#. Legacy key: registered_user
+msgid "Registered user"
+msgstr "رجسٹرڈ صارف"
+
+#. Legacy key: non_registered_user
+msgid "Non registered user"
+msgstr "غیر رجسٹرڈ صارف"
+
+#. Legacy key: select_your_users
+msgid "Select your users"
+msgstr "اپنے صارفین کو منتخب کریں۔"
+
+#. Legacy key: newsletter_deleted_successfully
+msgid "Newsletter deleted successfully"
+msgstr "نیوز لیٹر کامیابی کے ساتھ حذف کر دیا گیا۔"
+
+#. Legacy key: item_successfully_removed_from_cart
+msgid "Item successfully removed from cart"
+msgstr "آئٹم کو کارٹ سے کامیابی کے ساتھ ہٹا دیا گیا۔"
+
+#. Legacy key: multi_language_settings
+msgid "Multi language settings"
+msgstr "کثیر زبان کی ترتیبات"
+
+#. Legacy key: manage_language
+msgid "Manage language"
+msgstr "زبان کا انتظام کریں۔"
+
+#. Legacy key: language_list
+msgid "Language list"
+msgstr "زبان کی فہرست"
+
+#. Legacy key: add_language
+msgid "Add language"
+msgstr "زبان شامل کریں۔"
+
+#. Legacy key: import_language
+msgid "Import language"
+msgstr "زبان درآمد کریں۔"
+
+#. Legacy key: edit_phrase
+msgid "Edit phrase"
+msgstr "جملے میں ترمیم کریں۔"
+
+#. Legacy key: export
+msgid "Export"
+msgstr "برآمد کریں۔"
+
+#. Legacy key: delete_language
+msgid "Delete language"
+msgstr "زبان کو حذف کریں۔"
+
+#. Legacy key: add_new_phrase
+msgid "Add new phrase"
+msgstr "نیا جملہ شامل کریں۔"
+
+#. Legacy key: add_new_language
+msgid "Add new language"
+msgstr "نئی زبان شامل کریں۔"
+
+#. Legacy key: no_special_character_or_space_is_allowed
+msgid "No special character or space is allowed"
+msgstr "کسی خاص کردار یا جگہ کی اجازت نہیں ہے۔"
+
+#. Legacy key: valid_examples
+msgid "Valid examples"
+msgstr "درست مثالیں۔"
+
+#. Legacy key: choose_your_json_file
+msgid "Choose your json file"
+msgstr "اپنی json فائل کا انتخاب کریں۔"
+
+#. Legacy key: import
+msgid "Import"
+msgstr "درآمد کریں۔"
+
+#. Legacy key: phrase_updated
+msgid "Phrase updated"
+msgstr "فقرہ اپ ڈیٹ ہو گیا۔"
+
+#. Legacy key: course_compare
+msgid "Course compare"
+msgstr "کورس کا موازنہ کریں۔"
+
+#. Legacy key: compare_with_1_courses
+msgid "Compare with 1 courses"
+msgstr "1 کورسز کے ساتھ موازنہ کریں۔"
+
+#. Legacy key: select_a_course
+msgid "Select a course"
+msgstr "ایک کورس منتخب کریں۔"
+
+#. Legacy key: learn_more
+msgid "Learn more"
+msgstr "اورجانیے"
+
+#. Legacy key: has_discount
+msgid "Has discount"
+msgstr "رعایت ہے۔"
+
+#. Legacy key: made_in
+msgid "Made in"
+msgstr "ساختہ"
+
+#. Legacy key: last_updated_at
+msgid "Last updated at"
+msgstr "آخری بار اپ ڈیٹ کیا گیا۔"
+
+#. Legacy key: total_lectures
+msgid "Total lectures"
+msgstr "کل لیکچرز"
+
+#. Legacy key: total_quizzes
+msgid "Total quizzes"
+msgstr "کل کوئزز"
+
+#. Legacy key: total_duration
+msgid "Total duration"
+msgstr "کل دورانیہ"
+
+#. Legacy key: total_enrolment
+msgid "Total enrolment"
+msgstr "کل اندراج"
+
+#. Legacy key: number_of_reviews
+msgid "Number of reviews"
+msgstr "جائزوں کی تعداد"
+
+#. Legacy key: avg_rating
+msgid "Avg rating"
+msgstr "اوسط درجہ بندی"
+
+#. Legacy key: add_phrase
+msgid "Add phrase"
+msgstr "جملہ شامل کریں۔"
+
+#. Legacy key: language_deleted_successfully
+msgid "Language deleted successfully"
+msgstr "زبان کامیابی سے حذف کر دی گئی۔"
+
+#. Legacy key: language_added_successfully
+msgid "Language added successfully"
+msgstr "زبان کامیابی کے ساتھ شامل کی گئی۔"
+

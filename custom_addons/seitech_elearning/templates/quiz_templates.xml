@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Quiz No Attempts Remaining Page -->
+        <template id="quiz_no_attempts" name="Quiz - No Attempts Remaining">
+            <t t-call="website.layout">
+                <div class="container py-5">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 text-center">
+                            <div class="card shadow-sm">
+                                <div class="card-body p-5">
+                                    <div class="mb-4">
+                                        <i class="fa fa-exclamation-circle text-warning" style="font-size: 4rem;"/>
+                                    </div>
+                                    <h2 class="mb-3">No Attempts Remaining</h2>
+                                    <p class="text-muted mb-4">
+                                        You have used all available attempts for the quiz:<br/>
+                                        <strong t-esc="slide.name"/>
+                                    </p>
+
+                                    <div class="bg-light rounded p-3 mb-4">
+                                        <div class="row text-center">
+                                            <div class="col-6">
+                                                <div class="h4 mb-0" t-esc="quiz_status.get('attempts_used', 0)"/>
+                                                <small class="text-muted">Attempts Used</small>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="h4 mb-0">
+                                                    <t t-esc="'%.0f' % quiz_status.get('best_score', 0)"/>%
+                                                </div>
+                                                <small class="text-muted">Best Score</small>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <t t-if="quiz_status.get('passed')">
+                                        <div class="alert alert-success mb-4">
+                                            <i class="fa fa-check-circle me-2"/>
+                                            You passed this quiz with a score of 
+                                            <strong><t t-esc="'%.0f' % quiz_status.get('best_score', 0)"/>%</strong>
+                                        </div>
+                                    </t>
+                                    <t t-else="">
+                                        <div class="alert alert-danger mb-4">
+                                            <i class="fa fa-times-circle me-2"/>
+                                            You did not pass this quiz. Required: 
+                                            <strong><t t-esc="'%.0f' % slide.quiz_passing_score"/>%</strong>
+                                        </div>
+                                        <p class="text-muted small">
+                                            Please contact your instructor if you need additional attempts.
+                                        </p>
+                                    </t>
+
+                                    <a t-attf-href="/slides/{{ slide.channel_id.id }}/{{ slide.id }}" 
+                                       class="btn btn-primary">
+                                        <i class="fa fa-arrow-left me-2"/>
+                                        Back to Lesson
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <!-- Quiz Result Banner (for course player) -->
+        <template id="quiz_result_banner" name="Quiz Result Banner">
+            <t t-if="quiz_score is not None">
+                <div t-attf-class="alert mb-3 {{ 'alert-success' if quiz_passed else 'alert-danger' }}">
+                    <div class="d-flex align-items-center">
+                        <i t-attf-class="fa {{ 'fa-check-circle' if quiz_passed else 'fa-times-circle' }} me-3" 
+                           style="font-size: 2rem;"/>
+                        <div>
+                            <h5 class="mb-1">
+                                <t t-if="quiz_passed">Quiz Passed!</t>
+                                <t t-else="">Quiz Not Passed</t>
+                            </h5>
+                            <p class="mb-0">
+                                Your score: <strong><t t-esc="'%.0f' % quiz_score"/>%</strong>
+                                <t t-if="not quiz_passed">
+                                    - Required: <t t-esc="'%.0f' % slide.quiz_passing_score"/>%
+                                </t>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <!-- Quiz Start Button (for lessons with quizzes) -->
+        <template id="quiz_start_button" name="Quiz Start Button">
+            <t t-if="slide.survey_id">
+                <div class="quiz-section my-4 p-4 bg-light rounded">
+                    <h4 class="mb-3">
+                        <i class="fa fa-question-circle text-primary me-2"/>
+                        Lesson Quiz
+                    </h4>
+
+                    <t t-set="quiz_status" t-value="slide.check_quiz_completion(request.env.user.id)"/>
+
+                    <t t-if="quiz_status.get('passed')">
+                        <div class="alert alert-success">
+                            <i class="fa fa-check-circle me-2"/>
+                            You passed this quiz with <strong><t t-esc="'%.0f' % quiz_status.get('best_score', 0)"/>%</strong>
+                        </div>
+                    </t>
+                    <t t-else="">
+                        <p class="text-muted mb-3">
+                            Complete this quiz to test your understanding. 
+                            <t t-if="slide.quiz_attempts_allowed > 0">
+                                <br/>You have 
+                                <strong t-esc="quiz_status.get('attempts_remaining', 0)"/> 
+                                attempt(s) remaining.
+                            </t>
+                        </p>
+
+                        <div class="mb-3">
+                            <span class="badge bg-secondary me-2">
+                                Passing Score: <t t-esc="'%.0f' % slide.quiz_passing_score"/>%
+                            </span>
+                            <t t-if="quiz_status.get('attempts_used', 0) > 0">
+                                <span class="badge bg-info">
+                                    Best Score: <t t-esc="'%.0f' % quiz_status.get('best_score', 0)"/>%
+                                </span>
+                            </t>
+                        </div>
+
+                        <t t-if="quiz_status.get('attempts_remaining', -1) != 0">
+                            <a t-attf-href="/elearning/quiz/start/{{ slide.id }}" 
+                               class="btn btn-primary">
+                                <i class="fa fa-play me-2"/>
+                                <t t-if="quiz_status.get('attempts_used', 0) > 0">Retry Quiz</t>
+                                <t t-else="">Start Quiz</t>
+                            </a>
+                        </t>
+                        <t t-else="">
+                            <button class="btn btn-secondary" disabled="disabled">
+                                <i class="fa fa-ban me-2"/>
+                                No Attempts Remaining
+                            </button>
+                        </t>
+                    </t>
+                </div>
+            </t>
+        </template>
+
+    </data>
+</odoo>

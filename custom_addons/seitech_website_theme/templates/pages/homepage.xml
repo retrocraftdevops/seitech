@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Homepage Template -->
+        <template id="homepage" name="Seitech Homepage">
+            <t t-call="website.layout">
+                <t t-set="pageName" t-value="'homepage'"/>
+                <t t-set="additional_title">Home</t>
+
+                <div id="wrap">
+                    <!-- Hero Section with Search -->
+                    <section class="hero-section-seitech">
+                        <div class="container-seitech">
+                            <div class="hero-content">
+                                <h1 class="hero-title">
+                                    Empower Your Career with
+                                    <span class="text-gradient">Professional Training</span>
+                                </h1>
+                                <p class="hero-subtitle">
+                                    Gain industry-recognized certifications in safety, compliance, and professional development.
+                                    Learn from expert instructors and advance your career today.
+                                </p>
+
+                                <!-- Search Bar -->
+                                <div class="hero-search">
+                                    <form action="/courses" method="get" class="search-form-hero">
+                                        <input type="text" name="search" class="search-input-hero" 
+                                               placeholder="Start your learning adventure today..."/>
+                                        <button type="submit" class="search-btn-hero">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="11" cy="11" r="8"/>
+                                                <path d="M21 21l-4.35-4.35"/>
+                                            </svg>
+                                            Search
+                                        </button>
+                                    </form>
+                                </div>
+
+                                <!-- Quick Stats -->
+                                <div class="hero-stats">
+                                    <div class="hero-stat">
+                                        <span class="stat-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                                <circle cx="9" cy="7" r="4"/>
+                                                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                                            </svg>
+                                        </span>
+                                        <span class="stat-text">Expert Instructors</span>
+                                    </div>
+                                    <div class="hero-stat">
+                                        <span class="stat-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                                            </svg>
+                                        </span>
+                                        <t t-set="course_count" t-value="request.env['slide.channel'].sudo().search_count([('is_published', '=', True)])"/>
+                                        <span class="stat-text"><t t-esc="course_count"/> Online Courses</span>
+                                    </div>
+                                    <div class="hero-stat">
+                                        <span class="stat-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="12" cy="12" r="10"/>
+                                                <path d="M12 6v6l4 2"/>
+                                            </svg>
+                                        </span>
+                                        <span class="stat-text">Learn Anytime, Anywhere</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="hero-image">
+                                <img src="/seitech_website_theme/static/src/img/hero-learning.svg" alt="Professional Training"/>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Accreditations and Partners Section -->
+                    <section class="section-partners section-seitech">
+                        <div class="container-seitech">
+                            <h2 class="partners-title">Accreditations and Partners</h2>
+                            <div class="partners-logos">
+                                <img src="/seitech_website_theme/static/src/img/partners/qualisafe.png" alt="Qualisafe" class="partner-logo"/>
+                                <img src="/seitech_website_theme/static/src/img/partners/iosh.png" alt="IOSH" class="partner-logo"/>
+                                <img src="/seitech_website_theme/static/src/img/partners/ifsm.png" alt="IFSM" class="partner-logo"/>
+                                <img src="/seitech_website_theme/static/src/img/partners/oshcr.png" alt="OSHCR" class="partner-logo"/>
+                                <img src="/seitech_website_theme/static/src/img/partners/fit2fit.png" alt="Fit2Fit" class="partner-logo"/>
+                                <img src="/seitech_website_theme/static/src/img/partners/lra.png" alt="LRA" class="partner-logo"/>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Stats Section -->
+                    <t t-call="seitech_website_theme.s_stats_section"/>
+
+                    <!-- Features Section -->
+                    <t t-call="seitech_website_theme.s_feature_grid"/>
+
+                    <!-- Top Courses Section -->
+                    <section class="section-courses section-seitech">
+                        <div class="container-seitech">
+                            <div class="section-header">
+                                <span class="badge-seitech-primary badge-seitech-lg">Top Courses</span>
+                                <h2 class="section-title">Most Popular Courses</h2>
+                                <p class="section-subtitle">
+                                    These are the most popular courses among our learners worldwide.
+                                    Start your journey with industry-leading content.
+                                </p>
+                            </div>
+
+                            <!-- Course Grid - Dynamically loaded -->
+                            <div class="courses-grid">
+                                <t t-foreach="request.env['slide.channel'].sudo().search([('is_published', '=', True)], limit=6, order='total_votes desc')" t-as="course">
+                                    <div class="card-course">
+                                        <div class="card-course-img">
+                                            <img t-att-src="'/web/image/slide.channel/%s/image_256' % course.id"
+                                                 t-att-alt="course.name"/>
+                                            <t t-if="course.total_time > 0">
+                                                <span class="card-course-badge badge-seitech-primary-solid">
+                                                    <t t-esc="'%.1f hrs' % course.total_time"/>
+                                                </span>
+                                            </t>
+                                            <!-- Wishlist Button -->
+                                            <button class="card-wishlist-btn" title="Add to Wishlist">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                                </svg>
+                                            </button>
+                                            <!-- Level Badge -->
+                                            <span class="card-level-badge">
+                                                <t t-esc="course.channel_type or 'Course'"/>
+                                            </span>
+                                        </div>
+                                        <div class="card-course-body">
+                                            <span class="card-course-category" t-esc="course.tag_ids[0].name if course.tag_ids else 'General'"/>
+                                            <h3 class="card-course-title" t-esc="course.name"/>
+                                            <p class="card-course-description" t-esc="course.description_short or 'Learn essential skills in this comprehensive course.'"/>
+
+                                            <!-- Rating -->
+                                            <div class="card-course-rating">
+                                                <div class="rating-stars">
+                                                    <t t-set="rating" t-value="int(course.rating_avg_stars or 0)"/>
+                                                    <t t-foreach="range(5)" t-as="star">
+                                                        <svg t-att-class="'star-icon filled' if star &lt; rating else 'star-icon'" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                                        </svg>
+                                                    </t>
+                                                </div>
+                                                <span class="rating-count">(<t t-esc="course.rating_count"/> reviews)</span>
+                                            </div>
+
+                                            <div class="card-course-meta">
+                                                <span class="meta-item">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                                        <circle cx="9" cy="7" r="4"/>
+                                                    </svg>
+                                                    <t t-esc="course.members_count"/> enrolled
+                                                </span>
+                                                <span class="meta-item">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                                        <path d="M16 2v4M8 2v4M3 10h18"/>
+                                                    </svg>
+                                                    <t t-esc="course.slide_content_count"/> lessons
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="card-course-footer">
+                                            <t t-if="course.product_id and course.product_id.lst_price > 0">
+                                                <span class="card-course-price">
+                                                    <t t-esc="'%.2f' % course.product_id.lst_price"/> <t t-esc="course.product_id.currency_id.symbol or 'GBP'"/>
+                                                </span>
+                                            </t>
+                                            <t t-else="">
+                                                <span class="card-course-price free">Free</span>
+                                            </t>
+                                            <a t-attf-href="/slides/#{course.id}" class="btn-seitech-primary btn-seitech-sm">
+                                                View Course
+                                            </a>
+                                        </div>
+                                    </div>
+                                </t>
+                            </div>
+
+                            <div class="section-footer">
+                                <a href="/courses" class="btn-seitech-secondary btn-seitech-lg">
+                                    View All Courses
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Testimonials Section -->
+                    <t t-call="seitech_website_theme.s_testimonials"/>
+
+                    <!-- CTA Section -->
+                    <t t-call="seitech_website_theme.s_cta_section"/>
+
+                    <!-- Contact Info Bar -->
+                    <section class="section-contact-bar section-seitech">
+                        <div class="container-seitech">
+                            <div class="contact-bar">
+                                <div class="contact-item">
+                                    <span class="contact-icon">📍</span>
+                                    <strong>Address:</strong> Park Street, Ashford, Kent TN24 8DF
+                                </div>
+                                <div class="contact-item">
+                                    <span class="contact-icon">📞</span>
+                                    <strong>Phone:</strong>
+                                    <a href="tel:+441233438817">+44 1233 438817</a>
+                                </div>
+                                <div class="contact-item">
+                                    <span class="contact-icon">✉️</span>
+                                    <strong>Email:</strong>
+                                    <a href="mailto:admin@seitechinternational.org">admin@seitechinternational.org</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </t>
+        </template>
+
+    </data>
+</odoo>
