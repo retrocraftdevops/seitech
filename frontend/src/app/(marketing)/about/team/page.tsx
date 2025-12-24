@@ -19,7 +19,9 @@ const teamMembers = [
   {
     name: 'David Thompson',
     role: 'Managing Director & Lead Consultant',
-    qualifications: ['NEBOSH Diploma', 'IOSH Certified', 'Grad IOSH'],
+    // TODO: Re-enable NEBOSH once licensing agreement is in place
+    // qualifications: ['NEBOSH Diploma', 'IOSH Certified', 'Grad IOSH'],
+    qualifications: ['IOSH Certified', 'Grad IOSH'],
     bio: 'With over 20 years of experience in health and safety management, David leads our consultancy team and specializes in complex risk assessments and ISO management systems.',
     email: 'david.thompson@seitechinternational.org.uk',
     linkedin: '#',
@@ -27,12 +29,17 @@ const teamMembers = [
   },
   {
     name: 'Sarah Mitchell',
-    role: 'Senior Trainer - NEBOSH & IOSH',
-    qualifications: ['NEBOSH Certificate', 'IOSH Managing Safely', 'First Aid Instructor'],
-    bio: 'Sarah has trained over 2,000 professionals in NEBOSH and IOSH courses. Her engaging teaching style and real-world examples make complex topics accessible.',
+    // TODO: Re-enable NEBOSH once licensing agreement is in place
+    // role: 'Senior Trainer - NEBOSH & IOSH',
+    role: 'Senior Trainer - IOSH',
+    // qualifications: ['NEBOSH Certificate', 'IOSH Managing Safely', 'First Aid Instructor'],
+    qualifications: ['IOSH Managing Safely', 'First Aid Instructor'],
+    // bio: 'Sarah has trained over 2,000 professionals in NEBOSH and IOSH courses. Her engaging teaching style and real-world examples make complex topics accessible.',
+    bio: 'Sarah has trained over 2,000 professionals in IOSH courses. Her engaging teaching style and real-world examples make complex topics accessible.',
     email: 'sarah.mitchell@seitechinternational.org.uk',
     linkedin: '#',
-    expertise: ['NEBOSH Training', 'IOSH Courses', 'Leadership'],
+    // expertise: ['NEBOSH Training', 'IOSH Courses', 'Leadership'],
+    expertise: ['IOSH Courses', 'Leadership'],
   },
   {
     name: 'James Patterson',
@@ -55,7 +62,9 @@ const teamMembers = [
   {
     name: 'Michael Chen',
     role: 'Environmental Consultant',
-    qualifications: ['NEBOSH Environmental', 'ISO 14001 Lead Auditor', 'BSc Environmental Science'],
+    // TODO: Re-enable NEBOSH once licensing agreement is in place
+    // qualifications: ['NEBOSH Environmental', 'ISO 14001 Lead Auditor', 'BSc Environmental Science'],
+    qualifications: ['ISO 14001 Lead Auditor', 'BSc Environmental Science'],
     bio: 'Michael specializes in environmental management systems and sustainability consulting, helping organizations minimize their environmental impact.',
     email: 'michael.chen@seitechinternational.org.uk',
     linkedin: '#',

@@ -51,12 +51,13 @@ export const mainNavigation: NavItem[] = [
             description: 'Qualsafe Awards accredited training',
             icon: 'Award',
           },
-          {
-            title: 'NEBOSH Courses',
-            href: '/courses?accreditation=nebosh',
-            description: 'National Examination Board certifications',
-            icon: 'Award',
-          },
+          // TODO: Re-enable NEBOSH once licensing agreement is in place
+          // {
+          //   title: 'NEBOSH Courses',
+          //   href: '/courses?accreditation=nebosh',
+          //   description: 'National Examination Board certifications',
+          //   icon: 'Award',
+          // },
           {
             title: 'NVQ Qualifications',
             href: '/courses?accreditation=nvq',
@@ -294,7 +295,8 @@ export const footerNavigation = {
   accreditations: [
     { title: 'IOSH Courses', href: '/courses?accreditation=iosh' },
     { title: 'Qualsafe Courses', href: '/courses?accreditation=qualsafe' },
-    { title: 'NEBOSH Courses', href: '/courses?accreditation=nebosh' },
+    // TODO: Re-enable NEBOSH once licensing agreement is in place
+    // { title: 'NEBOSH Courses', href: '/courses?accreditation=nebosh' },
     { title: 'Our Accreditations', href: '/about/accreditations' },
   ],
   company: [

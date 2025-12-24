@@ -64,7 +64,9 @@ const sections = [
     title: '5. Sharing Your Information',
     content: [
       'We may share your personal data with:',
-      '<strong>Accrediting Bodies:</strong> IOSH, Qualsafe, NEBOSH, and ProQual for certification and quality assurance purposes.',
+      // TODO: Re-enable NEBOSH once licensing agreement is in place
+      // '<strong>Accrediting Bodies:</strong> IOSH, Qualsafe, NEBOSH, and ProQual for certification and quality assurance purposes.',
+      '<strong>Accrediting Bodies:</strong> IOSH, Qualsafe, and ProQual for certification and quality assurance purposes.',
       '<strong>Service Providers:</strong> Third-party providers who assist with payment processing, email communications, and website hosting.',
       '<strong>Legal Authorities:</strong> When required by law or to protect our legal rights.',
       'We do not sell or rent your personal data to third parties for marketing purposes.',

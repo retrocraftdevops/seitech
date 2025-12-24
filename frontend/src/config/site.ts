@@ -2,7 +2,7 @@ export const siteConfig = {
   name: 'SEI Tech International',
   tagline: 'See the Risks. Secure the Workplace',
   description:
-    'Professional health, safety, and environmental training and consultancy services. Accredited by IOSH, Qualsafe, and NEBOSH.',
+    'Professional health, safety, and environmental training and consultancy services. Accredited by IOSH and Qualsafe.',
   url: 'https://seitechinternational.org.uk',
   ogImage: 'https://seitechinternational.org.uk/images/og-image.jpg',
   links: {
@@ -38,7 +38,8 @@ export const metadataDefaults = {
     'health and safety training',
     'IOSH training',
     'Qualsafe courses',
-    'NEBOSH certification',
+    // TODO: Re-enable NEBOSH once licensing agreement is in place
+    // 'NEBOSH certification',
     'fire risk assessment',
     'workplace safety',
     'consultancy services',

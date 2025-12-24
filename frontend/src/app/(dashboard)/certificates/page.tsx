@@ -235,7 +235,9 @@ export default function CertificatesPage() {
           <li className="flex items-start gap-2">
             <span className="text-blue-600 mt-0.5">•</span>
             <span>
-              Professional certificates from IOSH, NEBOSH, and other bodies may require
+              {/* TODO: Re-enable NEBOSH once licensing agreement is in place */}
+              {/* Professional certificates from IOSH, NEBOSH, and other bodies may require */}
+              Professional certificates from IOSH and other bodies may require
               periodic renewal
             </span>
           </li>

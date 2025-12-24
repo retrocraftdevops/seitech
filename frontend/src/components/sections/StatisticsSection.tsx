@@ -73,7 +73,9 @@ const defaultStatistics: StatisticDisplay[] = [
     value: 12,
     suffix: '+',
     label: 'Accreditations',
-    description: 'Including IOSH, NEBOSH, and Qualsafe',
+    // TODO: Re-enable NEBOSH once licensing agreement is in place
+    // description: 'Including IOSH, NEBOSH, and Qualsafe',
+    description: 'Including IOSH and Qualsafe',
   },
 ];
 

@@ -36,7 +36,8 @@ const levels = [
 const accreditations = [
   { id: 'iosh', name: 'IOSH', count: 8 },
   { id: 'qualsafe', name: 'Qualsafe', count: 12 },
-  { id: 'nebosh', name: 'NEBOSH', count: 6 },
+  // TODO: Re-enable NEBOSH once licensing agreement is in place
+  // { id: 'nebosh', name: 'NEBOSH', count: 6 },
   { id: 'cpd', name: 'CPD', count: 25 },
 ];
 

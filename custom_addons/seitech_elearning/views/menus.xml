@@ -152,7 +152,7 @@
                   groups="seitech_elearning.group_elearning_manager"
                   sequence="70"/>
 
-        <!-- Odoo eLearning Reports -->
+        <!-- Core eLearning Reports -->
         <menuitem id="menu_report_courses"
                   name="Courses"
                   parent="menu_elearning_reports"
@@ -217,7 +217,7 @@
                   groups="seitech_elearning.group_elearning_manager"
                   sequence="100"/>
 
-        <!-- Odoo eLearning Settings -->
+        <!-- Core eLearning Settings -->
         <menuitem id="menu_config_settings"
                   name="Settings"
                   parent="menu_elearning_config"

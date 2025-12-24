@@ -51,7 +51,9 @@ const benefits = [
   {
     icon: Shield,
     title: 'Fully Accredited',
-    description: 'All courses are accredited by IOSH, Qualsafe, NEBOSH, or CPD certified.',
+    // TODO: Re-enable NEBOSH once licensing agreement is in place
+    // description: 'All courses are accredited by IOSH, Qualsafe, NEBOSH, or CPD certified.',
+    description: 'All courses are accredited by IOSH, Qualsafe, or CPD certified.',
   },
   {
     icon: PlayCircle,

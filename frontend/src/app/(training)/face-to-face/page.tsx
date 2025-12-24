@@ -18,8 +18,10 @@ import { Badge } from '@/components/ui/Badge';
 
 export const metadata: Metadata = {
   title: 'Face-to-Face Training | Classroom Health & Safety Courses',
+  // TODO: Re-enable NEBOSH once licensing agreement is in place
+  // description: 'Join our expert-led classroom training courses for hands-on health and safety learning. IOSH, NEBOSH, and Qualsafe accredited courses at venues across the UK.',
   description:
-    'Join our expert-led classroom training courses for hands-on health and safety learning. IOSH, NEBOSH, and Qualsafe accredited courses at venues across the UK.',
+    'Join our expert-led classroom training courses for hands-on health and safety learning. IOSH and Qualsafe accredited courses at venues across the UK.',
   openGraph: {
     title: 'Face-to-Face Training - SEI Tech International',
     description: 'Expert-led classroom training at venues across the UK.',
@@ -70,16 +72,17 @@ const upcomingCourses = [
     accreditation: 'IOSH',
     spotsLeft: 6,
   },
-  {
-    id: 2,
-    name: 'NEBOSH General Certificate',
-    slug: 'nebosh-national-general-certificate',
-    location: 'Birmingham',
-    date: '20-31 January 2025',
-    price: 1295,
-    accreditation: 'NEBOSH',
-    spotsLeft: 4,
-  },
+  // TODO: Re-enable NEBOSH once licensing agreement is in place
+  // {
+  //   id: 2,
+  //   name: 'NEBOSH General Certificate',
+  //   slug: 'nebosh-national-general-certificate',
+  //   location: 'Birmingham',
+  //   date: '20-31 January 2025',
+  //   price: 1295,
+  //   accreditation: 'NEBOSH',
+  //   spotsLeft: 4,
+  // },
   {
     id: 3,
     name: 'First Aid at Work (3-day)',

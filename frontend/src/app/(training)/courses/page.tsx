@@ -24,7 +24,8 @@ interface CoursesPageProps {
 
 const validLevels: DifficultyLevel[] = ['beginner', 'intermediate', 'advanced'];
 const validDeliveryMethods: DeliveryMethod[] = ['e-learning', 'face-to-face', 'virtual', 'in-house'];
-const validAccreditations: Accreditation[] = ['IOSH', 'Qualsafe', 'NEBOSH', 'ProQual', 'CPD'];
+// TODO: Re-enable NEBOSH once licensing agreement is in place
+const validAccreditations: Accreditation[] = ['IOSH', 'Qualsafe', /* 'NEBOSH', */ 'ProQual', 'CPD'];
 
 function parseFilters(searchParams: CoursesPageProps['searchParams']): CourseFiltersType {
   const level = validLevels.includes(searchParams.level as DifficultyLevel)

@@ -2,12 +2,12 @@
     'name': 'Seitech E-Learning',
     'version': '19.0.1.0.0',
     'category': 'Website/eLearning',
-    'summary': 'Comprehensive e-learning platform extending Odoo eLearning',
+    'summary': 'Seitech International E-Learning Platform',
     'description': """
         Seitech E-Learning Platform
         ===========================
 
-        Comprehensive LMS module extending Odoo's website_slides with:
+        Comprehensive LMS module with:
 
         Features:
         - Enhanced course management with pricing

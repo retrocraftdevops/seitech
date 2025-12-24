@@ -16,8 +16,10 @@ import { siteConfig } from '@/config/site';
 
 export const metadata: Metadata = {
   title: 'About Us - Leading Health & Safety Training Provider',
+  // TODO: Re-enable NEBOSH once licensing agreement is in place
+  // description: 'Learn about SEI Tech International, a trusted provider of health, safety, and environmental training with over 15 years of experience. Accredited by IOSH, Qualsafe, NEBOSH, and ProQual.',
   description:
-    'Learn about SEI Tech International, a trusted provider of health, safety, and environmental training with over 15 years of experience. Accredited by IOSH, Qualsafe, NEBOSH, and ProQual.',
+    'Learn about SEI Tech International, a trusted provider of health, safety, and environmental training with over 15 years of experience. Accredited by IOSH, Qualsafe, and ProQual.',
   openGraph: {
     title: 'About SEI Tech International',
     description:
@@ -68,10 +70,11 @@ const accreditations = [
     name: 'Qualsafe',
     fullName: 'Qualsafe Awards',
   },
-  {
-    name: 'NEBOSH',
-    fullName: 'National Examination Board in Occupational Safety and Health',
-  },
+  // TODO: Re-enable NEBOSH once licensing agreement is in place
+  // {
+  //   name: 'NEBOSH',
+  //   fullName: 'National Examination Board in Occupational Safety and Health',
+  // },
   {
     name: 'ProQual',
     fullName: 'ProQual Awarding Body',

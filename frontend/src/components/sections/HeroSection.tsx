@@ -9,7 +9,9 @@ import { stripHtml } from '@/lib/utils';
 
 // Default content (fallback when API is unavailable)
 const defaultContent = {
-  subtitle: 'IOSH, Qualsafe & NEBOSH Accredited',
+  // TODO: Re-enable NEBOSH once licensing agreement is in place
+  // subtitle: 'IOSH, Qualsafe & NEBOSH Accredited',
+  subtitle: 'IOSH & Qualsafe Accredited',
   title: 'See the Risks. Secure the Workplace.',
   description: 'Professional health, safety, and environmental training and consultancy services. Empowering professionals with cutting-edge knowledge and compliance solutions.',
   ctaText: 'Explore Training',

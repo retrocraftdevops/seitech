@@ -70,16 +70,17 @@ const upcomingCourses = [
     accreditation: 'IOSH',
     spotsLeft: 8,
   },
-  {
-    id: 2,
-    name: 'NEBOSH General Certificate (Virtual)',
-    slug: 'nebosh-national-general-certificate',
-    dates: 'Mon-Fri, 9am-5pm (2 weeks)',
-    startDate: '20 January 2025',
-    price: 1195,
-    accreditation: 'NEBOSH',
-    spotsLeft: 5,
-  },
+  // TODO: Re-enable NEBOSH once licensing agreement is in place
+  // {
+  //   id: 2,
+  //   name: 'NEBOSH General Certificate (Virtual)',
+  //   slug: 'nebosh-national-general-certificate',
+  //   dates: 'Mon-Fri, 9am-5pm (2 weeks)',
+  //   startDate: '20 January 2025',
+  //   price: 1195,
+  //   accreditation: 'NEBOSH',
+  //   spotsLeft: 5,
+  // },
   {
     id: 3,
     name: 'Fire Safety Awareness (Virtual)',

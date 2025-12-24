@@ -21,7 +21,7 @@ Features:
 * Menu Management
 * API endpoints for headless CMS
 
-All content is editable from Odoo backend and served via REST API
+All content is editable from the admin backend and served via REST API
 to the Next.js frontend.
     """,
     'author': 'SEI Tech International',

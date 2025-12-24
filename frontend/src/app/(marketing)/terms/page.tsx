@@ -58,7 +58,9 @@ const sections = [
     title: '6. Certification',
     content: [
       'Certificates are issued upon successful completion of course requirements, including attendance, participation, and passing any required assessments.',
-      'Certificates are issued by the relevant accrediting body (IOSH, Qualsafe, NEBOSH, ProQual) and are subject to their terms and conditions.',
+      // TODO: Re-enable NEBOSH once licensing agreement is in place
+      // 'Certificates are issued by the relevant accrediting body (IOSH, Qualsafe, NEBOSH, ProQual) and are subject to their terms and conditions.',
+      'Certificates are issued by the relevant accrediting body (IOSH, Qualsafe, ProQual) and are subject to their terms and conditions.',
       'Lost or damaged certificates can be replaced for a fee. Requests for replacement certificates must be made in writing.',
     ],
   },

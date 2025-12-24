@@ -154,9 +154,10 @@ export function Footer() {
             <div className="h-12 px-4 bg-white/10 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold">Qualsafe</span>
             </div>
-            <div className="h-12 px-4 bg-white/10 rounded-lg flex items-center justify-center">
+            {/* TODO: Re-enable NEBOSH once licensing agreement is in place */}
+            {/* <div className="h-12 px-4 bg-white/10 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold">NEBOSH</span>
-            </div>
+            </div> */}
             <div className="h-12 px-4 bg-white/10 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold">ProQual</span>
             </div>

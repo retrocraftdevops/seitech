@@ -8,10 +8,10 @@ import { Badge } from '@/components/ui/Badge';
 export const metadata: Metadata = {
   title: 'Accreditations - Recognised by Leading UK Bodies',
   description:
-    'SEI Tech International is accredited by IOSH, Qualsafe, NEBOSH, and ProQual. Our courses meet the highest industry standards for health and safety training.',
+    'SEI Tech International is accredited by IOSH, Qualsafe, and ProQual. Our courses meet the highest industry standards for health and safety training.',
   openGraph: {
     title: 'Our Accreditations - SEI Tech International',
-    description: 'Accredited by IOSH, Qualsafe, NEBOSH, and ProQual for quality training.',
+    description: 'Accredited by IOSH, Qualsafe, and ProQual for quality training.',
   },
 };
 
@@ -55,26 +55,27 @@ const accreditations = [
     website: 'https://qualsafe.com',
     logo: 'QA',
   },
-  {
-    name: 'NEBOSH',
-    fullName: 'National Examination Board in Occupational Safety and Health',
-    description:
-      'NEBOSH is the world\'s leading provider of health, safety, and environmental qualifications. Our NEBOSH-accredited courses are trusted by employers worldwide.',
-    benefits: [
-      'Gold standard in health & safety qualifications',
-      'Globally recognised certifications',
-      'Career-advancing credentials',
-      'Regular updates to reflect best practices',
-    ],
-    courses: [
-      'NEBOSH General Certificate',
-      'NEBOSH Construction Certificate',
-      'NEBOSH Fire Safety Certificate',
-      'NEBOSH Environmental Certificate',
-    ],
-    website: 'https://nebosh.org.uk',
-    logo: 'NEBOSH',
-  },
+  // TODO: Re-enable NEBOSH once licensing agreement is in place
+  // {
+  //   name: 'NEBOSH',
+  //   fullName: 'National Examination Board in Occupational Safety and Health',
+  //   description:
+  //     'NEBOSH is the world\'s leading provider of health, safety, and environmental qualifications. Our NEBOSH-accredited courses are trusted by employers worldwide.',
+  //   benefits: [
+  //     'Gold standard in health & safety qualifications',
+  //     'Globally recognised certifications',
+  //     'Career-advancing credentials',
+  //     'Regular updates to reflect best practices',
+  //   ],
+  //   courses: [
+  //     'NEBOSH General Certificate',
+  //     'NEBOSH Construction Certificate',
+  //     'NEBOSH Fire Safety Certificate',
+  //     'NEBOSH Environmental Certificate',
+  //   ],
+  //   website: 'https://nebosh.org.uk',
+  //   logo: 'NEBOSH',
+  // },
   {
     name: 'ProQual',
     fullName: 'ProQual Awarding Body',
@@ -98,7 +99,7 @@ const accreditations = [
 
 const statistics = [
   { value: '100%', label: 'Accredited Courses' },
-  { value: '4', label: 'Major Accreditations' },
+  { value: '3', label: 'Major Accreditations' },  // TODO: Update to 4 when NEBOSH is re-enabled
   { value: '98%', label: 'Pass Rate' },
   { value: '15+', label: 'Years Accredited' },
 ];
