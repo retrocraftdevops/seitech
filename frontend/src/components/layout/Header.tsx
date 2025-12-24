@@ -84,13 +84,21 @@ export function Header() {
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="flex items-center justify-between h-18 lg:h-20">
             {/* Logo */}
-            <Link href="/" className="flex-shrink-0">
+            <Link href="/" className="flex-shrink-0 flex items-center gap-3">
+              <Image
+                src="/logos/emblem.png"
+                alt="SEI Tech"
+                width={45}
+                height={45}
+                className="h-11 w-auto"
+                priority
+              />
               <Image
                 src="/logos/logo-light.png"
                 alt="SEI Tech International"
-                width={180}
-                height={41}
-                className="h-9 w-auto"
+                width={160}
+                height={36}
+                className="h-8 w-auto hidden sm:block"
                 priority
               />
             </Link>

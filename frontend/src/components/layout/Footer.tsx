@@ -25,13 +25,20 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <Link href="/" className="inline-block mb-6">
+            <Link href="/" className="inline-flex items-center gap-3 mb-6">
+              <Image
+                src="/logos/emblem.png"
+                alt="SEI Tech"
+                width={50}
+                height={50}
+                className="h-12 w-auto"
+              />
               <Image
                 src="/logos/logo-light.png"
                 alt="SEI Tech International"
-                width={180}
-                height={41}
-                className="h-10 w-auto"
+                width={160}
+                height={36}
+                className="h-9 w-auto"
               />
             </Link>
             <p className="text-gray-400 mb-6 leading-relaxed">
