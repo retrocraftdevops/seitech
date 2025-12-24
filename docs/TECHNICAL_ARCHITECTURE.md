@@ -1,7 +1,7 @@
 # SEI Tech International - Technical Architecture Document
 
 ## Version: 1.0
-## Date: December 2024
+## Date: December 2025
 
 ---
 

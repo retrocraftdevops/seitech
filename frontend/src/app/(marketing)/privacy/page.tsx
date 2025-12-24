@@ -203,7 +203,7 @@ export default function PrivacyPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Privacy Policy</h1>
             <p className="text-xl text-white/90">
               Your privacy is important to us. This policy explains how we collect, use, and
-              protect your personal data. Last updated: December 2024.
+              protect your personal data. Last updated: December 2025.
             </p>
           </div>
         </div>

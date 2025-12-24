@@ -1,7 +1,7 @@
 # SEI Tech International - Frontend Specifications
 
 ## Document Version: 1.0
-## Date: December 2024
+## Date: December 2025
 ## Project: Next.js/React Hybrid Frontend with Odoo Backend
 
 ---
@@ -1102,7 +1102,7 @@ jobs:
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.0 | Dec 2024 | Claude | Initial specification |
+| 1.0 | Dec 2025 | Claude | Initial specification |
 
 ---
 

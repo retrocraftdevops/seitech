@@ -145,7 +145,7 @@ export default function TermsPage() {
             </h1>
             <p className="text-xl text-white/90">
               Please read these terms carefully before using our services. Last updated: December
-              2024.
+              2025.
             </p>
           </div>
         </div>
