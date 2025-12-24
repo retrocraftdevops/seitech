@@ -37,25 +37,45 @@ export default function DashboardPage() {
       if (!user) return;
 
       try {
-        // For now, use placeholder data until APIs are ready
-        // TODO: Replace with actual API calls
+        const response = await fetch('/api/dashboard/stats');
+        const data = await response.json();
+
+        if (data.success && data.data) {
+          setStats(data.data.stats);
+          setEnrollments(data.data.recentEnrollments || []);
+          setCertificates(data.data.recentCertificates || []);
+        } else {
+          // Fallback to user data if API fails
+          setStats({
+            totalCourses: user.enrollmentsCount || 0,
+            completedCourses: 0,
+            inProgressCourses: user.enrollmentsCount || 0,
+            totalCertificates: user.certificatesCount || 0,
+            totalPoints: user.totalPoints || 0,
+            totalBadges: 0,
+            totalTimeSpent: 0,
+            currentStreak: 0,
+            longestStreak: 0,
+          });
+          setEnrollments([]);
+          setCertificates([]);
+        }
+      } catch (error) {
+        console.error('Error fetching dashboard data:', error);
+        // Fallback to user data on error
         setStats({
           totalCourses: user.enrollmentsCount || 0,
           completedCourses: 0,
           inProgressCourses: user.enrollmentsCount || 0,
           totalCertificates: user.certificatesCount || 0,
-          totalPoints: 0,
+          totalPoints: user.totalPoints || 0,
           totalBadges: 0,
           totalTimeSpent: 0,
           currentStreak: 0,
           longestStreak: 0,
         });
-
-        // Placeholder enrollments
         setEnrollments([]);
         setCertificates([]);
-      } catch (error) {
-        console.error('Error fetching dashboard data:', error);
       } finally {
         setIsLoading(false);
       }

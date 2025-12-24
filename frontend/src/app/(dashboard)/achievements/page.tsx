@@ -2,150 +2,59 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { AchievementBadge } from '@/components/features/dashboard';
 import { Card, CardContent } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
-import { Achievement } from '@/types/user';
-import { Trophy, Target, Star, TrendingUp, Loader2, RefreshCw } from 'lucide-react';
+import { Trophy, Star, TrendingUp, Loader2, RefreshCw, Flame } from 'lucide-react';
 
-// Placeholder data for when API is unavailable
-const mockAchievements: Achievement[] = [
-  {
-    id: 1,
-    badgeId: 101,
-    badgeName: 'Safety Champion',
-    badgeIcon: '🛡️',
-    badgeColor: '#10B981',
-    description: 'Complete your first health and safety course',
-    earnedDate: '2024-12-20',
-    points: 100,
-    isNew: true,
-  },
-  {
-    id: 2,
-    badgeId: 102,
-    badgeName: 'Perfect Assessment',
-    badgeIcon: '💯',
-    badgeColor: '#34D399',
-    description: 'Score 100% on a final assessment',
-    earnedDate: '2024-12-15',
-    points: 150,
-    isNew: true,
-  },
-  {
-    id: 3,
-    badgeId: 103,
-    badgeName: 'Week Warrior',
-    badgeIcon: '🔥',
-    badgeColor: '#F97316',
-    description: 'Maintain a 7-day learning streak',
-    earnedDate: '2024-12-10',
-    points: 75,
-    isNew: false,
-  },
-  {
-    id: 4,
-    badgeId: 104,
-    badgeName: 'First Certificate',
-    badgeIcon: '🎓',
-    badgeColor: '#8B5CF6',
-    description: 'Earn your first professional certificate',
-    earnedDate: '2024-11-10',
-    points: 200,
-    isNew: false,
-  },
-  {
-    id: 5,
-    badgeId: 105,
-    badgeName: 'Knowledge Seeker',
-    badgeIcon: '📚',
-    badgeColor: '#3B82F6',
-    description: 'Enroll in 5 different courses',
-    earnedDate: '2024-11-05',
-    points: 50,
-    isNew: false,
-  },
-  {
-    id: 6,
-    badgeId: 106,
-    badgeName: 'Early Bird',
-    badgeIcon: '🌅',
-    badgeColor: '#EC4899',
-    description: 'Complete a lesson before 8 AM',
-    earnedDate: '2024-10-28',
-    points: 25,
-    isNew: false,
-  },
-  {
-    id: 7,
-    badgeId: 107,
-    badgeName: 'IOSH Certified',
-    badgeIcon: '✅',
-    badgeColor: '#059669',
-    description: 'Complete an IOSH accredited course',
-    earnedDate: '2024-10-15',
-    points: 300,
-    isNew: false,
-  },
-  {
-    id: 8,
-    badgeId: 108,
-    badgeName: 'Fire Safety Expert',
-    badgeIcon: '🔥',
-    badgeColor: '#DC2626',
-    description: 'Complete all fire safety modules',
-    earnedDate: '2024-09-20',
-    points: 150,
-    isNew: false,
-  },
-];
+interface Achievement {
+  id: number;
+  badgeId: number;
+  badgeName: string;
+  badgeDescription: string;
+  badgeIcon?: string;
+  badgeColor: string;
+  badgeType: string;
+  earnedDate: string;
+  courseName?: string;
+  badgeImage?: string;
+}
 
-const upcomingBadges = [
-  {
-    id: 201,
-    name: 'Marathon Learner',
-    icon: '🏃',
-    description: 'Maintain a 30-day learning streak',
-    requirement: '23/30 days',
-    progress: 76,
-  },
-  {
-    id: 202,
-    name: 'Course Master',
-    icon: '👑',
-    description: 'Complete 10 courses',
-    requirement: '7/10 courses',
-    progress: 70,
-  },
-  {
-    id: 203,
-    name: 'Points Champion',
-    icon: '⭐',
-    description: 'Earn 5000 total points',
-    requirement: '3450/5000 points',
-    progress: 69,
-  },
-];
+interface UserStats {
+  totalPoints: number;
+  currentStreak: number;
+  longestStreak: number;
+  badgesEarned: number;
+  coursesCompleted: number;
+  rank?: number;
+}
 
 export default function AchievementsPage() {
   const [achievements, setAchievements] = useState<Achievement[]>([]);
+  const [stats, setStats] = useState<UserStats | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [filter, setFilter] = useState<'all' | 'new'>('all');
 
   const fetchAchievements = async () => {
     setIsLoading(true);
     setError(null);
 
     try {
-      // For now, simulate API call with mock data
-      // When backend is ready, this will call /api/achievements
-      await new Promise(resolve => setTimeout(resolve, 500));
-      setAchievements(mockAchievements);
+      const response = await fetch('/api/gamification/user-achievements');
+      const data = await response.json();
+
+      if (data.success && data.data) {
+        setAchievements(data.data.achievements || []);
+        setStats(data.data.stats || null);
+      } else {
+        setAchievements([]);
+        if (data.message) {
+          setError(data.message);
+        }
+      }
     } catch (err) {
       console.error('Error fetching achievements:', err);
-      setAchievements(mockAchievements);
-      setError('Unable to connect to server. Showing demo data.');
+      setAchievements([]);
+      setError('Unable to load achievements. Please try again later.');
     } finally {
       setIsLoading(false);
     }
@@ -155,13 +64,8 @@ export default function AchievementsPage() {
     fetchAchievements();
   }, []);
 
-  const filteredAchievements =
-    filter === 'all'
-      ? achievements
-      : achievements.filter((a) => a.isNew);
-
-  const totalPoints = achievements.reduce((sum, a) => sum + a.points, 0);
-  const newBadges = achievements.filter((a) => a.isNew).length;
+  const totalPoints = stats?.totalPoints || 0;
+  const totalBadges = achievements.length;
 
   if (isLoading) {
     return (
@@ -204,13 +108,13 @@ export default function AchievementsPage() {
       )}
 
       {/* Stats Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         <Card variant="bordered" className="bg-gradient-to-br from-purple-50 to-pink-50">
           <CardContent>
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-gray-600 mb-1">Total Badges</p>
-                <p className="text-4xl font-bold text-gray-900">{achievements.length}</p>
+                <p className="text-4xl font-bold text-gray-900">{totalBadges}</p>
               </div>
               <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-sm">
                 <Trophy className="w-8 h-8 text-purple-600" />
@@ -233,12 +137,26 @@ export default function AchievementsPage() {
           </CardContent>
         </Card>
 
+        <Card variant="bordered" className="bg-gradient-to-br from-orange-50 to-red-50">
+          <CardContent>
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm text-gray-600 mb-1">Current Streak</p>
+                <p className="text-4xl font-bold text-gray-900">{stats?.currentStreak || 0}</p>
+              </div>
+              <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-sm">
+                <Flame className="w-8 h-8 text-orange-600" />
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
         <Card variant="bordered" className="bg-gradient-to-br from-green-50 to-emerald-50">
           <CardContent>
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-600 mb-1">New Badges</p>
-                <p className="text-4xl font-bold text-gray-900">{newBadges}</p>
+                <p className="text-sm text-gray-600 mb-1">Courses Completed</p>
+                <p className="text-4xl font-bold text-gray-900">{stats?.coursesCompleted || 0}</p>
               </div>
               <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-sm">
                 <TrendingUp className="w-8 h-8 text-green-600" />
@@ -248,85 +166,49 @@ export default function AchievementsPage() {
         </Card>
       </div>
 
-      {/* Filters */}
-      <div className="flex items-center gap-2">
-        <Button
-          variant={filter === 'all' ? 'primary' : 'outline'}
-          size="sm"
-          onClick={() => setFilter('all')}
-        >
-          All Badges ({achievements.length})
-        </Button>
-        <Button
-          variant={filter === 'new' ? 'primary' : 'outline'}
-          size="sm"
-          onClick={() => setFilter('new')}
-        >
-          New ({newBadges})
-        </Button>
-      </div>
-
       {/* Badges Grid */}
-      {filteredAchievements.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filteredAchievements.map((achievement) => (
-            <AchievementBadge key={achievement.id} achievement={achievement} />
-          ))}
-        </div>
+      {achievements.length > 0 ? (
+        <>
+          <h2 className="text-xl font-bold text-gray-900">Your Badges</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {achievements.map((achievement) => (
+              <Card key={achievement.id} variant="bordered" hover>
+                <CardContent className="text-center">
+                  <div
+                    className="w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center"
+                    style={{ backgroundColor: `${achievement.badgeColor}20` }}
+                  >
+                    {achievement.badgeImage ? (
+                      <img src={achievement.badgeImage} alt={achievement.badgeName} className="w-12 h-12" />
+                    ) : (
+                      <span className="text-3xl">{achievement.badgeIcon || '🏆'}</span>
+                    )}
+                  </div>
+                  <h3 className="font-semibold text-gray-900 mb-1">{achievement.badgeName}</h3>
+                  <p className="text-sm text-gray-600 mb-2">{achievement.badgeDescription}</p>
+                  {achievement.courseName && (
+                    <p className="text-xs text-gray-500 mb-2">From: {achievement.courseName}</p>
+                  )}
+                  <p className="text-xs text-gray-400">
+                    Earned: {new Date(achievement.earnedDate).toLocaleDateString()}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </>
       ) : (
         <div className="text-center py-12">
           <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <Trophy className="w-8 h-8 text-gray-400" />
           </div>
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">
-            {filter === 'new' ? 'No new achievements' : 'No achievements yet'}
-          </h3>
-          <p className="text-gray-600">
-            {filter === 'new'
-              ? 'Complete courses and activities to earn new badges'
-              : 'Start learning to earn your first badge'}
-          </p>
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">No achievements yet</h3>
+          <p className="text-gray-600 mb-4">Start learning to earn your first badge</p>
+          <Link href="/courses">
+            <Button>Browse Courses</Button>
+          </Link>
         </div>
       )}
-
-      {/* In Progress Section */}
-      <div className="mt-12">
-        <div className="flex items-center gap-3 mb-6">
-          <Target className="w-6 h-6 text-primary-600" />
-          <h2 className="text-2xl font-bold text-gray-900">In Progress</h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {upcomingBadges.map((badge) => (
-            <Card key={badge.id} variant="bordered">
-              <CardContent>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gray-100 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl opacity-50">
-                    {badge.icon}
-                  </div>
-                  <h3 className="font-semibold text-lg text-gray-900 mb-2">
-                    {badge.name}
-                  </h3>
-                  <p className="text-sm text-gray-600 mb-4">{badge.description}</p>
-
-                  <div className="mb-2">
-                    <div className="flex items-center justify-between text-xs mb-1">
-                      <span className="text-gray-600">{badge.requirement}</span>
-                      <span className="font-medium text-gray-900">{badge.progress}%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div
-                        className="bg-gradient-to-r from-primary-500 to-secondary-500 h-2 rounded-full transition-all"
-                        style={{ width: `${badge.progress}%` }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
 
       {/* Leaderboard Teaser */}
       <Card variant="bordered" className="bg-gradient-to-br from-primary-50 to-secondary-50">

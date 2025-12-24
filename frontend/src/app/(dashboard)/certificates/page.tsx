@@ -1,74 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { CertificateCard } from '@/components/features/dashboard';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Certificate } from '@/types/user';
 import { Award, Download, Search, Loader2, RefreshCw } from 'lucide-react';
-
-// Placeholder data for when API is unavailable
-const mockCertificates: Certificate[] = [
-  {
-    id: 1,
-    reference: 'CERT-2024-001234',
-    courseName: 'IOSH Managing Safely',
-    courseSlug: 'iosh-managing-safely',
-    issuedDate: '2024-11-10',
-    expiryDate: '2027-11-10',
-    downloadUrl: '/certificates/cert-001234.pdf',
-    verificationUrl: '/verify/CERT-2024-001234',
-    qrCode: '',
-    templateName: 'IOSH Certificate',
-  },
-  {
-    id: 2,
-    reference: 'CERT-2024-005678',
-    courseName: 'First Aid at Work (3 Day)',
-    courseSlug: 'first-aid-at-work-3-day',
-    issuedDate: '2024-10-30',
-    expiryDate: '2027-10-30',
-    downloadUrl: '/certificates/cert-005678.pdf',
-    verificationUrl: '/verify/CERT-2024-005678',
-    qrCode: '',
-    templateName: 'Qualsafe Certificate',
-  },
-  {
-    id: 3,
-    reference: 'CERT-2024-009012',
-    courseName: 'Fire Safety Awareness',
-    courseSlug: 'fire-safety-awareness',
-    issuedDate: '2024-09-15',
-    downloadUrl: '/certificates/cert-009012.pdf',
-    verificationUrl: '/verify/CERT-2024-009012',
-    qrCode: '',
-    templateName: 'CPD Certificate',
-  },
-  {
-    id: 4,
-    reference: 'CERT-2024-003456',
-    courseName: 'Manual Handling Training',
-    courseSlug: 'manual-handling-training',
-    issuedDate: '2024-08-20',
-    expiryDate: '2027-08-20',
-    downloadUrl: '/certificates/cert-003456.pdf',
-    verificationUrl: '/verify/CERT-2024-003456',
-    qrCode: '',
-    templateName: 'Professional Certificate',
-  },
-  {
-    id: 5,
-    reference: 'CERT-2024-007890',
-    courseName: 'IOSH Working Safely',
-    courseSlug: 'iosh-working-safely',
-    issuedDate: '2024-07-05',
-    expiryDate: '2026-07-05',
-    downloadUrl: '/certificates/cert-007890.pdf',
-    verificationUrl: '/verify/CERT-2024-007890',
-    qrCode: '',
-    templateName: 'IOSH Certificate',
-  },
-];
 
 export default function CertificatesPage() {
   const [certificates, setCertificates] = useState<Certificate[]>([]);
@@ -87,13 +25,15 @@ export default function CertificatesPage() {
       if (data.success && data.data) {
         setCertificates(data.data);
       } else {
-        console.warn('Using mock certificate data:', data.message);
-        setCertificates(mockCertificates);
+        setCertificates([]);
+        if (data.message) {
+          setError(data.message);
+        }
       }
     } catch (err) {
       console.error('Error fetching certificates:', err);
-      setCertificates(mockCertificates);
-      setError('Unable to connect to server. Showing demo data.');
+      setCertificates([]);
+      setError('Unable to load certificates. Please try again later.');
     } finally {
       setIsLoading(false);
     }
@@ -213,11 +153,16 @@ export default function CertificatesPage() {
           <h3 className="text-lg font-semibold text-gray-900 mb-2">
             {searchQuery ? 'No certificates found' : 'No certificates yet'}
           </h3>
-          <p className="text-gray-600">
+          <p className="text-gray-600 mb-4">
             {searchQuery
               ? 'Try adjusting your search query'
               : 'Complete courses to earn certificates'}
           </p>
+          {!searchQuery && (
+            <Link href="/courses">
+              <Button>Browse Courses</Button>
+            </Link>
+          )}
         </div>
       )}
 

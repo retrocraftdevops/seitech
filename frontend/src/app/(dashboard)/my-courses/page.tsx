@@ -1,97 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { CourseProgressCard } from '@/components/features/dashboard';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Enrollment } from '@/types/user';
-import { Filter, Search, Loader2, RefreshCw } from 'lucide-react';
-
-// Placeholder data for when API is unavailable
-const mockEnrollments: Enrollment[] = [
-  {
-    id: 1,
-    courseId: 101,
-    courseName: 'IOSH Managing Safely',
-    courseSlug: 'iosh-managing-safely',
-    courseImage: '/images/courses/iosh-managing-safely.jpg',
-    userId: 1,
-    state: 'active',
-    progress: 65,
-    enrollmentDate: '2024-11-01',
-    lastAccessDate: '2024-12-20',
-    totalTimeSpent: 420,
-  },
-  {
-    id: 2,
-    courseId: 102,
-    courseName: 'Fire Safety Awareness',
-    courseSlug: 'fire-safety-awareness',
-    courseImage: '/images/courses/fire-safety.jpg',
-    userId: 1,
-    state: 'active',
-    progress: 40,
-    enrollmentDate: '2024-11-15',
-    lastAccessDate: '2024-12-22',
-    totalTimeSpent: 280,
-  },
-  {
-    id: 3,
-    courseId: 103,
-    courseName: 'Manual Handling Training',
-    courseSlug: 'manual-handling-training',
-    courseImage: '/images/courses/manual-handling.jpg',
-    userId: 1,
-    state: 'active',
-    progress: 80,
-    enrollmentDate: '2024-10-20',
-    lastAccessDate: '2024-12-21',
-    totalTimeSpent: 560,
-  },
-  {
-    id: 4,
-    courseId: 104,
-    courseName: 'First Aid at Work (3 Day)',
-    courseSlug: 'first-aid-at-work-3-day',
-    courseImage: '/images/courses/first-aid.jpg',
-    userId: 1,
-    state: 'completed',
-    progress: 100,
-    enrollmentDate: '2024-09-01',
-    completionDate: '2024-11-10',
-    lastAccessDate: '2024-11-10',
-    totalTimeSpent: 720,
-    certificateId: 1,
-  },
-  {
-    id: 5,
-    courseId: 105,
-    courseName: 'IOSH Working Safely',
-    courseSlug: 'iosh-working-safely',
-    courseImage: '/images/courses/iosh-working-safely.jpg',
-    userId: 1,
-    state: 'completed',
-    progress: 100,
-    enrollmentDate: '2024-08-15',
-    completionDate: '2024-10-30',
-    lastAccessDate: '2024-10-30',
-    totalTimeSpent: 680,
-    certificateId: 2,
-  },
-  {
-    id: 6,
-    courseId: 106,
-    courseName: 'Fire Warden Training',
-    courseSlug: 'fire-warden-training',
-    courseImage: '/images/courses/fire-warden.jpg',
-    userId: 1,
-    state: 'active',
-    progress: 25,
-    enrollmentDate: '2024-12-01',
-    lastAccessDate: '2024-12-18',
-    totalTimeSpent: 180,
-  },
-];
+import { Filter, Search, Loader2, RefreshCw, BookOpen } from 'lucide-react';
 
 export default function MyCoursesPage() {
   const [enrollments, setEnrollments] = useState<Enrollment[]>([]);
@@ -111,14 +26,15 @@ export default function MyCoursesPage() {
       if (data.success && data.data) {
         setEnrollments(data.data);
       } else {
-        // Use mock data if API fails or returns no data
-        console.warn('Using mock enrollment data:', data.message);
-        setEnrollments(mockEnrollments);
+        setEnrollments([]);
+        if (data.message) {
+          setError(data.message);
+        }
       }
     } catch (err) {
       console.error('Error fetching enrollments:', err);
-      setEnrollments(mockEnrollments);
-      setError('Unable to connect to server. Showing demo data.');
+      setEnrollments([]);
+      setError('Unable to load courses. Please try again later.');
     } finally {
       setIsLoading(false);
     }
@@ -257,14 +173,25 @@ export default function MyCoursesPage() {
       ) : (
         <div className="text-center py-12">
           <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <Search className="w-8 h-8 text-gray-400" />
+            {searchQuery ? (
+              <Search className="w-8 h-8 text-gray-400" />
+            ) : (
+              <BookOpen className="w-8 h-8 text-gray-400" />
+            )}
           </div>
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">No courses found</h3>
-          <p className="text-gray-600">
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">
+            {searchQuery ? 'No courses found' : 'No courses yet'}
+          </h3>
+          <p className="text-gray-600 mb-4">
             {searchQuery
               ? 'Try adjusting your search query'
-              : 'Change your filter to see more courses'}
+              : 'Start your learning journey by enrolling in a course'}
           </p>
+          {!searchQuery && (
+            <Link href="/courses">
+              <Button>Browse Courses</Button>
+            </Link>
+          )}
         </div>
       )}
     </div>
