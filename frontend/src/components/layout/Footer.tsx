@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   Phone,
   Mail,
@@ -25,17 +26,13 @@ export function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-6">
-              <div className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">S</span>
-                </div>
-                <div>
-                  <p className="font-bold text-white text-lg leading-tight">
-                    SEI Tech
-                  </p>
-                  <p className="text-xs text-gray-400 -mt-0.5">International</p>
-                </div>
-              </div>
+              <Image
+                src="/logos/logo-light.png"
+                alt="SEI Tech International"
+                width={180}
+                height={41}
+                className="h-10 w-auto"
+              />
             </Link>
             <p className="text-gray-400 mb-6 leading-relaxed">
               {siteConfig.tagline}. Professional health, safety, and environmental
@@ -146,20 +143,43 @@ export function Footer() {
           <p className="text-sm text-gray-500 mb-4 text-center">
             Accredited by leading industry bodies
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-8 opacity-60">
-            {/* Placeholder for accreditation logos */}
-            <div className="h-12 px-4 bg-white/10 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold">IOSH</span>
+          <div className="flex flex-wrap items-center justify-center gap-8">
+            <div className="h-16 px-4 bg-white rounded-lg flex items-center justify-center">
+              <Image
+                src="/accreditations/iosh.png"
+                alt="IOSH - Institution of Occupational Safety and Health"
+                width={60}
+                height={60}
+                className="h-12 w-auto"
+              />
             </div>
-            <div className="h-12 px-4 bg-white/10 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold">Qualsafe</span>
+            <div className="h-16 px-4 bg-white rounded-lg flex items-center justify-center">
+              <Image
+                src="/accreditations/qualsafe.png"
+                alt="Qualsafe Awards"
+                width={60}
+                height={60}
+                className="h-12 w-auto"
+              />
             </div>
             {/* TODO: Re-enable NEBOSH once licensing agreement is in place */}
-            {/* <div className="h-12 px-4 bg-white/10 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold">NEBOSH</span>
-            </div> */}
-            <div className="h-12 px-4 bg-white/10 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold">ProQual</span>
+            <div className="h-16 px-4 bg-white rounded-lg flex items-center justify-center">
+              <Image
+                src="/accreditations/oshcr.png"
+                alt="OSHCR - Occupational Safety and Health Consultants Register"
+                width={60}
+                height={60}
+                className="h-12 w-auto"
+              />
+            </div>
+            <div className="h-16 px-4 bg-white rounded-lg flex items-center justify-center">
+              <Image
+                src="/accreditations/ifsm.png"
+                alt="IFSM - Institute of Fire Safety Managers"
+                width={60}
+                height={60}
+                className="h-12 w-auto"
+              />
             </div>
           </div>
         </div>

@@ -5,52 +5,56 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-interface ClientLogo {
+interface PartnerLogo {
   id: string;
   name: string;
   logo: string;
+  width: number;
+  height: number;
 }
 
-const clientLogos: ClientLogo[] = [
+const partnerLogos: PartnerLogo[] = [
   {
-    id: '1',
-    name: 'Construction Solutions Ltd',
-    logo: 'https://via.placeholder.com/200x80/f3f4f6/6b7280?text=Construction+Solutions',
+    id: 'iosh',
+    name: 'IOSH - Institution of Occupational Safety and Health',
+    logo: '/accreditations/iosh.png',
+    width: 80,
+    height: 80,
   },
   {
-    id: '2',
-    name: 'Manufacturing Excellence UK',
-    logo: 'https://via.placeholder.com/200x80/f3f4f6/6b7280?text=Manufacturing+UK',
+    id: 'qualsafe',
+    name: 'Qualsafe Awards',
+    logo: '/accreditations/qualsafe.png',
+    width: 80,
+    height: 80,
   },
   {
-    id: '3',
-    name: 'Global Logistics Group',
-    logo: 'https://via.placeholder.com/200x80/f3f4f6/6b7280?text=Global+Logistics',
+    id: 'oshcr',
+    name: 'OSHCR - Occupational Safety and Health Consultants Register',
+    logo: '/accreditations/oshcr.png',
+    width: 80,
+    height: 80,
   },
   {
-    id: '4',
-    name: 'Energy Solutions plc',
-    logo: 'https://via.placeholder.com/200x80/f3f4f6/6b7280?text=Energy+Solutions',
+    id: 'ifsm',
+    name: 'IFSM - Institute of Fire Safety Managers',
+    logo: '/accreditations/ifsm.png',
+    width: 80,
+    height: 80,
   },
   {
-    id: '5',
-    name: 'Retail Management Services',
-    logo: 'https://via.placeholder.com/200x80/f3f4f6/6b7280?text=Retail+Services',
+    id: 'lra',
+    name: 'LRA - Legionella Risk Assessment',
+    logo: '/accreditations/lra.png',
+    width: 80,
+    height: 80,
   },
   {
-    id: '6',
-    name: 'Healthcare Trust',
-    logo: 'https://via.placeholder.com/200x80/f3f4f6/6b7280?text=Healthcare+Trust',
-  },
-  {
-    id: '7',
-    name: 'Transport Group',
-    logo: 'https://via.placeholder.com/200x80/f3f4f6/6b7280?text=Transport+Group',
-  },
-  {
-    id: '8',
-    name: 'Technology Services Ltd',
-    logo: 'https://via.placeholder.com/200x80/f3f4f6/6b7280?text=Tech+Services',
+    id: 'fit2fit',
+    name: 'Fit2Fit - Face Fit Testing Accreditation',
+    logo: '/accreditations/fit2fit.png',
+    width: 80,
+    height: 80,
   },
 ];
 
@@ -84,10 +88,10 @@ export function TrustedBySection() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-            Trusted by Leading Organizations
+            Accredited by Industry Leaders
           </h2>
           <p className="text-gray-600">
-            Delivering excellence in health, safety, and environmental training
+            Our courses and services are recognised by the UK&apos;s leading health and safety bodies
           </p>
         </motion.div>
 
@@ -95,24 +99,24 @@ export function TrustedBySection() {
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex gap-8 lg:gap-12">
             {/* Duplicate logos for seamless loop */}
-            {[...clientLogos, ...clientLogos].map((client, index) => (
+            {[...partnerLogos, ...partnerLogos].map((partner, index) => (
               <div
-                key={`${client.id}-${index}`}
-                className="flex-[0_0_200px] min-w-0"
+                key={`${partner.id}-${index}`}
+                className="flex-[0_0_160px] min-w-0"
               >
                 <motion.div
-                  className="flex items-center justify-center h-20 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
+                  className="flex items-center justify-center h-24 bg-gray-50 rounded-xl p-4 hover:bg-gray-100 transition-all duration-300"
                   initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 0.6 }}
+                  whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: (index % clientLogos.length) * 0.05 }}
+                  transition={{ duration: 0.5, delay: (index % partnerLogos.length) * 0.05 }}
                 >
                   <Image
-                    src={client.logo}
-                    alt={client.name}
-                    width={200}
-                    height={80}
-                    className="object-contain"
+                    src={partner.logo}
+                    alt={partner.name}
+                    width={partner.width}
+                    height={partner.height}
+                    className="object-contain max-h-16 w-auto"
                   />
                 </motion.div>
               </div>

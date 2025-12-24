@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Mail, Linkedin, Award, GraduationCap } from 'lucide-react';
+import Image from 'next/image';
+import { Mail, Linkedin, Award, GraduationCap, Users } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
@@ -15,73 +16,163 @@ export const metadata: Metadata = {
   },
 };
 
-const teamMembers = [
+interface TeamMember {
+  id: number;
+  name: string;
+  slug: string;
+  image: string | null;
+  jobTitle: string;
+  department: string;
+  shortBio: string;
+  fullBio: string;
+  qualifications: string;
+  certifications: string;
+  specializations: string;
+  email: string;
+  linkedinUrl: string;
+  twitterUrl: string;
+  isInstructor: boolean;
+  isFeatured: boolean;
+}
+
+// Fallback team members for when API is unavailable
+const fallbackTeamMembers: TeamMember[] = [
   {
+    id: 1,
     name: 'David Thompson',
-    role: 'Managing Director & Lead Consultant',
-    // TODO: Re-enable NEBOSH once licensing agreement is in place
-    // qualifications: ['NEBOSH Diploma', 'IOSH Certified', 'Grad IOSH'],
-    qualifications: ['IOSH Certified', 'Grad IOSH'],
-    bio: 'With over 20 years of experience in health and safety management, David leads our consultancy team and specializes in complex risk assessments and ISO management systems.',
+    slug: 'david-thompson',
+    image: '/team/instructor-1.jpg',
+    jobTitle: 'Managing Director & Lead Consultant',
+    department: 'leadership',
+    shortBio: 'With over 20 years of experience in health and safety management, David leads our consultancy team and specializes in complex risk assessments and ISO management systems.',
+    fullBio: '',
+    qualifications: 'IOSH Certified, Grad IOSH',
+    certifications: '',
+    specializations: 'Risk Assessment, ISO Management, Fire Safety',
     email: 'david.thompson@seitechinternational.org.uk',
-    linkedin: '#',
-    expertise: ['Risk Assessment', 'ISO Management', 'Fire Safety'],
+    linkedinUrl: '#',
+    twitterUrl: '',
+    isInstructor: false,
+    isFeatured: true,
   },
   {
+    id: 2,
     name: 'Sarah Mitchell',
-    // TODO: Re-enable NEBOSH once licensing agreement is in place
-    // role: 'Senior Trainer - NEBOSH & IOSH',
-    role: 'Senior Trainer - IOSH',
-    // qualifications: ['NEBOSH Certificate', 'IOSH Managing Safely', 'First Aid Instructor'],
-    qualifications: ['IOSH Managing Safely', 'First Aid Instructor'],
-    // bio: 'Sarah has trained over 2,000 professionals in NEBOSH and IOSH courses. Her engaging teaching style and real-world examples make complex topics accessible.',
-    bio: 'Sarah has trained over 2,000 professionals in IOSH courses. Her engaging teaching style and real-world examples make complex topics accessible.',
+    slug: 'sarah-mitchell',
+    image: '/team/instructor-2.jpg',
+    jobTitle: 'Senior Trainer - IOSH',
+    department: 'training',
+    shortBio: 'Sarah has trained over 2,000 professionals in IOSH courses. Her engaging teaching style and real-world examples make complex topics accessible.',
+    fullBio: '',
+    qualifications: 'IOSH Managing Safely, First Aid Instructor',
+    certifications: '',
+    specializations: 'IOSH Courses, Leadership',
     email: 'sarah.mitchell@seitechinternational.org.uk',
-    linkedin: '#',
-    // expertise: ['NEBOSH Training', 'IOSH Courses', 'Leadership'],
-    expertise: ['IOSH Courses', 'Leadership'],
+    linkedinUrl: '#',
+    twitterUrl: '',
+    isInstructor: true,
+    isFeatured: true,
   },
   {
+    id: 3,
     name: 'James Patterson',
-    role: 'Fire Safety Specialist',
-    qualifications: ['Fire Risk Assessor', 'IOSH Certified', 'Emergency Planning'],
-    bio: 'A former fire service professional, James brings practical experience to fire risk assessments and emergency planning consultancy.',
+    slug: 'james-patterson',
+    image: '/team/instructor-3.jpg',
+    jobTitle: 'Fire Safety Specialist',
+    department: 'consultancy',
+    shortBio: 'A former fire service professional, James brings practical experience to fire risk assessments and emergency planning consultancy.',
+    fullBio: '',
+    qualifications: 'Fire Risk Assessor, IOSH Certified, Emergency Planning',
+    certifications: '',
+    specializations: 'Fire Risk Assessment, Emergency Planning, Fire Warden Training',
     email: 'james.patterson@seitechinternational.org.uk',
-    linkedin: '#',
-    expertise: ['Fire Risk Assessment', 'Emergency Planning', 'Fire Warden Training'],
+    linkedinUrl: '#',
+    twitterUrl: '',
+    isInstructor: true,
+    isFeatured: true,
   },
   {
+    id: 4,
     name: 'Emma Richardson',
-    role: 'First Aid & Health Trainer',
-    qualifications: ['Qualsafe Instructor', 'Paramedic Cert', 'Mental Health First Aid'],
-    bio: 'Emma combines her paramedic background with training expertise to deliver practical, life-saving first aid courses.',
+    slug: 'emma-richardson',
+    image: null,
+    jobTitle: 'First Aid & Health Trainer',
+    department: 'training',
+    shortBio: 'Emma combines her paramedic background with training expertise to deliver practical, life-saving first aid courses.',
+    fullBio: '',
+    qualifications: 'Qualsafe Instructor, Paramedic Cert, Mental Health First Aid',
+    certifications: '',
+    specializations: 'First Aid Training, Mental Health, Emergency Response',
     email: 'emma.richardson@seitechinternational.org.uk',
-    linkedin: '#',
-    expertise: ['First Aid Training', 'Mental Health', 'Emergency Response'],
+    linkedinUrl: '#',
+    twitterUrl: '',
+    isInstructor: true,
+    isFeatured: false,
   },
   {
+    id: 5,
     name: 'Michael Chen',
-    role: 'Environmental Consultant',
-    // TODO: Re-enable NEBOSH once licensing agreement is in place
-    // qualifications: ['NEBOSH Environmental', 'ISO 14001 Lead Auditor', 'BSc Environmental Science'],
-    qualifications: ['ISO 14001 Lead Auditor', 'BSc Environmental Science'],
-    bio: 'Michael specializes in environmental management systems and sustainability consulting, helping organizations minimize their environmental impact.',
+    slug: 'michael-chen',
+    image: null,
+    jobTitle: 'Environmental Consultant',
+    department: 'consultancy',
+    shortBio: 'Michael specializes in environmental management systems and sustainability consulting, helping organizations minimize their environmental impact.',
+    fullBio: '',
+    qualifications: 'ISO 14001 Lead Auditor, BSc Environmental Science',
+    certifications: '',
+    specializations: 'Environmental Management, ISO 14001, Sustainability',
     email: 'michael.chen@seitechinternational.org.uk',
-    linkedin: '#',
-    expertise: ['Environmental Management', 'ISO 14001', 'Sustainability'],
+    linkedinUrl: '#',
+    twitterUrl: '',
+    isInstructor: false,
+    isFeatured: false,
   },
   {
+    id: 6,
     name: 'Lisa Morgan',
-    role: 'Training Coordinator & E-Learning Specialist',
-    qualifications: ['Adult Education Cert', 'Digital Learning Specialist', 'IOSH Member'],
-    bio: 'Lisa manages our training programs and leads the development of our e-learning platform, ensuring accessible, high-quality online courses.',
+    slug: 'lisa-morgan',
+    image: null,
+    jobTitle: 'Training Coordinator & E-Learning Specialist',
+    department: 'training',
+    shortBio: 'Lisa manages our training programs and leads the development of our e-learning platform, ensuring accessible, high-quality online courses.',
+    fullBio: '',
+    qualifications: 'Adult Education Cert, Digital Learning Specialist, IOSH Member',
+    certifications: '',
+    specializations: 'E-Learning, Course Development, Training Management',
     email: 'lisa.morgan@seitechinternational.org.uk',
-    linkedin: '#',
-    expertise: ['E-Learning', 'Course Development', 'Training Management'],
+    linkedinUrl: '#',
+    twitterUrl: '',
+    isInstructor: false,
+    isFeatured: false,
   },
 ];
 
-export default function TeamPage() {
+async function getTeamMembers(): Promise<TeamMember[]> {
+  try {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+    const response = await fetch(`${baseUrl}/api/cms/team`, {
+      cache: 'no-store',
+    });
+
+    if (!response.ok) {
+      return fallbackTeamMembers;
+    }
+
+    const data = await response.json();
+    if (data.success && data.data && data.data.length > 0) {
+      return data.data;
+    }
+
+    return fallbackTeamMembers;
+  } catch (error) {
+    console.error('Error fetching team members:', error);
+    return fallbackTeamMembers;
+  }
+}
+
+export default async function TeamPage() {
+  const teamMembers = await getTeamMembers();
+
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
@@ -107,78 +198,98 @@ export default function TeamPage() {
       <section className="py-20 lg:py-28 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <Card key={index} variant="elevated" hover>
+            {teamMembers.map((member) => (
+              <Card key={member.id} variant="elevated" hover>
                 <CardContent className="p-0">
-                  {/* Avatar Placeholder */}
-                  <div className="bg-gradient-to-br from-primary-100 to-secondary-100 h-64 flex items-center justify-center">
-                    <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center">
-                      <span className="text-4xl font-bold text-primary-600">
-                        {member.name
-                          .split(' ')
-                          .map((n) => n[0])
-                          .join('')}
-                      </span>
-                    </div>
+                  {/* Avatar */}
+                  <div className="bg-gradient-to-br from-primary-100 to-secondary-100 h-64 flex items-center justify-center overflow-hidden">
+                    {member.image ? (
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        width={256}
+                        height={256}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center">
+                        <span className="text-4xl font-bold text-primary-600">
+                          {member.name
+                            .split(' ')
+                            .map((n) => n[0])
+                            .join('')}
+                        </span>
+                      </div>
+                    )}
                   </div>
 
                   {/* Content */}
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
-                    <p className="text-primary-600 font-semibold mb-4">{member.role}</p>
+                    <p className="text-primary-600 font-semibold mb-4">{member.jobTitle}</p>
 
-                    <p className="text-gray-600 text-sm mb-4">{member.bio}</p>
+                    <p className="text-gray-600 text-sm mb-4">{member.shortBio}</p>
 
                     {/* Qualifications */}
-                    <div className="mb-4">
-                      <div className="flex items-center gap-2 mb-2">
-                        <GraduationCap className="h-4 w-4 text-gray-400" />
-                        <span className="text-xs font-semibold text-gray-500 uppercase">
-                          Qualifications
-                        </span>
+                    {member.qualifications && (
+                      <div className="mb-4">
+                        <div className="flex items-center gap-2 mb-2">
+                          <GraduationCap className="h-4 w-4 text-gray-400" />
+                          <span className="text-xs font-semibold text-gray-500 uppercase">
+                            Qualifications
+                          </span>
+                        </div>
+                        <div className="flex flex-wrap gap-2">
+                          {member.qualifications.split(',').map((qual, idx) => (
+                            <Badge key={idx} variant="secondary" className="text-xs">
+                              {qual.trim()}
+                            </Badge>
+                          ))}
+                        </div>
                       </div>
-                      <div className="flex flex-wrap gap-2">
-                        {member.qualifications.map((qual, idx) => (
-                          <Badge key={idx} variant="secondary" className="text-xs">
-                            {qual}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
+                    )}
 
-                    {/* Expertise */}
-                    <div className="mb-4">
-                      <div className="flex items-center gap-2 mb-2">
-                        <Award className="h-4 w-4 text-gray-400" />
-                        <span className="text-xs font-semibold text-gray-500 uppercase">
-                          Expertise
-                        </span>
+                    {/* Expertise/Specializations */}
+                    {member.specializations && (
+                      <div className="mb-4">
+                        <div className="flex items-center gap-2 mb-2">
+                          <Award className="h-4 w-4 text-gray-400" />
+                          <span className="text-xs font-semibold text-gray-500 uppercase">
+                            Expertise
+                          </span>
+                        </div>
+                        <div className="flex flex-wrap gap-2">
+                          {member.specializations.split(',').map((exp, idx) => (
+                            <Badge key={idx} variant="outline" className="text-xs">
+                              {exp.trim()}
+                            </Badge>
+                          ))}
+                        </div>
                       </div>
-                      <div className="flex flex-wrap gap-2">
-                        {member.expertise.map((exp, idx) => (
-                          <Badge key={idx} variant="outline" className="text-xs">
-                            {exp}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
+                    )}
 
                     {/* Contact */}
                     <div className="flex gap-3 pt-4 border-t border-gray-100">
-                      <a
-                        href={`mailto:${member.email}`}
-                        className="flex items-center gap-2 text-sm text-gray-600 hover:text-primary-600 transition-colors"
-                      >
-                        <Mail className="h-4 w-4" />
-                        <span className="sr-only">Email {member.name}</span>
-                      </a>
-                      <a
-                        href={member.linkedin}
-                        className="flex items-center gap-2 text-sm text-gray-600 hover:text-primary-600 transition-colors"
-                      >
-                        <Linkedin className="h-4 w-4" />
-                        <span className="sr-only">LinkedIn profile</span>
-                      </a>
+                      {member.email && (
+                        <a
+                          href={`mailto:${member.email}`}
+                          className="flex items-center gap-2 text-sm text-gray-600 hover:text-primary-600 transition-colors"
+                        >
+                          <Mail className="h-4 w-4" />
+                          <span className="sr-only">Email {member.name}</span>
+                        </a>
+                      )}
+                      {member.linkedinUrl && member.linkedinUrl !== '#' && (
+                        <a
+                          href={member.linkedinUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 text-sm text-gray-600 hover:text-primary-600 transition-colors"
+                        >
+                          <Linkedin className="h-4 w-4" />
+                          <span className="sr-only">LinkedIn profile</span>
+                        </a>
+                      )}
                     </div>
                   </div>
                 </CardContent>
@@ -196,7 +307,7 @@ export default function TeamPage() {
               Why Choose Our Team?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our trainers and consultants are more than just qualified - they're passionate about
+              Our trainers and consultants are more than just qualified - they&apos;re passionate about
               making workplaces safer.
             </p>
           </div>
@@ -207,10 +318,10 @@ export default function TeamPage() {
                 <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <GraduationCap className="h-8 w-8 text-primary-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Highly Qualified</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Industry Certified</h3>
                 <p className="text-gray-600">
-                  All our trainers hold industry-recognised qualifications and are subject matter
-                  experts in their fields.
+                  All our trainers hold current certifications from IOSH, Qualsafe, and other
+                  leading accreditation bodies.
                 </p>
               </CardContent>
             </Card>
@@ -222,8 +333,8 @@ export default function TeamPage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Real-World Experience</h3>
                 <p className="text-gray-600">
-                  Our team brings practical industry experience, not just theoretical knowledge,
-                  to every training session.
+                  Our team includes former emergency service professionals, safety officers, and
+                  industry experts.
                 </p>
               </CardContent>
             </Card>
@@ -231,12 +342,12 @@ export default function TeamPage() {
             <Card variant="elevated">
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Mail className="h-8 w-8 text-primary-600" />
+                  <Users className="h-8 w-8 text-primary-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Ongoing Support</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Dedicated Support</h3>
                 <p className="text-gray-600">
-                  We provide continued support after training, ensuring you have the guidance
-                  needed to apply your learning.
+                  We don&apos;t just train - we provide ongoing support to help you maintain
+                  compliance and safety standards.
                 </p>
               </CardContent>
             </Card>
@@ -244,19 +355,29 @@ export default function TeamPage() {
         </div>
       </section>
 
-      {/* Join Our Team CTA */}
-      <section className="py-20 lg:py-28 bg-white">
+      {/* CTA Section */}
+      <section className="py-20 lg:py-28 bg-gradient-to-br from-primary-600 to-secondary-600 text-white">
         <div className="container mx-auto px-4 max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Interested in Joining Our Team?
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Work with Our Experts?
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            We're always looking for passionate health and safety professionals to join our growing
-            team.
+          <p className="text-xl text-white/90 mb-8">
+            Whether you need training, consultancy, or both, our team is ready to help you
+            achieve your health and safety goals.
           </p>
-          <Button variant="primary" size="lg" asChild>
-            <Link href="/contact">Get in Touch</Link>
-          </Button>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Button variant="secondary" size="lg" asChild>
+              <Link href="/contact">Get in Touch</Link>
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="bg-white/10 hover:bg-white/20 border-white text-white"
+              asChild
+            >
+              <Link href="/training">View Training Courses</Link>
+            </Button>
+          </div>
         </div>
       </section>
     </main>
