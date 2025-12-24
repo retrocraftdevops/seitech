@@ -77,14 +77,14 @@ export function Header() {
         className={cn(
           'sticky top-0 z-50 w-full transition-all duration-300',
           isScrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-sm'
-            : 'bg-white'
+            ? 'bg-gray-900 shadow-lg'
+            : 'bg-gray-900/80 backdrop-blur-sm'
         )}
       >
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="flex items-center justify-between h-18 lg:h-20">
             {/* Logo */}
-            <Link href="/" className="flex-shrink-0 bg-gray-900 rounded-lg px-4 py-2 -my-1">
+            <Link href="/" className="flex-shrink-0">
               <Image
                 src="/logos/logo-light.png"
                 alt="SEI Tech International"
@@ -109,8 +109,8 @@ export function Header() {
                       className={cn(
                         'flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-colors',
                         activeMenu === item.title
-                          ? 'text-primary-600 bg-primary-50'
-                          : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                          ? 'text-white bg-white/20'
+                          : 'text-gray-200 hover:text-white hover:bg-white/10'
                       )}
                     >
                       {item.title}
@@ -127,8 +127,8 @@ export function Header() {
                       className={cn(
                         'px-4 py-2 text-sm font-medium rounded-lg transition-colors',
                         pathname === item.href
-                          ? 'text-primary-600 bg-primary-50'
-                          : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                          ? 'text-white bg-white/20'
+                          : 'text-gray-200 hover:text-white hover:bg-white/10'
                       )}
                     >
                       {item.title}
@@ -149,23 +149,27 @@ export function Header() {
             {/* Right Side Actions */}
             <div className="flex items-center gap-2">
               {/* Search Button */}
-              <button className="p-2 text-gray-600 hover:text-primary-600 hover:bg-gray-100 rounded-lg transition-colors">
+              <button className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors">
                 <Search className="h-5 w-5" />
               </button>
 
               {/* Cart Button */}
-              <button className="relative p-2 text-gray-600 hover:text-primary-600 hover:bg-gray-100 rounded-lg transition-colors">
+              <button className="relative p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors">
                 <ShoppingCart className="h-5 w-5" />
-                <span className="absolute -top-0.5 -right-0.5 h-4 w-4 bg-primary-600 text-white text-2xs rounded-full flex items-center justify-center">
+                <span className="absolute -top-0.5 -right-0.5 h-4 w-4 bg-primary-500 text-white text-2xs rounded-full flex items-center justify-center">
                   0
                 </span>
               </button>
 
               {/* User Menu */}
               <div className="hidden sm:block">
-                <Button variant="ghost" size="sm" leftIcon={<User className="h-4 w-4" />}>
+                <Link
+                  href="/login"
+                  className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-200 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+                >
+                  <User className="h-4 w-4" />
                   Login
-                </Button>
+                </Link>
               </div>
 
               {/* CTA Button */}
@@ -177,7 +181,7 @@ export function Header() {
 
               {/* Mobile Menu Button */}
               <button
-                className="lg:hidden p-2 text-gray-600 hover:text-primary-600 hover:bg-gray-100 rounded-lg transition-colors"
+                className="lg:hidden p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               >
                 {isMobileMenuOpen ? (
