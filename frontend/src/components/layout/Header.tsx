@@ -84,13 +84,13 @@ export function Header() {
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="flex items-center justify-between h-18 lg:h-20">
             {/* Logo */}
-            <Link href="/" className="flex-shrink-0">
+            <Link href="/" className="flex-shrink-0 bg-gray-900 rounded-lg px-4 py-2 -my-1">
               <Image
-                src="/logos/logo-dark.png"
+                src="/logos/logo-light.png"
                 alt="SEI Tech International"
-                width={200}
-                height={45}
-                className="h-10 w-auto"
+                width={180}
+                height={41}
+                className="h-9 w-auto"
                 priority
               />
             </Link>
