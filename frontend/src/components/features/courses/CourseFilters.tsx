@@ -58,7 +58,7 @@ export function CourseFilters({ currentFilters }: CourseFiltersProps) {
   };
 
   const updateFilter = (key: string, value: string) => {
-    const params = new URLSearchParams(searchParams.toString());
+    const params = new URLSearchParams(searchParams?.toString() || '');
     if (value) {
       params.set(key, value);
     } else {

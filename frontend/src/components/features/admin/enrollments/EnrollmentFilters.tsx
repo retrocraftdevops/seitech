@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { EnrollmentFilters as Filters, EnrollmentStatus } from '@/types/admin';
 import { Input } from '@/components/ui/Input';
-import { Select } from '@/components/ui/select';
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
 import { Button } from '@/components/ui/Button';
 import { Search, Filter, X } from 'lucide-react';
 
@@ -21,22 +21,6 @@ export function EnrollmentFilters({
   onReset,
 }: EnrollmentFiltersProps) {
   const [isExpanded, setIsExpanded] = useState(false);
-
-  const statusOptions = [
-    { value: 'all', label: 'All Status' },
-    { value: 'active', label: 'Active' },
-    { value: 'completed', label: 'Completed' },
-    { value: 'expired', label: 'Expired' },
-    { value: 'cancelled', label: 'Cancelled' },
-  ];
-
-  const courseOptions = [
-    { value: '', label: 'All Courses' },
-    ...courses.map((course) => ({
-      value: course.id.toString(),
-      label: course.name,
-    })),
-  ];
 
   const handleSearchChange = (value: string) => {
     onFiltersChange({ ...filters, search: value });
@@ -96,10 +80,20 @@ export function EnrollmentFilters({
         {/* Status Filter */}
         <div className="w-full sm:w-48">
           <Select
-            options={statusOptions}
             value={filters.status || 'all'}
             onValueChange={(value) => handleStatusChange(value)}
-          />
+          >
+            <SelectTrigger>
+              <SelectValue placeholder="All Status" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All Status</SelectItem>
+              <SelectItem value="active">Active</SelectItem>
+              <SelectItem value="completed">Completed</SelectItem>
+              <SelectItem value="expired">Expired</SelectItem>
+              <SelectItem value="cancelled">Cancelled</SelectItem>
+            </SelectContent>
+          </Select>
         </div>
 
         {/* Toggle Advanced Filters */}
@@ -127,12 +121,27 @@ export function EnrollmentFilters({
       {isExpanded && (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 bg-gray-50 rounded-xl border border-gray-200">
           {/* Course Filter */}
-          <Select
-            label="Course"
-            options={courseOptions}
-            value={filters.courseId?.toString() || ''}
-            onValueChange={(value) => handleCourseChange(value)}
-          />
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1.5">
+              Course
+            </label>
+            <Select
+              value={filters.courseId?.toString() || ''}
+              onValueChange={(value) => handleCourseChange(value)}
+            >
+              <SelectTrigger>
+                <SelectValue placeholder="All Courses" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="">All Courses</SelectItem>
+                {courses.map((course) => (
+                  <SelectItem key={course.id} value={course.id.toString()}>
+                    {course.name}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
 
           {/* Date From */}
           <Input

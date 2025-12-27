@@ -5,8 +5,9 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { Input } from '@/components/ui/Input';
 import { Textarea } from '@/components/ui/Textarea';
-import { Select } from '@/components/ui/select';
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
 import { Button } from '@/components/ui/Button';
+import { Label } from '@/components/ui/Label';
 
 const courseSchema = z.object({
   name: z.string().min(3, 'Name must be at least 3 characters'),
@@ -111,32 +112,43 @@ export function CourseForm({
         <h3 className="text-lg font-semibold text-gray-900">Course Details</h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Select
-            label="Category"
-            {...register('category')}
-            error={errors.category?.message}
-            options={[
-              { value: '', label: 'Select a category' },
-              { value: 'cloud-computing', label: 'Cloud Computing' },
-              { value: 'cybersecurity', label: 'Cybersecurity' },
-              { value: 'data-science', label: 'Data Science' },
-              { value: 'devops', label: 'DevOps' },
-              { value: 'web-development', label: 'Web Development' },
-              { value: 'mobile-development', label: 'Mobile Development' },
-              { value: 'ai-ml', label: 'AI & Machine Learning' },
-            ]}
-          />
+          <div>
+            <Label htmlFor="category">Category</Label>
+            <Select value={watch('category')} onValueChange={(value) => setValue('category', value)}>
+              <SelectTrigger>
+                <SelectValue placeholder="Select a category" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="cloud-computing">Cloud Computing</SelectItem>
+                <SelectItem value="cybersecurity">Cybersecurity</SelectItem>
+                <SelectItem value="data-science">Data Science</SelectItem>
+                <SelectItem value="devops">DevOps</SelectItem>
+                <SelectItem value="web-development">Web Development</SelectItem>
+                <SelectItem value="mobile-development">Mobile Development</SelectItem>
+                <SelectItem value="ai-ml">AI & Machine Learning</SelectItem>
+              </SelectContent>
+            </Select>
+            {errors.category?.message && (
+              <p className="mt-1 text-sm text-red-600">{errors.category.message}</p>
+            )}
+          </div>
 
-          <Select
-            label="Level"
-            {...register('level')}
-            error={errors.level?.message}
-            options={[
-              { value: 'beginner', label: 'Beginner' },
-              { value: 'intermediate', label: 'Intermediate' },
-              { value: 'advanced', label: 'Advanced' },
-            ]}
-          />
+          <div>
+            <Label htmlFor="level">Level</Label>
+            <Select value={watch('level')} onValueChange={(value) => setValue('level', value as any)}>
+              <SelectTrigger>
+                <SelectValue placeholder="Select level" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="beginner">Beginner</SelectItem>
+                <SelectItem value="intermediate">Intermediate</SelectItem>
+                <SelectItem value="advanced">Advanced</SelectItem>
+              </SelectContent>
+            </Select>
+            {errors.level?.message && (
+              <p className="mt-1 text-sm text-red-600">{errors.level.message}</p>
+            )}
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

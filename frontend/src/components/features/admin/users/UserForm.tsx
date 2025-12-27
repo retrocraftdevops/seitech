@@ -7,7 +7,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { AdminUser, UserRole } from '@/types/admin';
 import { Input } from '@/components/ui/Input';
-import { Select } from '@/components/ui/select';
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
 import { Button } from '@/components/ui/Button';
 import { Checkbox } from '@/components/ui/Checkbox';
 import { Card } from '@/components/ui/Card';
@@ -36,14 +36,6 @@ interface UserFormProps {
   onSubmit?: (data: UserFormData) => Promise<void>;
   onCancel?: () => void;
 }
-
-const roleOptions = [
-  { value: 'student', label: 'Student' },
-  { value: 'student_admin', label: 'Student Admin' },
-  { value: 'instructor', label: 'Instructor' },
-  { value: 'manager', label: 'Manager' },
-  { value: 'admin', label: 'Admin' },
-];
 
 export function UserForm({ user, mode, onSubmit, onCancel }: UserFormProps) {
   const router = useRouter();
@@ -176,13 +168,29 @@ export function UserForm({ user, mode, onSubmit, onCancel }: UserFormProps) {
               {...register('password')}
             />
 
-            <Select
-              label="Role"
-              options={roleOptions}
-              value={watch('role')}
-              onValueChange={(value) => setValue('role', value as UserRole)}
-              error={errors.role?.message}
-            />
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                Role
+              </label>
+              <Select
+                value={watch('role')}
+                onValueChange={(value) => setValue('role', value as UserRole)}
+              >
+                <SelectTrigger>
+                  <SelectValue placeholder="Select role" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="student">Student</SelectItem>
+                  <SelectItem value="student_admin">Student Admin</SelectItem>
+                  <SelectItem value="instructor">Instructor</SelectItem>
+                  <SelectItem value="manager">Manager</SelectItem>
+                  <SelectItem value="admin">Admin</SelectItem>
+                </SelectContent>
+              </Select>
+              {errors.role?.message && (
+                <p className="mt-1.5 text-sm text-red-600">{errors.role.message}</p>
+              )}
+            </div>
           </div>
 
           <div className="space-y-4 pt-4 border-t border-gray-100">

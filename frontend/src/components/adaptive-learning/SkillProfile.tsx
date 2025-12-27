@@ -1,8 +1,8 @@
 'use client';
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/badge';
-import { Progress } from '@/components/ui/progress';
+import { Badge } from '@/components/ui/Badge';
+import { Progress } from '@/components/ui/Progress';
 import { Award, BookOpen, TrendingUp, Users, CheckCircle2, Target } from 'lucide-react';
 import type { UserSkillProfile, ProficiencyLevel } from '@/types/adaptive-learning';
 

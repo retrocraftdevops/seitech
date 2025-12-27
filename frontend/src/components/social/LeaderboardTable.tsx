@@ -68,8 +68,11 @@ export default function LeaderboardTable({
   const getCategoryLabel = (cat: LeaderboardCategory) => {
     const labels: Record<LeaderboardCategory, string> = {
       overall: 'Overall',
+      points: 'Points',
       courses: 'Courses Completed',
+      skills: 'Skills',
       discussions: 'Discussion Points',
+      certifications: 'Certifications',
       study_groups: 'Study Groups',
       streak: 'Learning Streaks',
       quiz_scores: 'Quiz Scores',
@@ -321,7 +324,7 @@ export default function LeaderboardTable({
                         📚 {entry.courses_completed} courses
                       </div>
                     )}
-                    {entry.discussions_count > 0 && (
+                    {(entry.discussions_count ?? 0) > 0 && (
                       <div className="text-sm text-gray-600">
                         💬 {entry.discussions_count} discussions
                       </div>

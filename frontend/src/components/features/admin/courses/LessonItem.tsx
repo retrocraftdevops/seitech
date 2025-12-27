@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
-import { Select } from '@/components/ui/select';
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
 import { Badge } from '@/components/ui/Badge';
 import { GripVertical, Edit, Trash2, Save, X, Video, FileText, HelpCircle, BookOpen } from 'lucide-react';
 
@@ -77,15 +77,19 @@ export function LessonItem({ lesson, onUpdate, onDelete, dragHandleProps }: Less
 
         <div className="grid grid-cols-2 gap-3">
           <Select
-            options={[
-              { value: 'video', label: 'Video' },
-              { value: 'document', label: 'Document' },
-              { value: 'quiz', label: 'Quiz' },
-              { value: 'article', label: 'Article' },
-            ]}
             value={editedLesson.type}
             onValueChange={(value) => setEditedLesson({ ...editedLesson, type: value as Lesson['type'] })}
-          />
+          >
+            <SelectTrigger>
+              <SelectValue placeholder="Select type" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="video">Video</SelectItem>
+              <SelectItem value="document">Document</SelectItem>
+              <SelectItem value="quiz">Quiz</SelectItem>
+              <SelectItem value="article">Article</SelectItem>
+            </SelectContent>
+          </Select>
 
           <Input
             type="number"

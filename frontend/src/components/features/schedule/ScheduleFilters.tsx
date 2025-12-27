@@ -27,18 +27,18 @@ export function ScheduleFilters({ courses = [], instructors = [] }: ScheduleFilt
   const searchParams = useSearchParams();
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const currentSearch = searchParams.get('search') || '';
-  const currentCourse = searchParams.get('courseId') || '';
-  const currentInstructor = searchParams.get('instructorId') || '';
-  const currentMeetingType = searchParams.get('meetingType') || '';
-  const currentStartDate = searchParams.get('startDate') || '';
-  const currentEndDate = searchParams.get('endDate') || '';
+  const currentSearch = searchParams?.get('search') || '';
+  const currentCourse = searchParams?.get('courseId') || '';
+  const currentInstructor = searchParams?.get('instructorId') || '';
+  const currentMeetingType = searchParams?.get('meetingType') || '';
+  const currentStartDate = searchParams?.get('startDate') || '';
+  const currentEndDate = searchParams?.get('endDate') || '';
 
   const hasActiveFilters =
     currentCourse || currentInstructor || currentMeetingType || currentStartDate || currentEndDate;
 
   const updateFilters = (updates: Record<string, string>) => {
-    const params = new URLSearchParams(searchParams.toString());
+    const params = new URLSearchParams(searchParams?.toString() || '');
 
     Object.entries(updates).forEach(([key, value]) => {
       if (value) {

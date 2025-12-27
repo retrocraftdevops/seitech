@@ -183,8 +183,15 @@ export function FeaturedCoursesSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
+          <Link href="/courses">
+            <Button
+              size="lg"
+              variant="outline"
+              rightIcon={<ArrowRight className="h-5 w-5" />}
+            >
+              Browse All Courses
             </Button>
-</Link>
+          </Link>
         </motion.div>
       </div>
     </section>

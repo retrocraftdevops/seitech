@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { BulkEnrollmentData, BulkEnrollmentPreview } from '@/types/admin';
-import { Select } from '@/components/ui/select';
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
 import { Input } from '@/components/ui/Input';
 import { Checkbox } from '@/components/ui/Checkbox';
 import { Button } from '@/components/ui/Button';
@@ -35,14 +35,6 @@ export function BulkEnrollmentForm({
   const [preview, setPreview] = useState<BulkEnrollmentPreview[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-
-  const courseOptions = [
-    { value: '', label: 'Select a course...' },
-    ...courses.map((course) => ({
-      value: course.id.toString(),
-      label: course.name,
-    })),
-  ];
 
   const filteredUsers = users.filter(
     (user) =>
@@ -152,13 +144,29 @@ export function BulkEnrollmentForm({
       {/* Course Selection */}
       <Card className="p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Select Course</h3>
-        <Select
-          label="Course"
-          options={courseOptions}
-          value={courseId.toString()}
-          onValueChange={(value) => setCourseId(value ? Number(value) : '')}
-          hint="Select the course to enroll users in"
-        />
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1.5">
+            Course
+          </label>
+          <Select
+            value={courseId.toString()}
+            onValueChange={(value) => setCourseId(value ? Number(value) : '')}
+          >
+            <SelectTrigger>
+              <SelectValue placeholder="Select a course..." />
+            </SelectTrigger>
+            <SelectContent>
+              {courses.map((course) => (
+                <SelectItem key={course.id} value={course.id.toString()}>
+                  {course.name}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          <p className="mt-1.5 text-sm text-gray-500">
+            Select the course to enroll users in
+          </p>
+        </div>
       </Card>
 
       {/* User Selection Method */}

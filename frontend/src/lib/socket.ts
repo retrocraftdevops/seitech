@@ -31,17 +31,17 @@ export const initializeSocketIO = (server: HTTPServer): SocketIOServer => {
       transports: ['websocket', 'polling'],
     });
 
-    io.on('connection', (socket) => {
+    io.on('connection', (socket: any) => {
       console.log('Client connected:', socket.id);
 
       // Subscribe to rooms
-      socket.on('subscribe', ({ room }) => {
+      socket.on('subscribe', ({ room }: { room: string }) => {
         socket.join(room);
         console.log(`Socket ${socket.id} joined room: ${room}`);
       });
 
       // Unsubscribe from rooms
-      socket.on('unsubscribe', ({ room }) => {
+      socket.on('unsubscribe', ({ room }: { room: string }) => {
         socket.leave(room);
         console.log(`Socket ${socket.id} left room: ${room}`);
       });

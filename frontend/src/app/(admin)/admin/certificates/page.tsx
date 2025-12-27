@@ -11,7 +11,7 @@ import { Badge } from '@/components/ui/Badge';
 import { DataTable } from '@/components/ui/DataTable';
 import { createCertificateColumns, getStatusBadge } from '@/components/features/admin/certificates/CertificateTable';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from '@/components/ui/Dialog';
-import { Textarea } from '@/components/ui/textarea';
+import { Textarea } from '@/components/ui/Textarea';
 import type { AdminCertificate, CertificateStatus } from '@/types/admin';
 
 // Demo data

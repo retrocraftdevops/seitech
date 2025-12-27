@@ -170,13 +170,15 @@ export function BlogPreviewSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <Button
-            size="lg"
-            variant="outline"
-            rightIcon={<ArrowRight className="h-5 w-5" />}
-          >
+          <Link href="/blog">
+            <Button
+              size="lg"
+              variant="outline"
+              rightIcon={<ArrowRight className="h-5 w-5" />}
+            >
+              View All Posts
             </Button>
-</Link>
+          </Link>
         </motion.div>
       </div>
     </section>

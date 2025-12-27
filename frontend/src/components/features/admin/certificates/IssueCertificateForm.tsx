@@ -162,30 +162,40 @@ export function IssueCertificateForm({
             {/* Manual Selection */}
             {mode === 'manual' && (
               <div className="space-y-4">
-                <Select
-                  label="Select User"
-                  value={userId}
-                  onValueChange={(value) => setUserId(value)}
-                  options={[
-                    { value: '', label: 'Choose a user...' },
-                    ...users.map((u) => ({
-                      value: u.id.toString(),
-                      label: `${u.name} (${u.email})`,
-                    })),
-                  ]}
-                />
-                <Select
-                  label="Select Course"
-                  value={courseId}
-                  onValueChange={(value) => setCourseId(value)}
-                  options={[
-                    { value: '', label: 'Choose a course...' },
-                    ...courses.map((c) => ({
-                      value: c.id.toString(),
-                      label: c.name,
-                    })),
-                  ]}
-                />
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Select User
+                  </label>
+                  <Select value={userId} onValueChange={(value) => setUserId(value)}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Choose a user..." />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {users.map((u) => (
+                        <SelectItem key={u.id} value={u.id.toString()}>
+                          {u.name} ({u.email})
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Select Course
+                  </label>
+                  <Select value={courseId} onValueChange={(value) => setCourseId(value)}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Choose a course..." />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {courses.map((c) => (
+                        <SelectItem key={c.id} value={c.id.toString()}>
+                          {c.name}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
               </div>
             )}
           </div>
@@ -201,21 +211,29 @@ export function IssueCertificateForm({
           </div>
 
           <div className="space-y-4">
-            <Select
-              label="Certificate Template"
-              value={templateId}
-              onValueChange={(value) => setTemplateId(value)}
-              options={[
-                { value: '', label: 'Use default template' },
-                ...templates
-                  .filter((t) => t.isActive)
-                  .map((t) => ({
-                    value: t.id.toString(),
-                    label: `${t.name}${t.isDefault ? ' (Default)' : ''}`,
-                  })),
-              ]}
-              hint={selectedTemplate?.description}
-            />
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Certificate Template
+              </label>
+              <Select value={templateId} onValueChange={(value) => setTemplateId(value)}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Use default template" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="">Use default template</SelectItem>
+                  {templates
+                    .filter((t) => t.isActive)
+                    .map((t) => (
+                      <SelectItem key={t.id} value={t.id.toString()}>
+                        {t.name}{t.isDefault ? ' (Default)' : ''}
+                      </SelectItem>
+                    ))}
+                </SelectContent>
+              </Select>
+              {selectedTemplate?.description && (
+                <p className="mt-1 text-sm text-gray-500">{selectedTemplate.description}</p>
+              )}
+            </div>
 
             <Input
               type="date"

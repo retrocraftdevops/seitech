@@ -158,6 +158,7 @@ export function CourseTable({
               <td className="px-4 py-4">{getStatusBadge(course.status)}</td>
               <td className="px-4 py-4 text-right">
                 <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
                     <Button variant="ghost" size="icon-sm">
                       <MoreVertical className="h-4 w-4" />
                     </Button>

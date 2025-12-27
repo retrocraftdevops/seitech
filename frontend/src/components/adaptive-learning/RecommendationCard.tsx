@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/Badge';
+import { Button } from '@/components/ui/Button';
 import { Sparkles, BookOpen, Clock, TrendingUp, Bookmark, Eye, X } from 'lucide-react';
 import type { Recommendation } from '@/types/adaptive-learning';
 import Link from 'next/link';

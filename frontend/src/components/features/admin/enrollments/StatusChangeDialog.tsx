@@ -11,7 +11,7 @@ import {
   DialogBody,
   DialogFooter,
 } from '@/components/ui/Dialog';
-import { Select } from '@/components/ui/select';
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/Textarea';
 import { Button } from '@/components/ui/Button';
 import { AlertTriangle } from 'lucide-react';
@@ -37,13 +37,6 @@ export function StatusChangeDialog({
   if (enrollment && status !== enrollment.status && !isSubmitting) {
     setStatus(enrollment.status);
   }
-
-  const statusOptions = [
-    { value: 'active', label: 'Active' },
-    { value: 'completed', label: 'Completed' },
-    { value: 'expired', label: 'Expired' },
-    { value: 'cancelled', label: 'Cancelled' },
-  ];
 
   const handleSubmit = async () => {
     if (!enrollment) return;
@@ -112,12 +105,25 @@ export function StatusChangeDialog({
           )}
 
           {/* Status Selector */}
-          <Select
-            label="New Status"
-            options={statusOptions}
-            value={status}
-            onValueChange={(value) => setStatus(value as EnrollmentStatus)}
-          />
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1.5">
+              New Status
+            </label>
+            <Select
+              value={status}
+              onValueChange={(value) => setStatus(value as EnrollmentStatus)}
+            >
+              <SelectTrigger>
+                <SelectValue placeholder="Select status" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="active">Active</SelectItem>
+                <SelectItem value="completed">Completed</SelectItem>
+                <SelectItem value="expired">Expired</SelectItem>
+                <SelectItem value="cancelled">Cancelled</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
 
           {/* Reason (required for certain statuses) */}
           <Textarea

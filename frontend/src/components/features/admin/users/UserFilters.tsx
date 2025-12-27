@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Search, X, Filter } from 'lucide-react';
 import { Input } from '@/components/ui/Input';
-import { Select, SelectOption } from '@/components/ui/select';
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
 import { Button } from '@/components/ui/Button';
 
 interface UserFiltersProps {
@@ -17,28 +17,13 @@ export interface UserFilterValues {
   status?: string;
 }
 
-const roleOptions: SelectOption[] = [
-  { value: '', label: 'All Roles' },
-  { value: 'student', label: 'Student' },
-  { value: 'student_admin', label: 'Student Admin' },
-  { value: 'instructor', label: 'Instructor' },
-  { value: 'manager', label: 'Manager' },
-  { value: 'admin', label: 'Admin' },
-];
-
-const statusOptions: SelectOption[] = [
-  { value: '', label: 'All Statuses' },
-  { value: 'active', label: 'Active' },
-  { value: 'inactive', label: 'Inactive' },
-];
-
 export function UserFilters({ onFiltersChange }: UserFiltersProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  const [search, setSearch] = useState(searchParams.get('search') || '');
-  const [role, setRole] = useState(searchParams.get('role') || '');
-  const [status, setStatus] = useState(searchParams.get('status') || '');
+  const [search, setSearch] = useState(searchParams?.get('search') || '');
+  const [role, setRole] = useState(searchParams?.get('role') || '');
+  const [status, setStatus] = useState(searchParams?.get('status') || '');
 
   const updateFilters = (updates: Partial<UserFilterValues>) => {
     const newSearch = updates.search !== undefined ? updates.search : search;
@@ -121,18 +106,35 @@ export function UserFilters({ onFiltersChange }: UserFiltersProps) {
         </div>
 
         <Select
-          placeholder="All Roles"
-          options={roleOptions}
           value={role}
           onValueChange={handleRoleChange}
-        />
+        >
+          <SelectTrigger>
+            <SelectValue placeholder="All Roles" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="">All Roles</SelectItem>
+            <SelectItem value="student">Student</SelectItem>
+            <SelectItem value="student_admin">Student Admin</SelectItem>
+            <SelectItem value="instructor">Instructor</SelectItem>
+            <SelectItem value="manager">Manager</SelectItem>
+            <SelectItem value="admin">Admin</SelectItem>
+          </SelectContent>
+        </Select>
 
         <Select
-          placeholder="All Statuses"
-          options={statusOptions}
           value={status}
           onValueChange={handleStatusChange}
-        />
+        >
+          <SelectTrigger>
+            <SelectValue placeholder="All Statuses" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="">All Statuses</SelectItem>
+            <SelectItem value="active">Active</SelectItem>
+            <SelectItem value="inactive">Inactive</SelectItem>
+          </SelectContent>
+        </Select>
       </div>
 
       {hasActiveFilters && (

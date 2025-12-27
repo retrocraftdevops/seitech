@@ -12,7 +12,7 @@ export type StudyGroupJoinPolicy = 'open' | 'approval' | 'invitation';
 export type StudyGroupState = 'draft' | 'active' | 'archived';
 export type MemberRole = 'member' | 'moderator' | 'admin';
 export type MemberState = 'invited' | 'pending' | 'active' | 'inactive' | 'banned';
-export type LeaderboardCategory = 'overall' | 'points' | 'courses' | 'skills' | 'streak' | 'discussions' | 'certifications';
+export type LeaderboardCategory = 'overall' | 'points' | 'courses' | 'skills' | 'streak' | 'discussions' | 'certifications' | 'study_groups' | 'quiz_scores' | 'certificates';
 export type LeaderboardPeriod = 'daily' | 'weekly' | 'monthly' | 'yearly' | 'all_time';
 
 export interface DiscussionTag {
@@ -199,7 +199,10 @@ export interface LeaderboardEntry {
   skills_mastered: number;
   streak_days: number;
   discussions_contributed: number;
+  discussions_count?: number;
   certifications_earned: number;
+  achievements?: string[];
+  level?: number;
   last_updated: string;
 }
 

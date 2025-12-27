@@ -1,11 +1,11 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/Button';
+import { Input } from '@/components/ui/Input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Skeleton } from '@/components/ui/skeleton';
-import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Skeleton } from '@/components/ui/Skeleton';
+import { Alert, AlertDescription } from '@/components/ui/Alert';
 import { LearningPathCard } from './LearningPathCard';
 import { Search, Filter, Plus, AlertCircle } from 'lucide-react';
 import type { LearningPath, PathType, PathState } from '@/types/adaptive-learning';
@@ -172,7 +172,7 @@ export function LearningPathList({
           </Select>
 
           <Button
-            variant={showTemplates ? 'default' : 'outline'}
+            variant={showTemplates ? 'primary' : 'outline'}
             onClick={() => setShowTemplates(!showTemplates)}
           >
             <Filter className="w-4 h-4 mr-2" />

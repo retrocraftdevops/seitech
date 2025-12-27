@@ -2,9 +2,9 @@
 
 import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Progress } from '@/components/ui/progress';
+import { Badge } from '@/components/ui/Badge';
+import { Button } from '@/components/ui/Button';
+import { Progress } from '@/components/ui/Progress';
 import { Calendar, Clock, Target, TrendingUp, BookOpen, CheckCircle2 } from 'lucide-react';
 import type { LearningPath } from '@/types/adaptive-learning';
 import Link from 'next/link';
