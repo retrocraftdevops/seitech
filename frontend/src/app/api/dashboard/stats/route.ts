@@ -14,14 +14,43 @@ interface DashboardData {
 export async function GET(request: NextRequest) {
   try {
     const cookieStore = await cookies();
-    const sessionId = cookieStore.get('session_id')?.value;
+    const sessionToken = cookieStore.get('session_token')?.value;
+    const userInfoCookie = cookieStore.get('user_info')?.value;
 
-    if (!sessionId) {
+    if (!sessionToken || !userInfoCookie) {
       return NextResponse.json({
         success: false,
         message: 'Unauthorized. Please log in.',
         data: null,
       }, { status: 401 });
+    }
+
+    // Parse user info
+    const userInfo = JSON.parse(userInfoCookie);
+
+    // Check if this is a demo/admin session (not connected to Odoo)
+    if (sessionToken.startsWith('demo_') || sessionToken.startsWith('admin_')) {
+      // Return demo dashboard data
+      const demoData: DashboardData = {
+        stats: {
+          totalCourses: 5,
+          completedCourses: 2,
+          inProgressCourses: 3,
+          totalCertificates: 2,
+          totalPoints: 1250,
+          totalBadges: 8,
+          totalTimeSpent: 3600,
+          currentStreak: 5,
+          longestStreak: 12,
+        },
+        recentEnrollments: [],
+        recentCertificates: [],
+      };
+
+      return NextResponse.json({
+        success: true,
+        data: demoData,
+      });
     }
 
     const odoo = getOdooClient();

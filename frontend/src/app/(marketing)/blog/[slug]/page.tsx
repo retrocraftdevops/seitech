@@ -817,9 +817,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   <p className="text-gray-600 text-sm mb-4">
                     Explore our range of accredited health and safety courses.
                   </p>
-                  <Button asChild className="w-full">
-                    <Link href="/courses">Browse Courses</Link>
-                  </Button>
+                  <Link href="/training">
+                    <Button className="w-full">View Courses</Button>
+                  </Link>
                 </CardContent>
               </Card>
             </aside>
@@ -834,9 +834,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <p className="text-gray-600 mb-6">
             Explore our full library of health and safety articles and resources.
           </p>
-          <Button asChild size="lg">
-            <Link href="/blog">View All Articles</Link>
-          </Button>
+          <Link href="/blog">
+            <Button>Browse All Articles</Button>
+          </Link>
         </div>
       </section>
     </main>

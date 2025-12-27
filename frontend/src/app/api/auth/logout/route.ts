@@ -6,7 +6,7 @@ export const dynamic = 'force-dynamic';
 export async function POST(request: NextRequest) {
   try {
     // Clear session cookies
-    const cookieStore = cookies();
+    const cookieStore = await cookies();
     cookieStore.delete('session_token');
     cookieStore.delete('user_info');
 

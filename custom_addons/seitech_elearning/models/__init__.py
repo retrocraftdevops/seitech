@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from . import res_users
 from . import slide_channel
 from . import slide_slide
 from . import enrollment
@@ -10,3 +11,16 @@ from . import gamification
 from . import course_category
 from . import video_progress
 from . import sale_order
+from . import learning_path
+from . import learning_path_node
+from . import skill
+from . import course_skill
+from . import user_skill
+from . import recommendation
+from . import discussion
+from . import discussion_reply
+from . import study_group
+from . import study_group_member
+from . import streak
+from . import leaderboard
+from . import chat_channel

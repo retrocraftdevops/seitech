@@ -5,22 +5,31 @@ import Link from 'next/link';
 import { CertificateCard } from '@/components/features/dashboard';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
+import { Card, CardContent } from '@/components/ui/Card';
 import { Certificate } from '@/types/user';
-import { Award, Download, Search, Loader2, RefreshCw } from 'lucide-react';
+import { Award, Download, Search, Loader2, RefreshCw, LogIn } from 'lucide-react';
 
 export default function CertificatesPage() {
   const [certificates, setCertificates] = useState<Certificate[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [isUnauthorized, setIsUnauthorized] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
   const fetchCertificates = async () => {
     setIsLoading(true);
     setError(null);
+    setIsUnauthorized(false);
 
     try {
       const response = await fetch('/api/certificates');
       const data = await response.json();
+
+      if (response.status === 401) {
+        setIsUnauthorized(true);
+        setCertificates([]);
+        return;
+      }
 
       if (data.success && data.data) {
         setCertificates(data.data);
@@ -63,6 +72,42 @@ export default function CertificatesPage() {
           <Loader2 className="w-10 h-10 animate-spin text-primary-600 mx-auto mb-4" />
           <p className="text-gray-600">Loading your certificates...</p>
         </div>
+      </div>
+    );
+  }
+
+  // Show login prompt for unauthorized users
+  if (isUnauthorized) {
+    return (
+      <div className="space-y-8">
+        <div>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">My Certificates</h1>
+          <p className="text-gray-600">
+            View, download, and verify your earned certificates
+          </p>
+        </div>
+
+        <Card className="text-center py-12">
+          <CardContent>
+            <div className="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <LogIn className="w-10 h-10 text-primary-600" />
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">
+              Sign in to view your certificates
+            </h2>
+            <p className="text-gray-600 mb-8 max-w-md mx-auto">
+              Log in to your account to access and download your earned certificates.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/courses">
+                <Button>Browse Courses</Button>
+              </Link>
+              <Link href="/contact">
+                <Button variant="outline">Get Help</Button>
+              </Link>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     );
   }

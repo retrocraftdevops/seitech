@@ -366,17 +366,18 @@ export default async function TeamPage() {
             achieve your health and safety goals.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button variant="secondary" size="lg" asChild>
-              <Link href="/contact">Get in Touch</Link>
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="bg-white/10 hover:bg-white/20 border-white text-white"
-              asChild
-            >
-              <Link href="/training">View Training Courses</Link>
-            </Button>
+            <Link href="/contact">
+              <Button size="lg">Get in Touch</Button>
+            </Link>
+            <Link href="/training">
+              <Button
+                variant="outline"
+                size="lg"
+                className="bg-white/10 hover:bg-white/20 border-white text-white"
+              >
+                View Courses
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

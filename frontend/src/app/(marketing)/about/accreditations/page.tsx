@@ -291,12 +291,12 @@ export default function AccreditationsPage() {
             career.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button variant="secondary" size="lg" asChild>
-              <Link href="/training">View All Courses</Link>
-            </Button>
-            <Button variant="outline" size="lg" className="bg-white/10 hover:bg-white/20 border-white text-white" asChild>
-              <Link href="/contact">Contact Us</Link>
-            </Button>
+            <Link href="/training">
+              <Button>View All Courses</Button>
+            </Link>
+            <Link href="/contact">
+              <Button variant="outline">Contact Us</Button>
+            </Link>
           </div>
         </div>
       </section>

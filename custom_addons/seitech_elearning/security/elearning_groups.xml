@@ -36,5 +36,12 @@
             <field name="comment">Full access to e-learning configuration</field>
         </record>
 
+        <!-- Support Agent Group -->
+        <record id="group_elearning_support_agent" model="res.groups">
+            <field name="name">Support Agent</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="comment">Users in this group can handle support chat requests</field>
+        </record>
+
     </data>
 </odoo>

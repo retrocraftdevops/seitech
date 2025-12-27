@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
 import { CartDrawer } from '@/components/features/cart/CartDrawer';
+import { AuthProvider } from '@/components/providers/AuthProvider';
+import { ChatProvider, PublicSupportChat } from '@/components/chat';
 import { siteConfig, metadataDefaults } from '@/config/site';
 import '@/styles/globals.css';
 
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#0284c7',
+  themeColor: '#16a34a',  // SEI Tech Green
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
@@ -59,10 +59,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${plusJakarta.variable}`}>
       <body className="min-h-screen flex flex-col bg-white font-sans">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <CartDrawer />
+        <AuthProvider>
+          <ChatProvider>
+            {children}
+            <CartDrawer />
+            <PublicSupportChat />
+          </ChatProvider>
+        </AuthProvider>
       </body>
     </html>
   );

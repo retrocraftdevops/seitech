@@ -174,10 +174,9 @@ export function BlogPreviewSection() {
             size="lg"
             variant="outline"
             rightIcon={<ArrowRight className="h-5 w-5" />}
-            asChild
           >
-            <Link href="/blog">View All Articles</Link>
-          </Button>
+            </Button>
+</Link>
         </motion.div>
       </div>
     </section>

@@ -12,7 +12,7 @@ export interface ConsultancyService {
   process: ServiceProcess[];
 
   priceFrom?: number;
-  pricingType: 'fixed' | 'quote' | 'hourly';
+  pricingType: 'fixed' | 'quote' | 'hourly' | 'free' | 'package';
 
   relatedServices: number[];
   faqs: ServiceFAQ[];

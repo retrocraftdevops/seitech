@@ -144,6 +144,39 @@
                   sequence="3"/>
 
         <!-- ===================================================================
+             ADAPTIVE LEARNING MENU
+        =================================================================== -->
+        <menuitem id="menu_elearning_adaptive"
+                  name="Adaptive Learning"
+                  parent="menu_elearning_root"
+                  sequence="65"/>
+
+        <menuitem id="menu_learning_paths"
+                  name="Learning Paths"
+                  parent="menu_elearning_adaptive"
+                  action="action_learning_path"
+                  sequence="1"/>
+
+        <menuitem id="menu_skills"
+                  name="Skills"
+                  parent="menu_elearning_adaptive"
+                  action="action_skill"
+                  sequence="2"/>
+
+        <menuitem id="menu_recommendations"
+                  name="Recommendations"
+                  parent="menu_elearning_adaptive"
+                  action="action_recommendation"
+                  sequence="3"/>
+
+        <menuitem id="menu_path_templates"
+                  name="Path Templates"
+                  parent="menu_elearning_adaptive"
+                  action="action_learning_path_templates"
+                  groups="seitech_elearning.group_elearning_manager"
+                  sequence="4"/>
+
+        <!-- ===================================================================
              REPORTS MENU
         =================================================================== -->
         <menuitem id="menu_elearning_reports"
@@ -243,6 +276,13 @@
                   parent="menu_elearning_config"
                   action="action_certificate_template"
                   sequence="10"/>
+
+        <menuitem id="menu_users_management"
+                  name="Users"
+                  parent="menu_elearning_config"
+                  action="action_seitech_users"
+                  groups="seitech_elearning.group_elearning_admin"
+                  sequence="11"/>
 
     </data>
 </odoo>

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- Learning Path Form View -->
+    <record id="view_learning_path_form" model="ir.ui.view">
+        <field name="name">seitech.learning.path.form</field>
+        <field name="model">seitech.learning.path</field>
+        <field name="arch" type="xml">
+            <form string="Learning Path">
+                <header>
+                    <button name="action_activate" type="object" string="Activate Path" 
+                            invisible="state != 'draft'" class="oe_highlight"/>
+                    <button name="action_complete" type="object" string="Mark Complete" 
+                            invisible="state != 'active'" class="oe_highlight"/>
+                    <button name="action_cancel" type="object" string="Cancel" 
+                            invisible="state not in ['draft', 'active']"/>
+                    <button name="action_reset_to_draft" type="object" string="Reset to Draft" 
+                            invisible="state != 'cancelled'"/>
+                    <button name="generate_ai_path" type="object" string="🤖 Generate with AI" 
+                            invisible="state != 'draft'" class="btn-primary"/>
+                    <button name="recalculate_path" type="object" string="♻️ Recalculate Progress" 
+                            invisible="state not in ['active', 'completed']"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,active,completed"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_nodes" type="object" class="oe_stat_button" icon="fa-list">
+                            <field name="node_count" widget="statinfo" string="Courses"/>
+                        </button>
+                        <button name="action_view_enrollments" type="object" class="oe_stat_button" icon="fa-graduation-cap">
+                            <field name="completed_count" widget="statinfo" string="Completed"/>
+                        </button>
+                    </div>
+                    
+                    <widget name="web_ribbon" title="Template" bg_color="bg-info" 
+                            invisible="not is_template"/>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" 
+                            invisible="not active"/>
+                    
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name" placeholder="e.g., Full Stack Web Development"/></h1>
+                    </div>
+                    
+                    <group>
+                        <group>
+                            <field name="user_id" invisible="is_template"/>
+                            <field name="path_type" widget="radio"/>
+                            <field name="is_template" invisible="1"/>
+                            <field name="template_id" invisible="not is_template and state != 'draft'" 
+                                   domain="[('is_template', '=', True)]"/>
+                        </group>
+                        <group>
+                            <field name="progress_percentage" widget="progressbar"/>
+                            <field name="estimated_hours" widget="float_time"/>
+                            <field name="deadline" invisible="path_type != 'structured'"/>
+                            <field name="active" widget="boolean_toggle"/>
+                        </group>
+                    </group>
+                    
+                    <group>
+                        <field name="goal" placeholder="Describe your learning goal..."/>
+                    </group>
+                    
+                    <notebook>
+                        <page string="Learning Path" name="nodes">
+                            <field name="node_ids" context="{'default_path_id': active_id}">
+                                <tree decoration-success="state == 'completed'" 
+                                      decoration-info="state == 'active'"
+                                      decoration-muted="state == 'locked'">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="channel_id"/>
+                                    <field name="is_required"/>
+                                    <field name="state" widget="badge" 
+                                           decoration-success="state == 'completed'"
+                                           decoration-info="state == 'active'"
+                                           decoration-muted="state == 'locked'"/>
+                                    <field name="progress_percentage" widget="progressbar"/>
+                                    <field name="deadline"/>
+                                    <field name="completion_date"/>
+                                    <button name="action_enroll" type="object" string="Enroll" 
+                                            icon="fa-sign-in" invisible="state != 'available'"/>
+                                </tree>
+                            </field>
+                            <group class="oe_subtotal_footer oe_right">
+                                <field name="node_count" string="Total Courses"/>
+                                <field name="completed_count" string="Completed"/>
+                            </group>
+                        </page>
+                        
+                        <page string="Target Skills" name="skills">
+                            <field name="skill_ids" widget="many2many_tags" 
+                                   options="{'color_field': 'category', 'no_create': True}"/>
+                            <separator string="Skill Progress"/>
+                            <button name="action_view_skill_gaps" type="object" 
+                                    string="📊 Analyze Skill Gaps" class="btn-secondary"/>
+                        </page>
+                        
+                        <page string="Recommendations" name="recommendations" invisible="path_type != 'adaptive'">
+                            <p class="text-muted">AI-generated course recommendations based on your progress and goals</p>
+                            <button name="action_generate_recommendations" type="object" 
+                                    string="🎯 Get New Recommendations" class="btn-primary"/>
+                            <field name="recommendation_ids" readonly="1">
+                                <tree create="0" edit="0" delete="0">
+                                    <field name="course_id"/>
+                                    <field name="score" widget="progressbar"/>
+                                    <field name="reason_type"/>
+                                    <field name="reason_text"/>
+                                    <field name="status" widget="badge"/>
+                                    <button name="action_enroll" type="object" string="Enroll" 
+                                            icon="fa-plus" invisible="status != 'pending'"/>
+                                </tree>
+                            </field>
+                        </page>
+                        
+                        <page string="Analytics" name="analytics">
+                            <group>
+                                <group string="Progress Metrics">
+                                    <field name="progress_percentage" widget="percentpie"/>
+                                    <field name="completed_count"/>
+                                    <field name="node_count"/>
+                                    <field name="estimated_hours" widget="float_time"/>
+                                </group>
+                                <group string="Timing">
+                                    <field name="start_date" readonly="1"/>
+                                    <field name="completion_date" readonly="1"/>
+                                    <field name="deadline" readonly="path_type != 'structured'"/>
+                                    <field name="last_activity" readonly="1"/>
+                                </group>
+                            </group>
+                            <separator string="Next Actions"/>
+                            <button name="get_next_action" type="object" string="What Should I Do Next?" 
+                                    class="btn-info"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    
+    <!-- Learning Path Tree View -->
+    <record id="view_learning_path_tree" model="ir.ui.view">
+        <field name="name">seitech.learning.path.tree</field>
+        <field name="model">seitech.learning.path</field>
+        <field name="arch" type="xml">
+            <tree decoration-success="state == 'completed'" 
+                  decoration-info="state == 'active'"
+                  decoration-muted="state == 'cancelled'">
+                <field name="name"/>
+                <field name="user_id"/>
+                <field name="path_type" optional="hide"/>
+                <field name="node_count"/>
+                <field name="completed_count"/>
+                <field name="progress_percentage" widget="progressbar"/>
+                <field name="estimated_hours" widget="float_time" optional="hide"/>
+                <field name="state" widget="badge" 
+                       decoration-success="state == 'completed'"
+                       decoration-info="state == 'active'"
+                       decoration-warning="state == 'draft'"
+                       decoration-danger="state == 'cancelled'"/>
+                <field name="last_activity" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+    
+    <!-- Learning Path Kanban View -->
+    <record id="view_learning_path_kanban" model="ir.ui.view">
+        <field name="name">seitech.learning.path.kanban</field>
+        <field name="model">seitech.learning.path</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" default_group_by="state">
+                <field name="name"/>
+                <field name="user_id"/>
+                <field name="path_type"/>
+                <field name="progress_percentage"/>
+                <field name="node_count"/>
+                <field name="completed_count"/>
+                <field name="state"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div class="o_kanban_record_top">
+                                <div class="o_kanban_record_headings">
+                                    <strong class="o_kanban_record_title"><field name="name"/></strong>
+                                    <div class="o_kanban_record_subtitle">
+                                        <field name="path_type"/>
+                                    </div>
+                                </div>
+                                <span class="badge badge-pill" t-att-class="
+                                    record.state.raw_value === 'completed' ? 'badge-success' : 
+                                    record.state.raw_value === 'active' ? 'badge-info' : 'badge-secondary'">
+                                    <field name="state"/>
+                                </span>
+                            </div>
+                            <div class="o_kanban_record_body">
+                                <field name="goal" widget="text"/>
+                                <div class="mt-2">
+                                    <progressbar field="progress_percentage" title="Progress"/>
+                                </div>
+                                <div class="text-muted">
+                                    <i class="fa fa-list-ol"/> <field name="completed_count"/> / <field name="node_count"/> courses
+                                    | <i class="fa fa-clock-o"/> <field name="estimated_hours" widget="float_time"/>
+                                </div>
+                            </div>
+                            <div class="o_kanban_record_bottom">
+                                <div class="oe_kanban_bottom_left">
+                                    <field name="user_id" widget="many2one_avatar_user"/>
+                                </div>
+                                <div class="oe_kanban_bottom_right">
+                                    <field name="activity_ids" widget="kanban_activity"/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+    
+    <!-- Learning Path Search View -->
+    <record id="view_learning_path_search" model="ir.ui.view">
+        <field name="name">seitech.learning.path.search</field>
+        <field name="model">seitech.learning.path</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" string="Path Name"/>
+                <field name="user_id"/>
+                <field name="skill_ids"/>
+                <separator/>
+                <filter name="my_paths" string="My Paths" 
+                        domain="[('user_id', '=', uid)]"/>
+                <filter name="active_paths" string="Active" 
+                        domain="[('state', '=', 'active')]"/>
+                <filter name="completed_paths" string="Completed" 
+                        domain="[('state', '=', 'completed')]"/>
+                <separator/>
+                <filter name="custom_paths" string="Custom" 
+                        domain="[('path_type', '=', 'custom')]"/>
+                <filter name="adaptive_paths" string="Adaptive" 
+                        domain="[('path_type', '=', 'adaptive')]"/>
+                <filter name="structured_paths" string="Structured" 
+                        domain="[('path_type', '=', 'structured')]"/>
+                <separator/>
+                <filter name="templates" string="Templates" 
+                        domain="[('is_template', '=', True)]"/>
+                <filter name="archived" string="Archived" 
+                        domain="[('active', '=', False)]"/>
+                <group expand="0" string="Group By">
+                    <filter name="group_user" string="User" context="{'group_by': 'user_id'}"/>
+                    <filter name="group_type" string="Type" context="{'group_by': 'path_type'}"/>
+                    <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    
+    <!-- Learning Path Actions -->
+    <record id="action_learning_path" model="ir.actions.act_window">
+        <field name="name">Learning Paths</field>
+        <field name="res_model">seitech.learning.path</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="context">{
+            'search_default_my_paths': 1,
+            'search_default_active_paths': 1,
+        }</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Learning Path
+            </p>
+            <p>
+                Learning Paths help you organize your learning journey.<br/>
+                Start with a custom path or let AI generate one based on your goals.
+            </p>
+        </field>
+    </record>
+    
+    <record id="action_learning_path_templates" model="ir.actions.act_window">
+        <field name="name">Learning Path Templates</field>
+        <field name="res_model">seitech.learning.path</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('is_template', '=', True)]</field>
+        <field name="context">{'default_is_template': True}</field>
+    </record>
+    
+</odoo>

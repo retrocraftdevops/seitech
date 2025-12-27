@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Discussion Record Rules -->
+        <record id="discussion_rule_student_read" model="ir.rule">
+            <field name="name">Students can read published discussions</field>
+            <field name="model_id" ref="model_seitech_discussion"/>
+            <field name="domain_force">[('state', 'in', ['published', 'resolved', 'closed'])]</field>
+            <field name="groups" eval="[(4, ref('seitech_elearning.group_elearning_student'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <record id="discussion_rule_student_own" model="ir.rule">
+            <field name="name">Students can manage their own discussions</field>
+            <field name="model_id" ref="model_seitech_discussion"/>
+            <field name="domain_force">[('author_id', '=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('seitech_elearning.group_elearning_student'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <record id="discussion_rule_instructor_all" model="ir.rule">
+            <field name="name">Instructors can manage all discussions</field>
+            <field name="model_id" ref="model_seitech_discussion"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('seitech_elearning.group_elearning_instructor'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <!-- Discussion Reply Record Rules -->
+        <record id="discussion_reply_rule_student_read" model="ir.rule">
+            <field name="name">Students can read published replies</field>
+            <field name="model_id" ref="model_seitech_discussion_reply"/>
+            <field name="domain_force">[('state', 'in', ['published', 'edited'])]</field>
+            <field name="groups" eval="[(4, ref('seitech_elearning.group_elearning_student'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <record id="discussion_reply_rule_student_own" model="ir.rule">
+            <field name="name">Students can manage their own replies</field>
+            <field name="model_id" ref="model_seitech_discussion_reply"/>
+            <field name="domain_force">[('author_id', '=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('seitech_elearning.group_elearning_student'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <record id="discussion_reply_rule_instructor_all" model="ir.rule">
+            <field name="name">Instructors can manage all replies</field>
+            <field name="model_id" ref="model_seitech_discussion_reply"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('seitech_elearning.group_elearning_instructor'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <!-- Study Group Record Rules -->
+        <record id="study_group_rule_public" model="ir.rule">
+            <field name="name">Everyone can read public active groups</field>
+            <field name="model_id" ref="model_seitech_study_group"/>
+            <field name="domain_force">[('privacy', '=', 'public'), ('state', '=', 'active')]</field>
+            <field name="groups" eval="[(4, ref('seitech_elearning.group_elearning_student'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <record id="study_group_rule_member" model="ir.rule">
+            <field name="name">Members can access their groups</field>
+            <field name="model_id" ref="model_seitech_study_group"/>
+            <field name="domain_force">[('member_ids.user_id', '=', user.id), ('member_ids.state', '=', 'active')]</field>
+            <field name="groups" eval="[(4, ref('seitech_elearning.group_elearning_student'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <record id="study_group_rule_owner" model="ir.rule">
+            <field name="name">Owners can manage their groups</field>
+            <field name="model_id" ref="model_seitech_study_group"/>
+            <field name="domain_force">[('owner_id', '=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('seitech_elearning.group_elearning_student'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <record id="study_group_rule_instructor_all" model="ir.rule">
+            <field name="name">Instructors can manage all groups</field>
+            <field name="model_id" ref="model_seitech_study_group"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('seitech_elearning.group_elearning_instructor'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <!-- Study Group Member Record Rules -->
+        <record id="study_group_member_rule_group_members" model="ir.rule">
+            <field name="name">Group members can see other members</field>
+            <field name="model_id" ref="model_seitech_study_group_member"/>
+            <field name="domain_force">[('group_id.member_ids.user_id', '=', user.id), ('group_id.member_ids.state', '=', 'active')]</field>
+            <field name="groups" eval="[(4, ref('seitech_elearning.group_elearning_student'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <record id="study_group_member_rule_own" model="ir.rule">
+            <field name="name">Users can manage their own memberships</field>
+            <field name="model_id" ref="model_seitech_study_group_member"/>
+            <field name="domain_force">[('user_id', '=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('seitech_elearning.group_elearning_student'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <record id="study_group_member_rule_moderator" model="ir.rule">
+            <field name="name">Moderators can manage group members</field>
+            <field name="model_id" ref="model_seitech_study_group_member"/>
+            <field name="domain_force">[('group_id.member_ids.user_id', '=', user.id), ('group_id.member_ids.role', 'in', ['moderator', 'admin']), ('group_id.member_ids.state', '=', 'active')]</field>
+            <field name="groups" eval="[(4, ref('seitech_elearning.group_elearning_student'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <!-- Learning Streak Record Rules -->
+        <record id="learning_streak_rule_own" model="ir.rule">
+            <field name="name">Users can view their own streak</field>
+            <field name="model_id" ref="model_seitech_learning_streak"/>
+            <field name="domain_force">[('user_id', '=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('seitech_elearning.group_elearning_student'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <record id="learning_streak_rule_public_read" model="ir.rule">
+            <field name="name">Everyone can view all streaks (for leaderboard)</field>
+            <field name="model_id" ref="model_seitech_learning_streak"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('seitech_elearning.group_elearning_student'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <!-- Leaderboard Record Rules -->
+        <record id="leaderboard_rule_read_all" model="ir.rule">
+            <field name="name">Everyone can read leaderboard</field>
+            <field name="model_id" ref="model_seitech_leaderboard"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('seitech_elearning.group_elearning_student'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <record id="leaderboard_rule_manager_all" model="ir.rule">
+            <field name="name">Managers can manage leaderboard</field>
+            <field name="model_id" ref="model_seitech_leaderboard"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('seitech_elearning.group_elearning_manager'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+    </data>
+</odoo>

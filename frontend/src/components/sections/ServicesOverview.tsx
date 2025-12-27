@@ -113,9 +113,11 @@ export function ServicesOverview() {
                 </span>
               </div>
 
-              <Button rightIcon={<ArrowRight className="h-4 w-4" />} asChild>
-                <Link href="/courses">{content.ctaText}</Link>
-              </Button>
+              <Link href="/courses">
+                <Button rightIcon={<ArrowRight className="h-4 w-4" />}>
+                  {content.ctaText}
+                </Button>
+              </Link>
             </CardContent>
           </Card>
 
@@ -174,13 +176,14 @@ export function ServicesOverview() {
                 </span>
               </div>
 
-              <Button
-                variant="secondary"
-                rightIcon={<ArrowRight className="h-4 w-4" />}
-                asChild
-              >
-                <Link href="/services">{content.secondaryCtaText}</Link>
-              </Button>
+              <Link href="/services">
+                <Button
+                  variant="secondary"
+                  rightIcon={<ArrowRight className="h-4 w-4" />}
+                >
+                  {content.secondaryCtaText}
+                </Button>
+              </Link>
             </CardContent>
           </Card>
         </div>

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
-import { Trophy, Star, TrendingUp, Loader2, RefreshCw, Flame } from 'lucide-react';
+import { Trophy, Star, TrendingUp, Loader2, RefreshCw, Flame, LogIn } from 'lucide-react';
 
 interface Achievement {
   id: number;
@@ -33,14 +33,22 @@ export default function AchievementsPage() {
   const [stats, setStats] = useState<UserStats | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [isUnauthorized, setIsUnauthorized] = useState(false);
 
   const fetchAchievements = async () => {
     setIsLoading(true);
     setError(null);
+    setIsUnauthorized(false);
 
     try {
       const response = await fetch('/api/gamification/user-achievements');
       const data = await response.json();
+
+      if (response.status === 401) {
+        setIsUnauthorized(true);
+        setAchievements([]);
+        return;
+      }
 
       if (data.success && data.data) {
         setAchievements(data.data.achievements || []);
@@ -74,6 +82,42 @@ export default function AchievementsPage() {
           <Loader2 className="w-10 h-10 animate-spin text-primary-600 mx-auto mb-4" />
           <p className="text-gray-600">Loading your achievements...</p>
         </div>
+      </div>
+    );
+  }
+
+  // Show login prompt for unauthorized users
+  if (isUnauthorized) {
+    return (
+      <div className="space-y-8">
+        <div>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Achievements</h1>
+          <p className="text-gray-600">
+            Track your progress and celebrate your learning milestones
+          </p>
+        </div>
+
+        <Card className="text-center py-12">
+          <CardContent>
+            <div className="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <LogIn className="w-10 h-10 text-primary-600" />
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">
+              Sign in to view your achievements
+            </h2>
+            <p className="text-gray-600 mb-8 max-w-md mx-auto">
+              Log in to your account to see your badges, points, and learning milestones.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/login">
+                <Button>Sign In</Button>
+              </Link>
+              <Link href="/register">
+                <Button>Create Account</Button>
+              </Link>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     );
   }

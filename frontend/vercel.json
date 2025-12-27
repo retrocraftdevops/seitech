@@ -1,6 +1,24 @@
 {
   "framework": "nextjs",
   "regions": ["lhr1"],
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "env": {
+    "NEXT_PUBLIC_ODOO_URL": "http://45.76.138.109:8069",
+    "NEXT_PUBLIC_SITE_URL": "https://seitech-frontend.vercel.app",
+    "ODOO_DATABASE": "seitech_production",
+    "ODOO_ADMIN_USER": "admin",
+    "ODOO_ADMIN_PASSWORD": "admin"
+  },
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_ODOO_URL": "http://45.76.138.109:8069",
+      "NEXT_PUBLIC_SITE_URL": "https://seitech-frontend.vercel.app",
+      "ODOO_DATABASE": "seitech_production",
+      "ODOO_ADMIN_USER": "admin",
+      "ODOO_ADMIN_PASSWORD": "admin"
+    }
+  },
   "functions": {
     "app/api/**/*.ts": {
       "maxDuration": 30

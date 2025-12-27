@@ -1,0 +1,101 @@
+# Seitech Odoo 19.0 Enterprise - Production Docker Compose Configuration
+# For Vultr deployment
+
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: seitech-postgres
+    environment:
+      POSTGRES_USER: ${DB_USER:-odoo}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME:-seitech}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - seitech-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-odoo} -d ${DB_NAME:-seitech}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    command: >
+      postgres
+      -c max_connections=200
+      -c shared_buffers=256MB
+      -c effective_cache_size=1GB
+      -c maintenance_work_mem=64MB
+      -c checkpoint_completion_target=0.9
+      -c wal_buffers=16MB
+      -c default_statistics_target=100
+      -c random_page_cost=1.1
+      -c effective_io_concurrency=200
+      -c work_mem=4MB
+      -c min_wal_size=1GB
+      -c max_wal_size=4GB
+
+  odoo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: seitech-odoo
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      # Database connection
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_USER=${DB_USER:-odoo}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME:-seitech}
+      # Server settings
+      - HTTP_PORT=8069
+      - LONGPOLLING_PORT=8072
+      - WORKERS=${WORKERS:-4}
+      - MAX_CRON_THREADS=${MAX_CRON_THREADS:-2}
+      # Logging
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+      # Security
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      - LIST_DB=${LIST_DB:-False}
+      # Proxy (behind Nginx)
+      - PROXY_MODE=True
+    volumes:
+      # Mount Odoo source (the entire package) - only if exists
+      - ./odoo:/opt/odoo/odoo:ro
+      # Enterprise addons (requires valid license) - only if exists
+      - ./enterprise:/opt/odoo/enterprise:ro
+      # Custom addons (our modules)
+      - ./custom_addons:/opt/odoo/custom_addons
+      # Data persistence
+      - odoo_data:/opt/odoo/data
+      # Logs
+      - odoo_logs:/opt/odoo/logs
+      # Config
+      - ./config:/opt/odoo/config
+    networks:
+      - seitech-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8069/web/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 120s
+
+volumes:
+  postgres_data:
+    driver: local
+  odoo_data:
+    driver: local
+  odoo_logs:
+    driver: local
+
+networks:
+  seitech-network:
+    driver: bridge
+

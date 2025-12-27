@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- Skill Form View -->
+    <record id="view_skill_form" model="ir.ui.view">
+        <field name="name">seitech.skill.form</field>
+        <field name="model">seitech.skill</field>
+        <field name="arch" type="xml">
+            <form string="Skill">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_courses" type="object" class="oe_stat_button" icon="fa-book">
+                            <field name="total_courses" widget="statinfo" string="Courses"/>
+                        </button>
+                        <button name="action_view_learners" type="object" class="oe_stat_button" icon="fa-users">
+                            <field name="total_learners" widget="statinfo" string="Learners"/>
+                        </button>
+                        <button name="%(action_user_skill)d" type="action" class="oe_stat_button" 
+                                icon="fa-graduation-cap" context="{'search_default_skill_id': active_id}">
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_value"><field name="average_proficiency" widget="float"/></span>
+                                <span class="o_stat_text">Avg Proficiency</span>
+                            </div>
+                        </button>
+                    </div>
+                    
+                    <widget name="web_ribbon" title="Trending" bg_color="bg-success" 
+                            invisible="not is_trending"/>
+                    
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name" placeholder="e.g., Python Programming"/></h1>
+                    </div>
+                    
+                    <group>
+                        <group>
+                            <field name="category" widget="radio"/>
+                            <field name="parent_id" domain="[('id', '!=', id)]"/>
+                            <field name="industry"/>
+                        </group>
+                        <group>
+                            <field name="is_trending" readonly="1" widget="boolean_toggle"/>
+                            <field name="trending_score" readonly="1" widget="progressbar" invisible="not is_trending"/>
+                            <field name="active" widget="boolean_toggle"/>
+                        </group>
+                    </group>
+                    
+                    <group>
+                        <field name="description" placeholder="Describe this skill and what proficiency levels mean..."/>
+                    </group>
+                    
+                    <notebook>
+                        <page string="Hierarchy" name="hierarchy">
+                            <group>
+                                <field name="parent_id" string="Parent Skill" domain="[('id', '!=', id)]"/>
+                                <field name="child_ids" string="Sub-Skills" readonly="1">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="category"/>
+                                        <field name="total_courses"/>
+                                        <field name="total_learners"/>
+                                    </tree>
+                                </field>
+                            </group>
+                            <separator string="Related Skills"/>
+                            <button name="get_related_skills" type="object" string="Find Related Skills" 
+                                    class="btn-secondary"/>
+                        </page>
+                        
+                        <page string="Courses Teaching This" name="courses">
+                            <field name="course_skill_ids" context="{'default_skill_id': active_id}">
+                                <tree>
+                                    <field name="channel_id"/>
+                                    <field name="proficiency_level" widget="badge"/>
+                                    <field name="is_primary"/>
+                                    <field name="skill_points"/>
+                                    <field name="weight" widget="progressbar"/>
+                                </tree>
+                            </field>
+                        </page>
+                        
+                        <page string="User Proficiency" name="user_skills">
+                            <field name="user_skill_ids" readonly="1">
+                                <tree>
+                                    <field name="user_id"/>
+                                    <field name="current_level" widget="badge" 
+                                           decoration-success="current_level == 'expert'"
+                                           decoration-info="current_level == 'advanced'"
+                                           decoration-warning="current_level == 'intermediate'"/>
+                                    <field name="points"/>
+                                    <field name="verified"/>
+                                    <field name="acquired_count"/>
+                                    <field name="last_updated"/>
+                                </tree>
+                            </field>
+                        </page>
+                        
+                        <page string="Statistics" name="stats">
+                            <group>
+                                <group string="Engagement">
+                                    <field name="total_courses" readonly="1"/>
+                                    <field name="total_learners" readonly="1"/>
+                                    <field name="average_proficiency" readonly="1" widget="float"/>
+                                </group>
+                                <group string="Trending Analysis">
+                                    <field name="is_trending" readonly="1"/>
+                                    <field name="trending_score" readonly="1" widget="progressbar"/>
+                                    <label for="trending_score" string="Based on 30-day enrollments and skill acquisitions"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <!-- Skill Tree View -->
+    <record id="view_skill_tree" model="ir.ui.view">
+        <field name="name">seitech.skill.tree</field>
+        <field name="model">seitech.skill</field>
+        <field name="arch" type="xml">
+            <tree decoration-success="is_trending" decoration-muted="not active">
+                <field name="name"/>
+                <field name="category" optional="hide"/>
+                <field name="parent_id" optional="hide"/>
+                <field name="total_courses"/>
+                <field name="total_learners"/>
+                <field name="average_proficiency" widget="float" optional="show"/>
+                <field name="is_trending" widget="boolean" optional="show"/>
+                <field name="active" widget="boolean_toggle" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+    
+    <!-- Skill Kanban View -->
+    <record id="view_skill_kanban" model="ir.ui.view">
+        <field name="name">seitech.skill.kanban</field>
+        <field name="model">seitech.skill</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile">
+                <field name="name"/>
+                <field name="category"/>
+                <field name="total_courses"/>
+                <field name="total_learners"/>
+                <field name="is_trending"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div class="o_kanban_record_top">
+                                <div class="o_kanban_record_headings">
+                                    <strong class="o_kanban_record_title">
+                                        <field name="name"/>
+                                        <span t-if="record.is_trending.raw_value" class="badge badge-success ml-2">🔥 Trending</span>
+                                    </strong>
+                                    <div class="o_kanban_record_subtitle">
+                                        <field name="category"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o_kanban_record_body">
+                                <field name="description" widget="text"/>
+                                <div class="row mt-2">
+                                    <div class="col-6">
+                                        <i class="fa fa-book text-primary"/> <field name="total_courses"/> courses
+                                    </div>
+                                    <div class="col-6">
+                                        <i class="fa fa-users text-info"/> <field name="total_learners"/> learners
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+    
+    <!-- Skill Search View -->
+    <record id="view_skill_search" model="ir.ui.view">
+        <field name="name">seitech.skill.search</field>
+        <field name="model">seitech.skill</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" string="Skill Name"/>
+                <field name="category"/>
+                <field name="parent_id"/>
+                <separator/>
+                <filter name="trending" string="🔥 Trending" 
+                        domain="[('is_trending', '=', True)]"/>
+                <filter name="has_courses" string="Has Courses" 
+                        domain="[('total_courses', '>', 0)]"/>
+                <separator/>
+                <filter name="technical" string="Technical" 
+                        domain="[('category', '=', 'technical')]"/>
+                <filter name="soft" string="Soft Skills" 
+                        domain="[('category', '=', 'soft')]"/>
+                <filter name="business" string="Business" 
+                        domain="[('category', '=', 'business')]"/>
+                <filter name="language" string="Language" 
+                        domain="[('category', '=', 'language')]"/>
+                <separator/>
+                <filter name="archived" string="Archived" 
+                        domain="[('active', '=', False)]"/>
+                <group expand="0" string="Group By">
+                    <filter name="group_category" string="Category" context="{'group_by': 'category'}"/>
+                    <filter name="group_parent" string="Parent Skill" context="{'group_by': 'parent_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    
+    <!-- User Skill Form View -->
+    <record id="view_user_skill_form" model="ir.ui.view">
+        <field name="name">seitech.user.skill.form</field>
+        <field name="model">seitech.user.skill</field>
+        <field name="arch" type="xml">
+            <form string="User Skill">
+                <header>
+                    <button name="action_verify_skill" type="object" string="Verify Skill" 
+                            invisible="verified" class="oe_highlight"/>
+                    <button name="action_level_up" type="object" string="⬆️ Level Up" 
+                            invisible="current_level == 'expert'" class="btn-success"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="%(action_enrollment)d" type="action" class="oe_stat_button" 
+                                icon="fa-book" context="{'search_default_user_id': user_id, 'search_default_channel_id': acquired_through_ids}">
+                            <field name="acquired_count" widget="statinfo" string="Courses"/>
+                        </button>
+                    </div>
+                    
+                    <widget name="web_ribbon" title="Verified ✓" bg_color="bg-success" 
+                            invisible="not verified"/>
+                    
+                    <div class="oe_title">
+                        <label for="skill_id"/>
+                        <h1><field name="skill_id" readonly="1"/></h1>
+                        <div class="o_row">
+                            <field name="user_id" readonly="1" options="{'no_open': True}"/>
+                        </div>
+                    </div>
+                    
+                    <group>
+                        <group string="Proficiency">
+                            <field name="current_level" widget="badge" 
+                                   decoration-success="current_level == 'expert'"
+                                   decoration-info="current_level == 'advanced'"
+                                   decoration-warning="current_level == 'intermediate'"/>
+                            <field name="target_level"/>
+                            <field name="progress_percentage" widget="progressbar"/>
+                            <field name="points"/>
+                        </group>
+                        <group string="Verification">
+                            <field name="verified" widget="boolean_toggle"/>
+                            <field name="verified_date" readonly="1" invisible="not verified"/>
+                            <field name="verified_by_id" readonly="1" invisible="not verified"/>
+                            <field name="verification_score" widget="progressbar" invisible="not verified"/>
+                        </group>
+                    </group>
+                    
+                    <group>
+                        <group string="Timeline">
+                            <field name="first_acquired" readonly="1"/>
+                            <field name="last_updated" readonly="1"/>
+                            <field name="last_practiced"/>
+                        </group>
+                        <group string="Recognition">
+                            <field name="badge_id" readonly="1"/>
+                        </group>
+                    </group>
+                    
+                    <notebook>
+                        <page string="Acquired Through" name="courses">
+                            <field name="acquired_through_ids" readonly="1">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="category_id"/>
+                                    <button name="%(action_enrollment)d" type="action" 
+                                            string="View Enrollment" icon="fa-external-link"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <!-- User Skill Tree View -->
+    <record id="view_user_skill_tree" model="ir.ui.view">
+        <field name="name">seitech.user.skill.tree</field>
+        <field name="model">seitech.user.skill</field>
+        <field name="arch" type="xml">
+            <tree decoration-success="verified">
+                <field name="user_id"/>
+                <field name="skill_id"/>
+                <field name="current_level" widget="badge" 
+                       decoration-success="current_level == 'expert'"
+                       decoration-info="current_level == 'advanced'"/>
+                <field name="target_level" optional="hide"/>
+                <field name="progress_percentage" widget="progressbar" optional="show"/>
+                <field name="points"/>
+                <field name="verified" widget="boolean"/>
+                <field name="acquired_count" optional="show"/>
+                <field name="last_updated" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+    
+    <!-- Actions -->
+    <record id="action_skill" model="ir.actions.act_window">
+        <field name="name">Skills</field>
+        <field name="res_model">seitech.skill</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Skill
+            </p>
+            <p>
+                Skills define competencies that students can acquire through courses.<br/>
+                Organize them hierarchically and track proficiency levels.
+            </p>
+        </field>
+    </record>
+    
+    <record id="action_user_skill" model="ir.actions.act_window">
+        <field name="name">User Skills</field>
+        <field name="res_model">seitech.user.skill</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_user_id': active_id}</field>
+    </record>
+    
+</odoo>

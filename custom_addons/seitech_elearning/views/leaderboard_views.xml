@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Leaderboard Form View -->
+    <record id="view_leaderboard_form" model="ir.ui.view">
+        <field name="name">seitech.leaderboard.form</field>
+        <field name="model">seitech.leaderboard</field>
+        <field name="arch" type="xml">
+            <form string="Leaderboard Entry" create="false" edit="false">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <div class="d-flex align-items-center">
+                                <span class="badge badge-pill badge-lg me-3" 
+                                      style="font-size: 2em; width: 60px; height: 60px; line-height: 60px;">
+                                    #<field name="rank"/>
+                                </span>
+                                <div>
+                                    <field name="user_id"/>
+                                    <div class="text-muted">
+                                        <field name="category"/> · <field name="period"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </h1>
+                    </div>
+                    
+                    <group>
+                        <group string="Ranking">
+                            <field name="rank" readonly="1"/>
+                            <field name="previous_rank" readonly="1"/>
+                            <field name="rank_change" readonly="1" 
+                                   decoration-success="rank_change > 0"
+                                   decoration-danger="rank_change < 0"/>
+                            <field name="percentile" readonly="1"/>
+                        </group>
+                        <group string="Performance">
+                            <field name="score" readonly="1"/>
+                            <field name="previous_score" readonly="1"/>
+                            <field name="score_change" readonly="1" 
+                                   decoration-success="score_change > 0"
+                                   decoration-danger="score_change < 0"/>
+                            <field name="last_updated" readonly="1"/>
+                        </group>
+                    </group>
+                    
+                    <group string="Category Breakdown" invisible="category != 'overall'">
+                        <group>
+                            <label for="points_earned"/>
+                            <div>
+                                <field name="points_earned" class="oe_inline"/> 
+                                <span class="text-muted"> (30% weight)</span>
+                            </div>
+                            
+                            <label for="courses_completed"/>
+                            <div>
+                                <field name="courses_completed" class="oe_inline"/> 
+                                <span class="text-muted"> (25% weight)</span>
+                            </div>
+                            
+                            <label for="skills_mastered"/>
+                            <div>
+                                <field name="skills_mastered" class="oe_inline"/> 
+                                <span class="text-muted"> (20% weight)</span>
+                            </div>
+                        </group>
+                        <group>
+                            <label for="streak_days"/>
+                            <div>
+                                <field name="streak_days" class="oe_inline"/> 
+                                <span class="text-muted"> (10% weight)</span>
+                            </div>
+                            
+                            <label for="discussions_contributed"/>
+                            <div>
+                                <field name="discussions_contributed" class="oe_inline"/> 
+                                <span class="text-muted"> (10% weight)</span>
+                            </div>
+                            
+                            <label for="certifications_earned"/>
+                            <div>
+                                <field name="certifications_earned" class="oe_inline"/> 
+                                <span class="text-muted"> (5% weight)</span>
+                            </div>
+                        </group>
+                    </group>
+                    
+                    <notebook>
+                        <page string="Statistics" name="stats">
+                            <group>
+                                <group string="Learning">
+                                    <field name="points_earned" readonly="1"/>
+                                    <field name="courses_completed" readonly="1"/>
+                                    <field name="skills_mastered" readonly="1"/>
+                                    <field name="certifications_earned" readonly="1"/>
+                                </group>
+                                <group string="Engagement">
+                                    <field name="discussions_contributed" readonly="1"/>
+                                    <field name="streak_days" readonly="1"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Leaderboard Tree View -->
+    <record id="view_leaderboard_tree" model="ir.ui.view">
+        <field name="name">seitech.leaderboard.tree</field>
+        <field name="model">seitech.leaderboard</field>
+        <field name="arch" type="xml">
+            <tree string="Leaderboard" create="false" edit="false" 
+                  decoration-success="rank <= 3" decoration-info="rank <= 10">
+                <field name="rank"/>
+                <field name="user_id"/>
+                <field name="category"/>
+                <field name="period"/>
+                <field name="score"/>
+                <field name="rank_change" widget="badge" 
+                       decoration-success="rank_change > 0"
+                       decoration-danger="rank_change < 0"
+                       decoration-muted="rank_change == 0"/>
+                <field name="percentile" string="Top %"/>
+                <field name="points_earned" optional="hide"/>
+                <field name="courses_completed" optional="hide"/>
+                <field name="skills_mastered" optional="hide"/>
+                <field name="streak_days" optional="hide"/>
+                <field name="discussions_contributed" optional="hide"/>
+                <field name="certifications_earned" optional="hide"/>
+                <field name="last_updated"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Leaderboard Kanban View -->
+    <record id="view_leaderboard_kanban" model="ir.ui.view">
+        <field name="name">seitech.leaderboard.kanban</field>
+        <field name="model">seitech.leaderboard</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" default_order="rank">
+                <field name="rank"/>
+                <field name="user_id"/>
+                <field name="score"/>
+                <field name="rank_change"/>
+                <field name="percentile"/>
+                <field name="category"/>
+                <field name="period"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div class="o_kanban_record_top">
+                                <div class="o_kanban_record_headings">
+                                    <div class="d-flex align-items-center">
+                                        <span class="badge badge-pill me-2" 
+                                              t-attf-class="badge-#{record.rank.raw_value &lt;= 3 ? 'warning' : record.rank.raw_value &lt;= 10 ? 'info' : 'secondary'}"
+                                              style="font-size: 1.5em; width: 40px; height: 40px; line-height: 40px;">
+                                            #<field name="rank"/>
+                                        </span>
+                                        <strong class="o_kanban_record_title">
+                                            <field name="user_id"/>
+                                        </strong>
+                                    </div>
+                                </div>
+                                <span class="float-end">
+                                    <t t-if="record.rank_change.raw_value > 0">
+                                        <span class="badge badge-success">
+                                            <i class="fa fa-arrow-up"/> <field name="rank_change"/>
+                                        </span>
+                                    </t>
+                                    <t t-if="record.rank_change.raw_value &lt; 0">
+                                        <span class="badge badge-danger">
+                                            <i class="fa fa-arrow-down"/> <field name="rank_change"/>
+                                        </span>
+                                    </t>
+                                </span>
+                            </div>
+                            <div class="o_kanban_record_body">
+                                <div class="row mt-2">
+                                    <div class="col-6">
+                                        <h3 class="text-primary mb-0">
+                                            <field name="score"/>
+                                        </h3>
+                                        <small class="text-muted">Score</small>
+                                    </div>
+                                    <div class="col-6 text-end">
+                                        <h4 class="text-success mb-0">
+                                            Top <field name="percentile"/>%
+                                        </h4>
+                                        <small class="text-muted">Percentile</small>
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    <span class="badge badge-pill badge-secondary me-1">
+                                        <field name="category"/>
+                                    </span>
+                                    <span class="badge badge-pill badge-light">
+                                        <field name="period"/>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Leaderboard Pivot View -->
+    <record id="view_leaderboard_pivot" model="ir.ui.view">
+        <field name="name">seitech.leaderboard.pivot</field>
+        <field name="model">seitech.leaderboard</field>
+        <field name="arch" type="xml">
+            <pivot string="Leaderboard Analysis">
+                <field name="category" type="row"/>
+                <field name="period" type="col"/>
+                <field name="score" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <!-- Leaderboard Graph View -->
+    <record id="view_leaderboard_graph" model="ir.ui.view">
+        <field name="name">seitech.leaderboard.graph</field>
+        <field name="model">seitech.leaderboard</field>
+        <field name="arch" type="xml">
+            <graph string="Leaderboard Trends" type="line">
+                <field name="last_updated" interval="day"/>
+                <field name="score" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <!-- Leaderboard Search View -->
+    <record id="view_leaderboard_search" model="ir.ui.view">
+        <field name="name">seitech.leaderboard.search</field>
+        <field name="model">seitech.leaderboard</field>
+        <field name="arch" type="xml">
+            <search string="Search Leaderboard">
+                <field name="user_id"/>
+                
+                <filter string="My Ranking" name="my_ranking" 
+                        domain="[('user_id', '=', uid)]"/>
+                <filter string="Top 10" name="top_10" 
+                        domain="[('rank', '&lt;=', 10)]"/>
+                <filter string="Top 100" name="top_100" 
+                        domain="[('rank', '&lt;=', 100)]"/>
+                
+                <separator/>
+                <filter string="Overall" name="overall" 
+                        domain="[('category', '=', 'overall')]"/>
+                <filter string="Points" name="points" 
+                        domain="[('category', '=', 'points')]"/>
+                <filter string="Courses" name="courses" 
+                        domain="[('category', '=', 'courses')]"/>
+                <filter string="Skills" name="skills" 
+                        domain="[('category', '=', 'skills')]"/>
+                <filter string="Streak" name="streak" 
+                        domain="[('category', '=', 'streak')]"/>
+                <filter string="Discussions" name="discussions" 
+                        domain="[('category', '=', 'discussions')]"/>
+                <filter string="Certifications" name="certifications" 
+                        domain="[('category', '=', 'certifications')]"/>
+                
+                <separator/>
+                <filter string="Daily" name="daily" 
+                        domain="[('period', '=', 'daily')]"/>
+                <filter string="Weekly" name="weekly" 
+                        domain="[('period', '=', 'weekly')]"/>
+                <filter string="Monthly" name="monthly" 
+                        domain="[('period', '=', 'monthly')]"/>
+                <filter string="Yearly" name="yearly" 
+                        domain="[('period', '=', 'yearly')]"/>
+                <filter string="All Time" name="all_time" 
+                        domain="[('period', '=', 'all_time')]"/>
+                
+                <group expand="0" string="Group By">
+                    <filter string="Category" name="group_category" context="{'group_by': 'category'}"/>
+                    <filter string="Period" name="group_period" context="{'group_by': 'period'}"/>
+                    <filter string="User" name="group_user" context="{'group_by': 'user_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Actions -->
+    <record id="action_leaderboard_overall" model="ir.actions.act_window">
+        <field name="name">Overall Leaderboard</field>
+        <field name="res_model">seitech.leaderboard</field>
+        <field name="view_mode">kanban,tree,form,pivot,graph</field>
+        <field name="context">{'search_default_overall': 1, 'search_default_all_time': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_empty_folder">
+                No leaderboard data yet
+            </p>
+            <p>
+                Rankings will appear here once users start earning points and completing activities.
+            </p>
+        </field>
+    </record>
+
+    <record id="action_leaderboard_by_category" model="ir.actions.act_window">
+        <field name="name">Leaderboard by Category</field>
+        <field name="res_model">seitech.leaderboard</field>
+        <field name="view_mode">tree,kanban,form,pivot</field>
+        <field name="context">{'search_default_all_time': 1, 'search_default_group_category': 1}</field>
+    </record>
+
+    <record id="action_my_rankings" model="ir.actions.act_window">
+        <field name="name">My Rankings</field>
+        <field name="res_model">seitech.leaderboard</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_my_ranking': 1}</field>
+    </record>
+
+    <!-- Menu Items -->
+    <menuitem id="menu_leaderboard_root" 
+              name="Leaderboard" 
+              parent="menu_discussion_root" 
+              sequence="25"/>
+    
+    <menuitem id="menu_leaderboard_overall" 
+              name="Overall Rankings" 
+              parent="menu_leaderboard_root" 
+              action="action_leaderboard_overall" 
+              sequence="10"/>
+    
+    <menuitem id="menu_leaderboard_categories" 
+              name="By Category" 
+              parent="menu_leaderboard_root" 
+              action="action_leaderboard_by_category" 
+              sequence="20"/>
+    
+    <menuitem id="menu_my_rankings" 
+              name="My Rankings" 
+              parent="menu_leaderboard_root" 
+              action="action_my_rankings" 
+              sequence="30"/>
+    
+    <!-- Scheduled Action for Leaderboard Updates -->
+    <record id="ir_cron_update_leaderboards" model="ir.cron">
+        <field name="name">Update Leaderboards</field>
+        <field name="model_id" ref="model_seitech_leaderboard"/>
+        <field name="state">code</field>
+        <field name="code">model.update_leaderboards()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">hours</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False"/>
+        <field name="active" eval="True"/>
+    </record>
+</odoo>

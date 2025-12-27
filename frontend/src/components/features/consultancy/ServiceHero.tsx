@@ -6,7 +6,7 @@ interface ServiceHeroProps {
   name: string;
   shortDescription: string;
   iconName?: string;
-  pricingType: 'fixed' | 'quote' | 'hourly';
+  pricingType: 'fixed' | 'quote' | 'hourly' | 'free' | 'package';
   priceFrom?: number;
   className?: string;
 }

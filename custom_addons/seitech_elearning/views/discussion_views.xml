@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Discussion Form View -->
+    <record id="view_discussion_form" model="ir.ui.view">
+        <field name="name">seitech.discussion.form</field>
+        <field name="model">seitech.discussion</field>
+        <field name="arch" type="xml">
+            <form string="Discussion">
+                <header>
+                    <button name="action_publish" string="Publish" type="object" 
+                            class="oe_highlight" invisible="state != 'draft'"/>
+                    <button name="action_resolve" string="Mark as Resolved" type="object" 
+                            class="oe_highlight" invisible="state not in ['published', 'draft']"/>
+                    <button name="action_close" string="Close" type="object" 
+                            invisible="state == 'closed'"/>
+                    <button name="action_reopen" string="Reopen" type="object" 
+                            invisible="state != 'closed'"/>
+                    <button name="action_flag" string="Flag for Review" type="object" 
+                            class="btn-warning" invisible="state == 'flagged'"/>
+                    <field name="state" widget="statusbar" 
+                           statusbar_visible="draft,published,resolved"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_increment_view" type="object" class="oe_stat_button" icon="fa-eye">
+                            <field name="view_count" widget="statinfo" string="Views"/>
+                        </button>
+                        <button class="oe_stat_button" icon="fa-comments">
+                            <field name="reply_count" widget="statinfo" string="Replies"/>
+                        </button>
+                        <button name="action_upvote" type="object" class="oe_stat_button" icon="fa-thumbs-up">
+                            <field name="upvote_count" widget="statinfo" string="Upvotes"/>
+                        </button>
+                        <button name="action_toggle_pin" type="object" class="oe_stat_button" icon="fa-thumb-tack">
+                            <field name="is_pinned" widget="boolean"/>
+                        </button>
+                        <button name="action_toggle_lock" type="object" class="oe_stat_button" icon="fa-lock">
+                            <field name="is_locked" widget="boolean"/>
+                        </button>
+                    </div>
+                    
+                    <widget name="web_ribbon" title="Featured" bg_color="bg-success" 
+                            invisible="not is_featured"/>
+                    <widget name="web_ribbon" title="Best Answer" bg_color="bg-info" 
+                            invisible="not has_best_answer"/>
+                    
+                    <group>
+                        <group>
+                            <field name="name" placeholder="Discussion Title"/>
+                            <field name="author_id"/>
+                            <field name="category"/>
+                        </group>
+                        <group>
+                            <field name="course_id"/>
+                            <field name="slide_id" domain="[('channel_id', '=', course_id)]"/>
+                            <field name="study_group_id"/>
+                        </group>
+                    </group>
+                    
+                    <group>
+                        <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                        <field name="skill_ids" widget="many2many_tags"/>
+                    </group>
+                    
+                    <notebook>
+                        <page string="Content">
+                            <field name="content" widget="html" options="{'collaborative': true}"/>
+                        </page>
+                        <page string="Replies" name="replies">
+                            <field name="reply_ids" nolabel="1">
+                                <tree>
+                                    <field name="author_name"/>
+                                    <field name="content" widget="html"/>
+                                    <field name="upvote_count"/>
+                                    <field name="is_best_answer" widget="boolean_toggle"/>
+                                    <field name="state"/>
+                                    <field name="create_date"/>
+                                </tree>
+                            </field>
+                            <group invisible="reply_count == 0">
+                                <field name="best_answer_id" domain="[('discussion_id', '=', id)]"/>
+                            </group>
+                        </page>
+                        <page string="Engagement">
+                            <group>
+                                <group>
+                                    <field name="published_date" readonly="1"/>
+                                    <field name="last_activity_date" readonly="1"/>
+                                    <field name="resolved_date" readonly="1"/>
+                                </group>
+                                <group>
+                                    <field name="is_featured"/>
+                                    <field name="upvote_ids" widget="many2many_tags"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Discussion Tree View -->
+    <record id="view_discussion_tree" model="ir.ui.view">
+        <field name="name">seitech.discussion.tree</field>
+        <field name="model">seitech.discussion</field>
+        <field name="arch" type="xml">
+            <tree string="Discussions" decoration-info="is_pinned" 
+                  decoration-success="state == 'resolved'" decoration-muted="state == 'closed'">
+                <field name="is_pinned" widget="boolean_toggle"/>
+                <field name="name"/>
+                <field name="author_name"/>
+                <field name="category"/>
+                <field name="course_id"/>
+                <field name="reply_count"/>
+                <field name="upvote_count"/>
+                <field name="view_count"/>
+                <field name="has_best_answer" widget="boolean"/>
+                <field name="state" widget="badge" 
+                       decoration-info="state == 'published'"
+                       decoration-success="state == 'resolved'"
+                       decoration-muted="state == 'closed'"
+                       decoration-warning="state == 'flagged'"/>
+                <field name="last_activity_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Discussion Kanban View -->
+    <record id="view_discussion_kanban" model="ir.ui.view">
+        <field name="name">seitech.discussion.kanban</field>
+        <field name="model">seitech.discussion</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" default_group_by="state">
+                <field name="name"/>
+                <field name="author_name"/>
+                <field name="author_avatar"/>
+                <field name="category"/>
+                <field name="upvote_count"/>
+                <field name="reply_count"/>
+                <field name="is_pinned"/>
+                <field name="has_best_answer"/>
+                <field name="state"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div class="o_kanban_record_top">
+                                <div class="o_kanban_record_headings">
+                                    <strong class="o_kanban_record_title">
+                                        <t t-if="record.is_pinned.raw_value">
+                                            <i class="fa fa-thumb-tack"/> 
+                                        </t>
+                                        <field name="name"/>
+                                    </strong>
+                                </div>
+                                <span class="badge badge-pill" t-att-class="record.category.raw_value === 'question' ? 'badge-info' : 'badge-secondary'">
+                                    <field name="category"/>
+                                </span>
+                            </div>
+                            <div class="o_kanban_record_body">
+                                <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                            </div>
+                            <div class="o_kanban_record_bottom">
+                                <div class="oe_kanban_bottom_left">
+                                    <img t-att-src="kanban_image('res.users', 'image_128', record.author_id.raw_value)" 
+                                         class="oe_kanban_avatar" alt="Author"/>
+                                    <span><field name="author_name"/></span>
+                                </div>
+                                <div class="oe_kanban_bottom_right">
+                                    <span class="badge badge-pill badge-light">
+                                        <i class="fa fa-thumbs-up"/> <field name="upvote_count"/>
+                                    </span>
+                                    <span class="badge badge-pill badge-light">
+                                        <i class="fa fa-comments"/> <field name="reply_count"/>
+                                    </span>
+                                    <t t-if="record.has_best_answer.raw_value">
+                                        <span class="badge badge-pill badge-success">
+                                            <i class="fa fa-check"/>
+                                        </span>
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Discussion Search View -->
+    <record id="view_discussion_search" model="ir.ui.view">
+        <field name="name">seitech.discussion.search</field>
+        <field name="model">seitech.discussion</field>
+        <field name="arch" type="xml">
+            <search string="Search Discussions">
+                <field name="name" string="Title"/>
+                <field name="content"/>
+                <field name="author_id"/>
+                <field name="tag_ids"/>
+                <field name="course_id"/>
+                
+                <filter string="My Discussions" name="my_discussions" 
+                        domain="[('author_id', '=', uid)]"/>
+                <filter string="Following" name="following" 
+                        domain="[('message_is_follower', '=', True)]"/>
+                
+                <separator/>
+                <filter string="Questions" name="questions" 
+                        domain="[('category', '=', 'question')]"/>
+                <filter string="Unanswered" name="unanswered" 
+                        domain="[('reply_count', '=', 0), ('category', '=', 'question')]"/>
+                <filter string="Resolved" name="resolved" 
+                        domain="[('state', '=', 'resolved')]"/>
+                <filter string="Pinned" name="pinned" 
+                        domain="[('is_pinned', '=', True)]"/>
+                <filter string="Featured" name="featured" 
+                        domain="[('is_featured', '=', True)]"/>
+                
+                <separator/>
+                <filter string="Flagged" name="flagged" 
+                        domain="[('state', '=', 'flagged')]"/>
+                
+                <group expand="0" string="Group By">
+                    <filter string="Author" name="group_author" context="{'group_by': 'author_id'}"/>
+                    <filter string="Category" name="group_category" context="{'group_by': 'category'}"/>
+                    <filter string="Course" name="group_course" context="{'group_by': 'course_id'}"/>
+                    <filter string="Status" name="group_state" context="{'group_by': 'state'}"/>
+                    <filter string="Study Group" name="group_study_group" context="{'group_by': 'study_group_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Discussion Reply Form View -->
+    <record id="view_discussion_reply_form" model="ir.ui.view">
+        <field name="name">seitech.discussion.reply.form</field>
+        <field name="model">seitech.discussion.reply</field>
+        <field name="arch" type="xml">
+            <form string="Reply">
+                <header>
+                    <button name="action_mark_best_answer" string="Mark as Best Answer" type="object" 
+                            class="oe_highlight" invisible="is_best_answer"/>
+                    <button name="action_delete" string="Delete" type="object" 
+                            class="btn-danger" confirm="Are you sure you want to delete this reply?"/>
+                    <button name="action_flag" string="Flag" type="object" 
+                            class="btn-warning" invisible="state == 'flagged'"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_upvote" type="object" class="oe_stat_button" icon="fa-thumbs-up">
+                            <field name="upvote_count" widget="statinfo" string="Upvotes"/>
+                        </button>
+                    </div>
+                    
+                    <widget name="web_ribbon" title="Best Answer" bg_color="bg-success" 
+                            invisible="not is_best_answer"/>
+                    <widget name="web_ribbon" title="Instructor" bg_color="bg-info" 
+                            invisible="not is_by_instructor"/>
+                    
+                    <group>
+                        <group>
+                            <field name="discussion_title"/>
+                            <field name="author_id"/>
+                            <field name="parent_id" domain="[('discussion_id', '=', discussion_id)]"/>
+                        </group>
+                        <group>
+                            <field name="thread_level" readonly="1"/>
+                            <field name="is_by_author" readonly="1"/>
+                            <field name="edited_date" readonly="1"/>
+                        </group>
+                    </group>
+                    
+                    <field name="content" widget="html"/>
+                    
+                    <notebook>
+                        <page string="Nested Replies" invisible="not child_ids">
+                            <field name="child_ids" nolabel="1">
+                                <tree>
+                                    <field name="author_name"/>
+                                    <field name="content" widget="html"/>
+                                    <field name="upvote_count"/>
+                                    <field name="create_date"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Discussion Reply Tree View -->
+    <record id="view_discussion_reply_tree" model="ir.ui.view">
+        <field name="name">seitech.discussion.reply.tree</field>
+        <field name="model">seitech.discussion.reply</field>
+        <field name="arch" type="xml">
+            <tree string="Replies" decoration-success="is_best_answer" 
+                  decoration-info="is_by_instructor">
+                <field name="discussion_title"/>
+                <field name="author_name"/>
+                <field name="content" widget="html"/>
+                <field name="thread_level"/>
+                <field name="upvote_count"/>
+                <field name="is_best_answer" widget="boolean"/>
+                <field name="is_by_instructor" widget="boolean"/>
+                <field name="state"/>
+                <field name="create_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Actions -->
+    <record id="action_discussion" model="ir.actions.act_window">
+        <field name="name">Discussions</field>
+        <field name="res_model">seitech.discussion</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="context">{'search_default_my_discussions': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first discussion
+            </p>
+            <p>
+                Start discussions, ask questions, and engage with the learning community.
+            </p>
+        </field>
+    </record>
+
+    <record id="action_discussion_moderation" model="ir.actions.act_window">
+        <field name="name">Discussion Moderation</field>
+        <field name="res_model">seitech.discussion</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_flagged': 1}</field>
+        <field name="domain">[]</field>
+    </record>
+
+    <record id="action_discussion_reply" model="ir.actions.act_window">
+        <field name="name">Discussion Replies</field>
+        <field name="res_model">seitech.discussion.reply</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu Items -->
+    <menuitem id="menu_discussion_root" 
+              name="Community" 
+              parent="seitech_elearning.menu_elearning_root" 
+              sequence="50"/>
+    
+    <menuitem id="menu_discussions" 
+              name="Discussions" 
+              parent="menu_discussion_root" 
+              action="action_discussion" 
+              sequence="10"/>
+    
+    <menuitem id="menu_discussion_moderation" 
+              name="Moderation" 
+              parent="menu_discussion_root" 
+              action="action_discussion_moderation" 
+              groups="seitech_elearning.group_elearning_instructor"
+              sequence="20"/>
+</odoo>

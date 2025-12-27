@@ -155,16 +155,22 @@ export default function ConfirmationPage() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                rightIcon={<ArrowRight className="w-5 h-5" />}
-                asChild
-              >
-                <Link href="/my-learning">Start Learning</Link>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <Link href="/courses">Browse More Courses</Link>
-              </Button>
+              <Link href="/dashboard/my-courses">
+                <Button
+                  size="lg"
+                  rightIcon={<ArrowRight className="w-5 h-5" />}
+                >
+                  Go to My Courses
+                </Button>
+              </Link>
+              <Link href="/courses">
+                <Button
+                  variant="outline"
+                  size="lg"
+                >
+                  Browse More Courses
+                </Button>
+              </Link>
             </div>
 
             {/* Support Note */}

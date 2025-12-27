@@ -101,7 +101,7 @@ export async function GET(
       const courseRecords = await odoo.read<any>(
         'slide.channel',
         [record.channel_id[0]],
-        ['id', 'name', 'website_slug', 'image_512']
+        ['id', 'name', 'image_512']
       );
 
       if (courseRecords.length > 0) {
@@ -109,7 +109,7 @@ export async function GET(
         course = {
           id: c.id,
           name: c.name,
-          slug: c.website_slug || undefined,
+          slug: `${c.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}-${c.id}`,
           thumbnailUrl: c.image_512 ? `data:image/png;base64,${c.image_512}` : undefined,
         };
       }

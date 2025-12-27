@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <!-- Chat Sequence -->
+        <record id="seq_chat_channel" model="ir.sequence">
+            <field name="name">Chat Channel Sequence</field>
+            <field name="code">seitech.chat.channel</field>
+            <field name="prefix">CHAT</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+    </data>
+</odoo>

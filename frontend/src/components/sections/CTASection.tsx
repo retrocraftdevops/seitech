@@ -52,19 +52,19 @@ export function CTASection() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Button
-            size="xl"
-            rightIcon={<Calendar className="h-5 w-5" />}
-            asChild
-          >
-            <Link href="/free-consultation">{content.ctaText}</Link>
-          </Button>
+          <Link href="/contact">
+            <Button
+              size="xl"
+              rightIcon={<Calendar className="h-5 w-5" />}
+            >
+              {content.ctaText}
+            </Button>
+          </Link>
           <Button
             variant="outline"
             size="xl"
             className="bg-white/10 border-white/20 text-white hover:bg-white/20 hover:border-white/30"
             leftIcon={<Phone className="h-5 w-5" />}
-            asChild
           >
             <a href={`tel:${content.secondaryCtaText.replace(/\s/g, '')}`}>
               {content.secondaryCtaText}

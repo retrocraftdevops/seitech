@@ -157,12 +157,14 @@ export default function InHouseTrainingPage() {
               flexible scheduling, and cost-effective group rates for your team.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button variant="secondary" size="lg" asChild>
-                <Link href="/free-consultation">Request Quote</Link>
-              </Button>
-              <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white/20" asChild>
-                <Link href="/contact">Speak to an Expert</Link>
-              </Button>
+              <Link href="/contact">
+                <Button size="lg">Request Quote</Button>
+              </Link>
+              <Link href="/courses">
+                <Button variant="outline" size="lg" className="bg-white/10 hover:bg-white/20 border-white text-white">
+                  View Courses
+                </Button>
+              </Link>
             </div>
 
             {/* Trust Indicators */}
@@ -286,12 +288,12 @@ export default function InHouseTrainingPage() {
             <p className="text-gray-600 mb-4">
               Don't see your course? We can deliver most of our training programmes in-house.
             </p>
-            <Button variant="outline" asChild>
-              <Link href="/courses">
+            <Link href="/courses">
+              <Button>
                 View All Courses
                 <ArrowRight className="h-5 w-5" />
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

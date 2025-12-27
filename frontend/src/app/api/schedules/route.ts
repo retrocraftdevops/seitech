@@ -126,12 +126,15 @@ export async function GET(request: NextRequest) {
     // Collect course IDs to fetch slugs
     const courseIds = [...new Set(odooRecords.map((r: any) => r.channel_id?.[0]).filter(Boolean))];
 
-    // Fetch course slugs
+    // Fetch course data (generate slugs from names since website_slug doesn't exist)
     let courseSlugs: Record<number, string> = {};
     if (courseIds.length > 0) {
-      const courses = await odoo.read<any>('slide.channel', courseIds, ['id', 'website_slug']);
+      const courses = await odoo.read<any>('slide.channel', courseIds, ['id', 'name']);
       courseSlugs = Object.fromEntries(
-        courses.map((c: any) => [c.id, c.website_slug || ''])
+        courses.map((c: any) => [
+          c.id, 
+          c.name ? c.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') : ''
+        ])
       );
     }
 

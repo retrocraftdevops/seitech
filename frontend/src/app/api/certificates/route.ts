@@ -1,18 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getAuthenticatedOdooClient } from '@/lib/api/odoo-client';
+import { cookies } from 'next/headers';
 import type { ApiResponse, Certificate } from '@/types';
+
 // Force dynamic rendering for this route
 export const dynamic = 'force-dynamic';
 
-
 export async function GET(request: NextRequest) {
   try {
-    const odoo = await getAuthenticatedOdooClient();
+    const cookieStore = await cookies();
+    const sessionToken = cookieStore.get('session_token')?.value;
+    const userInfo = cookieStore.get('user_info')?.value;
 
-    // Get current user session
-    const session = await odoo.getSession();
-
-    if (!session || !session.uid) {
+    // Check if user is authenticated
+    if (!sessionToken || !userInfo) {
       return NextResponse.json(
         {
           success: false,
@@ -23,57 +23,33 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    // Fetch user's certificates
-    const domain: [string, string, any][] = [
-      ['partner_id', '=', session.partnerId],
-      ['state', '=', 'done'],
-    ];
+    const user = JSON.parse(userInfo);
+    const odooUrl = process.env.NEXT_PUBLIC_ODOO_URL;
 
-    const certificateRecords = await odoo.searchRead<any>(
-      'slide.channel.certificate',
-      domain,
-      [
-        'id',
-        'reference',
-        'channel_id',
-        'partner_id',
-        'issue_date',
-        'expiry_date',
-        'template_id',
-        'qr_code',
-      ],
-      { order: 'issue_date desc' }
-    );
+    // Try Odoo first if configured
+    if (odooUrl) {
+      try {
+        const response = await fetch(`${odooUrl}/api/certificates`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Cookie': `session_id=${sessionToken}`,
+          },
+        });
 
-    // Fetch course details for each certificate
-    const courseIds = certificateRecords
-      .map((cert: any) => cert.channel_id?.[0])
-      .filter(Boolean);
+        if (response.ok) {
+          const data = await response.json();
+          if (data.success) {
+            return NextResponse.json(data);
+          }
+        }
+      } catch {
+        // Fall through to demo mode
+      }
+    }
 
-    const courses =
-      courseIds.length > 0
-        ? await odoo.read<any>('slide.channel', courseIds, ['id', 'name', 'website_slug'])
-        : [];
-
-    const courseMap = new Map(courses.map((c: any) => [c.id, c]));
-
-    const certificates: Certificate[] = certificateRecords.map((record: any) => {
-      const course = courseMap.get(record.channel_id?.[0]);
-      const baseUrl = process.env.NEXT_PUBLIC_ODOO_URL || '';
-
-      return {
-        id: record.id,
-        reference: record.reference || `CERT-${record.id}`,
-        courseName: course?.name || record.channel_id?.[1] || '',
-        courseSlug: course?.website_slug || '',
-        issuedDate: record.issue_date,
-        expiryDate: record.expiry_date || undefined,
-        downloadUrl: `${baseUrl}/slides/certificate/${record.id}/download`,
-        verificationUrl: `/certificates/verify?ref=${record.reference}`,
-        qrCode: record.qr_code ? `data:image/png;base64,${record.qr_code}` : '',
-        templateName: record.template_id?.[1] || 'Default Template',
-      };
-    });
+    // Demo mode - return empty certificates (no certificates in demo)
+    const certificates: Certificate[] = [];
 
     const response: ApiResponse<Certificate[]> = {
       success: true,

@@ -197,9 +197,8 @@ export function ConsultancyServicesSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <Button size="lg" rightIcon={<ArrowRight className="h-5 w-5" />} asChild>
-            <Link href="/services">View All Services</Link>
-          </Button>
+            </Button>
+</Link>
         </motion.div>
       </div>
     </section>

@@ -93,27 +93,29 @@ main() {
         odoo)
             shift
             echo "Starting Odoo..."
-            exec python3 -m odoo -c "$ODOO_CONFIG" "$@"
+            # Add odoo to Python path and run CLI
+            export PYTHONPATH="/opt/odoo/odoo:${PYTHONPATH}"
+            exec python3 -c "from odoo.cli.command import main; main()" -c "$ODOO_CONFIG" "$@"
             ;;
         shell)
             shift
             echo "Starting Odoo shell..."
-            exec python3 -m odoo shell -c "$ODOO_CONFIG" "$@"
+            exec python3 /opt/odoo/odoo/odoo-bin shell -c "$ODOO_CONFIG" "$@"
             ;;
         scaffold)
             shift
             echo "Running scaffold..."
-            exec python3 -m odoo scaffold "$@"
+            exec python3 /opt/odoo/odoo/odoo-bin scaffold "$@"
             ;;
         upgrade)
             shift
             echo "Upgrading modules: $@"
-            exec python3 -m odoo -c "$ODOO_CONFIG" -u "$@" --stop-after-init
+            exec python3 /opt/odoo/odoo/odoo-bin -c "$ODOO_CONFIG" -u "$@" --stop-after-init
             ;;
         install)
             shift
             echo "Installing modules: $@"
-            exec python3 -m odoo -c "$ODOO_CONFIG" -i "$@" --stop-after-init
+            exec python3 /opt/odoo/odoo/odoo-bin -c "$ODOO_CONFIG" -i "$@" --stop-after-init
             ;;
         *)
             exec "$@"

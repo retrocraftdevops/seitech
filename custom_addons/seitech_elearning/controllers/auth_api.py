@@ -25,6 +25,34 @@ class AuthApiController(http.Controller):
             status=status
         )
 
+    def _get_permissions_for_role(self, role):
+        """Return list of permissions for a given role"""
+        permissions = {
+            'student': [],
+            'student_admin': ['users.view', 'enrollments.view'],
+            'instructor': [
+                'courses.view', 'courses.create', 'courses.edit',
+                'enrollments.view', 'certificates.view', 'analytics.view'
+            ],
+            'manager': [
+                'users.view', 'users.create', 'users.edit', 'users.delete',
+                'instructors.view', 'instructors.create', 'instructors.edit', 'instructors.delete',
+                'courses.view', 'courses.create', 'courses.edit', 'courses.delete', 'courses.publish',
+                'enrollments.view', 'enrollments.create', 'enrollments.edit', 'enrollments.delete',
+                'certificates.view', 'certificates.issue',
+                'analytics.view'
+            ],
+            'admin': [
+                'users.view', 'users.create', 'users.edit', 'users.delete',
+                'instructors.view', 'instructors.create', 'instructors.edit', 'instructors.delete',
+                'courses.view', 'courses.create', 'courses.edit', 'courses.delete', 'courses.publish',
+                'enrollments.view', 'enrollments.create', 'enrollments.edit', 'enrollments.delete',
+                'certificates.view', 'certificates.issue', 'certificates.revoke',
+                'analytics.view', 'settings.view', 'settings.edit'
+            ]
+        }
+        return permissions.get(role, [])
+
     @http.route('/api/auth/login', type='http', auth='public', methods=['POST', 'OPTIONS'], csrf=False, cors='*')
     def login(self, **kwargs):
         """
@@ -99,6 +127,10 @@ class AuthApiController(http.Controller):
                 ('state', '=', 'issued'),
             ])
 
+            # Get role and permissions
+            role = user.seitech_role or 'student'
+            permissions = self._get_permissions_for_role(role)
+
             user_data = {
                 'id': uid,
                 'email': user.login,
@@ -111,6 +143,9 @@ class AuthApiController(http.Controller):
                 'isInstructor': False,
                 'enrollmentsCount': enrollments_count,
                 'certificatesCount': certificates_count,
+                'role': role,
+                'permissions': permissions,
+                'instructorId': user.instructor_id.id if user.instructor_id else None,
             }
 
             # Check if user is an instructor
@@ -118,7 +153,9 @@ class AuthApiController(http.Controller):
             instructor = Instructor.search([('user_id', '=', uid)], limit=1)
             if instructor:
                 user_data['isInstructor'] = True
-                user_data['instructorId'] = instructor.id
+                # Update instructorId if not already set from user.instructor_id
+                if not user_data['instructorId']:
+                    user_data['instructorId'] = instructor.id
 
             # Generate session token
             session_token = request.session.sid
@@ -191,6 +228,10 @@ class AuthApiController(http.Controller):
                 ('state', '=', 'issued'),
             ])
 
+            # Get role and permissions
+            role = user.seitech_role or 'student'
+            permissions = self._get_permissions_for_role(role)
+
             user_data = {
                 'id': user.id,
                 'email': user.login,
@@ -203,6 +244,9 @@ class AuthApiController(http.Controller):
                 'isInstructor': False,
                 'enrollmentsCount': enrollments_count,
                 'certificatesCount': certificates_count,
+                'role': role,
+                'permissions': permissions,
+                'instructorId': user.instructor_id.id if user.instructor_id else None,
             }
 
             # Check if user is an instructor
@@ -210,7 +254,9 @@ class AuthApiController(http.Controller):
             instructor = Instructor.search([('user_id', '=', user.id)], limit=1)
             if instructor:
                 user_data['isInstructor'] = True
-                user_data['instructorId'] = instructor.id
+                # Update instructorId if not already set from user.instructor_id
+                if not user_data['instructorId']:
+                    user_data['instructorId'] = instructor.id
 
             return self._json_response({
                 'success': True,
@@ -266,7 +312,12 @@ class AuthApiController(http.Controller):
                 'login': email,
                 'password': password,
                 'group_ids': group_ids,
+                'seitech_role': 'student',  # Set default role to student
             })
+
+            # Get role and permissions
+            role = user.seitech_role or 'student'
+            permissions = self._get_permissions_for_role(role)
 
             return self._json_response({
                 'success': True,
@@ -275,6 +326,8 @@ class AuthApiController(http.Controller):
                     'id': user.id,
                     'email': user.login,
                     'name': user.name,
+                    'role': role,
+                    'permissions': permissions,
                 },
             })
 

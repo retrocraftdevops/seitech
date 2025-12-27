@@ -68,9 +68,9 @@ export function CartDrawer() {
               <p className="text-gray-600 mb-6">
                 Browse our courses and add some to your cart.
               </p>
-              <Button onClick={closeCart} asChild>
-                <Link href="/courses">Browse Courses</Link>
-              </Button>
+              <Link href="/courses">
+                <Button>Browse Courses</Button>
+              </Link>
             </div>
           ) : (
             <div className="space-y-4">
@@ -132,15 +132,15 @@ export function CartDrawer() {
                 {formatCurrency(totalPrice)}
               </span>
             </div>
-            <Button
-              className="w-full"
-              size="lg"
-              rightIcon={<ArrowRight className="w-5 h-5" />}
-              onClick={closeCart}
-              asChild
-            >
-              <Link href="/checkout">Proceed to Checkout</Link>
-            </Button>
+            <Link href="/checkout" onClick={closeCart}>
+              <Button
+                className="w-full"
+                size="lg"
+                rightIcon={<ArrowRight className="w-5 h-5" />}
+              >
+                Proceed to Checkout
+              </Button>
+            </Link>
             <Button
               variant="outline"
               className="w-full"

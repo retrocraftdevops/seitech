@@ -155,12 +155,14 @@ export default function VirtualLearningPage() {
                 instructor-led sessions with real-time interaction and collaboration.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button variant="secondary" size="lg" asChild>
-                  <Link href="/courses?delivery=virtual">View Virtual Courses</Link>
-                </Button>
-                <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white/20" asChild>
-                  <Link href="/free-consultation">Book Demo Session</Link>
-                </Button>
+                <Link href="/courses?delivery=virtual">
+                  <Button size="lg">Browse Courses</Button>
+                </Link>
+                <Link href="/contact">
+                  <Button variant="outline" size="lg" className="bg-white/10 hover:bg-white/20 border-white text-white">
+                    Get in Touch
+                  </Button>
+                </Link>
               </div>
 
               {/* Trust Indicators */}
@@ -276,12 +278,12 @@ export default function VirtualLearningPage() {
                 Live instructor-led training you can join from anywhere
               </p>
             </div>
-            <Button variant="outline" asChild className="hidden md:flex">
-              <Link href="/courses?delivery=virtual">
+            <Link href="/courses?delivery=virtual">
+              <Button>
                 View All Courses
                 <ArrowRight className="h-5 w-5" />
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -316,9 +318,9 @@ export default function VirtualLearningPage() {
                     <Badge variant={course.spotsLeft <= 5 ? 'danger' : 'secondary'} size="sm">
                       {course.spotsLeft} spots left
                     </Badge>
-                    <Button size="sm" asChild>
-                      <Link href={`/courses/${course.slug}`}>Book Now</Link>
-                    </Button>
+                    <Link href={`/courses/${course.slug}`}>
+                      <Button size="sm">Book Now</Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
@@ -366,12 +368,14 @@ export default function VirtualLearningPage() {
             Experience world-class training from the comfort of your home or office.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button variant="secondary" size="lg" asChild>
-              <Link href="/courses?delivery=virtual">Browse Virtual Courses</Link>
-            </Button>
-            <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white/20" asChild>
-              <Link href="/contact">Contact Us</Link>
-            </Button>
+            <Link href="/courses?delivery=virtual">
+              <Button size="lg">Browse Courses</Button>
+            </Link>
+            <Link href="/contact">
+              <Button variant="outline" size="lg" className="bg-white/10 hover:bg-white/20 border-white text-white">
+                Get in Touch
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

@@ -105,6 +105,7 @@ export default function CheckoutPage() {
             name: item.name,
             price: item.price,
             slug: item.slug,
+            imageUrl: item.imageUrl,
           })),
         }),
       });

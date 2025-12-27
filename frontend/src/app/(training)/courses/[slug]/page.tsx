@@ -481,14 +481,15 @@ export default async function CourseDetailPage({ params }: Props) {
                     <p className="text-sm text-gray-600 mb-4">
                       Get group discounts for your organisation.
                     </p>
-                    <Button
-                      variant="primary"
-                      size="sm"
-                      rightIcon={<ArrowRight className="w-4 h-4" />}
-                      asChild
-                    >
-                      <Link href="/corporate-training">Learn More</Link>
-                    </Button>
+                    <Link href="/contact">
+                      <Button
+                        variant="primary"
+                        size="sm"
+                        rightIcon={<ArrowRight className="w-4 h-4" />}
+                      >
+                        Contact Us
+                      </Button>
+                    </Link>
                   </CardContent>
                 </Card>
               </div>

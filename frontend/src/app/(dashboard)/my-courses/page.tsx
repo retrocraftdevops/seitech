@@ -5,23 +5,32 @@ import Link from 'next/link';
 import { CourseProgressCard } from '@/components/features/dashboard';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
+import { Card, CardContent } from '@/components/ui/Card';
 import { Enrollment } from '@/types/user';
-import { Filter, Search, Loader2, RefreshCw, BookOpen } from 'lucide-react';
+import { Filter, Search, Loader2, RefreshCw, BookOpen, LogIn } from 'lucide-react';
 
 export default function MyCoursesPage() {
   const [enrollments, setEnrollments] = useState<Enrollment[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [isUnauthorized, setIsUnauthorized] = useState(false);
   const [filter, setFilter] = useState<'all' | 'active' | 'completed'>('all');
   const [searchQuery, setSearchQuery] = useState('');
 
   const fetchEnrollments = async () => {
     setIsLoading(true);
     setError(null);
+    setIsUnauthorized(false);
 
     try {
       const response = await fetch('/api/enrollments');
       const data = await response.json();
+
+      if (response.status === 401) {
+        setIsUnauthorized(true);
+        setEnrollments([]);
+        return;
+      }
 
       if (data.success && data.data) {
         setEnrollments(data.data);
@@ -67,6 +76,48 @@ export default function MyCoursesPage() {
           <Loader2 className="w-10 h-10 animate-spin text-primary-600 mx-auto mb-4" />
           <p className="text-gray-600">Loading your courses...</p>
         </div>
+      </div>
+    );
+  }
+
+  // Show login prompt for unauthorized users
+  if (isUnauthorized) {
+    return (
+      <div className="space-y-8">
+        <div>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">My Courses</h1>
+          <p className="text-gray-600">
+            Manage and track all your enrolled courses in one place
+          </p>
+        </div>
+
+        <Card className="text-center py-12">
+          <CardContent>
+            <div className="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <LogIn className="w-10 h-10 text-primary-600" />
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">
+              Sign in to view your courses
+            </h2>
+            <p className="text-gray-600 mb-8 max-w-md mx-auto">
+              Log in to your account to access your enrolled courses, track your progress, and continue learning.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/login">
+                <Button>Sign In</Button>
+              </Link>
+              <Link href="/register">
+                <Button>Create Account</Button>
+              </Link>
+            </div>
+            <p className="text-sm text-gray-500 mt-6">
+              Don&apos;t have any courses yet?{' '}
+              <Link href="/courses" className="text-primary-600 hover:underline">
+                Browse our catalog
+              </Link>
+            </p>
+          </CardContent>
+        </Card>
       </div>
     );
   }

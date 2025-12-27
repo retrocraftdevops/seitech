@@ -38,18 +38,24 @@
         'calendar',
     ],
     'data': [
-        # Security
+        # Security (order matters - groups must be defined before CSV references them)
         'security/elearning_groups.xml',
+        'security/chat_security.xml',  # Must be before ir.model.access.csv
         'security/ir.model.access.csv',
         'security/record_rules.xml',
+        'security/adaptive_learning_rules.xml',
+        'security/social_learning_rules.xml',
+        'security/admin_access.xml',
         # Data
         'data/sequence_data.xml',
         'data/email_templates.xml',
         'data/cron_data.xml',
         'data/badge_data.xml',
+        'data/demo_content.xml',
         # Reports (must be before views that reference them)
         'reports/certificate_report.xml',
         # Views
+        'views/res_users_views.xml',
         'views/enrollment_views.xml',
         'views/certificate_views.xml',
         'views/assignment_views.xml',
@@ -57,6 +63,14 @@
         'views/instructor_views.xml',
         'views/course_views.xml',
         'views/gamification_views.xml',
+        'views/learning_path_views.xml',
+        'views/skill_views.xml',
+        'views/recommendation_views.xml',
+        'views/discussion_views.xml',
+        'views/study_group_views.xml',
+        'views/streak_views.xml',
+        'views/leaderboard_views.xml',
+        'views/chat_views.xml',
         'views/dashboard_views.xml',
         'views/menus.xml',
         # Website Templates

@@ -99,12 +99,12 @@ export default function AboutPage() {
               world-class health, safety, and environmental training.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button variant="secondary" size="lg" asChild>
-                <Link href="/contact">Get in Touch</Link>
-              </Button>
-              <Button variant="outline" size="lg" className="bg-white/10 hover:bg-white/20 border-white text-white" asChild>
-                <Link href="/about/team">Meet Our Team</Link>
-              </Button>
+              <Link href="/training">
+                <Button>View Courses</Button>
+              </Link>
+              <Link href="/contact">
+                <Button variant="outline">Contact Us</Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -249,12 +249,12 @@ export default function AboutPage() {
           </div>
 
           <div className="text-center">
-            <Button variant="primary" size="lg" asChild>
-              <Link href="/about/accreditations">
+            <Link href="/about/accreditations">
+              <Button>
                 View All Accreditations
                 <ArrowRight className="h-5 w-5" />
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -269,12 +269,12 @@ export default function AboutPage() {
               Our trainers and consultants bring decades of combined experience in health, safety,
               and environmental management.
             </p>
-            <Button variant="secondary" size="lg" asChild>
-              <Link href="/about/team">
+            <Link href="/about/team">
+              <Button>
                 Meet the Team
                 <ArrowRight className="h-5 w-5" />
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -289,12 +289,12 @@ export default function AboutPage() {
             Contact us today to discuss your training needs or request a quote for our services.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button variant="primary" size="lg" asChild>
-              <Link href="/contact">Contact Us</Link>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
-              <Link href="/training">Browse Courses</Link>
-            </Button>
+            <Link href="/contact">
+              <Button>Get in Touch</Button>
+            </Link>
+            <Link href="/training">
+              <Button variant="outline">Browse Courses</Button>
+            </Link>
           </div>
         </div>
       </section>

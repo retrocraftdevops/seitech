@@ -41,9 +41,9 @@ export default function CartPage() {
               <p className="text-gray-600 mb-8">
                 Browse our courses and add something to your cart.
               </p>
-              <Button asChild>
-                <Link href="/courses">Browse Courses</Link>
-              </Button>
+              <Link href="/courses">
+                <Button>Browse Courses</Button>
+              </Link>
             </CardContent>
           </Card>
         </div>
@@ -197,14 +197,15 @@ export default function CartPage() {
                 </div>
 
                 {/* Checkout Button */}
-                <Button
-                  className="w-full"
-                  size="lg"
-                  rightIcon={<ArrowRight className="w-5 h-5" />}
-                  asChild
-                >
-                  <Link href="/checkout">Proceed to Checkout</Link>
-                </Button>
+                <Link href="/checkout">
+                  <Button
+                    className="w-full"
+                    size="lg"
+                    rightIcon={<ArrowRight className="w-5 h-5" />}
+                  >
+                    Proceed to Checkout
+                  </Button>
+                </Link>
 
                 {/* Security Note */}
                 <p className="text-xs text-gray-500 text-center mt-4">

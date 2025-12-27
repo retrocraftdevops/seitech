@@ -270,9 +270,11 @@ export function UpcomingScheduleSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <Button size="lg" rightIcon={<ArrowRight className="h-5 w-5" />} asChild>
-            <Link href="/schedule">View Full Schedule</Link>
-          </Button>
+          <Link href="/schedule">
+            <Button rightIcon={<ArrowRight className="h-5 w-5" />}>
+              View Full Schedule
+            </Button>
+          </Link>
         </motion.div>
       </div>
     </section>

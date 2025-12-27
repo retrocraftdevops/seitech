@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import { designTokens } from './config/design-tokens';
 
 const config: Config = {
   darkMode: ['class'],
@@ -10,34 +11,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Primary - Sky Blue
-        primary: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
-          950: '#082f49',
-        },
-        // Secondary - Teal
-        secondary: {
-          50: '#f0fdfa',
-          100: '#ccfbf1',
-          200: '#99f6e4',
-          300: '#5eead4',
-          400: '#2dd4bf',
-          500: '#14b8a6',
-          600: '#0d9488',
-          700: '#0f766e',
-          800: '#115e59',
-          900: '#134e4a',
-          950: '#042f2e',
-        },
+        // Use design tokens for consistency with Odoo
+        primary: designTokens.colors.primary,
+        secondary: designTokens.colors.secondary,
+        gray: designTokens.colors.gray,
         // Accent colors for categories/badges
         accent: {
           orange: '#f97316',
@@ -46,12 +23,13 @@ const config: Config = {
           purple: '#a855f7',
           amber: '#f59e0b',
           pink: '#ec4899',
+          teal: '#14b8a6',
         },
-        // Surface colors
+        // Surface colors (using slate from logo shield)
         surface: {
           DEFAULT: '#ffffff',
           alt: '#f8fafc',
-          dark: '#0f172a',
+          dark: '#1e293b',  // Slate from logo shield
         },
       },
       fontFamily: {
@@ -71,8 +49,8 @@ const config: Config = {
       boxShadow: {
         'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
         'soft-lg': '0 10px 40px -10px rgba(0, 0, 0, 0.1), 0 2px 10px -2px rgba(0, 0, 0, 0.04)',
-        'glow': '0 0 20px rgba(14, 165, 233, 0.15)',
-        'glow-lg': '0 0 40px rgba(14, 165, 233, 0.2)',
+        'glow': '0 0 20px rgba(34, 197, 94, 0.15)',  // Green glow
+        'glow-lg': '0 0 40px rgba(34, 197, 94, 0.2)',
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out',
@@ -155,9 +133,9 @@ const config: Config = {
               color: '#0f172a',
             },
             a: {
-              color: '#0284c7',
+              color: '#16a34a',  // Green-600
               '&:hover': {
-                color: '#0369a1',
+                color: '#15803d',  // Green-700
               },
             },
             strong: {

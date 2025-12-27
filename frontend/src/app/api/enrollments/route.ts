@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
-import { getOdooClient } from '@/lib/api/odoo-client';
+import { cookies } from 'next/headers';
 import type { ApiResponse, Enrollment } from '@/types';
+
 // Force dynamic rendering for this route
 export const dynamic = 'force-dynamic';
-
 
 const EnrollmentCreateSchema = z.object({
   courseId: z.number().int().positive(),
@@ -13,12 +13,12 @@ const EnrollmentCreateSchema = z.object({
 
 export async function GET(request: NextRequest) {
   try {
-    const odoo = getOdooClient();
+    const cookieStore = await cookies();
+    const sessionToken = cookieStore.get('session_token')?.value;
+    const userInfo = cookieStore.get('user_info')?.value;
 
-    // Get current user session
-    const session = await odoo.getSession();
-
-    if (!session || !session.uid) {
+    // Check if user is authenticated
+    if (!sessionToken || !userInfo) {
       return NextResponse.json(
         {
           success: false,
@@ -29,72 +29,53 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    // Fetch user's enrollments
-    const domain: [string, string, any][] = [['partner_id', '=', session.partnerId]];
+    const user = JSON.parse(userInfo);
+    const odooUrl = process.env.NEXT_PUBLIC_ODOO_URL;
 
-    const enrollmentRecords = await odoo.searchRead<any>(
-      'slide.channel.partner',
-      domain,
-      [
-        'id',
-        'channel_id',
-        'partner_id',
-        'completion',
-        'create_date',
-        'expiration_date',
-        'completed_date',
-        'last_access_date',
-        'total_time',
-        'certificate_id',
-      ],
-      { order: 'create_date desc' }
-    );
+    // Try Odoo first if configured
+    if (odooUrl) {
+      try {
+        const response = await fetch(`${odooUrl}/api/enrollments`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Cookie': `session_id=${sessionToken}`,
+          },
+        });
 
-    // Fetch course details for each enrollment
-    const courseIds = enrollmentRecords.map((e: any) => e.channel_id?.[0]).filter(Boolean);
-    const courses = courseIds.length > 0
-      ? await odoo.read<any>(
-          'slide.channel',
-          courseIds,
-          ['id', 'name', 'website_slug', 'image_512']
-        )
-      : [];
-
-    const courseMap = new Map(courses.map((c: any) => [c.id, c]));
-
-    const enrollments: Enrollment[] = enrollmentRecords.map((record: any) => {
-      const course = courseMap.get(record.channel_id?.[0]);
-
-      // Determine state based on completion and dates
-      let state: Enrollment['state'] = 'active';
-      if (record.completed_date) {
-        state = 'completed';
-      } else if (record.expiration_date && new Date(record.expiration_date) < new Date()) {
-        state = 'expired';
-      } else if (!record.last_access_date) {
-        state = 'pending';
+        if (response.ok) {
+          const data = await response.json();
+          if (data.success) {
+            return NextResponse.json(data);
+          }
+        }
+      } catch {
+        // Fall through to demo mode
       }
+    }
 
-      return {
-        id: record.id,
-        courseId: record.channel_id?.[0] || 0,
-        courseName: course?.name || record.channel_id?.[1] || '',
-        courseSlug: course?.website_slug || '',
-        courseImage: course?.image_512 ? `data:image/png;base64,${course.image_512}` : '',
-        userId: session.uid,
-        state,
-        progress: record.completion || 0,
-        enrollmentDate: record.create_date,
-        expirationDate: record.expiration_date || undefined,
-        completionDate: record.completed_date || undefined,
-        lastAccessDate: record.last_access_date || undefined,
-        totalTimeSpent: record.total_time || 0,
-        certificateId: record.certificate_id?.[0] || undefined,
-        certificateUrl: record.certificate_id?.[0]
-          ? `/api/certificates/${record.certificate_id[0]}`
-          : undefined,
-      };
-    });
+    // Demo mode - return enrollments from local storage (cookie-based)
+    const demoEnrollmentsStr = cookieStore.get('demo_enrollments')?.value;
+    const demoEnrollments = demoEnrollmentsStr ? JSON.parse(demoEnrollmentsStr) : {};
+    const userEnrollments = demoEnrollments[user.email] || [];
+
+    const enrollments: Enrollment[] = userEnrollments.map((e: any) => ({
+      id: e.id,
+      courseId: e.courseId,
+      courseName: e.courseName,
+      courseSlug: e.courseSlug,
+      courseImage: e.courseImage || '',
+      userId: user.id,
+      state: e.state || 'active',
+      progress: e.progress || 0,
+      enrollmentDate: e.enrollmentDate,
+      expirationDate: e.expirationDate,
+      completionDate: e.completionDate,
+      lastAccessDate: e.lastAccessDate,
+      totalTimeSpent: e.totalTimeSpent || 0,
+      certificateId: e.certificateId,
+      certificateUrl: e.certificateUrl,
+    }));
 
     const response: ApiResponse<Enrollment[]> = {
       success: true,
@@ -123,12 +104,12 @@ export async function POST(request: NextRequest) {
     // Validate request body
     const data = EnrollmentCreateSchema.parse(body);
 
-    const odoo = getOdooClient();
+    const cookieStore = await cookies();
+    const sessionToken = cookieStore.get('session_token')?.value;
+    const userInfo = cookieStore.get('user_info')?.value;
 
-    // Get current user session
-    const session = await odoo.getSession();
-
-    if (!session || !session.uid) {
+    // Check if user is authenticated
+    if (!sessionToken || !userInfo) {
       return NextResponse.json(
         {
           success: false,
@@ -139,20 +120,39 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const userId = data.userId || session.uid;
-    const partnerId = session.partnerId;
+    const user = JSON.parse(userInfo);
+    const odooUrl = process.env.NEXT_PUBLIC_ODOO_URL;
 
-    // Check if enrollment already exists
-    const existingEnrollments = await odoo.searchRead<any>(
-      'slide.channel.partner',
-      [
-        ['channel_id', '=', data.courseId],
-        ['partner_id', '=', partnerId],
-      ],
-      ['id']
-    );
+    // Try Odoo first if configured
+    if (odooUrl) {
+      try {
+        const response = await fetch(`${odooUrl}/api/enrollments`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Cookie': `session_id=${sessionToken}`,
+          },
+          body: JSON.stringify({ courseId: data.courseId }),
+        });
 
-    if (existingEnrollments.length > 0) {
+        if (response.ok) {
+          const result = await response.json();
+          if (result.success) {
+            return NextResponse.json(result, { status: 201 });
+          }
+        }
+      } catch {
+        // Fall through to demo mode
+      }
+    }
+
+    // Demo mode - store enrollment in cookies
+    const demoEnrollmentsStr = cookieStore.get('demo_enrollments')?.value;
+    const demoEnrollments = demoEnrollmentsStr ? JSON.parse(demoEnrollmentsStr) : {};
+    const userEnrollments = demoEnrollments[user.email] || [];
+
+    // Check if already enrolled
+    if (userEnrollments.some((e: any) => e.courseId === data.courseId)) {
       return NextResponse.json(
         {
           success: false,
@@ -163,62 +163,40 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Create enrollment
-    const enrollmentId = await odoo.create('slide.channel.partner', {
-      channel_id: data.courseId,
-      partner_id: partnerId,
-    });
-
-    // Fetch the created enrollment
-    const enrollmentRecords = await odoo.read<any>(
-      'slide.channel.partner',
-      [enrollmentId],
-      [
-        'id',
-        'channel_id',
-        'partner_id',
-        'completion',
-        'create_date',
-        'expiration_date',
-        'completed_date',
-        'last_access_date',
-        'total_time',
-        'certificate_id',
-      ]
-    );
-
-    if (enrollmentRecords.length === 0) {
-      throw new Error('Failed to create enrollment');
-    }
-
-    const record = enrollmentRecords[0];
-
-    // Fetch course details
-    const courseRecords = await odoo.read<any>(
-      'slide.channel',
-      [record.channel_id[0]],
-      ['id', 'name', 'website_slug', 'image_512']
-    );
-
-    const course = courseRecords[0];
+    // Get course info from body if provided
+    const courseName = body.courseName || `Course ${data.courseId}`;
+    const courseSlug = body.courseSlug || `course-${data.courseId}`;
+    const courseImage = body.courseImage || '';
 
     const enrollment: Enrollment = {
-      id: record.id,
-      courseId: record.channel_id[0],
-      courseName: course.name,
-      courseSlug: course.website_slug,
-      courseImage: course.image_512 ? `data:image/png;base64,${course.image_512}` : '',
-      userId,
-      state: 'pending',
+      id: Date.now(),
+      courseId: data.courseId,
+      courseName,
+      courseSlug,
+      courseImage,
+      userId: user.id,
+      state: 'active',
       progress: 0,
-      enrollmentDate: record.create_date,
-      expirationDate: record.expiration_date || undefined,
+      enrollmentDate: new Date().toISOString(),
+      expirationDate: undefined,
       completionDate: undefined,
       lastAccessDate: undefined,
       totalTimeSpent: 0,
       certificateId: undefined,
       certificateUrl: undefined,
     };
+
+    // Save to cookie storage
+    userEnrollments.push(enrollment);
+    demoEnrollments[user.email] = userEnrollments;
+
+    cookieStore.set('demo_enrollments', JSON.stringify(demoEnrollments), {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'lax',
+      maxAge: 60 * 60 * 24 * 30, // 30 days
+      path: '/',
+    });
 
     const response: ApiResponse<Enrollment> = {
       success: true,

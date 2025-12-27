@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Chat Channel Views -->
+    <record id="view_chat_channel_tree" model="ir.ui.view">
+        <field name="name">seitech.chat.channel.tree</field>
+        <field name="model">seitech.chat.channel</field>
+        <field name="arch" type="xml">
+            <tree string="Chat Channels">
+                <field name="name"/>
+                <field name="channel_type"/>
+                <field name="message_count"/>
+                <field name="unread_count"/>
+                <field name="last_message_date"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_chat_channel_form" model="ir.ui.view">
+        <field name="name">seitech.chat.channel.form</field>
+        <field name="model">seitech.chat.channel</field>
+        <field name="arch" type="xml">
+            <form string="Chat Channel">
+                <header>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="channel_type"/>
+                            <field name="is_public"/>
+                        </group>
+                        <group>
+                            <field name="message_count"/>
+                            <field name="unread_count"/>
+                            <field name="last_message_date"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Members">
+                            <field name="member_ids" widget="many2many_tags"/>
+                        </page>
+                        <page string="Moderators">
+                            <field name="moderator_ids" widget="many2many_tags"/>
+                        </page>
+                        <page string="Messages">
+                            <field name="message_ids">
+                                <tree>
+                                    <field name="author_id"/>
+                                    <field name="author_name"/>
+                                    <field name="content"/>
+                                    <field name="message_type"/>
+                                    <field name="create_date"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Related" invisible="not course_id and not study_group_id">
+                            <group>
+                                <field name="course_id"/>
+                                <field name="study_group_id"/>
+                                <field name="enrollment_id"/>
+                            </group>
+                        </page>
+                        <page string="Session Info" invisible="channel_type != 'public_support'">
+                            <group>
+                                <field name="session_token"/>
+                                <field name="visitor_info" widget="ace"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Chat Message Views -->
+    <record id="view_chat_message_tree" model="ir.ui.view">
+        <field name="name">seitech.chat.message.tree</field>
+        <field name="model">seitech.chat.message</field>
+        <field name="arch" type="xml">
+            <tree string="Chat Messages">
+                <field name="channel_id"/>
+                <field name="author_id"/>
+                <field name="author_name"/>
+                <field name="content"/>
+                <field name="message_type"/>
+                <field name="create_date"/>
+                <field name="is_read"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_chat_message_form" model="ir.ui.view">
+        <field name="name">seitech.chat.message.form</field>
+        <field name="model">seitech.chat.message</field>
+        <field name="arch" type="xml">
+            <form string="Chat Message">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="channel_id"/>
+                            <field name="author_id"/>
+                            <field name="author_name"/>
+                            <field name="message_type"/>
+                        </group>
+                        <group>
+                            <field name="create_date"/>
+                            <field name="is_read"/>
+                            <field name="parent_id"/>
+                            <field name="reply_count"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="content"/>
+                    </group>
+                    <group string="Attachments">
+                        <field name="attachment_ids" widget="many2many_binary"/>
+                    </group>
+                    <group string="Read By">
+                        <field name="read_by_ids" widget="many2many_tags"/>
+                    </group>
+                    <group string="Reactions">
+                        <field name="reaction_ids">
+                            <tree>
+                                <field name="user_id"/>
+                                <field name="emoji"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Actions -->
+    <record id="action_chat_channel" model="ir.actions.act_window">
+        <field name="name">Chat Channels</field>
+        <field name="res_model">seitech.chat.channel</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new chat channel
+            </p>
+        </field>
+    </record>
+
+    <record id="action_chat_message" model="ir.actions.act_window">
+        <field name="name">Chat Messages</field>
+        <field name="res_model">seitech.chat.message</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+    </record>
+
+    <record id="action_support_channels" model="ir.actions.act_window">
+        <field name="name">Support Chats</field>
+        <field name="res_model">seitech.chat.channel</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('channel_type', '=', 'public_support')]</field>
+        <field name="context">{'default_channel_type': 'public_support'}</field>
+    </record>
+
+    <!-- Menu Items -->
+    <menuitem id="menu_chat_root"
+              name="Chat"
+              parent="website_slides.website_slides_menu_root"
+              sequence="60"/>
+
+    <menuitem id="menu_chat_channels"
+              name="Channels"
+              parent="menu_chat_root"
+              action="action_chat_channel"
+              sequence="10"/>
+
+    <menuitem id="menu_support_chats"
+              name="Support Chats"
+              parent="menu_chat_root"
+              action="action_support_channels"
+              sequence="20"
+              groups="seitech_elearning.group_elearning_instructor"/>
+
+    <menuitem id="menu_chat_messages"
+              name="All Messages"
+              parent="menu_chat_root"
+              action="action_chat_message"
+              sequence="30"
+              groups="seitech_elearning.group_elearning_manager"/>
+
+</odoo>

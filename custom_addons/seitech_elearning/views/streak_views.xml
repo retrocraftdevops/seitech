@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Learning Streak Form View -->
+    <record id="view_learning_streak_form" model="ir.ui.view">
+        <field name="name">seitech.learning.streak.form</field>
+        <field name="model">seitech.learning.streak</field>
+        <field name="arch" type="xml">
+            <form string="Learning Streak">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" icon="fa-fire">
+                            <field name="current_streak" widget="statinfo" string="Current Streak"/>
+                        </button>
+                        <button class="oe_stat_button" icon="fa-trophy">
+                            <field name="longest_streak" widget="statinfo" string="Longest Streak"/>
+                        </button>
+                        <button class="oe_stat_button" icon="fa-star">
+                            <field name="perfect_weeks" widget="statinfo" string="Perfect Weeks"/>
+                        </button>
+                        <button class="oe_stat_button" icon="fa-diamond">
+                            <field name="perfect_months" widget="statinfo" string="Perfect Months"/>
+                        </button>
+                    </div>
+                    
+                    <div class="oe_title">
+                        <h1>
+                            <div class="d-flex align-items-center">
+                                <i class="fa fa-fire fa-3x text-danger me-3"/>
+                                <div>
+                                    <field name="current_streak"/> Days Streak
+                                    <div class="text-muted">
+                                        <field name="user_id"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </h1>
+                    </div>
+                    
+                    <group>
+                        <group string="Current Progress">
+                            <field name="start_date" readonly="1"/>
+                            <field name="last_activity_date" readonly="1"/>
+                            <field name="next_milestone"/>
+                            <field name="daily_goal_met" widget="boolean"/>
+                        </group>
+                        <group string="Freeze Protection">
+                            <field name="freeze_days_available"/>
+                            <field name="freeze_days_used"/>
+                            <field name="freeze_days_total" readonly="1"/>
+                            <button name="action_freeze_streak" string="Use Freeze Day" type="object" 
+                                    class="btn-warning" invisible="freeze_days_available == 0"/>
+                        </group>
+                    </group>
+                    
+                    <group>
+                        <group string="All-Time Records">
+                            <field name="longest_streak_start" readonly="1"/>
+                            <field name="longest_streak_end" readonly="1"/>
+                            <field name="total_activities" readonly="1"/>
+                        </group>
+                        <group string="Perfect Achievements">
+                            <field name="perfect_weeks" readonly="1"/>
+                            <field name="perfect_months" readonly="1"/>
+                        </group>
+                    </group>
+                    
+                    <notebook>
+                        <page string="Milestones" name="milestones">
+                            <field name="milestone_ids" nolabel="1">
+                                <tree decoration-success="achieved">
+                                    <field name="days"/>
+                                    <field name="achieved" widget="boolean"/>
+                                    <field name="achieved_date"/>
+                                    <field name="badge_id"/>
+                                    <field name="freeze_days_earned"/>
+                                </tree>
+                            </field>
+                        </page>
+                        
+                        <page string="Activity Calendar" name="calendar">
+                            <div class="alert alert-info">
+                                <i class="fa fa-info-circle"/> 
+                                Activity streak is calculated based on daily learning activities including:
+                                video watching, lesson completion, quiz attempts, discussion participation, 
+                                and study group sessions.
+                            </div>
+                            <group>
+                                <field name="last_activity_date" readonly="1"/>
+                                <field name="current_streak" readonly="1"/>
+                            </group>
+                        </page>
+                        
+                        <page string="Leaderboard" name="leaderboard">
+                            <div class="alert alert-success">
+                                <i class="fa fa-trophy"/> 
+                                <strong>Top Streakers</strong>
+                            </div>
+                            <!-- Placeholder for leaderboard widget -->
+                            <div class="text-center text-muted p-5">
+                                Use the Leaderboard menu to see streak rankings
+                            </div>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Learning Streak Tree View -->
+    <record id="view_learning_streak_tree" model="ir.ui.view">
+        <field name="name">seitech.learning.streak.tree</field>
+        <field name="model">seitech.learning.streak</field>
+        <field name="arch" type="xml">
+            <tree string="Learning Streaks" decoration-success="current_streak >= 30" 
+                  decoration-info="current_streak >= 7">
+                <field name="user_id"/>
+                <field name="current_streak" widget="integer"/>
+                <field name="longest_streak" widget="integer"/>
+                <field name="perfect_weeks"/>
+                <field name="perfect_months"/>
+                <field name="freeze_days_available"/>
+                <field name="next_milestone"/>
+                <field name="last_activity_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Learning Streak Kanban View -->
+    <record id="view_learning_streak_kanban" model="ir.ui.view">
+        <field name="name">seitech.learning.streak.kanban</field>
+        <field name="model">seitech.learning.streak</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile">
+                <field name="user_id"/>
+                <field name="current_streak"/>
+                <field name="longest_streak"/>
+                <field name="perfect_weeks"/>
+                <field name="perfect_months"/>
+                <field name="freeze_days_available"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div class="o_kanban_record_top">
+                                <div class="o_kanban_record_headings">
+                                    <strong class="o_kanban_record_title">
+                                        <i class="fa fa-fire text-danger"/> 
+                                        <field name="user_id"/>
+                                    </strong>
+                                </div>
+                            </div>
+                            <div class="o_kanban_record_body">
+                                <div class="row">
+                                    <div class="col-6 text-center">
+                                        <h2 class="text-danger">
+                                            <field name="current_streak"/>
+                                        </h2>
+                                        <small>Current Streak</small>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <h2 class="text-primary">
+                                            <field name="longest_streak"/>
+                                        </h2>
+                                        <small>Best Streak</small>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-6">
+                                        <span class="badge badge-success">
+                                            <i class="fa fa-star"/> <field name="perfect_weeks"/> Weeks
+                                        </span>
+                                    </div>
+                                    <div class="col-6">
+                                        <span class="badge badge-info">
+                                            <i class="fa fa-snowflake"/> <field name="freeze_days_available"/> Freezes
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o_kanban_record_bottom mt-3">
+                                <div class="oe_kanban_bottom_left">
+                                    Next: <field name="next_milestone"/> days
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Learning Streak Search View -->
+    <record id="view_learning_streak_search" model="ir.ui.view">
+        <field name="name">seitech.learning.streak.search</field>
+        <field name="model">seitech.learning.streak</field>
+        <field name="arch" type="xml">
+            <search string="Search Learning Streaks">
+                <field name="user_id"/>
+                
+                <filter string="My Streak" name="my_streak" 
+                        domain="[('user_id', '=', uid)]"/>
+                <filter string="Active Streaks" name="active" 
+                        domain="[('current_streak', '>', 0)]"/>
+                <filter string="7+ Days" name="week_streak" 
+                        domain="[('current_streak', '>=', 7)]"/>
+                <filter string="30+ Days" name="month_streak" 
+                        domain="[('current_streak', '>=', 30)]"/>
+                <filter string="100+ Days" name="hundred_streak" 
+                        domain="[('current_streak', '>=', 100)]"/>
+                <filter string="Perfect Weeks" name="perfect_weeks" 
+                        domain="[('perfect_weeks', '>', 0)]"/>
+                
+                <group expand="0" string="Group By">
+                    <filter string="User" name="group_user" context="{'group_by': 'user_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Streak Milestone Tree View -->
+    <record id="view_streak_milestone_tree" model="ir.ui.view">
+        <field name="name">seitech.streak.milestone.tree</field>
+        <field name="model">seitech.streak.milestone</field>
+        <field name="arch" type="xml">
+            <tree string="Streak Milestones" decoration-success="achieved">
+                <field name="streak_id"/>
+                <field name="days"/>
+                <field name="achieved" widget="boolean"/>
+                <field name="achieved_date"/>
+                <field name="badge_id"/>
+                <field name="freeze_days_earned"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Actions -->
+    <record id="action_learning_streak" model="ir.actions.act_window">
+        <field name="name">Learning Streaks</field>
+        <field name="res_model">seitech.learning.streak</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="context">{'search_default_my_streak': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Start your learning streak today!
+            </p>
+            <p>
+                Build consistent learning habits by maintaining daily streaks. 
+                Complete any learning activity to keep your streak alive.
+            </p>
+        </field>
+    </record>
+
+    <record id="action_streak_leaderboard" model="ir.actions.act_window">
+        <field name="name">Streak Leaderboard</field>
+        <field name="res_model">seitech.learning.streak</field>
+        <field name="view_mode">tree,kanban</field>
+        <field name="context">{'search_default_active': 1}</field>
+        <field name="domain">[('current_streak', '>', 0)]</field>
+    </record>
+
+    <!-- Menu Items -->
+    <menuitem id="menu_learning_streaks" 
+              name="Learning Streaks" 
+              parent="menu_discussion_root" 
+              action="action_learning_streak" 
+              sequence="20"/>
+    
+    <menuitem id="menu_streak_leaderboard" 
+              name="Streak Rankings" 
+              parent="menu_learning_streaks" 
+              action="action_streak_leaderboard" 
+              sequence="10"/>
+</odoo>

@@ -136,12 +136,14 @@ export default function FaceToFacePage() {
               Join scheduled sessions at convenient venues across the UK.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button variant="secondary" size="lg" asChild>
-                <Link href="/courses?delivery=face-to-face">View Upcoming Courses</Link>
-              </Button>
-              <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white/20" asChild>
-                <Link href="/contact">Request Group Booking</Link>
-              </Button>
+              <Link href="/courses?delivery=face-to-face">
+                <Button size="lg">View Courses</Button>
+              </Link>
+              <Link href="/contact">
+                <Button variant="outline" size="lg" className="bg-white/10 hover:bg-white/20 border-white text-white">
+                  Get in Touch
+                </Button>
+              </Link>
             </div>
 
             {/* Trust Indicators */}
@@ -207,12 +209,12 @@ export default function FaceToFacePage() {
                 Book your place on our next classroom courses
               </p>
             </div>
-            <Button variant="outline" asChild className="hidden md:flex">
-              <Link href="/courses?delivery=face-to-face">
+            <Link href="/courses?delivery=face-to-face">
+              <Button>
                 View Full Schedule
                 <ArrowRight className="h-5 w-5" />
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -247,9 +249,9 @@ export default function FaceToFacePage() {
                     <Badge variant={course.spotsLeft <= 5 ? 'danger' : 'secondary'} size="sm">
                       {course.spotsLeft} spots left
                     </Badge>
-                    <Button size="sm" asChild>
-                      <Link href={`/courses/${course.slug}`}>Book Now</Link>
-                    </Button>
+                    <Link href={`/courses/${course.slug}`}>
+                      <Button size="sm">Book Now</Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
@@ -257,12 +259,12 @@ export default function FaceToFacePage() {
           </div>
 
           <div className="text-center mt-8 md:hidden">
-            <Button variant="outline" asChild>
-              <Link href="/courses?delivery=face-to-face">
+            <Link href="/courses?delivery=face-to-face">
+              <Button>
                 View Full Schedule
                 <ArrowRight className="h-5 w-5" />
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -304,12 +306,14 @@ export default function FaceToFacePage() {
             Contact us for a customized quote.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button variant="secondary" size="lg" asChild>
-              <Link href="/in-house-training">In-House Training</Link>
-            </Button>
-            <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white/20" asChild>
-              <Link href="/free-consultation">Request Quote</Link>
-            </Button>
+            <Link href="/contact">
+              <Button size="lg">Get in Touch</Button>
+            </Link>
+            <Link href="/courses?delivery=face-to-face">
+              <Button variant="outline" size="lg" className="bg-white/10 hover:bg-white/20 border-white text-white">
+                View Courses
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

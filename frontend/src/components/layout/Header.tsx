@@ -18,14 +18,22 @@ import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/Button';
 import { MegaMenu } from './MegaMenu';
 import { MobileNav } from './MobileNav';
+import { SearchModal } from './SearchModal';
+import { UserMenu } from './UserMenu';
 import { mainNavigation } from '@/config/navigation';
 import { siteConfig } from '@/config/site';
+import { useCartStore } from '@/lib/stores/cart-store';
+import { useAuthStore } from '@/lib/stores/auth-store';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const pathname = usePathname();
+  const { openCart, getItemCount } = useCartStore();
+  const { isAuthenticated, isLoading } = useAuthStore();
+  const cartItemCount = getItemCount();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,7 +52,7 @@ export function Header() {
   return (
     <>
       {/* Top Bar */}
-      <div className="hidden lg:block bg-gray-900 text-white text-sm">
+      <div className="hidden lg:block bg-slate-800 text-white text-sm">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="flex items-center justify-between h-10">
             <div className="flex items-center gap-6">
@@ -77,8 +85,8 @@ export function Header() {
         className={cn(
           'sticky top-0 z-50 w-full transition-all duration-300',
           isScrolled
-            ? 'bg-gray-900 shadow-lg'
-            : 'bg-gray-900/80 backdrop-blur-sm'
+            ? 'bg-slate-800 shadow-lg'
+            : 'bg-slate-800/95 backdrop-blur-sm'
         )}
       >
         <div className="container mx-auto px-4 max-w-7xl">
@@ -157,34 +165,50 @@ export function Header() {
             {/* Right Side Actions */}
             <div className="flex items-center gap-2">
               {/* Search Button */}
-              <button className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors">
+              <button
+                onClick={() => setIsSearchOpen(true)}
+                className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+              >
                 <Search className="h-5 w-5" />
               </button>
 
               {/* Cart Button */}
-              <button className="relative p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors">
+              <button
+                onClick={openCart}
+                className="relative p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+              >
                 <ShoppingCart className="h-5 w-5" />
-                <span className="absolute -top-0.5 -right-0.5 h-4 w-4 bg-primary-500 text-white text-2xs rounded-full flex items-center justify-center">
-                  0
-                </span>
+                {cartItemCount > 0 && (
+                  <span className="absolute -top-0.5 -right-0.5 h-4 w-4 bg-primary-500 text-white text-2xs rounded-full flex items-center justify-center">
+                    {cartItemCount > 9 ? '9+' : cartItemCount}
+                  </span>
+                )}
               </button>
 
               {/* User Menu */}
               <div className="hidden sm:block">
-                <Link
-                  href="/login"
-                  className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-200 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
-                >
-                  <User className="h-4 w-4" />
-                  Login
-                </Link>
+                {isLoading ? (
+                  <div className="flex items-center gap-2 px-3 py-2">
+                    <div className="h-7 w-7 rounded-full bg-gray-600 animate-pulse" />
+                  </div>
+                ) : isAuthenticated ? (
+                  <UserMenu />
+                ) : (
+                  <Link
+                    href="/login"
+                    className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-200 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+                  >
+                    <User className="h-4 w-4" />
+                    Login
+                  </Link>
+                )}
               </div>
 
               {/* CTA Button */}
               <div className="hidden md:block">
-                <Button size="sm" asChild>
-                  <Link href="/free-consultation">Get Quote</Link>
-                </Button>
+                <Link href="/courses">
+                  <Button size="sm">View Courses</Button>
+                </Link>
               </div>
 
               {/* Mobile Menu Button */}
@@ -208,6 +232,12 @@ export function Header() {
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
         items={mainNavigation}
+      />
+
+      {/* Search Modal */}
+      <SearchModal
+        isOpen={isSearchOpen}
+        onClose={() => setIsSearchOpen(false)}
       />
     </>
   );

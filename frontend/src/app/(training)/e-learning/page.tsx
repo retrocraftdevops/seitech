@@ -153,12 +153,14 @@ export default async function ELearningPage() {
                 Complete your training anytime, anywhere, at your own pace.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button variant="secondary" size="lg" asChild>
-                  <Link href="/courses">Browse E-Learning Courses</Link>
-                </Button>
-                <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white/20" asChild>
-                  <Link href="/contact">Request Demo</Link>
-                </Button>
+                <Link href="/courses">
+                  <Button size="lg">Browse Courses</Button>
+                </Link>
+                <Link href="/contact">
+                  <Button variant="outline" size="lg" className="bg-white/10 hover:bg-white/20 border-white text-white">
+                    Get in Touch
+                  </Button>
+                </Link>
               </div>
 
               {/* Trust Indicators */}
@@ -262,12 +264,12 @@ export default async function ELearningPage() {
                 Our most in-demand online training courses
               </p>
             </div>
-            <Button variant="outline" asChild className="hidden md:flex">
-              <Link href="/courses">
+            <Link href="/courses">
+              <Button>
                 View All Courses
                 <ArrowRight className="h-5 w-5 ml-2" />
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </div>
 
           {courses.length > 0 ? (
@@ -320,12 +322,12 @@ export default async function ELearningPage() {
           )}
 
           <div className="text-center mt-8 md:hidden">
-            <Button variant="outline" asChild>
-              <Link href="/courses">
+            <Link href="/courses">
+              <Button>
                 View All Courses
                 <ArrowRight className="h-5 w-5 ml-2" />
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -341,12 +343,14 @@ export default async function ELearningPage() {
             flexible e-learning platform.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button variant="secondary" size="lg" asChild>
-              <Link href="/courses">Browse E-Learning Courses</Link>
-            </Button>
-            <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white/20" asChild>
-              <Link href="/contact">Contact Sales</Link>
-            </Button>
+            <Link href="/courses">
+              <Button size="lg">Browse Courses</Button>
+            </Link>
+            <Link href="/contact">
+              <Button variant="outline" size="lg" className="bg-white/10 hover:bg-white/20 border-white text-white">
+                Get in Touch
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

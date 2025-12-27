@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Admin User Access Rights -->
+        <record id="admin_user_access" model="ir.rule">
+            <field name="name">Admin: Full User Access</field>
+            <field name="model_id" ref="base.model_res_users"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('group_elearning_admin'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <!-- Manager User Access Rights - View and Edit Users -->
+        <record id="manager_user_access" model="ir.rule">
+            <field name="name">Manager: User View/Edit Access</field>
+            <field name="model_id" ref="base.model_res_users"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('group_elearning_manager'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <!-- Student Admin Access - View Only -->
+        <record id="student_admin_user_access" model="ir.rule">
+            <field name="name">Student Admin: User View Access</field>
+            <field name="model_id" ref="base.model_res_users"/>
+            <field name="domain_force">[('seitech_role', '=', 'student')]</field>
+            <field name="groups" eval="[(4, ref('group_elearning_student'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <!-- Admin Course Publishing Rights -->
+        <record id="admin_course_publish" model="ir.rule">
+            <field name="name">Admin/Manager: Course Publishing Rights</field>
+            <field name="model_id" ref="website_slides.model_slide_channel"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('group_elearning_manager')), (4, ref('group_elearning_admin'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <!-- Admin Certificate Management -->
+        <record id="admin_certificate_revoke" model="ir.rule">
+            <field name="name">Admin: Certificate Revoke Rights</field>
+            <field name="model_id" ref="model_seitech_certificate"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('group_elearning_admin'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <!-- Manager Certificate Issue Rights -->
+        <record id="manager_certificate_issue" model="ir.rule">
+            <field name="name">Manager: Certificate Issue Rights</field>
+            <field name="model_id" ref="model_seitech_certificate"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('group_elearning_manager'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <!-- Admin Enrollment Management -->
+        <record id="admin_enrollment_full_access" model="ir.rule">
+            <field name="name">Admin/Manager: Full Enrollment Access</field>
+            <field name="model_id" ref="model_seitech_enrollment"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('group_elearning_manager')), (4, ref('group_elearning_admin'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <!-- Instructor Course Management - Own Courses Only -->
+        <record id="instructor_own_courses" model="ir.rule">
+            <field name="name">Instructor: Own Courses Only</field>
+            <field name="model_id" ref="website_slides.model_slide_channel"/>
+            <field name="domain_force">['|', ('user_id', '=', user.id), ('primary_instructor_id.user_id', '=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('group_elearning_instructor'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <!-- Instructor Enrollment View Rights - Own Courses Only -->
+        <record id="instructor_enrollment_view" model="ir.rule">
+            <field name="name">Instructor: View Enrollments for Own Courses</field>
+            <field name="model_id" ref="model_seitech_enrollment"/>
+            <field name="domain_force">[('channel_id.primary_instructor_id.user_id', '=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('group_elearning_instructor'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <!-- Student Own Data Access -->
+        <record id="student_own_enrollments" model="ir.rule">
+            <field name="name">Student: Own Enrollments Only</field>
+            <field name="model_id" ref="model_seitech_enrollment"/>
+            <field name="domain_force">[('user_id', '=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('group_elearning_student'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <record id="student_own_certificates" model="ir.rule">
+            <field name="name">Student: Own Certificates Only</field>
+            <field name="model_id" ref="model_seitech_certificate"/>
+            <field name="domain_force">[('user_id', '=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('group_elearning_student'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <!-- Analytics Access -->
+        <record id="admin_analytics_access" model="ir.rule">
+            <field name="name">Admin/Manager: Analytics Access</field>
+            <field name="model_id" ref="model_seitech_student_points"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('group_elearning_manager')), (4, ref('group_elearning_admin'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <record id="instructor_analytics_access" model="ir.rule">
+            <field name="name">Instructor: Analytics for Own Courses</field>
+            <field name="model_id" ref="model_seitech_student_points"/>
+            <field name="domain_force">[('enrollment_id.channel_id.primary_instructor_id.user_id', '=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('group_elearning_instructor'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+    </data>
+</odoo>

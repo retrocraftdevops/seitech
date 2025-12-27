@@ -1,0 +1,61 @@
+# Seitech Odoo 19.0 - Production Docker Compose (Official Image)
+# Uses official Odoo Docker image with custom addons
+
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: seitech-postgres
+    environment:
+      POSTGRES_USER: ${DB_USER:-odoo}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME:-seitech}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - seitech-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-odoo} -d ${DB_NAME:-seitech}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  odoo:
+    image: odoo:19.0
+    container_name: seitech-odoo
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      - HOST=postgres
+      - PORT=5432
+      - USER=${DB_USER:-odoo}
+      - PASSWORD=${DB_PASSWORD}
+      - DB_MAXCONN=64
+    volumes:
+      # Custom addons (our modules)
+      - ./custom_addons:/mnt/extra-addons
+      # Data persistence
+      - odoo_data:/var/lib/odoo
+    networks:
+      - seitech-network
+    ports:
+      - "8069:8069"
+      - "8072:8072"
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+    driver: local
+  odoo_data:
+    driver: local
+  odoo_sessions:
+    driver: local
+
+networks:
+  seitech-network:
+    driver: bridge
+

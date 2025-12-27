@@ -75,22 +75,24 @@ export function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
-              <Button
-                size="lg"
-                rightIcon={<ArrowRight className="h-5 w-5" />}
-                asChild
-              >
-                <Link href={content.ctaUrl}>{content.ctaText}</Link>
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="bg-white/10 border-white/20 text-white hover:bg-white/20 hover:border-white/30"
-                rightIcon={<ArrowRight className="h-5 w-5" />}
-                asChild
-              >
-                <Link href={content.secondaryCtaUrl}>{content.secondaryCtaText}</Link>
-              </Button>
+              <Link href={content.ctaUrl}>
+                <Button
+                  size="lg"
+                  rightIcon={<ArrowRight className="h-5 w-5" />}
+                >
+                  {content.ctaText}
+                </Button>
+              </Link>
+              <Link href={content.secondaryCtaUrl}>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="bg-white/10 border-white/20 text-white hover:bg-white/20 hover:border-white/30"
+                  rightIcon={<ArrowRight className="h-5 w-5" />}
+                >
+                  {content.secondaryCtaText}
+                </Button>
+              </Link>
             </div>
 
             {/* Trust Indicators */}

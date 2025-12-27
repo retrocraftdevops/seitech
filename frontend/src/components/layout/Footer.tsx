@@ -19,7 +19,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-slate-800 text-white">
       {/* Main Footer */}
       <div className="container mx-auto px-4 max-w-7xl py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
@@ -136,7 +136,7 @@ export function Footer() {
               <Input
                 type="email"
                 placeholder="Enter your email"
-                className="bg-gray-800 border-gray-700 text-white placeholder:text-gray-500"
+                className="bg-slate-700 border-slate-600 text-white placeholder:text-slate-400"
               />
               <Button className="w-full" rightIcon={<ArrowRight className="h-4 w-4" />}>
                 Subscribe
@@ -146,7 +146,7 @@ export function Footer() {
         </div>
 
         {/* Accreditations */}
-        <div className="mt-12 pt-8 border-t border-gray-800">
+        <div className="mt-12 pt-8 border-t border-slate-700">
           <p className="text-sm text-gray-500 mb-4 text-center">
             Accredited by leading industry bodies
           </p>
@@ -193,7 +193,7 @@ export function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-800">
+      <div className="border-t border-slate-700">
         <div className="container mx-auto px-4 max-w-7xl py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-gray-500">
