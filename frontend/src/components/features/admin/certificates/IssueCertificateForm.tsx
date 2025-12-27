@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
-import { Select } from '@/components/ui/select';
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
 import { Input } from '@/components/ui/Input';
 import { Label } from '@/components/ui/Label';
 import { Award, User, BookOpen, FileText, Calendar, Eye } from 'lucide-react';
@@ -121,20 +121,23 @@ export function IssueCertificateForm({
             {/* Enrollment Selection */}
             {mode === 'enrollment' && (
               <div>
-                <Select
-                  label="Select Completed Enrollment"
-                  value={enrollmentId}
-                  onValueChange={(value) => setEnrollmentId(value)}
-                  options={[
-                    { value: '', label: 'Choose an enrollment...' },
-                    ...enrollments
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Select Completed Enrollment
+                </label>
+                <Select value={enrollmentId} onValueChange={(value) => setEnrollmentId(value)}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Choose an enrollment..." />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {enrollments
                       .filter((e) => !e.hasCertificate)
-                      .map((e) => ({
-                        value: e.id.toString(),
-                        label: `${e.userName} - ${e.courseName} (Completed: ${new Date(e.completionDate).toLocaleDateString()})`,
-                      })),
-                  ]}
-                />
+                      .map((e) => (
+                        <SelectItem key={e.id} value={e.id.toString()}>
+                          {e.userName} - {e.courseName} (Completed: {new Date(e.completionDate).toLocaleDateString()})
+                        </SelectItem>
+                      ))}
+                  </SelectContent>
+                </Select>
                 {selectedEnrollment && (
                   <div className="mt-3 p-3 bg-gray-50 rounded-lg">
                     <div className="grid grid-cols-2 gap-2 text-sm">
