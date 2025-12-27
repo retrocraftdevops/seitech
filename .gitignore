@@ -75,3 +75,4 @@ legacy-php/
 
 # Playwright MCP
 .playwright-mcp/
+.vercel
