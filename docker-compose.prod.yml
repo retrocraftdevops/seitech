@@ -1,5 +1,8 @@
-# Seitech Odoo 19.0 Enterprise - Production Docker Compose Configuration
-# For Vultr deployment
+# DEPRECATED - Docker is no longer used for Vultr production
+# See DOCKER_DEPRECATION.md and VULTR_DEPLOYMENT.md for current setup
+#
+# Seitech Odoo 19.0 Enterprise - Production Docker Compose Configuration (Legacy)
+# For local development only - NOT used on Vultr
 
 version: '3.8'
 

@@ -34,8 +34,11 @@ sessions/
 .DS_Store
 Thumbs.db
 
-# Docker
+# Docker (NOT USED on Vultr production - see VULTR_DEPLOYMENT.md)
 .docker/
+docker-compose.*.yml
+Dockerfile
+.dockerignore
 
 # Data directories (keep structure, ignore contents)
 data/filestore/*
