@@ -51,6 +51,18 @@ const CardFooter = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   )
 );
 
+const CardTitle = forwardRef<HTMLHeadingElement, HTMLAttributes<HTMLHeadingElement>>(
+  ({ className, ...props }, ref) => (
+    <h3 ref={ref} className={cn('font-semibold text-lg leading-none tracking-tight', className)} {...props} />
+  )
+);
+
+const CardDescription = forwardRef<HTMLParagraphElement, HTMLAttributes<HTMLParagraphElement>>(
+  ({ className, ...props }, ref) => (
+    <p ref={ref} className={cn('text-sm text-gray-600', className)} {...props} />
+  )
+);
+
 const CardImage = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ className, children, ...props }, ref) => (
     <div ref={ref} className={cn('relative overflow-hidden', className)} {...props}>
@@ -61,8 +73,10 @@ const CardImage = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
 
 Card.displayName = 'Card';
 CardHeader.displayName = 'CardHeader';
+CardTitle.displayName = 'CardTitle';
+CardDescription.displayName = 'CardDescription';
 CardContent.displayName = 'CardContent';
 CardFooter.displayName = 'CardFooter';
 CardImage.displayName = 'CardImage';
 
-export { Card, CardHeader, CardContent, CardFooter, CardImage };
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, CardImage };
