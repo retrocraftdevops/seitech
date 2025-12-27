@@ -22,7 +22,10 @@ interface ServicePageProps {
 // Fetch service from API
 async function getService(slug: string): Promise<CmsService | null> {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+    const baseUrl = process.env.NEXT_PUBLIC_APP_URL;
+    if (!baseUrl) {
+      return null; // Skip fetch during build if no URL configured
+    }
     const response = await fetch(`${baseUrl}/api/cms/services/${slug}`, {
       cache: 'no-store',
     });
@@ -39,7 +42,10 @@ async function getService(slug: string): Promise<CmsService | null> {
 // Fetch all services for related services
 async function getAllServices(): Promise<CmsService[]> {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+    const baseUrl = process.env.NEXT_PUBLIC_APP_URL;
+    if (!baseUrl) {
+      return []; // Return empty during build if no URL configured
+    }
     const response = await fetch(`${baseUrl}/api/cms/services`, {
       cache: 'no-store',
     });

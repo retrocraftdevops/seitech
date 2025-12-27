@@ -72,7 +72,9 @@ export function UserFilters({ onFiltersChange }: UserFiltersProps) {
     setSearch('');
     setRole('');
     setStatus('');
-    router.push(window.location.pathname);
+    // Use router.pathname instead of window.location.pathname for SSR compatibility
+    const currentPath = typeof window !== 'undefined' ? window.location.pathname : '/admin/users';
+    router.push(currentPath);
 
     if (onFiltersChange) {
       onFiltersChange({});

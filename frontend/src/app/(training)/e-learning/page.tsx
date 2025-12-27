@@ -99,7 +99,10 @@ interface Course {
 
 async function getCourses(): Promise<Course[]> {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:4000';
+    const baseUrl = process.env.NEXT_PUBLIC_APP_URL;
+    if (!baseUrl) {
+      return []; // Skip fetch during build if no URL configured
+    }
     const response = await fetch(`${baseUrl}/api/courses?limit=4&sortBy=popularity`, {
       cache: 'no-store',
     });

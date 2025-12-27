@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { odooClient } from '@/lib/odoo';
 
+export const dynamic = 'force-dynamic';
+
 /**
  * GET /api/skills
  * List all skills (public endpoint - no auth required)

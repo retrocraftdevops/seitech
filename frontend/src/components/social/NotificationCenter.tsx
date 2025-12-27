@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { Bell, MessageSquare, Award, Users, TrendingUp, CheckCircle, X } from 'lucide-react';
 import { useNotificationSocket } from '@/hooks/useWebSocket';
 import { formatDistanceToNow } from 'date-fns';
@@ -17,6 +18,7 @@ interface Notification {
 }
 
 export default function NotificationCenter() {
+  const router = useRouter();
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [unreadCount, setUnreadCount] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
@@ -245,7 +247,7 @@ export default function NotificationCenter() {
                           markAsRead(notification.id);
                         }
                         if (notification.link) {
-                          window.location.href = notification.link;
+                          router.push(notification.link);
                         }
                       }}
                     >
@@ -292,7 +294,7 @@ export default function NotificationCenter() {
               <div className="p-3 border-t border-gray-200 bg-gray-50">
                 <button
                   onClick={() => {
-                    window.location.href = '/notifications';
+                    router.push('/notifications');
                     setIsOpen(false);
                   }}
                   className="w-full text-center text-sm text-blue-600 hover:text-blue-700 font-medium"
