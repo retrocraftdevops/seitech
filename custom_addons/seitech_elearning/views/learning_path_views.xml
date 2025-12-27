@@ -25,10 +25,10 @@
                 <sheet>
                     <div class="oe_button_box" name="button_box">
                         <button name="action_view_nodes" type="object" class="oe_stat_button" icon="fa-list">
-                            <field name="node_count" widget="statinfo" string="Courses"/>
+                            <field name="total_nodes" widget="statinfo" string="Courses"/>
                         </button>
                         <button name="action_view_enrollments" type="object" class="oe_stat_button" icon="fa-graduation-cap">
-                            <field name="completed_count" widget="statinfo" string="Completed"/>
+                            <field name="completed_nodes" widget="statinfo" string="Completed"/>
                         </button>
                     </div>
                     
@@ -47,19 +47,17 @@
                             <field name="user_id" invisible="is_template"/>
                             <field name="path_type" widget="radio"/>
                             <field name="is_template" invisible="1"/>
-                            <field name="template_id" invisible="not is_template and state != 'draft'" 
-                                   domain="[('is_template', '=', True)]"/>
                         </group>
                         <group>
                             <field name="progress_percentage" widget="progressbar"/>
-                            <field name="estimated_hours" widget="float_time"/>
-                            <field name="deadline" invisible="path_type != 'structured'"/>
+                            <field name="estimated_hours_total" widget="float_time"/>
+                            <field name="target_completion_date"/>
                             <field name="active" widget="boolean_toggle"/>
                         </group>
                     </group>
                     
                     <group>
-                        <field name="goal" placeholder="Describe your learning goal..."/>
+                        <field name="goal_description" placeholder="Describe your learning goal..."/>
                     </group>
                     
                     <notebook>
@@ -76,15 +74,15 @@
                                            decoration-info="state == 'active'"
                                            decoration-muted="state == 'locked'"/>
                                     <field name="progress_percentage" widget="progressbar"/>
-                                    <field name="deadline"/>
+                                    <field name="target_completion_date"/>
                                     <field name="completion_date"/>
                                     <button name="action_enroll" type="object" string="Enroll" 
                                             icon="fa-sign-in" invisible="state != 'available'"/>
                                 </tree>
                             </field>
                             <group class="oe_subtotal_footer oe_right">
-                                <field name="node_count" string="Total Courses"/>
-                                <field name="completed_count" string="Completed"/>
+                                <field name="total_nodes" string="Total Courses"/>
+                                <field name="completed_nodes" string="Completed"/>
                             </group>
                         </page>
                         
@@ -117,15 +115,15 @@
                             <group>
                                 <group string="Progress Metrics">
                                     <field name="progress_percentage" widget="percentpie"/>
-                                    <field name="completed_count"/>
-                                    <field name="node_count"/>
-                                    <field name="estimated_hours" widget="float_time"/>
+                                    <field name="completed_nodes"/>
+                                    <field name="total_nodes"/>
+                                    <field name="estimated_hours_total" widget="float_time"/>
                                 </group>
                                 <group string="Timing">
                                     <field name="start_date" readonly="1"/>
                                     <field name="completion_date" readonly="1"/>
-                                    <field name="deadline" readonly="path_type != 'structured'"/>
-                                    <field name="last_activity" readonly="1"/>
+                                    <field name="target_completion_date" readonly="path_type != 'structured'"/>
+                                    <field name="last_activity_date" readonly="1"/>
                                 </group>
                             </group>
                             <separator string="Next Actions"/>
@@ -154,16 +152,16 @@
                 <field name="name"/>
                 <field name="user_id"/>
                 <field name="path_type" optional="hide"/>
-                <field name="node_count"/>
-                <field name="completed_count"/>
+                <field name="total_nodes"/>
+                <field name="completed_nodes"/>
                 <field name="progress_percentage" widget="progressbar"/>
-                <field name="estimated_hours" widget="float_time" optional="hide"/>
-                <field name="state" widget="badge" 
+                <field name="estimated_hours_total" widget="float_time" optional="hide"/>
+                <field name="state" widget="badge"
                        decoration-success="state == 'completed'"
                        decoration-info="state == 'active'"
                        decoration-warning="state == 'draft'"
                        decoration-danger="state == 'cancelled'"/>
-                <field name="last_activity" optional="hide"/>
+                <field name="last_activity_date" optional="hide"/>
             </tree>
         </field>
     </record>
@@ -178,8 +176,8 @@
                 <field name="user_id"/>
                 <field name="path_type"/>
                 <field name="progress_percentage"/>
-                <field name="node_count"/>
-                <field name="completed_count"/>
+                <field name="total_nodes"/>
+                <field name="completed_nodes"/>
                 <field name="state"/>
                 <templates>
                     <t t-name="kanban-box">
@@ -198,13 +196,13 @@
                                 </span>
                             </div>
                             <div class="o_kanban_record_body">
-                                <field name="goal" widget="text"/>
+                                <field name="goal_description" widget="text"/>
                                 <div class="mt-2">
                                     <progressbar field="progress_percentage" title="Progress"/>
                                 </div>
                                 <div class="text-muted">
-                                    <i class="fa fa-list-ol"/> <field name="completed_count"/> / <field name="node_count"/> courses
-                                    | <i class="fa fa-clock-o"/> <field name="estimated_hours" widget="float_time"/>
+                                    <i class="fa fa-list-ol"/> <field name="completed_nodes"/> / <field name="total_nodes"/> courses
+                                    | <i class="fa fa-clock-o"/> <field name="estimated_hours_total" widget="float_time"/>
                                 </div>
                             </div>
                             <div class="o_kanban_record_bottom">
@@ -239,12 +237,14 @@
                 <filter name="completed_paths" string="Completed" 
                         domain="[('state', '=', 'completed')]"/>
                 <separator/>
-                <filter name="custom_paths" string="Custom" 
-                        domain="[('path_type', '=', 'custom')]"/>
-                <filter name="adaptive_paths" string="Adaptive" 
-                        domain="[('path_type', '=', 'adaptive')]"/>
-                <filter name="structured_paths" string="Structured" 
-                        domain="[('path_type', '=', 'structured')]"/>
+                <filter name="manual_paths" string="Manual"
+                        domain="[('path_type', '=', 'manual')]"/>
+                <filter name="auto_paths" string="AI Generated"
+                        domain="[('path_type', '=', 'auto')]"/>
+                <filter name="career_paths" string="Career Path"
+                        domain="[('path_type', '=', 'career')]"/>
+                <filter name="certification_paths" string="Certification"
+                        domain="[('path_type', '=', 'certification')]"/>
                 <separator/>
                 <filter name="templates" string="Templates" 
                         domain="[('is_template', '=', True)]"/>

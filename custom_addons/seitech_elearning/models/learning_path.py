@@ -91,6 +91,7 @@ class LearningPath(models.Model):
         ('active', 'Active'),
         ('on_hold', 'On Hold'),
         ('completed', 'Completed'),
+        ('cancelled', 'Cancelled'),
         ('archived', 'Archived'),
     ], string='Status', default='draft', required=True, tracking=True)
 
@@ -591,3 +592,61 @@ class LearningPath(models.Model):
             'domain': [('path_id', '=', self.id)],
             'context': {'default_path_id': self.id},
         }
+
+    def action_view_enrollments(self):
+        """View enrollments related to this learning path."""
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_window',
+            'name': _('Path Enrollments'),
+            'res_model': 'seitech.enrollment',
+            'view_mode': 'tree,form',
+            'domain': [('channel_id', 'in', self.node_ids.mapped('channel_id').ids)],
+            'context': {},
+        }
+
+    def action_cancel(self):
+        """Cancel the learning path."""
+        self.write({'state': 'cancelled'})
+        self.message_post(
+            body=_('Learning path cancelled.'),
+            subject=_('Path Cancelled'),
+            message_type='notification',
+        )
+        return True
+
+    def action_reset_to_draft(self):
+        """Reset the learning path to draft state."""
+        self.ensure_one()
+        self.write({'state': 'draft'})
+        self.message_post(
+            body=_('Learning path reset to draft state.'),
+            subject=_('Path Reset'),
+            message_type='notification',
+        )
+        return True
+
+    def action_view_skill_gaps(self):
+        """Analyze and view skill gaps in the learning path."""
+        self.ensure_one()
+        # This would typically open an analysis view or dashboard
+        return {
+            'type': 'ir.actions.act_window',
+            'name': _('Skill Gap Analysis'),
+            'res_model': 'seitech.user.skill',
+            'view_mode': 'tree,form',
+            'domain': [('user_id', '=', self.user_id.id), ('skill_id', 'in', self.skill_goal_ids.ids)],
+            'context': {},
+        }
+
+    def action_generate_recommendations(self):
+        """Generate new course recommendations based on current progress."""
+        self.ensure_one()
+        # This would typically call an AI recommendation engine
+        # For now, we'll return a message
+        self.message_post(
+            body=_('Generating new recommendations based on your progress...'),
+            subject=_('Recommendations Generated'),
+            message_type='notification',
+        )
+        return True
